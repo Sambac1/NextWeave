@@ -36,9 +36,9 @@ NextWeave is an end-to-end multi-agent simulation platform for probabilistic eve
 
 ## 🎬 Demo
 
-[![Watch the NextWeave demonstration](docs/media/demo-preview.jpg)](docs/media/NextWeave_Demo.mp4)
+https://github.com/user-attachments/assets/aceb22d3-3236-41c4-b5f4-5560193c9dff
 
-Watch the website workflow and simulation method in the included demonstration.
+*Enable sound for the English narration. [Download MP4](docs/media/NextWeave_Demo.mp4?raw=true).*
 
 <a id="quick-start"></a>
 
