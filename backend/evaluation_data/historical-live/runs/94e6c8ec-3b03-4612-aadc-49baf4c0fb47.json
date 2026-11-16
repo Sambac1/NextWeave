@@ -1,0 +1,1444 @@
+{
+  "run_id": "94e6c8ec-3b03-4612-aadc-49baf4c0fb47",
+  "case_id": "market_7ae71647fac451dbf83b9a26",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 7792,
+      "input_tokens": 7782,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 7792,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 7782,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:30:41.480161+00:00",
+      "contract_id": "0x0fb006e0c06caa4db12f7e30ec8c2483d658f83eb57b2ee8eb478e39beca3dfd",
+      "forecast_cutoff": "2026-06-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "7ca52ad8a8d595e060fec353b5bbadee1c7205053c4b5019e7a85fce7936b9f7",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.904
+    },
+    {
+      "calls": 2,
+      "tokens": 15584,
+      "input_tokens": 15564,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 15584,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 7782,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 7782,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:30:42.593559+00:00",
+      "contract_id": "0x0fb006e0c06caa4db12f7e30ec8c2483d658f83eb57b2ee8eb478e39beca3dfd",
+      "forecast_cutoff": "2026-06-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "7ca52ad8a8d595e060fec353b5bbadee1c7205053c4b5019e7a85fce7936b9f7",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.113
+    },
+    {
+      "calls": 6,
+      "tokens": 94129,
+      "input_tokens": 91879,
+      "output_tokens": 2250,
+      "accounted_tokens_upper": 94129,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-06-14",
+                "interval_end": "2026-06-22",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 8,
+                "interval_days": 8,
+                "interval_start_utc": "2026-06-14T23:59:59+00:00",
+                "interval_end_utc": "2026-06-22T04:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "status": "executed",
+                  "summary": "Colombian voters cast valid ballots in the 21 June 2026 runoff between Iván Cepeda and Abelardo de la Espriella; no vote count or result is yet reported."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Colombian voters cast valid ballots in the 21 June 2026 runoff between Iván Cepeda and Abelardo de la Espriella; no vote count or result is yet reported.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Colombian voters cast valid ballots in the 21 June 2026 runoff between Iván Cepeda and Abelardo de la Espriella; no vote count or result is yet reported.",
+                  "date": "2026-06-21"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "candidate_id": "agent_2d4fefd58d57573a:initial:2",
+                  "action": "Colombian voters cast valid ballots in the 21 June 2026 runoff choosing between Iván Cepeda and Abelardo de la Espriella, as the electorate did in the 31 May first round.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d4fefd58d57573a:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Colombian voters await the scheduled 21 June 2026 runoff between Iván Cepeda and Abelardo de la Espriella; no collective act occurs in this round before the vote itself.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_2d4fefd58d57573a:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Colombian voters cast valid ballots in the 21 June 2026 runoff choosing between Iván Cepeda and Abelardo de la Espriella, as the electorate did in the 31 May first round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count put Cepeda at 40.90% versus de la Espriella's 43.75%, so he entered the runoff trailing. Runoff ballots were cast on 21 June but no count is reported, leaving the result unverified; the first-round gap and polling lead for Cepeda pull in opposite directions.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.4
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.42,
+      "covered_p_yes": 0.42,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.42,
+        0.41999999999999993
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "e0d3dd0f-705f-4559-8f99-b0593d864975",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:31:17.681952+00:00",
+      "contract_id": "0x0fb006e0c06caa4db12f7e30ec8c2483d658f83eb57b2ee8eb478e39beca3dfd",
+      "forecast_cutoff": "2026-06-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "7ca52ad8a8d595e060fec353b5bbadee1c7205053c4b5019e7a85fce7936b9f7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 35.086
+    },
+    {
+      "calls": 22,
+      "tokens": 329558,
+      "input_tokens": 321048,
+      "output_tokens": 8510,
+      "accounted_tokens_upper": 329558,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-14",
+                "interval_end": "2026-06-16",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2026-06-14T23:59:59+00:00",
+                "interval_end_utc": "2026-06-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "candidate_id": "agent_2d4fefd58d57573a:initial:1",
+                  "action": "As the electorate group, take no collective external act this round; the runoff between Cepeda and de la Espriella is scheduled for 21 June 2026, and voters' choice is expressed only when balloting occurs.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d4fefd58d57573a:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "As the electorate group, take no collective external act this round; the runoff between Cepeda and de la Espriella is scheduled for 21 June 2026, and voters' choice is expressed only when balloting occurs.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count shows Cepeda at 40.90% versus de la Espriella's 43.75%, so Cepeda trails entering the June 21 runoff. Polls had overstated Cepeda, and no runoff result is yet observed, leaving the race competitive but tilted against him.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-16",
+                "interval_end": "2026-06-19",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 5,
+                "interval_days": 3,
+                "interval_start_utc": "2026-06-16T00:00:00+00:00",
+                "interval_end_utc": "2026-06-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count shows Cepeda at 40.90% versus de la Espriella's 43.75%, so Cepeda trails entering the June 21 runoff. Polls had overstated Cepeda, and no runoff result is yet observed, leaving the race competitive but tilted against him.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-19",
+                "interval_end": "2026-06-22",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 8,
+                "interval_days": 3,
+                "interval_start_utc": "2026-06-19T00:00:00+00:00",
+                "interval_end_utc": "2026-06-22T04:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count put Cepeda second (40.90%) behind de la Espriella (43.75%), forcing a June 21 runoff; no runoff result is in evidence. Pre-runoff polls showed Cepeda leading, but they understated de la Espriella in round one, so the runoff is close and unresolved.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-14",
+                "interval_end": "2026-06-16",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2026-06-14T23:59:59+00:00",
+                "interval_end_utc": "2026-06-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "status": "unknown",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "candidate_id": "agent_2d4fefd58d57573a:initial:1",
+                  "action": "On 21 June 2026, Colombian voters turn out and cast valid ballots in the runoff between Iván Cepeda and Abelardo de la Espriella; the aggregate vote determines whether Cepeda wins.\n承诺：Voters participate in the scheduled 21 June runoff and their valid ballots are counted per Registraduría results.\n触发或复核条件：Runoff proceeds as scheduled between Cepeda and de la Espriella.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d4fefd58d57573a:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "On 21 June 2026, Colombian voters turn out and cast valid ballots in the runoff between Iván Cepeda and Abelardo de la Espriella; the aggregate vote determines whether Cepeda wins.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_2d4fefd58d57573a:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "No voter-side collective action beyond the scheduled 21 June vote; monitor for runoff developments and official results.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count shows Cepeda at 40.90% versus de la Espriella's 43.75%, so Cepeda trails entering the June 21 runoff. Polls had overstated Cepeda, and no runoff result is yet observed, leaving the race competitive but tilted against him.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-16",
+                "interval_end": "2026-06-19",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 5,
+                "interval_days": 3,
+                "interval_start_utc": "2026-06-16T00:00:00+00:00",
+                "interval_end_utc": "2026-06-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count shows Cepeda at 40.90% versus de la Espriella's 43.75%, so Cepeda trails entering the June 21 runoff. Polls had overstated Cepeda, and no runoff result is yet observed, leaving the race competitive but tilted against him.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-19",
+                "interval_end": "2026-06-22",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 8,
+                "interval_days": 3,
+                "interval_start_utc": "2026-06-19T00:00:00+00:00",
+                "interval_end_utc": "2026-06-22T04:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count put Cepeda second (40.90%) behind de la Espriella (43.75%), forcing a June 21 runoff; no runoff result is in evidence. Pre-runoff polls showed Cepeda leading, but they understated de la Espriella in round one, so the runoff is close and unresolved.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.8
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.42,
+      "covered_p_yes": 0.42,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.42,
+        0.41999999999999993
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "e059157c-a11a-4f72-9a3f-85aaf3abbb8f",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:31:51.233558+00:00",
+      "contract_id": "0x0fb006e0c06caa4db12f7e30ec8c2483d658f83eb57b2ee8eb478e39beca3dfd",
+      "forecast_cutoff": "2026-06-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "7ca52ad8a8d595e060fec353b5bbadee1c7205053c4b5019e7a85fce7936b9f7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 33.549
+    },
+    {
+      "calls": 12,
+      "tokens": 184626,
+      "input_tokens": 180320,
+      "output_tokens": 4306,
+      "accounted_tokens_upper": 184626,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-14",
+                "interval_end": "2026-06-16",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2026-06-14T23:59:59+00:00",
+                "interval_end_utc": "2026-06-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "candidate_id": "agent_2d4fefd58d57573a:initial:2",
+                  "action": null,
+                  "p_selected": 0.1,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d4fefd58d57573a:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "On 21 June 2026, Colombian voters turn out and cast valid ballots in the runoff between Iván Cepeda and Abelardo de la Espriella, as scheduled after no candidate reached 50% on 31 May.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count shows Cepeda trailing de la Espriella 40.90% to 43.75%, so the runoff is competitive but Cepeda enters behind. Polls before the vote overstated Cepeda, so the observed result is the stronger signal.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-16",
+                "interval_end": "2026-06-19",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 5,
+                "interval_days": 3,
+                "interval_start_utc": "2026-06-16T00:00:00+00:00",
+                "interval_end_utc": "2026-06-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count shows Cepeda trailing de la Espriella 40.90% to 43.75%, so the runoff is competitive but Cepeda enters behind. Polls before the vote overstated Cepeda, so the observed result is the stronger signal.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-19",
+                "interval_end": "2026-06-22",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 8,
+                "interval_days": 3,
+                "interval_start_utc": "2026-06-19T00:00:00+00:00",
+                "interval_end_utc": "2026-06-22T04:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count put Cepeda second (40.90%) behind de la Espriella (43.75%), forcing a 21 June runoff; no runoff result is in evidence. Pre-runoff polls showed Cepeda leading, but they understated de la Espriella in round one, so the runoff is close and unresolved.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.1
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 1,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.42,
+      "covered_p_yes": 0.42,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.42,
+        0.41999999999999993
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "606d86bd-c834-4158-9655-8aad9b4615e7",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:08:24.968741+00:00",
+      "contract_id": "0x0fb006e0c06caa4db12f7e30ec8c2483d658f83eb57b2ee8eb478e39beca3dfd",
+      "forecast_cutoff": "2026-06-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "7ca52ad8a8d595e060fec353b5bbadee1c7205053c4b5019e7a85fce7936b9f7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 34.736
+    },
+    {
+      "calls": 10,
+      "tokens": 151064,
+      "input_tokens": 147424,
+      "output_tokens": 3640,
+      "accounted_tokens_upper": 151064,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-06-14",
+                "interval_end": "2026-06-22",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 8,
+                "interval_days": 8,
+                "interval_start_utc": "2026-06-14T23:59:59+00:00",
+                "interval_end_utc": "2026-06-22T04:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "candidate_id": "agent_2d4fefd58d57573a:initial:1",
+                  "action": "Colombian voters wait for the scheduled 21 June 2026 runoff between Iván Cepeda and Abelardo de la Espriella and cast valid ballots on election day; no collective act occurs before the vote.\n触发或复核条件：Runoff held as scheduled on 21 June 2026.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d4fefd58d57573a:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Colombian voters wait for the scheduled 21 June 2026 runoff between Iván Cepeda and Abelardo de la Espriella and cast valid ballots on election day; no collective act occurs before the vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count put Cepeda second (40.90%) behind de la Espriella (43.75%), forcing a June 21 runoff. Pre-election polls had shown Cepeda leading, so the runoff outcome is genuinely uncertain; no runoff result is in evidence.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-06-14",
+                "interval_end": "2026-06-22",
+                "horizon_end": "2026-06-22",
+                "elapsed_days": 8,
+                "interval_days": 8,
+                "interval_start_utc": "2026-06-14T23:59:59+00:00",
+                "interval_end_utc": "2026-06-22T04:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d4fefd58d57573a",
+                  "actor_name": "Colombian voters",
+                  "candidate_id": "agent_2d4fefd58d57573a:initial:1",
+                  "action": "No collective action by Colombian voters occurs in this round; the electorate's decisive act is casting valid ballots in the 21 June 2026 runoff between Cepeda and de la Espriella, which falls at the horizon end rather than this round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d4fefd58d57573a:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "No collective action by Colombian voters occurs in this round; the electorate's decisive act is casting valid ballots in the 21 June 2026 runoff between Cepeda and de la Espriella, which falls at the horizon end rather than this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First-round rapid count put Cepeda second (40.90%) behind de la Espriella (43.75%), forcing a June 21 runoff. Pre-election polls had shown Cepeda leading, so the runoff outcome is genuinely uncertain; no runoff result is in evidence.",
+                "evidence_quote": "|31 May 2026\n|E-14 Preliminary rapid count \nThomas Greg & Sons \n|23,982,304\n57.89%\n|~3.0%\n(Historical) \n| bgcolor=\"#E4C0DF\" |9,688,361\n40.90%\n|bgcolor=\"#CCCCE0\"|10,661,499\n43.75%",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.42,
+      "covered_p_yes": 0.42,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.42,
+        0.41999999999999993
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "bf8141c4-32e1-4d99-96af-4c94ac135f3c",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:08:41.214928+00:00",
+      "contract_id": "0x0fb006e0c06caa4db12f7e30ec8c2483d658f83eb57b2ee8eb478e39beca3dfd",
+      "forecast_cutoff": "2026-06-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "7ca52ad8a8d595e060fec353b5bbadee1c7205053c4b5019e7a85fce7936b9f7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 16.245
+    },
+    {
+      "calls": 27,
+      "tokens": 383044,
+      "input_tokens": 370093,
+      "output_tokens": 12951,
+      "accounted_tokens_upper": 383044,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42000000000000004,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.42000000000000004,
+        0.42000000000000004
+      ],
+      "search_iterations": 5,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 5,
+          "search_value": 0.9744000000000002,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.8,
+          "visits": 2,
+          "search_value": 0.9744,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.8,
+          "visits": 1,
+          "search_value": 0.9744,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.8,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.42,
+          "frontier": true,
+          "contribution": 0.336
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.2,
+          "visits": 2,
+          "search_value": 0.9744,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.2,
+          "visits": 1,
+          "search_value": 0.9744,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.2,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.42,
+          "frontier": true,
+          "contribution": 0.084
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "81c9e3eb-361b-435f-97c7-1a92d69feef6",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:10:11.850216+00:00",
+      "contract_id": "0x0fb006e0c06caa4db12f7e30ec8c2483d658f83eb57b2ee8eb478e39beca3dfd",
+      "forecast_cutoff": "2026-06-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "7ca52ad8a8d595e060fec353b5bbadee1c7205053c4b5019e7a85fce7936b9f7",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 90.636
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-06-14T23:59:59+00:00",
+  "forecast_key": "0x0fb006e0c06caa4db12f7e30ec8c2483d658f83eb57b2ee8eb478e39beca3dfd",
+  "group_id": "colombia-presidential-election",
+  "evidence_sha256": "7ca52ad8a8d595e060fec353b5bbadee1c7205053c4b5019e7a85fce7936b9f7",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 766,
+    "input_tokens": 650,
+    "output_tokens": 116,
+    "accounted_tokens_upper": 766,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-06-14",
+        "2026-06-22"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-06-14",
+        "2026-06-16",
+        "2026-06-19",
+        "2026-06-22"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-06-14",
+        "2026-06-16",
+        "2026-06-19",
+        "2026-06-22"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-06-14",
+        "2026-06-22"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-06-14",
+        "2026-06-16",
+        "2026-06-19",
+        "2026-06-22"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-06-22T04:59:59+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2026-06-21T14:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_51b0caa9d986ab8a",
+          "name": "Colombian voters",
+          "role": "Electorate casting valid votes in the first round and runoff",
+          "decision_ids": [
+            "voters_choose"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Cepeda's candidacy and participation in the runoff as Historic Pact candidate"
+      ],
+      "gaps": [
+        "No source identifies a separate actor whose independent authorization is required for Cepeda to appear on the runoff ballot beyond the first-round result.",
+        "No frozen source identifies Iván Cepeda Castro; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "cep_run",
+          "choice": "Cepeda's candidacy and participation in the runoff as Historic Pact candidate",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "voters_choose",
+          "choice": "Voters cast valid ballots in the runoff between Cepeda and de la Espriella",
+          "owner": "Colombian voters",
+          "support": "represented"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 10,
+    "tokens": 35344,
+    "input_tokens": 32044,
+    "output_tokens": 3300,
+    "accounted_tokens_upper": 35344,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

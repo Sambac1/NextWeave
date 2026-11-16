@@ -1,0 +1,3538 @@
+{
+  "run_id": "9c7bd11e-960e-4c36-86c6-c6716a7961a7",
+  "case_id": "market_c0b08911c4bd06261140a280",
+  "status": "partial",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3115,
+      "input_tokens": 3105,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3115,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.55,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.55,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3105,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:24:58.468737+00:00",
+      "contract_id": "0xeec3721d3883d5a27a992090d85c8f68fffe1f40774c3a891d078eed10d42508",
+      "forecast_cutoff": "2026-02-19T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "48d5040f6ee5c7ced76b127a4cad293e18cf4a346b0a23538f2218dd4ab3a62f",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.842
+    },
+    {
+      "calls": 2,
+      "tokens": 6230,
+      "input_tokens": 6210,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6230,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.55,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.55,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3105,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.55,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3105,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:24:59.792113+00:00",
+      "contract_id": "0xeec3721d3883d5a27a992090d85c8f68fffe1f40774c3a891d078eed10d42508",
+      "forecast_cutoff": "2026-02-19T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "48d5040f6ee5c7ced76b127a4cad293e18cf4a346b0a23538f2218dd4ab3a62f",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.322
+    },
+    {
+      "calls": 12,
+      "tokens": 160549,
+      "input_tokens": 151757,
+      "output_tokens": 8792,
+      "accounted_tokens_upper": 160549,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-02-19",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 316,
+                "interval_days": 316,
+                "interval_start_utc": "2026-02-19T23:59:59+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "status": "executed",
+                  "summary": "Netflix, Inc. publicly reaffirmed its December 5, 2025 agreement to acquire Warner Bros.' studios, HBO/HBO Max, DC and distribution assets, committed to funding the agreed consideration and pursuing required US, EU and UK antitrust clearances, and urged WBD shareholders to approve the Netflix transaction rather than Paramount's competing bid."
+                },
+                {
+                  "action_id": "action_1_agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "status": "executed",
+                  "summary": "The WBD board publicly reaffirmed that it continues to recommend the Netflix transaction and urged shareholders to reject Paramount's amended hostile bid, citing superior value and certainty of the Netflix agreement."
+                },
+                {
+                  "action_id": "action_1_agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "status": "executed",
+                  "summary": "Paramount Skydance publicly reiterated that its amended $30-per-share all-cash bid remains open, that its 25-cent-per-share quarterly ticking fee, Netflix breakup-fee coverage and debt-exchange backstop stay on the table, and urged the WBD board to engage and WBD shareholders to support the Paramount alternative."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_9dcad2ec2d8d50b6",
+                    "action_1_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "The WBD board publicly reaffirmed that it continues to recommend the Netflix transaction"
+                },
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_5a41d4350dee5bf8",
+                    "action_1_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "urged the WBD board to engage and WBD shareholders to support the Paramount alternative"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "committed to funding the agreed consideration and pursuing required US, EU and UK antitrust clearances",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Netflix, Inc. publicly reaffirmed its December 5, 2025 agreement to acquire Warner Bros.' studios, HBO/HBO Max, DC and distribution assets, committed to funding the agreed consideration and pursuing required US, EU and UK antitrust clearances, and urged WBD shareholders to approve the Netflix transaction rather than Paramount's competing bid.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "The WBD board publicly reaffirmed that it continues to recommend the Netflix transaction and urged shareholders to reject Paramount's amended hostile bid, citing superior value and certainty of the Netflix agreement.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "Paramount Skydance publicly reiterated that its amended $30-per-share all-cash bid remains open, that its 25-cent-per-share quarterly ticking fee, Netflix breakup-fee coverage and debt-exchange backstop stay on the table, and urged the WBD board to engage and WBD shareholders to support the Paramount alternative.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                  "action": "Publicly reiterate that Paramount Skydance's amended $30/share all-cash bid remains open and that its ticking fee, breakup-fee coverage and debt-exchange backstop stay on the table, while urging the WBD board to engage with Paramount and calling on WBD shareholders to support the Paramount alternative.\n承诺：Maintain the amended Feb 10, 2026 terms (25-cent/share quarterly ticking fee, Netflix breakup-fee coverage, debt-exchange backstop) as the standing offer.\n触发或复核条件：Only if the WBD board has not engaged with Paramount on the amended terms.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reiterate that Paramount Skydance's amended $30/share all-cash bid remains open and that its ticking fee, breakup-fee coverage and debt-exchange backstop stay on the table, while urging the WBD board to engage with Paramount and calling on WBD shareholders to support the Paramount alternative.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Continue and publicly confirm talks with US, EU and UK antitrust regulators on the Paramount-WBD bid, stating that Paramount will pursue clearance on a timetable compatible with closing before the end of 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": "Publicly reaffirm the December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets, commit to funding the agreed consideration and to pursuing required US, EU and UK antitrust clearances, and urge WBD shareholders to approve the Netflix transaction rather than Paramount's competing bid.\n承诺：Netflix will proceed with the announced acquisition on its agreed terms and seek all required regulatory approvals, targeting closing in 2026.\n触发或复核条件：Contingent on WBD board continuing to recommend the Netflix transaction and shareholders approving it.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm the December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets, commit to funding the agreed consideration and to pursuing required US, EU and UK antitrust clearances, and urge WBD shareholders to approve the Netflix transaction rather than Paramount's competing bid.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:3",
+                  "action": null,
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "As the WBD shareholder group, vote to reject the Netflix acquisition at the shareholder vote and approve Paramount Skydance's competing $30 all-cash offer, following Ancora's signaled position unless the board secures materially better value.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Signal to the WBD board that shareholders will support the Netflix deal only if the board reopens engagement with Paramount or secures improved consideration; otherwise holders will vote no and consider a proxy fight.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                  "action": "Reaffirm publicly that the WBD board continues to recommend the Netflix transaction and urges shareholders to reject Paramount's amended hostile bid, citing the board's view of superior value and certainty of the Netflix agreement.\n承诺：Continue recommending the Netflix sale to shareholders.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Reaffirm publicly that the WBD board continues to recommend the Netflix transaction and urges shareholders to reject Paramount's amended hostile bid, citing the board's view of superior value and certainty of the Netflix agreement.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Netflix and the WBD board reaffirmed the December 5, 2025 deal and recommended rejecting Paramount's amended hostile bid, but no shareholder vote or regulatory clearance is shown as completed. The announced Q3 2026 target leaves room, yet the competing all-cash bid and required US/EU/UK clearances remain unresolved.",
+                "evidence_quote": "The WBD board publicly reaffirmed that it continues to recommend the Netflix transaction and urged shareholders to reject Paramount's amended hostile bid, citing superior value and certainty of the Netflix agreement.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.044099999999999986
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 4,
+        "available_actor_count": 4,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 4,
+            "active_actor_count": 4,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.55,
+      "covered_p_yes": 0.55,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.55,
+        0.55
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "7085e3a0-e574-43f1-a1ad-f2dcb7f3d0f5",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:25:49.927451+00:00",
+      "contract_id": "0xeec3721d3883d5a27a992090d85c8f68fffe1f40774c3a891d078eed10d42508",
+      "forecast_cutoff": "2026-02-19T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "48d5040f6ee5c7ced76b127a4cad293e18cf4a346b0a23538f2218dd4ab3a62f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 50.132
+    },
+    {
+      "calls": 100,
+      "tokens": 1332112,
+      "input_tokens": 1264313,
+      "output_tokens": 67799,
+      "accounted_tokens_upper": 1332112,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-02-19",
+                "interval_end": "2026-03-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 39,
+                "interval_days": 39,
+                "interval_start_utc": "2026-02-19T23:59:59+00:00",
+                "interval_end_utc": "2026-03-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "status": "executed",
+                  "summary": "Paramount Skydance publicly reaffirmed its amended February 10, 2026 Warner Bros. Discovery bid — $30 per share all-cash, a 25-cent per share quarterly ticking fee, coverage of the Netflix breakup fee, a debt-exchange backstop and interim operating flexibility — and urged the WBD board to engage in dialogue rather than proceed solely with the Netflix deal."
+                },
+                {
+                  "action_id": "action_1_agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "status": "executed",
+                  "summary": "Netflix, Inc. issued a public statement reaffirming its commitment to the December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets on the announced terms, and urged WBD shareholders to approve the transaction at the upcoming vote."
+                },
+                {
+                  "action_id": "action_1_agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "status": "executed",
+                  "summary": "The WBD board publicly reaffirmed its December 17, 2025 recommendation that shareholders reject Paramount's hostile bid and proceed with the Netflix acquisition, and stated it is reviewing Paramount's amended February 10 bid and Ancora's February 11 proxy threat in the ordinary course."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_5a41d4350dee5bf8",
+                    "action_1_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "urged the WBD board to engage in dialogue rather than proceed solely with the Netflix deal"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_9dcad2ec2d8d50b6",
+                    "action_1_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "reaffirmed its December 17, 2025 recommendation that shareholders reject Paramount's hostile bid and proceed with the Netflix acquisition"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_9dcad2ec2d8d50b6",
+                    "action_1_agent_3a9be831afda5d0b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "urged WBD shareholders to approve the transaction at the upcoming vote"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "reaffirming its commitment to the December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets on the announced terms",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Paramount Skydance publicly reaffirmed its amended February 10, 2026 Warner Bros. Discovery bid — $30 per share all-cash, a 25-cent per share quarterly ticking fee, coverage of the Netflix breakup fee, a debt-exchange backstop and interim operating flexibility — and urged the WBD board to engage in dialogue rather than proceed solely with the Netflix deal.",
+                  "date": "2026-03"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Netflix, Inc. issued a public statement reaffirming its commitment to the December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets on the announced terms, and urged WBD shareholders to approve the transaction at the upcoming vote.",
+                  "date": "2026-03"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "The WBD board publicly reaffirmed its December 17, 2025 recommendation that shareholders reject Paramount's hostile bid and proceed with the Netflix acquisition, and stated it is reviewing Paramount's amended February 10 bid and Ancora's February 11 proxy threat in the ordinary course.",
+                  "date": "2026-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                  "action": "Publicly reaffirm the amended Feb 10 bid to WBD: $30/share all-cash, 25-cent/share quarterly ticking fee, breakup-fee coverage, debt-exchange backstop, and interim operating flexibility; urge the WBD board to engage and open a dialogue rather than proceed solely with the Netflix deal.\n承诺：Stand behind the amended bid terms already offered on Feb 10, 2026, and cover the Netflix breakup fee if WBD switches.\n触发或复核条件：WBD board agrees to engage on the Paramount bid.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm the amended Feb 10 bid to WBD: $30/share all-cash, 25-cent/share quarterly ticking fee, breakup-fee coverage, debt-exchange backstop, and interim operating flexibility; urge the WBD board to engage and open a dialogue rather than proceed solely with the Netflix deal.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Continue and publicly confirm ongoing antitrust talks with US, EU and UK regulators on the Paramount-WBD combination, emphasizing the all-cash structure and lower regulatory hurdles relative to the Netflix deal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": "Issue a public statement reaffirming Netflix's commitment to the December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets on the announced terms, and urge WBD shareholders to approve the transaction at the upcoming vote.\n承诺：Netflix will proceed with the announced acquisition on substantially the agreed terms, subject to regulatory clearance and shareholder approval.\n触发或复核条件：WBD shareholders' vote and regulatory clearance remain pending.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement reaffirming Netflix's commitment to the December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets on the announced terms, and urge WBD shareholders to approve the transaction at the upcoming vote.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly confirm that Netflix is engaged with US, EU and UK antitrust regulators on the transaction and will cooperate with review timelines, without changing deal terms.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                  "action": "Hold current positions as a dispersed shareholder group; no coordinated vote or proxy action this round. Monitor WBD board engagement with Paramount and any announced vote date or proxy solicitation before deciding how to vote.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 55.0,
+                      "probability": 1.0,
+                      "action": "Hold current positions as a dispersed shareholder group; no coordinated vote or proxy action this round. Monitor WBD board engagement with Paramount and any announced vote date or proxy solicitation before deciding how to vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                  "action": "WBD board publicly reaffirms its December 17, 2025 recommendation that shareholders reject Paramount's hostile bid and proceed with the Netflix acquisition, and states it is reviewing Paramount's amended February 10 bid and Ancora's February 11 proxy threat in the ordinary course.\n承诺：Board continues to recommend the Netflix transaction to shareholders.\n触发或复核条件：Subject to fiduciary review of the amended Paramount bid.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "WBD board publicly reaffirms its December 17, 2025 recommendation that shareholders reject Paramount's hostile bid and proceed with the Netflix acquisition, and states it is reviewing Paramount's amended February 10 bid and Ancora's February 11 proxy threat in the ordinary course.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Netflix and WBD board reaffirmed the December 5, 2025 deal, but Paramount's amended $30/share bid and Ancora's proxy threat create real shareholder and regulatory uncertainty. Announced Q3 2026 closing target leaves room before the Dec 31, 2026 deadline, though no regulatory approvals are evidenced yet.",
+                "evidence_quote": "The WBD board publicly reaffirmed its December 17, 2025 recommendation that shareholders reject Paramount's hostile bid and proceed with the Netflix acquisition, and stated it is reviewing Paramount's amended February 10 bid and Ancora's February 11 proxy threat in the ordinary course.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-03-30",
+                "interval_end": "2026-05-09",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 79,
+                "interval_days": 40,
+                "interval_start_utc": "2026-03-30T00:00:00+00:00",
+                "interval_end_utc": "2026-05-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Netflix and WBD board reaffirmed the December 5, 2025 deal, but Paramount's amended $30/share bid and Ancora's proxy threat create real shareholder and regulatory uncertainty. Announced Q3 2026 closing target leaves room before the Dec 31, 2026 deadline, though no regulatory approvals are evidenced yet.",
+                "evidence_quote": "The WBD board publicly reaffirmed its December 17, 2025 recommendation that shareholders reject Paramount's hostile bid and proceed with the Netflix acquisition, and stated it is reviewing Paramount's amended February 10 bid and Ancora's February 11 proxy threat in the ordinary course.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-05-09",
+                "interval_end": "2026-06-17",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 118,
+                "interval_days": 39,
+                "interval_start_utc": "2026-05-09T00:00:00+00:00",
+                "interval_end_utc": "2026-06-17T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Netflix and WBD board reaffirmed the December 5, 2025 deal, but Paramount's amended $30/share bid and Ancora's proxy threat create real shareholder and regulatory uncertainty. Announced Q3 2026 closing target leaves room before the Dec 31, 2026 deadline, though no regulatory approvals are evidenced yet.",
+                "evidence_quote": "The WBD board publicly reaffirmed its December 17, 2025 recommendation that shareholders reject Paramount's hostile bid and proceed with the Netflix acquisition, and stated it is reviewing Paramount's amended February 10 bid and Ancora's February 11 proxy threat in the ordinary course.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-06-17",
+                "interval_end": "2026-07-27",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 158,
+                "interval_days": 40,
+                "interval_start_utc": "2026-06-17T00:00:00+00:00",
+                "interval_end_utc": "2026-07-27T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "status": "executed",
+                  "summary": "Paramount Skydance publicly pressed the WBD board to engage on its amended February 10 bid before the shareholder vote, restating $30 per share all-cash, a 25-cent per share quarterly ticking fee (~$650M/quarter), Netflix breakup-fee coverage, a debt-exchange backstop and interim operating flexibility, noting continued US/EU/UK antitrust engagement and urging the board to treat Ancora's 'no' stance as a signal to open dialogue."
+                },
+                {
+                  "action_id": "action_4_agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "status": "executed",
+                  "summary": "Netflix, Inc. issued a public statement reaffirming its commitment to the December 5, 2025 agreement on the announced terms, confirming it will not raise its price in response to Paramount's amended bid, and urging WBD shareholders to approve the transaction at the upcoming vote."
+                },
+                {
+                  "action_id": "action_4_agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "status": "executed",
+                  "summary": "The WBD board publicly reaffirmed its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, stating it has reviewed Paramount's amended February 10 bid and Ancora's proxy threat and continues to see the Netflix transaction as the superior path."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_4_agent_5a41d4350dee5bf8",
+                    "action_4_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "continues to see the Netflix transaction as the superior path"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_9dcad2ec2d8d50b6",
+                    "action_4_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "urging WBD shareholders to approve the transaction at the upcoming vote"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "reaffirming its commitment to the December 5, 2025 agreement on the announced terms",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Paramount Skydance publicly pressed the WBD board to engage on its amended February 10 bid before the shareholder vote, restating $30 per share all-cash, a 25-cent per share quarterly ticking fee (~$650M/quarter), Netflix breakup-fee coverage, a debt-exchange backstop and interim operating flexibility, noting continued US/EU/UK antitrust engagement and urging the board to treat Ancora's 'no' stance as a signal to open dialogue.",
+                  "date": "2026-07"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "Netflix, Inc. issued a public statement reaffirming its commitment to the December 5, 2025 agreement on the announced terms, confirming it will not raise its price in response to Paramount's amended bid, and urging WBD shareholders to approve the transaction at the upcoming vote.",
+                  "date": "2026-07"
+                },
+                {
+                  "id": "sim_0001_004_003",
+                  "text": "The WBD board publicly reaffirmed its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, stating it has reviewed Paramount's amended February 10 bid and Ancora's proxy threat and continues to see the Netflix transaction as the superior path.",
+                  "date": "2026-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                  "action": "Publicly press the WBD board to engage on Paramount's amended Feb 10 bid before the shareholder vote: $30/share all-cash, 25-cent/share quarterly ticking fee (~$650M/quarter), Netflix breakup-fee coverage, debt-exchange backstop, and interim operating flexibility. Note continued US/EU/UK antitrust engagement and urge the board to treat Ancora's 'no' stance as a signal to open dialogue.\n承诺：Stand behind the amended Feb 10, 2026 terms and cover the Netflix breakup fee if WBD switches to Paramount.\n触发或复核条件：WBD board agrees to engage on the Paramount bid.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly press the WBD board to engage on Paramount's amended Feb 10 bid before the shareholder vote: $30/share all-cash, 25-cent/share quarterly ticking fee (~$650M/quarter), Netflix breakup-fee coverage, debt-exchange backstop, and interim operating flexibility. Note continued US/EU/UK antitrust engagement and urge the board to treat Ancora's 'no' stance as a signal to open dialogue.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": "Issue a public statement reaffirming Netflix's commitment to the December 5, 2025 agreement on the announced terms, confirming it will not raise its price in response to Paramount's amended bid, and urging WBD shareholders to approve the transaction at the upcoming vote.\n承诺：Netflix will proceed with the announced acquisition on substantially the agreed terms, subject to regulatory clearance and shareholder approval.\n触发或复核条件：WBD shareholder vote and regulatory clearance remain pending.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement reaffirming Netflix's commitment to the December 5, 2025 agreement on the announced terms, confirming it will not raise its price in response to Paramount's amended bid, and urging WBD shareholders to approve the transaction at the upcoming vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                  "action": "Hold as a dispersed shareholder group; no coordinated vote or proxy action this round. Continue monitoring for a scheduled vote, proxy solicitation, or board engagement with Paramount before adopting a vote posture.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Hold as a dispersed shareholder group; no coordinated vote or proxy action this round. Continue monitoring for a scheduled vote, proxy solicitation, or board engagement with Paramount before adopting a vote posture.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                  "action": "WBD board publicly reaffirms its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, and states it has reviewed Paramount's amended February 10 bid and Ancora's proxy threat and continues to see the Netflix transaction as the superior path.\n承诺：Board continues to recommend the Netflix transaction to shareholders.\n触发或复核条件：Subject to fiduciary review and regulatory approval.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "WBD board publicly reaffirms its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, and states it has reviewed Paramount's amended February 10 bid and Ancora's proxy threat and continues to see the Netflix transaction as the superior path.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "contract_outlook": {
+                "p_yes": 0.5,
+                "basis": "WBD board reaffirmed the Netflix deal and rejected Paramount's hostile bid, but a competing $30/share all-cash Paramount offer, an activist proxy threat, and pending US/EU/UK antitrust review create real closing risk before the end-2026 outside date. The announced Q3 2026 target leaves limited margin for regulatory delay.",
+                "evidence_quote": "The WBD board publicly reaffirmed its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, stating it has reviewed Paramount's amended February 10 bid and Ancora's proxy threat and continues to see the Netflix transaction as the superior path.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-07-27",
+                "interval_end": "2026-09-04",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 197,
+                "interval_days": 39,
+                "interval_start_utc": "2026-07-27T00:00:00+00:00",
+                "interval_end_utc": "2026-09-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.5,
+                "basis": "WBD board reaffirmed the Netflix deal and rejected Paramount's hostile bid, but a competing $30/share all-cash Paramount offer, an activist proxy threat, and pending US/EU/UK antitrust review create real closing risk before the end-2026 outside date. The announced Q3 2026 target leaves limited margin for regulatory delay.",
+                "evidence_quote": "The WBD board publicly reaffirmed its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, stating it has reviewed Paramount's amended February 10 bid and Ancora's proxy threat and continues to see the Netflix transaction as the superior path.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-09-04",
+                "interval_end": "2026-10-14",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 237,
+                "interval_days": 40,
+                "interval_start_utc": "2026-09-04T00:00:00+00:00",
+                "interval_end_utc": "2026-10-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.5,
+                "basis": "WBD board reaffirmed the Netflix deal and rejected Paramount's hostile bid, but a competing $30/share all-cash Paramount offer, an activist proxy threat, and pending US/EU/UK antitrust review create real closing risk before the end-2026 outside date. The announced Q3 2026 target leaves limited margin for regulatory delay.",
+                "evidence_quote": "The WBD board publicly reaffirmed its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, stating it has reviewed Paramount's amended February 10 bid and Ancora's proxy threat and continues to see the Netflix transaction as the superior path.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-10-14",
+                "interval_end": "2026-11-22",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 276,
+                "interval_days": 39,
+                "interval_start_utc": "2026-10-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-22T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "status": "executed",
+                  "summary": "Paramount Skydance publicly appealed directly to Warner Bros. Discovery shareholders ahead of their vote, restating its amended February 10, 2026 bid — $30 per share all-cash, a 25-cent per share quarterly ticking fee, Netflix breakup-fee coverage, a debt-exchange backstop and interim operating flexibility — and urging shareholders to reject the Netflix deal and press the board to engage Paramount."
+                },
+                {
+                  "action_id": "action_7_agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "status": "executed",
+                  "summary": "Netflix, Inc. issued a public statement reaffirming its commitment to the December 5, 2025 agreement on the announced terms, noting continued engagement with US, EU and UK regulators, and urged WBD shareholders to approve the transaction at the upcoming vote."
+                },
+                {
+                  "action_id": "action_7_agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_7_agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "status": "executed",
+                  "summary": "The WBD board publicly reaffirmed its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, stating it has reviewed Paramount's latest bid and Ancora's proxy threat and urging shareholders to vote for the Netflix transaction at the upcoming vote."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_7_agent_5a41d4350dee5bf8",
+                    "action_7_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "urging shareholders to reject the Netflix deal and press the board to engage Paramount"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_7_agent_9dcad2ec2d8d50b6",
+                    "action_7_agent_3a9be831afda5d0b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "urged WBD shareholders to approve the transaction at the upcoming vote"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_7_agent_90dff7fc04f45f2b",
+                    "action_7_agent_3a9be831afda5d0b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "urging shareholders to vote for the Netflix transaction at the upcoming vote"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "reaffirming its commitment to the December 5, 2025 agreement on the announced terms",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_007_001",
+                  "text": "Paramount Skydance publicly appealed directly to Warner Bros. Discovery shareholders ahead of their vote, restating its amended February 10, 2026 bid — $30 per share all-cash, a 25-cent per share quarterly ticking fee, Netflix breakup-fee coverage, a debt-exchange backstop and interim operating flexibility — and urging shareholders to reject the Netflix deal and press the board to engage Paramount.",
+                  "date": "2026-11"
+                },
+                {
+                  "id": "sim_0001_007_002",
+                  "text": "Netflix, Inc. issued a public statement reaffirming its commitment to the December 5, 2025 agreement on the announced terms, noting continued engagement with US, EU and UK regulators, and urged WBD shareholders to approve the transaction at the upcoming vote.",
+                  "date": "2026-11"
+                },
+                {
+                  "id": "sim_0001_007_003",
+                  "text": "The WBD board publicly reaffirmed its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, stating it has reviewed Paramount's latest bid and Ancora's proxy threat and urging shareholders to vote for the Netflix transaction at the upcoming vote.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                  "action": "Publicly appeal directly to WBD shareholders ahead of their vote: reiterate the Feb 10 amended bid ($30/share all-cash, 25-cent/share quarterly ticking fee, Netflix breakup-fee coverage, debt-exchange backstop, interim operating flexibility) and urge them to reject the Netflix deal and press the board to engage Paramount.\n承诺：Stand behind the amended Feb 10, 2026 terms and cover the Netflix breakup fee if WBD switches to Paramount.\n触发或复核条件：WBD board agrees to engage on the Paramount bid.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly appeal directly to WBD shareholders ahead of their vote: reiterate the Feb 10 amended bid ($30/share all-cash, 25-cent/share quarterly ticking fee, Netflix breakup-fee coverage, debt-exchange backstop, interim operating flexibility) and urge them to reject the Netflix deal and press the board to engage Paramount.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly state that Paramount continues active antitrust engagement with US, EU and UK regulators on its WBD bid and that its all-cash structure faces a shorter clearance path than Netflix's, without asserting any regulatory decision has been made.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": "Issue a public statement reaffirming Netflix's commitment to the December 5, 2025 agreement on the announced terms, noting continued engagement with US/EU/UK regulators and urging WBD shareholders to approve the transaction at the upcoming vote.\n承诺：Netflix will proceed with the announced acquisition on substantially the agreed terms, subject to regulatory clearance and shareholder approval.\n触发或复核条件：WBD shareholder vote and regulatory clearance remain pending.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement reaffirming Netflix's commitment to the December 5, 2025 agreement on the announced terms, noting continued engagement with US/EU/UK regulators and urging WBD shareholders to approve the transaction at the upcoming vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                  "action": "Hold as a dispersed shareholder group; no coordinated vote or proxy action this round. Continue monitoring for a scheduled vote, a proxy solicitation, or board engagement with Paramount before adopting a vote posture.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Hold as a dispersed shareholder group; no coordinated vote or proxy action this round. Continue monitoring for a scheduled vote, a proxy solicitation, or board engagement with Paramount before adopting a vote posture.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly signal that, absent improved terms or a scheduled vote, a meaningful bloc of holders is inclined to vote 'no' on Netflix's $27.75 offer and 'yes' on Paramount's $30 all-cash bid, urging the board to engage Paramount and disclose the vote timetable.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                  "action": "WBD board publicly reaffirms its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, states it has reviewed Paramount's latest bid and Ancora's proxy threat, and urges shareholders to vote for the Netflix transaction at the upcoming vote.\n承诺：Board continues to recommend the Netflix transaction to shareholders.\n触发或复核条件：Subject to fiduciary review and regulatory approval.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "WBD board publicly reaffirms its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, states it has reviewed Paramount's latest bid and Ancora's proxy threat, and urges shareholders to vote for the Netflix transaction at the upcoming vote.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "WBD board publicly states it has reviewed Paramount's amended bid and Ancora's proxy threat and declines to open dialogue or change its recommendation, reaffirming the December 5, 2025 Netflix agreement as the path it will pursue.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "WBD board reaffirmed the Netflix deal and urged a yes vote as of Nov 2026, but Paramount's competing all-cash bid and Ancora's proxy threat create real shareholder-vote risk. No evidence shows regulatory clearance or closing, and the Q3 2026 target has already slipped past without confirmation.",
+                "evidence_quote": "The WBD board publicly reaffirmed its recommendation that shareholders approve the Netflix acquisition and reject Paramount's hostile bid, stating it has reviewed Paramount's latest bid and Ancora's proxy threat and urging shareholders to vote for the Netflix transaction at the upcoming vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_007_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-22",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 316,
+                "interval_days": 40,
+                "interval_start_utc": "2026-11-22T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_8_agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                  "action": "Hold as a dispersed shareholder group; no coordinated vote or proxy action this round. Monitor for a scheduled vote date, proxy solicitation, or board engagement with Paramount before adopting a vote posture.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Hold as a dispersed shareholder group; no coordinated vote or proxy action this round. Monitor for a scheduled vote date, proxy solicitation, or board engagement with Paramount before adopting a vote posture.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Netflix and the WBD board repeatedly reaffirmed the December 5, 2025 deal through November 2026, but no closing or regulatory clearance is reported before the deadline. Paramount's competing all-cash bid and Ancora's proxy threat keep shareholder and regulatory execution risk material and unresolved.",
+                "evidence_quote": "Netflix, Inc. issued a public statement reaffirming its commitment to the December 5, 2025 agreement on the announced terms, noting continued engagement with US, EU and UK regulators, and urged WBD shareholders to approve the transaction at the upcoming vote.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "sim_0001_007_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.015247310399999997
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-02-19",
+                "interval_end": "2026-03-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 39,
+                "interval_days": 39,
+                "interval_start_utc": "2026-02-19T23:59:59+00:00",
+                "interval_end_utc": "2026-03-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "status": "executed",
+                  "summary": "Paramount Skydance publicly reiterated its amended February 10 bid terms and called on the WBD board to engage with Paramount Skydance, framing the $30 all-cash offer, ticking fee, breakup-fee coverage and debt-exchange backstop as superior to the Netflix deal for shareholders."
+                },
+                {
+                  "action_id": "action_1_agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "status": "executed",
+                  "summary": "Netflix, Inc. issued a public statement reaffirming its commitment to close the Warner Bros. acquisition on the announced terms, confirming it is cooperating with US, EU and UK antitrust regulators and targeting completion in Q3 2026, and urging WBD shareholders to approve the Netflix transaction rather than Paramount's competing bid."
+                },
+                {
+                  "action_id": "action_1_agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "status": "executed",
+                  "summary": "Warner Bros. Discovery shareholders publicly signaled support for Paramount's amended $30 all-cash bid (ticking fee, breakup-fee coverage, debt backstop) and opposition to the Netflix deal at $27.75, urging the WBD board to engage Paramount, consistent with Ancora's stance."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_3a9be831afda5d0b",
+                    "action_1_agent_9dcad2ec2d8d50b6"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Warner Bros. Discovery shareholders publicly signaled support for Paramount's amended $30 all-cash bid"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Netflix, Inc. issued a public statement reaffirming its commitment to close the Warner Bros. acquisition on the announced terms",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Paramount Skydance publicly reiterated its amended February 10 bid terms and called on the WBD board to engage with Paramount Skydance, framing the $30 all-cash offer, ticking fee, breakup-fee coverage and debt-exchange backstop as superior to the Netflix deal for shareholders.",
+                  "date": "2026-03"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Netflix, Inc. issued a public statement reaffirming its commitment to close the Warner Bros. acquisition on the announced terms, confirming it is cooperating with US, EU and UK antitrust regulators and targeting completion in Q3 2026, and urging WBD shareholders to approve the Netflix transaction rather than Paramount's competing bid.",
+                  "date": "2026-03"
+                },
+                {
+                  "id": "sim_0002_001_003",
+                  "text": "Warner Bros. Discovery shareholders publicly signaled support for Paramount's amended $30 all-cash bid (ticking fee, breakup-fee coverage, debt backstop) and opposition to the Netflix deal at $27.75, urging the WBD board to engage Paramount, consistent with Ancora's stance.",
+                  "date": "2026-03"
+                },
+                {
+                  "id": "sim_0002_001_004",
+                  "text": "WBD board sent a direct response to Paramount Skydance acknowledging its amended February 10 bid and stating the board will evaluate it against the Netflix agreement, without committing to change its recommendation.",
+                  "date": "2026-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                  "action": "Publicly reiterate the amended bid terms and call on the WBD board to engage with Paramount Skydance, framing the $30 all-cash offer, ticking fee, breakup-fee coverage and debt-exchange backstop as superior to the Netflix deal for shareholders.\n承诺：No new financial terms this round; restates the Feb 10 amended bid and requests board engagement.\n触发或复核条件：Board engagement or a shareholder vote on the Netflix deal.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reiterate the amended bid terms and call on the WBD board to engage with Paramount Skydance, framing the $30 all-cash offer, ticking fee, breakup-fee coverage and debt-exchange backstop as superior to the Netflix deal for shareholders.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Continue and publicly note ongoing antitrust discussions with US, EU and UK regulators, presenting the Paramount structure as facing lower regulatory hurdles than the Netflix deal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": "Issue a public statement reaffirming Netflix's commitment to close the Warner Bros. acquisition on the announced terms, confirming it is cooperating with US, EU and UK antitrust regulators and targeting completion in Q3 2026, and urging WBD shareholders to approve the Netflix transaction rather than Paramount's competing bid.\n承诺：Netflix will proceed with the announced acquisition and pursue closing in Q3 2026, subject to regulatory approval and the WBD shareholder vote.\n触发或复核条件：Regulatory clearance and WBD shareholder approval of the Netflix transaction.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement reaffirming Netflix's commitment to close the Warner Bros. acquisition on the announced terms, confirming it is cooperating with US, EU and UK antitrust regulators and targeting completion in Q3 2026, and urging WBD shareholders to approve the Netflix transaction rather than Paramount's competing bid.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:2",
+                  "action": "Publicly signal support for Paramount's amended $30 all-cash bid (ticking fee, breakup-fee coverage, debt backstop) and opposition to the Netflix deal at $27.75, urging the WBD board to engage Paramount, consistent with Ancora's stance.\n承诺：Support Paramount's superior all-cash offer and oppose the Netflix deal unless terms improve.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Hold current positions and monitor for a definitive WBD shareholder vote date, proxy solicitation filings, or board engagement with Paramount before committing votes.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly signal support for Paramount's amended $30 all-cash bid (ticking fee, breakup-fee coverage, debt backstop) and opposition to the Netflix deal at $27.75, urging the WBD board to engage Paramount, consistent with Ancora's stance.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Reaffirm publicly that the WBD board recommends shareholders reject Paramount's amended bid and vote for the Netflix transaction, citing the signed Dec 5, 2025 deal terms and the Paramount offer's financing and regulatory uncertainty.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Netflix reaffirmed commitment and targets Q3 2026 closing, but WBD shareholders signaled support for Paramount's higher all-cash bid, and regulatory clearance across US/EU/UK remains unresolved. Competing bid and shareholder pressure materially raise termination risk before the Dec 31, 2026 deadline.",
+                "evidence_quote": "Warner Bros. Discovery shareholders publicly signaled support for Paramount's amended $30 all-cash bid (ticking fee, breakup-fee coverage, debt backstop) and opposition to the Netflix deal at $27.75, urging the WBD board to engage Paramount, consistent with Ancora's stance.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_003",
+                "estimate_kind": null
+              }
+            }
+          ],
+          "branches": [],
+          "status": "failed",
+          "p_yes": null,
+          "error": "ValueError: Settlement state path has no object parent: acquisition_process.wbd_board_review_status",
+          "action_path_probability": 0.043199999999999995
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 9,
+        "active_rounds": 5,
+        "draw_rounds": 5,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 17,
+        "public_event_count": 13,
+        "substantive_public_event_count": 13,
+        "state_change_count": 4,
+        "condition_change_count": 2,
+        "active_actor_count": 4,
+        "available_actor_count": 4,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 0.5,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 4,
+            "sampled_decisions": 13,
+            "active_actor_count": 4,
+            "public_event_count": 9,
+            "substantive_public_event_count": 9,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 4,
+            "active_actor_count": 4,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 4,
+            "condition_change_count": 1,
+            "valid_estimate": false,
+            "outcome_observed": false,
+            "conditional_only": false
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": null,
+      "covered_p_yes": 0.42,
+      "coverage": 0.5,
+      "unknown_bounds": [
+        0.21,
+        0.71
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 1,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": true,
+      "status": "partial",
+      "error": "ValueError: Settlement state path has no object parent: acquisition_process.wbd_board_review_status",
+      "planned_samples": 2,
+      "simulation_run_id": "29ef334c-8a34-4601-85c1-81dd46f51cc5",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:35:38.276269+00:00",
+      "contract_id": "0xeec3721d3883d5a27a992090d85c8f68fffe1f40774c3a891d078eed10d42508",
+      "forecast_cutoff": "2026-02-19T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "48d5040f6ee5c7ced76b127a4cad293e18cf4a346b0a23538f2218dd4ab3a62f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 190.735
+    },
+    {
+      "calls": 78,
+      "tokens": 1119197,
+      "input_tokens": 1052024,
+      "output_tokens": 67173,
+      "accounted_tokens_upper": 1119197,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-02-19",
+                "interval_end": "2026-03-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 39,
+                "interval_days": 39,
+                "interval_start_utc": "2026-02-19T23:59:59+00:00",
+                "interval_end_utc": "2026-03-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "status": "executed",
+                  "summary": "Paramount Skydance publicly restated its amended February 10 bid terms—a 25-cent-per-share quarterly ticking fee, coverage of WBD's Netflix breakup fee, a debt-exchange backstop and interim operating flexibility—and urged the WBD board to engage with Paramount rather than proceed solely with the Netflix deal, stating no new price increase this round."
+                },
+                {
+                  "action_id": "action_1_agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "status": "executed",
+                  "summary": "Netflix, Inc. publicly reaffirmed its commitment to close the announced Warner Bros. acquisition on the agreed terms, stated it is cooperating with US, EU and UK antitrust review, and urged WBD shareholders to support the board-endorsed transaction against Paramount's competing bid."
+                },
+                {
+                  "action_id": "action_1_agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "status": "executed",
+                  "summary": "The WBD board reaffirmed its recommendation that shareholders reject Paramount's amended hostile bid and vote for the Netflix acquisition on the existing terms, stating that Paramount's ticking fee and breakup-fee coverage do not change the board's view of value or regulatory risk."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_5a41d4350dee5bf8",
+                    "action_1_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Paramount's ticking fee and breakup-fee coverage do not change the board's view of value or regulatory risk"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_9dcad2ec2d8d50b6",
+                    "action_1_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "urged WBD shareholders to support the board-endorsed transaction"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Netflix, Inc. publicly reaffirmed its commitment to close the announced Warner Bros. acquisition on the agreed terms",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Paramount Skydance publicly restated its amended February 10 bid terms—a 25-cent-per-share quarterly ticking fee, coverage of WBD's Netflix breakup fee, a debt-exchange backstop and interim operating flexibility—and urged the WBD board to engage with Paramount rather than proceed solely with the Netflix deal, stating no new price increase this round.",
+                  "date": "2026-03"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Netflix, Inc. publicly reaffirmed its commitment to close the announced Warner Bros. acquisition on the agreed terms, stated it is cooperating with US, EU and UK antitrust review, and urged WBD shareholders to support the board-endorsed transaction against Paramount's competing bid.",
+                  "date": "2026-03"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "The WBD board reaffirmed its recommendation that shareholders reject Paramount's amended hostile bid and vote for the Netflix acquisition on the existing terms, stating that Paramount's ticking fee and breakup-fee coverage do not change the board's view of value or regulatory risk.",
+                  "date": "2026-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                  "action": "Publicly reaffirm the amended Feb 10 bid terms—25-cent/share quarterly ticking fee, coverage of WBD's Netflix breakup fee, debt-exchange backstop and interim operating flexibility—and urge the WBD board to engage with Paramount rather than proceed solely with the Netflix deal.\n承诺：Stand behind the amended bid terms as offered; no new price increase this round.\n触发或复核条件：Only if WBD board continues to refuse engagement.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm the amended Feb 10 bid terms—25-cent/share quarterly ticking fee, coverage of WBD's Netflix breakup fee, debt-exchange backstop and interim operating flexibility—and urge the WBD board to engage with Paramount rather than proceed solely with the Netflix deal.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Continue and publicly confirm ongoing antitrust talks with US, EU and UK regulators on the Paramount-WBD combination, emphasizing alleged lower regulatory hurdles versus the Netflix deal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": "Publicly reaffirm Netflix's commitment to close the announced Warner Bros. acquisition on the agreed terms, state that Netflix is cooperating with US, EU and UK antitrust review, and urge WBD shareholders to support the board-endorsed transaction against Paramount's competing bid.\n承诺：Netflix commits to pursue closing the announced Warner Bros. studios/HBO Max acquisition on substantially similar terms through the Q3 2026 target, subject to regulatory clearance and the shareholder vote.\n触发或复核条件：Regulatory clearance and WBD shareholder approval remain outstanding.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm Netflix's commitment to close the announced Warner Bros. acquisition on the agreed terms, state that Netflix is cooperating with US, EU and UK antitrust review, and urge WBD shareholders to support the board-endorsed transaction against Paramount's competing bid.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publicly confirm Netflix is actively engaging US, EU and UK antitrust regulators on the WBD transaction and expects to complete review in time for a Q3 2026 close, without conceding divestitures beyond what regulators require.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "As WBD shareholders, publicly signal that the Paramount Skydance amended bid ($30/share all-cash, ticking fee, breakup-fee coverage, debt backstop) is the value-maximizing alternative, and that holders will vote 'no' on the Netflix deal and 'yes' on Paramount unless the WBD board engages Paramount and improves terms.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                  "action": "Reaffirm publicly that the WBD board recommends shareholders reject Paramount's amended hostile bid and vote for the Netflix acquisition on the existing terms, stating that Paramount's ticking fee and breakup-fee coverage do not change the board's view of value or regulatory risk.\n承诺：Board continues to recommend the Netflix transaction and urges shareholders to reject Paramount's bid.\n触发或复核条件：Unless Netflix materially changes terms or a superior proposal emerges.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Reaffirm publicly that the WBD board recommends shareholders reject Paramount's amended hostile bid and vote for the Netflix acquisition on the existing terms, stating that Paramount's ticking fee and breakup-fee coverage do not change the board's view of value or regulatory risk.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:2",
+                      "weight": 45.0,
+                      "probability": 0.45,
+                      "action": "Publicly state the board will review Paramount's amended Feb 10 bid and engage with concerned shareholders, including Ancora, while making no change to the Netflix recommendation at this time; commit to disclose any board determination on Paramount's bid before the shareholder vote.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "contract_outlook": {
+                "p_yes": 0.62,
+                "basis": "Netflix and the WBD board reaffirmed the board-endorsed deal in March 2026, but a competing Paramount bid, an activist shareholder threat, and pending US/EU/UK antitrust review remain material obstacles before the end-2026 deadline.",
+                "evidence_quote": "The WBD board reaffirmed its recommendation that shareholders reject Paramount's amended hostile bid and vote for the Netflix acquisition on the existing terms, stating that Paramount's ticking fee and breakup-fee coverage do not change the board's view of value or regulatory risk.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-03-30",
+                "interval_end": "2026-05-09",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 79,
+                "interval_days": 40,
+                "interval_start_utc": "2026-03-30T00:00:00+00:00",
+                "interval_end_utc": "2026-05-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.62,
+                "basis": "Netflix and the WBD board reaffirmed the board-endorsed deal in March 2026, but a competing Paramount bid, an activist shareholder threat, and pending US/EU/UK antitrust review remain material obstacles before the end-2026 deadline.",
+                "evidence_quote": "The WBD board reaffirmed its recommendation that shareholders reject Paramount's amended hostile bid and vote for the Netflix acquisition on the existing terms, stating that Paramount's ticking fee and breakup-fee coverage do not change the board's view of value or regulatory risk.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-05-09",
+                "interval_end": "2026-06-17",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 118,
+                "interval_days": 39,
+                "interval_start_utc": "2026-05-09T00:00:00+00:00",
+                "interval_end_utc": "2026-06-17T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.62,
+                "basis": "Netflix and the WBD board reaffirmed the board-endorsed deal in March 2026, but a competing Paramount bid, an activist shareholder threat, and pending US/EU/UK antitrust review remain material obstacles before the end-2026 deadline.",
+                "evidence_quote": "The WBD board reaffirmed its recommendation that shareholders reject Paramount's amended hostile bid and vote for the Netflix acquisition on the existing terms, stating that Paramount's ticking fee and breakup-fee coverage do not change the board's view of value or regulatory risk.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-06-17",
+                "interval_end": "2026-07-27",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 158,
+                "interval_days": 40,
+                "interval_start_utc": "2026-06-17T00:00:00+00:00",
+                "interval_end_utc": "2026-07-27T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "status": "executed",
+                  "summary": "Paramount Skydance publicly restated its amended February 10 bid terms—a 25-cent-per-share quarterly ticking fee, coverage of WBD's Netflix breakup fee, a debt-exchange backstop and interim operating flexibility—again urged the WBD board to engage with Paramount rather than proceed solely with the Netflix deal, and confirmed no new price increase this round."
+                },
+                {
+                  "action_id": "action_4_agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "status": "executed",
+                  "summary": "Netflix, Inc. publicly reaffirmed its commitment to close the announced Warner Bros. acquisition on the agreed terms, noted continued cooperation with US, EU and UK antitrust review, and urged WBD shareholders to reject Ancora's 'no' campaign and vote for the board-endorsed Netflix transaction."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Netflix, Inc. publicly reaffirmed its commitment to close the announced Warner Bros. acquisition on the agreed terms",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Paramount Skydance publicly restated its amended February 10 bid terms—a 25-cent-per-share quarterly ticking fee, coverage of WBD's Netflix breakup fee, a debt-exchange backstop and interim operating flexibility—again urged the WBD board to engage with Paramount rather than proceed solely with the Netflix deal, and confirmed no new price increase this round.",
+                  "date": "2026-07"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "Netflix, Inc. publicly reaffirmed its commitment to close the announced Warner Bros. acquisition on the agreed terms, noted continued cooperation with US, EU and UK antitrust review, and urged WBD shareholders to reject Ancora's 'no' campaign and vote for the board-endorsed Netflix transaction.",
+                  "date": "2026-07"
+                },
+                {
+                  "id": "sim_0001_004_003",
+                  "text": "The WBD board communicated to WBD shareholders that it is pursuing improved Netflix terms before the vote, seeking to close the value gap versus Paramount's $30 all-cash bid.",
+                  "date": "2026-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                  "action": "Publicly reaffirm the amended Feb 10 bid terms—25-cent/share quarterly ticking fee, coverage of WBD's Netflix breakup fee, debt-exchange backstop and interim operating flexibility—and again urge the WBD board to engage with Paramount rather than proceed solely with the Netflix deal.\n承诺：Stand behind the amended bid terms as offered; no new price increase this round.\n触发或复核条件：Only if the WBD board continues to refuse engagement.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly reaffirm the amended Feb 10 bid terms—25-cent/share quarterly ticking fee, coverage of WBD's Netflix breakup fee, debt-exchange backstop and interim operating flexibility—and again urge the WBD board to engage with Paramount rather than proceed solely with the Netflix deal.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Continue and publicly note ongoing talks with US, EU and UK antitrust regulators on the Paramount bid, emphasizing lower regulatory hurdles versus the Netflix deal, to strengthen the case for shareholder support.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Hold the amended bid terms unchanged and monitor the WBD shareholder vote process, Ancora's proxy activity and regulatory signals before deciding whether any further bid revision is warranted.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": "Publicly reaffirm Netflix's commitment to close the announced Warner Bros. acquisition on the agreed terms, note continued cooperation with US, EU and UK antitrust review, and urge WBD shareholders to reject Ancora's 'no' campaign and vote for the board-endorsed Netflix transaction.\n承诺：Netflix commits to pursue closing on substantially similar terms through the Q3 2026 target, subject to regulatory clearance and the shareholder vote.\n触发或复核条件：Regulatory clearance and WBD shareholder approval remain outstanding.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm Netflix's commitment to close the announced Warner Bros. acquisition on the agreed terms, note continued cooperation with US, EU and UK antitrust review, and urge WBD shareholders to reject Ancora's 'no' campaign and vote for the board-endorsed Netflix transaction.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly state that Netflix is actively engaging US, EU and UK antitrust regulators on the Warner Bros. transaction and expects to address clearance conditions, without altering deal price or terms this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                  "action": null,
+                  "p_selected": 0.5,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.3333333333333333,
+                      "action": "Publicly reaffirm the board's recommendation to vote for the Netflix acquisition while acknowledging shareholder concerns and stating the board is actively engaging Netflix on value and protective terms.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "As WBD shareholders, publicly state that the value gap versus Paramount's $30 all-cash bid persists and that we will vote against the Netflix transaction on existing terms unless the board secures improved consideration or protective terms closing that gap.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "WBD board still backs Netflix and Netflix reaffirmed commitment, but the July 2026 board push for improved terms and Ancora's 'no' campaign show the deal is not locked. Regulatory clearance across US, EU and UK remains the main unresolved hurdle before the end-2026 deadline.",
+                "evidence_quote": "The WBD board communicated to WBD shareholders that it is pursuing improved Netflix terms before the vote, seeking to close the value gap versus Paramount's $30 all-cash bid.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-07-27",
+                "interval_end": "2026-09-04",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 197,
+                "interval_days": 39,
+                "interval_start_utc": "2026-07-27T00:00:00+00:00",
+                "interval_end_utc": "2026-09-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "WBD board still backs Netflix and Netflix reaffirmed commitment, but the July 2026 board push for improved terms and Ancora's 'no' campaign show the deal is not locked. Regulatory clearance across US, EU and UK remains the main unresolved hurdle before the end-2026 deadline.",
+                "evidence_quote": "The WBD board communicated to WBD shareholders that it is pursuing improved Netflix terms before the vote, seeking to close the value gap versus Paramount's $30 all-cash bid.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-09-04",
+                "interval_end": "2026-10-14",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 237,
+                "interval_days": 40,
+                "interval_start_utc": "2026-09-04T00:00:00+00:00",
+                "interval_end_utc": "2026-10-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "WBD board still backs Netflix and Netflix reaffirmed commitment, but the July 2026 board push for improved terms and Ancora's 'no' campaign show the deal is not locked. Regulatory clearance across US, EU and UK remains the main unresolved hurdle before the end-2026 deadline.",
+                "evidence_quote": "The WBD board communicated to WBD shareholders that it is pursuing improved Netflix terms before the vote, seeking to close the value gap versus Paramount's $30 all-cash bid.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-10-14",
+                "interval_end": "2026-11-22",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 276,
+                "interval_days": 39,
+                "interval_start_utc": "2026-10-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-22T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "status": "executed",
+                  "summary": "Paramount Skydance publicly confirmed to WBD shareholders that its $30-per-share all-cash offer remains firm and fully financed, including the 25-cent/share quarterly ticking fee, coverage of WBD's Netflix breakup fee, the debt-exchange backstop and interim operating flexibility, and urged the WBD board to engage before the vote, stating no price reduction."
+                },
+                {
+                  "action_id": "action_7_agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "status": "executed",
+                  "summary": "Warner Bros. Discovery shareholders publicly stated they will support the board-endorsed Netflix transaction only if the board secures improved consideration or protective terms closing the gap to Paramount's $30 all-cash bid before the vote, and will otherwise withhold support."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_7_agent_5a41d4350dee5bf8",
+                    "action_7_agent_3a9be831afda5d0b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Paramount Skydance publicly confirmed to WBD shareholders that its $30-per-share all-cash offer remains firm and fully financed"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Warner Bros. Discovery shareholders publicly stated they will support the board-endorsed Netflix transaction only if the board secures improved consideration or protective terms closing the gap to Paramount's $30 all-cash bid before the vote",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_007_001",
+                  "text": "Paramount Skydance publicly confirmed to WBD shareholders that its $30-per-share all-cash offer remains firm and fully financed, including the 25-cent/share quarterly ticking fee, coverage of WBD's Netflix breakup fee, the debt-exchange backstop and interim operating flexibility, and urged the WBD board to engage before the vote, stating no price reduction.",
+                  "date": "2026-11"
+                },
+                {
+                  "id": "sim_0001_007_002",
+                  "text": "Warner Bros. Discovery shareholders publicly stated they will support the board-endorsed Netflix transaction only if the board secures improved consideration or protective terms closing the gap to Paramount's $30 all-cash bid before the vote, and will otherwise withhold support.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                  "action": "Publicly confirm to WBD shareholders that Paramount Skydance's $30-per-share all-cash offer remains firm and fully financed, including the 25-cent/share quarterly ticking fee, coverage of WBD's Netflix breakup fee, the debt-exchange backstop and interim operating flexibility, and urge the WBD board to engage before the vote.\n承诺：Terms remain firm at $30 all-cash with the amended Feb 10 protections; no price reduction.\n触发或复核条件：If the WBD board continues to refuse engagement before the shareholder vote.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly confirm to WBD shareholders that Paramount Skydance's $30-per-share all-cash offer remains firm and fully financed, including the 25-cent/share quarterly ticking fee, coverage of WBD's Netflix breakup fee, the debt-exchange backstop and interim operating flexibility, and urge the WBD board to engage before the vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly reaffirm commitment to close on agreed terms, highlight regulatory progress with US/EU/UK authorities, and urge WBD shareholders to reject Ancora's 'no' campaign and vote for the board-endorsed Netflix transaction.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly reaffirm that the board recommends shareholders reject Paramount's hostile bid and vote for the Netflix acquisition, and urge shareholders to reject Ancora's 'no' campaign.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                  "action": "As WBD shareholders, publicly state support for the board-endorsed Netflix transaction only if the board secures improved consideration or protective terms closing the gap to Paramount's $30 all-cash bid before the vote; otherwise we withhold support.\n承诺：Support Netflix only if improved consideration or protective terms close the value gap versus Paramount's $30 all-cash bid.\n触发或复核条件：Board presents improved Netflix terms before the shareholder vote.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "As WBD shareholders, publicly state support for the board-endorsed Netflix transaction only if the board secures improved consideration or protective terms closing the gap to Paramount's $30 all-cash bid before the vote; otherwise we withhold support.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "WBD shareholders now condition support on improved Netflix terms before the vote, raising execution risk versus the prior 0.55. The board still backs Netflix and Netflix reaffirmed commitment, but shareholder approval and antitrust clearance remain unresolved before the 2026 deadline.",
+                "evidence_quote": "Warner Bros. Discovery shareholders publicly stated they will support the board-endorsed Netflix transaction only if the board secures improved consideration or protective terms closing the gap to Paramount's $30 all-cash bid before the vote, and will otherwise withhold support.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_007_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-22",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 316,
+                "interval_days": 40,
+                "interval_start_utc": "2026-11-22T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_8_agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "status": "executed",
+                  "summary": "The WBD board publicly announced that, having secured improved consideration and protective terms from Netflix, it reaffirms its recommendation that shareholders vote FOR the Netflix transaction and reject Paramount's bid, and will hold the shareholder vote promptly."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_8_agent_90dff7fc04f45f2b",
+                    "action_7_agent_3a9be831afda5d0b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "it reaffirms its recommendation that shareholders vote FOR the Netflix transaction and reject Paramount's bid"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "having secured improved consideration and protective terms from Netflix, it reaffirms its recommendation that shareholders vote FOR the Netflix transaction and reject Paramount's bid",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_008_001",
+                  "text": "Netflix, Inc. delivered to the WBD board a concrete improved-terms package raising consideration toward the $30 all-cash anchor and adding a meaningful regulatory reverse breakup fee, conditioned on the board retaining its Netflix recommendation, holding a prompt shareholder vote, and not engaging Paramount's bid.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_008_002",
+                  "text": "The WBD board publicly announced that, having secured improved consideration and protective terms from Netflix, it reaffirms its recommendation that shareholders vote FOR the Netflix transaction and reject Paramount's bid, and will hold the shareholder vote promptly.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly commit to improved consideration or protective terms for the WBD transaction and urge shareholders to support the board-endorsed Netflix deal, framing Paramount's all-cash bid as carrying greater regulatory and closing risk.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                  "action": "Publicly announce that, having secured improved consideration/protective terms from Netflix, the board reaffirms its recommendation that shareholders vote FOR the Netflix transaction and reject Paramount's bid, and will hold the shareholder vote promptly.\n承诺：Board recommends the improved Netflix transaction and commits to a prompt shareholder vote.\n触发或复核条件：Netflix's improved terms are finalized and remain in the definitive agreement.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce that, having secured improved consideration/protective terms from Netflix, the board reaffirms its recommendation that shareholders vote FOR the Netflix transaction and reject Paramount's bid, and will hold the shareholder vote promptly.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "The board reaffirmed its Netflix recommendation after securing improved terms, but the decisive shareholder vote and US/EU/UK antitrust clearance remain unobserved, and the round-8 package is dated January 2027—after the December 31, 2026 closing deadline. Shareholder support was previously conditioned on improved terms, so approval and timely closing are still uncertain.",
+                "evidence_quote": "The WBD board publicly announced that, having secured improved consideration and protective terms from Netflix, it reaffirms its recommendation that shareholders vote FOR the Netflix transaction and reject Paramount's bid, and will hold the shareholder vote promptly.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_008_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.00022821432479999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 14,
+        "public_event_count": 10,
+        "substantive_public_event_count": 10,
+        "state_change_count": 9,
+        "condition_change_count": 1,
+        "active_actor_count": 4,
+        "available_actor_count": 4,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 4,
+            "sampled_decisions": 14,
+            "active_actor_count": 4,
+            "public_event_count": 10,
+            "substantive_public_event_count": 10,
+            "state_change_count": 9,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.3,
+      "covered_p_yes": 0.3,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.3,
+        0.30000000000000004
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "fdc90402-f85c-4cab-88cd-c19e9d6c7976",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:18:12.393823+00:00",
+      "contract_id": "0xeec3721d3883d5a27a992090d85c8f68fffe1f40774c3a891d078eed10d42508",
+      "forecast_cutoff": "2026-02-19T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "48d5040f6ee5c7ced76b127a4cad293e18cf4a346b0a23538f2218dd4ab3a62f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 265.117
+    },
+    {
+      "calls": 27,
+      "tokens": 398601,
+      "input_tokens": 371832,
+      "output_tokens": 26769,
+      "accounted_tokens_upper": 398601,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-02-19",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 316,
+                "interval_days": 316,
+                "interval_start_utc": "2026-02-19T23:59:59+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "status": "executed",
+                  "summary": "Paramount Skydance publicly reaffirmed its amended Warner Bros. Discovery bid to WBD shareholders: $30 per share all-cash, a 25-cent per share ticking fee (~$650M per quarter after this year), coverage of WBD's Netflix breakup fee, the debt-exchange backstop, and interim operating flexibility, and urged shareholders to press the WBD board to engage Paramount before any Netflix vote."
+                },
+                {
+                  "action_id": "action_1_agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "status": "executed",
+                  "summary": "Netflix, Inc. publicly reaffirmed its commitment to close the December 5, 2025 Warner Bros. acquisition on its announced terms, confirmed the expected Q3 2026 completion timeline, and stated it is actively cooperating with US, EU and UK antitrust regulators to secure clearance."
+                },
+                {
+                  "action_id": "action_1_agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "status": "executed",
+                  "summary": "Warner Bros. Discovery shareholders publicly signaled that a $30 all-cash Paramount offer with breakup-fee coverage and a ticking fee is preferred over the $27.75 Netflix terms, while leaving the final vote contingent on board engagement and regulatory clarity."
+                },
+                {
+                  "action_id": "action_1_agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "status": "executed",
+                  "summary": "The WBD board publicly reaffirmed its recommendation of the Netflix transaction to shareholders and urged rejection of Paramount's hostile bid, while noting it will review any amended Paramount proposal consistent with its fiduciary duties."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_5a41d4350dee5bf8",
+                    "action_1_agent_3a9be831afda5d0b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Warner Bros. Discovery shareholders publicly signaled that a $30 all-cash Paramount offer with breakup-fee coverage and a ticking fee is preferred over the $27.75 Netflix terms"
+                },
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_3a9be831afda5d0b",
+                    "action_1_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "The WBD board publicly reaffirmed its recommendation of the Netflix transaction to shareholders and urged rejection of Paramount's hostile bid"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_9dcad2ec2d8d50b6",
+                    "action_1_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Netflix, Inc. publicly reaffirmed its commitment to close the December 5, 2025 Warner Bros. acquisition on its announced terms"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Netflix, Inc. publicly reaffirmed its commitment to close the December 5, 2025 Warner Bros. acquisition on its announced terms",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Paramount Skydance publicly reaffirmed its amended Warner Bros. Discovery bid to WBD shareholders: $30 per share all-cash, a 25-cent per share ticking fee (~$650M per quarter after this year), coverage of WBD's Netflix breakup fee, the debt-exchange backstop, and interim operating flexibility, and urged shareholders to press the WBD board to engage Paramount before any Netflix vote.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Netflix, Inc. publicly reaffirmed its commitment to close the December 5, 2025 Warner Bros. acquisition on its announced terms, confirmed the expected Q3 2026 completion timeline, and stated it is actively cooperating with US, EU and UK antitrust regulators to secure clearance.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "Warner Bros. Discovery shareholders publicly signaled that a $30 all-cash Paramount offer with breakup-fee coverage and a ticking fee is preferred over the $27.75 Netflix terms, while leaving the final vote contingent on board engagement and regulatory clarity.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_004",
+                  "text": "The WBD board publicly reaffirmed its recommendation of the Netflix transaction to shareholders and urged rejection of Paramount's hostile bid, while noting it will review any amended Paramount proposal consistent with its fiduciary duties.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                  "action": "Publicly reaffirm the amended Paramount Skydance bid to WBD shareholders: $30/share all-cash, the 25-cent/share ticking fee (~$650M per quarter after this year), coverage of WBD's Netflix breakup fee, the debt-exchange backstop, and interim operating flexibility; urge shareholders to press the WBD board to engage Paramount before any Netflix vote.\n承诺：Offer terms as amended Feb 10, 2026 remain on the table; Paramount covers the Netflix breakup fee if WBD walks away.\n触发或复核条件：WBD board engages Paramount or a shareholder vote on the Netflix deal is scheduled.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm the amended Paramount Skydance bid to WBD shareholders: $30/share all-cash, the 25-cent/share ticking fee (~$650M per quarter after this year), coverage of WBD's Netflix breakup fee, the debt-exchange backstop, and interim operating flexibility; urge shareholders to press the WBD board to engage Paramount before any Netflix vote.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Continue and publicly confirm antitrust engagement with US, EU and UK regulators on the Paramount-WBD combination, emphasizing claimed lower regulatory hurdles versus the Netflix structure, and state readiness to accept reasonable remedies to secure clearance.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": "Publicly reaffirm Netflix's commitment to close the December 5, 2025 Warner Bros. acquisition on its announced terms, confirm the expected Q3 2026 completion timeline, and state that Netflix is actively cooperating with US, EU and UK antitrust regulators to secure clearance.\n承诺：Netflix remains committed to closing the Warner Bros. studios, HBO/HBO Max, DC and distribution asset acquisition, targeting Q3 2026 completion subject to regulatory approval.\n触发或复核条件：Subject to regulatory clearance and WBD shareholder approval.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm Netflix's commitment to close the December 5, 2025 Warner Bros. acquisition on its announced terms, confirm the expected Q3 2026 completion timeline, and state that Netflix is actively cooperating with US, EU and UK antitrust regulators to secure clearance.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:2",
+                  "action": "Publicly signal that a $30 all-cash Paramount offer with breakup-fee coverage and a ticking fee is preferred over the $27.75 Netflix terms, while leaving the final vote contingent on board engagement and regulatory clarity.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Hold current positions and monitor WBD board engagement with Paramount, the proxy-fight threat, and any scheduled shareholder vote; no new outward act this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly signal that a $30 all-cash Paramount offer with breakup-fee coverage and a ticking fee is preferred over the $27.75 Netflix terms, while leaving the final vote contingent on board engagement and regulatory clarity.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                  "action": "Reaffirm publicly that the WBD board continues to recommend the Netflix transaction to shareholders and urges rejection of Paramount's hostile bid, while noting the board will review any amended Paramount proposal consistent with its fiduciary duties.\n承诺：Board maintains its recommendation of the Netflix deal and opposition to the Paramount bid.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Reaffirm publicly that the WBD board continues to recommend the Netflix transaction to shareholders and urges rejection of Paramount's hostile bid, while noting the board will review any amended Paramount proposal consistent with its fiduciary duties.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Netflix reaffirmed commitment and a Q3 2026 close, and the WBD board still recommends the Netflix deal. But Paramount's richer $30 all-cash bid with fee coverage and a ticking fee has drawn shareholder preference, and antitrust clearance remains unsecured, so closing by Dec 31, 2026 is uncertain.",
+                "evidence_quote": "Warner Bros. Discovery shareholders publicly signaled that a $30 all-cash Paramount offer with breakup-fee coverage and a ticking fee is preferred over the $27.75 Netflix terms, while leaving the final vote contingent on board engagement and regulatory clarity.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_003",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.10079999999999999
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-02-19",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 316,
+                "interval_days": 316,
+                "interval_start_utc": "2026-02-19T23:59:59+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "status": "executed",
+                  "summary": "Netflix, Inc. reaffirmed its December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets and stated it remains committed to closing on the announced terms, confirming cooperation with US, EU and UK antitrust review toward a Q3 2026 close."
+                },
+                {
+                  "action_id": "action_1_agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "status": "executed",
+                  "summary": "Paramount Skydance publicly reiterated that its amended $30-per-share all-cash bid remains open, that it will cover the Netflix breakup fee and backstop WBD's debt exchange, and urged the WBD board to engage on Paramount's proposal rather than proceed with the Netflix deal."
+                },
+                {
+                  "action_id": "action_1_agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "status": "executed",
+                  "summary": "The WBD board publicly stated it will engage with Paramount's amended February 10 bid only to evaluate whether it constitutes a superior proposal under the Netflix agreement, and will not abandon the Netflix deal absent a clearly superior, fully financed offer."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_5a41d4350dee5bf8",
+                    "action_1_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "will not abandon the Netflix deal absent a clearly superior, fully financed offer"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_9dcad2ec2d8d50b6",
+                    "action_1_agent_90dff7fc04f45f2b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "will not abandon the Netflix deal absent a clearly superior, fully financed offer"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Netflix, Inc. reaffirmed its December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets",
+                  "pending_actor_ids": [
+                    "agent_90dff7fc04f45f2b"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Netflix, Inc. reaffirmed its December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets and stated it remains committed to closing on the announced terms, confirming cooperation with US, EU and UK antitrust review toward a Q3 2026 close.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Paramount Skydance publicly reiterated that its amended $30-per-share all-cash bid remains open, that it will cover the Netflix breakup fee and backstop WBD's debt exchange, and urged the WBD board to engage on Paramount's proposal rather than proceed with the Netflix deal.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0002_001_003",
+                  "text": "The WBD board publicly stated it will engage with Paramount's amended February 10 bid only to evaluate whether it constitutes a superior proposal under the Netflix agreement, and will not abandon the Netflix deal absent a clearly superior, fully financed offer.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0002_001_004",
+                  "text": "Warner Bros. Discovery shareholders directly asked Paramount Skydance to confirm in writing that its amended terms—ticking fee, breakup-fee coverage and debt backstop—remain binding and are not conditioned on further board engagement.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a41d4350dee5bf8",
+                  "actor_name": "Paramount Skydance",
+                  "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                  "action": "Publicly reiterate that Paramount Skydance's amended $30-per-share all-cash bid remains open, that it will cover the Netflix breakup fee and backstop WBD's debt exchange, and urge the WBD board to engage on Paramount's superior proposal rather than proceed with the Netflix deal.\n承诺：Amended bid terms (ticking fee, breakup-fee coverage, debt-exchange backstop) stay on the table while the board engages.\n触发或复核条件：WBD board has not yet accepted Paramount's amended proposal.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reiterate that Paramount Skydance's amended $30-per-share all-cash bid remains open, that it will cover the Netflix breakup fee and backstop WBD's debt exchange, and urge the WBD board to engage on Paramount's superior proposal rather than proceed with the Netflix deal.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a41d4350dee5bf8:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Continue and publicly confirm ongoing antitrust talks with US, EU and UK regulators on the Paramount-WBD combination, emphasizing the claimed lower regulatory hurdles relative to the Netflix deal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9dcad2ec2d8d50b6",
+                  "actor_name": "Netflix, Inc.",
+                  "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                  "action": "Publicly reaffirm Netflix's December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets, state that Netflix remains committed to closing on the announced terms, and confirm it is cooperating with US, EU and UK antitrust review toward a Q3 2026 close.\n承诺：Netflix commits to pursuing closing of the announced Warner Bros. asset acquisition on substantially similar terms, subject to regulatory clearance and the WBD shareholder vote.\n触发或复核条件：Only if regulatory review remains on track and the WBD board continues to recommend the Netflix transaction.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9dcad2ec2d8d50b6:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly reaffirm Netflix's December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets, state that Netflix remains committed to closing on the announced terms, and confirm it is cooperating with US, EU and UK antitrust review toward a Q3 2026 close.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3a9be831afda5d0b",
+                  "actor_name": "Warner Bros. Discovery shareholders",
+                  "candidate_id": "agent_3a9be831afda5d0b:initial:3",
+                  "action": null,
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Hold as a voting group pending the formal shareholder vote; no collective outward act this round. Individual holders including Ancora have signaled positions, but no aggregate vote or proxy contest has been launched by the group.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_3a9be831afda5d0b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly signal that the group's support for the Netflix deal is conditional on terms matching or exceeding the $30 all-cash Paramount benchmark, including breakup-fee protection and ticking-fee economics; withhold endorsement until the board substantiates value.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_90dff7fc04f45f2b",
+                  "actor_name": "WBD board",
+                  "candidate_id": "agent_90dff7fc04f45f2b:initial:2",
+                  "action": "Publicly state the board will engage with Paramount's amended Feb 10 bid only to evaluate whether it constitutes a superior proposal under the Netflix agreement, and will not abandon the Netflix deal absent a clearly superior, fully financed offer.\n承诺：Engagement limited to fiduciary superior-proposal review; no commitment to switch.\n触发或复核条件：Paramount's bid remains outstanding and Netflix agreement in force.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm the board's recommendation that WBD shareholders reject Paramount's hostile bid and approve the Netflix acquisition on the December 5, 2025 terms, and state that the board will not be diverted by Ancora's proxy threat.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_90dff7fc04f45f2b:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly state the board will engage with Paramount's amended Feb 10 bid only to evaluate whether it constitutes a superior proposal under the Netflix agreement, and will not abandon the Netflix deal absent a clearly superior, fully financed offer.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Netflix reaffirmed the December 5, 2025 deal and targets a Q3 2026 close, but the WBD board is only evaluating Paramount's amended $30 all-cash bid and has not abandoned Netflix. No regulatory clearance or shareholder approval is shown, and the outcome remains unverified at the horizon.",
+                "evidence_quote": "Netflix, Inc. reaffirmed its December 5, 2025 agreement to acquire Warner Bros. studios, HBO/HBO Max, DC and distribution assets and stated it remains committed to closing on the announced terms, confirming cooperation with US, EU and UK antitrust review toward a Q3 2026 close.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.0231
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 8,
+        "public_event_count": 8,
+        "substantive_public_event_count": 8,
+        "state_change_count": 1,
+        "condition_change_count": 2,
+        "active_actor_count": 4,
+        "available_actor_count": 4,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 4,
+            "active_actor_count": 4,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 4,
+            "active_actor_count": 4,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.485,
+      "covered_p_yes": 0.485,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.485,
+        0.4849999999999999
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "8bcfa70e-57e5-46d8-97b5-bc99b94b279f",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:18:31.725972+00:00",
+      "contract_id": "0xeec3721d3883d5a27a992090d85c8f68fffe1f40774c3a891d078eed10d42508",
+      "forecast_cutoff": "2026-02-19T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "48d5040f6ee5c7ced76b127a4cad293e18cf4a346b0a23538f2218dd4ab3a62f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 82.503
+    },
+    {
+      "calls": 176,
+      "tokens": 2372870,
+      "input_tokens": 2203816,
+      "output_tokens": 169054,
+      "accounted_tokens_upper": 2587873,
+      "unknown_usage_requests": 4,
+      "p_yes": 0.46286114178531024,
+      "coverage": 0.16332178298788802,
+      "unexplored_mass": 0.836678217012112,
+      "unknown_bounds": [
+        0.04452203327925427,
+        0.8812002502913663
+      ],
+      "search_iterations": 12,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 12,
+          "search_value": 0.42039983999999997,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.1512,
+          "visits": 11,
+          "search_value": 0.4375269818181817,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.09072,
+          "visits": 5,
+          "search_value": 0.33591648,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.049896,
+          "visits": 4,
+          "search_value": 0.26149560000000005,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.011525976,
+          "visits": 3,
+          "search_value": 0.2854592,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.0038035720800000004,
+          "visits": 2,
+          "search_value": 0.2552688,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.0022821432480000002,
+          "visits": 1,
+          "search_value": 0.11309760000000002,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.00031630505417280005,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 3.795660650073601e-05
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.00021087003611520004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 3.795660650073601e-05
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 7,
+          "mass": 0.0017549681577120001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 6,
+          "mass": 0.0015214288320000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.1,
+          "frontier": true,
+          "contribution": 0.00015214288320000003
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.0025357147200000003,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.22,
+          "frontier": true,
+          "contribution": 0.0005578572384000001
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 5,
+          "mass": 0.0051866892,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.006286896,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.00075442752
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.032083128,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.02268,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.22,
+          "frontier": true,
+          "contribution": 0.004989599999999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.018143999999999993,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.04536,
+          "visits": 5,
+          "search_value": 0.52519488,
+          "conditional_p_yes": 0.15,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.027215999999999997,
+          "visits": 4,
+          "search_value": 0.4992936,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.008001504,
+          "visits": 3,
+          "search_value": 0.5055535999999999,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.005601052799999999,
+          "visits": 2,
+          "search_value": 0.3434304,
+          "conditional_p_yes": 0.28,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.0033606316799999992,
+          "visits": 1,
+          "search_value": 0.25630080000000005,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.0008468791833599999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 0.00015243825300479996
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.0005645861222399999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.2,
+          "frontier": true,
+          "contribution": 0.00011291722444799998
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 7,
+          "mass": 0.0019491663743999995,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 6,
+          "mass": 0.0016803158399999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 0.0003024568511999999
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 6,
+          "mass": 0.0005601052800000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.0024004511999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.33,
+          "frontier": true,
+          "contribution": 0.0007921488959999999
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.0053343359999999986,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.45,
+          "frontier": true,
+          "contribution": 0.0024004511999999993
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.013880159999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.018144,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.22,
+          "frontier": true,
+          "contribution": 0.00399168
+        },
+        {
+          "path": [
+            1,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.015120000000000014,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.1008,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.3,
+          "frontier": true,
+          "contribution": 0.03024
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.748,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": "TimeoutError: ",
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "43b097b3-b55d-400b-9d8b-b6471237be85",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:07:25.138214+00:00",
+      "contract_id": "0xeec3721d3883d5a27a992090d85c8f68fffe1f40774c3a891d078eed10d42508",
+      "forecast_cutoff": "2026-02-19T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "48d5040f6ee5c7ced76b127a4cad293e18cf4a346b0a23538f2218dd4ab3a62f",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 720.067,
+      "partial_tree_p_yes": 0.46286114178531024,
+      "budget_limited": true
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-02-19T23:59:59+00:00",
+  "forecast_key": "0xeec3721d3883d5a27a992090d85c8f68fffe1f40774c3a891d078eed10d42508",
+  "group_id": "will-netflix-close-warner-brothers-acquisition-by-end-of-2026",
+  "evidence_sha256": "48d5040f6ee5c7ced76b127a4cad293e18cf4a346b0a23538f2218dd4ab3a62f",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 859,
+    "input_tokens": 717,
+    "output_tokens": 142,
+    "accounted_tokens_upper": 859,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-02-19",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-02-19",
+        "2026-03-30",
+        "2026-05-09",
+        "2026-06-17",
+        "2026-07-27",
+        "2026-09-04",
+        "2026-10-14",
+        "2026-11-22",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-02-19",
+        "2026-03-30",
+        "2026-05-09",
+        "2026-06-17",
+        "2026-07-27",
+        "2026-09-04",
+        "2026-10-14",
+        "2026-11-22",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-02-19",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-02-19",
+        "2026-03-30",
+        "2026-05-09",
+        "2026-06-17",
+        "2026-07-27",
+        "2026-09-04",
+        "2026-10-14",
+        "2026-11-22",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2026-12-31T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 3,
+      "ready": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_bcb7219a870c8732",
+          "name": "Netflix, Inc.",
+          "role": "Acquirer that announced the December 5, 2025 deal to buy Warner Bros. assets and must close the acquisition to trigger Yes.",
+          "decision_ids": [
+            "netflix_close"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        },
+        {
+          "seat_id": "seat_2f68c8fb9188bf11",
+          "name": "WBD board",
+          "role": "Seller-side board that must approve and complete the sale of Warner Bros. studios and HBO/HBO Max assets to Netflix.",
+          "decision_ids": [
+            "wbd_board_approve"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        },
+        {
+          "seat_id": "seat_5eac2ebf58c4e12e",
+          "name": "Warner Bros. Discovery shareholders",
+          "role": "WBD shareholders whose vote is needed to approve the Netflix acquisition and who could reject it in favor of Paramount.",
+          "decision_ids": [
+            "wbd_shareholder_vote"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_4ec3e96955de054b",
+          "name": "Paramount Skydance",
+          "role": "Competing bidder in talks with US, EU and UK antitrust regulators over its WBD offer.",
+          "decision_ids": [
+            "regulatory_clearance"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Current authority for US, EU and UK antitrust regulators must clear the transaction for it to close. requires independent evidence; Paramount Skydance can participate conditionally."
+      ],
+      "gaps": [
+        "No named individual is identified as the current Netflix decision-maker for closing; seat is the company.",
+        "Shareholder vote outcome and regulator decisions are unknown as of 2026-02-19.",
+        "Paramount Skydance's competing bid could displace the Netflix deal, but its role is a counterpart alternative, not a required seat for the Netflix closing."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "netflix_close",
+          "choice": "Netflix must complete the acquisition of Warner Bros. film/TV studios and HBO/HBO Max assets by Dec 31, 2026.",
+          "owner": "Netflix, Inc.",
+          "support": "represented"
+        },
+        {
+          "id": "wbd_board_approve",
+          "choice": "WBD board must approve and proceed with the Netflix sale rather than a Paramount alternative.",
+          "owner": "WBD board",
+          "support": "represented"
+        },
+        {
+          "id": "wbd_shareholder_vote",
+          "choice": "WBD shareholders must approve the Netflix transaction; rejection or a Paramount vote would prevent closing.",
+          "owner": "Warner Bros. Discovery shareholders",
+          "support": "represented"
+        },
+        {
+          "id": "regulatory_clearance",
+          "choice": "US, EU and UK antitrust regulators must clear the transaction for it to close.",
+          "owner": "Paramount Skydance",
+          "support": "conditional"
+        }
+      ],
+      "gap_repair": {
+        "status": "participants_added",
+        "added": 1
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 19,
+    "tokens": 73245,
+    "input_tokens": 62868,
+    "output_tokens": 10377,
+    "accounted_tokens_upper": 73245,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

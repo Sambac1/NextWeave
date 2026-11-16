@@ -1,0 +1,3341 @@
+{
+  "run_id": "922200fb-4459-4a77-815a-182aab067960",
+  "case_id": "market_94242dfabca41def1faf82f9",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2267,
+      "input_tokens": 2257,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2267,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.02,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.02,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2257,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:11:03.797911+00:00",
+      "contract_id": "0xf8446923a5100797caa47c0d0502d2403568d45ccddc995f2aa56a8611dcb024",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8f97cfa574fbd3a8f5974f221f95cbf8a89d608c8140deefece445baa32c067e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 2.475
+    },
+    {
+      "calls": 2,
+      "tokens": 4534,
+      "input_tokens": 4514,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 4534,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.025,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.02,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2257,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2257,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:11:05.124953+00:00",
+      "contract_id": "0xf8446923a5100797caa47c0d0502d2403568d45ccddc995f2aa56a8611dcb024",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8f97cfa574fbd3a8f5974f221f95cbf8a89d608c8140deefece445baa32c067e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.325
+    },
+    {
+      "calls": 9,
+      "tokens": 107513,
+      "input_tokens": 100859,
+      "output_tokens": 6654,
+      "accounted_tokens_upper": 107513,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-11-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 729,
+                "interval_days": 729,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-11-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "status": "executed",
+                  "summary": "Abdul El-Sayed said in a public interview and podcast segment that he is seriously weighing a 2028 Democratic presidential run, framing it around Medicare for All and AI and data-center safeguards, and committed to a small-donor-only campaign if he runs, while stopping short of a formal announcement or filing."
+                },
+                {
+                  "action_id": "action_1_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "executed",
+                  "summary": "The Democratic National Committee, through its chair and party officials, publicly floated a formal proposal to study ranked-choice voting for the 2028 presidential primaries, inviting state parties and candidates to comment before any adoption vote."
+                },
+                {
+                  "action_id": "action_1_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_da523e79c2935878",
+                    "action_1_agent_f6defb0788345546"
+                  ],
+                  "outcome": "pending",
+                  "effect": "seriously weighing a 2028 Democratic presidential run"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d261c829504a55bf",
+                    "action_1_agent_da523e79c2935878"
+                  ],
+                  "outcome": "pending",
+                  "effect": "inviting state parties and candidates to comment before any adoption vote"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "stopping short of a formal announcement or filing",
+                  "pending_actor_ids": [
+                    "agent_d261c829504a55bf"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Abdul El-Sayed said in a public interview and podcast segment that he is seriously weighing a 2028 Democratic presidential run, framing it around Medicare for All and AI and data-center safeguards, and committed to a small-donor-only campaign if he runs, while stopping short of a formal announcement or filing.",
+                  "date": "2028-11"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "The Democratic National Committee, through its chair and party officials, publicly floated a formal proposal to study ranked-choice voting for the 2028 presidential primaries, inviting state parties and candidates to comment before any adoption vote.",
+                  "date": "2028-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:1",
+                  "action": "In a public interview or podcast segment, El-Sayed says he is seriously weighing a 2028 Democratic presidential run, frames it around Medicare for All and AI/data-center safeguards, and commits to a small-donor-only campaign if he runs; he stops short of a formal announcement or filing.\n承诺：No PAC money in any 2028 campaign; decision on formally entering the race to follow after weighing support.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "In a public interview or podcast segment, El-Sayed says he is seriously weighing a 2028 Democratic presidential run, frames it around Medicare for All and AI/data-center safeguards, and commits to a small-donor-only campaign if he runs; he stops short of a formal announcement or filing.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Release a detailed progressive policy package (Medicare for All financing plus AI regulation and data-center ratepayer protections) positioned as a national agenda, using it to build early 2028 visibility while deferring any candidacy decision.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:2",
+                  "action": "Publicly float, through the chair and party officials, a formal proposal to study ranked-choice voting for the 2028 presidential primaries, inviting state parties and candidates to comment before any adoption vote.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no formal DNC action this round on 2028 primary rules or on any candidacy; continue internal discussion of ranked-choice voting and early-state order without a public proposal or vote.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly float, through the chair and party officials, a formal proposal to study ranked-choice voting for the 2028 presidential primaries, inviting state parties and candidates to comment before any adoption vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Take no public action this round as Democratic primary voters; continue observing whether El-Sayed declares a 2028 candidacy and how the DNC resolves the calendar and ranked-choice rules before any preference is expressed.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no public action this round as Democratic primary voters; continue observing whether El-Sayed declares a 2028 candidacy and how the DNC resolves the calendar and ranked-choice rules before any preference is expressed.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Decline to signal any early preference or endorsement among potential 2028 Democratic contenders, including El-Sayed, until a formal candidate field and primary calendar are established.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "El-Sayed only said he is seriously weighing a run, stopping short of a formal announcement or filing, so no candidacy exists yet. He is a sitting senator with progressive backing, but winning a national Democratic primary remains a long shot and no polling or delegate evidence is present.",
+                "evidence_quote": "Abdul El-Sayed said in a public interview and podcast segment that he is seriously weighing a 2028 Democratic presidential run, framing it around Medicare for All and AI and data-center safeguards, and committed to a small-donor-only campaign if he runs, while stopping short of a formal announcement or filing.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.11549999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 2,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "da2ff671-c037-46ff-8c62-69a85fbd8d20",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:12:08.746905+00:00",
+      "contract_id": "0xf8446923a5100797caa47c0d0502d2403568d45ccddc995f2aa56a8611dcb024",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8f97cfa574fbd3a8f5974f221f95cbf8a89d608c8140deefece445baa32c067e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 63.619
+    },
+    {
+      "calls": 23,
+      "tokens": 267743,
+      "input_tokens": 254233,
+      "output_tokens": 13510,
+      "accounted_tokens_upper": 267743,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-11-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 729,
+                "interval_days": 729,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-11-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "status": "executed",
+                  "summary": "Abdul El-Sayed publicly signaled interest in a 2028 presidential run, framing it around progressive priorities such as Medicare for All and AI/data-center safeguards while affirming his small-donor-only posture, and stopped short of a formal campaign launch."
+                },
+                {
+                  "action_id": "action_1_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "executed",
+                  "summary": "The Democratic National Committee issued a public statement that it will conduct its 2028 nomination process under existing plurality primary rules unless and until the committee formally adopts a change, and that the party will not tilt the process toward or against any prospective candidate."
+                },
+                {
+                  "action_id": "action_1_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_da523e79c2935878",
+                    "action_1_agent_d261c829504a55bf"
+                  ],
+                  "outcome": "pending",
+                  "effect": "The Democratic National Committee issued a public statement that it will conduct its 2028 nomination process under existing plurality primary rules unless and until the committee formally adopts a change"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_da523e79c2935878",
+                    "action_1_agent_f6defb0788345546"
+                  ],
+                  "outcome": "pending",
+                  "effect": "stopped short of a formal campaign launch"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "stopped short of a formal campaign launch",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Abdul El-Sayed publicly signaled interest in a 2028 presidential run, framing it around progressive priorities such as Medicare for All and AI/data-center safeguards while affirming his small-donor-only posture, and stopped short of a formal campaign launch.",
+                  "date": "2028-11"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "The Democratic National Committee issued a public statement that it will conduct its 2028 nomination process under existing plurality primary rules unless and until the committee formally adopts a change, and that the party will not tilt the process toward or against any prospective candidate.",
+                  "date": "2028-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:1",
+                  "action": "El-Sayed publicly signals interest in a 2028 presidential run, framing it around his progressive priorities (Medicare for All, AI/data-center safeguards) while affirming his small-donor-only posture, without a formal filing yet.\n承诺：Signals openness to a 2028 run; stops short of a formal campaign launch this round.\n触发或复核条件：If grassroots and small-donor response is encouraging, move toward a formal exploratory committee.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "El-Sayed publicly signals interest in a 2028 presidential run, framing it around his progressive priorities (Medicare for All, AI/data-center safeguards) while affirming his small-donor-only posture, without a formal filing yet.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "El-Sayed forms a formal exploratory committee to weigh a 2028 Democratic presidential run, funded by individual donors only, and begins outreach to progressive and labor constituencies.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:2",
+                  "action": "Issue a public statement that the DNC will conduct its 2028 nomination process under existing plurality primary rules unless and until the committee formally adopts a change, and that the party will not tilt the process toward or against any prospective candidate.\n承诺：Neutral administration of the 2028 primaries under current rules absent a formal DNC vote.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Chair Ken Martin directs DNC staff and the Rules and Bylaws Committee to study ranked-choice voting and the early-state order for the 2028 primaries and report options to the full committee. No rule is adopted this round; any change requires the party's own approval process.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Issue a public statement that the DNC will conduct its 2028 nomination process under existing plurality primary rules unless and until the committee formally adopts a change, and that the party will not tilt the process toward or against any prospective candidate.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Take no public action this round. Primary voters have no vote to cast until a 2028 field and calendar exist; monitor whether El-Sayed declares a candidacy and how the DNC settles the early-state order and ranked-choice question.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Take no public action this round. Primary voters have no vote to cast until a 2028 field and calendar exist; monitor whether El-Sayed declares a candidacy and how the DNC settles the early-state order and ranked-choice question.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "El-Sayed only signaled interest and stopped short of a formal launch; no primary votes or delegate results are in evidence. The DNC statement preserves existing plurality rules without favoring any candidate, so nomination remains a distant, unverified possibility.",
+                "evidence_quote": "Abdul El-Sayed publicly signaled interest in a 2028 presidential run, framing it around progressive priorities such as Medicare for All and AI/data-center safeguards while affirming his small-donor-only posture, and stopped short of a formal campaign launch.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.22000000000000003
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-11-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 729,
+                "interval_days": 729,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-11-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:1",
+                  "action": "Make no announcement about the 2028 presidential nomination this round; continue serving as Michigan's newly elected senator and keep public communications focused on policy and constituent work.\n触发或复核条件：Review when there is a public signal of a 2028 run, a formal filing, or a relevant DNC rule decision.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Make no announcement about the 2028 presidential nomination this round; continue serving as Michigan's newly elected senator and keep public communications focused on policy and constituent work.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "In a public interview or podcast segment, decline to rule out a 2028 Democratic presidential run while stressing that his immediate focus is his Senate work and progressive priorities like Medicare for All and AI/data-center safeguards.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:1",
+                  "action": "Take no new outward action this round; keep the DNC's existing posture of internal discussion on 2028 primary rules and watch for any candidate entry signals or formal rule proposals.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward action this round; keep the DNC's existing posture of internal discussion on 2028 primary rules and watch for any candidate entry signals or formal rule proposals.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Take no collective action this round; primary voters have no scheduled contest and no declared candidate field to evaluate yet. Monitor whether El-Sayed declares a 2028 candidacy and how the DNC settles the calendar and voting rules.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round; primary voters have no scheduled contest and no declared candidate field to evaluate yet. Monitor whether El-Sayed declares a 2028 candidacy and how the DNC settles the calendar and voting rules.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows El-Sayed seeking or accepting the 2028 Democratic nomination; the record only covers his 2026 Senate win and policy positions. Other Democrats' maneuvering and unresolved primary rules add competition, so the outcome remains unverified.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.6
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 2,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.035,
+      "covered_p_yes": 0.035,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.035,
+        0.03499999999999992
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "a800b155-c540-438a-ad7f-f98593c0e940",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:12:47.948687+00:00",
+      "contract_id": "0xf8446923a5100797caa47c0d0502d2403568d45ccddc995f2aa56a8611dcb024",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8f97cfa574fbd3a8f5974f221f95cbf8a89d608c8140deefece445baa32c067e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 39.2
+    },
+    {
+      "calls": 58,
+      "tokens": 690277,
+      "input_tokens": 657457,
+      "output_tokens": 32820,
+      "accounted_tokens_upper": 690277,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-02-08",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 91,
+                "interval_days": 91,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-02-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "executed",
+                  "summary": "The Democratic National Committee issued a public statement that the party is reviewing its 2028 presidential primary process, including the debated question of ranked-choice voting, and that any rule decisions will be announced through the party's established procedures; the statement committed that no rule change will be adopted without that established approval process."
+                },
+                {
+                  "action_id": "action_1_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_d261c829504a55bf",
+                    "action_1_agent_f6defb0788345546"
+                  ],
+                  "outcome": "pending",
+                  "effect": "the party is reviewing its 2028 presidential primary process, including the debated question of ranked-choice voting"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Democratic National Committee issued a public statement that the party is reviewing its 2028 presidential primary process, including the debated question of ranked-choice voting, and that any rule decisions will be announced through the party's established procedures; the statement committed that no rule change will be adopted without that established approval process.",
+                  "date": "2027-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "In a media appearance or on America Dissected, state that I am seriously considering a 2028 Democratic presidential run and will decide after weighing the field and party rules, while reaffirming no PAC money.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:2",
+                  "action": "Issue a public DNC statement that the party is reviewing its 2028 presidential primary process, including the debated question of ranked-choice voting, and will announce any rule decisions through the party's established procedures.\n承诺：No rule change will be adopted without the party's established approval process.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no outward DNC action this round; keep the 2028 primary rules (including any ranked-choice voting question) under internal review while awaiting a formal proposal or chair-led process.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public DNC statement that the party is reviewing its 2028 presidential primary process, including the debated question of ranked-choice voting, and will announce any rule decisions through the party's established procedures.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Take no collective action this round; primary voters have no scheduled contest and no declared El-Sayed candidacy to respond to. Continue observing candidate declarations, DNC calendar and ranked-choice decisions, and any 2028 primary polling before forming preferences.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round; primary voters have no scheduled contest and no declared El-Sayed candidacy to respond to. Continue observing candidate declarations, DNC calendar and ranked-choice decisions, and any 2028 primary polling before forming preferences.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed's public profile is a newly elected Michigan senator and progressive figure; no evidence shows him launching a 2028 presidential bid. The DNC process review is a party-rules matter, not a candidacy signal, so the nomination path remains highly speculative.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-08",
+                "interval_end": "2027-05-10",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 182,
+                "interval_days": 91,
+                "interval_start_utc": "2027-02-08T00:00:00+00:00",
+                "interval_end_utc": "2027-05-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed's public profile is a newly elected Michigan senator and progressive figure; no evidence shows him launching a 2028 presidential bid. The DNC process review is a party-rules matter, not a candidacy signal, so the nomination path remains highly speculative.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-05-10",
+                "interval_end": "2027-08-09",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 273,
+                "interval_days": 91,
+                "interval_start_utc": "2027-05-10T00:00:00+00:00",
+                "interval_end_utc": "2027-08-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed's public profile is a newly elected Michigan senator and progressive figure; no evidence shows him launching a 2028 presidential bid. The DNC process review is a party-rules matter, not a candidacy signal, so the nomination path remains highly speculative.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-08-09",
+                "interval_end": "2027-11-08",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 364,
+                "interval_days": 91,
+                "interval_start_utc": "2027-08-09T00:00:00+00:00",
+                "interval_end_utc": "2027-11-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "status": "executed",
+                  "summary": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC finalizes the primary calendar and rules, and committed that if he runs the campaign will accept individual donations only, no PAC money."
+                },
+                {
+                  "action_id": "action_4_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "executed",
+                  "summary": "Democratic National Committee stated that the 2028 primary process review continues, that the early-state calendar and ranked-choice voting remain under consideration, and that any rule decisions will follow the party's established approval procedures, with no rule change adopted this round."
+                },
+                {
+                  "action_id": "action_4_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_da523e79c2935878",
+                    "action_4_agent_d261c829504a55bf"
+                  ],
+                  "outcome": "pending",
+                  "effect": "will decide after the DNC finalizes the primary calendar and rules"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC finalizes the primary calendar and rules",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC finalizes the primary calendar and rules, and committed that if he runs the campaign will accept individual donations only, no PAC money.",
+                  "date": "2027-11"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "Democratic National Committee stated that the 2028 primary process review continues, that the early-state calendar and ranked-choice voting remain under consideration, and that any rule decisions will follow the party's established approval procedures, with no rule change adopted this round.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:2",
+                  "action": "In a media appearance, say I am seriously considering a 2028 Democratic presidential run and will decide after the DNC finalizes the primary calendar and rules; commit to a small-donor-only campaign if I run.\n承诺：If I run, the campaign will accept individual donations only, no PAC money.\n触发或复核条件：Decision timing tied to DNC finalization of 2028 calendar and rules.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "In a media appearance, say I am seriously considering a 2028 Democratic presidential run and will decide after the DNC finalizes the primary calendar and rules; commit to a small-donor-only campaign if I run.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:1",
+                  "action": "Issue a DNC public statement that the 2028 primary process review continues, that the early-state calendar and ranked-choice voting remain under consideration, and that any rule decisions will follow the party's established approval procedures. No rule change is adopted in this round.\n承诺：No rule change will be adopted without the party's established approval process.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a DNC public statement that the 2028 primary process review continues, that the early-state calendar and ranked-choice voting remain under consideration, and that any rule decisions will follow the party's established approval procedures. No rule change is adopted in this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Take no collective action this round: no 2028 primary contest is scheduled, no El-Sayed candidacy is declared, and voters have no ballot to cast. Continue observing candidate declarations, DNC calendar and ranked-choice decisions, and any 2028 primary polling.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round: no 2028 primary contest is scheduled, no El-Sayed candidacy is declared, and voters have no ballot to cast. Continue observing candidate declarations, DNC calendar and ranked-choice decisions, and any 2028 primary polling.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "El-Sayed is a sitting senator and progressive with a plausible national base, but the only current signal is that he is 'seriously considering' a run pending DNC rules. No filing, exploratory committee, or declared candidacy exists, and the nomination requires winning a national primary field.",
+                "evidence_quote": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC finalizes the primary calendar and rules, and committed that if he runs the campaign will accept individual donations only, no PAC money.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-08",
+                "interval_end": "2028-02-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 455,
+                "interval_days": 91,
+                "interval_start_utc": "2027-11-08T00:00:00+00:00",
+                "interval_end_utc": "2028-02-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "El-Sayed is a sitting senator and progressive with a plausible national base, but the only current signal is that he is 'seriously considering' a run pending DNC rules. No filing, exploratory committee, or declared candidacy exists, and the nomination requires winning a national primary field.",
+                "evidence_quote": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC finalizes the primary calendar and rules, and committed that if he runs the campaign will accept individual donations only, no PAC money.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-02-07",
+                "interval_end": "2028-05-08",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 546,
+                "interval_days": 91,
+                "interval_start_utc": "2028-02-07T00:00:00+00:00",
+                "interval_end_utc": "2028-05-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "El-Sayed is a sitting senator and progressive with a plausible national base, but the only current signal is that he is 'seriously considering' a run pending DNC rules. No filing, exploratory committee, or declared candidacy exists, and the nomination requires winning a national primary field.",
+                "evidence_quote": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC finalizes the primary calendar and rules, and committed that if he runs the campaign will accept individual donations only, no PAC money.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-05-08",
+                "interval_end": "2028-08-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 637,
+                "interval_days": 91,
+                "interval_start_utc": "2028-05-08T00:00:00+00:00",
+                "interval_end_utc": "2028-08-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "status": "executed",
+                  "summary": "Abdul El-Sayed formally announced a 2028 Democratic presidential campaign, framing it around Medicare for All and AI/data-center safeguards, and reaffirmed that the campaign accepts individual donations only with no PAC money; he announced even though the DNC has not finalized the 2028 calendar and rules."
+                },
+                {
+                  "action_id": "action_7_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Abdul El-Sayed formally announced a 2028 Democratic presidential campaign",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_007_001",
+                  "text": "Abdul El-Sayed formally announced a 2028 Democratic presidential campaign, framing it around Medicare for All and AI/data-center safeguards, and reaffirmed that the campaign accepts individual donations only with no PAC money; he announced even though the DNC has not finalized the 2028 calendar and rules.",
+                  "date": "2028-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:1",
+                  "action": "Formally announce a 2028 Democratic presidential campaign, framing it around Medicare for All and AI/data-center safeguards, and reaffirm that the campaign accepts individual donations only with no PAC money.\n承诺：If I run, the campaign will accept individual donations only, no PAC money.\n触发或复核条件：Announcement proceeds even though the DNC has not finalized the 2028 calendar and rules.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Formally announce a 2028 Democratic presidential campaign, framing it around Medicare for All and AI/data-center safeguards, and reaffirm that the campaign accepts individual donations only with no PAC money.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly restate that I am seriously considering a 2028 run and will decide once the DNC finalizes the primary calendar and rules, and urge the DNC to complete that process promptly and transparently.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:2",
+                  "action": null,
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Issue a DNC public statement that the 2028 primary process review continues, that the early-state calendar and ranked-choice voting remain under consideration, and that any rule decisions will follow the party's established approval procedures. No rule change is adopted this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Primary voters take no collective action this round: no 2028 primary contest is scheduled, the DNC has not finalized the calendar or voting rules, and El-Sayed has not declared a candidacy, so there is no ballot to cast and no voter preference to register.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Primary voters take no collective action this round: no 2028 primary contest is scheduled, the DNC has not finalized the calendar or voting rules, and El-Sayed has not declared a candidacy, so there is no ballot to cast and no voter preference to register.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "El-Sayed's simulated August 2028 formal campaign launch is a real in-window step, but it is only entry, not the nomination. Winning a national Democratic primary remains a long shot against a large field, and no polling or delegate evidence supports more than a small chance.",
+                "evidence_quote": "Abdul El-Sayed formally announced a 2028 Democratic presidential campaign, framing it around Medicare for All and AI/data-center safeguards, and reaffirmed that the campaign accepts individual donations only with no PAC money; he announced even though the DNC has not finalized the 2028 calendar and rules.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_007_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-08-07",
+                "interval_end": "2028-11-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 729,
+                "interval_days": 92,
+                "interval_start_utc": "2028-08-07T00:00:00+00:00",
+                "interval_end_utc": "2028-11-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "El-Sayed formally announced a 2028 Democratic campaign in August 2028 (round 7), satisfying the candidacy step, but no evidence shows he won or accepted the nomination. The nomination itself remains unobserved; a late announcement against an unfinalized DNC calendar and a progressive Senate record make a win plausible but unlikely.",
+                "evidence_quote": "Abdul El-Sayed formally announced a 2028 Democratic presidential campaign, framing it around Medicare for All and AI/data-center safeguards, and reaffirmed that the campaign accepts individual donations only with no PAC money; he announced even though the DNC has not finalized the 2028 calendar and rules.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_007_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.01091475
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 5,
+        "sampled_decisions": 9,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 7,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 9,
+            "active_actor_count": 3,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 7,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "1abe5ec6-c883-4658-b6b1-d7b02d67aec7",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:15:39.665655+00:00",
+      "contract_id": "0xf8446923a5100797caa47c0d0502d2403568d45ccddc995f2aa56a8611dcb024",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8f97cfa574fbd3a8f5974f221f95cbf8a89d608c8140deefece445baa32c067e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 171.713
+    },
+    {
+      "calls": 107,
+      "tokens": 1276241,
+      "input_tokens": 1212848,
+      "output_tokens": 63393,
+      "accounted_tokens_upper": 1276241,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-02-08",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 91,
+                "interval_days": 91,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-02-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "executed",
+                  "summary": "The Democratic National Committee publicly stated that it is reviewing the 2028 primary calendar and voting-method options, including the South Carolina vs. Nevada sequencing debate and ranked-choice voting, and will follow its regular approval process before adopting any rule; no rule was adopted."
+                },
+                {
+                  "action_id": "action_1_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_d261c829504a55bf",
+                    "action_1_agent_da523e79c2935878"
+                  ],
+                  "outcome": "pending",
+                  "effect": "will follow its regular approval process before adopting any rule"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Democratic National Committee publicly stated that it is reviewing the 2028 primary calendar and voting-method options, including the South Carolina vs. Nevada sequencing debate and ranked-choice voting, and will follow its regular approval process before adopting any rule; no rule was adopted.",
+                  "date": "2027-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:1",
+                  "action": "Make no public statement or formal move on a 2028 presidential run this round; keep focus on the new Senate seat while watching DNC primary-calendar and ranked-choice decisions and the emerging field.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Make no public statement or formal move on a 2028 presidential run this round; keep focus on the new Senate seat while watching DNC primary-calendar and ranked-choice decisions and the emerging field.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "In a media appearance or on his podcast, publicly leave the door open to a 2028 presidential run while stressing he is focused on serving Michigan in the Senate, without filing or forming a committee.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Formally announce an exploratory committee to assess a 2028 Democratic presidential bid, funded only by individual small-dollar donors.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:2",
+                  "action": "Issue a public statement that the DNC is reviewing the 2028 primary calendar and voting-method options, including the South Carolina vs. Nevada sequencing debate and ranked-choice voting, and will follow its regular approval process before adopting any rule. No rule is adopted in this round.\n承诺：Any 2028 primary rule change will go through the party's regular approval process; no rule is adopted now.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Issue a public statement that the DNC is reviewing the 2028 primary calendar and voting-method options, including the South Carolina vs. Nevada sequencing debate and ranked-choice voting, and will follow its regular approval process before adopting any rule. No rule is adopted in this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Primary voters take no collective action this round; no candidate has declared a 2028 Democratic candidacy and no primary calendar or voting rules are fixed. Continue observing candidate announcements and DNC rule decisions.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Primary voters take no collective action this round; no candidate has declared a 2028 Democratic candidacy and no primary calendar or voting rules are fixed. Continue observing candidate announcements and DNC rule decisions.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed is a newly elected senator with no reported 2028 presidential candidacy or national primary infrastructure; the evidence only shows his 2026 Senate win and issue positions. Competing Democratic figures are also undeclared, so the nomination remains highly uncertain and no in-window qualifying event is shown.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-08",
+                "interval_end": "2027-05-10",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 182,
+                "interval_days": 91,
+                "interval_start_utc": "2027-02-08T00:00:00+00:00",
+                "interval_end_utc": "2027-05-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed is a newly elected senator with no reported 2028 presidential candidacy or national primary infrastructure; the evidence only shows his 2026 Senate win and issue positions. Competing Democratic figures are also undeclared, so the nomination remains highly uncertain and no in-window qualifying event is shown.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-05-10",
+                "interval_end": "2027-08-09",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 273,
+                "interval_days": 91,
+                "interval_start_utc": "2027-05-10T00:00:00+00:00",
+                "interval_end_utc": "2027-08-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed is a newly elected senator with no reported 2028 presidential candidacy or national primary infrastructure; the evidence only shows his 2026 Senate win and issue positions. Competing Democratic figures are also undeclared, so the nomination remains highly uncertain and no in-window qualifying event is shown.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-08-09",
+                "interval_end": "2027-11-08",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 364,
+                "interval_days": 91,
+                "interval_start_utc": "2027-08-09T00:00:00+00:00",
+                "interval_end_utc": "2027-11-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "status": "executed",
+                  "summary": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC settles the primary calendar, reiterating his small-donor-only and Medicare for All commitments."
+                },
+                {
+                  "action_id": "action_4_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "executed",
+                  "summary": "The Democratic National Committee stated that the DNC continues its 2028 primary calendar and voting-method review, including South Carolina vs. Nevada sequencing and ranked-choice voting, and will follow its regular approval process before adopting any rule; no rule was adopted."
+                },
+                {
+                  "action_id": "action_4_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_da523e79c2935878",
+                    "action_4_agent_d261c829504a55bf"
+                  ],
+                  "outcome": "pending",
+                  "effect": "will decide after the DNC settles the primary calendar"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC settles the primary calendar",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC settles the primary calendar, reiterating his small-donor-only and Medicare for All commitments.",
+                  "date": "2027-11"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "The Democratic National Committee stated that the DNC continues its 2028 primary calendar and voting-method review, including South Carolina vs. Nevada sequencing and ranked-choice voting, and will follow its regular approval process before adopting any rule; no rule was adopted.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:2",
+                  "action": "In a media appearance, say he is seriously considering a 2028 Democratic presidential run and will decide after the DNC settles the primary calendar, while reiterating his small-donor-only and Medicare for All commitments.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Make no public statement or formal move on a 2028 presidential run this round; continue Senate and progressive policy work while monitoring DNC primary-calendar and ranked-choice decisions and the emerging field.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "In a media appearance, say he is seriously considering a 2028 Democratic presidential run and will decide after the DNC settles the primary calendar, while reiterating his small-donor-only and Medicare for All commitments.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:1",
+                  "action": "Issue a public statement that the DNC continues its 2028 primary calendar and voting-method review, including South Carolina vs. Nevada sequencing and ranked-choice voting, and will follow its regular approval process before adopting any rule. No rule is adopted this round.\n承诺：Any 2028 primary rule change will go through the party's regular approval process; none is adopted now.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement that the DNC continues its 2028 primary calendar and voting-method review, including South Carolina vs. Nevada sequencing and ranked-choice voting, and will follow its regular approval process before adopting any rule. No rule is adopted this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Primary voters take no collective action this round; no candidate has formally declared a 2028 Democratic candidacy and the DNC has not fixed the calendar or voting rules. Continue observing declarations and rule decisions.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 95.0,
+                      "probability": 1.0,
+                      "action": "Primary voters take no collective action this round; no candidate has formally declared a 2028 Democratic candidacy and the DNC has not fixed the calendar or voting rules. Continue observing declarations and rule decisions.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "El-Sayed is a credible progressive with a Senate platform, but the only in-window signal is that he is 'seriously considering' a run and will decide after the DNC settles the primary calendar. That is willingness, not a declared candidacy or nomination win; the field remains unsettled.",
+                "evidence_quote": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC settles the primary calendar, reiterating his small-donor-only and Medicare for All commitments.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-08",
+                "interval_end": "2028-02-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 455,
+                "interval_days": 91,
+                "interval_start_utc": "2027-11-08T00:00:00+00:00",
+                "interval_end_utc": "2028-02-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "El-Sayed is a credible progressive with a Senate platform, but the only in-window signal is that he is 'seriously considering' a run and will decide after the DNC settles the primary calendar. That is willingness, not a declared candidacy or nomination win; the field remains unsettled.",
+                "evidence_quote": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC settles the primary calendar, reiterating his small-donor-only and Medicare for All commitments.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-02-07",
+                "interval_end": "2028-05-08",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 546,
+                "interval_days": 91,
+                "interval_start_utc": "2028-02-07T00:00:00+00:00",
+                "interval_end_utc": "2028-05-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "El-Sayed is a credible progressive with a Senate platform, but the only in-window signal is that he is 'seriously considering' a run and will decide after the DNC settles the primary calendar. That is willingness, not a declared candidacy or nomination win; the field remains unsettled.",
+                "evidence_quote": "Abdul El-Sayed said he is seriously considering a 2028 Democratic presidential run and will decide after the DNC settles the primary calendar, reiterating his small-donor-only and Medicare for All commitments.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-05-08",
+                "interval_end": "2028-08-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 637,
+                "interval_days": 91,
+                "interval_start_utc": "2028-05-08T00:00:00+00:00",
+                "interval_end_utc": "2028-08-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "status": "executed",
+                  "summary": "Abdul El-Sayed announced a formal campaign for the 2028 Democratic presidential nomination, framing it around Medicare for All, AI and data-center safeguards, and a small-donor-only pledge, and committing to accept the nomination if Democratic primary voters award it to him."
+                },
+                {
+                  "action_id": "action_7_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "executed",
+                  "summary": "The Democratic National Committee issued a public statement reaffirming that it continues its 2028 primary calendar and voting-method review, including South Carolina vs. Nevada sequencing and ranked-choice voting, and will follow its regular approval process before adopting any rule; no rule was adopted."
+                },
+                {
+                  "action_id": "action_7_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_7_agent_da523e79c2935878",
+                    "action_7_agent_d261c829504a55bf"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "no rule was adopted"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Abdul El-Sayed announced a formal campaign for the 2028 Democratic presidential nomination",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_007_001",
+                  "text": "Abdul El-Sayed announced a formal campaign for the 2028 Democratic presidential nomination, framing it around Medicare for All, AI and data-center safeguards, and a small-donor-only pledge, and committing to accept the nomination if Democratic primary voters award it to him.",
+                  "date": "2028-08"
+                },
+                {
+                  "id": "sim_0001_007_002",
+                  "text": "The Democratic National Committee issued a public statement reaffirming that it continues its 2028 primary calendar and voting-method review, including South Carolina vs. Nevada sequencing and ranked-choice voting, and will follow its regular approval process before adopting any rule; no rule was adopted.",
+                  "date": "2028-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:1",
+                  "action": "Publicly announce a formal campaign for the 2028 Democratic presidential nomination, framing it around Medicare for All, AI/data-center safeguards, and a small-donor-only pledge, and commit to accepting the nomination if Democratic primary voters award it to him.\n承诺：Run a small-donor-only campaign and accept the Democratic nomination if won.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly announce a formal campaign for the 2028 Democratic presidential nomination, framing it around Medicare for All, AI/data-center safeguards, and a small-donor-only pledge, and commit to accepting the nomination if Democratic primary voters award it to him.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "State publicly that he will decide on a 2028 run only after the DNC adopts its primary calendar and voting rules, and that until then he is focused on his Senate work and progressive policy priorities.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Form an exploratory committee for a 2028 Democratic presidential run while continuing to say the final decision awaits the DNC's calendar ruling, and use it to test small-donor fundraising capacity.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:2",
+                  "action": "Issue a public statement reaffirming that the DNC continues its 2028 primary calendar and voting-method review, including South Carolina vs. Nevada sequencing and ranked-choice voting, and will follow its regular approval process before adopting any rule. No rule is adopted this round.\n承诺：Any 2028 primary rule change will go through the party's regular approval process; none is adopted now.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement that the DNC is concluding its 2028 primary calendar and voting-method review and will bring a formal proposal—covering South Carolina vs. Nevada sequencing and ranked-choice voting—to the party's regular approval process, with a vote scheduled before the fall 2028 filing window. No rule is adopted in this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Issue a public statement reaffirming that the DNC continues its 2028 primary calendar and voting-method review, including South Carolina vs. Nevada sequencing and ranked-choice voting, and will follow its regular approval process before adopting any rule. No rule is adopted this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Primary voters take no collective action this round; no Democratic candidate has formally declared for 2028 and the DNC has not fixed the calendar or voting rules. Continue observing declarations and rule decisions.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Primary voters take no collective action this round; no Democratic candidate has formally declared for 2028 and the DNC has not fixed the calendar or voting rules. Continue observing declarations and rule decisions.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Primary voters signal no preference yet; they watch whether El-Sayed converts his 'seriously considering' posture into a formal candidacy and whether the DNC adopts a calendar and voting method before any primary voting.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "El-Sayed's simulated August 2028 formal campaign and commitment to accept the nomination raise his candidacy from the prior 0.04, but a Senate seat and a crowded Democratic field still make winning the nomination unlikely.",
+                "evidence_quote": "Abdul El-Sayed announced a formal campaign for the 2028 Democratic presidential nomination, framing it around Medicare for All, AI and data-center safeguards, and a small-donor-only pledge, and committing to accept the nomination if Democratic primary voters award it to him.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_007_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-08-07",
+                "interval_end": "2028-11-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 729,
+                "interval_days": 92,
+                "interval_start_utc": "2028-08-07T00:00:00+00:00",
+                "interval_end_utc": "2028-11-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "El-Sayed entered the race in August 2028 and pledged to accept the nomination, but no primary results or delegate counts appear in the evidence. The DNC calendar remained unresolved, and the field includes other plausible contenders, so winning the nomination remains unlikely though not excluded.",
+                "evidence_quote": "Abdul El-Sayed announced a formal campaign for the 2028 Democratic presidential nomination, framing it around Medicare for All, AI and data-center safeguards, and a small-donor-only pledge, and committing to accept the nomination if Democratic primary voters award it to him.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_007_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.004356000000000001
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-02-08",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 91,
+                "interval_days": 91,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-02-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "In a media appearance, say I am seriously considering a 2028 Democratic presidential run and will decide after weighing grassroots support, while reiterating no PAC money.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:3",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Release a detailed progressive policy plan (e.g., Medicare for All financing and AI/data-center safeguards), framed as a national agenda without declaring a presidential candidacy.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:1",
+                  "action": "Keep the 2028 primary voting system under internal review without any formal proposal, vote, or public announcement this round; ranked-choice voting remains only a discussed possibility.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Keep the 2028 primary voting system under internal review without any formal proposal, vote, or public announcement this round; ranked-choice voting remains only a discussed possibility.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement that the DNC is studying ranked-choice voting and the early-state calendar for 2028, committing to no rule change before the party's regular process, without endorsing any candidate.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Take no collective action this round. As an unstructured primary electorate, voters have no contest to vote in yet; watch for an El-Sayed candidacy declaration, the DNC's adopted 2028 calendar and delegate rules, and any ranked-choice voting decision before forming preferences.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round. As an unstructured primary electorate, voters have no contest to vote in yet; watch for an El-Sayed candidacy declaration, the DNC's adopted 2028 calendar and delegate rules, and any ranked-choice voting decision before forming preferences.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed is a newly elected senator with no reported 2028 presidential candidacy or national primary infrastructure; the evidence only shows his 2026 Senate win and issue positions. Competing Democratic figures are also undeclared, so the nomination remains highly uncertain and no in-window qualifying event is shown.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-08",
+                "interval_end": "2027-05-10",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 182,
+                "interval_days": 91,
+                "interval_start_utc": "2027-02-08T00:00:00+00:00",
+                "interval_end_utc": "2027-05-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed is a newly elected senator with no reported 2028 presidential candidacy or national primary infrastructure; the evidence only shows his 2026 Senate win and issue positions. Competing Democratic figures are also undeclared, so the nomination remains highly uncertain and no in-window qualifying event is shown.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-05-10",
+                "interval_end": "2027-08-09",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 273,
+                "interval_days": 91,
+                "interval_start_utc": "2027-05-10T00:00:00+00:00",
+                "interval_end_utc": "2027-08-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed is a newly elected senator with no reported 2028 presidential candidacy or national primary infrastructure; the evidence only shows his 2026 Senate win and issue positions. Competing Democratic figures are also undeclared, so the nomination remains highly uncertain and no in-window qualifying event is shown.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-08-09",
+                "interval_end": "2027-11-08",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 364,
+                "interval_days": 91,
+                "interval_start_utc": "2027-08-09T00:00:00+00:00",
+                "interval_end_utc": "2027-11-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "executed",
+                  "summary": "The Democratic National Committee announced that it is reviewing the 2028 primary calendar and voting-system options, including ranked-choice voting, and will follow its regular approval process before adopting any change."
+                },
+                {
+                  "action_id": "action_4_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_d261c829504a55bf",
+                    "action_4_agent_f6defb0788345546"
+                  ],
+                  "outcome": "pending",
+                  "effect": "will follow its regular approval process before adopting any change"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "The Democratic National Committee announced that it is reviewing the 2028 primary calendar and voting-system options, including ranked-choice voting, and will follow its regular approval process before adopting any change.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "The Democratic National Committee announced that it is reviewing the 2028 primary calendar and voting-system options, including ranked-choice voting, and will follow its regular approval process before adopting any change.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "In a public interview or podcast segment, say I am seriously weighing a 2028 presidential run and will decide after the DNC settles the primary calendar, while reiterating no PAC money and Medicare for All.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:2",
+                  "action": "Issue a neutral public statement that the DNC is reviewing the 2028 primary calendar and voting-system options, including ranked-choice voting, and will follow its regular approval process before adopting any change.\n承诺：No rule change will be adopted without the party's regular approval process.\n触发或复核条件：Only if the DNC chooses to publicly acknowledge the review.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Keep the 2028 primary calendar and voting-system questions under internal review without a formal proposal, vote, or public announcement this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a neutral public statement that the DNC is reviewing the 2028 primary calendar and voting-system options, including ranked-choice voting, and will follow its regular approval process before adopting any change.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Take no collective action this round. Primary voters have no declared Democratic field, no adopted 2028 calendar or delegate rules, and no scheduled contest to vote in; continue monitoring for an El-Sayed candidacy declaration and DNC rule adoption before forming preferences.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round. Primary voters have no declared Democratic field, no adopted 2028 calendar or delegate rules, and no scheduled contest to vote in; continue monitoring for an El-Sayed candidacy declaration and DNC rule adoption before forming preferences.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed is a newly elected senator with no reported 2028 presidential candidacy or national primary infrastructure; the evidence only shows his 2026 Senate win and issue positions. Competing Democratic figures are also undeclared, so the nomination remains highly uncertain and no in-window qualifying event is shown.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-08",
+                "interval_end": "2028-02-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 455,
+                "interval_days": 91,
+                "interval_start_utc": "2027-11-08T00:00:00+00:00",
+                "interval_end_utc": "2028-02-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed is a newly elected senator with no reported 2028 presidential candidacy or national primary infrastructure; the evidence only shows his 2026 Senate win and issue positions. Competing Democratic figures are also undeclared, so the nomination remains highly uncertain and no in-window qualifying event is shown.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-02-07",
+                "interval_end": "2028-05-08",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 546,
+                "interval_days": 91,
+                "interval_start_utc": "2028-02-07T00:00:00+00:00",
+                "interval_end_utc": "2028-05-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed is a newly elected senator with no reported 2028 presidential candidacy or national primary infrastructure; the evidence only shows his 2026 Senate win and issue positions. Competing Democratic figures are also undeclared, so the nomination remains highly uncertain and no in-window qualifying event is shown.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-05-08",
+                "interval_end": "2028-08-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 637,
+                "interval_days": 91,
+                "interval_start_utc": "2028-05-08T00:00:00+00:00",
+                "interval_end_utc": "2028-08-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_7_agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da523e79c2935878",
+                  "actor_name": "Abdul El-Sayed",
+                  "candidate_id": "agent_da523e79c2935878:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da523e79c2935878:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly signal openness to a 2028 presidential run without announcing a campaign or filing: state that he is seriously considering it and will decide once the DNC finalizes the primary calendar and rules, while reiterating his small-donor-only and progressive policy commitments.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d261c829504a55bf",
+                  "actor_name": "Democratic National Committee",
+                  "candidate_id": "agent_d261c829504a55bf:initial:1",
+                  "action": "Continue the internal review of the 2028 primary calendar and voting-system options without a formal proposal, vote, or new public announcement this round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d261c829504a55bf:initial:1",
+                      "weight": 60.0,
+                      "probability": 1.0,
+                      "action": "Continue the internal review of the 2028 primary calendar and voting-system options without a formal proposal, vote, or new public announcement this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f6defb0788345546",
+                  "actor_name": "Democratic Party primary voters",
+                  "candidate_id": "agent_f6defb0788345546:initial:1",
+                  "action": "Take no collective action this round. As an unstructured primary electorate there is still no declared Democratic field, no adopted 2028 calendar or delegate rules, and no scheduled contest to vote in; continue monitoring for an El-Sayed candidacy declaration and DNC rule adoption.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f6defb0788345546:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round. As an unstructured primary electorate there is still no declared Democratic field, no adopted 2028 calendar or delegate rules, and no scheduled contest to vote in; continue monitoring for an El-Sayed candidacy declaration and DNC rule adoption.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "El-Sayed is a newly elected senator with no reported 2028 presidential candidacy or national primary infrastructure; the evidence only shows his 2026 Senate win and issue positions. Competing Democratic figures are also undeclared, so the nomination remains highly uncertain and no in-window qualifying event is shown.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-08-07",
+                "interval_end": "2028-11-07",
+                "horizon_end": "2028-11-07",
+                "elapsed_days": 729,
+                "interval_days": 92,
+                "interval_start_utc": "2028-08-07T00:00:00+00:00",
+                "interval_end_utc": "2028-11-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No public evidence shows El-Sayed seeking the 2028 Democratic nomination; the record only covers his 2026 Senate win and issue positions. The DNC's calendar review is a process step, not a candidacy signal, so the outcome remains unverified and highly uncertain.",
+                "evidence_quote": "A progressive Democrat, El-Sayed defeated U.S. representative Haley Stevens in the 2026 Michigan Democratic Senate primary. He defeated Republican nominee Mike Rogers in the general election, becoming the first Muslim American elected to the United States Senate.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.06173999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 16,
+        "active_rounds": 6,
+        "draw_rounds": 6,
+        "audited_silent_rounds": 10,
+        "sampled_decisions": 18,
+        "public_event_count": 6,
+        "substantive_public_event_count": 6,
+        "state_change_count": 8,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 9,
+            "active_actor_count": 3,
+            "public_event_count": 5,
+            "substantive_public_event_count": 5,
+            "state_change_count": 7,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 9,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "c4b3feed-6232-4c31-b2a0-16f542b2904b",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:18:50.673489+00:00",
+      "contract_id": "0xf8446923a5100797caa47c0d0502d2403568d45ccddc995f2aa56a8611dcb024",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8f97cfa574fbd3a8f5974f221f95cbf8a89d608c8140deefece445baa32c067e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 191.002
+    },
+    {
+      "calls": 163,
+      "tokens": 1725255,
+      "input_tokens": 1643766,
+      "output_tokens": 81489,
+      "accounted_tokens_upper": 1725255,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.24162140000000004,
+      "coverage": 0.5470199999999998,
+      "unexplored_mass": 0.4529800000000001,
+      "unknown_bounds": [
+        0.015131399999999998,
+        0.4681114000000001
+      ],
+      "search_iterations": 16,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 16,
+          "search_value": 0.097203125,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.6,
+          "visits": 10,
+          "search_value": 0.0860762,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.6,
+          "visits": 9,
+          "search_value": 0.08270688888888889,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.6,
+          "visits": 8,
+          "search_value": 0.08324525,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.24989999999999996,
+          "visits": 5,
+          "search_value": 0.0803808,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.24989999999999996,
+          "visits": 4,
+          "search_value": 0.071376,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.24989999999999996,
+          "visits": 3,
+          "search_value": 0.06903466666666666,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.11995199999999998,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.11995199999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0023990399999999994
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.079968,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.079968,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.00159936
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 7,
+          "mass": 0.04997999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.10709999999999999,
+          "visits": 2,
+          "search_value": 0.09739999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.10709999999999999,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.10709999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0032129999999999993
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.243,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.3,
+          "visits": 5,
+          "search_value": 0.11352959999999998,
+          "conditional_p_yes": 0.05,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.3,
+          "visits": 4,
+          "search_value": 0.112812,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.3,
+          "visits": 3,
+          "search_value": 0.11161599999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.16799999999999998,
+          "visits": 2,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.16799999999999998,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.16799999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.005039999999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.072,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.04,
+          "frontier": true,
+          "contribution": 0.0028799999999999997
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.06000000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.10000000000000009,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "e4064fb6-ea46-47d3-9ca5-a3efaf12b79f",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:25:14.186373+00:00",
+      "contract_id": "0xf8446923a5100797caa47c0d0502d2403568d45ccddc995f2aa56a8611dcb024",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8f97cfa574fbd3a8f5974f221f95cbf8a89d608c8140deefece445baa32c067e",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 383.454
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0xf8446923a5100797caa47c0d0502d2403568d45ccddc995f2aa56a8611dcb024",
+  "group_id": "democratic-presidential-nominee-2028",
+  "stage": "finished",
+  "outcome_deadline": "2028-11-07T00:00:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "8f97cfa574fbd3a8f5974f221f95cbf8a89d608c8140deefece445baa32c067e",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 638,
+    "input_tokens": 547,
+    "output_tokens": 91,
+    "accounted_tokens_upper": 638,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-11-07"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-11-07"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2027-02-08",
+        "2027-05-10",
+        "2027-08-09",
+        "2027-11-08",
+        "2028-02-07",
+        "2028-05-08",
+        "2028-08-07",
+        "2028-11-07"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2027-02-08",
+        "2027-05-10",
+        "2027-08-09",
+        "2027-11-08",
+        "2028-02-07",
+        "2028-05-08",
+        "2028-08-07",
+        "2028-11-07"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2027-02-08",
+        "2027-05-10",
+        "2027-08-09",
+        "2027-11-08",
+        "2028-02-07",
+        "2028-05-08",
+        "2028-08-07",
+        "2028-11-07"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 2,
+      "ready": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_054e60a30ca3d783",
+          "name": "Abdul El-Sayed",
+          "role": "Progressive Democratic senator and potential 2028 presidential candidate; must decide to run for and accept the Democratic nomination.",
+          "decision_ids": [
+            "D1",
+            "D2"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        },
+        {
+          "seat_id": "seat_f976ba0356f7942e",
+          "name": "Democratic Party primary voters",
+          "role": "Democratic primary and caucus participants whose votes determine which candidate wins the party's 2028 presidential nomination.",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        },
+        {
+          "seat_id": "seat_7ab4d4e1fc8990fd",
+          "name": "Democratic National Committee",
+          "role": "Party body chaired by Ken Martin that sets primary rules and processes, including possible ranked-choice voting, shaping how the nomination is won.",
+          "decision_ids": [
+            "D4"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No source establishes that Abdul El-Sayed has announced a 2028 presidential campaign or declared candidacy.",
+        "The formal Democratic nomination process and delegate rules for 2028 are not fully specified in the sources.",
+        "The resolution source is a consensus of official Democratic Party sources; no single named reporting or certification body is identified."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Abdul El-Sayed decides to seek the 2028 Democratic presidential nomination.",
+          "owner": "Abdul El-Sayed",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "Abdul El-Sayed decides to accept the Democratic presidential nomination if won.",
+          "owner": "Abdul El-Sayed",
+          "support": "represented"
+        },
+        {
+          "id": "D3",
+          "choice": "Democratic primary voters cast votes determining the winner of the 2028 Democratic presidential nomination.",
+          "owner": "Democratic Party primary voters",
+          "support": "represented"
+        },
+        {
+          "id": "D4",
+          "choice": "Democratic National Committee establishes and administers the 2028 presidential primary rules and nomination process.",
+          "owner": "Democratic National Committee",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 26,
+    "tokens": 67586,
+    "input_tokens": 58177,
+    "output_tokens": 9409,
+    "accounted_tokens_upper": 67586,
+    "unknown_usage_requests": 0
+  }
+}

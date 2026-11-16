@@ -1,0 +1,2688 @@
+{
+  "run_id": "fe02e228-19e6-4562-9f85-bb0f228ea801",
+  "case_id": "market_f2a596d7c7408c751048e137",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2841,
+      "input_tokens": 2831,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2841,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.72,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.72,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2831,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:11:03.164381+00:00",
+      "contract_id": "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59d77dc1964c39d0aaba808b1f0f02b930eb8de6f84dd1a96cd5099e291fc593",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.494
+    },
+    {
+      "calls": 2,
+      "tokens": 5682,
+      "input_tokens": 5662,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5682,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.77,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.72,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2831,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.82,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2831,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:11:04.460072+00:00",
+      "contract_id": "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59d77dc1964c39d0aaba808b1f0f02b930eb8de6f84dd1a96cd5099e291fc593",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.294
+    },
+    {
+      "calls": 13,
+      "tokens": 205480,
+      "input_tokens": 195122,
+      "output_tokens": 10358,
+      "accounted_tokens_upper": 205480,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-07-01",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 234,
+                "interval_days": 234,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "status": "executed",
+                  "summary": "Kuomintang (KMT) officially nominated incumbent Taipei Mayor Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, authorizing him to run under the KMT banner and committing party campaign support for the November 28, 2026 vote."
+                },
+                {
+                  "action_id": "action_1_agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Kuomintang (KMT) officially nominated incumbent Taipei Mayor Chiang Wan-an as its candidate for the 2026 Taipei mayoral election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Kuomintang (KMT) officially nominated incumbent Taipei Mayor Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, authorizing him to run under the KMT banner and committing party campaign support for the November 28, 2026 vote.",
+                  "date": "2027-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:2",
+                  "action": null,
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "Publicly announce that I will seek re-election as Mayor of Taipei in the 2026 local election, presenting my first-term record (free school lunches, reduced-hours subsidy pilot, Nvidia headquarters facilitation) and stating I will seek the KMT nomination to run under the party banner.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "candidate_id": "agent_833649c453d65fb4:initial:1",
+                  "action": "The Kuomintang officially nominates incumbent Taipei Mayor Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, formally authorizing him to run under the KMT banner and committing party campaign support for the November 28, 2026 vote.\n承诺：KMT formally backs Chiang Wan-an as its 2026 Taipei mayoral nominee and mobilizes party resources for his campaign.\n触发或复核条件：Chiang accepts the nomination and remains a candidate through the election.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "The Kuomintang officially nominates incumbent Taipei Mayor Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, formally authorizing him to run under the KMT banner and committing party campaign support for the November 28, 2026 vote.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "No nomination announcement this round; the KMT keeps its nomination decision open and monitors Chiang's intentions, the emerging candidate field, and the party's internal timetable before formally naming a 2026 Taipei mayoral candidate.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                  "action": "The Taipei electorate takes no collective campaign act this round; ballots will be cast only at the scheduled election, and no polling or candidate data exists to act on now.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "The Taipei electorate takes no collective campaign act this round; ballots will be cast only at the scheduled election, and no polling or candidate data exists to act on now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "KMT formally nominated incumbent Chiang Wan-an for the November 28, 2026 Taipei race, and he is the sitting mayor with visible city programs. No vote result or credible polling is in evidence, so the estimate rests on incumbency and nomination rather than a measured outcome.",
+                "evidence_quote": "Kuomintang (KMT) officially nominated incumbent Taipei Mayor Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, authorizing him to run under the KMT banner and committing party campaign support for the November 28, 2026 vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.175
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.72,
+      "covered_p_yes": 0.72,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.72,
+        0.72
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "ee380c41-0af2-433a-8087-b002f300e0f0",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:48:48.886094+00:00",
+      "contract_id": "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59d77dc1964c39d0aaba808b1f0f02b930eb8de6f84dd1a96cd5099e291fc593",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 86.837
+    },
+    {
+      "calls": 25,
+      "tokens": 346167,
+      "input_tokens": 330424,
+      "output_tokens": 15743,
+      "accounted_tokens_upper": 346167,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-07-01",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 234,
+                "interval_days": 234,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "status": "executed",
+                  "summary": "Kuomintang (KMT) officially nominated incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, committing party resources to his re-election campaign ahead of the November 28, 2026 vote."
+                },
+                {
+                  "action_id": "action_1_agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Kuomintang (KMT) officially nominated incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Kuomintang (KMT) officially nominated incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, committing party resources to his re-election campaign ahead of the November 28, 2026 vote.",
+                  "date": "2027-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce that I will seek re-election as Mayor of Taipei in the 2026 local election, presenting my governing record (free school lunches, subsidized reduced-hours pilot, Nvidia HQ siting) as the case, while noting I will run under the KMT banner subject to the party's nomination process.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "candidate_id": "agent_833649c453d65fb4:initial:1",
+                  "action": "The KMT officially nominates incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, committing party resources to his re-election campaign ahead of the November 28, 2026 vote.\n承诺：Official KMT nomination of Chiang Wan-an for Taipei mayor in the 2026 local election.",
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "The KMT officially nominates incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, committing party resources to his re-election campaign ahead of the November 28, 2026 vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                  "action": "As a collective electorate, no coordinated move is available before the scheduled 28 November 2026 local election; voters' choice is exercised only when ballots are cast. No public statement or commitment is made this round.\n触发或复核条件：Review after the election result is certified by the Central Election Commission or credible reporting.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "As a collective electorate, no coordinated move is available before the scheduled 28 November 2026 local election; voters' choice is exercised only when ballots are cast. No public statement or commitment is made this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "KMT formally nominated incumbent Chiang Wan-an for the November 28, 2026 Taipei race, and he enters as a first-term incumbent who won 42.29% in 2022. The election result itself is unobserved; no vote count or CEC result is in evidence, so the estimate rests on nomination and incumbency, not a certified outcome.",
+                "evidence_quote": "Kuomintang (KMT) officially nominated incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, committing party resources to his re-election campaign ahead of the November 28, 2026 vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.82,
+          "error": null,
+          "action_path_probability": 0.22499999999999998
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-07-01",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 234,
+                "interval_days": 234,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "status": "executed",
+                  "summary": "Kuomintang (KMT) officially nominated Chiang Wan-an as the party's candidate for the 2026 Taipei mayoral election, publicly announcing the nomination and directing party resources to his re-election campaign, contingent on Chiang accepting the nomination."
+                },
+                {
+                  "action_id": "action_1_agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "officially nominated Chiang Wan-an as the party's candidate for the 2026 Taipei mayoral election",
+                  "pending_actor_ids": [
+                    "agent_e332336abb64515e"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Kuomintang (KMT) officially nominated Chiang Wan-an as the party's candidate for the 2026 Taipei mayoral election, publicly announcing the nomination and directing party resources to his re-election campaign, contingent on Chiang accepting the nomination.",
+                  "date": "2027-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce that I will seek re-election as Mayor of Taipei in the November 2026 local election, framing it as continuing the education, childcare and investment agenda, and state that I will seek the KMT nomination.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "candidate_id": "agent_833649c453d65fb4:initial:1",
+                  "action": "Officially nominate Chiang Wan-an as the Kuomintang candidate for the 2026 Taipei mayoral election, publicly announcing the nomination and directing party resources to his re-election campaign.\n承诺：KMT formally commits its nomination and campaign support to Chiang Wan-an for the 2026 Taipei mayoral race.\n触发或复核条件：Contingent on Chiang accepting the nomination.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Officially nominate Chiang Wan-an as the Kuomintang candidate for the 2026 Taipei mayoral election, publicly announcing the nomination and directing party resources to his re-election campaign.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                  "action": "No collective act this round: the Taipei electorate's choice is exercised only through ballots at the scheduled mayoral election, and no ballot has been cast yet in this round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "No collective act this round: the Taipei electorate's choice is exercised only through ballots at the scheduled mayoral election, and no ballot has been cast yet in this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "KMT nomination of Chiang is reported, and he is the incumbent with a 2022 win and visible city programs. The election result itself is unobserved; nomination is not election, and no polling or vote count is in evidence.",
+                "evidence_quote": "Kuomintang (KMT) officially nominated Chiang Wan-an as the party's candidate for the 2026 Taipei mayoral election, publicly announcing the nomination and directing party resources to his re-election campaign, contingent on Chiang accepting the nomination.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.82,
+          "error": null,
+          "action_path_probability": 0.21
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 2,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.82,
+      "covered_p_yes": 0.82,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.82,
+        0.8199999999999998
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "1b2a677c-dad4-4814-9cd0-5e2368db04e9",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:12:56.717983+00:00",
+      "contract_id": "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59d77dc1964c39d0aaba808b1f0f02b930eb8de6f84dd1a96cd5099e291fc593",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 42.934
+    },
+    {
+      "calls": 59,
+      "tokens": 773213,
+      "input_tokens": 741098,
+      "output_tokens": 32115,
+      "accounted_tokens_upper": 773213,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-28",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 19,
+                "interval_days": 19,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "status": "executed",
+                  "summary": "Kuomintang (KMT) officially nominated incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, formally authorizing his re-election bid ahead of the November 28 vote, conditioned on Chiang Wan-an accepting the nomination and standing for re-election."
+                },
+                {
+                  "action_id": "action_1_agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Kuomintang (KMT) officially nominated incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Kuomintang (KMT) officially nominated incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, formally authorizing his re-election bid ahead of the November 28 vote, conditioned on Chiang Wan-an accepting the nomination and standing for re-election.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce that I will seek re-election as Mayor of Taipei in the 2026 local election, citing my record on schools, family-friendly labor policy, and major investment siting, and stating that I will seek the KMT nomination.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "candidate_id": "agent_833649c453d65fb4:initial:1",
+                  "action": "KMT officially nominates incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, formally authorizing his re-election bid ahead of the November 28 vote.\n承诺：KMT commits its party nomination to Chiang Wan-an for the 2026 Taipei mayoralty.\n触发或复核条件：Chiang Wan-an accepts the nomination and stands for re-election.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "KMT officially nominates incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, formally authorizing his re-election bid ahead of the November 28 vote.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "KMT publicly states it will renominate Chiang Wan-an for Taipei mayor provided he confirms he is seeking re-election, framing the nomination as contingent on his own decision to run.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                  "action": "The Taipei electorate holds no collective act before election day; voters' choice is expressed only by casting ballots in the scheduled mayoral election. No new public move is made this round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "The Taipei electorate holds no collective act before election day; voters' choice is expressed only by casting ballots in the scheduled mayoral election. No new public move is made this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "KMT nomination of incumbent Chiang Wan-an is a settled event, and he won Taipei in 2022 with 42.29%. Re-election remains likely but not certain given voter choice and possible strong challengers.",
+                "evidence_quote": "Kuomintang (KMT) officially nominated incumbent Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, formally authorizing his re-election bid ahead of the November 28 vote, conditioned on Chiang Wan-an accepting the nomination and standing for re-election.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-11-28",
+                "interval_end": "2027-01-20",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 72,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-28T00:00:00+00:00",
+                "interval_end_utc": "2027-01-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "status": "executed",
+                  "summary": "Chiang Wan-an accepted the Kuomintang nomination and will contest the 2026 Taipei mayoral election as its candidate, framing the campaign around his incumbent record including free school lunches, the subsidized reduced-hours pilot and the Nvidia headquarters siting."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_833649c453d65fb4",
+                    "action_2_agent_e332336abb64515e"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Chiang Wan-an accepted the Kuomintang nomination and will contest the 2026 Taipei mayoral election as its candidate"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Chiang Wan-an accepted the Kuomintang nomination and will contest the 2026 Taipei mayoral election as its candidate",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Chiang Wan-an accepted the Kuomintang nomination and will contest the 2026 Taipei mayoral election as its candidate, framing the campaign around his incumbent record including free school lunches, the subsidized reduced-hours pilot and the Nvidia headquarters siting.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:1",
+                  "action": "Publicly accept the KMT's 2026 Taipei mayoral nomination and declare my candidacy for re-election, framing the campaign around my incumbent record (free school lunches, subsidized reduced-hours pilot, Nvidia HQ siting) and committing to run as the party's nominee through the November 28 vote.\n承诺：I accept the KMT nomination and will contest the 2026 Taipei mayoral election as its candidate.\n触发或复核条件：Nomination remains in effect.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly accept the KMT's 2026 Taipei mayoral nomination and declare my candidacy for re-election, framing the campaign around my incumbent record (free school lunches, subsidized reduced-hours pilot, Nvidia HQ siting) and committing to run as the party's nominee through the November 28 vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.78,
+                "basis": "KMT nomination and Chiang's acceptance are represented as settled, making him the incumbent candidate. His 2022 win and visible city programs support a strong position, but the November 2026 vote and any challenger field remain unresolved, so this is not a terminal result.",
+                "evidence_quote": "Chiang Wan-an accepted the Kuomintang nomination and will contest the 2026 Taipei mayoral election as its candidate, framing the campaign around his incumbent record including free school lunches, the subsidized reduced-hours pilot and the Nvidia headquarters siting.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-01-20",
+                "interval_end": "2027-02-16",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 99,
+                "interval_days": 27,
+                "interval_start_utc": "2027-01-20T00:00:00+00:00",
+                "interval_end_utc": "2027-02-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.78,
+                "basis": "KMT nomination and Chiang's acceptance are represented as settled, making him the incumbent candidate. His 2022 win and visible city programs support a strong position, but the November 2026 vote and any challenger field remain unresolved, so this is not a terminal result.",
+                "evidence_quote": "Chiang Wan-an accepted the Kuomintang nomination and will contest the 2026 Taipei mayoral election as its candidate, framing the campaign around his incumbent record including free school lunches, the subsidized reduced-hours pilot and the Nvidia headquarters siting.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-02-16",
+                "interval_end": "2027-03-15",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 126,
+                "interval_days": 27,
+                "interval_start_utc": "2027-02-16T00:00:00+00:00",
+                "interval_end_utc": "2027-03-15T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "status": "executed",
+                  "summary": "Kuomintang (KMT) publicly reaffirmed Chiang Wan-an's nomination and committed party campaign resources — citywide canvassing, district-level mobilization and coordinated messaging around his incumbent record — through the November 28 vote."
+                },
+                {
+                  "action_id": "action_4_agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_833649c453d65fb4",
+                    "action_2_agent_e332336abb64515e"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Kuomintang (KMT) publicly reaffirmed Chiang Wan-an's nomination and committed party campaign resources"
+                },
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_4_agent_833649c453d65fb4",
+                    "action_4_agent_ebd8a930ddf75847"
+                  ],
+                  "outcome": "pending",
+                  "effect": "citywide canvassing, district-level mobilization and coordinated messaging around his incumbent record"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Kuomintang (KMT) publicly reaffirmed Chiang Wan-an's nomination and committed party campaign resources",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Kuomintang (KMT) publicly reaffirmed Chiang Wan-an's nomination and committed party campaign resources — citywide canvassing, district-level mobilization and coordinated messaging around his incumbent record — through the November 28 vote.",
+                  "date": "2027-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "candidate_id": "agent_833649c453d65fb4:initial:1",
+                  "action": "KMT publicly reaffirms Chiang Wan-an's nomination and commits party campaign resources — citywide canvassing, district-level mobilization and coordinated messaging around his incumbent record (free school lunches, reduced-hours pilot, Nvidia siting) — through the November 28 vote.\n承诺：KMT commits organizational campaign support to Chiang Wan-an's re-election through election day.\n触发或复核条件：Chiang remains the party's candidate and the election proceeds on schedule.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "KMT publicly reaffirms Chiang Wan-an's nomination and commits party campaign resources — citywide canvassing, district-level mobilization and coordinated messaging around his incumbent record (free school lunches, reduced-hours pilot, Nvidia siting) — through the November 28 vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                  "action": "The Taipei electorate makes no collective move this round; its choice is expressed only through ballots at the scheduled mayoral election. No new public act or statement is issued.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                      "weight": 95.0,
+                      "probability": 1.0,
+                      "action": "The Taipei electorate makes no collective move this round; its choice is expressed only through ballots at the scheduled mayoral election. No new public act or statement is issued.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Incumbent KMT mayor with a strong 2022 win, high approval profile, and simulated KMT nomination and resource commitment through the November 28 vote. Election outcome remains uncertain; no observed result yet, so estimate reflects nomination and incumbency advantage rather than a settled result.",
+                "evidence_quote": "Kuomintang (KMT) publicly reaffirmed Chiang Wan-an's nomination and committed party campaign resources — citywide canvassing, district-level mobilization and coordinated messaging around his incumbent record — through the November 28 vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-03-15",
+                "interval_end": "2027-05-08",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 180,
+                "interval_days": 54,
+                "interval_start_utc": "2027-03-15T00:00:00+00:00",
+                "interval_end_utc": "2027-05-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "status": "executed",
+                  "summary": "Chiang Wan-an publicly launched his re-election campaign, announcing a campaign headquarters and naming spokespersons and advisors as in 2022, and committed to running a citywide campaign on his incumbent record — free school lunches, the subsidized reduced-hours pilot and the Nvidia headquarters siting — through the November 28 vote, aligned with the Kuomintang's canvassing and district mobilization plan."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_5_agent_e332336abb64515e",
+                    "action_4_agent_833649c453d65fb4"
+                  ],
+                  "outcome": "realized",
+                  "effect": "aligned with the Kuomintang's canvassing and district mobilization plan"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "committed to running a citywide campaign on his incumbent record",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_005_001",
+                  "text": "Chiang Wan-an publicly launched his re-election campaign, announcing a campaign headquarters and naming spokespersons and advisors as in 2022, and committed to running a citywide campaign on his incumbent record — free school lunches, the subsidized reduced-hours pilot and the Nvidia headquarters siting — through the November 28 vote, aligned with the Kuomintang's canvassing and district mobilization plan.",
+                  "date": "2027-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:1",
+                  "action": "Publicly launch my re-election campaign this round: announce a campaign headquarters, name spokespersons/advisors as in 2022, and commit to running a citywide campaign on my incumbent record (free school lunches, subsidized reduced-hours pilot, Nvidia HQ siting) through the November 28 vote, aligned with the KMT's canvassing and district mobilization plan.\n承诺：I will contest the 2026 Taipei mayoral election as the KMT nominee and run a full citywide campaign through November 28.\n触发或复核条件：KMT nomination remains in effect and no filing obstacle emerges.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly launch my re-election campaign this round: announce a campaign headquarters, name spokespersons/advisors as in 2022, and commit to running a citywide campaign on my incumbent record (free school lunches, subsidized reduced-hours pilot, Nvidia HQ siting) through the November 28 vote, aligned with the KMT's canvassing and district mobilization plan.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.86,
+                "basis": "Chiang is the KMT incumbent, was formally nominated, and has launched a re-election campaign with party resources committed through the November 28 vote. His 2022 win and visible record raise his odds, but the election outcome remains unobserved and depends on voters and challengers.",
+                "evidence_quote": "Chiang Wan-an publicly launched his re-election campaign, announcing a campaign headquarters and naming spokespersons and advisors as in 2022, and committed to running a citywide campaign on his incumbent record — free school lunches, the subsidized reduced-hours pilot and the Nvidia headquarters siting — through the November 28 vote, aligned with the Kuomintang's canvassing and district mobilization plan.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_005_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-05-08",
+                "interval_end": "2027-07-01",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 234,
+                "interval_days": 54,
+                "interval_start_utc": "2027-05-08T00:00:00+00:00",
+                "interval_end_utc": "2027-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Chiang is the KMT incumbent, was formally nominated and launched a citywide re-election campaign through the November 28 vote. No polling or election result is in evidence, so the actual vote and any rival candidates remain unknown.",
+                "evidence_quote": "Chiang Wan-an publicly launched his re-election campaign, announcing a campaign headquarters and naming spokespersons and advisors as in 2022, and committed to running a citywide campaign on his incumbent record",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_005_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.82,
+          "error": null,
+          "action_path_probability": 0.061739999999999996
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 7,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 5,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 6,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 7,
+            "active_actor_count": 3,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 5,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.82,
+      "covered_p_yes": 0.82,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.82,
+        0.8199999999999998
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "6c401ff4-d014-4f37-a78d-27eb9c280b34",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:15:40.073493+00:00",
+      "contract_id": "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59d77dc1964c39d0aaba808b1f0f02b930eb8de6f84dd1a96cd5099e291fc593",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 163.352
+    },
+    {
+      "calls": 102,
+      "tokens": 1372065,
+      "input_tokens": 1314588,
+      "output_tokens": 57477,
+      "accounted_tokens_upper": 1372065,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-28",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 19,
+                "interval_days": 19,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "status": "executed",
+                  "summary": "Kuomintang (KMT) officially named Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, citing his incumbency and 2022 win, and committed to supporting his re-election campaign through the November 28, 2026 vote, conditioned on Chiang accepting the nomination and standing for re-election."
+                },
+                {
+                  "action_id": "action_1_agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Kuomintang (KMT) officially named Chiang Wan-an as its candidate for the 2026 Taipei mayoral election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Kuomintang (KMT) officially named Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, citing his incumbency and 2022 win, and committed to supporting his re-election campaign through the November 28, 2026 vote, conditioned on Chiang accepting the nomination and standing for re-election.",
+                  "date": "2026-11-20"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce that I will seek re-election as Mayor of Taipei in the 2026 local election, presenting my record (free school lunches, subsidized reduced-hours pilot, Nvidia HQ facilitation) as the case, while noting I will seek KMT nomination before formally contesting under the party banner.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "candidate_id": "agent_833649c453d65fb4:initial:1",
+                  "action": "The Kuomintang officially names Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, citing his incumbency and 2022 win, and commits to supporting his re-election campaign through the November 28, 2026 vote.\n承诺：Official KMT nomination and campaign support for Chiang Wan-an through election day, November 28, 2026.\n触发或复核条件：Chiang accepts the nomination and stands for re-election.",
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "The Kuomintang officially names Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, citing his incumbency and 2022 win, and commits to supporting his re-election campaign through the November 28, 2026 vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                  "action": "The Taipei electorate takes no collective action this round; no election has been held and no candidate list or campaign data is available. Voters' ballots will be cast on election day, not before.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "The Taipei electorate takes no collective action this round; no election has been held and no candidate list or campaign data is available. Voters' ballots will be cast on election day, not before.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Chiang is the incumbent KMT mayor who won in 2022 with 42.29%, and the KMT has named him its 2026 candidate. Incumbency and party backing favor re-election, but the vote is still months away and no polling or opponent data is provided.",
+                "evidence_quote": "On November 26, 2022, Chiang won the Taipei mayoral election with 42.29 percent of the vote, defeating both Chen (31.93%) and Huang (25.14%).",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-11-28",
+                "interval_end": "2027-01-20",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 72,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-28T00:00:00+00:00",
+                "interval_end_utc": "2027-01-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "status": "executed",
+                  "summary": "Chiang Wan-an publicly accepted the Kuomintang's nomination and announced that he will stand for re-election as Taipei mayor in the 2026 local election, presenting his incumbency record — Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot — as the basis of his campaign."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_833649c453d65fb4",
+                    "action_2_agent_e332336abb64515e"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Chiang Wan-an publicly accepted the Kuomintang's nomination and announced that he will stand for re-election as Taipei mayor"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Chiang Wan-an publicly accepted the Kuomintang's nomination and announced that he will stand for re-election as Taipei mayor in the 2026 local election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Chiang Wan-an publicly accepted the Kuomintang's nomination and announced that he will stand for re-election as Taipei mayor in the 2026 local election, presenting his incumbency record — Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot — as the basis of his campaign.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:1",
+                  "action": "Publicly accept the Kuomintang's nomination and announce that I will stand for re-election as Taipei mayor in the 2026 local election, presenting my incumbency record (Nvidia HQ facilitation, free school lunches, subsidized reduced-hours pilot) as the basis of the campaign.\n承诺：I accept the KMT nomination and will contest the 2026 Taipei mayoral election as the party's candidate.\n触发或复核条件：KMT nomination remains in effect and the election proceeds on schedule.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly accept the Kuomintang's nomination and announce that I will stand for re-election as Taipei mayor in the 2026 local election, presenting my incumbency record (Nvidia HQ facilitation, free school lunches, subsidized reduced-hours pilot) as the basis of the campaign.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.78,
+                "basis": "Chiang is the incumbent KMT mayor with a 2022 win and visible record; a simulated round-2 event has him accepting the KMT nomination to run in 2026. That supports a strong but not certain re-election, since the vote itself and any opponent remain unobserved.",
+                "evidence_quote": "Chiang Wan-an publicly accepted the Kuomintang's nomination and announced that he will stand for re-election as Taipei mayor in the 2026 local election, presenting his incumbency record — Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot — as the basis of his campaign.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-01-20",
+                "interval_end": "2027-02-16",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 99,
+                "interval_days": 27,
+                "interval_start_utc": "2027-01-20T00:00:00+00:00",
+                "interval_end_utc": "2027-02-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.78,
+                "basis": "Chiang is the incumbent KMT mayor with a 2022 win and visible record; a simulated round-2 event has him accepting the KMT nomination to run in 2026. That supports a strong but not certain re-election, since the vote itself and any opponent remain unobserved.",
+                "evidence_quote": "Chiang Wan-an publicly accepted the Kuomintang's nomination and announced that he will stand for re-election as Taipei mayor in the 2026 local election, presenting his incumbency record — Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot — as the basis of his campaign.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-02-16",
+                "interval_end": "2027-03-15",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 126,
+                "interval_days": 27,
+                "interval_start_utc": "2027-02-16T00:00:00+00:00",
+                "interval_end_utc": "2027-03-15T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "status": "executed",
+                  "summary": "The Kuomintang publicly reaffirmed its backing of Chiang Wan-an's re-election campaign, citing his incumbency record including Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot, and restated its commitment to organizational and campaign support through the November 28, 2026 vote, conditional on Chiang remaining the party nominee and standing for re-election."
+                },
+                {
+                  "action_id": "action_4_agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_833649c453d65fb4",
+                    "action_2_agent_e332336abb64515e"
+                  ],
+                  "outcome": "realized",
+                  "effect": "conditional on Chiang remaining the party nominee and standing for re-election"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "The Kuomintang publicly reaffirmed its backing of Chiang Wan-an's re-election campaign, citing his incumbency record including Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot, and restated its commitment to organizational and campaign support through the November 28, 2026 vote, conditional on Chiang remaining the party nominee and standing for re-election.",
+                  "date": "2027-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "candidate_id": "agent_833649c453d65fb4:initial:1",
+                  "action": "The Kuomintang publicly reaffirms its backing of Chiang Wan-an's re-election campaign, highlighting his incumbency record (Nvidia headquarters, free school lunches, reduced-hours pilot) and committing party organizational support through the November 28, 2026 vote.\n承诺：Continued KMT organizational and campaign support for Chiang Wan-an through election day, November 28, 2026.\n触发或复核条件：Chiang remains the KMT nominee and stands for re-election.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "The Kuomintang publicly reaffirms its backing of Chiang Wan-an's re-election campaign, highlighting his incumbency record (Nvidia headquarters, free school lunches, reduced-hours pilot) and committing party organizational support through the November 28, 2026 vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                  "action": "The Taipei electorate takes no collective action this round; the mayoral election has not yet been held and no ballots can be cast before election day.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "The Taipei electorate takes no collective action this round; the mayoral election has not yet been held and no ballots can be cast before election day.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.8,
+                "basis": "Incumbent Chiang is the KMT's reaffirmed candidate and has accepted the nomination, giving him a strong structural edge in a race he won in 2022. The remaining uncertainty is the actual November 2026 vote, which no evidence yet settles.",
+                "evidence_quote": "The Kuomintang publicly reaffirmed its backing of Chiang Wan-an's re-election campaign, citing his incumbency record including Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot, and restated its commitment to organizational and campaign support through the November 28, 2026 vote, conditional on Chiang remaining the party nominee and standing for re-election.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-03-15",
+                "interval_end": "2027-05-08",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 180,
+                "interval_days": 54,
+                "interval_start_utc": "2027-03-15T00:00:00+00:00",
+                "interval_end_utc": "2027-05-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "status": "executed",
+                  "summary": "Chiang Wan-an publicly launched his re-election campaign for Taipei mayor, presenting his first-term record — Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot — as the core of his case and asking Taipei voters to renew his mandate in the November 28, 2026 election, conditioned on the election proceeding on schedule and his remaining the Kuomintang nominee."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_5_agent_e332336abb64515e",
+                    "action_4_agent_833649c453d65fb4"
+                  ],
+                  "outcome": "realized",
+                  "effect": "conditioned on the election proceeding on schedule and his remaining the Kuomintang nominee"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "asking Taipei voters to renew his mandate in the November 28, 2026 election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_005_001",
+                  "text": "Chiang Wan-an publicly launched his re-election campaign for Taipei mayor, presenting his first-term record — Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot — as the core of his case and asking Taipei voters to renew his mandate in the November 28, 2026 election, conditioned on the election proceeding on schedule and his remaining the Kuomintang nominee.",
+                  "date": "2027-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:1",
+                  "action": "Launch the re-election campaign publicly, presenting the incumbency record (Nvidia HQ facilitation, free school lunches, subsidized reduced-hours pilot) as the core case and asking Taipei voters for a second term on November 28, 2026.\n承诺：I will contest the 2026 Taipei mayoral election and ask voters to renew my mandate based on my first-term record.\n触发或复核条件：Election proceeds on schedule and I remain the KMT nominee.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch the re-election campaign publicly, presenting the incumbency record (Nvidia HQ facilitation, free school lunches, subsidized reduced-hours pilot) as the core case and asking Taipei voters for a second term on November 28, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Incumbency, KMT nomination, and a public re-election launch support a high likelihood, but the simulated campaign events are dated after the forecast cutoff and the election result itself is not observed. Competing explanations include unmodeled challenger strength or turnout shifts.",
+                "evidence_quote": "Chiang Wan-an publicly launched his re-election campaign for Taipei mayor, presenting his first-term record — Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot — as the core of his case and asking Taipei voters to renew his mandate in the November 28, 2026 election, conditioned on the election proceeding on schedule and his remaining the Kuomintang nominee.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_005_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-05-08",
+                "interval_end": "2027-07-01",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 234,
+                "interval_days": 54,
+                "interval_start_utc": "2027-05-08T00:00:00+00:00",
+                "interval_end_utc": "2027-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "KMT nomination and Chiang's acceptance/launch are settled, and his incumbency record is presented as the campaign case. No vote count or CEC result is in evidence, so the election outcome itself remains unverified.",
+                "evidence_quote": "Chiang Wan-an publicly accepted the Kuomintang's nomination and announced that he will stand for re-election as Taipei mayor in the 2026 local election, presenting his incumbency record — Nvidia headquarters facilitation, free school lunches and the subsidized reduced-hours pilot — as the basis of his campaign.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.07717499999999998
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-28",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 19,
+                "interval_days": 19,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "status": "executed",
+                  "summary": "The Kuomintang officially named Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, reaffirming its 2022 nominee and incumbent mayor ahead of the November 28 vote."
+                },
+                {
+                  "action_id": "action_1_agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "officially named Chiang Wan-an as its candidate for the 2026 Taipei mayoral election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The Kuomintang officially named Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, reaffirming its 2022 nominee and incumbent mayor ahead of the November 28 vote.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce that I will seek re-election as Mayor of Taipei in the November 28, 2026 local election, framing the bid around my record (free school lunches, childcare hours pilot, Nvidia development). Announcement is contingent on seeking KMT nomination; I will not run as an independent against the party.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "candidate_id": "agent_833649c453d65fb4:initial:1",
+                  "action": "The KMT officially names Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, reaffirming its 2022 nominee and incumbent mayor ahead of the November 28 vote.\n承诺：KMT formally nominates Chiang Wan-an as its Taipei mayoral candidate for the 2026 local election.\n触发或复核条件：Chiang accepts the nomination and remains the party's candidate through election day.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "The KMT officially names Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, reaffirming its 2022 nominee and incumbent mayor ahead of the November 28 vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                  "action": "As the Taipei electorate, hold no collective outward act this round; monitor for the 28 November 2026 election, candidate field, and turnout conditions before any ballot decision.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "As the Taipei electorate, hold no collective outward act this round; monitor for the 28 November 2026 election, candidate field, and turnout conditions before any ballot decision.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Chiang is the KMT's named 2026 Taipei candidate and an incumbent who won in 2022 with 42.29%. Nomination is not election, so residual uncertainty remains from challengers and turnout, but incumbency and party backing make him a strong favorite.",
+                "evidence_quote": "The Kuomintang officially named Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, reaffirming its 2022 nominee and incumbent mayor ahead of the November 28 vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-11-28",
+                "interval_end": "2027-01-20",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 72,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-28T00:00:00+00:00",
+                "interval_end_utc": "2027-01-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Chiang is the KMT's named 2026 Taipei candidate and an incumbent who won in 2022 with 42.29%. Nomination is not election, so residual uncertainty remains from challengers and turnout, but incumbency and party backing make him a strong favorite.",
+                "evidence_quote": "The Kuomintang officially named Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, reaffirming its 2022 nominee and incumbent mayor ahead of the November 28 vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-01-20",
+                "interval_end": "2027-02-16",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 99,
+                "interval_days": 27,
+                "interval_start_utc": "2027-01-20T00:00:00+00:00",
+                "interval_end_utc": "2027-02-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Chiang is the KMT's named 2026 Taipei candidate and an incumbent who won in 2022 with 42.29%. Nomination is not election, so residual uncertainty remains from challengers and turnout, but incumbency and party backing make him a strong favorite.",
+                "evidence_quote": "The Kuomintang officially named Chiang Wan-an as its candidate for the 2026 Taipei mayoral election, reaffirming its 2022 nominee and incumbent mayor ahead of the November 28 vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-02-16",
+                "interval_end": "2027-03-15",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 126,
+                "interval_days": 27,
+                "interval_start_utc": "2027-02-16T00:00:00+00:00",
+                "interval_end_utc": "2027-03-15T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "status": "executed",
+                  "summary": "Chiang Wan-an publicly accepted the Kuomintang's nomination as its 2026 Taipei mayoral candidate, confirming he will contest the November 28 election and presenting his record on education, childcare and the Nvidia investment as his platform."
+                },
+                {
+                  "action_id": "action_4_agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "confirming he will contest the November 28 election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "Chiang Wan-an publicly accepted the Kuomintang's nomination as its 2026 Taipei mayoral candidate, confirming he will contest the November 28 election and presenting his record on education, childcare and the Nvidia investment as his platform.",
+                  "date": "2027-02-16"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e332336abb64515e",
+                  "actor_name": "Chiang Wan-an",
+                  "candidate_id": "agent_e332336abb64515e:initial:1",
+                  "action": "Publicly accept the KMT's nomination as its 2026 Taipei mayoral candidate and confirm I will contest the November 28 election, presenting my record on education, childcare and Nvidia investment as the platform.\n承诺：I will remain the KMT's Taipei mayoral candidate and campaign through election day on 2026-11-28.",
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "Publicly accept the KMT's nomination as its 2026 Taipei mayoral candidate and confirm I will contest the November 28 election, presenting my record on education, childcare and Nvidia investment as the platform.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e332336abb64515e:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Announce a re-election campaign team and citywide organization, drawing on legislative colleagues as spokespersons and advisors as in 2022, and begin district-by-district outreach across Taipei's 12 districts.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_833649c453d65fb4",
+                  "actor_name": "Kuomintang (KMT)",
+                  "candidate_id": "agent_833649c453d65fb4:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_833649c453d65fb4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "The KMT publicly reaffirms Chiang Wan-an as its 2026 Taipei mayoral nominee and commits party citywide campaign coordination and resources on his behalf through the November 28 vote.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_ebd8a930ddf75847",
+                  "actor_name": "Taipei electorate",
+                  "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                  "action": "As the Taipei electorate, take no collective outward act this round; hold for the election outcome and any certified results before any further collective step.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ebd8a930ddf75847:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "As the Taipei electorate, take no collective outward act this round; hold for the election outcome and any certified results before any further collective step.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ebd8a930ddf75847:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "As the Taipei electorate, monitor public reporting and Central Election Commission results for the Taipei mayoral race to confirm the winner and turnout once certified.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.85,
+                "basis": "Chiang is the KMT incumbent and was named the party's 2026 Taipei candidate; the simulated record also has him publicly accepting the nomination and contesting the November 28 vote. Incumbency and KMT strength in Taipei favor re-election, though the election result itself remains unobserved.",
+                "evidence_quote": "Chiang Wan-an publicly accepted the Kuomintang's nomination as its 2026 Taipei mayoral candidate, confirming he will contest the November 28 election and presenting his record on education, childcare and the Nvidia investment as his platform.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-03-15",
+                "interval_end": "2027-05-08",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 180,
+                "interval_days": 54,
+                "interval_start_utc": "2027-03-15T00:00:00+00:00",
+                "interval_end_utc": "2027-05-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.85,
+                "basis": "Chiang is the KMT incumbent and was named the party's 2026 Taipei candidate; the simulated record also has him publicly accepting the nomination and contesting the November 28 vote. Incumbency and KMT strength in Taipei favor re-election, though the election result itself remains unobserved.",
+                "evidence_quote": "Chiang Wan-an publicly accepted the Kuomintang's nomination as its 2026 Taipei mayoral candidate, confirming he will contest the November 28 election and presenting his record on education, childcare and the Nvidia investment as his platform.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2027-05-08",
+                "interval_end": "2027-07-01",
+                "horizon_end": "2027-07-01",
+                "elapsed_days": 234,
+                "interval_days": 54,
+                "interval_start_utc": "2027-05-08T00:00:00+00:00",
+                "interval_end_utc": "2027-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Chiang Wan-an win the next Taipei Mayor election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Chiang is the KMT's confirmed 2026 nominee and publicly accepted, campaigning on incumbency record; he won the 2022 race with 42.29% and strong district support. No vote count or result is in evidence, so the estimate rests on nomination and incumbency, not a measured outcome.",
+                "evidence_quote": "Chiang Wan-an publicly accepted the Kuomintang's nomination as its 2026 Taipei mayoral candidate, confirming he will contest the November 28 election and presenting his record on education, childcare and the Nvidia investment as his platform.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.82,
+          "error": null,
+          "action_path_probability": 0.0378
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 12,
+        "active_rounds": 6,
+        "draw_rounds": 6,
+        "audited_silent_rounds": 6,
+        "sampled_decisions": 13,
+        "public_event_count": 6,
+        "substantive_public_event_count": 6,
+        "state_change_count": 6,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 6,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 7,
+            "active_actor_count": 3,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 3,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 6,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 4,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 3,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.77,
+      "covered_p_yes": 0.77,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.77,
+        0.77
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "4a0cd872-16ae-4268-86b7-d6107ff287a7",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:18:33.351231+00:00",
+      "contract_id": "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59d77dc1964c39d0aaba808b1f0f02b930eb8de6f84dd1a96cd5099e291fc593",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 173.273
+    },
+    {
+      "calls": 132,
+      "tokens": 1808648,
+      "input_tokens": 1726655,
+      "output_tokens": 81993,
+      "accounted_tokens_upper": 1808648,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.6539216,
+      "coverage": 0.7,
+      "unexplored_mass": 0.30000000000000004,
+      "unknown_bounds": [
+        0.5039216,
+        0.8039216
+      ],
+      "search_iterations": 12,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 12,
+          "search_value": 0.78412,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.48999999999999994,
+          "visits": 11,
+          "search_value": 0.8137090909090908,
+          "conditional_p_yes": 0.82,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.39199999999999996,
+          "visits": 7,
+          "search_value": 0.7946171428571429,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.39199999999999996,
+          "visits": 6,
+          "search_value": 0.7926533333333334,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.23519999999999996,
+          "visits": 3,
+          "search_value": 0.64056,
+          "conditional_p_yes": 0.62,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.16463999999999995,
+          "visits": 1,
+          "search_value": 0.51,
+          "conditional_p_yes": 0.82,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.16463999999999995,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.85,
+          "frontier": true,
+          "contribution": 0.13994399999999996
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.07055999999999998,
+          "visits": 1,
+          "search_value": 0.8064,
+          "conditional_p_yes": 0.8,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.07055999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.72,
+          "frontier": true,
+          "contribution": 0.050803199999999986
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.1568,
+          "visits": 2,
+          "search_value": 0.9424,
+          "conditional_p_yes": 0.6,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.1568,
+          "visits": 1,
+          "search_value": 0.9424,
+          "conditional_p_yes": 0.62,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.1568,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.62,
+          "frontier": true,
+          "contribution": 0.097216
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.09799999999999999,
+          "visits": 3,
+          "search_value": 0.8584533333333334,
+          "conditional_p_yes": 0.7,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.0686,
+          "visits": 2,
+          "search_value": 0.87944,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.04801999999999999,
+          "visits": 1,
+          "search_value": 0.9424,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.04801999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.62,
+          "frontier": true,
+          "contribution": 0.029772399999999994
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.020579999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.7,
+          "frontier": true,
+          "contribution": 0.014405999999999997
+        },
+        {
+          "path": [
+            1,
+            2,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.029399999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.7,
+          "frontier": true,
+          "contribution": 0.020579999999999994
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.21,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.72,
+          "frontier": true,
+          "contribution": 0.1512
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "df57c5f7-32f7-41c9-be00-befc4d8fefaf",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T03:32:47.335917+00:00",
+      "contract_id": "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59d77dc1964c39d0aaba808b1f0f02b930eb8de6f84dd1a96cd5099e291fc593",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 399.914
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659",
+  "group_id": "taipei-mayor-election-winner-20260813125857100",
+  "stage": "finished",
+  "outcome_deadline": "2027-07-01T03:59:00+00:00",
+  "deadline_basis": "explicit_election_result_window",
+  "nominal_market_end": "2026-11-29T04:59:00+00:00",
+  "evidence_sha256": "59d77dc1964c39d0aaba808b1f0f02b930eb8de6f84dd1a96cd5099e291fc593",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 701,
+    "input_tokens": 634,
+    "output_tokens": 67,
+    "accounted_tokens_upper": 701,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-07-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-07-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-28",
+        "2027-01-20",
+        "2027-02-16",
+        "2027-03-15",
+        "2027-05-08",
+        "2027-07-01"
+      ],
+      "milestones": [
+        "2026-11-28"
+      ]
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-28",
+        "2027-01-20",
+        "2027-02-16",
+        "2027-03-15",
+        "2027-05-08",
+        "2027-07-01"
+      ],
+      "milestones": [
+        "2026-11-28"
+      ]
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-28",
+        "2027-01-20",
+        "2027-02-16",
+        "2027-03-15",
+        "2027-05-08",
+        "2027-07-01"
+      ],
+      "milestones": [
+        "2026-11-28"
+      ]
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 3
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_c85ba8295eaa266f",
+          "name": "Chiang Wan-an",
+          "role": "Incumbent Taipei mayor and KMT politician; prior KMT nominee for Taipei mayor in 2022 and winner of that election",
+          "decision_ids": [
+            "chiang_run"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_b85ddfe3f4e5e198",
+          "name": "Kuomintang (KMT)",
+          "role": "Political party that nominated Chiang Wan-an for Taipei mayor in 2022; party nomination is a prerequisite for a KMT candidacy",
+          "decision_ids": [
+            "kmt_nominate"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_0a9aebac73814cb5",
+          "name": "Taipei electorate",
+          "role": "Voters in Taipei who cast ballots in the mayoral election; the election outcome is determined by their votes",
+          "decision_ids": [
+            "voters_elect"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No source confirms whether Chiang Wan-an has announced a 2026 re-election bid or received the KMT nomination as of 2026-11-09.",
+        "No source identifies the 2026 challengers or their nominations."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "chiang_run",
+          "choice": "Chiang Wan-an decides whether to run for re-election as Taipei mayor in the 2026 local election",
+          "owner": "Chiang Wan-an",
+          "support": "represented"
+        },
+        {
+          "id": "kmt_nominate",
+          "choice": "Kuomintang decides whether to nominate Chiang Wan-an as its Taipei mayoral candidate",
+          "owner": "Kuomintang (KMT)",
+          "support": "represented"
+        },
+        {
+          "id": "voters_elect",
+          "choice": "Taipei voters cast ballots and determine the winner of the mayoral election",
+          "owner": "Taipei electorate",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 32,
+    "tokens": 94981,
+    "input_tokens": 77982,
+    "output_tokens": 16999,
+    "accounted_tokens_upper": 94981,
+    "unknown_usage_requests": 0
+  }
+}

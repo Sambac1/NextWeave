@@ -1,0 +1,1442 @@
+{
+  "run_id": "f2722f62-492f-47a0-9420-680751e77163",
+  "case_id": "market_873efbe3bfcd66b13b6a9e28",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3001,
+      "input_tokens": 2991,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3001,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.03,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2991,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:31:31.989875+00:00",
+      "contract_id": "0xda2386dbc3f5c6ae7ecebc6c9c01ee682a83ea61f0cc57f5d64fed6e872bd275",
+      "forecast_cutoff": "2026-05-06T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f4194f0c596f2b05f78bbb6108e2e652206b5a1114c0e9ea4e8dbc25b1780eda",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.976
+    },
+    {
+      "calls": 2,
+      "tokens": 6002,
+      "input_tokens": 5982,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6002,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.03,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2991,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2991,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:31:33.016001+00:00",
+      "contract_id": "0xda2386dbc3f5c6ae7ecebc6c9c01ee682a83ea61f0cc57f5d64fed6e872bd275",
+      "forecast_cutoff": "2026-05-06T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f4194f0c596f2b05f78bbb6108e2e652206b5a1114c0e9ea4e8dbc25b1780eda",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.026
+    },
+    {
+      "calls": 6,
+      "tokens": 56355,
+      "input_tokens": 54450,
+      "output_tokens": 1905,
+      "accounted_tokens_upper": 56355,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-05-06",
+                "interval_end": "2026-05-15",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 9,
+                "interval_days": 9,
+                "interval_start_utc": "2026-05-06T23:59:59+00:00",
+                "interval_end_utc": "2026-05-15T15:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "candidate_id": "agent_58cba31c576659fa:initial:1",
+                  "action": "China takes no new outward step this round on admitting or arranging a Trump visit. Its foreign ministry has only registered opposition to 'malicious association' over the tanker interception; no visit request or US-Iran peace deal is on the table to respond to.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_58cba31c576659fa:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "China takes no new outward step this round on admitting or arranging a Trump visit. Its foreign ministry has only registered opposition to 'malicious association' over the tanker interception; no visit request or US-Iran peace deal is on the table to respond to.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Evidence through April 2026 shows talks collapsing, a US naval blockade, and Trump saying he no longer cares about negotiations; no permanent peace deal or Trump visit to China is reported. The remaining path to Yes requires both a definitive US-Iran agreement and a prior Trump visit, neither observed by the horizon.",
+                "evidence_quote": "After the failure of the Islamabad Talks, Trump said he no longer cared about negotiations, and announced a naval blockade of Iran from 13 April.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.07,
+      "covered_p_yes": 0.07,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.07,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "03e563a9-5b9a-423e-b339-8a990fe77479",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:32:10.166305+00:00",
+      "contract_id": "0xda2386dbc3f5c6ae7ecebc6c9c01ee682a83ea61f0cc57f5d64fed6e872bd275",
+      "forecast_cutoff": "2026-05-06T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f4194f0c596f2b05f78bbb6108e2e652206b5a1114c0e9ea4e8dbc25b1780eda",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 37.148
+    },
+    {
+      "calls": 24,
+      "tokens": 233235,
+      "input_tokens": 222959,
+      "output_tokens": 10276,
+      "accounted_tokens_upper": 233235,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-05-06",
+                "interval_end": "2026-05-09",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2026-05-06T23:59:59+00:00",
+                "interval_end_utc": "2026-05-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "status": "executed",
+                  "summary": "China publicly restated its position that it \"opposes any malicious association\" regarding the tanker interception and stated that it is not party to US-Iran hostilities, while declining to confirm or arrange any Trump visit absent a formal US request."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "declining to confirm or arrange any Trump visit absent a formal US request",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "China publicly restated its position that it \"opposes any malicious association\" regarding the tanker interception and stated that it is not party to US-Iran hostilities, while declining to confirm or arrange any Trump visit absent a formal US request.",
+                  "date": "2026-05-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "candidate_id": "agent_58cba31c576659fa:initial:2",
+                  "action": "Publicly restate China's position that it 'opposes any malicious association' regarding the tanker interception and that it is not party to US-Iran hostilities, while declining to confirm or arrange any Trump visit absent a formal US request.",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_58cba31c576659fa:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly restate China's position that it 'opposes any malicious association' regarding the tanker interception and that it is not party to US-Iran hostilities, while declining to confirm or arrange any Trump visit absent a formal US request.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No qualifying permanent US-Iran peace deal is evidenced; talks collapsed and Trump announced a naval blockade. China's simulated stance declining to arrange a Trump visit absent a formal US request further reduces the chance the visit precedes any deal.",
+                "evidence_quote": "China publicly restated its position that it \"opposes any malicious association\" regarding the tanker interception and stated that it is not party to US-Iran hostilities, while declining to confirm or arrange any Trump visit absent a formal US request.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-05-09",
+                "interval_end": "2026-05-12",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 6,
+                "interval_days": 3,
+                "interval_start_utc": "2026-05-09T00:00:00+00:00",
+                "interval_end_utc": "2026-05-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No qualifying permanent US-Iran peace deal is evidenced; talks collapsed and Trump announced a naval blockade. China's simulated stance declining to arrange a Trump visit absent a formal US request further reduces the chance the visit precedes any deal.",
+                "evidence_quote": "China publicly restated its position that it \"opposes any malicious association\" regarding the tanker interception and stated that it is not party to US-Iran hostilities, while declining to confirm or arrange any Trump visit absent a formal US request.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-05-12",
+                "interval_end": "2026-05-15",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 9,
+                "interval_days": 3,
+                "interval_start_utc": "2026-05-12T00:00:00+00:00",
+                "interval_end_utc": "2026-05-15T15:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No qualifying permanent US-Iran peace deal appears in the settled record; talks failed and Trump announced a naval blockade. China also declined to confirm or arrange any Trump visit, so neither trigger is evidenced before the horizon.",
+                "evidence_quote": "China publicly restated its position that it \"opposes any malicious association\" regarding the tanker interception and stated that it is not party to US-Iran hostilities, while declining to confirm or arrange any Trump visit absent a formal US request.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.2
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-05-06",
+                "interval_end": "2026-05-09",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2026-05-06T23:59:59+00:00",
+                "interval_end_utc": "2026-05-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "candidate_id": "agent_58cba31c576659fa:initial:1",
+                  "action": "China takes no new public step this round on permitting or arranging a Trump visit; it monitors US-Iran ceasefire and negotiation developments and any US request for a visit before deciding whether to engage.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_58cba31c576659fa:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "China takes no new public step this round on permitting or arranging a Trump visit; it monitors US-Iran ceasefire and negotiation developments and any US request for a visit before deciding whether to engage.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_58cba31c576659fa:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "China's foreign ministry issues a public statement reiterating opposition to 'malicious association' over the tanker incident and calling on the US and Iran to pursue a durable, lasting settlement through diplomacy, without offering or arranging any Trump visit.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Talks collapsed in April 2026 and Trump announced a naval blockade, with no sign of a permanent peace deal. A Trump visit to China before such a deal is also unconfirmed, so the joint condition looks very unlikely within the window.",
+                "evidence_quote": "After the failure of the Islamabad Talks, Trump said he no longer cared about negotiations, and announced a naval blockade of Iran from 13 April.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-05-09",
+                "interval_end": "2026-05-12",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 6,
+                "interval_days": 3,
+                "interval_start_utc": "2026-05-09T00:00:00+00:00",
+                "interval_end_utc": "2026-05-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Talks collapsed in April 2026 and Trump announced a naval blockade, with no sign of a permanent peace deal. A Trump visit to China before such a deal is also unconfirmed, so the joint condition looks very unlikely within the window.",
+                "evidence_quote": "After the failure of the Islamabad Talks, Trump said he no longer cared about negotiations, and announced a naval blockade of Iran from 13 April.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-05-12",
+                "interval_end": "2026-05-15",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 9,
+                "interval_days": 3,
+                "interval_start_utc": "2026-05-12T00:00:00+00:00",
+                "interval_end_utc": "2026-05-15T15:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Evidence shows a fragile two-week ceasefire, a failed Islamabad round, and Trump declaring he no longer cares about negotiations while imposing a naval blockade. No qualifying permanent peace deal or Trump visit to China is evidenced by the horizon, so the conditional chance is low.",
+                "evidence_quote": "After the failure of the Islamabad Talks, Trump said he no longer cared about negotiations, and announced a naval blockade of Iran from 13 April.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "b7249892-dcbb-447e-9949-f234d87adacd",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:32:54.332947+00:00",
+      "contract_id": "0xda2386dbc3f5c6ae7ecebc6c9c01ee682a83ea61f0cc57f5d64fed6e872bd275",
+      "forecast_cutoff": "2026-05-06T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f4194f0c596f2b05f78bbb6108e2e652206b5a1114c0e9ea4e8dbc25b1780eda",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 44.164
+    },
+    {
+      "calls": 14,
+      "tokens": 134028,
+      "input_tokens": 128310,
+      "output_tokens": 5718,
+      "accounted_tokens_upper": 134028,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-05-06",
+                "interval_end": "2026-05-09",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2026-05-06T23:59:59+00:00",
+                "interval_end_utc": "2026-05-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "status": "executed",
+                  "summary": "China stated that it has received no request for a Trump visit and that any future visit would be considered only on the basis of mutual respect and non-interference, without confirming or scheduling any visit."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "China stated that it has received no request for a Trump visit and that any future visit would be considered only on the basis of mutual respect and non-interference",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "China stated that it has received no request for a Trump visit and that any future visit would be considered only on the basis of mutual respect and non-interference, without confirming or scheduling any visit.",
+                  "date": "2026-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "candidate_id": "agent_58cba31c576659fa:initial:2",
+                  "action": "Issue a public statement that China has received no request for a Trump visit and that any future visit would be considered only on the basis of mutual respect and non-interference, without confirming or scheduling any visit.\n承诺：No visit is confirmed or scheduled; any future visit requires mutual respect and non-interference.\n触发或复核条件：Only if a public statement is judged useful to correct speculation about a visit.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_58cba31c576659fa:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no new public action this round; monitor whether the US formally requests a Trump visit to China or whether a qualifying US-Iran permanent peace agreement is signed or jointly confirmed.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_58cba31c576659fa:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement that China has received no request for a Trump visit and that any future visit would be considered only on the basis of mutual respect and non-interference, without confirming or scheduling any visit.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No qualifying permanent US-Iran peace deal is evidenced; talks collapsed and Trump announced a naval blockade. China says it received no request for a Trump visit, so the triggering visit is also unconfirmed.",
+                "evidence_quote": "China stated that it has received no request for a Trump visit and that any future visit would be considered only on the basis of mutual respect and non-interference, without confirming or scheduling any visit.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-05-09",
+                "interval_end": "2026-05-12",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 6,
+                "interval_days": 3,
+                "interval_start_utc": "2026-05-09T00:00:00+00:00",
+                "interval_end_utc": "2026-05-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No qualifying permanent US-Iran peace deal is evidenced; talks collapsed and Trump announced a naval blockade. China says it received no request for a Trump visit, so the triggering visit is also unconfirmed.",
+                "evidence_quote": "China stated that it has received no request for a Trump visit and that any future visit would be considered only on the basis of mutual respect and non-interference, without confirming or scheduling any visit.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-05-12",
+                "interval_end": "2026-05-15",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 9,
+                "interval_days": 3,
+                "interval_start_utc": "2026-05-12T00:00:00+00:00",
+                "interval_end_utc": "2026-05-15T15:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No qualifying permanent US-Iran peace deal appears in the settled record; talks collapsed and Trump said he no longer cared about negotiations. China's round-1 statement that it received no visit request and scheduled nothing makes a pre-deal Trump visit unlikely, so the Yes path is narrow.",
+                "evidence_quote": "China stated that it has received no request for a Trump visit and that any future visit would be considered only on the basis of mutual respect and non-interference, without confirming or scheduling any visit.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.3
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "6d0701dd-2111-4f16-90c9-d447e034b9ff",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:10:57.257777+00:00",
+      "contract_id": "0xda2386dbc3f5c6ae7ecebc6c9c01ee682a83ea61f0cc57f5d64fed6e872bd275",
+      "forecast_cutoff": "2026-05-06T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f4194f0c596f2b05f78bbb6108e2e652206b5a1114c0e9ea4e8dbc25b1780eda",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 45.935
+    },
+    {
+      "calls": 12,
+      "tokens": 127095,
+      "input_tokens": 121786,
+      "output_tokens": 5309,
+      "accounted_tokens_upper": 127095,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-05-06",
+                "interval_end": "2026-05-15",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 9,
+                "interval_days": 9,
+                "interval_start_utc": "2026-05-06T23:59:59+00:00",
+                "interval_end_utc": "2026-05-15T15:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "status": "executed",
+                  "summary": "China issued a brief public statement welcoming continued US-Iran diplomatic efforts and reiterating that it 'opposes any malicious association' regarding the intercepted tanker, without committing to host or arrange any Trump visit."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "without committing to host or arrange any Trump visit",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "China issued a brief public statement welcoming continued US-Iran diplomatic efforts and reiterating that it 'opposes any malicious association' regarding the intercepted tanker, without committing to host or arrange any Trump visit.",
+                  "date": "2026-05-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "candidate_id": "agent_58cba31c576659fa:initial:2",
+                  "action": "China's foreign ministry issues a brief public statement welcoming continued US-Iran diplomatic efforts and reiterating that it 'opposes any malicious association' regarding the intercepted tanker, without committing to host or arrange any Trump visit.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_58cba31c576659fa:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "China takes no new public step this round: no arrangement or invitation for a Trump visit is announced, and no statement linking a visit to a US-Iran deal is issued. Continue tracking US-Iran ceasefire/talks status and any US request regarding a Trump visit.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_58cba31c576659fa:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "China's foreign ministry issues a brief public statement welcoming continued US-Iran diplomatic efforts and reiterating that it 'opposes any malicious association' regarding the intercepted tanker, without committing to host or arrange any Trump visit.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No qualifying permanent US-Iran peace deal appears in the settled record; talks collapsed and Trump announced a naval blockade. The only in-window simulated event is China's vague statement welcoming diplomacy without committing to host a Trump visit, so neither trigger is evidenced.",
+                "evidence_quote": "China issued a brief public statement welcoming continued US-Iran diplomatic efforts and reiterating that it 'opposes any malicious association' regarding the intercepted tanker, without committing to host or arrange any Trump visit.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.3
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-05-06",
+                "interval_end": "2026-05-15",
+                "horizon_end": "2026-05-15",
+                "elapsed_days": 9,
+                "interval_days": 9,
+                "interval_start_utc": "2026-05-06T23:59:59+00:00",
+                "interval_end_utc": "2026-05-15T15:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US x Iran peace deal before Trump visits China?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_58cba31c576659fa",
+                  "actor_name": "China",
+                  "candidate_id": "agent_58cba31c576659fa:initial:1",
+                  "action": "China makes no new public move this round on admitting a Trump visit or on the US-Iran track; it keeps its existing posture and reviews whether any US request for a visit or a qualifying US-Iran agreement emerges before the horizon.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_58cba31c576659fa:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "China makes no new public move this round on admitting a Trump visit or on the US-Iran track; it keeps its existing posture and reviews whether any US request for a visit or a qualifying US-Iran agreement emerges before the horizon.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Evidence through the cutoff shows a fragile two-week ceasefire, a failed Islamabad round, a US naval blockade from 13 April, and Trump saying he no longer cares about negotiations. No signed permanent peace deal or confirmed Trump visit to China appears; both required events remain unverified.",
+                "evidence_quote": "After the failure of the Islamabad Talks, Trump said he no longer cared about negotiations, and announced a naval blockade of Iran from 13 April.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "a831471a-9e36-4135-9453-f84e5612a661",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:11:22.442610+00:00",
+      "contract_id": "0xda2386dbc3f5c6ae7ecebc6c9c01ee682a83ea61f0cc57f5d64fed6e872bd275",
+      "forecast_cutoff": "2026-05-06T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f4194f0c596f2b05f78bbb6108e2e652206b5a1114c0e9ea4e8dbc25b1780eda",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 25.184
+    },
+    {
+      "calls": 19,
+      "tokens": 170455,
+      "input_tokens": 163353,
+      "output_tokens": 7102,
+      "accounted_tokens_upper": 170455,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.02,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.02,
+        0.02
+      ],
+      "search_iterations": 3,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 3,
+          "search_value": 0.10373333333333333,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 1.0,
+          "visits": 2,
+          "search_value": 0.09739999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 1.0,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 1.0,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.02
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "e90e2174-107c-4728-8bec-32de8a510c37",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:12:19.952539+00:00",
+      "contract_id": "0xda2386dbc3f5c6ae7ecebc6c9c01ee682a83ea61f0cc57f5d64fed6e872bd275",
+      "forecast_cutoff": "2026-05-06T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f4194f0c596f2b05f78bbb6108e2e652206b5a1114c0e9ea4e8dbc25b1780eda",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 57.509
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-05-06T23:59:59+00:00",
+  "forecast_key": "0xda2386dbc3f5c6ae7ecebc6c9c01ee682a83ea61f0cc57f5d64fed6e872bd275",
+  "group_id": "us-x-iran-permanent-peace-deal-before-trump-visits-china",
+  "evidence_sha256": "f4194f0c596f2b05f78bbb6108e2e652206b5a1114c0e9ea4e8dbc25b1780eda",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 994,
+    "input_tokens": 903,
+    "output_tokens": 91,
+    "accounted_tokens_upper": 994,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-05-06",
+        "2026-05-15"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-05-06",
+        "2026-05-09",
+        "2026-05-12",
+        "2026-05-15"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-05-06",
+        "2026-05-09",
+        "2026-05-12",
+        "2026-05-15"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-05-06",
+        "2026-05-15"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-05-06",
+        "2026-05-09",
+        "2026-05-12",
+        "2026-05-15"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-05-15T15:59:59+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2026-05-31T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_334e6bb0e0aa0c44",
+          "name": "China",
+          "role": "Host state that can permit or arrange Trump's entry into Chinese territory for a visit.",
+          "decision_ids": [
+            "china_admit_trump_visit"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "US signs or formally adopts a written permanent peace agreement with Iran ending military hostilities.",
+        "Iran signs or formally adopts a written permanent peace agreement with the US ending military hostilities.",
+        "Trump physically enters Chinese terrestrial or maritime territory before a qualifying peace deal is established.",
+        "Current authority for China permits Trump to enter its territory for the visit. requires independent evidence; China can participate conditionally."
+      ],
+      "gaps": [
+        "No named incumbent for Iran's decision-maker is identified in the sources; the Government of Iran seat is an institutional placeholder.",
+        "China's willingness to admit Trump is unknown; no source establishes an invitation or approval.",
+        "Whether a qualifying permanent peace deal will be reached is unresolved; only a temporary ceasefire and failed talks are documented."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "us_approve_peace_deal",
+          "choice": "US signs or formally adopts a written permanent peace agreement with Iran ending military hostilities.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "iran_approve_peace_deal",
+          "choice": "Iran signs or formally adopts a written permanent peace agreement with the US ending military hostilities.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "trump_visit_china",
+          "choice": "Trump physically enters Chinese terrestrial or maritime territory before a qualifying peace deal is established.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "china_admit_trump_visit",
+          "choice": "China permits Trump to enter its territory for the visit.",
+          "owner": "China",
+          "support": "conditional"
+        }
+      ],
+      "gap_repair": {
+        "status": "participants_added",
+        "added": 1
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 11,
+    "tokens": 36918,
+    "input_tokens": 30633,
+    "output_tokens": 6285,
+    "accounted_tokens_upper": 36918,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

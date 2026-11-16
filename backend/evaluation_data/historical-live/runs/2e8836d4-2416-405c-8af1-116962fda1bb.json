@@ -1,0 +1,2964 @@
+{
+  "run_id": "2e8836d4-2416-405c-8af1-116962fda1bb",
+  "case_id": "market_9ff09055d3c8ab7995c301f5",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2793,
+      "input_tokens": 2783,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2793,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.04,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.04,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2783,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:11:02.792577+00:00",
+      "contract_id": "0x174ea87d011bfd0b230efc45e0b4d0756d38af91f0ffbab70013a582603c2be8",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "9b8c96051fb8f773f662f64e61a5fcc57c2414558971c43b6c2e16c0a2e70fe8",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.269
+    },
+    {
+      "calls": 2,
+      "tokens": 5586,
+      "input_tokens": 5566,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5586,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.060000000000000005,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.07,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2783,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.05,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2783,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:11:04.651758+00:00",
+      "contract_id": "0x174ea87d011bfd0b230efc45e0b4d0756d38af91f0ffbab70013a582603c2be8",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "9b8c96051fb8f773f662f64e61a5fcc57c2414558971c43b6c2e16c0a2e70fe8",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.859
+    },
+    {
+      "calls": 12,
+      "tokens": 144891,
+      "input_tokens": 138981,
+      "output_tokens": 5910,
+      "accounted_tokens_upper": 144891,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 418,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his 2027 presidential candidacy, presenting himself as the left's best-placed candidate to reach the runoff and calling on left-wing voters to unite behind him rather than the Glucksmann or Roussel bids; he stated he remains a candidate through the first round and will not stand aside for another left candidate."
+                },
+                {
+                  "action_id": "action_1_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his 2027 presidential candidacy",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Jean-Luc Mélenchon publicly reaffirmed his 2027 presidential candidacy, presenting himself as the left's best-placed candidate to reach the runoff and calling on left-wing voters to unite behind him rather than the Glucksmann or Roussel bids; he stated he remains a candidate through the first round and will not stand aside for another left candidate.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                  "action": "Publicly reaffirm my 2027 candidacy and present myself as the left's best-placed candidate to reach the runoff, calling on left-wing voters to unite behind my candidacy rather than the Glucksmann or Roussel bids.\n承诺：I remain a candidate through the first round and will not stand aside for another left candidate.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm my 2027 candidacy and present myself as the left's best-placed candidate to reach the runoff, calling on left-wing voters to unite behind my candidacy rather than the Glucksmann or Roussel bids.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:supplement:1",
+                      "action": "Publicly reaffirm my 2027 candidacy and present myself as the left's best-placed candidate to reach the runoff, calling on left-wing voters to unite behind my candidacy rather than the Glucksmann or Roussel bids.",
+                      "code": "duplicate"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "The French electorate casts no votes this round: the first round is scheduled for 8–23 April 2027, outside this review interval's decision point. No collective electoral act is available before the ballot.\n触发或复核条件：Review when the first round is formally scheduled or a runoff is confirmed.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "The French electorate casts no votes this round: the first round is scheduled for 8–23 April 2027, outside this review interval's decision point. No collective electoral act is available before the ballot.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon is a declared 2027 candidate and reaffirmed he will stay in through the first round, but he has never reached a runoff (fourth in 2017, third in 2022) and faces a consolidated left rival in Glucksmann plus a likely RN opponent. No election result exists yet; the outcome remains unobserved.",
+                "evidence_quote": "Jean-Luc Mélenchon publicly reaffirmed his 2027 presidential candidacy, presenting himself as the left's best-placed candidate to reach the runoff and calling on left-wing voters to unite behind him rather than the Glucksmann or Roussel bids; he stated he remains a candidate through the first round and will not stand aside for another left candidate.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "a11a9485-cf58-4fab-b733-c683511c6829",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:12:11.170949+00:00",
+      "contract_id": "0x174ea87d011bfd0b230efc45e0b4d0756d38af91f0ffbab70013a582603c2be8",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "9b8c96051fb8f773f662f64e61a5fcc57c2414558971c43b6c2e16c0a2e70fe8",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 66.517
+    },
+    {
+      "calls": 19,
+      "tokens": 211115,
+      "input_tokens": 201949,
+      "output_tokens": 9166,
+      "accounted_tokens_upper": 211115,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 418,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed and intensified his 2027 presidential campaign, presenting the fragmented left and the Rassemblement National as the central stakes and calling on left-wing voters to consolidate behind his candidacy to reach the runoff; he stated he remains a candidate through the first round and will contest the runoff if he qualifies."
+                },
+                {
+                  "action_id": "action_1_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_e0ac8939de515c06",
+                    "action_1_agent_c5c54dbb1f645629"
+                  ],
+                  "outcome": "pending",
+                  "effect": "calling on left-wing voters to consolidate behind his candidacy to reach the runoff"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "he stated he remains a candidate through the first round and will contest the runoff if he qualifies",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Jean-Luc Mélenchon publicly reaffirmed and intensified his 2027 presidential campaign, presenting the fragmented left and the Rassemblement National as the central stakes and calling on left-wing voters to consolidate behind his candidacy to reach the runoff; he stated he remains a candidate through the first round and will contest the runoff if he qualifies.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                  "action": "Publicly reaffirm and intensify my 2027 presidential campaign, framing the fragmented left and the Rassemblement National as the central stakes, and calling on left-wing voters to consolidate behind my candidacy to reach the runoff.\n承诺：I remain a candidate through the first round and will contest the runoff if I qualify.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm and intensify my 2027 presidential campaign, framing the fragmented left and the Rassemblement National as the central stakes, and calling on left-wing voters to consolidate behind my candidacy to reach the runoff.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:supplement:1",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reaffirm and intensify my 2027 presidential campaign, framing the fragmented left and the Rassemblement National as the central stakes, and calling on left-wing voters to consolidate behind my candidacy to reach the runoff.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "Hold no collective vote action this round; the French electorate's next binding choice is the scheduled first round in April 2027, and no ballot or measure is open before then.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Hold no collective vote action this round; the French electorate's next binding choice is the scheduled first round in April 2027, and no ballot or measure is open before then.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Mélenchon is a declared candidate and says he will contest a runoff, but the frozen record shows him third in 2022 (21.95%) and fourth in 2017, and a rival left primary already chose Glucksmann. No election result exists by the horizon, so the outcome remains unverified; only candidacy and intent are established.",
+                "evidence_quote": "On 3 May 2026, Mélenchon officially announced his candidacy for the 2027 French presidential election during the TF1 evening news broadcast. Libération reported: \"The founder of La France Insoumise hopes to reach the runoff round for the first time, having finished fourth in 2017 (19.58% of the vote) and third in 2022 (21.95%).\"",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.7
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 418,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his 2027 presidential candidacy and called on left-wing voters and supporters of rival left candidates, including Raphaël Glucksmann's and Fabien Roussel's, to unite behind a single left candidacy in the first round, naming the Rassemblement National as the main adversary."
+                },
+                {
+                  "action_id": "action_1_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_e0ac8939de515c06",
+                    "action_1_agent_c5c54dbb1f645629"
+                  ],
+                  "outcome": "pending",
+                  "effect": "called on left-wing voters and supporters of rival left candidates"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "publicly reaffirmed his 2027 presidential candidacy",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Jean-Luc Mélenchon publicly reaffirmed his 2027 presidential candidacy and called on left-wing voters and supporters of rival left candidates, including Raphaël Glucksmann's and Fabien Roussel's, to unite behind a single left candidacy in the first round, naming the Rassemblement National as the main adversary.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                  "action": "Publicly reaffirm my candidacy and call on left-wing voters and rival left candidates — notably Glucksmann's and Roussel's supporters — to unite behind a single left candidacy for the first round, framing the Rassemblement National as the main adversary.\n承诺：I remain a candidate and will not withdraw before the first round; I seek left consolidation around my candidacy.\n触发或复核条件：Only if left rivals signal openness to coordination; otherwise I campaign separately.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm my candidacy and call on left-wing voters and rival left candidates — notably Glucksmann's and Roussel's supporters — to unite behind a single left candidacy for the first round, framing the Rassemblement National as the main adversary.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Launch my own independent 2027 campaign distinct from Glucksmann and Roussel, emphasizing my experience and readiness and targeting the Rassemblement National, without conditioning on any alliance.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "Take no collective electoral action this round; the French electorate's next binding choice is the scheduled first round (8–23 April 2027) and, if no absolute majority, the runoff two weeks later.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Take no collective electoral action this round; the French electorate's next binding choice is the scheduled first round (8–23 April 2027) and, if no absolute majority, the runoff two weeks later.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Mélenchon's candidacy is confirmed, but the frozen record shows him third in 2022 (21.95%) and fourth in 2017, never reaching a runoff. A separate left primary chose Glucksmann, splitting the left, and no polling or election result in the evidence shows Mélenchon winning; the actual 2027 vote remains unknown.",
+                "evidence_quote": "The founder of La France Insoumise hopes to reach the runoff round for the first time, having finished fourth in 2017 (19.58% of the vote) and third in 2022 (21.95%).",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.6
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.07,
+      "covered_p_yes": 0.07,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.07,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "be5dd7db-272d-4dea-a376-aeffaf70f7ed",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:12:44.004418+00:00",
+      "contract_id": "0x174ea87d011bfd0b230efc45e0b4d0756d38af91f0ffbab70013a582603c2be8",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "9b8c96051fb8f773f662f64e61a5fcc57c2414558971c43b6c2e16c0a2e70fe8",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 32.832
+    },
+    {
+      "calls": 45,
+      "tokens": 521513,
+      "input_tokens": 500163,
+      "output_tokens": 21350,
+      "accounted_tokens_upper": 521513,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his 2027 presidential candidacy and framed the race as La France Insoumise versus the Rassemblement National, appealing to left-wing voters to consolidate behind him in the first round rather than backing Raphaël Glucksmann or Fabien Roussel."
+                },
+                {
+                  "action_id": "action_1_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his 2027 presidential candidacy",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Jean-Luc Mélenchon publicly reaffirmed his 2027 presidential candidacy and framed the race as La France Insoumise versus the Rassemblement National, appealing to left-wing voters to consolidate behind him in the first round rather than backing Raphaël Glucksmann or Fabien Roussel.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                  "action": "Publicly reaffirm his 2027 candidacy and frame the race as LFI versus the Rassemblement National, appealing to left-wing voters to consolidate behind him rather than Glucksmann or Roussel in the first round.\n承诺：Remains a candidate through the April 2027 first round.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm his 2027 candidacy and frame the race as LFI versus the Rassemblement National, appealing to left-wing voters to consolidate behind him rather than Glucksmann or Roussel in the first round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly signal openness to left-wing coordination talks with Glucksmann and Roussel aimed at avoiding a fragmented first round, without committing to stand aside or to any specific joint arrangement.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "The French electorate takes no collective action in this interval; voting occurs only in the scheduled first round (8–23 April 2027) and any runoff two weeks later. No preference, turnout or candidate-field data is available to act on now.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "The French electorate takes no collective action in this interval; voting occurs only in the scheduled first round (8–23 April 2027) and any runoff two weeks later. No preference, turnout or candidate-field data is available to act on now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced a fourth candidacy, but the left is fragmented: Glucksmann won a separate left primary in October 2026, and Mélenchon has never reached a runoff, finishing third in 2022. Winning the presidency would require him to consolidate the left and then defeat the likely far-right and center blocs.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-12-31",
+                "interval_end": "2027-02-21",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 104,
+                "interval_days": 52,
+                "interval_start_utc": "2026-12-31T00:00:00+00:00",
+                "interval_end_utc": "2027-02-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced a fourth candidacy, but the left is fragmented: Glucksmann won a separate left primary in October 2026, and Mélenchon has never reached a runoff, finishing third in 2022. Winning the presidency would require him to consolidate the left and then defeat the likely far-right and center blocs.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-21",
+                "interval_end": "2027-04-14",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 156,
+                "interval_days": 52,
+                "interval_start_utc": "2027-02-21T00:00:00+00:00",
+                "interval_end_utc": "2027-04-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced a fourth candidacy, but the left is fragmented: Glucksmann won a separate left primary in October 2026, and Mélenchon has never reached a runoff, finishing third in 2022. Winning the presidency would require him to consolidate the left and then defeat the likely far-right and center blocs.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-04-14",
+                "interval_end": "2027-06-06",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 209,
+                "interval_days": 53,
+                "interval_start_utc": "2027-04-14T00:00:00+00:00",
+                "interval_end_utc": "2027-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon publicly called on Raphaël Glucksmann and Fabien Roussel to negotiate a single left candidacy or a clear first-round coordination arrangement before the April 2027 vote, offering to discuss terms rather than unilaterally demanding withdrawal, while stating he would not withdraw his own candidacy."
+                },
+                {
+                  "action_id": "action_4_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_e0ac8939de515c06",
+                    "action_1_agent_e0ac8939de515c06"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Jean-Luc Mélenchon publicly called on Raphaël Glucksmann and Fabien Roussel to negotiate a single left candidacy"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "while stating he would not withdraw his own candidacy",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Jean-Luc Mélenchon publicly called on Raphaël Glucksmann and Fabien Roussel to negotiate a single left candidacy or a clear first-round coordination arrangement before the April 2027 vote, offering to discuss terms rather than unilaterally demanding withdrawal, while stating he would not withdraw his own candidacy.",
+                  "date": "2027-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:2",
+                  "action": "Publicly call on Raphaël Glucksmann and Fabien Roussel to negotiate a single left candidacy or a clear first-round coordination arrangement before the April 2027 vote, offering to discuss terms rather than unilaterally demanding withdrawal.\n承诺：Open to coordination talks but will not withdraw his own candidacy.\n触发或复核条件：Only if rivals engage before the first round.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "With the first round now scheduled for April 2027, publicly press left-wing voters to consolidate behind his candidacy in the first round, warning that splitting among Glucksmann, Roussel and himself risks excluding the left from the runoff against the Rassemblement National.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly call on Raphaël Glucksmann and Fabien Roussel to negotiate a single left candidacy or a clear first-round coordination arrangement before the April 2027 vote, offering to discuss terms rather than unilaterally demanding withdrawal.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "The French electorate takes no collective pre-vote action in this interval; its only consequential acts are casting first-round ballots (scheduled 8–23 April 2027) and any runoff two weeks later. No polling, turnout, or candidate-field data is available to act on now.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "The French electorate takes no collective pre-vote action in this interval; its only consequential acts are casting first-round ballots (scheduled 8–23 April 2027) and any runoff two weeks later. No polling, turnout, or candidate-field data is available to act on now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon is a declared candidate, but the left is fragmented: Glucksmann won the October 2026 joint primary while Mélenchon and Roussel run separately. His 2017 and 2022 first-round finishes (19.58%, 21.95%) fell short of the runoff, and no new event shows consolidation behind him.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-06-06",
+                "interval_end": "2027-07-28",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 261,
+                "interval_days": 52,
+                "interval_start_utc": "2027-06-06T00:00:00+00:00",
+                "interval_end_utc": "2027-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon is a declared candidate, but the left is fragmented: Glucksmann won the October 2026 joint primary while Mélenchon and Roussel run separately. His 2017 and 2022 first-round finishes (19.58%, 21.95%) fell short of the runoff, and no new event shows consolidation behind him.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-28",
+                "interval_end": "2027-09-18",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 313,
+                "interval_days": 52,
+                "interval_start_utc": "2027-07-28T00:00:00+00:00",
+                "interval_end_utc": "2027-09-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon is a declared candidate, but the left is fragmented: Glucksmann won the October 2026 joint primary while Mélenchon and Roussel run separately. His 2017 and 2022 first-round finishes (19.58%, 21.95%) fell short of the runoff, and no new event shows consolidation behind him.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-18",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 365,
+                "interval_days": 52,
+                "interval_start_utc": "2027-09-18T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon publicly renewed his call to Raphaël Glucksmann and Fabien Roussel for a single left candidacy or a clear first-round coordination arrangement, offering to discuss terms while stating he would not withdraw his own candidacy."
+                },
+                {
+                  "action_id": "action_7_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_7_agent_e0ac8939de515c06",
+                    "action_4_agent_e0ac8939de515c06"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "offering to discuss terms while stating he would not withdraw his own candidacy"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "offering to discuss terms while stating he would not withdraw his own candidacy",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_007_001",
+                  "text": "Jean-Luc Mélenchon publicly renewed his call to Raphaël Glucksmann and Fabien Roussel for a single left candidacy or a clear first-round coordination arrangement, offering to discuss terms while stating he would not withdraw his own candidacy.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:2",
+                  "action": "Publicly renew his call to Glucksmann and Roussel for a single left candidacy or clear first-round coordination, offering to discuss terms but stating he will not withdraw his own candidacy.\n承诺：Open to coordination talks; will not withdraw his own candidacy.\n触发或复核条件：Only if rivals engage before the first round.",
+                  "p_selected": 0.35,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 65.0,
+                      "probability": 0.65,
+                      "action": "Publicly reaffirm his 2027 candidacy and appeal to left-wing voters to consolidate behind him rather than Glucksmann or Roussel, framing the RN as the main adversary to defeat.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Publicly renew his call to Glucksmann and Roussel for a single left candidacy or clear first-round coordination, offering to discuss terms but stating he will not withdraw his own candidacy.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "The French electorate takes no collective action in this interval; voting occurs only in the scheduled first round (8–23 April 2027) and any runoff two weeks later. No polling, turnout, or candidate-field data is available to act on now.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "The French electorate takes no collective action in this interval; voting occurs only in the scheduled first round (8–23 April 2027) and any runoff two weeks later. No polling, turnout, or candidate-field data is available to act on now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon is a declared candidate, but the left is fragmented: Glucksmann won a separate left primary and Mélenchon's coordination offers were unilateral. Historical first-round results (19.6% in 2017, 22% in 2022) show he has never reached the runoff, so winning the presidency remains a low-probability tail.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 53,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Mélenchon is a declared 2027 candidate, but the frozen record shows him third in 2022 (21.95%) and fourth in 2017, never reaching a runoff. A separate Glucksmann primary win and Mélenchon's refusal to withdraw split the left, while no polling or election result is in evidence.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.0735
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 5,
+        "sampled_decisions": 6,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 6,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.07,
+      "covered_p_yes": 0.07,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.07,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "372043f6-bce1-4d6b-8e64-aa2f7d2c2685",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:15:02.198162+00:00",
+      "contract_id": "0x174ea87d011bfd0b230efc45e0b4d0756d38af91f0ffbab70013a582603c2be8",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "9b8c96051fb8f773f662f64e61a5fcc57c2414558971c43b6c2e16c0a2e70fe8",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 138.19
+    },
+    {
+      "calls": 96,
+      "tokens": 1165066,
+      "input_tokens": 1115822,
+      "output_tokens": 49244,
+      "accounted_tokens_upper": 1165066,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his candidacy for the 2027 French presidential election, stating he will not withdraw before the election. Jean-Luc Mélenchon called for coordination talks among left candidacies ahead of the first round, arguing a fragmented left risks keeping both left candidates out of the runoff."
+                },
+                {
+                  "action_id": "action_1_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_e0ac8939de515c06",
+                    "action_1_agent_c5c54dbb1f645629"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Jean-Luc Mélenchon called for coordination talks among left candidacies ahead of the first round"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his candidacy for the 2027 French presidential election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Jean-Luc Mélenchon publicly reaffirmed his candidacy for the 2027 French presidential election, stating he will not withdraw before the election.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Jean-Luc Mélenchon called for coordination talks among left candidacies ahead of the first round, arguing a fragmented left risks keeping both left candidates out of the runoff.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                  "action": "Publicly reaffirm my 2027 candidacy and appeal to left voters, arguing that a fragmented left risks keeping both left candidates out of the runoff; call for coordination talks among left candidacies ahead of the first round.\n承诺：I remain a candidate and will not withdraw before the election.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Publicly reaffirm my 2027 candidacy and appeal to left voters, arguing that a fragmented left risks keeping both left candidates out of the runoff; call for coordination talks among left candidacies ahead of the first round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:supplement:1",
+                      "action": "Publicly reaffirm my 2027 candidacy and appeal to left voters, arguing that a fragmented left risks keeping both left candidates out of the runoff; call for coordination talks among left candidacies ahead of the first round.",
+                      "code": "duplicate"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "Take no collective electoral action before the scheduled first round (8–23 April 2027); the electorate's vote is cast only when the election occurs.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no collective electoral action before the scheduled first round (8–23 April 2027); the electorate's vote is cast only when the election occurs.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced and reaffirmed his 2027 candidacy, but the left is fragmented: Glucksmann won a separate Socialist/Place Publique primary in October 2026, and Mélenchon's past first-round shares (19.6% in 2017, 22% in 2022) fell short of the runoff. Winning the presidency requires first reaching the runoff and then a majority, a demanding path.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-12-31",
+                "interval_end": "2027-02-21",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 104,
+                "interval_days": 52,
+                "interval_start_utc": "2026-12-31T00:00:00+00:00",
+                "interval_end_utc": "2027-02-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced and reaffirmed his 2027 candidacy, but the left is fragmented: Glucksmann won a separate Socialist/Place Publique primary in October 2026, and Mélenchon's past first-round shares (19.6% in 2017, 22% in 2022) fell short of the runoff. Winning the presidency requires first reaching the runoff and then a majority, a demanding path.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-21",
+                "interval_end": "2027-04-14",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 156,
+                "interval_days": 52,
+                "interval_start_utc": "2027-02-21T00:00:00+00:00",
+                "interval_end_utc": "2027-04-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced and reaffirmed his 2027 candidacy, but the left is fragmented: Glucksmann won a separate Socialist/Place Publique primary in October 2026, and Mélenchon's past first-round shares (19.6% in 2017, 22% in 2022) fell short of the runoff. Winning the presidency requires first reaching the runoff and then a majority, a demanding path.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-04-14",
+                "interval_end": "2027-06-06",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 209,
+                "interval_days": 53,
+                "interval_start_utc": "2027-04-14T00:00:00+00:00",
+                "interval_end_utc": "2027-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his candidacy for the 2027 French presidential election, appealing directly to left voters on the argument that the Rassemblement National is the main adversary and that only his candidacy can consolidate the left vote into the runoff. Jean-Luc Mélenchon reiterated his call for coordination talks among left candidacies without preconditions; no counterpart acceptance of the call was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his candidacy for the 2027 French presidential election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Jean-Luc Mélenchon publicly reaffirmed his candidacy for the 2027 French presidential election, appealing directly to left voters on the argument that the Rassemblement National is the main adversary and that only his candidacy can consolidate the left vote into the runoff.",
+                  "date": "2027-06"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "Jean-Luc Mélenchon reiterated his call for coordination talks among left candidacies without preconditions; no counterpart acceptance of the call was recorded.",
+                  "date": "2027-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:2",
+                  "action": "Publicly reaffirm my candidacy and appeal directly to left voters, arguing the RN is the main adversary and that only my candidacy can consolidate the left vote into the runoff; reiterate the call for coordination talks without preconditions.\n承诺：I remain a candidate and will not withdraw before the election.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly propose to Raphaël Glucksmann a single left candidacy decided by a joint primary before the first round, stating I will abide by its result and that a divided left guarantees no left candidate reaches the runoff.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly reaffirm my candidacy and appeal directly to left voters, arguing the RN is the main adversary and that only my candidacy can consolidate the left vote into the runoff; reiterate the call for coordination talks without preconditions.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "The French electorate takes no collective pre-election action; the vote is cast only when the scheduled first round occurs (8–23 April 2027) and, if needed, the runoff two weeks later.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "The French electorate takes no collective pre-election action; the vote is cast only when the scheduled first round occurs (8–23 April 2027) and, if needed, the runoff two weeks later.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon's candidacy is confirmed, but he has never reached a runoff and faces a consolidated Socialist/Place Publique rival in Glucksmann plus the RN. No new settled event or verified state change alters the low prior; the coordination call lacks counterpart acceptance.",
+                "evidence_quote": "Jean-Luc Mélenchon reiterated his call for coordination talks among left candidacies without preconditions; no counterpart acceptance of the call was recorded.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_004_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-06-06",
+                "interval_end": "2027-07-28",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 261,
+                "interval_days": 52,
+                "interval_start_utc": "2027-06-06T00:00:00+00:00",
+                "interval_end_utc": "2027-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon's candidacy is confirmed, but he has never reached a runoff and faces a consolidated Socialist/Place Publique rival in Glucksmann plus the RN. No new settled event or verified state change alters the low prior; the coordination call lacks counterpart acceptance.",
+                "evidence_quote": "Jean-Luc Mélenchon reiterated his call for coordination talks among left candidacies without preconditions; no counterpart acceptance of the call was recorded.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_004_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-28",
+                "interval_end": "2027-09-18",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 313,
+                "interval_days": 52,
+                "interval_start_utc": "2027-07-28T00:00:00+00:00",
+                "interval_end_utc": "2027-09-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon's candidacy is confirmed, but he has never reached a runoff and faces a consolidated Socialist/Place Publique rival in Glucksmann plus the RN. No new settled event or verified state change alters the low prior; the coordination call lacks counterpart acceptance.",
+                "evidence_quote": "Jean-Luc Mélenchon reiterated his call for coordination talks among left candidacies without preconditions; no counterpart acceptance of the call was recorded.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_004_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-18",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 365,
+                "interval_days": 52,
+                "interval_start_utc": "2027-09-18T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his 2027 candidacy and appealed directly to left voters, arguing the Rassemblement National is the main adversary and that only his candidacy can consolidate the left vote into the runoff, while reiterating his open call for coordination talks among left candidacies without preconditions."
+                },
+                {
+                  "action_id": "action_7_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_7_agent_e0ac8939de515c06",
+                    "action_7_agent_c5c54dbb1f645629"
+                  ],
+                  "outcome": "pending",
+                  "effect": "only his candidacy can consolidate the left vote into the runoff"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Jean-Luc Mélenchon publicly reaffirmed his 2027 candidacy and appealed directly to left voters",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_007_001",
+                  "text": "Jean-Luc Mélenchon publicly reaffirmed his 2027 candidacy and appealed directly to left voters, arguing the Rassemblement National is the main adversary and that only his candidacy can consolidate the left vote into the runoff, while reiterating his open call for coordination talks among left candidacies without preconditions.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                  "action": "Publicly reaffirm my 2027 candidacy and appeal directly to left voters, arguing the RN is the main adversary and that only my candidacy can consolidate the left vote into the runoff; reiterate the open call for coordination talks among left candidacies without preconditions.\n承诺：I remain a candidate and will not withdraw before the election.\n触发或复核条件：Coordination talks remain open to any left candidacy without preconditions.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Publicly reaffirm my 2027 candidacy and appeal directly to left voters, arguing the RN is the main adversary and that only my candidacy can consolidate the left vote into the runoff; reiterate the open call for coordination talks among left candidacies without preconditions.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:supplement:2",
+                      "action": "Publicly reaffirm my 2027 candidacy and appeal directly to left voters, arguing the RN is the main adversary and that only my candidacy can consolidate the left vote into the runoff; reiterate the open call for coordination talks without preconditions.\n承诺：I remain a candidate and will not withdraw before the election.",
+                      "code": "duplicate"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "Take no collective electoral action in this interval; the electorate's first-round vote is cast only when the scheduled first round occurs (8–23 April 2027), with a runoff two weeks later if no absolute majority.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no collective electoral action in this interval; the electorate's first-round vote is cast only when the scheduled first round occurs (8–23 April 2027), with a runoff two weeks later if no absolute majority.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Monitor the finalization of the 2027 candidate field and any published polling or vote-share evidence, without casting or endorsing any vote before the scheduled first round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon is a declared candidate, but the left is fragmented: Glucksmann won a separate Socialist/Place Publique primary and Mélenchon's coordination calls drew no recorded acceptance. His past third-place first-round finishes and the two-round barrier keep a win unlikely.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 53,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon is a declared candidate who reaffirmed he will not withdraw, but no polling or first-round result is in evidence. His 2012/2017/2022 finishes were fourth, fourth and third, and a separate Glucksmann candidacy splits the left; winning the presidency remains a low-probability tail.",
+                "evidence_quote": "Jean-Luc Mélenchon publicly reaffirmed his candidacy for the 2027 French presidential election, stating he will not withdraw before the election.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.34
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon issued a public statement reaffirming his 2027 presidential candidacy, framing the Rassemblement National as the main adversary and calling on left-wing voters to unite behind his candidacy in the first round rather than split across Raphaël Glucksmann and Fabien Roussel; he stated he remains a candidate and will contest the first round with no withdrawal or subordinating alliance."
+                },
+                {
+                  "action_id": "action_1_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_e0ac8939de515c06",
+                    "action_1_agent_c5c54dbb1f645629"
+                  ],
+                  "outcome": "pending",
+                  "effect": "calling on left-wing voters to unite behind his candidacy in the first round rather than split across Raphaël Glucksmann and Fabien Roussel"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "reaffirming his 2027 presidential candidacy, framing the Rassemblement National as the main adversary",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Jean-Luc Mélenchon issued a public statement reaffirming his 2027 presidential candidacy, framing the Rassemblement National as the main adversary and calling on left-wing voters to unite behind his candidacy in the first round rather than split across Raphaël Glucksmann and Fabien Roussel; he stated he remains a candidate and will contest the first round with no withdrawal or subordinating alliance.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                  "action": "Issue a public statement reaffirming my 2027 candidacy and framing the Rassemblement National as the main adversary, while calling on left-wing voters to unite behind my candidacy in the first round rather than split across Glucksmann and Roussel.\n承诺：I remain a candidate and will contest the first round; no withdrawal or alliance that subordinates my candidacy.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Issue a public statement reaffirming my 2027 candidacy and framing the Rassemblement National as the main adversary, while calling on left-wing voters to unite behind my candidacy in the first round rather than split across Glucksmann and Roussel.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:supplement:1",
+                      "action": "Issue a public statement reaffirming my 2027 candidacy, naming the Rassemblement National as the main adversary, and calling on left-wing voters to unite behind my candidacy in the first round rather than split across Glucksmann and Roussel.",
+                      "code": "duplicate"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "Hold no collective act this round: the electorate has no scheduled vote before the first round (8–23 April 2027), and no polling, turnout, or candidate-field data is available to act on.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Hold no collective act this round: the electorate has no scheduled vote before the first round (8–23 April 2027), and no polling, turnout, or candidate-field data is available to act on.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced a 2027 candidacy, but the left is fragmented: Glucksmann won a separate left primary in October 2026, and Mélenchon's 2017 and 2022 first-round shares (19.58%, 21.95%) fell short of the runoff. Winning the presidency requires first reaching and then winning a runoff, which no polling or result evidence here supports.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-12-31",
+                "interval_end": "2027-02-21",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 104,
+                "interval_days": 52,
+                "interval_start_utc": "2026-12-31T00:00:00+00:00",
+                "interval_end_utc": "2027-02-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced a 2027 candidacy, but the left is fragmented: Glucksmann won a separate left primary in October 2026, and Mélenchon's 2017 and 2022 first-round shares (19.58%, 21.95%) fell short of the runoff. Winning the presidency requires first reaching and then winning a runoff, which no polling or result evidence here supports.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-21",
+                "interval_end": "2027-04-14",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 156,
+                "interval_days": 52,
+                "interval_start_utc": "2027-02-21T00:00:00+00:00",
+                "interval_end_utc": "2027-04-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced a 2027 candidacy, but the left is fragmented: Glucksmann won a separate left primary in October 2026, and Mélenchon's 2017 and 2022 first-round shares (19.58%, 21.95%) fell short of the runoff. Winning the presidency requires first reaching and then winning a runoff, which no polling or result evidence here supports.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-04-14",
+                "interval_end": "2027-06-06",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 209,
+                "interval_days": 53,
+                "interval_start_utc": "2027-04-14T00:00:00+00:00",
+                "interval_end_utc": "2027-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:supplement:2",
+                  "action": "Continue contesting the first round without a new outward statement this round, preserving my declared candidacy and letting the campaign proceed to the vote.\n承诺：I remain a candidate and will contest the first round; no withdrawal or subordinating alliance.\n触发或复核条件：Review after the first-round result is reported.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement reaffirming my 2027 candidacy and first-round bid, framing the Rassemblement National as the main adversary and calling on left-wing voters to unite behind my candidacy rather than split across Glucksmann and Roussel.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:supplement:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Continue contesting the first round without a new outward statement this round, preserving my declared candidacy and letting the campaign proceed to the vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:supplement:1",
+                      "action": "Issue a public statement in the final stretch before the first round reaffirming my candidacy, framing the Rassemblement National as the main adversary, and urging left-wing voters to consolidate behind me rather than split across Glucksmann and Roussel.",
+                      "code": "duplicate"
+                    }
+                  ],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "Hold no collective act: the French electorate acts only through the scheduled first-round ballot (8–23 April 2027) and any runoff two weeks later; no separate collective move is available in this interval.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Hold no collective act: the French electorate acts only through the scheduled first-round ballot (8–23 April 2027) and any runoff two weeks later; no separate collective move is available in this interval.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Track public reporting on the 2027 candidate field, polling and turnout as the first round approaches, without any collective act until ballots are cast.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced a 2027 candidacy, but the left is fragmented: Glucksmann won a separate left primary in October 2026, and Mélenchon's 2017 and 2022 first-round shares (19.58%, 21.95%) fell short of the runoff. Winning the presidency requires first reaching and then winning a runoff, which no polling or result evidence here supports.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-06-06",
+                "interval_end": "2027-07-28",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 261,
+                "interval_days": 52,
+                "interval_start_utc": "2027-06-06T00:00:00+00:00",
+                "interval_end_utc": "2027-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced a 2027 candidacy, but the left is fragmented: Glucksmann won a separate left primary in October 2026, and Mélenchon's 2017 and 2022 first-round shares (19.58%, 21.95%) fell short of the runoff. Winning the presidency requires first reaching and then winning a runoff, which no polling or result evidence here supports.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-28",
+                "interval_end": "2027-09-18",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 313,
+                "interval_days": 52,
+                "interval_start_utc": "2027-07-28T00:00:00+00:00",
+                "interval_end_utc": "2027-09-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon has announced a 2027 candidacy, but the left is fragmented: Glucksmann won a separate left primary in October 2026, and Mélenchon's 2017 and 2022 first-round shares (19.58%, 21.95%) fell short of the runoff. Winning the presidency requires first reaching and then winning a runoff, which no polling or result evidence here supports.",
+                "evidence_quote": "On 11 October 2026, a primary involving voters from the Socialist Party, Place Publique, and the Republican and Socialist Left selected Raphaël Glucksmann as their joint candidate for the 2027 presidential election, with 66.13% of the vote over Olivier Faure, Ségolène Royal, Emmanuel Maurel and Jérôme Guedj.",
+                "change_driver": null,
+                "evidence_ref": "hist_9a98948ae81a5bd0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-18",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 365,
+                "interval_days": 52,
+                "interval_start_utc": "2027-09-18T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "status": "executed",
+                  "summary": "Jean-Luc Mélenchon issued a public statement reaffirming his 2027 presidential candidacy and calling on left-wing voters to unite behind him in the first round rather than split across Raphaël Glucksmann and Fabien Roussel, again framing the Rassemblement National as the main adversary; he stated he remains a candidate and will contest the first round with no withdrawal or subordinating alliance."
+                },
+                {
+                  "action_id": "action_7_agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_7_agent_e0ac8939de515c06",
+                    "action_7_agent_c5c54dbb1f645629"
+                  ],
+                  "outcome": "pending",
+                  "effect": "calling on left-wing voters to unite behind him in the first round rather than split across Raphaël Glucksmann and Fabien Roussel"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "he stated he remains a candidate and will contest the first round with no withdrawal or subordinating alliance",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_007_001",
+                  "text": "Jean-Luc Mélenchon issued a public statement reaffirming his 2027 presidential candidacy and calling on left-wing voters to unite behind him in the first round rather than split across Raphaël Glucksmann and Fabien Roussel, again framing the Rassemblement National as the main adversary; he stated he remains a candidate and will contest the first round with no withdrawal or subordinating alliance.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e0ac8939de515c06",
+                  "actor_name": "Jean-Luc Mélenchon",
+                  "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                  "action": "Issue a public statement reaffirming my 2027 candidacy and calling on left-wing voters to unite behind me in the first round rather than split across Glucksmann and Roussel, framing the Rassemblement National as the main adversary.\n承诺：I remain a candidate and will contest the first round; no withdrawal or subordinating alliance.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement reaffirming my 2027 candidacy and calling on left-wing voters to unite behind me in the first round rather than split across Glucksmann and Roussel, framing the Rassemblement National as the main adversary.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e0ac8939de515c06:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Continue contesting the first round without a new outward statement this round, preserving my declared candidacy and letting the campaign proceed to the vote.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_c5c54dbb1f645629",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                  "action": "Hold no collective act: the French electorate acts only through the scheduled first-round ballot (8–23 April 2027) and any runoff two weeks later; no separate collective move is available in this interval.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5c54dbb1f645629:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Hold no collective act: the French electorate acts only through the scheduled first-round ballot (8–23 April 2027) and any runoff two weeks later; no separate collective move is available in this interval.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Mélenchon is a declared 2027 candidate, but his 2012–2022 first-round results (11–22%) never reached the runoff, and polling/primary evidence shows a divided left with Glucksmann nominated separately. No settled election result exists yet, so the estimate stays low and near the prior.",
+                "evidence_quote": "On 3 May 2026, Mélenchon officially announced his candidacy for the 2027 French presidential election during the TF1 evening news broadcast.",
+                "change_driver": null,
+                "evidence_ref": "hist_4c3b6d6fdf9958eb.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 53,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Mélenchon is a declared candidate who reaffirmed in late 2027 that he will contest the first round without alliance, but his 2017 and 2022 first-round finishes (19.58%, 21.95%) were third/fourth and never reached the runoff. A fragmented left with Glucksmann and Roussel running separately raises the runoff hurdle; no vote result is observed.",
+                "evidence_quote": "The founder of La France Insoumise hopes to reach the runoff round for the first time, having finished fourth in 2017 (19.58% of the vote) and third in 2022 (21.95%).",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.1785
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 16,
+        "active_rounds": 6,
+        "draw_rounds": 6,
+        "audited_silent_rounds": 10,
+        "sampled_decisions": 12,
+        "public_event_count": 7,
+        "substantive_public_event_count": 7,
+        "state_change_count": 4,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 6,
+            "active_actor_count": 2,
+            "public_event_count": 5,
+            "substantive_public_event_count": 5,
+            "state_change_count": 3,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 6,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.05500000000000001,
+      "covered_p_yes": 0.05500000000000001,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.05500000000000001,
+        0.05499999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "807e3268-6afa-4054-a295-4569279b9098",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:17:44.320660+00:00",
+      "contract_id": "0x174ea87d011bfd0b230efc45e0b4d0756d38af91f0ffbab70013a582603c2be8",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "9b8c96051fb8f773f662f64e61a5fcc57c2414558971c43b6c2e16c0a2e70fe8",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 162.117
+    },
+    {
+      "calls": 146,
+      "tokens": 1838589,
+      "input_tokens": 1745597,
+      "output_tokens": 92992,
+      "accounted_tokens_upper": 1838589,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.0398,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.0398,
+        0.0398
+      ],
+      "search_iterations": 16,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 16,
+          "search_value": 0.18481999999999998,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.6,
+          "visits": 10,
+          "search_value": 0.21593999999999997,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.6,
+          "visits": 9,
+          "search_value": 0.21099999999999997,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.6,
+          "visits": 8,
+          "search_value": 0.20482499999999998,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.42,
+          "visits": 5,
+          "search_value": 0.173568,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.42,
+          "visits": 4,
+          "search_value": 0.17855999999999997,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.42,
+          "visits": 3,
+          "search_value": 0.18687999999999996,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.336,
+          "visits": 1,
+          "search_value": 0.1536,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.336,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.04,
+          "frontier": true,
+          "contribution": 0.01344
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.084,
+          "visits": 1,
+          "search_value": 0.1536,
+          "conditional_p_yes": 0.06,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.084,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.04,
+          "frontier": true,
+          "contribution": 0.00336
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.18,
+          "visits": 2,
+          "search_value": 0.2604,
+          "conditional_p_yes": 0.06,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.18,
+          "visits": 1,
+          "search_value": 0.2604,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.18,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.0126
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.4,
+          "visits": 5,
+          "search_value": 0.12591199999999997,
+          "conditional_p_yes": 0.05,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.4,
+          "visits": 4,
+          "search_value": 0.11898999999999998,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.4,
+          "visits": 3,
+          "search_value": 0.10745333333333333,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.27999999999999997,
+          "visits": 2,
+          "search_value": 0.09739999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.27999999999999997,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.27999999999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0056
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.12,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.04,
+          "frontier": true,
+          "contribution": 0.0048
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "11a7682d-38e2-45c7-acc1-a31cb837e7f2",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:26:01.463240+00:00",
+      "contract_id": "0x174ea87d011bfd0b230efc45e0b4d0756d38af91f0ffbab70013a582603c2be8",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "9b8c96051fb8f773f662f64e61a5fcc57c2414558971c43b6c2e16c0a2e70fe8",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 497.082
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x174ea87d011bfd0b230efc45e0b4d0756d38af91f0ffbab70013a582603c2be8",
+  "group_id": "next-french-presidential-election",
+  "stage": "finished",
+  "outcome_deadline": "2028-01-01T04:59:00+00:00",
+  "deadline_basis": "explicit_election_result_window_including_runoff",
+  "nominal_market_end": "2027-04-19T03:59:00+00:00",
+  "evidence_sha256": "9b8c96051fb8f773f662f64e61a5fcc57c2414558971c43b6c2e16c0a2e70fe8",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 757,
+    "input_tokens": 694,
+    "output_tokens": 63,
+    "accounted_tokens_upper": 757,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31",
+        "2027-02-21",
+        "2027-04-14",
+        "2027-06-06",
+        "2027-07-28",
+        "2027-09-18",
+        "2027-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31",
+        "2027-02-21",
+        "2027-04-14",
+        "2027-06-06",
+        "2027-07-28",
+        "2027-09-18",
+        "2027-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31",
+        "2027-02-21",
+        "2027-04-14",
+        "2027-06-06",
+        "2027-07-28",
+        "2027-09-18",
+        "2027-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_77e63ba5abe31325",
+          "name": "Jean-Luc Mélenchon",
+          "role": "Founder and de facto leader of La France Insoumise; announced his own candidacy for the 2027 presidential election on 3 May 2026.",
+          "decision_ids": [
+            "mel_candidacy"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_1507df1b0e5d2f92",
+          "name": "French electorate",
+          "role": "Voters in the two-round presidential election who determine the first-round and runoff outcomes.",
+          "decision_ids": [
+            "first_round_vote",
+            "runoff_vote"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No named individual or body is identified as formally certifying or proclaiming the election winner beyond the Ministry of the Interior's official results.",
+        "The Constitutional Council's role in proclaiming the president is not cited in the provided sources."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "mel_candidacy",
+          "choice": "Jean-Luc Mélenchon must be a candidate in the 2027 presidential election.",
+          "owner": "Jean-Luc Mélenchon",
+          "support": "represented"
+        },
+        {
+          "id": "first_round_vote",
+          "choice": "The electorate votes in the first round; a candidate needs over 50% to win outright, otherwise the top two advance.",
+          "owner": "French electorate",
+          "support": "represented"
+        },
+        {
+          "id": "runoff_vote",
+          "choice": "If no first-round majority, the electorate votes in the runoff between the top two candidates.",
+          "owner": "French electorate",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 24,
+    "tokens": 62856,
+    "input_tokens": 52427,
+    "output_tokens": 10429,
+    "accounted_tokens_upper": 62856,
+    "unknown_usage_requests": 0
+  }
+}

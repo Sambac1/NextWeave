@@ -1,0 +1,2051 @@
+{
+  "run_id": "4fa3276f-1c0e-407b-a3b7-4a810c502bd1",
+  "case_id": "market_5e5f55ffe5295c4d92cb4efc",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2618,
+      "input_tokens": 2608,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2618,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.03,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2608,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:25:16.119617+00:00",
+      "contract_id": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "98158c07843ccaa534a3d77f1b82edeed590fa6157ecd3380de2769020acb65a",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.993
+    },
+    {
+      "calls": 2,
+      "tokens": 5236,
+      "input_tokens": 5216,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5236,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.03,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2608,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2608,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:25:17.320258+00:00",
+      "contract_id": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "98158c07843ccaa534a3d77f1b82edeed590fa6157ecd3380de2769020acb65a",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.199
+    },
+    {
+      "calls": 10,
+      "tokens": 108241,
+      "input_tokens": 104105,
+      "output_tokens": 4136,
+      "accounted_tokens_upper": 108241,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "candidate_id": "agent_280d2569425b56e3:initial:1",
+                  "action": "Do not transmit a Section 4 written declaration this round. Monitor for any credible reporting of Cabinet coordination, a Vice President statement, or a formal declaration transmitted to Congress; reassess only if such evidence appears before the deadline.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_280d2569425b56e3:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Do not transmit a Section 4 written declaration this round. Monitor for any credible reporting of Cabinet coordination, a Vice President statement, or a formal declaration transmitted to Congress; reassess only if such evidence appears before the deadline.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No settled event shows Trump resigning, being removed, or a sustained Section 4 finding; the only in-window signal is renewed 25th Amendment discussion after an April 2026 post, which is talk rather than Cabinet action or congressional two-thirds votes. Remaining unknown is any unobserved resignation, removal, or sustained inability determination before the deadline.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\". Despite the subsequent announcement of a two-week ceasefire, calls for the amendment's invocation continued.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "999e3230-f534-44e1-90d7-084b146af169",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:26:14.504109+00:00",
+      "contract_id": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "98158c07843ccaa534a3d77f1b82edeed590fa6157ecd3380de2769020acb65a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 57.182
+    },
+    {
+      "calls": 16,
+      "tokens": 183250,
+      "input_tokens": 176156,
+      "output_tokens": 7094,
+      "accounted_tokens_upper": 183250,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                  "action": "Take no outward step toward resignation or removal; continue serving as President through the horizon.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no outward step toward resignation or removal; continue serving as President through the horizon.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "candidate_id": "agent_280d2569425b56e3:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event shows Trump resigning, being removed, or a sustained Section 4 action; the only in-window signal is renewed 25th Amendment discussion after an April 2026 post, which is talk rather than execution. With the contract deadline reached and no qualifying announcement, the outcome remains unverified but heavily favors No.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\". Despite the subsequent announcement of a two-week ceasefire, calls for the amendment's invocation continued.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                  "action": "Take no outward action toward resigning or leaving office during this round; continue serving as President.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no outward action toward resigning or leaving office during this round; continue serving as President.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "candidate_id": "agent_280d2569425b56e3:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event shows Trump resigning, being removed, or a sustained Section 4 action; the only in-window signal is renewed 25th Amendment discussion after an April 2026 post, which is talk rather than execution. With the contract deadline reached and no qualifying announcement, the outcome remains unverified but heavily favors No.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\". Despite the subsequent announcement of a two-week ceasefire, calls for the amendment's invocation continued.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "8a296a99-2687-4f19-a314-936872c7899c",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:26:37.942126+00:00",
+      "contract_id": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "98158c07843ccaa534a3d77f1b82edeed590fa6157ecd3380de2769020acb65a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 23.436
+    },
+    {
+      "calls": 25,
+      "tokens": 261087,
+      "input_tokens": 251822,
+      "output_tokens": 9265,
+      "accounted_tokens_upper": 261087,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "candidate_id": "agent_280d2569425b56e3:initial:1",
+                  "action": "Hold the Section 4 question internally: no written declaration is transmitted this round. The seat continues weighing whether the President is unable to discharge his duties, given the April 2026 rhetoric and continued calls, but reaches no collective determination now.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_280d2569425b56e3:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Hold the Section 4 question internally: no written declaration is transmitted this round. The seat continues weighing whether the President is unable to discharge his duties, given the April 2026 rhetoric and continued calls, but reaches no collective determination now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action within the window. April 2026 reports of renewed 25th Amendment discussion are talk, not an approved or executed removal, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action within the window. April 2026 reports of renewed 25th Amendment discussion are talk, not an approved or executed removal, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action within the window. April 2026 reports of renewed 25th Amendment discussion are talk, not an approved or executed removal, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "candidate_id": "agent_280d2569425b56e3:initial:1",
+                  "action": "Hold the Section 4 question internally: no written declaration is transmitted this round. The seat continues weighing whether the President is unable to discharge his duties, but reaches no collective determination now.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_280d2569425b56e3:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Hold the Section 4 question internally: no written declaration is transmitted this round. The seat continues weighing whether the President is unable to discharge his duties, but reaches no collective determination now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action within the window. April 2026 reports of renewed 25th Amendment discussion are talk, not an approved or executed removal, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No settled event shows Trump resigning, being removed, or a sustained Section 4 finding; the only in-window signal is renewed 25th Amendment discussion after an April 2026 post, which is talk rather than Cabinet action or congressional two-thirds votes. The outcome through the contract deadline remains unverified.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\". Despite the subsequent announcement of a two-week ceasefire, calls for the amendment's invocation continued.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.8
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "edd23a33-8768-4247-b5b5-c54908e48cbd",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:27:48.106473+00:00",
+      "contract_id": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "98158c07843ccaa534a3d77f1b82edeed590fa6157ecd3380de2769020acb65a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 70.161
+    },
+    {
+      "calls": 49,
+      "tokens": 538178,
+      "input_tokens": 517738,
+      "output_tokens": 20440,
+      "accounted_tokens_upper": 538178,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                  "action": "Continue serving as President with no resignation announcement or removal-related move this round; keep governing through existing executive, trade and foreign-policy channels.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Continue serving as President with no resignation announcement or removal-related move this round; keep governing through existing executive, trade and foreign-policy channels.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_7ff744d96dba572c:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Issue a public statement reaffirming I remain President and am fully discharging my duties, dismissing 25th Amendment talk as political noise, without any resignation signal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "candidate_id": "agent_280d2569425b56e3:initial:1",
+                  "action": "Do not transmit any Section 4 written declaration this round; the seat takes no outward act while no evidence shows majority support or a defined incapacity basis.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_280d2569425b56e3:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Do not transmit any Section 4 written declaration this round; the seat takes no outward act while no evidence shows majority support or a defined incapacity basis.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action by the cutoff; the only relevant item is renewed 25th Amendment discussion in April 2026, which did not produce a qualifying removal. Historical precedent shows such calls failing, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action by the cutoff; the only relevant item is renewed 25th Amendment discussion in April 2026, which did not produce a qualifying removal. Historical precedent shows such calls failing, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action by the cutoff; the only relevant item is renewed 25th Amendment discussion in April 2026, which did not produce a qualifying removal. Historical precedent shows such calls failing, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                  "action": "Continue serving as President with no resignation announcement or removal-related move this round; keep governing through existing executive, trade and foreign-policy channels.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Continue serving as President with no resignation announcement or removal-related move this round; keep governing through existing executive, trade and foreign-policy channels.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "candidate_id": "agent_280d2569425b56e3:initial:1",
+                  "action": "Take no outward act this round: no Section 4 written declaration is transmitted, and the seat issues no public statement, while no documented majority support or defined incapacity basis exists.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_280d2569425b56e3:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no outward act this round: no Section 4 written declaration is transmitted, and the seat issues no public statement, while no documented majority support or defined incapacity basis exists.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_280d2569425b56e3:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a public statement that the Vice President and a Cabinet majority will consider a Section 4 written declaration only if documented evidence of presidential inability emerges, and will not invoke the amendment over policy disagreement.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action by the cutoff; the only relevant item is renewed 25th Amendment discussion in April 2026, which did not produce a qualifying removal. Historical precedent shows such calls failing, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event shows Trump resigning, being removed, or a sustained Section 4 finding; the only in-window signal is renewed 25th Amendment discussion after an April 2026 post, which is talk, not Cabinet action or congressional two-thirds votes. The outcome through the contract deadline remains unverified.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\". Despite the subsequent announcement of a two-week ceasefire, calls for the amendment's invocation continued.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.544
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                  "action": null,
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_7ff744d96dba572c:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Issue a public statement reaffirming intent to complete the term through 2027 and dismissing 25th Amendment and impeachment talk as politically motivated, without any resignation or departure commitment.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "candidate_id": "agent_280d2569425b56e3:initial:1",
+                  "action": "Do not transmit any Section 4 written declaration to Congress this round; no evidence shows a Cabinet majority has formed or that the Vice President is prepared to act, and the public packet documents only discussion, not coordination.\n触发或复核条件：Reassess if credible reporting shows the Vice President and a Cabinet majority have drafted or agreed to a Section 4 declaration.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_280d2569425b56e3:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Do not transmit any Section 4 written declaration to Congress this round; no evidence shows a Cabinet majority has formed or that the Vice President is prepared to act, and the public packet documents only discussion, not coordination.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action by the cutoff; the only relevant item is renewed 25th Amendment discussion in April 2026, which did not produce a qualifying removal. Historical precedent shows such calls failing, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action by the cutoff; the only relevant item is renewed 25th Amendment discussion in April 2026, which did not produce a qualifying removal. Historical precedent shows such calls failing, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action by the cutoff; the only relevant item is renewed 25th Amendment discussion in April 2026, which did not produce a qualifying removal. Historical precedent shows such calls failing, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_7ff744d96dba572c",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_7ff744d96dba572c:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_280d2569425b56e3",
+                  "actor_name": "Vice President and Cabinet majority",
+                  "candidate_id": "agent_280d2569425b56e3:initial:2",
+                  "action": null,
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_280d2569425b56e3:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Do not transmit any Section 4 written declaration to Congress this round. The public packet documents only discussion of the Twenty-fifth Amendment, not coordination by the Vice President or a Cabinet majority, and no evidence shows a joint determination of inability is ready.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows resignation, removal, or a sustained Section 4 action by the cutoff; the only relevant item is renewed 25th Amendment discussion in April 2026, which did not produce a qualifying removal. Historical precedent shows such calls failing, so the chance remains low.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\".",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Trump out as President before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event shows Trump resigning, being removed, or a sustained Section 4 finding; the only in-window signal is renewed 25th Amendment discussion after an April 2026 post, which is talk, not Cabinet action or congressional two-thirds votes. The outcome through the contract deadline remains unverified.",
+                "evidence_quote": "In April 2026, the Twenty-fifth Amendment was the subject of renewed political discussion during the 2026 Iran war after President Trump posted, \"A whole civilization will die tonight, never to be brought back again\". Despite the subsequent announcement of a two-week ceasefire, calls for the amendment's invocation continued.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.136
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 6,
+        "sampled_decisions": 8,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "d1b60db0-08de-4f4e-a154-4f3eebcaa6dc",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:29:05.818472+00:00",
+      "contract_id": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "98158c07843ccaa534a3d77f1b82edeed590fa6157ecd3380de2769020acb65a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 77.708
+    },
+    {
+      "calls": 83,
+      "tokens": 910260,
+      "input_tokens": 868667,
+      "output_tokens": 41593,
+      "accounted_tokens_upper": 910260,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.09455000000000001,
+      "coverage": 0.85,
+      "unexplored_mass": 0.15000000000000002,
+      "unknown_bounds": [
+        0.019549999999999998,
+        0.16955000000000003
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.09890299999999999,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.595,
+          "visits": 5,
+          "search_value": 0.09512000000000001,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.595,
+          "visits": 4,
+          "search_value": 0.08979999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.595,
+          "visits": 3,
+          "search_value": 0.08093333333333333,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.476,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.476,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.009519999999999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.119,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.119,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0023799999999999997
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.255,
+          "visits": 4,
+          "search_value": 0.109275,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.255,
+          "visits": 3,
+          "search_value": 0.1069,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.255,
+          "visits": 2,
+          "search_value": 0.10214999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.19125,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.19125,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0057374999999999995
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.06375,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0019125
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.15000000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "5b53668f-d3a5-4bf0-8c61-ea73a8b6fa77",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:33:02.948518+00:00",
+      "contract_id": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "98158c07843ccaa534a3d77f1b82edeed590fa6157ecd3380de2769020acb65a",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 237.122
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+  "group_id": "trump-out-as-president-before-2027",
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "explicit_contract_deadline",
+  "nominal_market_end": "2027-01-01T04:59:00+00:00",
+  "evidence_sha256": "98158c07843ccaa534a3d77f1b82edeed590fa6157ecd3380de2769020acb65a",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 797,
+    "input_tokens": 683,
+    "output_tokens": 114,
+    "accounted_tokens_upper": 797,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1,
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_920e726958736879",
+          "name": "Donald Trump",
+          "role": "President of the United States; may resign or be subject to removal proceedings",
+          "decision_ids": [
+            "trump_resign"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_a611372b4a693c4b",
+          "name": "Vice President and Cabinet majority",
+          "role": "May determine presidential inability and transmit declaration under 25th Amendment Section 4",
+          "decision_ids": [
+            "s4_declaration"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "House of Representatives impeaches Donald Trump",
+        "Senate convicts and removes Donald Trump upon impeachment",
+        "House of Representatives votes by two-thirds to sustain Section 4 inability determination",
+        "Senate votes by two-thirds to sustain Section 4 inability determination"
+      ],
+      "gaps": [
+        "No source identifies a current Vice President or Cabinet members willing to invoke Section 4; the collective seat is unresolved.",
+        "No source establishes that impeachment or Section 4 proceedings are underway as of 2026-11-09.",
+        "No frozen source identifies United States House of Representatives; its decision remains unresolved.",
+        "No frozen source identifies United States Senate; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "trump_resign",
+          "choice": "Donald Trump resigns as President or otherwise ceases to be President",
+          "owner": "Donald Trump",
+          "support": "represented"
+        },
+        {
+          "id": "s4_declaration",
+          "choice": "Vice President and Cabinet majority declare presidential inability under 25th Amendment Section 4",
+          "owner": "Vice President and Cabinet majority",
+          "support": "represented"
+        },
+        {
+          "id": "house_impeach",
+          "choice": "House of Representatives impeaches Donald Trump",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "senate_convict",
+          "choice": "Senate convicts and removes Donald Trump upon impeachment",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "house_sustain_s4",
+          "choice": "House of Representatives votes by two-thirds to sustain Section 4 inability determination",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "senate_sustain_s4",
+          "choice": "Senate votes by two-thirds to sustain Section 4 inability determination",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 25,
+    "tokens": 60153,
+    "input_tokens": 50840,
+    "output_tokens": 9313,
+    "accounted_tokens_upper": 60153,
+    "unknown_usage_requests": 0
+  }
+}

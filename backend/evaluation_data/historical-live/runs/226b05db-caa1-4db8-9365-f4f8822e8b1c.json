@@ -1,0 +1,2671 @@
+{
+  "run_id": "226b05db-caa1-4db8-9365-f4f8822e8b1c",
+  "case_id": "market_f8ded290642104c725b4e974",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2384,
+      "input_tokens": 2374,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2384,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.04,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.04,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2374,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:28:18.221775+00:00",
+      "contract_id": "0xa93b28a6384aefff4e7d5adb2061c444e4a0e95b8ad17755f9cee123c7099b35",
+      "forecast_cutoff": "2026-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "952a31c02f8d35b8d1b187c1acdadf6d147d869586001d633506a78cbd600152",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.042
+    },
+    {
+      "calls": 2,
+      "tokens": 4768,
+      "input_tokens": 4748,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 4768,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.05500000000000001,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.07,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2374,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.04,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2374,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:28:19.794786+00:00",
+      "contract_id": "0xa93b28a6384aefff4e7d5adb2061c444e4a0e95b8ad17755f9cee123c7099b35",
+      "forecast_cutoff": "2026-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "952a31c02f8d35b8d1b187c1acdadf6d147d869586001d633506a78cbd600152",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.572
+    },
+    {
+      "calls": 8,
+      "tokens": 80859,
+      "input_tokens": 76787,
+      "output_tokens": 4072,
+      "accounted_tokens_upper": 80859,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-05-01",
+                "interval_end": "2026-06-01",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 31,
+                "interval_days": 31,
+                "interval_start_utc": "2026-05-01T23:59:59+00:00",
+                "interval_end_utc": "2026-06-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly proposed to Russia a general, mutually agreed halt in military engagement, effective on a specific date before 31 May 2026, to be concluded through third-party-brokered channels given severed formal ties; Kyiv stated it will reciprocate a matching Russian public commitment."
+                },
+                {
+                  "action_id": "action_1_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_ad6bcb32e91f5a2a",
+                    "action_1_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Kyiv stated it will reciprocate a matching Russian public commitment"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Ukraine publicly proposed to Russia a general, mutually agreed halt in military engagement, effective on a specific date before 31 May 2026",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Ukraine publicly proposed to Russia a general, mutually agreed halt in military engagement, effective on a specific date before 31 May 2026, to be concluded through third-party-brokered channels given severed formal ties; Kyiv stated it will reciprocate a matching Russian public commitment.",
+                  "date": "2026-05-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Ukraine publicly proposes to Russia a general, mutually agreed halt in military engagement, effective on a specific date before 31 May 2026, to be concluded through third-party-brokered channels given severed formal ties; Kyiv states it will reciprocate a matching Russian public commitment.\n承诺：Ukraine commits to a dated general ceasefire if Russia publicly agrees to the same halt on the same date.\n触发或复核条件：Russia issues a matching public commitment to the dated general halt.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Ukraine publicly proposes to Russia a general, mutually agreed halt in military engagement, effective on a specific date before 31 May 2026, to be concluded through third-party-brokered channels given severed formal ties; Kyiv states it will reciprocate a matching Russian public commitment.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Ukraine publicly endorses extending the existing holiday-limited Easter ceasefire format into a further short humanitarian pause, explicitly not a general halt, while continuing to reject a broader dated ceasefire absent acceptable terms.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": "Russia makes no new outward ceasefire move this round; it keeps its existing posture and observes whether Ukraine or mediators produce a general, dated halt proposal before May 31, 2026.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 60.0,
+                      "probability": 1.0,
+                      "action": "Russia makes no new outward ceasefire move this round; it keeps its existing posture and observes whether Ukraine or mediators produce a general, dated halt proposal before May 31, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Ukraine's public proposal is only one side's willingness; Russia's matching public commitment (D1) is unbound and unobserved. The frozen excerpt shows a prior Easter ceasefire announced but reported violated, indicating announcements alone are fragile and no general halt was confirmed by the horizon.",
+                "evidence_quote": "== 9 April ==\nRussia and Ukraine announced a ceasefire for the duration of the Orthodox Easter holidays.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "599f70ef-48ff-4ffb-902a-742ab6d2c507",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:29:04.598684+00:00",
+      "contract_id": "0xa93b28a6384aefff4e7d5adb2061c444e4a0e95b8ad17755f9cee123c7099b35",
+      "forecast_cutoff": "2026-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "952a31c02f8d35b8d1b187c1acdadf6d147d869586001d633506a78cbd600152",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 44.802
+    },
+    {
+      "calls": 75,
+      "tokens": 822198,
+      "input_tokens": 776152,
+      "output_tokens": 46046,
+      "accounted_tokens_upper": 822198,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-01",
+                "interval_end": "2026-05-08",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2026-05-01T23:59:59+00:00",
+                "interval_end_utc": "2026-05-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly proposed to Russia a general, mutually agreed halt in military engagement effective on a specific date before May 31, 2026, open to third-party brokering given severed diplomatic ties, stating Ukraine will halt military engagement on that date if Russia reciprocates with an official, publicly announced commitment."
+                },
+                {
+                  "action_id": "action_1_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "executed",
+                  "summary": "Russia publicly stated it is ready to agree a general, mutually agreed halt in military engagement with Ukraine effective on a specific date before May 31, 2026, conditional on Ukraine's matching public commitment and on the Easter truce violations being addressed through an agreed monitoring channel."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_ad6bcb32e91f5a2a",
+                    "action_1_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "pending",
+                  "effect": "conditional on Ukraine's matching public commitment and on the Easter truce violations being addressed through an agreed monitoring channel"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_8bd22573130450ae",
+                    "action_1_agent_ad6bcb32e91f5a2a"
+                  ],
+                  "outcome": "pending",
+                  "effect": "the Easter truce violations being addressed through an agreed monitoring channel"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Russia publicly stated it is ready to agree a general, mutually agreed halt in military engagement with Ukraine effective on a specific date before May 31, 2026",
+                  "pending_actor_ids": [
+                    "agent_ad6bcb32e91f5a2a",
+                    "agent_8bd22573130450ae"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Ukraine publicly proposed to Russia a general, mutually agreed halt in military engagement effective on a specific date before May 31, 2026, open to third-party brokering given severed diplomatic ties, stating Ukraine will halt military engagement on that date if Russia reciprocates with an official, publicly announced commitment.",
+                  "date": "2026-05-04"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Russia publicly stated it is ready to agree a general, mutually agreed halt in military engagement with Ukraine effective on a specific date before May 31, 2026, conditional on Ukraine's matching public commitment and on the Easter truce violations being addressed through an agreed monitoring channel.",
+                  "date": "2026-05-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Publicly propose to Russia a general, mutually agreed halt in military engagement, effective on a specific date before May 31, 2026, open to third-party brokering (e.g., France/Germany or other mediators) given severed diplomatic ties. State that Ukraine will halt military engagement on that date if Russia reciprocates with an official, publicly announced commitment.\n承诺：Ukraine commits to a dated general ceasefire if Russia reciprocates officially and publicly.\n触发或复核条件：Russia issues an official, publicly announced reciprocal commitment to the same dated general halt.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly propose to Russia a general, mutually agreed halt in military engagement, effective on a specific date before May 31, 2026, open to third-party brokering (e.g., France/Germany or other mediators) given severed diplomatic ties. State that Ukraine will halt military engagement on that date if Russia reciprocates with an official, publicly announced commitment.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly accept a third-party-brokered negotiation format aimed at a general, dated ceasefire, and call on Russia to join, while declining to treat any holiday- or infrastructure-limited pause as sufficient.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": "Publicly state Russia is ready to agree a general, mutually agreed halt in military engagement with Ukraine, effective on a specific date before May 31, 2026, conditional on Ukraine's matching public commitment and on the Easter truce violations being addressed through an agreed monitoring channel.\n承诺：Russia commits to a dated general ceasefire if Ukraine publicly agrees and joint monitoring of violations is established.\n触发或复核条件：Ukraine's public reciprocal commitment and agreed monitoring arrangement.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state Russia is ready to agree a general, mutually agreed halt in military engagement with Ukraine, effective on a specific date before May 31, 2026, conditional on Ukraine's matching public commitment and on the Easter truce violations being addressed through an agreed monitoring channel.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Both sides have publicly floated a general, dated halt in fighting, but each conditions it on the other's matching commitment, and no mutual announcement exists yet. The April Easter truce was limited and reportedly violated, so a qualifying general ceasefire by May 31 remains unlikely though not negligible.",
+                "evidence_quote": "Russia publicly stated it is ready to agree a general, mutually agreed halt in military engagement with Ukraine effective on a specific date before May 31, 2026, conditional on Ukraine's matching public commitment and on the Easter truce violations being addressed through an agreed monitoring channel.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-08",
+                "interval_end": "2026-05-16",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 15,
+                "interval_days": 8,
+                "interval_start_utc": "2026-05-08T00:00:00+00:00",
+                "interval_end_utc": "2026-05-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly accepted Russia's condition of a joint third-party-brokered monitoring channel for Easter-truce violations and confirmed its commitment to a dated general halt before May 31, 2026, contingent on Russia's official public reciprocal commitment, proposing France/Germany or Turkey as mediators to convene talks given severed ties."
+                },
+                {
+                  "action_id": "action_2_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "executed",
+                  "summary": "Russia publicly announced its official reciprocal commitment to halt military engagement on a specific date before May 31, 2026, provided Ukraine issues its matching public commitment and both sides agree a joint monitoring channel for truce violations, naming the date and inviting third-party brokering given severed ties."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_2_agent_ad6bcb32e91f5a2a",
+                    "action_2_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Russia publicly announced its official reciprocal commitment to halt military engagement on a specific date before May 31, 2026, provided Ukraine issues its matching public commitment and both sides agree a joint monitoring channel for truce violations"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_2_agent_ad6bcb32e91f5a2a",
+                    "action_2_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "pending",
+                  "effect": "proposing France/Germany or Turkey as mediators to convene talks given severed ties"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Russia publicly announced its official reciprocal commitment to halt military engagement on a specific date before May 31, 2026, provided Ukraine issues its matching public commitment and both sides agree a joint monitoring channel for truce violations",
+                  "pending_actor_ids": [
+                    "agent_ad6bcb32e91f5a2a",
+                    "agent_8bd22573130450ae"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Ukraine publicly accepted Russia's condition of a joint third-party-brokered monitoring channel for Easter-truce violations and confirmed its commitment to a dated general halt before May 31, 2026, contingent on Russia's official public reciprocal commitment, proposing France/Germany or Turkey as mediators to convene talks given severed ties.",
+                  "date": "2026-05-10"
+                },
+                {
+                  "id": "sim_0001_002_002",
+                  "text": "Russia publicly announced its official reciprocal commitment to halt military engagement on a specific date before May 31, 2026, provided Ukraine issues its matching public commitment and both sides agree a joint monitoring channel for truce violations, naming the date and inviting third-party brokering given severed ties.",
+                  "date": "2026-05-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Publicly accept Russia's conditions: agree to a joint third-party-brokered monitoring channel for Easter-truce violations and confirm Ukraine's commitment to a dated general halt before May 31, 2026, contingent on Russia's official public reciprocal commitment. Propose mediators (e.g., France/Germany or Turkey) to convene talks given severed ties.\n承诺：Ukraine will halt military engagement on an agreed date before May 31, 2026, if Russia issues an official public reciprocal commitment and a monitoring channel is agreed.\n触发或复核条件：Russia issues an official, publicly announced reciprocal commitment to the same dated general halt.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly accept Russia's conditions: agree to a joint third-party-brokered monitoring channel for Easter-truce violations and confirm Ukraine's commitment to a dated general halt before May 31, 2026, contingent on Russia's official public reciprocal commitment. Propose mediators (e.g., France/Germany or Turkey) to convene talks given severed ties.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly propose concrete monitoring terms: a joint commission with named third-party observers to log and adjudicate Easter-truce violations, and propose an effective ceasefire date (e.g., mid-May 2026) so both sides can issue matching official commitments.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": "Publicly announce Russia's official reciprocal commitment: Russia will halt military engagement on a specific date before May 31, 2026, provided Ukraine issues its matching public commitment and both sides agree a joint monitoring channel for truce violations. Name the date and invite third-party brokering given severed ties.\n承诺：Russia commits to a dated general ceasefire once Ukraine publicly reciprocates and a joint monitoring channel is agreed.\n触发或复核条件：Ukraine's matching public commitment and an agreed monitoring arrangement.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce Russia's official reciprocal commitment: Russia will halt military engagement on a specific date before May 31, 2026, provided Ukraine issues its matching public commitment and both sides agree a joint monitoring channel for truce violations. Name the date and invite third-party brokering given severed ties.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly propose a concrete joint monitoring mechanism for truce violations — e.g., a third-party-brokered channel with named observers and a violation-reporting procedure — as the precondition Russia set for its dated ceasefire commitment, and invite Ukraine to accept it publicly.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Simulated reciprocal public commitments (Ukraine 2026-05-04/10, Russia 2026-05-12) raise the chance of a dated general halt, but each side's commitment remains conditional on the other's official public reciprocal commitment and an agreed monitoring channel. The April Easter truce was violated and did not constitute a general ceasefire, so execution risk stays material.",
+                "evidence_quote": "Russia publicly announced its official reciprocal commitment to halt military engagement on a specific date before May 31, 2026, provided Ukraine issues its matching public commitment and both sides agree a joint monitoring channel for truce violations, naming the date and inviting third-party brokering given severed ties.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-16",
+                "interval_end": "2026-05-24",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 23,
+                "interval_days": 8,
+                "interval_start_utc": "2026-05-16T00:00:00+00:00",
+                "interval_end_utc": "2026-05-24T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly issued its matching commitment to halt military engagement on the date Russia named before May 31, 2026, confirmed acceptance of a joint monitoring channel, and named Turkey, with France/Germany as alternatives, to convene the brokering talks, inviting Russia to jointly announce the finalized arrangement before May 31, 2026."
+                },
+                {
+                  "action_id": "action_3_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "executed",
+                  "summary": "Russia publicly accepted France/Germany or Turkey as third-party brokers, confirmed the joint monitoring channel for truce violations, and stated it treats Ukraine's 10 May commitment as its matching public commitment, declaring the dated general halt before May 31, 2026 mutually agreed, conditional on Ukraine reconfirming and the mediators convening the monitoring channel."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_3_agent_ad6bcb32e91f5a2a",
+                    "action_3_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "realized",
+                  "effect": "declaring the dated general halt before May 31, 2026 mutually agreed"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_3_agent_8bd22573130450ae",
+                    "action_3_agent_ad6bcb32e91f5a2a"
+                  ],
+                  "outcome": "pending",
+                  "effect": "conditional on Ukraine reconfirming and the mediators convening the monitoring channel"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "declaring the dated general halt before May 31, 2026 mutually agreed",
+                  "pending_actor_ids": [
+                    "agent_ad6bcb32e91f5a2a",
+                    "agent_8bd22573130450ae"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "Ukraine publicly issued its matching commitment to halt military engagement on the date Russia named before May 31, 2026, confirmed acceptance of a joint monitoring channel, and named Turkey, with France/Germany as alternatives, to convene the brokering talks, inviting Russia to jointly announce the finalized arrangement before May 31, 2026.",
+                  "date": "2026-05-18"
+                },
+                {
+                  "id": "sim_0001_003_002",
+                  "text": "Russia publicly accepted France/Germany or Turkey as third-party brokers, confirmed the joint monitoring channel for truce violations, and stated it treats Ukraine's 10 May commitment as its matching public commitment, declaring the dated general halt before May 31, 2026 mutually agreed, conditional on Ukraine reconfirming and the mediators convening the monitoring channel.",
+                  "date": "2026-05-20"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Publicly issue Ukraine's matching commitment to halt military engagement on the date Russia named, confirm acceptance of a joint monitoring channel, and name Turkey (with France/Germany as alternatives) to convene the brokering talks, inviting Russia to jointly announce the finalized arrangement before May 31, 2026.\n承诺：Ukraine will halt military engagement on the agreed date before May 31, 2026, once Russia's matching public commitment and the joint monitoring channel are jointly announced.\n触发或复核条件：Russia confirms the named date and the monitoring channel and joins a public joint announcement.",
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "Publicly issue Ukraine's matching commitment to halt military engagement on the date Russia named, confirm acceptance of a joint monitoring channel, and name Turkey (with France/Germany as alternatives) to convene the brokering talks, inviting Russia to jointly announce the finalized arrangement before May 31, 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly propose that a named mediator (Turkey, or France/Germany) convene a short brokering round to finalize the monitoring channel and issue a joint Russia-Ukraine public announcement of the dated general halt, without waiting for prior bilateral agreement on every procedural detail.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": "Publicly accept France/Germany or Turkey as third-party brokers, confirm the joint monitoring channel for truce violations, and state Russia treats Ukraine's 10 May commitment as its matching public commitment, so the dated general halt before May 31, 2026 is now mutually agreed.\n承诺：Russia commits to the dated general halt before May 31, 2026 once the monitoring channel is formalized with the named mediators.\n触发或复核条件：Ukraine reconfirms its matching public commitment and the mediators convene the monitoring channel.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly accept France/Germany or Turkey as third-party brokers, confirm the joint monitoring channel for truce violations, and state Russia treats Ukraine's 10 May commitment as its matching public commitment, so the dated general halt before May 31, 2026 is now mutually agreed.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly propose Turkey as the sole broker and host for the monitoring channel, and state Russia's dated halt commitment becomes final upon Ukraine's written acceptance of Turkey as mediator and the channel's terms within this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Simulated round-3 evidence shows both sides publicly accepting a dated general halt and a joint monitoring channel, with Russia treating Ukraine's 10 May commitment as matching and declaring the halt mutually agreed. Remaining gap is formal joint announcement and mediator convening, so probability rises but stays below even odds.",
+                "evidence_quote": "Russia publicly accepted France/Germany or Turkey as third-party brokers, confirmed the joint monitoring channel for truce violations, and stated it treats Ukraine's 10 May commitment as its matching public commitment, declaring the dated general halt before May 31, 2026 mutually agreed, conditional on Ukraine reconfirming and the mediators convening the monitoring channel.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_003_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-24",
+                "interval_end": "2026-06-01",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 31,
+                "interval_days": 8,
+                "interval_start_utc": "2026-05-24T00:00:00+00:00",
+                "interval_end_utc": "2026-06-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly reconfirmed its matching commitment to the dated general halt before May 31, 2026, accepted Russia's declaration that the halt is mutually agreed, and invited Russia to issue a formal joint public announcement of the dated halt with Turkey (or France/Germany) convening the monitoring channel."
+                },
+                {
+                  "action_id": "action_4_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "executed",
+                  "summary": "Russia publicly reconfirmed its commitment to the dated general halt before May 31, 2026, restated that the arrangement is mutually agreed, and called on Turkey (with France/Germany as alternatives) to convene the monitoring channel promptly so a joint announcement can issue before May 31, 2026."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_ad6bcb32e91f5a2a",
+                    "action_4_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Russia publicly reconfirmed its commitment to the dated general halt before May 31, 2026, restated that the arrangement is mutually agreed"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_ad6bcb32e91f5a2a",
+                    "action_4_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "pending",
+                  "effect": "called on Turkey (with France/Germany as alternatives) to convene the monitoring channel promptly so a joint announcement can issue before May 31, 2026"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "invited Russia to issue a formal joint public announcement of the dated halt with Turkey (or France/Germany) convening the monitoring channel",
+                  "pending_actor_ids": [
+                    "agent_ad6bcb32e91f5a2a",
+                    "agent_8bd22573130450ae"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Ukraine publicly reconfirmed its matching commitment to the dated general halt before May 31, 2026, accepted Russia's declaration that the halt is mutually agreed, and invited Russia to issue a formal joint public announcement of the dated halt with Turkey (or France/Germany) convening the monitoring channel.",
+                  "date": "2026-05-24"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "Russia publicly reconfirmed its commitment to the dated general halt before May 31, 2026, restated that the arrangement is mutually agreed, and called on Turkey (with France/Germany as alternatives) to convene the monitoring channel promptly so a joint announcement can issue before May 31, 2026.",
+                  "date": "2026-05-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Publicly reconfirm Ukraine's matching commitment to the dated general halt before May 31, 2026, accept Russia's declaration that the halt is mutually agreed, and invite Russia to issue a formal joint public announcement of the dated halt with Turkey (or France/Germany) convening the monitoring channel.\n承诺：Ukraine will halt military engagement on the agreed date before May 31, 2026, once the joint monitoring channel is convened and the arrangement is jointly announced.\n触发或复核条件：Mediators convene the monitoring channel and Russia joins the joint public announcement.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Publicly reconfirm Ukraine's matching commitment to the dated general halt before May 31, 2026, accept Russia's declaration that the halt is mutually agreed, and invite Russia to issue a formal joint public announcement of the dated halt with Turkey (or France/Germany) convening the monitoring channel.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly call on Turkey, with France/Germany as alternatives, to convene the joint monitoring channel for truce violations and to host the formal joint announcement of the dated halt, stating Ukraine is ready to participate immediately.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:2",
+                  "action": "Publicly reconfirm Russia's commitment to the dated general halt before May 31, 2026, restate that the arrangement is mutually agreed, and call on Turkey (with France/Germany as alternatives) to convene the monitoring channel promptly so a joint announcement can issue before May 31, 2026.\n承诺：Russia remains committed to the dated general halt once the monitoring channel is convened.\n触发或复核条件：Mediators convene the monitoring channel and Ukraine reconfirms.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce that Russia and Ukraine have finalized the dated general halt in military engagement before May 31, 2026, jointly with Ukraine and the named mediators, treating Ukraine's 18 May matching commitment as the reconfirmation and stating the monitoring channel is convened.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reconfirm Russia's commitment to the dated general halt before May 31, 2026, restate that the arrangement is mutually agreed, and call on Turkey (with France/Germany as alternatives) to convene the monitoring channel promptly so a joint announcement can issue before May 31, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Both sides publicly committed to a dated general halt before May 31, 2026, but each made it conditional on the other's formal joint announcement and on mediators convening a monitoring channel. No joint public announcement or mediator convening is evidenced by the horizon, so execution remains unverified.",
+                "evidence_quote": "Russia publicly reconfirmed its commitment to the dated general halt before May 31, 2026, restated that the arrangement is mutually agreed, and called on Turkey (with France/Germany as alternatives) to convene the monitoring channel promptly so a joint announcement can issue before May 31, 2026.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "sim_0001_004_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.0222264
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-01",
+                "interval_end": "2026-05-08",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2026-05-01T23:59:59+00:00",
+                "interval_end_utc": "2026-05-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "executed",
+                  "summary": "Russia publicly stated its readiness to agree a general, mutually agreed halt in military engagement with Ukraine, provided Ukraine reciprocates and a specific effective date is fixed through third-party mediation, and instructed negotiators to work toward concluding this before May 31, 2026."
+                },
+                {
+                  "action_id": "action_1_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_8bd22573130450ae",
+                    "action_1_agent_ad6bcb32e91f5a2a"
+                  ],
+                  "outcome": "pending",
+                  "effect": "provided Ukraine reciprocates and a specific effective date is fixed through third-party mediation"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "provided Ukraine reciprocates and a specific effective date is fixed through third-party mediation",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Russia publicly stated its readiness to agree a general, mutually agreed halt in military engagement with Ukraine, provided Ukraine reciprocates and a specific effective date is fixed through third-party mediation, and instructed negotiators to work toward concluding this before May 31, 2026.",
+                  "date": "2026-05-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                  "action": "Ukraine makes no new public ceasefire move this round; it monitors Russia's public posture and any intermediary channels for a reciprocal general ceasefire signal.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Ukraine publicly states it is ready to accept a general, mutually agreed ceasefire with Russia, effective on a specific date, if Russia reciprocates and agrees to third-party-brokered monitoring; Ukraine proposes talks through existing intermediaries outside severed bilateral channels.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Ukraine makes no new public ceasefire move this round; it monitors Russia's public posture and any intermediary channels for a reciprocal general ceasefire signal.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": "Publicly state Russia's readiness to agree a general, mutually agreed halt in military engagement with Ukraine, provided Ukraine reciprocates and a specific effective date is fixed through third-party mediation; instruct negotiators to work toward concluding this before May 31, 2026.\n承诺：Russia commits to a general ceasefire only if Ukraine publicly agrees and a dated start is set via mediators.\n触发或复核条件：Ukraine publicly accepts reciprocal halt and a specific effective date is fixed.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state Russia's readiness to agree a general, mutually agreed halt in military engagement with Ukraine, provided Ukraine reciprocates and a specific effective date is fixed through third-party mediation; instruct negotiators to work toward concluding this before May 31, 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly accuse Ukraine of violating the April 2026 Easter ceasefire and state that any general ceasefire requires verifiable compliance and a defined duration, without committing to a May 31 date now.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Russia's simulated statement of readiness is conditional on Ukraine reciprocating and a fixed effective date via third-party mediation, so it is willingness, not a concluded mutual ceasefire. The only in-window ceasefire excerpt is an Easter truce that both sides accused each other of violating, which does not meet the general-pause rule.",
+                "evidence_quote": "Russia publicly stated its readiness to agree a general, mutually agreed halt in military engagement with Ukraine, provided Ukraine reciprocates and a specific effective date is fixed through third-party mediation, and instructed negotiators to work toward concluding this before May 31, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-08",
+                "interval_end": "2026-05-16",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 15,
+                "interval_days": 8,
+                "interval_start_utc": "2026-05-08T00:00:00+00:00",
+                "interval_end_utc": "2026-05-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly stated its readiness to agree a general, mutually agreed halt in military engagement with Russia, conditional on Russia publicly confirming the same and a specific effective date being fixed through third-party mediation, and directed its negotiators to work toward concluding this before May 31, 2026."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_8bd22573130450ae",
+                    "action_2_agent_ad6bcb32e91f5a2a"
+                  ],
+                  "outcome": "realized",
+                  "effect": "conditional on Russia publicly confirming the same and a specific effective date being fixed through third-party mediation"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "conditional on Russia publicly confirming the same and a specific effective date being fixed through third-party mediation",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "Ukraine publicly stated its readiness to agree a general, mutually agreed halt in military engagement with Russia, conditional on Russia publicly confirming the same and a specific effective date being fixed through third-party mediation, and directed its negotiators to work toward concluding this before May 31, 2026.",
+                  "date": "2026-05-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Ukraine publicly states readiness to agree a general, mutually agreed halt in military engagement with Russia, conditional on Russia publicly confirming the same and a specific effective date being fixed through third-party mediation, and directs its negotiators to work toward concluding this before May 31, 2026.\n承诺：Reciprocal readiness to a general, dated ceasefire if Russia confirms and a mediator fixes the effective date before May 31, 2026.\n触发或复核条件：Russia publicly confirms a general halt and a third-party mediator fixes a specific effective date.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Ukraine publicly states readiness to agree a general, mutually agreed halt in military engagement with Russia, conditional on Russia publicly confirming the same and a specific effective date being fixed through third-party mediation, and directs its negotiators to work toward concluding this before May 31, 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Ukraine proposes through third-party mediators (e.g., France/Germany-style format) that talks open on a general, dated ceasefire, and asks mediators to set a specific effective date, without yet announcing a bilateral halt.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Both sides issued reciprocal readiness statements on 2026-05-08, but each is conditional on the other confirming and on a third-party-mediated effective date, so no official ceasefire exists yet. The April Easter truce was temporary and reportedly violated, showing willingness without a durable general halt.",
+                "evidence_quote": "Ukraine publicly stated its readiness to agree a general, mutually agreed halt in military engagement with Russia, conditional on Russia publicly confirming the same and a specific effective date being fixed through third-party mediation, and directed its negotiators to work toward concluding this before May 31, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-16",
+                "interval_end": "2026-05-24",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 23,
+                "interval_days": 8,
+                "interval_start_utc": "2026-05-16T00:00:00+00:00",
+                "interval_end_utc": "2026-05-24T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly reaffirmed its readiness for a general, mutually agreed halt in military engagement, confirmed it accepts Russia's 2026-05-08 offer as reciprocal, and called on a third-party mediator to fix a specific effective date before May 31, 2026, directing its negotiators to conclude on that basis."
+                },
+                {
+                  "action_id": "action_3_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "executed",
+                  "summary": "Russia publicly confirmed that it reciprocates Ukraine's stated readiness for a general, mutually agreed halt in military engagement, stated Russia accepts a specific effective date fixed through third-party mediation, and directed negotiators to conclude the dated agreement before May 31, 2026."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_3_agent_ad6bcb32e91f5a2a",
+                    "action_3_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Russia publicly confirmed that it reciprocates Ukraine's stated readiness for a general, mutually agreed halt in military engagement"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "stated Russia accepts a specific effective date fixed through third-party mediation",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "Ukraine publicly reaffirmed its readiness for a general, mutually agreed halt in military engagement, confirmed it accepts Russia's 2026-05-08 offer as reciprocal, and called on a third-party mediator to fix a specific effective date before May 31, 2026, directing its negotiators to conclude on that basis.",
+                  "date": "2026-05-20"
+                },
+                {
+                  "id": "sim_0002_003_002",
+                  "text": "Russia publicly confirmed that it reciprocates Ukraine's stated readiness for a general, mutually agreed halt in military engagement, stated Russia accepts a specific effective date fixed through third-party mediation, and directed negotiators to conclude the dated agreement before May 31, 2026.",
+                  "date": "2026-05-20"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Ukraine publicly reaffirms its readiness for a general, mutually agreed halt, confirms it accepts Russia's 2026-05-08 offer as reciprocal, and calls on a third-party mediator to fix a specific effective date before May 31, 2026, directing negotiators to conclude on that basis.\n承诺：Ukraine will treat Russia's public confirmation plus a mediator-fixed effective date before May 31, 2026 as sufficient to conclude a general ceasefire.\n触发或复核条件：Russia publicly confirms the same and a third-party mediator fixes a specific effective date before May 31, 2026.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Ukraine publicly reaffirms its readiness for a general, mutually agreed halt, confirms it accepts Russia's 2026-05-08 offer as reciprocal, and calls on a third-party mediator to fix a specific effective date before May 31, 2026, directing negotiators to conclude on that basis.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Ukraine publicly calls on a neutral third party (e.g., Turkey, the US, or a multilateral body) to convene talks and fix a specific effective date for a general, mutually agreed halt before May 31, 2026, while restating its conditional readiness.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:3",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Ukraine makes no new public move this round; it monitors Russia's public posture and intermediary channels for a reciprocal confirmation and a mediator-fixed date.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": "Publicly confirm Russia reciprocates Ukraine's stated readiness for a general, mutually agreed halt in military engagement, and state Russia accepts a specific effective date fixed through third-party mediation, directing negotiators to conclude the dated agreement before May 31, 2026.\n承诺：Russia commits to a general, dated, mutually agreed halt once a mediator fixes the effective date before May 31, 2026.\n触发或复核条件：A specific effective date is fixed through third-party mediation before May 31, 2026.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly confirm Russia reciprocates Ukraine's stated readiness for a general, mutually agreed halt in military engagement, and state Russia accepts a specific effective date fixed through third-party mediation, directing negotiators to conclude the dated agreement before May 31, 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly call on third-party mediators (e.g., France, Germany, or another accepted broker) to convene talks and fix a specific effective date for the general halt, reaffirming Russia's conditional readiness and its goal of concluding before May 31, 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Both sides now publicly reciprocate readiness for a general, mutually agreed halt and accept a mediator-fixed effective date, a material step beyond prior statements. But no dated agreement is yet announced, and the April Easter ceasefire shows how quickly such halts can collapse, so completion before May 31 remains uncertain.",
+                "evidence_quote": "Russia publicly confirmed that it reciprocates Ukraine's stated readiness for a general, mutually agreed halt in military engagement, stated Russia accepts a specific effective date fixed through third-party mediation, and directed negotiators to conclude the dated agreement before May 31, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-24",
+                "interval_end": "2026-06-01",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 31,
+                "interval_days": 8,
+                "interval_start_utc": "2026-05-24T00:00:00+00:00",
+                "interval_end_utc": "2026-06-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Both sides publicly stated readiness for a general halt and directed negotiators to conclude a dated agreement before May 31, 2026, but no official ceasefire was announced. The frozen excerpt shows only a temporary Easter ceasefire that both sides accused each other of violating, so willingness has not become an executed, dated agreement.",
+                "evidence_quote": "Russia publicly confirmed that it reciprocates Ukraine's stated readiness for a general, mutually agreed halt in military engagement, stated Russia accepts a specific effective date fixed through third-party mediation, and directed negotiators to conclude the dated agreement before May 31, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.07055999999999998
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 7,
+        "draw_rounds": 7,
+        "audited_silent_rounds": 1,
+        "sampled_decisions": 13,
+        "public_event_count": 12,
+        "substantive_public_event_count": 12,
+        "state_change_count": 8,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 8,
+            "active_actor_count": 2,
+            "public_event_count": 8,
+            "substantive_public_event_count": 8,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 4,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 5,
+            "active_actor_count": 2,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 8,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.385,
+      "covered_p_yes": 0.385,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.385,
+        0.385
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "6080c533-f31d-46c6-af76-9e25864ab1c0",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:30:56.202465+00:00",
+      "contract_id": "0xa93b28a6384aefff4e7d5adb2061c444e4a0e95b8ad17755f9cee123c7099b35",
+      "forecast_cutoff": "2026-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "952a31c02f8d35b8d1b187c1acdadf6d147d869586001d633506a78cbd600152",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 111.6
+    },
+    {
+      "calls": 38,
+      "tokens": 398484,
+      "input_tokens": 378414,
+      "output_tokens": 20070,
+      "accounted_tokens_upper": 398484,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-01",
+                "interval_end": "2026-05-08",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2026-05-01T23:59:59+00:00",
+                "interval_end_utc": "2026-05-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly stated readiness to accept a general, mutually agreed halt in military engagement with Russia effective on a specific date, and called on Russia to reciprocate publicly; Ukraine did not implement any halt unilaterally."
+                },
+                {
+                  "action_id": "action_1_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "executed",
+                  "summary": "Russia publicly stated readiness to agree a general, mutually agreed halt in military engagement with Ukraine effective on a specific date before May 31, 2026, conditional on Ukraine reciprocating and on a defined verification mechanism."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_ad6bcb32e91f5a2a",
+                    "action_1_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "pending",
+                  "effect": "conditional on Ukraine reciprocating and on a defined verification mechanism"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "conditional on Ukraine reciprocating and on a defined verification mechanism",
+                  "pending_actor_ids": [
+                    "agent_ad6bcb32e91f5a2a",
+                    "agent_8bd22573130450ae"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Ukraine publicly stated readiness to accept a general, mutually agreed halt in military engagement with Russia effective on a specific date, and called on Russia to reciprocate publicly; Ukraine did not implement any halt unilaterally.",
+                  "date": "2026-05"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Russia publicly stated readiness to agree a general, mutually agreed halt in military engagement with Ukraine effective on a specific date before May 31, 2026, conditional on Ukraine reciprocating and on a defined verification mechanism.",
+                  "date": "2026-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Ukraine publicly states readiness to accept a general, mutually agreed halt in military engagement with Russia, effective on a specific date, and calls on Russia to reciprocate publicly. This is a conditional proposal only; Ukraine does not implement any halt unilaterally in this round.\n承诺：Ukraine commits to a general ceasefire only if Russia publicly announces and agrees to the same dated halt in military engagement.\n触发或复核条件：Russia publicly agrees to a general, dated, mutually agreed halt in military engagement.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Ukraine publicly states readiness to accept a general, mutually agreed halt in military engagement with Russia, effective on a specific date, and calls on Russia to reciprocate publicly. This is a conditional proposal only; Ukraine does not implement any halt unilaterally in this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Ukraine publicly welcomes third-party brokered talks toward a general ceasefire and invites mediators to convene Russia and Ukraine, without itself announcing any halt in military engagement.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": "Publicly state Russia's readiness to agree a general, mutually agreed halt in military engagement with Ukraine effective on a specific date before May 31, 2026, conditional on Ukraine reciprocating and on a defined verification mechanism; direct the proposal to Ukraine through the available channel.\n承诺：Russia commits to a dated, general ceasefire if Ukraine publicly agrees and verification terms are set.\n触发或复核条件：Ukraine's public reciprocal agreement and agreed verification.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state Russia's readiness to agree a general, mutually agreed halt in military engagement with Ukraine effective on a specific date before May 31, 2026, conditional on Ukraine reciprocating and on a defined verification mechanism; direct the proposal to Ukraine through the available channel.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly reject any ceasefire limited to energy infrastructure, the Black Sea, or humanitarian pauses as insufficient, while leaving open a general halt; accuse Ukraine of violating the April 2026 Easter truce to justify the position.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Both sides expressed conditional readiness in May 2026, but neither announced a mutually agreed, dated general halt. The only in-window ceasefire evidence is an Easter truce that was violated and limited in duration, so it does not satisfy the general-pause rule.",
+                "evidence_quote": "Russia and Ukraine announced a ceasefire for the duration of the Orthodox Easter holidays.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-08",
+                "interval_end": "2026-05-16",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 15,
+                "interval_days": 8,
+                "interval_start_utc": "2026-05-08T00:00:00+00:00",
+                "interval_end_utc": "2026-05-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly reciprocated Russia's offer, accepting a general, mutually agreed halt in military engagement effective on a specific date before May 31, 2026, and proposed a concrete verification mechanism of third-party monitors plus a joint incident-reporting channel; Ukraine stated the halt takes effect only when Russia publicly confirms the same dated commitment and verification terms, and did not halt unilaterally."
+                },
+                {
+                  "action_id": "action_2_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "executed",
+                  "summary": "Russia publicly announced that it accepts Ukraine's call for a general, mutually agreed halt in military engagement, naming a specific effective date before May 31, 2026, and proposed concrete verification terms of third-party monitors and violation reporting for Ukraine's public agreement."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_2_agent_ad6bcb32e91f5a2a",
+                    "action_2_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "pending",
+                  "effect": "the halt takes effect only when Russia publicly confirms the same dated commitment and verification terms"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "the halt takes effect only when Russia publicly confirms the same dated commitment and verification terms",
+                  "pending_actor_ids": [
+                    "agent_ad6bcb32e91f5a2a",
+                    "agent_8bd22573130450ae"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Ukraine publicly reciprocated Russia's offer, accepting a general, mutually agreed halt in military engagement effective on a specific date before May 31, 2026, and proposed a concrete verification mechanism of third-party monitors plus a joint incident-reporting channel; Ukraine stated the halt takes effect only when Russia publicly confirms the same dated commitment and verification terms, and did not halt unilaterally.",
+                  "date": "2026-05"
+                },
+                {
+                  "id": "sim_0001_002_002",
+                  "text": "Russia publicly announced that it accepts Ukraine's call for a general, mutually agreed halt in military engagement, naming a specific effective date before May 31, 2026, and proposed concrete verification terms of third-party monitors and violation reporting for Ukraine's public agreement.",
+                  "date": "2026-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Ukraine publicly reciprocates Russia's offer: accepts a general, mutually agreed halt in military engagement effective on a specific date before May 31, 2026, and proposes a concrete verification mechanism (third-party monitors plus a joint incident-reporting channel). Ukraine does not halt unilaterally; the halt takes effect only when Russia publicly confirms the same dated commitment and verification terms.\n承诺：Ukraine commits to a general, dated ceasefire if Russia publicly confirms the same date and verification mechanism.\n触发或复核条件：Russia publicly confirms the same dated halt and agreed verification mechanism.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Ukraine publicly reciprocates Russia's offer: accepts a general, mutually agreed halt in military engagement effective on a specific date before May 31, 2026, and proposes a concrete verification mechanism (third-party monitors plus a joint incident-reporting channel). Ukraine does not halt unilaterally; the halt takes effect only when Russia publicly confirms the same dated commitment and verification terms.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Ukraine publicly welcomes Russia's readiness but conditions acceptance on a defined verification mechanism and a short, fixed effective date, proposing that monitors be named and terms published before any halt. Ukraine states it will not accept an open-ended or unverified halt and invites Russia to agree the mechanism within days.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": "Publicly announce that Russia accepts Ukraine's call for a general, mutually agreed halt in military engagement, naming a specific effective date before May 31, 2026, and propose concrete verification terms (third-party monitors, violation reporting) for Ukraine's public agreement.\n承诺：Russia commits to a dated, general ceasefire if Ukraine publicly agrees and verification terms are set.\n触发或复核条件：Ukraine's public reciprocal agreement and acceptance of the verification mechanism.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce that Russia accepts Ukraine's call for a general, mutually agreed halt in military engagement, naming a specific effective date before May 31, 2026, and propose concrete verification terms (third-party monitors, violation reporting) for Ukraine's public agreement.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly propose a specific verification mechanism (monitoring body, reporting channel, violation-response procedure) for a general ceasefire, inviting Ukraine to name the effective date, without yet committing to a date unilaterally.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-16",
+                "interval_end": "2026-05-24",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 23,
+                "interval_days": 8,
+                "interval_start_utc": "2026-05-16T00:00:00+00:00",
+                "interval_end_utc": "2026-05-24T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly confirmed that it accepts Russia's named effective date before May 31, 2026 and its proposed verification terms of third-party monitors plus violation reporting, stating the general halt takes effect on that date once both sides' public confirmations match, and committing to the general, dated ceasefire on those terms."
+                },
+                {
+                  "action_id": "action_3_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "executed",
+                  "summary": "Russia publicly confirmed a single shared effective date before May 31, 2026 for a general, mutually agreed halt in military engagement with Ukraine, accepted Ukraine's verification package of third-party monitors plus a joint incident-reporting channel, and stated the halt takes effect on that date once Ukraine publicly confirms the same date and terms."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_3_agent_ad6bcb32e91f5a2a",
+                    "action_3_agent_8bd22573130450ae"
+                  ],
+                  "outcome": "pending",
+                  "effect": "the general halt takes effect on that date once both sides' public confirmations match"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "the general halt takes effect on that date once both sides' public confirmations match",
+                  "pending_actor_ids": [
+                    "agent_ad6bcb32e91f5a2a",
+                    "agent_8bd22573130450ae"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "Ukraine publicly confirmed that it accepts Russia's named effective date before May 31, 2026 and its proposed verification terms of third-party monitors plus violation reporting, stating the general halt takes effect on that date once both sides' public confirmations match, and committing to the general, dated ceasefire on those terms.",
+                  "date": "2026-05"
+                },
+                {
+                  "id": "sim_0001_003_002",
+                  "text": "Russia publicly confirmed a single shared effective date before May 31, 2026 for a general, mutually agreed halt in military engagement with Ukraine, accepted Ukraine's verification package of third-party monitors plus a joint incident-reporting channel, and stated the halt takes effect on that date once Ukraine publicly confirms the same date and terms.",
+                  "date": "2026-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Ukraine publicly confirms it accepts Russia's named effective date before May 31, 2026 and its proposed verification terms (third-party monitors plus violation reporting), stating the general halt takes effect on that date once both sides' public confirmations match. Ukraine commits to the general, dated ceasefire on these terms.\n承诺：Ukraine commits to a general, dated ceasefire effective on the mutually confirmed date if Russia's public confirmation matches the same date and verification terms.\n触发或复核条件：Russia's public confirmation names the identical effective date and identical verification mechanism.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Ukraine publicly confirms it accepts Russia's named effective date before May 31, 2026 and its proposed verification terms (third-party monitors plus violation reporting), stating the general halt takes effect on that date once both sides' public confirmations match. Ukraine commits to the general, dated ceasefire on these terms.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Ukraine publicly welcomes Russia's acceptance but states that the halt takes effect only when a joint written instrument fixes one identical date and one identical verification protocol, and proposes a named date plus monitor composition for Russia to countersign. No unilateral halt.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": "Publicly confirm a single shared effective date before May 31, 2026 for a general, mutually agreed halt in military engagement with Ukraine, and accept Ukraine's verification package of third-party monitors plus a joint incident-reporting channel. State the halt takes effect on that date once Ukraine publicly confirms the same date and terms.\n承诺：Russia commits to a dated, general ceasefire effective before May 31, 2026 if Ukraine publicly confirms the same date and verification terms.\n触发或复核条件：Ukraine's public confirmation of the identical date and verification package.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly confirm a single shared effective date before May 31, 2026 for a general, mutually agreed halt in military engagement with Ukraine, and accept Ukraine's verification package of third-party monitors plus a joint incident-reporting channel. State the halt takes effect on that date once Ukraine publicly confirms the same date and terms.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly confirm the shared effective date before May 31, 2026, but condition final effect on Ukraine accepting Russia's own verification terms: named monitor contingent and a bilateral violation-reporting channel rather than Ukraine's proposed format. Invite Ukraine to accept these terms publicly.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Both sides' simulated round-3 statements confirm a shared dated general halt with matching verification terms, satisfying the mutual public announcement rule. The remaining gap is that the halt is stated to take effect only once confirmations match, so execution is not yet independently verified.",
+                "evidence_quote": "Ukraine publicly confirmed that it accepts Russia's named effective date before May 31, 2026 and its proposed verification terms of third-party monitors plus violation reporting, stating the general halt takes effect on that date once both sides' public confirmations match, and committing to the general, dated ceasefire on those terms.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-05-24",
+                "interval_end": "2026-06-01",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 31,
+                "interval_days": 8,
+                "interval_start_utc": "2026-05-24T00:00:00+00:00",
+                "interval_end_utc": "2026-06-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_ad6bcb32e91f5a2a",
+                    "agent_8bd22573130450ae"
+                  ]
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:2",
+                  "action": "Hold Russia's confirmed position without a new outward act this round, monitoring whether Ukraine's public confirmation names the identical effective date and verification mechanism.",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Publicly confirm that Russia and Ukraine now hold the identical shared effective date before May 31, 2026 and the identical verification mechanism (third-party monitors plus joint incident-reporting channel), and declare the general, mutually agreed halt in military engagement effective on that date.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Hold Russia's confirmed position without a new outward act this round, monitoring whether Ukraine's public confirmation names the identical effective date and verification mechanism.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rounds 2-3 show both sides publicly confirming the same pre-May 31 effective date and verification terms, which matches the rule's requirement for a mutually agreed, dated general halt. The remaining gap is that the halt takes effect only once confirmations match, and no final implementation or independent confirmation is in evidence.",
+                "evidence_quote": "Ukraine publicly confirmed that it accepts Russia's named effective date before May 31, 2026 and its proposed verification terms of third-party monitors plus violation reporting, stating the general halt takes effect on that date once both sides' public confirmations match, and committing to the general, dated ceasefire on those terms.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_003_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.0158466
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 4,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 7,
+        "public_event_count": 6,
+        "substantive_public_event_count": 6,
+        "state_change_count": 2,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 7,
+            "active_actor_count": 2,
+            "public_event_count": 6,
+            "substantive_public_event_count": 6,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.72,
+      "covered_p_yes": 0.72,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.72,
+        0.72
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "b12bef0d-04d9-486a-93bc-5ddce282ff53",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:01:47.967783+00:00",
+      "contract_id": "0xa93b28a6384aefff4e7d5adb2061c444e4a0e95b8ad17755f9cee123c7099b35",
+      "forecast_cutoff": "2026-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "952a31c02f8d35b8d1b187c1acdadf6d147d869586001d633506a78cbd600152",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 118.368
+    },
+    {
+      "calls": 14,
+      "tokens": 152826,
+      "input_tokens": 144272,
+      "output_tokens": 8554,
+      "accounted_tokens_upper": 152826,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-05-01",
+                "interval_end": "2026-06-01",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 31,
+                "interval_days": 31,
+                "interval_start_utc": "2026-05-01T23:59:59+00:00",
+                "interval_end_utc": "2026-06-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "executed",
+                  "summary": "Ukraine publicly stated its readiness to accept a general, mutually agreed halt in military engagement with Russia, contingent on Russia announcing a reciprocal halt effective on a specific date before May 31, 2026, and proposed talks through a third-party brokered format given severed diplomatic ties."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "contingent on Russia announcing a reciprocal halt effective on a specific date before May 31, 2026",
+                  "pending_actor_ids": [
+                    "agent_8bd22573130450ae"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Ukraine publicly stated its readiness to accept a general, mutually agreed halt in military engagement with Russia, contingent on Russia announcing a reciprocal halt effective on a specific date before May 31, 2026, and proposed talks through a third-party brokered format given severed diplomatic ties.",
+                  "date": "2026-05-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                  "action": "Ukraine publicly states its readiness to accept a general, mutually agreed halt in military engagement with Russia, contingent on Russia announcing a reciprocal halt effective on a specific date before May 31, 2026, and proposes talks through a third-party brokered format given severed diplomatic ties.\n承诺：Conditional willingness to a general ceasefire effective on a specific date if Russia reciprocally announces and agrees.\n触发或复核条件：Russia announces a reciprocal general halt effective on a specific date before May 31, 2026.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Ukraine publicly states its readiness to accept a general, mutually agreed halt in military engagement with Russia, contingent on Russia announcing a reciprocal halt effective on a specific date before May 31, 2026, and proposes talks through a third-party brokered format given severed diplomatic ties.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Russia publicly states its readiness to discuss a general, mutually agreed halt in military engagement with Ukraine, conditional on Ukraine halting attacks and on a defined effective date, without itself declaring a ceasefire this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Ukraine's stated readiness is only one side and is explicitly contingent on a Russian reciprocal announcement, which the simulated condition records as still pending. The only in-window ceasefire evidence is an Easter truce that both sides accused each other of violating, so no general mutually agreed halt is established.",
+                "evidence_quote": "target_event: pending. contingent on Russia announcing a reciprocal halt effective on a specific date before May 31, 2026",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.42
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-05-01",
+                "interval_end": "2026-06-01",
+                "horizon_end": "2026-06-01",
+                "elapsed_days": 31,
+                "interval_days": 31,
+                "interval_start_utc": "2026-05-01T23:59:59+00:00",
+                "interval_end_utc": "2026-06-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "status": "executed",
+                  "summary": "Russia publicly stated its readiness to agree with Ukraine on a general, mutually dated halt in military engagement before May 31, 2026, conditional on Ukraine's reciprocal public commitment and agreed third-party-brokered verification arrangements, and instructed its negotiators to pursue this through existing brokerage channels."
+                },
+                {
+                  "action_id": "action_1_agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_8bd22573130450ae",
+                    "action_1_agent_ad6bcb32e91f5a2a"
+                  ],
+                  "outcome": "pending",
+                  "effect": "conditional on Ukraine's reciprocal public commitment and agreed third-party-brokered verification arrangements"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Russia x Ukraine ceasefire by May 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Russia publicly stated its readiness to agree with Ukraine on a general, mutually dated halt in military engagement before May 31, 2026",
+                  "pending_actor_ids": [
+                    "agent_ad6bcb32e91f5a2a"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Russia publicly stated its readiness to agree with Ukraine on a general, mutually dated halt in military engagement before May 31, 2026, conditional on Ukraine's reciprocal public commitment and agreed third-party-brokered verification arrangements, and instructed its negotiators to pursue this through existing brokerage channels.",
+                  "date": "2026-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ad6bcb32e91f5a2a",
+                  "actor_name": "Ukraine",
+                  "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                  "action": "Hold current position and monitor for any Russian public announcement of a general, dated halt in military engagement; no new outward act this round.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Ukraine publicly proposes to Russia a general, mutually agreed halt in military engagement, with a specific effective date before 31 May 2026, to be concluded through third-party-brokered channels given severed diplomatic ties. Ukraine states it will reciprocate a Russian public commitment to the same dated halt.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ad6bcb32e91f5a2a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Hold current position and monitor for any Russian public announcement of a general, dated halt in military engagement; no new outward act this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_8bd22573130450ae",
+                  "actor_name": "Russia",
+                  "candidate_id": "agent_8bd22573130450ae:initial:1",
+                  "action": "Publicly state Russia's readiness to agree with Ukraine on a general, mutually dated halt in military engagement before May 31, 2026, conditional on Ukraine's reciprocal public commitment and third-party-brokered verification; instruct negotiators to pursue this through existing brokerage channels.\n承诺：Russia will conclude a general, dated ceasefire with Ukraine if Ukraine reciprocally and publicly commits and verification terms are agreed before May 31, 2026.\n触发或复核条件：Ukraine's public reciprocal commitment and agreed verification arrangements.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state Russia's readiness to agree with Ukraine on a general, mutually dated halt in military engagement before May 31, 2026, conditional on Ukraine's reciprocal public commitment and third-party-brokered verification; instruct negotiators to pursue this through existing brokerage channels.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_8bd22573130450ae:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly accuse Ukraine of violating the April 2026 Easter truce and set out Russia's stated conditions for any broader ceasefire, without committing to a general halt at this stage.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Only Russia's conditional readiness statement is in evidence; Ukraine's reciprocal commitment and a mutually dated general halt are unconfirmed. The April Easter ceasefire was temporary and reportedly violated, so it does not satisfy the general-pause rule.",
+                "evidence_quote": "Russia publicly stated its readiness to agree with Ukraine on a general, mutually dated halt in military engagement before May 31, 2026, conditional on Ukraine's reciprocal public commitment and agreed third-party-brokered verification arrangements, and instructed its negotiators to pursue this through existing brokerage channels.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.18
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 1,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "d2e92988-f24c-42b6-b68b-2254abe2057e",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:02:13.466451+00:00",
+      "contract_id": "0xa93b28a6384aefff4e7d5adb2061c444e4a0e95b8ad17755f9cee123c7099b35",
+      "forecast_cutoff": "2026-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "952a31c02f8d35b8d1b187c1acdadf6d147d869586001d633506a78cbd600152",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 25.497
+    },
+    {
+      "calls": 66,
+      "tokens": 708717,
+      "input_tokens": 656516,
+      "output_tokens": 52201,
+      "accounted_tokens_upper": 708717,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.33100274499999993,
+      "coverage": 0.4421987500000001,
+      "unexplored_mass": 0.5578012499999999,
+      "unknown_bounds": [
+        0.052102119999999995,
+        0.60990337
+      ],
+      "search_iterations": 8,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 8,
+          "search_value": 0.386098,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.48999999999999994,
+          "visits": 3,
+          "search_value": 0.18834000000000004,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.26949999999999996,
+          "visits": 2,
+          "search_value": 0.17691,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.26949999999999996,
+          "visits": 1,
+          "search_value": 0.20022,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.148225,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.010375750000000001
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.08084999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.05,
+          "frontier": true,
+          "contribution": 0.0040425
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.04042499999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.14699999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.017639999999999996
+        },
+        {
+          "path": [
+            1,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.07349999999999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.21,
+          "visits": 4,
+          "search_value": 0.598454,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.05775,
+          "visits": 3,
+          "search_value": 0.6989386666666667,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.0202125,
+          "visits": 1,
+          "search_value": 0.6717759999999999,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.009904125,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.62,
+          "frontier": true,
+          "contribution": 0.0061405575
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.004244625,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.5,
+          "frontier": true,
+          "contribution": 0.0021223125
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.006063750000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.013474999999999999,
+          "visits": 1,
+          "search_value": 0.888,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            2,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.009432499999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.42,
+          "frontier": true,
+          "contribution": 0.003961649999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            2,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.004042499999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.22,
+          "frontier": true,
+          "contribution": 0.0008893499999999998
+        },
+        {
+          "path": [
+            2,
+            1,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.024062500000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.0385,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 0.0069299999999999995
+        },
+        {
+          "path": [
+            2,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.11374999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "ce7d3530-f68b-4d0d-b5ec-ddad446ff188",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:06:49.403514+00:00",
+      "contract_id": "0xa93b28a6384aefff4e7d5adb2061c444e4a0e95b8ad17755f9cee123c7099b35",
+      "forecast_cutoff": "2026-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "952a31c02f8d35b8d1b187c1acdadf6d147d869586001d633506a78cbd600152",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 276.163
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-05-01T23:59:59+00:00",
+  "forecast_key": "0xa93b28a6384aefff4e7d5adb2061c444e4a0e95b8ad17755f9cee123c7099b35",
+  "group_id": "russia-x-ukraine-ceasefire-by-may-31-2026",
+  "evidence_sha256": "952a31c02f8d35b8d1b187c1acdadf6d147d869586001d633506a78cbd600152",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 812,
+    "input_tokens": 712,
+    "output_tokens": 100,
+    "accounted_tokens_upper": 812,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-05-01",
+        "2026-06-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-05-01",
+        "2026-05-08",
+        "2026-05-16",
+        "2026-05-24",
+        "2026-06-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-05-01",
+        "2026-05-08",
+        "2026-05-16",
+        "2026-05-24",
+        "2026-06-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-05-01",
+        "2026-06-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-05-01",
+        "2026-05-08",
+        "2026-05-16",
+        "2026-05-24",
+        "2026-06-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-06-01T03:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2026-05-31T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "unverified",
+      "seats": [],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Russia's official decision to agree to and publicly announce a general, mutually agreed halt in military engagement with Ukraine.",
+        "Ukraine's official decision to agree to and publicly announce a general, mutually agreed halt in military engagement with Russia."
+      ],
+      "gaps": [
+        "No named incumbent for President of Russia or President of Ukraine is provided in the sources; seats are bound to the offices, not individuals.",
+        "The sources do not establish that either side has agreed to a general ceasefire by the cutoff; only a holiday ceasefire (E1) and mutual violation reports (E3) are cited.",
+        "The resolution source for official announcements or wide media consensus is not a decision seat and is left as an observation requirement.",
+        "No frozen source identifies President of Russia; its decision remains unresolved.",
+        "No frozen source identifies President of Ukraine; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Russia's official decision to agree to and publicly announce a general, mutually agreed halt in military engagement with Ukraine.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D2",
+          "choice": "Ukraine's official decision to agree to and publicly announce a general, mutually agreed halt in military engagement with Russia.",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 16,
+    "tokens": 57563,
+    "input_tokens": 49533,
+    "output_tokens": 8030,
+    "accounted_tokens_upper": 57563,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

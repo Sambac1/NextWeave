@@ -1,0 +1,2061 @@
+{
+  "run_id": "bf8b43c1-e87a-457e-ad52-841cd64aaa33",
+  "case_id": "market_273b830657c52c63acd529ec",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2976,
+      "input_tokens": 2966,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2976,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.02,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.02,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2966,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:23:47.974693+00:00",
+      "contract_id": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "237c5ecf66a5b9195bbdeb4d6dd1f49afc3accf649d202107afb934da8b2eb97",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.806
+    },
+    {
+      "calls": 2,
+      "tokens": 5952,
+      "input_tokens": 5932,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5952,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.03,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2966,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2966,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:23:49.679081+00:00",
+      "contract_id": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "237c5ecf66a5b9195bbdeb4d6dd1f49afc3accf649d202107afb934da8b2eb97",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.704
+    },
+    {
+      "calls": 9,
+      "tokens": 107266,
+      "input_tokens": 103702,
+      "output_tokens": 3564,
+      "accounted_tokens_upper": 107266,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "candidate_id": "agent_aa93462b55d45333:initial:1",
+                  "action": "Take no official action this round; monitor for any resignation, removal, detention, succession or early-election signal concerning Putin's presidency before December 31, 2026.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_aa93462b55d45333:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no official action this round; monitor for any resignation, removal, detention, succession or early-election signal concerning Putin's presidency before December 31, 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_aa93462b55d45333:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue official government information reaffirming that Vladimir Putin continues to serve as President of Russia, with no change in status, and that no resignation, removal or succession is in effect as of this date.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event in the window shows Putin ceasing to be president; the latest dated items (Jan 2026 meeting with al-Sharaa, July 2026 Omsk meeting) show him still acting as president. Historical re-elections and the 2020 term reset make removal by the deadline unlikely, though unverified late-window developments remain unknown.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.8
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "bba1eecc-6cf9-4f87-b9c4-27afa723b885",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:24:48.204513+00:00",
+      "contract_id": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "237c5ecf66a5b9195bbdeb4d6dd1f49afc3accf649d202107afb934da8b2eb97",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 58.475
+    },
+    {
+      "calls": 17,
+      "tokens": 219246,
+      "input_tokens": 211953,
+      "output_tokens": 7293,
+      "accounted_tokens_upper": 219246,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "candidate_id": "agent_aa93462b55d45333:initial:1",
+                  "action": "Issue no official statement on Putin's presidential status this round; monitor for any resignation, removal, detention, incapacity, or early-election trigger through December 31, 2026.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_aa93462b55d45333:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Issue no official statement on Putin's presidential status this round; monitor for any resignation, removal, detention, incapacity, or early-election trigger through December 31, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event in the window shows Putin resigning, being removed, detained, or permanently prevented from presidential duties; the latest dated items show him still meeting foreign leaders in 2026. Historical succession precedents and polling weakness do not establish an in-window departure, so the outcome remains unverified.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                  "action": "Continue serving as President of Russia; make no resignation, departure, or succession announcement in this round.\n触发或复核条件：Review if any official statement or credible report indicates a change in Putin's presidential status.",
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "Continue serving as President of Russia; make no resignation, departure, or succession announcement in this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_2d89204b75f653ea:initial:2",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Hold a public working meeting or foreign-policy engagement as incumbent president, reaffirming the Kremlin's stated positions (e.g., rejecting a conflict freeze) without addressing presidential tenure.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "candidate_id": "agent_aa93462b55d45333:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event in the window shows Putin resigning, being removed, detained, or permanently prevented from presidential duties; the latest dated items show him still meeting foreign leaders in 2026. Historical succession precedents and polling weakness do not establish an in-window departure, so the outcome remains unverified.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.9
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "f2789c12-3fb6-446a-a797-6cf413ebc3bc",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:25:12.267539+00:00",
+      "contract_id": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "237c5ecf66a5b9195bbdeb4d6dd1f49afc3accf649d202107afb934da8b2eb97",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 24.06
+    },
+    {
+      "calls": 26,
+      "tokens": 300398,
+      "input_tokens": 290247,
+      "output_tokens": 10151,
+      "accounted_tokens_upper": 300398,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                  "action": "Take no new outward action regarding the presidency this round; continue serving as President of Russia without any resignation, removal, or status-change announcement.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward action regarding the presidency this round; continue serving as President of Russia without any resignation, removal, or status-change announcement.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "candidate_id": "agent_aa93462b55d45333:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence shows Putin has ceased to be president or been permanently prevented from duties; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists but is not a new in-window occurrence.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence shows Putin has ceased to be president or been permanently prevented from duties; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists but is not a new in-window occurrence.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence shows Putin has ceased to be president or been permanently prevented from duties; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists but is not a new in-window occurrence.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                  "action": "Take no new outward action on the presidency this round; continue serving as President of Russia with no resignation, removal, or status-change announcement.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                      "weight": 95.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward action on the presidency this round; continue serving as President of Russia with no resignation, removal, or status-change announcement.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "candidate_id": "agent_aa93462b55d45333:initial:1",
+                  "action": null,
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_aa93462b55d45333:initial:2",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Issue a routine official statement reaffirming that Vladimir Putin continues to exercise the powers of President of Russia and that no change in presidential status has occurred, with no resignation or succession process underway.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence shows Putin has ceased to be president or been permanently prevented from duties; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists but is not a new in-window occurrence.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event in the window shows Putin leaving or being permanently prevented from the presidency; he is documented as still meeting foreign leaders in 2026. Historical succession precedents and term-limit reset only show the office can change hands, not that it will by the deadline.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.9
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "42909550-5d43-47da-b996-665983192cec",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:26:20.050601+00:00",
+      "contract_id": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "237c5ecf66a5b9195bbdeb4d6dd1f49afc3accf649d202107afb934da8b2eb97",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 67.78
+    },
+    {
+      "calls": 53,
+      "tokens": 622364,
+      "input_tokens": 601863,
+      "output_tokens": 20501,
+      "accounted_tokens_upper": 622364,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                  "action": "Take no new public action regarding the presidency this round; continue serving as President of Russia.\n触发或复核条件：Review if any public evidence emerges of a resignation announcement, removal proceeding, detention, or incapacity affecting Putin's presidential status before 2026-12-31.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no new public action regarding the presidency this round; continue serving as President of Russia.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "candidate_id": "agent_aa93462b55d45333:initial:1",
+                  "action": "Take no new official action this round. The Government of Russia has no evidenced change in Putin's presidential status to confirm or deny before the December 31, 2026 deadline, and no scheduled transition is in the packet.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_aa93462b55d45333:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no new official action this round. The Government of Russia has no evidenced change in Putin's presidential status to confirm or deny before the December 31, 2026 deadline, and no scheduled transition is in the packet.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_aa93462b55d45333:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Issue an official Government of Russia statement reaffirming that Vladimir Putin remains President of Russia and continues to exercise presidential duties, with no change in status.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows Putin has left or been permanently prevented from serving as president; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists, but nothing in-window satisfies the rule, so the chance is low.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows Putin has left or been permanently prevented from serving as president; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists, but nothing in-window satisfies the rule, so the chance is low.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows Putin has left or been permanently prevented from serving as president; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists, but nothing in-window satisfies the rule, so the chance is low.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                  "action": "Take no new public action on the presidency this round; continue serving as President of Russia through the current six-year term.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no new public action on the presidency this round; continue serving as President of Russia through the current six-year term.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "candidate_id": "agent_aa93462b55d45333:initial:1",
+                  "action": "Take no new official action this round. No evidenced change in Putin's presidential status exists to confirm or deny, and no scheduled transition appears before December 31, 2026.",
+                  "p_selected": 0.5142857142857142,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_aa93462b55d45333:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.5142857142857142,
+                      "action": "Take no new official action this round. No evidenced change in Putin's presidential status exists to confirm or deny, and no scheduled transition appears before December 31, 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_aa93462b55d45333:supplement:1",
+                      "weight": 85.0,
+                      "probability": 0.4857142857142857,
+                      "action": "Take no new official action this round. No evidenced change in Putin's presidential status exists to confirm or deny, and no scheduled transition appears before December 31, 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows Putin has left or been permanently prevented from serving as president; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists, but nothing in-window satisfies the rule, so the chance is low.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event in the window shows Putin leaving or being permanently prevented from presidential duties; the latest dated items are routine diplomacy (Jan 2026 meeting with al-Sharaa, July 2026 Tokayev talks) and a 2026 poll showing softer support, not removal. Remaining unknown is any unobserved resignation, detention, or incapacity before the deadline.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.4371428571428571
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                  "action": "Continue serving as President of Russia with no resignation, removal, or status-change announcement this round; keep foreign-policy engagement as before.",
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "Continue serving as President of Russia with no resignation, removal, or status-change announcement this round; keep foreign-policy engagement as before.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_2d89204b75f653ea:initial:2",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Publicly reaffirm that he remains President of Russia and intends to serve out his current term, rejecting any suggestion of early departure.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "candidate_id": "agent_aa93462b55d45333:initial:1",
+                  "action": "Issue no statement on Putin's presidential status this round; continue monitoring official channels and credible reporting for any resignation, removal, detention, or succession event before December 31, 2026.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_aa93462b55d45333:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Issue no statement on Putin's presidential status this round; continue monitoring official channels and credible reporting for any resignation, removal, detention, or succession event before December 31, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows Putin has left or been permanently prevented from serving as president; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists, but nothing in-window satisfies the rule, so the chance is low.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows Putin has left or been permanently prevented from serving as president; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists, but nothing in-window satisfies the rule, so the chance is low.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows Putin has left or been permanently prevented from serving as president; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists, but nothing in-window satisfies the rule, so the chance is low.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2d89204b75f653ea",
+                  "actor_name": "Vladimir Putin",
+                  "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                  "action": "Continue serving as President of Russia; make no resignation, removal, or status-change announcement this round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2d89204b75f653ea:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Continue serving as President of Russia; make no resignation, removal, or status-change announcement this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_aa93462b55d45333",
+                  "actor_name": "Government of Russia",
+                  "candidate_id": "agent_aa93462b55d45333:initial:1",
+                  "action": "Issue no statement on Putin's presidential status this round; continue monitoring official channels and credible reporting for any resignation, removal, detention, incapacity or succession event before December 31, 2026.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_aa93462b55d45333:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Issue no statement on Putin's presidential status this round; continue monitoring official channels and credible reporting for any resignation, removal, detention, incapacity or succession event before December 31, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows Putin has left or been permanently prevented from serving as president; recent items show him meeting foreign leaders in 2026. Historical succession precedent exists, but nothing in-window satisfies the rule, so the chance is low.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": null,
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Putin out as President of Russia by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event in the window shows Putin leaving or being permanently prevented from presidential duties; the latest dated items are routine diplomacy (Jan 2026 meeting with al-Sharaa, July 2026 Tokayev talks) and a 2026 poll showing softer support, not removal. Remaining unknown is any unobserved resignation, detention, or incapacity before the deadline.",
+                "evidence_quote": "Putin with Syrian president Ahmed al-Sharaa, 28 January 2026",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "hist_c7daa3a07f40507a.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.9
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 6,
+        "sampled_decisions": 8,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "165bc144-b149-4bda-870c-6b121659fee3",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:27:31.977528+00:00",
+      "contract_id": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "237c5ecf66a5b9195bbdeb4d6dd1f49afc3accf649d202107afb934da8b2eb97",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 71.923
+    },
+    {
+      "calls": 80,
+      "tokens": 961700,
+      "input_tokens": 923532,
+      "output_tokens": 38168,
+      "accounted_tokens_upper": 961700,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.011000000000000001,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.011000000000000001,
+        0.011000000000000001
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.07064000000000001,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.9,
+          "visits": 5,
+          "search_value": 0.06288,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.9,
+          "visits": 4,
+          "search_value": 0.059,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.9,
+          "visits": 3,
+          "search_value": 0.05253333333333333,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.81,
+          "visits": 1,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.81,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.01,
+          "frontier": true,
+          "contribution": 0.008100000000000001
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.09000000000000001,
+          "visits": 1,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.09000000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.01,
+          "frontier": true,
+          "contribution": 0.0009000000000000001
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.1,
+          "visits": 4,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.1,
+          "visits": 3,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.1,
+          "visits": 2,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.08000000000000002,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.08000000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0016000000000000003
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.020000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0004000000000000001
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "9fab0515-1f08-473c-8d40-67c74ce4f967",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:31:12.814948+00:00",
+      "contract_id": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "237c5ecf66a5b9195bbdeb4d6dd1f49afc3accf649d202107afb934da8b2eb97",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 220.829
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+  "group_id": "putin-out-before-2027",
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "237c5ecf66a5b9195bbdeb4d6dd1f49afc3accf649d202107afb934da8b2eb97",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 804,
+    "input_tokens": 631,
+    "output_tokens": 173,
+    "accounted_tokens_upper": 804,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_069d225db0634726",
+          "name": "Vladimir Putin",
+          "role": "President of Russia; sole incumbent whose resignation, removal, detention, or permanent incapacity would satisfy the market",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_ce2d4e01155836d3",
+          "name": "Government of Russia",
+          "role": "Official Russian governmental authority whose official information is the primary resolution source for confirming Putin's status",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No named successor, legislature, court, or security actor is evidenced as having an independent decision seat to remove Putin; the removal mechanism is unresolved.",
+        "The resolution source permits a consensus of credible reporting, but no specific reporting outlet is a decision seat; outcome verification is left owner=null."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Vladimir Putin ceases to be President of Russia for any period, including by resignation, removal, detention, or permanent prevention from duties",
+          "owner": "Vladimir Putin",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "Official information from the government of Russia confirms Putin's departure or permanent inability to fulfill presidential duties",
+          "owner": "Government of Russia",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 27,
+    "tokens": 73452,
+    "input_tokens": 63513,
+    "output_tokens": 9939,
+    "accounted_tokens_upper": 73452,
+    "unknown_usage_requests": 0
+  }
+}

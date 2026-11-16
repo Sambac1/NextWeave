@@ -1,0 +1,1420 @@
+{
+  "run_id": "11efa89c-ecc2-4d5b-90bf-80154f14b065",
+  "case_id": "market_0a52b73f64f2a2ebe29107ba",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3164,
+      "input_tokens": 3154,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3164,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.99,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.99,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3154,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:31:49.939387+00:00",
+      "contract_id": "0x4150752d0efc99377d7388908724cb79e8423768414af7e4a4ee857ac28ef8e3",
+      "forecast_cutoff": "2025-01-02T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0ca0a00e0d3ebc156d364069a5d627e3d4305828a9de3bae2c8ccec8454615b0",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.793
+    },
+    {
+      "calls": 2,
+      "tokens": 6328,
+      "input_tokens": 6308,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6328,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.985,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.98,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3154,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.99,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3154,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:31:51.162489+00:00",
+      "contract_id": "0x4150752d0efc99377d7388908724cb79e8423768414af7e4a4ee857ac28ef8e3",
+      "forecast_cutoff": "2025-01-02T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0ca0a00e0d3ebc156d364069a5d627e3d4305828a9de3bae2c8ccec8454615b0",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.221
+    },
+    {
+      "calls": 7,
+      "tokens": 71194,
+      "input_tokens": 68670,
+      "output_tokens": 2524,
+      "accounted_tokens_upper": 71194,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-01-02",
+                "interval_end": "2025-01-07",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2025-01-02T23:59:59+00:00",
+                "interval_end_utc": "2025-01-07T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "status": "executed",
+                  "summary": "The 119th United States Congress convened a joint session on January 6, 2025, at which the President of the Senate opened the state certificates of vote and the electoral votes were counted, and the 2024 presidential election result was officially certified under the Electoral Count Act and Electoral Count Reform and Presidential Transition Improvement Act of 2022."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "unknown",
+                  "after": "met",
+                  "summary": "the 2024 presidential election result was officially certified under the Electoral Count Act and Electoral Count Reform and Presidential Transition Improvement Act of 2022",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The 119th United States Congress convened a joint session on January 6, 2025, at which the President of the Senate opened the state certificates of vote and the electoral votes were counted, and the 2024 presidential election result was officially certified under the Electoral Count Act and Electoral Count Reform and Presidential Transition Improvement Act of 2022.",
+                  "date": "2025-01-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                  "action": "Convene the joint session of the 119th Congress on January 6, 2025; the President of the Senate opens the state certificates, electoral votes are counted, and the 2024 presidential election result is officially certified under the Electoral Count Act and Electoral Count Reform Act of 2022.\n承诺：Complete the count and announce the certified result in the joint session on January 6, 2025.\n触发或复核条件：Proceeding pursuant to the Electoral Count Act and Electoral Count Reform and Presidential Transition Improvement Act of 2022.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Convene the joint session of the 119th Congress on January 6, 2025; the President of the Senate opens the state certificates, electoral votes are counted, and the 2024 presidential election result is officially certified under the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.97,
+                "basis": "A simulated round-1 event states the 119th Congress convened a joint session on January 6, 2025, opened the certificates, counted electoral votes, and officially certified the 2024 result under the Electoral Count Act. That directly satisfies the certification rule; residual uncertainty is only about final verification, not the reported outcome.",
+                "evidence_quote": "The 119th United States Congress convened a joint session on January 6, 2025, at which the President of the Senate opened the state certificates of vote and the electoral votes were counted, and the 2024 presidential election result was officially certified under the Electoral Count Act and Electoral Count Reform and Presidential Transition Improvement Act of 2022.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.97,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.97,
+      "covered_p_yes": 0.97,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.97,
+        0.97
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "08d4bf3e-8a43-4650-b9ee-deaf4a137381",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:32:27.545606+00:00",
+      "contract_id": "0x4150752d0efc99377d7388908724cb79e8423768414af7e4a4ee857ac28ef8e3",
+      "forecast_cutoff": "2025-01-02T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0ca0a00e0d3ebc156d364069a5d627e3d4305828a9de3bae2c8ccec8454615b0",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 36.382
+    },
+    {
+      "calls": 30,
+      "tokens": 315602,
+      "input_tokens": 303167,
+      "output_tokens": 12435,
+      "accounted_tokens_upper": 315602,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-01-02",
+                "interval_end": "2025-01-03",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2025-01-02T23:59:59+00:00",
+                "interval_end_utc": "2025-01-03T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "status": "executed",
+                  "summary": "The 119th United States Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding, to open the state certificates of vote, count the electoral ballots, and announce and certify the 2024 presidential election result under the Electoral Count Act and Electoral Count Reform Act of 2022."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "announced it will convene the joint session on January 6, 2025",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The 119th United States Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding, to open the state certificates of vote, count the electoral ballots, and announce and certify the 2024 presidential election result under the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                  "date": "2025-01-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                  "action": "Convene the joint session on January 6, 2025, with the Vice President presiding: open the state certificates of vote, count the electoral ballots, and announce the result, certifying the 2024 presidential election under the Electoral Count Act and Electoral Count Reform Act of 2022.\n承诺：Congress will complete the count and officially certify the result in the January 6 joint session.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Convene the joint session on January 6, 2025, with the Vice President presiding: open the state certificates of vote, count the electoral ballots, and announce the result, certifying the 2024 presidential election under the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Congress announced it will convene the joint session on January 6, 2025 to count and certify the 2024 result under the Electoral Count Reform Act. The scheduled, law-based joint session makes certification highly likely, though it remains a planned activity rather than an executed one at the cutoff.",
+                "evidence_quote": "The 119th United States Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding, to open the state certificates of vote, count the electoral ballots, and announce and certify the 2024 presidential election result under the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-01-03",
+                "interval_end": "2025-01-05",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 3,
+                "interval_days": 2,
+                "interval_start_utc": "2025-01-03T00:00:00+00:00",
+                "interval_end_utc": "2025-01-05T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Congress announced it will convene the joint session on January 6, 2025 to count and certify the 2024 result under the Electoral Count Reform Act. The scheduled, law-based joint session makes certification highly likely, though it remains a planned activity rather than an executed one at the cutoff.",
+                "evidence_quote": "The 119th United States Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding, to open the state certificates of vote, count the electoral ballots, and announce and certify the 2024 presidential election result under the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-01-05",
+                "interval_end": "2025-01-07",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 5,
+                "interval_days": 2,
+                "interval_start_utc": "2025-01-05T00:00:00+00:00",
+                "interval_end_utc": "2025-01-07T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Congress announced the joint session for January 6, 2025 to count and certify the result, and the frozen excerpt describes the count as the final step confirming the outcome. No settled event shows disruption or failure to certify; execution remains unverified at the horizon.",
+                "evidence_quote": "The 119th United States Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding, to open the state certificates of vote, count the electoral ballots, and announce and certify the 2024 presidential election result under the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.93,
+          "error": null,
+          "action_path_probability": 0.8
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-01-02",
+                "interval_end": "2025-01-03",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2025-01-02T23:59:59+00:00",
+                "interval_end_utc": "2025-01-03T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "status": "executed",
+                  "summary": "The 119th United States Congress announced it will convene a joint session on January 6, 2025, with the President of the Senate opening the certificates and the electoral votes counted under the Electoral Count Act and the Electoral Count Reform and Presidential Transition Improvement Act of 2022, aiming to officially certify the 2024 presidential result that day."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "aiming to officially certify the 2024 presidential result that day",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The 119th United States Congress announced it will convene a joint session on January 6, 2025, with the President of the Senate opening the certificates and the electoral votes counted under the Electoral Count Act and the Electoral Count Reform and Presidential Transition Improvement Act of 2022, aiming to officially certify the 2024 presidential result that day.",
+                  "date": "2025-01-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                  "action": "The 119th Congress commits to convene in joint session on January 6, 2025, with the President of the Senate opening the certificates and the electoral votes counted under the Electoral Count Act and ECRA of 2022, aiming to officially certify the 2024 presidential result that day.\n承诺：Certification of the 2024 presidential election will be completed by joint session on January 6, 2025, per the Electoral Count Act and ECRA.\n触发或复核条件：No lawful disruption prevents completion of the count.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "The 119th Congress commits to convene in joint session on January 6, 2025, with the President of the Senate opening the certificates and the electoral votes counted under the Electoral Count Act and ECRA of 2022, aiming to officially certify the 2024 presidential result that day.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.97,
+                "basis": "The frozen excerpt states the Electoral College ballot count during a joint session of the 119th Congress on January 6, 2025, will be the final step confirming Trump's victory. The Electoral Count Reform Act clarifies the vice president's ministerial role, reducing the risk of a disruptive rejection of certificates.",
+                "evidence_quote": "The count of the Electoral College ballots during a joint session of the 119th United States Congress, pursuant to the Electoral Count Act and Electoral Count Reform and Presidential Transition Improvement Act of 2022, on January 6, 2025, will be the final step to confirm President-elect Donald Trump's victory in the 2024 presidential election over Kamala Harris.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-01-03",
+                "interval_end": "2025-01-05",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 3,
+                "interval_days": 2,
+                "interval_start_utc": "2025-01-03T00:00:00+00:00",
+                "interval_end_utc": "2025-01-05T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.97,
+                "basis": "The frozen excerpt states the Electoral College ballot count during a joint session of the 119th Congress on January 6, 2025, will be the final step confirming Trump's victory. The Electoral Count Reform Act clarifies the vice president's ministerial role, reducing the risk of a disruptive rejection of certificates.",
+                "evidence_quote": "The count of the Electoral College ballots during a joint session of the 119th United States Congress, pursuant to the Electoral Count Act and Electoral Count Reform and Presidential Transition Improvement Act of 2022, on January 6, 2025, will be the final step to confirm President-elect Donald Trump's victory in the 2024 presidential election over Kamala Harris.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-01-05",
+                "interval_end": "2025-01-07",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 5,
+                "interval_days": 2,
+                "interval_start_utc": "2025-01-05T00:00:00+00:00",
+                "interval_end_utc": "2025-01-07T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Congress announced a January 6, 2025 joint session to count certificates and certify under the Electoral Count Reform Act, and the frozen excerpt describes that count as the final confirmation step. No settled event reports disruption or failure; actual certification remains unverified at the horizon.",
+                "evidence_quote": "The 119th United States Congress announced it will convene a joint session on January 6, 2025, with the President of the Senate opening the certificates and the electoral votes counted under the Electoral Count Act and the Electoral Count Reform and Presidential Transition Improvement Act of 2022, aiming to officially certify the 2024 presidential result that day.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.93,
+          "error": null,
+          "action_path_probability": 0.85
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 2,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.93,
+      "covered_p_yes": 0.93,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.93,
+        0.9300000000000002
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "3b452d8e-5b23-4b2d-9182-f22e98fbafc1",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:33:13.004957+00:00",
+      "contract_id": "0x4150752d0efc99377d7388908724cb79e8423768414af7e4a4ee857ac28ef8e3",
+      "forecast_cutoff": "2025-01-02T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0ca0a00e0d3ebc156d364069a5d627e3d4305828a9de3bae2c8ccec8454615b0",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 45.457
+    },
+    {
+      "calls": 16,
+      "tokens": 172205,
+      "input_tokens": 166043,
+      "output_tokens": 6162,
+      "accounted_tokens_upper": 172205,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-01-02",
+                "interval_end": "2025-01-03",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2025-01-02T23:59:59+00:00",
+                "interval_end_utc": "2025-01-03T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "status": "executed",
+                  "summary": "The 119th United States Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding, to open and count the Electoral College certificates under the Electoral Count Act and ECRA and declare the certified result, proceeding unless a valid statutory objection requires separate resolution."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "announced it will convene the joint session on January 6, 2025, with the Vice President presiding, to open and count the Electoral College certificates",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The 119th United States Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding, to open and count the Electoral College certificates under the Electoral Count Act and ECRA and declare the certified result, proceeding unless a valid statutory objection requires separate resolution.",
+                  "date": "2025-01-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                  "action": "Convene the joint session on January 6, 2025, with the Vice President presiding, open and count the Electoral College certificates under the Electoral Count Act and ECRA, and declare the certified result. No objections or disruptions are anticipated in this round; if a valid objection is raised, follow the statutory debate-and-vote procedure before finalizing the count.\n承诺：Complete the count and official certification of the 2024 presidential election on January 6, 2025, per statutory procedure.\n触发或复核条件：Proceeding unless a valid statutory objection requires separate resolution.",
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "Convene the joint session on January 6, 2025, with the Vice President presiding, open and count the Electoral College certificates under the Electoral Count Act and ECRA, and declare the certified result. No objections or disruptions are anticipated in this round; if a valid objection is raised, follow the statutory debate-and-vote procedure before finalizing the count.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.97,
+                "basis": "Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding to open and count Electoral College certificates under the Electoral Count Act and ECRA. The statutory process is scheduled and no credible obstacle is evidenced before the window closes.",
+                "evidence_quote": "The 119th United States Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding, to open and count the Electoral College certificates under the Electoral Count Act and ECRA and declare the certified result, proceeding unless a valid statutory objection requires separate resolution.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-01-03",
+                "interval_end": "2025-01-05",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 3,
+                "interval_days": 2,
+                "interval_start_utc": "2025-01-03T00:00:00+00:00",
+                "interval_end_utc": "2025-01-05T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.97,
+                "basis": "Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding to open and count Electoral College certificates under the Electoral Count Act and ECRA. The statutory process is scheduled and no credible obstacle is evidenced before the window closes.",
+                "evidence_quote": "The 119th United States Congress announced it will convene the joint session on January 6, 2025, with the Vice President presiding, to open and count the Electoral College certificates under the Electoral Count Act and ECRA and declare the certified result, proceeding unless a valid statutory objection requires separate resolution.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-01-05",
+                "interval_end": "2025-01-07",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 5,
+                "interval_days": 2,
+                "interval_start_utc": "2025-01-05T00:00:00+00:00",
+                "interval_end_utc": "2025-01-07T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Congress announced it will convene the joint session on January 6, 2025 to open and count Electoral College certificates, and the frozen excerpt describes that count as the final step confirming the result. No settled event shows a disruption or failed certification; execution remains unverified at the horizon.",
+                "evidence_quote": "The count of the Electoral College ballots during a joint session of the 119th United States Congress, pursuant to the Electoral Count Act and Electoral Count Reform and Presidential Transition Improvement Act of 2022, on January 6, 2025, will be the final step to confirm President-elect Donald Trump's victory in the 2024 presidential election over Kamala Harris.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.93,
+          "error": null,
+          "action_path_probability": 0.9
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.93,
+      "covered_p_yes": 0.93,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.93,
+        0.9300000000000002
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "5adf207c-8c89-40c2-a8ae-e9295a54d569",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:11:01.746111+00:00",
+      "contract_id": "0x4150752d0efc99377d7388908724cb79e8423768414af7e4a4ee857ac28ef8e3",
+      "forecast_cutoff": "2025-01-02T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0ca0a00e0d3ebc156d364069a5d627e3d4305828a9de3bae2c8ccec8454615b0",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 49.867
+    },
+    {
+      "calls": 14,
+      "tokens": 143563,
+      "input_tokens": 137477,
+      "output_tokens": 6086,
+      "accounted_tokens_upper": 143563,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-01-02",
+                "interval_end": "2025-01-07",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2025-01-02T23:59:59+00:00",
+                "interval_end_utc": "2025-01-07T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "status": "executed",
+                  "summary": "The 119th United States Congress convened the joint session on January 6, 2025, with the President of the Senate opening the state certificates of vote in the presence of the Senate and House. The 119th United States Congress counted the electoral votes and Congress officially certified the 2024 presidential election result, confirming President-elect Donald Trump's victory over Kamala Harris under the Electoral Count Act and Electoral Count Reform Act of 2022."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "unknown",
+                  "after": "met",
+                  "summary": "Congress officially certified the 2024 presidential election result, confirming President-elect Donald Trump's victory over Kamala Harris",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The 119th United States Congress convened the joint session on January 6, 2025, with the President of the Senate opening the state certificates of vote in the presence of the Senate and House.",
+                  "date": "2025-01-06"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "The 119th United States Congress counted the electoral votes and Congress officially certified the 2024 presidential election result, confirming President-elect Donald Trump's victory over Kamala Harris under the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                  "date": "2025-01-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                  "action": "Convene the joint session of the 119th Congress on January 6, 2025; the President of the Senate opens the state certificates of vote, the electoral votes are counted, and Congress officially certifies the 2024 presidential election result under the Electoral Count Act and Electoral Count Reform Act of 2022.\n承诺：Certify the 2024 presidential election result in joint session on January 6, 2025, per the statutory framework.\n触发或复核条件：No lawful basis under the ECA/ECRA to halt the count.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Convene the joint session of the 119th Congress on January 6, 2025; the President of the Senate opens the state certificates of vote, the electoral votes are counted, and Congress officially certifies the 2024 presidential election result under the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.97,
+                "basis": "Simulated round 1 reports the joint session convened and Congress officially certified the 2024 result on January 6, 2025, matching the contract's certification definition within the window. Residual uncertainty is only about final resolution sourcing, not the underlying event.",
+                "evidence_quote": "The 119th United States Congress counted the electoral votes and Congress officially certified the 2024 presidential election result, confirming President-elect Donald Trump's victory over Kamala Harris under the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.97,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-01-02",
+                "interval_end": "2025-01-07",
+                "horizon_end": "2025-01-07",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2025-01-02T23:59:59+00:00",
+                "interval_end_utc": "2025-01-07T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "status": "executed",
+                  "summary": "The 119th United States Congress convened a joint session on January 6, 2025, with the President of the Senate presiding; the state certificates of vote were opened, the Electoral College ballots were counted, and the result was announced, officially certifying the 2024 presidential election of Donald Trump over Kamala Harris pursuant to the Electoral Count Act and Electoral Count Reform Act of 2022."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Election certified on January 6?",
+                  "before": "unknown",
+                  "after": "met",
+                  "summary": "officially certifying the 2024 presidential election of Donald Trump over Kamala Harris",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The 119th United States Congress convened a joint session on January 6, 2025, with the President of the Senate presiding; the state certificates of vote were opened, the Electoral College ballots were counted, and the result was announced, officially certifying the 2024 presidential election of Donald Trump over Kamala Harris pursuant to the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                  "date": "2025-01-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fbfff755c09258e8",
+                  "actor_name": "119th United States Congress",
+                  "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                  "action": "Convene the joint session of the 119th Congress on January 6, 2025, with the President of the Senate presiding; open the state certificates of vote, count the Electoral College ballots, and announce the result, certifying the 2024 presidential election pursuant to the Electoral Count Act and Electoral Count Reform Act of 2022.\n承诺：Complete the count and officially certify the 2024 presidential election result in joint session on January 6, 2025.",
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fbfff755c09258e8:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "Convene the joint session of the 119th Congress on January 6, 2025, with the President of the Senate presiding; open the state certificates of vote, count the Electoral College ballots, and announce the result, certifying the 2024 presidential election pursuant to the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.97,
+                "basis": "A simulated round-1 event states the joint session convened on January 6, 2025, counted the ballots, and announced the result, officially certifying Trump over Harris. This directly satisfies the certification rule; residual uncertainty is only whether the simulated report is accurate, since no independent final measurement is cited.",
+                "evidence_quote": "The 119th United States Congress convened a joint session on January 6, 2025, with the President of the Senate presiding; the state certificates of vote were opened, the Electoral College ballots were counted, and the result was announced, officially certifying the 2024 presidential election of Donald Trump over Kamala Harris pursuant to the Electoral Count Act and Electoral Count Reform Act of 2022.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.97,
+          "error": null,
+          "action_path_probability": 0.9
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 2,
+        "condition_change_count": 2,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.97,
+      "covered_p_yes": 0.97,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.97,
+        0.97
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "6b5eb6bf-c621-426d-9af4-77e90954ad80",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:11:26.478829+00:00",
+      "contract_id": "0x4150752d0efc99377d7388908724cb79e8423768414af7e4a4ee857ac28ef8e3",
+      "forecast_cutoff": "2025-01-02T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0ca0a00e0d3ebc156d364069a5d627e3d4305828a9de3bae2c8ccec8454615b0",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 24.732
+    },
+    {
+      "calls": 16,
+      "tokens": 160641,
+      "input_tokens": 154717,
+      "output_tokens": 5924,
+      "accounted_tokens_upper": 160641,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.97,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.97,
+        0.97
+      ],
+      "search_iterations": 3,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 3,
+          "search_value": 0.1164000000000001,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 1.0,
+          "visits": 2,
+          "search_value": 0.1164000000000001,
+          "conditional_p_yes": 0.97,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 1.0,
+          "visits": 1,
+          "search_value": 0.1164000000000001,
+          "conditional_p_yes": 0.97,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 1.0,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.97,
+          "frontier": true,
+          "contribution": 0.97
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "467659ac-2c20-4c33-88c5-1423147a64a4",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:12:16.277139+00:00",
+      "contract_id": "0x4150752d0efc99377d7388908724cb79e8423768414af7e4a4ee857ac28ef8e3",
+      "forecast_cutoff": "2025-01-02T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0ca0a00e0d3ebc156d364069a5d627e3d4305828a9de3bae2c8ccec8454615b0",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 49.798
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-01-02T23:59:59+00:00",
+  "forecast_key": "0x4150752d0efc99377d7388908724cb79e8423768414af7e4a4ee857ac28ef8e3",
+  "group_id": "us-presidential-election-certified-on-january-6",
+  "evidence_sha256": "0ca0a00e0d3ebc156d364069a5d627e3d4305828a9de3bae2c8ccec8454615b0",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 681,
+    "input_tokens": 562,
+    "output_tokens": 119,
+    "accounted_tokens_upper": 681,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-01-02",
+        "2025-01-07"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-01-02",
+        "2025-01-03",
+        "2025-01-05",
+        "2025-01-07"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-01-02",
+        "2025-01-03",
+        "2025-01-05",
+        "2025-01-07"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-01-02",
+        "2025-01-07"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-01-02",
+        "2025-01-03",
+        "2025-01-05",
+        "2025-01-07"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-01-07T04:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-01-06T12:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_5bd2686a3264cebb",
+          "name": "119th United States Congress",
+          "role": "Joint session of Congress that counts electoral votes and officially certifies the result.",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Vice President opens certificates and presides over the joint session count."
+      ],
+      "gaps": [
+        "No named incumbent vice president identified in sources; role is constitutionally assigned to the sitting vice president.",
+        "No specific individual congressional leaders or members identified as making separate certification decisions; certification is a collective congressional action.",
+        "No frozen source identifies Vice President of the United States; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Vice President opens certificates and presides over the joint session count.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D2",
+          "choice": "Joint session of Congress counts electoral votes and officially certifies the result.",
+          "owner": "119th United States Congress",
+          "support": "represented"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 9,
+    "tokens": 28535,
+    "input_tokens": 24915,
+    "output_tokens": 3620,
+    "accounted_tokens_upper": 28535,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

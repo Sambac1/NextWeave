@@ -1,0 +1,1444 @@
+{
+  "run_id": "b4ade8f8-fb9b-4f7f-94ee-258c44360a2b",
+  "case_id": "market_e4be8847397936f6dd9239f2",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2508,
+      "input_tokens": 2498,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2508,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.03,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2498,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:31:51.682324+00:00",
+      "contract_id": "0x18f8e62bab322a564f902cb8c72520fecc275093c3ddeede8004993bc8febaf4",
+      "forecast_cutoff": "2025-09-26T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "46e0dc455cdf5e2952f68e038f67229310f8333a7ab833a5fe2842576d348518",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.414
+    },
+    {
+      "calls": 2,
+      "tokens": 5016,
+      "input_tokens": 4996,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5016,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.03,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2498,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2498,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:31:52.784223+00:00",
+      "contract_id": "0x18f8e62bab322a564f902cb8c72520fecc275093c3ddeede8004993bc8febaf4",
+      "forecast_cutoff": "2025-09-26T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "46e0dc455cdf5e2952f68e038f67229310f8333a7ab833a5fe2842576d348518",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.101
+    },
+    {
+      "calls": 6,
+      "tokens": 45043,
+      "input_tokens": 42919,
+      "output_tokens": 2124,
+      "accounted_tokens_upper": 45043,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-09-26",
+                "interval_end": "2025-10-02",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2025-09-26T23:59:59+00:00",
+                "interval_end_utc": "2025-10-02T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dedf267458435757",
+                  "actor_name": "Office of Management and Budget",
+                  "candidate_id": "agent_dedf267458435757:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dedf267458435757:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue guidance to federal agencies that, if appropriations lapse after September 30 without a signed extension, they should continue normal operations pending a quickly-passed funding resolution, rather than preparing furloughs, provided OMB judges a new resolution highly likely within days.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No settled event in the packet reports a September 2025 funding lapse or an OPM shutdown announcement; the evidence is historical background only. The 2024 OMB precedent shows a lapse can occur without a shutdown, but that is an analogy, not an in-window result.",
+                "evidence_quote": "As the finances of the government are tracked on a daily basis, the Office of Management and Budget can direct federal agencies to continue normal operations even if the shutdown deadline is passed if there is a high probability that a new funding resolution will be passed by Congress quickly enough, which occurred in December 2024 during a vote for a continuing resolution for fiscal year 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 0.3
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.08,
+      "covered_p_yes": 0.08,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.08,
+        0.08000000000000007
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "bff824ce-6c89-42a1-a324-ac707853e3ec",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:32:29.692098+00:00",
+      "contract_id": "0x18f8e62bab322a564f902cb8c72520fecc275093c3ddeede8004993bc8febaf4",
+      "forecast_cutoff": "2025-09-26T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "46e0dc455cdf5e2952f68e038f67229310f8333a7ab833a5fe2842576d348518",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 36.906
+    },
+    {
+      "calls": 31,
+      "tokens": 240071,
+      "input_tokens": 227648,
+      "output_tokens": 12423,
+      "accounted_tokens_upper": 240071,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-26",
+                "interval_end": "2025-09-28",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-26T23:59:59+00:00",
+                "interval_end_utc": "2025-09-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_dedf267458435757",
+                  "actor_name": "Office of Management and Budget",
+                  "status": "executed",
+                  "summary": "The Office of Management and Budget publicly stated that it will direct federal agencies to continue normal operations past a shutdown deadline only if there is a high probability that Congress will pass a new funding resolution quickly, consistent with the December 2024 precedent, and issued no directive now."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "issued no directive now",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Office of Management and Budget publicly stated that it will direct federal agencies to continue normal operations past a shutdown deadline only if there is a high probability that Congress will pass a new funding resolution quickly, consistent with the December 2024 precedent, and issued no directive now.",
+                  "date": "2025-09-27"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dedf267458435757",
+                  "actor_name": "Office of Management and Budget",
+                  "candidate_id": "agent_dedf267458435757:initial:2",
+                  "action": "Publicly state that OMB will direct federal agencies to continue normal operations past a shutdown deadline only if there is a high probability Congress will pass a new funding resolution quickly, consistent with the December 2024 precedent; no directive is issued now.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dedf267458435757:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Hold OMB's conditional directive authority in reserve; make no public announcement this round. Monitor whether Congress passes a continuing resolution and whether the President signs it before Sep 30, 11:59 PM ET, and whether a high-probability-of-quick-resolution condition exists.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_dedf267458435757:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that OMB will direct federal agencies to continue normal operations past a shutdown deadline only if there is a high probability Congress will pass a new funding resolution quickly, consistent with the December 2024 precedent; no directive is issued now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No current evidence shows a signed funding extension or an OPM shutdown announcement. The only current item is an OMB statement that it issued no directive now, so a lapse without an announced shutdown remains a low-probability path.",
+                "evidence_quote": "The Office of Management and Budget publicly stated that it will direct federal agencies to continue normal operations past a shutdown deadline only if there is a high probability that Congress will pass a new funding resolution quickly, consistent with the December 2024 precedent, and issued no directive now.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-28",
+                "interval_end": "2025-09-30",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-28T00:00:00+00:00",
+                "interval_end_utc": "2025-09-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No current evidence shows a signed funding extension or an OPM shutdown announcement. The only current item is an OMB statement that it issued no directive now, so a lapse without an announced shutdown remains a low-probability path.",
+                "evidence_quote": "The Office of Management and Budget publicly stated that it will direct federal agencies to continue normal operations past a shutdown deadline only if there is a high probability that Congress will pass a new funding resolution quickly, consistent with the December 2024 precedent, and issued no directive now.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-30",
+                "interval_end": "2025-10-02",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 6,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-30T00:00:00+00:00",
+                "interval_end_utc": "2025-10-02T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Only a simulated round-1 statement exists: OMB issued no directive now and would continue operations only if a quick funding resolution is likely. That is willingness/communication, not a signed bill or an OPM shutdown announcement, so the lapse-without-shutdown path remains unverified and unlikely.",
+                "evidence_quote": "The Office of Management and Budget publicly stated that it will direct federal agencies to continue normal operations past a shutdown deadline only if there is a high probability that Congress will pass a new funding resolution quickly, consistent with the December 2024 precedent, and issued no directive now.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.3
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-26",
+                "interval_end": "2025-09-28",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-26T23:59:59+00:00",
+                "interval_end_utc": "2025-09-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_dedf267458435757",
+                  "actor_name": "Office of Management and Budget",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dedf267458435757",
+                  "actor_name": "Office of Management and Budget",
+                  "candidate_id": "agent_dedf267458435757:initial:1",
+                  "action": "Do not issue any directive now. Monitor whether Congress passes and the President signs a funding extension before Sep 30, 11:59 PM ET, and whether OPM signals a shutdown announcement for Oct 1. Reassess if a lapse appears imminent or a near-term resolution is credibly expected.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dedf267458435757:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Do not issue any directive now. Monitor whether Congress passes and the President signs a funding extension before Sep 30, 11:59 PM ET, and whether OPM signals a shutdown announcement for Oct 1. Reassess if a lapse appears imminent or a near-term resolution is credibly expected.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "outlook_call_unavailable"
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-28",
+                "interval_end": "2025-09-30",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-28T00:00:00+00:00",
+                "interval_end_utc": "2025-09-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No current evidence addresses the September 2025 funding deadline; the packet is historical background only. Historical precedent shows funding gaps can occur without OPM-announced shutdowns (e.g., 2024 OMB continuation of operations), but that is weak analogical support, not an in-window event.",
+                "evidence_quote": "As the finances of the government are tracked on a daily basis, the Office of Management and Budget can direct federal agencies to continue normal operations even if the shutdown deadline is passed if there is a high probability that a new funding resolution will be passed by Congress quickly enough, which occurred in December 2024 during a vote for a continuing resolution for fiscal year 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-30",
+                "interval_end": "2025-10-02",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 6,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-30T00:00:00+00:00",
+                "interval_end_utc": "2025-10-02T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "No settled event in the evidence shows a funding lapse on October 1, 2025, nor an OPM shutdown announcement. Historical precedent shows lapses can occur without shutdowns (e.g., 2024 OMB-directed continued operations), but that is background, not an in-window result.",
+                "evidence_quote": "As the finances of the government are tracked on a daily basis, the Office of Management and Budget can direct federal agencies to continue normal operations even if the shutdown deadline is passed if there is a high probability that a new funding resolution will be passed by Congress quickly enough, which occurred in December 2024 during a vote for a continuing resolution for fiscal year 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.05,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.08499999999999999,
+      "covered_p_yes": 0.08499999999999999,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.08499999999999999,
+        0.08499999999999996
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "21ef8711-33c8-423a-ad2e-7545b5f829f0",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:35:28.357863+00:00",
+      "contract_id": "0x18f8e62bab322a564f902cb8c72520fecc275093c3ddeede8004993bc8febaf4",
+      "forecast_cutoff": "2025-09-26T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "46e0dc455cdf5e2952f68e038f67229310f8333a7ab833a5fe2842576d348518",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 50.41
+    },
+    {
+      "calls": 15,
+      "tokens": 124361,
+      "input_tokens": 117326,
+      "output_tokens": 7035,
+      "accounted_tokens_upper": 124361,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-26",
+                "interval_end": "2025-09-28",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-26T23:59:59+00:00",
+                "interval_end_utc": "2025-09-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_dedf267458435757",
+                  "actor_name": "Office of Management and Budget",
+                  "status": "executed",
+                  "summary": "Office of Management and Budget issued a conditional public directive to federal agencies: if appropriations lapse after September 30, continue normal operations on the basis that a new funding resolution is highly likely to pass quickly, with the directive to be withdrawn if no resolution is reached."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "if appropriations lapse after September 30, continue normal operations on the basis that a new funding resolution is highly likely to pass quickly",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Office of Management and Budget issued a conditional public directive to federal agencies: if appropriations lapse after September 30, continue normal operations on the basis that a new funding resolution is highly likely to pass quickly, with the directive to be withdrawn if no resolution is reached.",
+                  "date": "2025-09-27"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dedf267458435757",
+                  "actor_name": "Office of Management and Budget",
+                  "candidate_id": "agent_dedf267458435757:initial:2",
+                  "action": "Issue a conditional public directive to federal agencies: if appropriations lapse after September 30, continue normal operations on the basis that a new funding resolution is highly likely to pass quickly, with the directive to be withdrawn if no resolution is reached.\n承诺：Directive applies only if a lapse occurs and a quick resolution is assessed as highly likely; withdrawn otherwise.\n触发或复核条件：A funding lapse occurs and a quick funding resolution is highly likely.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dedf267458435757:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Hold any directive to federal agencies pending evidence that a funding lapse is imminent and that a new funding resolution is highly likely to pass quickly; monitor congressional appropriations action and presidential signature through the September 30 deadline.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_dedf267458435757:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Issue a conditional public directive to federal agencies: if appropriations lapse after September 30, continue normal operations on the basis that a new funding resolution is highly likely to pass quickly, with the directive to be withdrawn if no resolution is reached.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "A conditional OMB directive to continue normal operations if appropriations lapse after September 30 supports a lapse-without-shutdown path, echoing the December 2024 precedent. However, no signed funding bill or OPM shutdown announcement is in evidence, and the directive is conditional and withdrawable, so the outcome remains unlikely.",
+                "evidence_quote": "Office of Management and Budget issued a conditional public directive to federal agencies: if appropriations lapse after September 30, continue normal operations on the basis that a new funding resolution is highly likely to pass quickly, with the directive to be withdrawn if no resolution is reached.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-28",
+                "interval_end": "2025-09-30",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-28T00:00:00+00:00",
+                "interval_end_utc": "2025-09-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "A conditional OMB directive to continue normal operations if appropriations lapse after September 30 supports a lapse-without-shutdown path, echoing the December 2024 precedent. However, no signed funding bill or OPM shutdown announcement is in evidence, and the directive is conditional and withdrawable, so the outcome remains unlikely.",
+                "evidence_quote": "Office of Management and Budget issued a conditional public directive to federal agencies: if appropriations lapse after September 30, continue normal operations on the basis that a new funding resolution is highly likely to pass quickly, with the directive to be withdrawn if no resolution is reached.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-30",
+                "interval_end": "2025-10-02",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 6,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-30T00:00:00+00:00",
+                "interval_end_utc": "2025-10-02T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "The only in-window simulated development is an OMB conditional directive to continue normal operations if appropriations lapse, mirroring the December 2024 precedent. No OPM shutdown announcement or signed funding bill is observed, so whether a lapse occurred and whether OPM declared a shutdown remain unknown.",
+                "evidence_quote": "Office of Management and Budget issued a conditional public directive to federal agencies: if appropriations lapse after September 30, continue normal operations on the basis that a new funding resolution is highly likely to pass quickly, with the directive to be withdrawn if no resolution is reached.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.4
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.3,
+      "covered_p_yes": 0.3,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.3,
+        0.30000000000000004
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "127a88f9-c586-4bc5-b7a7-a69c999854d4",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:12:03.229923+00:00",
+      "contract_id": "0x18f8e62bab322a564f902cb8c72520fecc275093c3ddeede8004993bc8febaf4",
+      "forecast_cutoff": "2025-09-26T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "46e0dc455cdf5e2952f68e038f67229310f8333a7ab833a5fe2842576d348518",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 54.268
+    },
+    {
+      "calls": 14,
+      "tokens": 113002,
+      "input_tokens": 106405,
+      "output_tokens": 6597,
+      "accounted_tokens_upper": 113002,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-09-26",
+                "interval_end": "2025-10-02",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2025-09-26T23:59:59+00:00",
+                "interval_end_utc": "2025-10-02T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_dedf267458435757",
+                  "actor_name": "Office of Management and Budget",
+                  "status": "executed",
+                  "summary": "Office of Management and Budget issued a conditional public directive to federal agencies: if appropriations lapse after September 30, 11:59 PM ET and a continuing resolution is highly likely to pass within days, agencies should continue normal operations pending enactment, consistent with the December 2024 precedent. The directive is expressly contingent on that high-probability determination."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Office of Management and Budget issued a conditional public directive to federal agencies: if appropriations lapse after September 30, 11:59 PM ET and a continuing resolution is highly likely to pass within days, agencies should continue normal operations pending enactment, consistent with the December 2024 precedent. The directive is expressly contingent on that high-probability determination.",
+                  "date": "2025-09-27"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dedf267458435757",
+                  "actor_name": "Office of Management and Budget",
+                  "candidate_id": "agent_dedf267458435757:initial:2",
+                  "action": "Issue a conditional public directive to federal agencies: if appropriations lapse after September 30, 11:59 PM ET and a continuing resolution is highly likely to pass within days, agencies should continue normal operations pending enactment, consistent with the December 2024 precedent. The directive is expressly contingent on that high-probability determination.\n承诺：Directive applies only if a lapse occurs and OMB determines a new funding resolution is highly likely to pass quickly.\n触发或复核条件：Appropriations lapse after September 30, 2025 and a CR is highly likely soon.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dedf267458435757:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Hold OMB's conditional directive posture and monitor whether Congress passes a continuing resolution and whether the President signs it before September 30, 11:59 PM ET. No new OMB directive is issued this round because no funding lapse or imminent CR vote is publicly established as of the cutoff.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_dedf267458435757:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a conditional public directive to federal agencies: if appropriations lapse after September 30, 11:59 PM ET and a continuing resolution is highly likely to pass within days, agencies should continue normal operations pending enactment, consistent with the December 2024 precedent. The directive is expressly contingent on that high-probability determination.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The only in-window simulated event is an OMB directive to keep agencies operating if a lapse occurs but a continuing resolution is highly likely within days, mirroring December 2024. That makes a lapse without an OPM shutdown announcement plausible, but it is contingent and no actual lapse, CR vote, or OPM notice is observed.",
+                "evidence_quote": "Office of Management and Budget issued a conditional public directive to federal agencies: if appropriations lapse after September 30, 11:59 PM ET and a continuing resolution is highly likely to pass within days, agencies should continue normal operations pending enactment, consistent with the December 2024 precedent. The directive is expressly contingent on that high-probability determination.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.3
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-09-26",
+                "interval_end": "2025-10-02",
+                "horizon_end": "2025-10-02",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2025-09-26T23:59:59+00:00",
+                "interval_end_utc": "2025-10-02T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Funding lapse without government shutdown?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dedf267458435757",
+                  "actor_name": "Office of Management and Budget",
+                  "candidate_id": "agent_dedf267458435757:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dedf267458435757:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "If a funding lapse occurs or is imminent and OMB judges a new funding resolution highly likely to pass quickly, direct federal agencies to continue normal operations past the September 30 deadline, as it did in December 2024.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No settled event in the packet shows a funding lapse on October 1, 2025, and no OPM shutdown announcement is recorded. Historical precedent shows lapses usually coincide with shutdowns, and OMB has sometimes kept agencies operating through brief gaps, so a lapse without shutdown remains possible but unverified.",
+                "evidence_quote": "As the finances of the government are tracked on a daily basis, the Office of Management and Budget can direct federal agencies to continue normal operations even if the shutdown deadline is passed if there is a high probability that a new funding resolution will be passed by Congress quickly enough, which occurred in December 2024 during a vote for a continuing resolution for fiscal year 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.1,
+      "covered_p_yes": 0.1,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.1,
+        0.10000000000000009
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "3de03b46-f1d5-4072-8aad-f69ec7db76c1",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:17:02.630160+00:00",
+      "contract_id": "0x18f8e62bab322a564f902cb8c72520fecc275093c3ddeede8004993bc8febaf4",
+      "forecast_cutoff": "2025-09-26T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "46e0dc455cdf5e2952f68e038f67229310f8333a7ab833a5fe2842576d348518",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 29.94
+    },
+    {
+      "calls": 26,
+      "tokens": 204470,
+      "input_tokens": 191893,
+      "output_tokens": 12577,
+      "accounted_tokens_upper": 204470,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.2465,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.2465,
+        0.2465
+      ],
+      "search_iterations": 5,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 5,
+          "search_value": 0.59314,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.55,
+          "visits": 2,
+          "search_value": 0.6661999999999999,
+          "conditional_p_yes": 0.35,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.55,
+          "visits": 1,
+          "search_value": 0.9099999999999999,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.55,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.35,
+          "frontier": true,
+          "contribution": 0.1925
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.45,
+          "visits": 2,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.2,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.45,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.45,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.054
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "c9afce82-cc2b-48fd-899d-6b6e77901632",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:14:02.514102+00:00",
+      "contract_id": "0x18f8e62bab322a564f902cb8c72520fecc275093c3ddeede8004993bc8febaf4",
+      "forecast_cutoff": "2025-09-26T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "46e0dc455cdf5e2952f68e038f67229310f8333a7ab833a5fe2842576d348518",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 92.312
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-09-26T23:59:59+00:00",
+  "forecast_key": "0x18f8e62bab322a564f902cb8c72520fecc275093c3ddeede8004993bc8febaf4",
+  "group_id": "funding-lapse-without-government-shutdown",
+  "evidence_sha256": "46e0dc455cdf5e2952f68e038f67229310f8333a7ab833a5fe2842576d348518",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 962,
+    "input_tokens": 715,
+    "output_tokens": 247,
+    "accounted_tokens_upper": 962,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-09-26",
+        "2025-10-02"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-09-26",
+        "2025-09-28",
+        "2025-09-30",
+        "2025-10-02"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-09-26",
+        "2025-09-28",
+        "2025-09-30",
+        "2025-10-02"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-09-26",
+        "2025-10-02"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-09-26",
+        "2025-09-28",
+        "2025-09-30",
+        "2025-10-02"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-10-02T03:59:59+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-10-01T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_5000c30e8903070e",
+          "name": "Office of Management and Budget",
+          "role": "May direct agencies to continue normal operations despite a passed shutdown deadline if new funding is likely soon.",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "President signs or fails to sign relevant bill(s) extending government funding by September 30, 11:59 PM ET; failure to sign constitutes a funding lapse.",
+        "Congress passes or fails to pass appropriations or continuing resolution legislation extending government funding before the deadline.",
+        "Current authority for OPM announces whether the U.S. federal government is shut down due to a lapse in appropriations on October 1, 2025 ET. requires independent evidence; Office of Management and Budget can participate conditionally."
+      ],
+      "gaps": [
+        "No source identifies the current President, congressional leadership, or OPM director as of 2025-09-26; seats are assigned to offices/institutions.",
+        "The market rules define the resolution process; no source evidence describes the specific 2025 funding negotiations or OPM announcement."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "President signs or fails to sign relevant bill(s) extending government funding by September 30, 11:59 PM ET; failure to sign constitutes a funding lapse.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D2",
+          "choice": "Congress passes or fails to pass appropriations or continuing resolution legislation extending government funding before the deadline.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D3",
+          "choice": "OPM announces whether the U.S. federal government is shut down due to a lapse in appropriations on October 1, 2025 ET.",
+          "owner": "Office of Management and Budget",
+          "support": "conditional"
+        }
+      ],
+      "gap_repair": {
+        "status": "participants_added",
+        "added": 1
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 8,
+    "tokens": 23066,
+    "input_tokens": 20200,
+    "output_tokens": 2866,
+    "accounted_tokens_upper": 23066,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

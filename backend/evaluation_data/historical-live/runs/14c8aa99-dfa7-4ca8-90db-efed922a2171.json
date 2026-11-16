@@ -1,0 +1,2551 @@
+{
+  "run_id": "14c8aa99-dfa7-4ca8-90db-efed922a2171",
+  "case_id": "market_fec68c476ffe61c922cb0f5b",
+  "status": "partial",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3312,
+      "input_tokens": 3302,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3312,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3302,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:36:25.613996+00:00",
+      "contract_id": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59a861cef56893c0fb0e9fcdbdfeec5544f7b925945705dbc6f28c3aab6b8df2",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.837
+    },
+    {
+      "calls": 2,
+      "tokens": 6624,
+      "input_tokens": 6604,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6624,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.15,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.12,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3302,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3302,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:36:27.402271+00:00",
+      "contract_id": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59a861cef56893c0fb0e9fcdbdfeec5544f7b925945705dbc6f28c3aab6b8df2",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.787
+    },
+    {
+      "calls": 14,
+      "tokens": 259131,
+      "input_tokens": 244596,
+      "output_tokens": 14535,
+      "accounted_tokens_upper": 259131,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 22,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly authorized Qatar-mediated talks to continue and signaled willingness to discuss phased, verifiable sanctions relief and asset access if Iran reopens the Strait and guarantees safe commercial transit, while withholding any unilateral lifting of sanctions until compliance is verified."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "signaled willingness to discuss phased, verifiable sanctions relief and asset access if Iran reopens the Strait and guarantees safe commercial transit",
+                  "pending_actor_ids": [
+                    "agent_eb54994915b85b01",
+                    "agent_e717cfd842d65955"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The United States publicly authorized Qatar-mediated talks to continue and signaled willingness to discuss phased, verifiable sanctions relief and asset access if Iran reopens the Strait and guarantees safe commercial transit, while withholding any unilateral lifting of sanctions until compliance is verified.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm readiness to reopen the Strait of Hormuz within two days, conditional on the U.S. lifting sanctions and unfreezing assets, and encourage Qatar's mediation in Tehran to secure that deal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:1",
+                  "action": "Publicly authorize Qatar-mediated talks to continue and signal willingness to discuss phased, verifiable sanctions relief and asset access if Iran reopens the Strait and guarantees safe commercial transit, while withholding any unilateral lifting of sanctions until compliance is verified.\n承诺：Conditional only: sanctions relief tied to verified reopening and safe transit; no unconditional concessions.\n触发或复核条件：Iran reopens the strait and guarantees safe commercial passage.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly authorize Qatar-mediated talks to continue and signal willingness to discuss phased, verifiable sanctions relief and asset access if Iran reopens the Strait and guarantees safe commercial transit, while withholding any unilateral lifting of sanctions until compliance is verified.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Reaffirm that the US Navy will continue defensive strikes and mine-clearing in the Strait and will destroy Iranian vessels laying mines, while declining Iran's sanctions and asset conditions as currently framed.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "candidate_id": "agent_e3dc4e6acd265747:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No IMF Portwatch transit-call figure is in evidence, so the 60 threshold is unverified. Late-2026 reporting shows the strait still disrupted: Iran conditioned reopening on sanctions relief, the US offered only phased relief after compliance, and October traffic remained reduced with severe risk.",
+                "evidence_quote": "On November 2nd, Iran has expressed readiness to reopen the Strait of Hormuz within two days, provided the U.S. meets specific conditions.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.11549999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "a7360e9f-329d-453d-b0b4-30d555e7c6f8",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:48:46.954417+00:00",
+      "contract_id": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59a861cef56893c0fb0e9fcdbdfeec5544f7b925945705dbc6f28c3aab6b8df2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 107.544
+    },
+    {
+      "calls": 25,
+      "tokens": 458660,
+      "input_tokens": 433861,
+      "output_tokens": 24799,
+      "accounted_tokens_upper": 458660,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [],
+          "branches": [],
+          "status": "failed",
+          "p_yes": null,
+          "error": "ValueError: Execution quote must identify its registered subject at the start of the quoted action",
+          "action_path_probability": null
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 22,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly reaffirmed that U.S. naval forces will continue defensive strikes and mine-clearing in the Strait of Hormuz and will destroy any Iranian vessels laying mines, while stating that the Qatar-mediated diplomatic channel remains open in parallel."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The United States publicly reaffirmed that U.S. naval forces will continue defensive strikes and mine-clearing in the Strait of Hormuz and will destroy any Iranian vessels laying mines, while stating that the Qatar-mediated diplomatic channel remains open in parallel.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm that Iran will reopen the Strait of Hormuz within two days of the U.S. lifting sanctions and unfreezing assets, and urge Qatar to convey this offer to Washington. No reopening occurs absent those steps.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:2",
+                  "action": "Publicly reaffirm that U.S. naval forces will continue defensive strikes and mine-clearing in the Strait of Hormuz and will destroy any Iranian vessels laying mines, while keeping the Qatar-mediated diplomatic channel open in parallel.\n承诺：Continue defensive strikes and mine-clearing; destroy vessels laying mines.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly authorize the Qatar-mediated talks to offer Iran a limited, phased package: suspension of some secondary sanctions and release of a defined tranche of frozen assets, contingent on Iran reopening the Strait of Hormuz to commercial transit and verifiably halting mine-laying; full relief only after sustained traffic restoration.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly reaffirm that U.S. naval forces will continue defensive strikes and mine-clearing in the Strait of Hormuz and will destroy any Iranian vessels laying mines, while keeping the Qatar-mediated diplomatic channel open in parallel.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "candidate_id": "agent_e3dc4e6acd265747:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Through the forecast cutoff, evidence shows transits collapsed from ~90/day to a handful, with severe risk and congestion persisting into October and strikes continuing in November. Iran's conditional readiness to reopen within two days is only a stated willingness, not an executed reopening, and no Portwatch 7-day average ≥60 is shown.",
+                "evidence_quote": "Tracked transits through the strait fell from about 90 a day before the war to a handful, and berths at Jebel Ali that normally worked more than 80 scheduled services a week were left idle.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.048
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 0.5,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 0,
+            "active_rounds": 0,
+            "draw_rounds": 0,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 0,
+            "active_actor_count": 0,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": false,
+            "outcome_observed": false,
+            "conditional_only": false
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": null,
+      "covered_p_yes": 0.12,
+      "coverage": 0.5,
+      "unknown_bounds": [
+        0.06,
+        0.56
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 1,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": true,
+      "status": "partial",
+      "error": "ValueError: Execution quote must identify its registered subject at the start of the quoted action",
+      "planned_samples": 2,
+      "simulation_run_id": "9e6eff68-afb7-47ce-a338-ca37c686a709",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:49:10.850988+00:00",
+      "contract_id": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59a861cef56893c0fb0e9fcdbdfeec5544f7b925945705dbc6f28c3aab6b8df2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 73.179
+    },
+    {
+      "calls": 49,
+      "tokens": 752334,
+      "input_tokens": 718483,
+      "output_tokens": 33851,
+      "accounted_tokens_upper": 752334,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly signaled willingness to ease some sanctions and unfreeze limited assets in a phased, verified exchange, with Iran reopening the Strait and restoring commercial transit first and further US relief tied to sustained compliance; Washington conveyed the offer through Qatar's mediating delegation in Tehran and publicly endorsed the mediation."
+                },
+                {
+                  "action_id": "action_1_agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "status": "executed",
+                  "summary": "Qatar publicly called on Iran and the United States to de-escalate militarily around the Strait and to keep the Tehran mediation channel open, offering Doha as a neutral venue for the next round of talks."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_e717cfd842d65955",
+                    "action_1_agent_e3dc4e6acd265747"
+                  ],
+                  "outcome": "realized",
+                  "effect": "conveyed the offer through Qatar's mediating delegation in Tehran and publicly endorsed the mediation"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The United States publicly signaled willingness to ease some sanctions and unfreeze limited assets in a phased, verified exchange, with Iran reopening the Strait and restoring commercial transit first and further US relief tied to sustained compliance; Washington conveyed the offer through Qatar's mediating delegation in Tehran and publicly endorsed the mediation.",
+                  "date": "2026-11-09"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Qatar publicly called on Iran and the United States to de-escalate militarily around the Strait and to keep the Tehran mediation channel open, offering Doha as a neutral venue for the next round of talks.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:3",
+                  "action": null,
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm that Iran will reopen the Strait of Hormuz within two days once the United States lifts sanctions and unfreezes Iranian assets, and authorize the Qatar-mediated talks in Tehran to carry that offer. No reopening occurs until those conditions are met.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Declare the Strait of Hormuz open to commercial traffic unconditionally, dropping the sanctions precondition, and state that Iran will not obstruct transits through the established traffic separation scheme.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:1",
+                  "action": "Publicly signal willingness to ease some sanctions and unfreeze limited assets in a phased, verified exchange: Iran reopens the Strait and restores commercial transit first, with further US relief tied to sustained compliance. Convey this through Qatar's mediating delegation in Tehran and publicly endorse the mediation.\n承诺：Phased relief conditional on verified reopening and sustained transit restoration; no blanket upfront sanctions lift.\n触发或复核条件：Iran restores and sustains commercial transit through the Strait.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly signal willingness to ease some sanctions and unfreeze limited assets in a phased, verified exchange: Iran reopens the Strait and restores commercial transit first, with further US relief tied to sustained compliance. Convey this through Qatar's mediating delegation in Tehran and publicly endorse the mediation.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reiterate that US naval forces will continue clearing mines and will strike Iranian vessels laying new mines, while keeping the door open to a deal. No new sanctions relief offered this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "candidate_id": "agent_e3dc4e6acd265747:initial:2",
+                  "action": "Qatar publicly calls on Iran and the United States to de-escalate militarily around the Strait and to keep the Tehran mediation channel open, offering Doha as a neutral venue for the next round of talks.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3dc4e6acd265747:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Qatar publicly calls on Iran and the United States to de-escalate militarily around the Strait and to keep the Tehran mediation channel open, offering Doha as a neutral venue for the next round of talks.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of early November 2026, transits through Hormuz had collapsed from about 90 a day to a handful, and Iran's offer to reopen within two days was conditioned on U.S. sanctions relief that appears unlikely to be met quickly. No IMF Portwatch 7-day average at or above 60 is evidenced in the window, so a rapid return to normal traffic before November 30 is improbable.",
+                "evidence_quote": "Tracked transits through the strait fell from about 90 a day before the war to a handful, and berths at Jebel Ali that normally worked more than 80 scheduled services a week were left idle.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-14",
+                "interval_end": "2026-11-20",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 11,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran announced it will reopen the Strait of Hormuz to commercial traffic on a provisional, time-limited basis without preconditions, citing humanitarian and economic cost, while reserving the right to reclose if attacks on Iran continue."
+                },
+                {
+                  "action_id": "action_2_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly announced a temporary pause in offensive strikes near the Strait and Hormuz shipping lanes, conditional on Iran halting attacks on commercial ships, to support Qatar's de-escalation call and create space for a transit restart."
+                },
+                {
+                  "action_id": "action_2_agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "status": "executed",
+                  "summary": "Qatar, through its Tehran delegation, formally presented both Iran and the United States with a sequenced bridge proposal: Iran reopens the Strait and restores commercial transit within days; the U.S. simultaneously implements the first tranche of limited sanctions easing and asset unfreezing already signaled; further relief follows verified sustained compliance. Doha offered to host and monitor the next round."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_2_agent_e3dc4e6acd265747",
+                    "action_2_agent_eb54994915b85b01",
+                    "action_2_agent_e717cfd842d65955"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Qatar, through its Tehran delegation, formally presented both Iran and the United States with a sequenced bridge proposal"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_2_agent_e717cfd842d65955",
+                    "action_2_agent_eb54994915b85b01"
+                  ],
+                  "outcome": "pending",
+                  "effect": "conditional on Iran halting attacks on commercial ships"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Iran announced it will reopen the Strait of Hormuz to commercial traffic on a provisional, time-limited basis without preconditions",
+                  "pending_actor_ids": [
+                    "agent_eb54994915b85b01",
+                    "agent_e717cfd842d65955"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Iran announced it will reopen the Strait of Hormuz to commercial traffic on a provisional, time-limited basis without preconditions, citing humanitarian and economic cost, while reserving the right to reclose if attacks on Iran continue.",
+                  "date": "2026-11-14"
+                },
+                {
+                  "id": "sim_0001_002_002",
+                  "text": "The United States publicly announced a temporary pause in offensive strikes near the Strait and Hormuz shipping lanes, conditional on Iran halting attacks on commercial ships, to support Qatar's de-escalation call and create space for a transit restart.",
+                  "date": "2026-11-14"
+                },
+                {
+                  "id": "sim_0001_002_003",
+                  "text": "Qatar, through its Tehran delegation, formally presented both Iran and the United States with a sequenced bridge proposal: Iran reopens the Strait and restores commercial transit within days; the U.S. simultaneously implements the first tranche of limited sanctions easing and asset unfreezing already signaled; further relief follows verified sustained compliance. Doha offered to host and monitor the next round.",
+                  "date": "2026-11-14"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:2",
+                  "action": "Announce Iran will reopen the Strait to commercial traffic on a provisional, time-limited basis without preconditions, citing humanitarian and economic cost, while reserving the right to reclose if attacks on Iran continue.\n承诺：Provisional reopening for a limited period, reversible if attacks continue.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly respond to the U.S. phased offer via Qatar: Iran will begin reopening the Strait and restoring commercial transit within days of the U.S. first unfreezing a defined tranche of assets, with full reopening tied to sanctions relief; invite Doha-hosted talks.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Announce Iran will reopen the Strait to commercial traffic on a provisional, time-limited basis without preconditions, citing humanitarian and economic cost, while reserving the right to reclose if attacks on Iran continue.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:2",
+                  "action": "Publicly announce a temporary pause in offensive strikes near the Strait and Hormuz shipping lanes, conditional on Iran halting attacks on commercial ships, to support Qatar's de-escalation call and create space for the transit restart.\n承诺：Pause in offensive strikes near the Strait while Iran refrains from attacking commercial shipping.\n触发或复核条件：Iran halts attacks on commercial vessels in the Strait.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Through Qatar's channel, publicly reiterate and slightly sharpen the phased offer to Iran: limited sanctions easing and asset unfreezing released in verified tranches, sequenced so Iran reopens the Strait and restores commercial transit first; offer Doha as venue for a technical round within days. No blanket upfront relief.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly announce a temporary pause in offensive strikes near the Strait and Hormuz shipping lanes, conditional on Iran halting attacks on commercial ships, to support Qatar's de-escalation call and create space for the transit restart.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "candidate_id": "agent_e3dc4e6acd265747:initial:1",
+                  "action": "Qatar, through its Tehran delegation, formally presents both Iran and the United States with a sequenced bridge proposal: Iran reopens the Strait and restores commercial transit within days; the U.S. simultaneously implements the first tranche of limited sanctions easing and asset unfreezing already signaled; further relief follows verified sustained compliance. Doha offers to host and monitor the next round.\n承诺：Qatar commits to hosting and monitoring the next round and to transmitting the same written terms to both parties.\n触发或复核条件：Both Iran and the United States accept the sequencing as the basis for the next round.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3dc4e6acd265747:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Qatar, through its Tehran delegation, formally presents both Iran and the United States with a sequenced bridge proposal: Iran reopens the Strait and restores commercial transit within days; the U.S. simultaneously implements the first tranche of limited sanctions easing and asset unfreezing already signaled; further relief follows verified sustained compliance. Doha offers to host and monitor the next round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Iran's announced provisional reopening and the U.S. pause in offensive strikes are only conditional, and no Portwatch 7-day average at or above 60 is shown. Prior April reopenings collapsed quickly, so execution and sustained transit volume remain uncertain.",
+                "evidence_quote": "Iran announced it will reopen the Strait of Hormuz to commercial traffic on a provisional, time-limited basis without preconditions, citing humanitarian and economic cost, while reserving the right to reclose if attacks on Iran continue.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-20",
+                "interval_end": "2026-11-25",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-20T00:00:00+00:00",
+                "interval_end_utc": "2026-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly accepted Qatar's sequenced bridge proposal as the basis for the next round, confirming it will restore commercial transit through the Strait within days and reaffirming the provisional reopening announced on 14 November, conditioned on the U.S. simultaneously implementing the first tranche of sanctions easing and asset unfreezing and on attacks on Iran ceasing."
+                },
+                {
+                  "action_id": "action_3_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly responded to Qatar's bridge proposal by accepting the sequencing in principle but conditioning the first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration, with Doha monitoring, conveyed through Qatar's delegation."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_3_agent_eb54994915b85b01",
+                    "action_3_agent_e717cfd842d65955"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "conditioned on the U.S. simultaneously implementing the first tranche of sanctions easing and asset unfreezing"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "conditioning the first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration",
+                  "pending_actor_ids": [
+                    "agent_eb54994915b85b01",
+                    "agent_e717cfd842d65955"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "Iran publicly accepted Qatar's sequenced bridge proposal as the basis for the next round, confirming it will restore commercial transit through the Strait within days and reaffirming the provisional reopening announced on 14 November, conditioned on the U.S. simultaneously implementing the first tranche of sanctions easing and asset unfreezing and on attacks on Iran ceasing.",
+                  "date": "2026-11-21"
+                },
+                {
+                  "id": "sim_0001_003_002",
+                  "text": "The United States publicly responded to Qatar's bridge proposal by accepting the sequencing in principle but conditioning the first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration, with Doha monitoring, conveyed through Qatar's delegation.",
+                  "date": "2026-11-22"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:1",
+                  "action": "Publicly accept Qatar's sequenced bridge proposal as the basis for the next round, confirming Iran will restore commercial transit through the Strait within days and reaffirming the provisional reopening announced on 14 November, conditioned on the U.S. implementing the simultaneous first tranche of sanctions easing and asset unfreezing and on attacks on Iran ceasing.\n承诺：Iran restores commercial transit within days under the bridge proposal; reclosure reserved if attacks on Iran continue or the U.S. first tranche is not implemented.\n触发或复核条件：U.S. simultaneously implements first-tranche sanctions easing and asset unfreezing; no attacks on Iran.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly accept Qatar's sequenced bridge proposal as the basis for the next round, confirming Iran will restore commercial transit through the Strait within days and reaffirming the provisional reopening announced on 14 November, conditioned on the U.S. implementing the simultaneous first tranche of sanctions easing and asset unfreezing and on attacks on Iran ceasing.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Announce Iran will begin phased restoration of commercial transit through the Strait immediately and unilaterally, without waiting for the U.S. first tranche, while stating that full normalization and non-reclosure depend on Washington implementing sanctions easing and asset unfreezing and halting attacks.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:2",
+                  "action": "Publicly respond to Qatar's bridge proposal by accepting the sequencing in principle but conditioning the first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration (7-day average transit calls recovering toward normal), with Doha monitoring. Convey through Qatar's delegation.\n承诺：First-tranche relief released only after verified transit recovery; no blanket upfront lift.\n触发或复核条件：Verified sustained transit restoration confirmed by monitoring.",
+                  "p_selected": 0.35,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:1",
+                      "weight": 65.0,
+                      "probability": 0.65,
+                      "action": "Publicly accept Qatar's sequenced bridge proposal as the basis for the next round: the U.S. will implement the first tranche of limited sanctions easing and asset unfreezing already signaled, simultaneous with Iran restoring commercial transit within days; further relief tied to verified sustained compliance. Endorse Doha as host/monitor of the next round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Publicly respond to Qatar's bridge proposal by accepting the sequencing in principle but conditioning the first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration (7-day average transit calls recovering toward normal), with Doha monitoring. Convey through Qatar's delegation.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Iran's 21 Nov acceptance of Qatar's bridge proposal and reaffirmed provisional reopening raise the chance of restored transit, but it remains conditional on U.S. sanctions easing and cessation of attacks. No IMF Portwatch 7-day average at or above 60 is shown, and prior reopenings were reversed, so execution is uncertain.",
+                "evidence_quote": "Iran publicly accepted Qatar's sequenced bridge proposal as the basis for the next round, confirming it will restore commercial transit through the Strait within days and reaffirming the provisional reopening announced on 14 November, conditioned on the U.S. simultaneously implementing the first tranche of sanctions easing and asset unfreezing and on attacks on Iran ceasing.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-25",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-25T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly rejected the U.S. re-sequencing that gates first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration, reaffirmed its 21 November acceptance of Qatar's simultaneous-exchange bridge, and offered to begin restoring commercial transit within days once the U.S. implements the first tranche simultaneously, with Doha monitoring; Iran reserved reclosure if attacks on Iran continue."
+                },
+                {
+                  "action_id": "action_4_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly revised its sequencing, accepting that the first tranche of sanctions easing and asset unfreezing begins concurrently with Iran's transit restoration, verified by Doha monitoring plus IMF Portwatch data rather than only after full verified recovery, conveyed through Qatar's delegation."
+                },
+                {
+                  "action_id": "action_4_agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "status": "executed",
+                  "summary": "Qatar, as named monitor, transmitted a written bridging formula to both Iran and the United States: Iran begins restoring commercial transit immediately and permits Portwatch-observed arrivals, while the U.S. releases the first tranche of sanctions easing and asset unfreezing upon the first Portwatch 7-day average reading showing material transit recovery, with Doha certifying the reading and hosting the next round."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_4_agent_eb54994915b85b01",
+                    "action_4_agent_e717cfd842d65955"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Iran publicly rejected the U.S. re-sequencing that gates first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_e3dc4e6acd265747",
+                    "action_4_agent_eb54994915b85b01",
+                    "action_4_agent_e717cfd842d65955"
+                  ],
+                  "outcome": "pending",
+                  "effect": "transmitted a written bridging formula to both Iran and the United States"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "transmitted a written bridging formula to both Iran and the United States",
+                  "pending_actor_ids": [
+                    "agent_eb54994915b85b01",
+                    "agent_e717cfd842d65955"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Iran publicly rejected the U.S. re-sequencing that gates first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration, reaffirmed its 21 November acceptance of Qatar's simultaneous-exchange bridge, and offered to begin restoring commercial transit within days once the U.S. implements the first tranche simultaneously, with Doha monitoring; Iran reserved reclosure if attacks on Iran continue.",
+                  "date": "2026-11-26"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "The United States publicly revised its sequencing, accepting that the first tranche of sanctions easing and asset unfreezing begins concurrently with Iran's transit restoration, verified by Doha monitoring plus IMF Portwatch data rather than only after full verified recovery, conveyed through Qatar's delegation.",
+                  "date": "2026-11-27"
+                },
+                {
+                  "id": "sim_0001_004_003",
+                  "text": "Qatar, as named monitor, transmitted a written bridging formula to both Iran and the United States: Iran begins restoring commercial transit immediately and permits Portwatch-observed arrivals, while the U.S. releases the first tranche of sanctions easing and asset unfreezing upon the first Portwatch 7-day average reading showing material transit recovery, with Doha certifying the reading and hosting the next round.",
+                  "date": "2026-11-28"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:1",
+                  "action": "Publicly reject the U.S. re-sequencing that gates first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration. Reaffirm Iran's 21 November acceptance of Qatar's simultaneous-exchange bridge, and offer to begin restoring commercial transit within days once the U.S. implements the first tranche simultaneously, with Doha monitoring.\n承诺：Iran restores commercial transit within days only if the U.S. implements the first tranche simultaneously; reclosure reserved if attacks on Iran continue.\n触发或复核条件：U.S. implements first-tranche sanctions easing and asset unfreezing simultaneously, not after Portwatch verification.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reject the U.S. re-sequencing that gates first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration. Reaffirm Iran's 21 November acceptance of Qatar's simultaneous-exchange bridge, and offer to begin restoring commercial transit within days once the U.S. implements the first tranche simultaneously, with Doha monitoring.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Announce Iran will begin a limited, monitored restoration of commercial transit through the Strait within days as a good-faith step, contingent on the U.S. simultaneously releasing the first tranche of frozen assets and easing some sanctions, with Qatar verifying both sides.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:1",
+                  "action": "Publicly revise the sequencing to break the simultaneity deadlock: accept that the first tranche of sanctions easing and asset unfreezing begins concurrently with Iran's transit restoration, verified by Doha monitoring plus IMF Portwatch data, rather than only after full verified recovery. Convey through Qatar's delegation.\n承诺：First-tranche relief released concurrently with Doha-monitored transit restoration; further relief tied to sustained compliance.\n触发或复核条件：Iran sustains commercial transit and refrains from attacks on shipping.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly revise the sequencing to break the simultaneity deadlock: accept that the first tranche of sanctions easing and asset unfreezing begins concurrently with Iran's transit restoration, verified by Doha monitoring plus IMF Portwatch data, rather than only after full verified recovery. Convey through Qatar's delegation.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly extend and reaffirm the pause in offensive strikes near the Strait and Hormuz shipping lanes, conditional on Iran continuing to refrain from attacking commercial vessels, to keep the transit restart viable through the resolution window.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "candidate_id": "agent_e3dc4e6acd265747:initial:1",
+                  "action": "Qatar, as named monitor, transmits a written bridging formula to both Iran and the United States: Iran begins restoring commercial transit immediately and permits Portwatch-observed arrivals; the U.S. releases the first tranche of sanctions easing and asset unfreezing upon the first Portwatch 7-day average reading showing material transit recovery, with Doha certifying the reading and hosting the next round.\n承诺：Qatar commits to certify Portwatch readings impartially and host the next round in Doha.\n触发或复核条件：Both parties accept the written bridging formula as the basis for simultaneous implementation.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3dc4e6acd265747:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Qatar, as named monitor, transmits a written bridging formula to both Iran and the United States: Iran begins restoring commercial transit immediately and permits Portwatch-observed arrivals; the U.S. releases the first tranche of sanctions easing and asset unfreezing upon the first Portwatch 7-day average reading showing material transit recovery, with Doha certifying the reading and hosting the next round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e3dc4e6acd265747:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Qatar announces it will publish its own independent daily tally of Strait of Hormuz transit calls, cross-checked against IMF Portwatch, and will share it with both Iran and the United States to preempt disputes over whether transit restoration has been verified.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Iran's 26 Nov rejection of the Portwatch-gated sequencing and its offer to restore transit only after simultaneous US action leaves execution unconfirmed. Qatar's 28 Nov bridging formula and the US 27 Nov revision are proposals, not observed transit recovery; no Portwatch reading near 60 is in evidence.",
+                "evidence_quote": "Iran publicly rejected the U.S. re-sequencing that gates first-tranche sanctions easing and asset unfreezing on IMF Portwatch-verified transit restoration, reaffirmed its 21 November acceptance of Qatar's simultaneous-exchange bridge, and offered to begin restoring commercial transit within days once the U.S. implements the first tranche simultaneously, with Doha monitoring; Iran reserved reclosure if attacks on Iran continue.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 7.640325e-05
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 4,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 11,
+        "public_event_count": 10,
+        "substantive_public_event_count": 10,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 11,
+            "active_actor_count": 3,
+            "public_event_count": 10,
+            "substantive_public_event_count": 10,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.3,
+      "covered_p_yes": 0.3,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.3,
+        0.30000000000000004
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "4c5a8973-0bd1-4844-a71d-e0898d702046",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:41:29.749240+00:00",
+      "contract_id": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59a861cef56893c0fb0e9fcdbdfeec5544f7b925945705dbc6f28c3aab6b8df2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 160.343
+    },
+    {
+      "calls": 110,
+      "tokens": 1844237,
+      "input_tokens": 1750232,
+      "output_tokens": 94005,
+      "accounted_tokens_upper": 1877800,
+      "unknown_usage_requests": 2,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly stated it will support phased, verifiable sanctions relief and release of frozen assets if Iran reopens the Strait of Hormuz to commercial transit within two days and keeps it open, with Qatar mediating verification; it offered no unilateral implementation this round, saying sanctions steps would require the agreed phased framework."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The United States publicly stated it will support phased, verifiable sanctions relief and release of frozen assets if Iran reopens the Strait of Hormuz to commercial transit within two days and keeps it open, with Qatar mediating verification; it offered no unilateral implementation this round, saying sanctions steps would require the agreed phased framework.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:3",
+                  "action": null,
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm that Iran will reopen the Strait of Hormuz within two days of the U.S. lifting sanctions and unfreezing Iranian assets, and authorize the Qatar-mediated channel in Tehran to carry this offer to Washington as a concrete, time-bound proposal.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Announce that Iran will permit a verified corridor for commercial and tanker traffic near the Omani coastline, coordinated with Oman and Qatar, without requiring prior sanctions relief, while keeping the full reopening conditional on U.S. concessions.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:1",
+                  "action": "Publicly state that the US will support phased, verifiable sanctions relief and release of frozen assets if Iran reopens the Strait of Hormuz to commercial transit within two days and keeps it open, with Qatar mediating verification. Offer no unilateral implementation this round; sanctions steps would require the agreed phased framework.\n承诺：Phased sanctions relief and asset release contingent on verified reopening and sustained transit.\n触发或复核条件：Iran reopens the strait within two days and sustains commercial passage; Qatar verifies.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state that the US will support phased, verifiable sanctions relief and release of frozen assets if Iran reopens the Strait of Hormuz to commercial transit within two days and keeps it open, with Qatar mediating verification. Offer no unilateral implementation this round; sanctions steps would require the agreed phased framework.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Reaffirm that the US Navy will continue defensive strikes and mine-clearing to keep the Hormuz corridor open, and reject any reopening conditioned on upfront sanctions relief or asset unfreezing before Iran ends attacks on shipping.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "candidate_id": "agent_e3dc4e6acd265747:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3dc4e6acd265747:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Qatar's Tehran delegation presents both parties a bridging package: Iran commits to reopening the Strait to commercial transit within two days of signature, while the U.S. commits to a defined, phased easing of sanctions and release of frozen assets, sequenced and verified by Qatar. Qatar asks Iran and the U.S. to name negotiators and respond within this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the November 2 excerpt, transits had collapsed from about 90 a day to a handful, and Iran's reopening offer was conditional on U.S. sanctions relief that Washington only said it would support under a phased framework, not implement. No Portwatch 7-day average at or above 60 is shown, and the window closes November 30.",
+                "evidence_quote": "Tracked transits through the strait fell from about 90 a day before the war to a handful, and berths at Jebel Ali that normally worked more than 80 scheduled services a week were left idle.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-14",
+                "interval_end": "2026-11-20",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 11,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly reiterated that it will not lift sanctions or unfreeze assets unilaterally, that any relief is phased and verifiable, that the two-day reopening window remains open, and that Qatar remains the verification channel."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "The United States publicly reiterated that it will not lift sanctions or unfreeze assets unilaterally, that any relief is phased and verifiable, that the two-day reopening window remains open, and that Qatar remains the verification channel.",
+                  "date": "2026-11-14"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly respond to the U.S. phased-relief statement: Iran will reopen the Strait to commercial transit within two days of a verifiable first-phase release of frozen assets and suspension of oil-related sanctions, with Qatar verifying; reopening is reversible if the U.S. reneges or strikes continue.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:2",
+                  "action": "Publicly reiterate that the US will not lift sanctions or unfreeze assets unilaterally and that any relief is phased and verifiable, while confirming the two-day reopening window remains open and Qatar remains the verification channel.\n承诺：No unilateral relief; phased, verifiable steps only, Qatar verifying.\n触发或复核条件：Iran provides a verified two-day reopening commitment.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Send a named senior negotiator to Doha to work with Qatar on a phased framework: specify first-phase sanctions and frozen-asset steps (e.g., limited licensing and release of specified frozen funds) contingent on verified Iranian reopening within two days and sustained transit, with Qatar verifying compliance. No unilateral sanctions relief this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reiterate that the US will not lift sanctions or unfreeze assets unilaterally and that any relief is phased and verifiable, while confirming the two-day reopening window remains open and Qatar remains the verification channel.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the November 2 excerpt, transits had collapsed from about 90 a day to a handful, and Iran's reopening offer was conditional on U.S. sanctions relief that Washington only said it would support under a phased framework, not implement. No Portwatch 7-day average at or above 60 is shown, and the window closes November 30.",
+                "evidence_quote": "Tracked transits through the strait fell from about 90 a day before the war to a handful, and berths at Jebel Ali that normally worked more than 80 scheduled services a week were left idle.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-20",
+                "interval_end": "2026-11-25",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-20T00:00:00+00:00",
+                "interval_end_utc": "2026-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly confirmed that the two-day reopening window remains open and that Qatar is receiving written first-phase terms, while restating that no sanctions are lifted before verified reopening and sustained transit, with relief phased and reversible thereafter."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "unmet",
+                  "summary": "no sanctions are lifted before verified reopening and sustained transit",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "The United States publicly confirmed that the two-day reopening window remains open and that Qatar is receiving written first-phase terms, while restating that no sanctions are lifted before verified reopening and sustained transit, with relief phased and reversible thereafter.",
+                  "date": "2026-11-22"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly state Iran's conditions are unchanged and that the Strait can be reopened within two days once phased, verifiable U.S. relief is confirmed by Qatar; call on Washington to specify first-phase steps rather than demand unilateral reopening.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:2",
+                  "action": "Publicly confirm the two-day reopening window stays open and that Qatar is receiving written first-phase terms, while restating that no sanctions are lifted before verified reopening and sustained transit.\n承诺：No relief before verified reopening; phased and reversible thereafter.\n触发或复核条件：Iran reopens within two days and sustains transit, verified by Qatar.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly confirm the two-day reopening window stays open and that Qatar is receiving written first-phase terms, while restating that no sanctions are lifted before verified reopening and sustained transit.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "candidate_id": "agent_e3dc4e6acd265747:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the November 2 excerpt, transits had collapsed from about 90 a day to a handful, and Iran's reopening offer was conditional on U.S. sanctions relief that Washington only said it would support under a phased framework, not implement. No Portwatch 7-day average at or above 60 is shown, and the window closes November 30.",
+                "evidence_quote": "Tracked transits through the strait fell from about 90 a day before the war to a handful, and berths at Jebel Ali that normally worked more than 80 scheduled services a week were left idle.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-25",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-25T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unmet",
+                  "after": "unmet",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly confirm the two-day window stays open and that written first-phase terms have been transmitted via Qatar, restating that no sanctions are lifted before Qatar-verified reopening and sustained transit, with relief phased and reversible thereafter.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No IMF Portwatch transit-call figure is in evidence, and the last settled developments show the strait still disrupted: November strikes near Qeshm and Bandar Lengeh, severe threat level, and reduced traffic. U.S. statements kept sanctions relief conditional and phased, so reopening willingness had not converted into verified sustained transit by the horizon.",
+                "evidence_quote": "On November 2nd, Iran has expressed readiness to reopen the Strait of Hormuz within two days, provided the U.S. meets specific conditions.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.00022453199999999994
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly reaffirmed that U.S. naval forces will continue defensive strikes and mine-clearing to keep the Strait of Hormuz open, that any Iranian mining or attacks on shipping will be met with force, and that the negotiating channel with Qatar remains open, with no sanctions relief absent verified reopening."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The United States publicly reaffirmed that U.S. naval forces will continue defensive strikes and mine-clearing to keep the Strait of Hormuz open, that any Iranian mining or attacks on shipping will be met with force, and that the negotiating channel with Qatar remains open, with no sanctions relief absent verified reopening.",
+                  "date": "2026-11-10"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Qatar's delegation transmitted Iran's reopening conditions to the United States together with a Qatari-facilitated framework of incremental, verifiable steps in which partial sanctions relief follows observed transit resumption, and requested a written U.S. counter-offer within days.",
+                  "date": "2026-11-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:3",
+                  "action": null,
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Reaffirm publicly, through Qatar's mediating delegation in Tehran, that Iran will reopen the Strait of Hormuz within two days of the U.S. lifting sanctions and unfreezing assets, and call on the U.S. to respond to these terms.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Announce that Iran will permit commercial transit through the Strait of Hormuz without waiting for sanctions relief, framing it as a humanitarian and economic gesture, while reserving the right to reclose if attacked.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:2",
+                  "action": "Publicly reaffirm that U.S. naval forces will continue defensive strikes and mine-clearing to keep the Strait of Hormuz open, and that any Iranian mining or attacks on shipping will be met with force, while leaving the negotiating channel with Qatar open.\n承诺：Continue defensive military operations and mine-clearing; no sanctions relief absent verified reopening.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly authorize Qatar-mediated talks with Iran on a limited, phased package: partial sanctions relief and staged unfreezing of some assets in exchange for Iran reopening the Strait of Hormuz to commercial transit within days, with verification. Sanctions relief tied to verified transit resumption, not upfront.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly reaffirm that U.S. naval forces will continue defensive strikes and mine-clearing to keep the Strait of Hormuz open, and that any Iranian mining or attacks on shipping will be met with force, while leaving the negotiating channel with Qatar open.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "candidate_id": "agent_e3dc4e6acd265747:initial:2",
+                  "action": null,
+                  "p_selected": 0.35,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of early November 2026, transits were still only a handful per day versus ~90 pre-war, and Iran's reopening offer was conditional on U.S. sanctions relief that remains unmet. The 60-call threshold by Nov 30 requires a rapid, verified restoration of commercial traffic that current evidence does not show.",
+                "evidence_quote": "Tracked transits through the strait fell from about 90 a day before the war to a handful, and berths at Jebel Ali that normally worked more than 80 scheduled services a week were left idle.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-14",
+                "interval_end": "2026-11-20",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 11,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly stated that it will not unfreeze assets or lift sanctions before verified reopening of the Strait of Hormuz, but will match any Iranian reopening with a reciprocal pause in offensive operations and continued mine-clearing to restore safe transit."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "will not unfreeze assets or lift sanctions before verified reopening of the Strait of Hormuz",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "The United States publicly stated that it will not unfreeze assets or lift sanctions before verified reopening of the Strait of Hormuz, but will match any Iranian reopening with a reciprocal pause in offensive operations and continued mine-clearing to restore safe transit.",
+                  "date": "2026-11-15"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:2",
+                  "action": "Publicly state that the US will not unfreeze assets or lift sanctions before verified reopening, but will match any Iranian reopening with a reciprocal pause in offensive operations and continued mine-clearing to restore safe transit.\n承诺：Reciprocal strike pause and mine-clearing if Iran reopens; no pre-reopening relief.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly state that the US will not unfreeze assets or lift sanctions before verified reopening, but will match any Iranian reopening with a reciprocal pause in offensive operations and continued mine-clearing to restore safe transit.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-20",
+                "interval_end": "2026-11-25",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-20T00:00:00+00:00",
+                "interval_end_utc": "2026-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "status": "executed",
+                  "summary": "The United States publicly reiterated that it will not unfreeze assets or lift sanctions before verified reopening of the Strait of Hormuz and called on Iran to reopen the Strait immediately, stating that it will match any Iranian reopening with a reciprocal pause in offensive operations and continued mine-clearing."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "The United States publicly reiterated that it will not unfreeze assets or lift sanctions before verified reopening of the Strait of Hormuz and called on Iran to reopen the Strait immediately, stating that it will match any Iranian reopening with a reciprocal pause in offensive operations and continued mine-clearing.",
+                  "date": "2026-11-21"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_eb54994915b85b01:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly announce that Iran will reopen the Strait to verified commercial traffic within 48 hours of a U.S. reciprocal pause in offensive operations and confirmed mine-clearing, with sanctions relief to follow observed traffic recovery.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e717cfd842d65955",
+                  "actor_name": "United States",
+                  "candidate_id": "agent_e717cfd842d65955:initial:2",
+                  "action": "Publicly reiterate that the U.S. will not unfreeze assets or lift sanctions before verified reopening, and call on Iran to reopen the Strait immediately, matching any reopening with a reciprocal pause in offensive operations and continued mine-clearing.\n承诺：Reciprocal strike pause and mine-clearing if Iran reopens; no pre-reopening relief.",
+                  "p_selected": 0.2727272727272727,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e717cfd842d65955:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.2727272727272727,
+                      "action": "Publicly reiterate that the U.S. will not unfreeze assets or lift sanctions before verified reopening, and call on Iran to reopen the Strait immediately, matching any reopening with a reciprocal pause in offensive operations and continued mine-clearing.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e3dc4e6acd265747",
+                  "actor_name": "Qatar",
+                  "candidate_id": "agent_e3dc4e6acd265747:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-25",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-25T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_eb54994915b85b01",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_eb54994915b85b01:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No IMF Portwatch transit-call figure is in evidence, and the latest settled facts show the strait still disrupted: November strikes, Iran conditioning reopening on sanctions relief, and the U.S. refusing relief before verified reopening. A near-term return to a 7-day average of 60+ calls by November 30 is therefore unlikely, though unverified.",
+                "evidence_quote": "On November 2nd, Iran has expressed readiness to reopen the Strait of Hormuz within two days, provided the U.S. meets specific conditions. A delegation from Qatar is currently in Tehran to assist in negotiating an agreement between Iran and the United States. Iran's conditions involve lifting sanctions and unfreezing assets, demands that the U.S. might find difficult to accept.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.00021649090909090903
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 8,
+        "draw_rounds": 8,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 18,
+        "public_event_count": 7,
+        "substantive_public_event_count": 7,
+        "state_change_count": 3,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 9,
+            "active_actor_count": 3,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 3,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 4,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 9,
+            "active_actor_count": 3,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.15,
+      "covered_p_yes": 0.15,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.15,
+        0.1499999999999999
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "50049150-3eec-45d9-972c-d93a5a12ec75",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T06:15:10.631144+00:00",
+      "contract_id": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59a861cef56893c0fb0e9fcdbdfeec5544f7b925945705dbc6f28c3aab6b8df2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 371.894
+    },
+    {
+      "calls": 97,
+      "tokens": 1556403,
+      "input_tokens": 1464338,
+      "output_tokens": 92065,
+      "accounted_tokens_upper": 1556403,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.4595849132,
+      "coverage": 0.10358964000000004,
+      "unexplored_mass": 0.89641036,
+      "unknown_bounds": [
+        0.0113797332,
+        0.9077900931999999
+      ],
+      "search_iterations": 8,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 8,
+          "search_value": 0.24227390000000001,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.198,
+          "visits": 5,
+          "search_value": 0.2613704,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.06534000000000001,
+          "visits": 3,
+          "search_value": 0.2649613333333333,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.023522400000000002,
+          "visits": 1,
+          "search_value": 0.20374000000000003,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.014113440000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.0009879408000000001
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.005880600000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.05,
+          "frontier": true,
+          "contribution": 0.00029403000000000003
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.003528360000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.0156816,
+          "visits": 1,
+          "search_value": 0.35268,
+          "conditional_p_yes": 0.1,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.01097712,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0013172544
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.00470448,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.05,
+          "frontier": true,
+          "contribution": 0.000235224
+        },
+        {
+          "path": [
+            1,
+            1,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.026136000000000006,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.032670000000000005,
+          "visits": 1,
+          "search_value": 0.324,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.013721400000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 0.0024698520000000002
+        },
+        {
+          "path": [
+            1,
+            2,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.005880600000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0007056720000000001
+        },
+        {
+          "path": [
+            1,
+            2,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.013068000000000003,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.09999000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.132,
+          "visits": 2,
+          "search_value": 0.250092,
+          "conditional_p_yes": 0.1,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.04752,
+          "visits": 1,
+          "search_value": 0.22427999999999998,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.019958399999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0023950079999999997
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.0085536,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.000598752
+        },
+        {
+          "path": [
+            2,
+            1,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.019008,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.0198,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.002376
+        },
+        {
+          "path": [
+            2,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.06468,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.6699999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "84a553e3-db8b-434f-9cd6-612d6d9cd075",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T03:33:26.340716+00:00",
+      "contract_id": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "59a861cef56893c0fb0e9fcdbdfeec5544f7b925945705dbc6f28c3aab6b8df2",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 490.433
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+  "group_id": "strait-of-hormuz-traffic-returns-to-normal-by-november-30-20260810151158765",
+  "stage": "finished",
+  "outcome_deadline": "2026-12-01T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "59a861cef56893c0fb0e9fcdbdfeec5544f7b925945705dbc6f28c3aab6b8df2",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 986,
+    "input_tokens": 870,
+    "output_tokens": 116,
+    "accounted_tokens_upper": 986,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-14",
+        "2026-11-20",
+        "2026-11-25",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-14",
+        "2026-11-20",
+        "2026-11-25",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-14",
+        "2026-11-20",
+        "2026-11-25",
+        "2026-12-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 3
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_1f48db9f0d552842",
+          "name": "Iran",
+          "role": "Controls the Strait of Hormuz closure and has expressed readiness to reopen it within two days if U.S. conditions are met.",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_706ec58e8b36ff3d",
+          "name": "United States",
+          "role": "Conducts military operations and naval actions affecting passage through the Strait of Hormuz and must decide whether to meet Iran's reopening conditions.",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_fef3c52394229108",
+          "name": "Qatar",
+          "role": "Mediates negotiations between Iran and the United States to facilitate reopening of the Strait of Hormuz.",
+          "decision_ids": [
+            "D4"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No named incumbent for IMF Portwatch publication authority; treated as institutional observation.",
+        "Iran's reopening is conditional on U.S. acceptance; U.S. intentions and final agreement status are unknown as of 2026-11-09."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D2",
+          "choice": "Iran decides to reopen the Strait of Hormuz and allow commercial transit to resume.",
+          "owner": "Iran",
+          "support": "represented"
+        },
+        {
+          "id": "D3",
+          "choice": "United States decides whether to meet Iran's conditions (lifting sanctions, unfreezing assets) enabling reopening.",
+          "owner": "United States",
+          "support": "represented"
+        },
+        {
+          "id": "D4",
+          "choice": "Qatar mediates and secures an agreement between Iran and the United States on reopening the strait.",
+          "owner": "Qatar",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 27,
+    "tokens": 86093,
+    "input_tokens": 71007,
+    "output_tokens": 15086,
+    "accounted_tokens_upper": 86093,
+    "unknown_usage_requests": 0
+  }
+}

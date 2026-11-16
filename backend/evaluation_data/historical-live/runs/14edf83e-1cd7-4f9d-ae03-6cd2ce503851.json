@@ -1,0 +1,1917 @@
+{
+  "run_id": "14edf83e-1cd7-4f9d-ae03-6cd2ce503851",
+  "case_id": "market_98247ef202727920d7cee392",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3197,
+      "input_tokens": 3187,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3197,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.97,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.97,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3187,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:20:04.316412+00:00",
+      "contract_id": "0x46ca741da4abd7ffa993f59ac65bfe83de43ae027accac71d263a493e44064e7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "1a488136edb1d9d2f764307b48b6b77a8175348f80bb6d275b132fdf5bb85c1a",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.782
+    },
+    {
+      "calls": 2,
+      "tokens": 6394,
+      "input_tokens": 6374,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6394,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.97,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.97,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3187,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.97,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3187,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:20:06.134511+00:00",
+      "contract_id": "0x46ca741da4abd7ffa993f59ac65bfe83de43ae027accac71d263a493e44064e7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "1a488136edb1d9d2f764307b48b6b77a8175348f80bb6d275b132fdf5bb85c1a",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.817
+    },
+    {
+      "calls": 6,
+      "tokens": 60702,
+      "input_tokens": 58573,
+      "output_tokens": 2129,
+      "accounted_tokens_upper": 60702,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "candidate_id": "agent_26c33033db38580f:initial:1",
+                  "action": "DoD takes no new public step this round; it monitors whether the President or CENTCOM issues an official termination/suspension of the reinstated Iran blockade, and whether Iran-US talks resume with blockade relief on the table.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "DoD takes no new public step this round; it monitors whether the President or CENTCOM issues an official termination/suspension of the reinstated Iran blockade, and whether Iran-US talks resume with blockade relief on the table.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The June 18 CENTCOM removal of the blockade predates the July 13 reinstatement, so it cannot satisfy the in-window rule. By November, talks had stalled and Iran still demanded the blockade's complete lifting, with no official US announcement of termination after reinstatement.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "396ad374-4df3-4bae-8cce-3a88c1f2f770",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:21:07.265690+00:00",
+      "contract_id": "0x46ca741da4abd7ffa993f59ac65bfe83de43ae027accac71d263a493e44064e7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "1a488136edb1d9d2f764307b48b6b77a8175348f80bb6d275b132fdf5bb85c1a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 61.13
+    },
+    {
+      "calls": 10,
+      "tokens": 110623,
+      "input_tokens": 106432,
+      "output_tokens": 4191,
+      "accounted_tokens_upper": 110623,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "candidate_id": "agent_26c33033db38580f:initial:1",
+                  "action": "DoD takes no new public action this round on the blockade; it continues to defer to presidential direction and CENTCOM operational announcements, with no qualifying termination statement issued.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "DoD takes no new public action this round on the blockade; it continues to defer to presidential direction and CENTCOM operational announcements, with no qualifying termination statement issued.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "DoD issues an official declarative statement that the US naval blockade of Iran is terminated and that general blocking of Iranian and Iranian-customer vessel traffic will cease, if and only if the President has directed that termination.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The June 18 CENTCOM removal of the blockade predates the July 13 reinstatement, so it cannot satisfy the in-window rule. Since then, talks stalled in November with Iran still demanding a blockade lift, and no official US announcement of termination appears in the evidence.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.7
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "candidate_id": "agent_26c33033db38580f:initial:1",
+                  "action": "DoD takes no new public action this round; it continues supporting CENTCOM's existing posture while monitoring whether presidential direction or a US–Iran deal changes the blockade's status before December 31, 2026.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:1",
+                      "weight": 75.0,
+                      "probability": 1.0,
+                      "action": "DoD takes no new public action this round; it continues supporting CENTCOM's existing posture while monitoring whether presidential direction or a US–Iran deal changes the blockade's status before December 31, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The June 18 CENTCOM removal of the blockade predates the July 13 reinstatement, so it cannot satisfy the in-window rule. Since then, talks stalled in November with Iran still demanding a blockade lift, and no official US announcement of termination appears in the evidence.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "05771d28-7eb0-447e-8189-1103278c67e9",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:21:26.636614+00:00",
+      "contract_id": "0x46ca741da4abd7ffa993f59ac65bfe83de43ae027accac71d263a493e44064e7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "1a488136edb1d9d2f764307b48b6b77a8175348f80bb6d275b132fdf5bb85c1a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 19.369
+    },
+    {
+      "calls": 18,
+      "tokens": 189149,
+      "input_tokens": 182822,
+      "output_tokens": 6327,
+      "accounted_tokens_upper": 189149,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "candidate_id": "agent_26c33033db38580f:initial:1",
+                  "action": "The Department of Defense makes no new public statement on the naval blockade this round; it continues monitoring the operational posture and diplomatic track without issuing any termination or suspension announcement.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "The Department of Defense makes no new public statement on the naval blockade this round; it continues monitoring the operational posture and diplomatic track without issuing any termination or suspension announcement.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "candidate_id": "agent_26c33033db38580f:initial:1",
+                  "action": "The Department of Defense issues no new public statement on the naval blockade this round; it continues monitoring operational posture and the diplomatic track without announcing any termination or suspension.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "The Department of Defense issues no new public statement on the naval blockade this round; it continues monitoring operational posture and the diplomatic track without announcing any termination or suspension.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The June 18 CENTCOM removal of the blockade predates the July 13 reinstatement, so it cannot satisfy the in-window rule. Since then, talks stalled (Nov 3 rejection of the US counterproposal) and Iran still demands a blockade lift, leaving no qualifying announcement before the deadline.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.8
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "bb318aeb-7108-445d-9711-fc108ff418b4",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:22:24.669336+00:00",
+      "contract_id": "0x46ca741da4abd7ffa993f59ac65bfe83de43ae027accac71d263a493e44064e7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "1a488136edb1d9d2f764307b48b6b77a8175348f80bb6d275b132fdf5bb85c1a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 58.031
+    },
+    {
+      "calls": 35,
+      "tokens": 374421,
+      "input_tokens": 361059,
+      "output_tokens": 13362,
+      "accounted_tokens_upper": 374421,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "candidate_id": "agent_26c33033db38580f:initial:1",
+                  "action": "Take no public step this round on announcing an end or suspension of the naval blockade. Monitor for presidential direction or a CENTCOM operational change, since the June removal was announced by CENTCOM and the July reinstatement was attributed to Trump.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no public step this round on announcing an end or suspension of the naval blockade. Monitor for presidential direction or a CENTCOM operational change, since the June removal was announced by CENTCOM and the July reinstatement was attributed to Trump.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue an official DoD statement that, consistent with the 17 June Islamabad Memorandum and the President's authorization, the United States has terminated its naval blockade of Iranian ships and ships of Iranian customers, effective immediately.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market creation window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market creation window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market creation window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "candidate_id": "agent_26c33033db38580f:initial:1",
+                  "action": "Take no public step on announcing an end or suspension of the naval blockade this round. Monitor for presidential direction or a CENTCOM operational notice, since the June removal was announced by CENTCOM and the July reinstatement was attributed to Trump.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no public step on announcing an end or suspension of the naval blockade this round. Monitor for presidential direction or a CENTCOM operational notice, since the June removal was announced by CENTCOM and the July reinstatement was attributed to Trump.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue an official DoD statement declaring that the US naval blockade of Iranian ships and customers is terminated, effective immediately, through official department channels.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market creation window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The June 18 CENTCOM removal of the blockade predates the July 13 reinstatement, so it cannot satisfy the in-window rule. By November, talks stalled after Rezaei rejected the US counterproposal and demanded the blockade be lifted, leaving no qualifying official announcement before the deadline.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.5599999999999999
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "candidate_id": "agent_26c33033db38580f:initial:1",
+                  "action": "DoD takes no new public announcement this round; it monitors whether the President or CENTCOM issues a directive or statement on the blockade's post-September status before deciding on any official DoD communication.\n触发或复核条件：Review when the President or CENTCOM publicly addresses the blockade's current status, or when a diplomatic settlement requires DoD action.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "DoD takes no new public announcement this round; it monitors whether the President or CENTCOM issues a directive or statement on the blockade's post-September status before deciding on any official DoD communication.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "If the President directs termination or suspension of the naval blockade, DoD will issue an official declarative statement through its authorized representatives announcing the general end or suspension of the blockade of Iranian ships and customers.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market creation window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market creation window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market creation window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26c33033db38580f",
+                  "actor_name": "Department of Defense",
+                  "candidate_id": "agent_26c33033db38580f:initial:1",
+                  "action": "DoD issues no new public statement this round; it continues monitoring whether the President or CENTCOM clarifies the blockade's post-September status before any official DoD communication.\n触发或复核条件：Review when the President or CENTCOM publicly addresses the blockade's current status, or a settlement requires DoD action.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "DoD issues no new public statement this round; it continues monitoring whether the President or CENTCOM clarifies the blockade's post-September status before any official DoD communication.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_26c33033db38580f:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "DoD issues an official declarative statement that the US naval blockade of Iranian ships and customers is terminated, effective immediately, and that vessel traffic to and from Iranian ports will no longer be blocked.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The blockade was lifted in June 2026, but that predates the market creation window and the ceasefire later collapsed. As of early November, talks are stalled and Iran's demands include lifting the blockade, so a qualifying in-window announcement by December 31 is unlikely but not negligible.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US announces end of Iranian blockade by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The June 2026 CENTCOM removal of the blockade predates the July 13 reinstatement and does not satisfy the in-window rule. By the November cutoff, talks had stalled and Iran publicly conditioned reopening on lifting the blockade, with no qualifying US announcement observed.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.5599999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 6,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "fa8473bf-8dca-466d-ba6c-61e84a5d4b2f",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:23:25.050709+00:00",
+      "contract_id": "0x46ca741da4abd7ffa993f59ac65bfe83de43ae027accac71d263a493e44064e7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "1a488136edb1d9d2f764307b48b6b77a8175348f80bb6d275b132fdf5bb85c1a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 60.378
+    },
+    {
+      "calls": 61,
+      "tokens": 677208,
+      "input_tokens": 641147,
+      "output_tokens": 36061,
+      "accounted_tokens_upper": 677208,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.036000000000000004,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.036000000000000004,
+        0.036000000000000004
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.28028,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.8,
+          "visits": 5,
+          "search_value": 0.273936,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.8,
+          "visits": 4,
+          "search_value": 0.23681999999999997,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.8,
+          "visits": 3,
+          "search_value": 0.17496,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.6400000000000001,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.06,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.6400000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.019200000000000002
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.16000000000000003,
+          "visits": 1,
+          "search_value": 0.19,
+          "conditional_p_yes": 0.05,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.16000000000000003,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.05,
+          "frontier": true,
+          "contribution": 0.008000000000000002
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.2,
+          "visits": 4,
+          "search_value": 0.25579999999999997,
+          "conditional_p_yes": 0.1,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.2,
+          "visits": 3,
+          "search_value": 0.20026666666666668,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.2,
+          "visits": 2,
+          "search_value": 0.15319999999999998,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.13999999999999999,
+          "visits": 1,
+          "search_value": 0.19,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.13999999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.05,
+          "frontier": true,
+          "contribution": 0.006999999999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.06,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0018
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "2e355133-35b6-4021-b137-da54d0c28b4d",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:27:26.364927+00:00",
+      "contract_id": "0x46ca741da4abd7ffa993f59ac65bfe83de43ae027accac71d263a493e44064e7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "1a488136edb1d9d2f764307b48b6b77a8175348f80bb6d275b132fdf5bb85c1a",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 241.257
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x46ca741da4abd7ffa993f59ac65bfe83de43ae027accac71d263a493e44064e7",
+  "group_id": "us-announces-end-of-iranian-blockade-byptptpt-20260713152715080",
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "1a488136edb1d9d2f764307b48b6b77a8175348f80bb6d275b132fdf5bb85c1a",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 1182,
+    "input_tokens": 1052,
+    "output_tokens": 130,
+    "accounted_tokens_upper": 1182,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_4afdc276c42592c2",
+          "name": "Department of Defense",
+          "role": "Defense department whose official representatives may announce termination or suspension of the blockade.",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": false,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "President of the United States makes a qualifying official announcement ending or suspending the naval blockade.",
+        "CENTCOM makes a qualifying official announcement ending or suspending the naval blockade.",
+        "Department of State makes a qualifying official announcement ending or suspending the naval blockade."
+      ],
+      "gaps": [
+        "No single required actor; any authorized US government representative (President, DoD, State, CENTCOM) can make the qualifying announcement.",
+        "As of 2026-11-09, no qualifying announcement of a general end or suspension has been confirmed after the July 13 reinstatement; September–November talks remained unresolved.",
+        "No frozen source identifies Department of State; its decision remains unresolved.",
+        "No frozen source identifies President of the United States; its decision remains unresolved.",
+        "No frozen source identifies United States Central Command (CENTCOM); its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "President of the United States makes a qualifying official announcement ending or suspending the naval blockade.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D2",
+          "choice": "CENTCOM makes a qualifying official announcement ending or suspending the naval blockade.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D3",
+          "choice": "Department of Defense makes a qualifying official announcement ending or suspending the naval blockade.",
+          "owner": "Department of Defense",
+          "support": "represented"
+        },
+        {
+          "id": "D4",
+          "choice": "Department of State makes a qualifying official announcement ending or suspending the naval blockade.",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 31,
+    "tokens": 88796,
+    "input_tokens": 71117,
+    "output_tokens": 17679,
+    "accounted_tokens_upper": 88796,
+    "unknown_usage_requests": 0
+  }
+}

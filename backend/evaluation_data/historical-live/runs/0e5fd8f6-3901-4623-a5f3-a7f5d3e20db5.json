@@ -1,0 +1,2014 @@
+{
+  "run_id": "0e5fd8f6-3901-4623-a5f3-a7f5d3e20db5",
+  "case_id": "market_8e17f2dea0c6f2e0dac53d38",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2601,
+      "input_tokens": 2591,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2601,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2591,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:11:22.478436+00:00",
+      "contract_id": "0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "13248dc7203adeae2c0ced799550558d385e03b522f9360455f1b712a1f753c0",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.076
+    },
+    {
+      "calls": 2,
+      "tokens": 5202,
+      "input_tokens": 5182,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5202,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2591,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2591,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:11:23.871189+00:00",
+      "contract_id": "0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "13248dc7203adeae2c0ced799550558d385e03b522f9360455f1b712a1f753c0",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.391
+    },
+    {
+      "calls": 9,
+      "tokens": 74550,
+      "input_tokens": 70872,
+      "output_tokens": 3678,
+      "accounted_tokens_upper": 74550,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c5bb63bf255a5ea5",
+                  "actor_name": "CIA Director John Ratcliffe",
+                  "candidate_id": "agent_c5bb63bf255a5ea5:initial:1",
+                  "action": null,
+                  "p_selected": 0.75,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "candidate_id": "agent_8d66eebe66815a73:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly promote the intensity of ongoing U.S. military operations against Iran, emphasizing that strikes have inflicted severe damage on Iranian military targets and that U.S. forces retain the capability and will to escalate further if directed.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The latest settled evidence is a November 2, 2026 Axios report that senior advisers urged Trump to keep the \"no war, no deal\" posture and rely on economic pressure, and an October 8 pause on strikes through the midterms. No evidence shows an offensive to establish control over Iranian territory, so the contract's required action remains unverified.",
+                "evidence_quote": "According to an Axios report on November 2, 2026, CIA Director John Ratcliffe, Scott Besant, and Marco Rubio advised Trump to maintain the status of “no war, no deal” and allow the economic pressure campaign against Iran to continue.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.22499999999999998
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "cd31defd-0435-4fea-a73f-4dac3b919995",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:12:16.734427+00:00",
+      "contract_id": "0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "13248dc7203adeae2c0ced799550558d385e03b522f9360455f1b712a1f753c0",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 52.861
+    },
+    {
+      "calls": 18,
+      "tokens": 163535,
+      "input_tokens": 154413,
+      "output_tokens": 9122,
+      "accounted_tokens_upper": 163535,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c5bb63bf255a5ea5",
+                  "actor_name": "CIA Director John Ratcliffe",
+                  "candidate_id": "agent_c5bb63bf255a5ea5:supplement:1",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "candidate_id": "agent_8d66eebe66815a73:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly promote the intensity of ongoing U.S. military operations against Iran, emphasizing that U.S. forces retain the capability and readiness to escalate further if directed, without claiming authority to order an invasion.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The latest settled evidence is a November 2, 2026 Axios report that senior advisers urged Trump to keep the \"no war, no deal\" posture and rely on economic pressure. That points away from an offensive to seize Iranian territory before the December 31, 2026 deadline, though a presidential order remains unobserved and could change the picture.",
+                "evidence_quote": "According to an Axios report on November 2, 2026, CIA Director John Ratcliffe, Scott Besant, and Marco Rubio advised Trump to maintain the status of “no war, no deal” and allow the economic pressure campaign against Iran to continue.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.24
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c5bb63bf255a5ea5",
+                  "actor_name": "CIA Director John Ratcliffe",
+                  "candidate_id": "agent_c5bb63bf255a5ea5:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5bb63bf255a5ea5:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "If asked publicly about Iran strategy, state that the intelligence community's assessment supports continued economic pressure and that no offensive to seize Iranian territory is warranted at this time; decline to discuss operational details.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "candidate_id": "agent_8d66eebe66815a73:initial:2",
+                  "action": null,
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly reaffirm that U.S. forces remain ready and that the administration has not ruled out further military action against Iran, framing continued strikes as an option if Iran fails to concede; do not announce a ground offensive or claim invasion authority.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The latest settled evidence is a November 2, 2026 Axios report that senior advisers urged Trump to keep the \"no war, no deal\" posture and rely on economic pressure. That points away from an offensive to seize Iranian territory before the December 31, 2026 deadline, though a presidential order remains unobserved and could change the picture.",
+                "evidence_quote": "According to an Axios report on November 2, 2026, CIA Director John Ratcliffe, Scott Besant, and Marco Rubio advised Trump to maintain the status of “no war, no deal” and allow the economic pressure campaign against Iran to continue.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.315
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "fdec7c5f-0715-4ffb-ac18-90a59a755a0d",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:12:49.626139+00:00",
+      "contract_id": "0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "13248dc7203adeae2c0ced799550558d385e03b522f9360455f1b712a1f753c0",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 32.89
+    },
+    {
+      "calls": 23,
+      "tokens": 198652,
+      "input_tokens": 188520,
+      "output_tokens": 10132,
+      "accounted_tokens_upper": 198652,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c5bb63bf255a5ea5",
+                  "actor_name": "CIA Director John Ratcliffe",
+                  "candidate_id": "agent_c5bb63bf255a5ea5:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5bb63bf255a5ea5:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "If asked publicly, state that the intelligence assessment supports continued economic pressure and diplomacy rather than a ground offensive into Iran, while declining to discuss operational details.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "candidate_id": "agent_8d66eebe66815a73:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly promote the intensity and effectiveness of ongoing U.S. military operations against Iran, emphasizing that U.S. forces retain the capability to escalate decisively if directed, without announcing any new offensive or ground operation.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "A 2026 war is already underway, but the contract requires a U.S. offensive to establish control over Iranian territory, not merely strikes. Recent reporting says Trump paused strikes before the midterms and advisers favor 'no war, no deal,' so escalation to invasion by the deadline is unlikely though not negligible.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "A 2026 war is already underway, but the contract requires a U.S. offensive to establish control over Iranian territory, not merely strikes. Recent reporting says Trump paused strikes before the midterms and advisers favor 'no war, no deal,' so escalation to invasion by the deadline is unlikely though not negligible.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "A 2026 war is already underway, but the contract requires a U.S. offensive to establish control over Iranian territory, not merely strikes. Recent reporting says Trump paused strikes before the midterms and advisers favor 'no war, no deal,' so escalation to invasion by the deadline is unlikely though not negligible.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c5bb63bf255a5ea5",
+                  "actor_name": "CIA Director John Ratcliffe",
+                  "candidate_id": "agent_c5bb63bf255a5ea5:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8d66eebe66815a73:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly state that U.S. forces remain ready and that, if directed, strikes against Iran would resume with overwhelming intensity; frame continued economic pressure as complementary, not a substitute for military readiness.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "A 2026 war is already underway, but the contract requires a U.S. offensive to establish control over Iranian territory, not merely strikes. Recent reporting says Trump paused strikes before the midterms and advisers favor 'no war, no deal,' so escalation to invasion by the deadline is unlikely though not negligible.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The latest settled evidence is a November 2, 2026 Axios report that senior advisers urged Trump to keep the \"no war, no deal\" posture and rely on economic pressure. That points away from an offensive to establish control over Iranian territory before the December 31, 2026 deadline, though the President's decision remains unobserved.",
+                "evidence_quote": "According to an Axios report on November 2, 2026, CIA Director John Ratcliffe, Scott Besant, and Marco Rubio advised Trump to maintain the status of “no war, no deal” and allow the economic pressure campaign against Iran to continue.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.0672
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "229c4d90-e5f8-464a-a53d-3fc1ca805b41",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:13:59.969737+00:00",
+      "contract_id": "0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "13248dc7203adeae2c0ced799550558d385e03b522f9360455f1b712a1f753c0",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 70.341
+    },
+    {
+      "calls": 57,
+      "tokens": 519576,
+      "input_tokens": 491266,
+      "output_tokens": 28310,
+      "accounted_tokens_upper": 519576,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c5bb63bf255a5ea5",
+                  "actor_name": "CIA Director John Ratcliffe",
+                  "candidate_id": "agent_c5bb63bf255a5ea5:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c5bb63bf255a5ea5:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm that continued economic pressure, not military invasion, is the best path to forcing Iranian concessions, describing the pressure campaign as producing strain inside Iran.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "candidate_id": "agent_8d66eebe66815a73:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly promote the intensity and effectiveness of ongoing U.S. military operations against Iran, emphasizing that strikes have inflicted severe damage and that the U.S. military remains ready to escalate further if directed.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "As of the November 2026 evidence, the U.S. is already engaged in a 2026 Iran war, but the cited reporting shows Trump pausing strikes before the midterms and advisers recommending a 'no war, no deal' posture. No evidence shows an ordered offensive to seize Iranian territory before the 2026 deadline.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "As of the November 2026 evidence, the U.S. is already engaged in a 2026 Iran war, but the cited reporting shows Trump pausing strikes before the midterms and advisers recommending a 'no war, no deal' posture. No evidence shows an ordered offensive to seize Iranian territory before the 2026 deadline.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "As of the November 2026 evidence, the U.S. is already engaged in a 2026 Iran war, but the cited reporting shows Trump pausing strikes before the midterms and advisers recommending a 'no war, no deal' posture. No evidence shows an ordered offensive to seize Iranian territory before the 2026 deadline.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "status": "executed",
+                  "summary": "US Defense publicly promoted the intensity and effectiveness of ongoing U.S. military operations against Iran, crediting the President's resolve and warning that any Iranian escalation in the Strait of Hormuz would be met with overwhelming force, while announcing no ground-offensive order and leaving invasion authority with the President."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "announcing no ground-offensive order and leaving invasion authority with the President",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "US Defense publicly promoted the intensity and effectiveness of ongoing U.S. military operations against Iran, crediting the President's resolve and warning that any Iranian escalation in the Strait of Hormuz would be met with overwhelming force, while announcing no ground-offensive order and leaving invasion authority with the President.",
+                  "date": "2026-12-15"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c5bb63bf255a5ea5",
+                  "actor_name": "CIA Director John Ratcliffe",
+                  "candidate_id": "agent_c5bb63bf255a5ea5:initial:2",
+                  "action": null,
+                  "p_selected": 0.2,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                  "action": "Publicly promote the intensity and effectiveness of ongoing U.S. military operations against Iran, crediting the President's resolve and warning that any Iranian escalation in the Strait of Hormuz will be met with overwhelming force. No ground-offensive order is announced; invasion authority remains with the President.\n触发或复核条件：Ongoing U.S. military operations against Iran continue.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly promote the intensity and effectiveness of ongoing U.S. military operations against Iran, crediting the President's resolve and warning that any Iranian escalation in the Strait of Hormuz will be met with overwhelming force. No ground-offensive order is announced; invasion authority remains with the President.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "As of the November 2026 evidence, the U.S. is already engaged in a 2026 Iran war, but the cited reporting shows Trump pausing strikes before the midterms and advisers recommending a 'no war, no deal' posture. No evidence shows an ordered offensive to seize Iranian territory before the 2026 deadline.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The latest settled development is a December 15, 2026 Defense statement promoting ongoing operations but announcing no ground-offensive order and leaving invasion authority with the President. November reporting shows advisers favoring a \"no war, no deal\" pressure posture, so no in-window offensive to establish control is evidenced before the deadline.",
+                "evidence_quote": "US Defense publicly promoted the intensity and effectiveness of ongoing U.S. military operations against Iran, crediting the President's resolve and warning that any Iranian escalation in the Strait of Hormuz would be met with overwhelming force, while announcing no ground-offensive order and leaving invasion authority with the President.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.0252
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "status": "executed",
+                  "summary": "US Defense publicly restated that U.S. forces remain ready and that, if directed, strikes would resume with maximum intensity against Iran, framing continued economic and military pressure as the current course; no ground offensive was announced or ordered."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "no ground offensive was announced or ordered",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "US Defense publicly restated that U.S. forces remain ready and that, if directed, strikes would resume with maximum intensity against Iran, framing continued economic and military pressure as the current course; no ground offensive was announced or ordered.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c5bb63bf255a5ea5",
+                  "actor_name": "CIA Director John Ratcliffe",
+                  "candidate_id": "agent_c5bb63bf255a5ea5:supplement:2",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "candidate_id": "agent_8d66eebe66815a73:supplement:2",
+                  "action": "Publicly restate that U.S. forces remain ready and that, if directed, strikes would resume with maximum intensity against Iran; frame continued economic and military pressure as the current course. No ground offensive is announced or ordered.\n承诺：Support the President's current 'no war, no deal' pressure posture without committing to an invasion.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8d66eebe66815a73:supplement:2",
+                      "weight": 30.0,
+                      "probability": 1.0,
+                      "action": "Publicly restate that U.S. forces remain ready and that, if directed, strikes would resume with maximum intensity against Iran; frame continued economic and military pressure as the current course. No ground offensive is announced or ordered.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                      "action": "Hold current posture: no new public statement or operational directive this round. Monitor whether the President lifts the October strike pause or orders offensive operations, and whether negotiations advance or collapse.",
+                      "code": "program_rejected"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "As of the November 2026 evidence, the U.S. is already engaged in a 2026 Iran war, but the cited reporting shows Trump pausing strikes before the midterms and advisers recommending a 'no war, no deal' posture. No evidence shows an ordered offensive to seize Iranian territory before the 2026 deadline.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "As of the November 2026 evidence, the U.S. is already engaged in a 2026 Iran war, but the cited reporting shows Trump pausing strikes before the midterms and advisers recommending a 'no war, no deal' posture. No evidence shows an ordered offensive to seize Iranian territory before the 2026 deadline.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "As of the November 2026 evidence, the U.S. is already engaged in a 2026 Iran war, but the cited reporting shows Trump pausing strikes before the midterms and advisers recommending a 'no war, no deal' posture. No evidence shows an ordered offensive to seize Iranian territory before the 2026 deadline.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "status": "executed",
+                  "summary": "US Defense publicly restated that U.S. forces remain ready and that, if directed, strikes would resume with maximum intensity against Iran, framing continued economic and military pressure as the current course; no ground offensive was announced or ordered."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "no ground offensive was announced or ordered",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "US Defense publicly restated that U.S. forces remain ready and that, if directed, strikes would resume with maximum intensity against Iran, framing continued economic and military pressure as the current course; no ground offensive was announced or ordered.",
+                  "date": "2026-12-15"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_8d66eebe66815a73",
+                  "actor_name": "US Defense",
+                  "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                  "action": "Publicly restate that U.S. forces remain ready and that, if directed, strikes would resume with maximum intensity against Iran; frame continued economic and military pressure as the current course. No ground offensive is announced or ordered.\n承诺：Support the President's current pressure posture without committing to an invasion.\n触发或复核条件：If directed by the President, strikes resume at maximum intensity.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_8d66eebe66815a73:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly restate that U.S. forces remain ready and that, if directed, strikes would resume with maximum intensity against Iran; frame continued economic and military pressure as the current course. No ground offensive is announced or ordered.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_c5bb63bf255a5ea5",
+                  "actor_name": "CIA Director John Ratcliffe",
+                  "candidate_id": "agent_c5bb63bf255a5ea5:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "As of the November 2026 evidence, the U.S. is already engaged in a 2026 Iran war, but the cited reporting shows Trump pausing strikes before the midterms and advisers recommending a 'no war, no deal' posture. No evidence shows an ordered offensive to seize Iranian territory before the 2026 deadline.",
+                "evidence_quote": "On 8 October, Trump announced that the US military will not resume military strikes on Iran before the 3 November midterm elections, mentioning \"productive discussions\" with Iran.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the U.S. invade Iran before 2027?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Latest settled evidence (Dec 15, 2026) shows US Defense framing continued economic and military pressure as the course, with no ground offensive announced or ordered. Advisors reportedly urged a 'no war, no deal' posture, so the required invasion action appears not to have occurred by the deadline.",
+                "evidence_quote": "US Defense publicly restated that U.S. forces remain ready and that, if directed, strikes would resume with maximum intensity against Iran, framing continued economic and military pressure as the current course; no ground offensive was announced or ordered.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.14699999999999996
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 6,
+        "sampled_decisions": 8,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.07,
+      "covered_p_yes": 0.07,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.07,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "01106c91-d19b-43d0-890b-2ca6465c3ce0",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:15:41.198631+00:00",
+      "contract_id": "0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "13248dc7203adeae2c0ced799550558d385e03b522f9360455f1b712a1f753c0",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 101.225
+    },
+    {
+      "calls": 80,
+      "tokens": 720310,
+      "input_tokens": 675278,
+      "output_tokens": 45032,
+      "accounted_tokens_upper": 720310,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.24564100000000003,
+      "coverage": 0.5389999999999999,
+      "unexplored_mass": 0.4610000000000001,
+      "unknown_bounds": [
+        0.015140999999999996,
+        0.4761410000000001
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.1279832,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.48999999999999994,
+          "visits": 5,
+          "search_value": 0.13871999999999998,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.48999999999999994,
+          "visits": 4,
+          "search_value": 0.1083,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.48999999999999994,
+          "visits": 3,
+          "search_value": 0.10559999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.2743999999999999,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.2743999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.008231999999999998
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.11759999999999998,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.11759999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0035279999999999995
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.09800000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.21,
+          "visits": 4,
+          "search_value": 0.10281499999999999,
+          "conditional_p_yes": 0.06,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.21,
+          "visits": 3,
+          "search_value": 0.08588666666666667,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.21,
+          "visits": 2,
+          "search_value": 0.07063,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.10289999999999998,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.10289999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0020579999999999995
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.04409999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0013229999999999997
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.063,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "c67f3bd5-fad0-4ae7-9b1e-e961d2f328a9",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:19:55.313939+00:00",
+      "contract_id": "0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "13248dc7203adeae2c0ced799550558d385e03b522f9360455f1b712a1f753c0",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 254.11
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846",
+  "group_id": "will-the-us-invade-iran-before-2027",
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "explicit_contract_deadline",
+  "nominal_market_end": "2027-01-01T04:59:00+00:00",
+  "evidence_sha256": "13248dc7203adeae2c0ced799550558d385e03b522f9360455f1b712a1f753c0",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 685,
+    "input_tokens": 581,
+    "output_tokens": 104,
+    "accounted_tokens_upper": 685,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_d9b88e97bec351ad",
+          "name": "US Defense",
+          "role": "Senior defense official who publicly promotes and helps direct U.S. military operations against Iran.",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_30ebf780513da416",
+          "name": "CIA Director John Ratcliffe",
+          "role": "Intelligence chief advising the President on Iran strategy, including recommending continued economic pressure over war.",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "U.S. President orders the commencement of a military offensive intended to establish control over Iranian territory.",
+        "Iranian military leadership decides and communicates Iran's response to a U.S. invasion."
+      ],
+      "gaps": [
+        "No named current U.S. President is identified in the cited sources; the office is bound generically.",
+        "No named current U.S. Secretary of Defense is identified in the cited sources; the office is bound generically.",
+        "The resolution source is a consensus of credible sources, not a named decision-maker; outcome verification is left ownerless.",
+        "No frozen source identifies Iranian army chief Amir Hatami; its decision remains unresolved.",
+        "No frozen source identifies President of the United States; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "U.S. President orders the commencement of a military offensive intended to establish control over Iranian territory.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D2",
+          "choice": "U.S. Secretary of Defense directs or publicly supports execution of offensive military operations against Iran.",
+          "owner": "US Defense",
+          "support": "represented"
+        },
+        {
+          "id": "D3",
+          "choice": "CIA Director advises the President on Iran strategy, including whether to pursue war or continued pressure.",
+          "owner": "CIA Director John Ratcliffe",
+          "support": "represented"
+        },
+        {
+          "id": "D4",
+          "choice": "Iranian military leadership decides and communicates Iran's response to a U.S. invasion.",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 23,
+    "tokens": 51656,
+    "input_tokens": 45265,
+    "output_tokens": 6391,
+    "accounted_tokens_upper": 51656,
+    "unknown_usage_requests": 0
+  }
+}

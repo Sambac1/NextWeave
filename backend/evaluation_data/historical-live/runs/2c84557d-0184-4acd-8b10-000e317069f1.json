@@ -1,0 +1,2744 @@
+{
+  "run_id": "2c84557d-0184-4acd-8b10-000e317069f1",
+  "case_id": "market_003b34f86030f48aa41c15bf",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 4022,
+      "input_tokens": 4012,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 4022,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 4012,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:28:01.476107+00:00",
+      "contract_id": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a7dd946a598cc1911d4d14f2ee5719e7639d95c7ec5f0bd467383ce9a85a1da5",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.816
+    },
+    {
+      "calls": 2,
+      "tokens": 8044,
+      "input_tokens": 8024,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 8044,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.1,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 4012,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.12,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 4012,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:28:03.810368+00:00",
+      "contract_id": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a7dd946a598cc1911d4d14f2ee5719e7639d95c7ec5f0bd467383ce9a85a1da5",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 2.332
+    },
+    {
+      "calls": 15,
+      "tokens": 227460,
+      "input_tokens": 218075,
+      "output_tokens": 9385,
+      "accounted_tokens_upper": 227460,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:3",
+                  "action": "Maintain current posture without a new outward move this round, awaiting US or mediator signals on sanctions relief terms.",
+                  "p_selected": 0.16666666666666666,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.5,
+                      "action": "Iran publicly states it is prepared to conclude the final deal contemplated by the June 14, 2026 memorandum, offering a concrete, unconditional commitment to cap uranium enrichment at 3.67% and dilute its stockpile above that level, contingent on US signature of the same instrument and reciprocal sanctions relief.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.3333333333333333,
+                      "action": "Iran announces it will restore IAEA inspector access to its main enrichment facilities and permit verification of its enriched uranium stockpile, framing this as a confidence-building step toward the final deal.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:3",
+                      "weight": 20.0,
+                      "probability": 0.16666666666666666,
+                      "action": "Maintain current posture without a new outward move this round, awaiting US or mediator signals on sanctions relief terms.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "candidate_id": "agent_3afa30723fe65226:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "IAEA publicly reiterates that it cannot verify the size, composition or location of Iran's enriched uranium stockpile, and urges Iran to restore inspector access to its main enrichment facilities, stating that verification is a precondition for the Agency to certify any future nuclear commitments.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_74be713d98805a9f:supplement:2",
+                  "action": null,
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:supplement:1",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Publicly warn that Israel will not consider any US-Iran final deal adequate unless it sets concrete, verifiable enrichment caps and requires dilution or removal of Iran's 60% stockpile, and urge full IAEA access as a condition.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:initial:1",
+                      "action": "Issue a public statement warning that Israel will not be bound by, and will oppose, any US-Iran final nuclear deal that leaves Iran with an unverified enrichment capability or a 60% stockpile, and urge Washington to require full IAEA access and stockpile dilution as conditions.",
+                      "code": "program_rejected"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The June 14, 2026 MOU only set a 60-day extendable negotiation window toward a final deal; no signed or formally adopted qualifying instrument appears in the evidence. Subsequent war escalation, strikes on Natanz, and IAEA loss of access point away from a concrete, measurable nuclear-limits deal by the deadline.",
+                "evidence_quote": "On February 28, 2026, Israel and the United States launched a joint attack on various sites in Iran, beginning a war between the three countries. The operation included the assassination of Ali Khamenei, Iran's supreme leader. After three months of war, the US and Iran announced on June 14, 2026, that they had agreed to halt hostilities. Mediated by Pakistan and Qatar, the memorandum of understanding presented a 60-day extension of the existing ceasefire to lay the groundwork for a final settlement.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.013333333333333334
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.07,
+      "covered_p_yes": 0.07,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.07,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "b456df51-84f0-48fb-93ab-56cfc38e03d2",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:29:37.026085+00:00",
+      "contract_id": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a7dd946a598cc1911d4d14f2ee5719e7639d95c7ec5f0bd467383ce9a85a1da5",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 93.213
+    },
+    {
+      "calls": 31,
+      "tokens": 458863,
+      "input_tokens": 438638,
+      "output_tokens": 20225,
+      "accounted_tokens_upper": 458863,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "status": "executed",
+                  "summary": "Israel publicly conveyed to Iran that it would suspend strikes on Iranian nuclear sites while active US-Iran talks toward a final instrument continue, provided the instrument includes a concrete, measurable enrichment cap and stockpile disposition benchmark."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Israel publicly conveyed to Iran that it would suspend strikes on Iranian nuclear sites while active US-Iran talks toward a final instrument continue",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Israel publicly conveyed to Iran that it would suspend strikes on Iranian nuclear sites while active US-Iran talks toward a final instrument continue, provided the instrument includes a concrete, measurable enrichment cap and stockpile disposition benchmark.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:3",
+                  "action": null,
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly announce Iran's readiness to conclude the final deal contemplated by the June 14, 2026 MOU, offering a concrete, unconditional benchmark: a defined cap on uranium enrichment purity (e.g., 3.67%) and dilution of highly enriched stockpile, contingent only on US signature of the same instrument, not on any future negotiation. Invite US negotiators to finalize text before December 31, 2026.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Announce Iran will restore IAEA inspector access to its main enrichment facilities and provide a verified declaration of its enriched uranium stockpile, framing this as a good-faith step to enable a measurable benchmark in the final deal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "candidate_id": "agent_3afa30723fe65226:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "IAEA publicly reiterates that it cannot verify the size, composition or location of Iran's enriched uranium stockpile, and calls on Iran to grant inspectors access to its main enrichment facilities so any final deal's nuclear limits can be verified against concrete benchmarks.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_74be713d98805a9f:supplement:2",
+                  "action": "Convey to Iran, via public statement, that Israel would suspend strikes on Iranian nuclear sites while active US-Iran talks toward a final instrument continue, provided the instrument includes a specific enrichment cap and stockpile disposition.\n承诺：Refrain from new strikes on Iranian nuclear sites while active US-Iran negotiation toward a final instrument continues, conditional on a concrete enrichment cap and stockpile benchmark.\n触发或复核条件：Only if the instrument includes a concrete, measurable enrichment and stockpile benchmark.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement warning that Israel will not accept a US-Iran instrument lacking concrete, verifiable limits on Iran's enrichment and stockpile, and will act militarily if needed. It does not claim a veto over US diplomacy.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:supplement:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Convey to Iran, via public statement, that Israel would suspend strikes on Iranian nuclear sites while active US-Iran talks toward a final instrument continue, provided the instrument includes a specific enrichment cap and stockpile disposition.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:supplement:1",
+                      "action": "Issue a public statement that Israel will not accept a US-Iran instrument lacking a concrete, measurable limit on Iran's enrichment and stockpile, and reserves military action otherwise; it claims no veto over US diplomacy.",
+                      "code": "duplicate"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No signed or formally adopted final instrument appears in the settled evidence; the June 14 MOU only set up talks, and later items are war, strikes, and IAEA loss of access. The only pro-deal signal is a conditional strike pause tied to talks, which is willingness, not execution.",
+                "evidence_quote": "target_event: pending. Israel publicly conveyed to Iran that it would suspend strikes on Iranian nuclear sites while active US-Iran talks toward a final instrument continue",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.018
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "status": "executed",
+                  "summary": "Israel issued a formal public statement declaring that Israel will assess any US-Iran final instrument solely by whether it imposes concrete, verifiable caps on Iran's enrichment and stockpile, and that Israel reserves freedom of action against Iranian nuclear sites if no verified limits are in place."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Israel will assess any US-Iran final instrument solely by whether it imposes concrete, verifiable caps on Iran's enrichment and stockpile",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Israel issued a formal public statement declaring that Israel will assess any US-Iran final instrument solely by whether it imposes concrete, verifiable caps on Iran's enrichment and stockpile, and that Israel reserves freedom of action against Iranian nuclear sites if no verified limits are in place.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Iran publicly announces it is prepared to sign a final nuclear instrument with the United States that caps uranium enrichment at a specified purity level and commits to diluting its highly enriched uranium stockpile, contingent on written US sanctions relief. Iran invites the US to name a signing date before December 31, 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "candidate_id": "agent_3afa30723fe65226:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "IAEA publicly reiterates that it cannot verify the size, composition or location of Iran's enriched uranium stockpile, nor whether enrichment is suspended or what centrifuges Iran holds, because inspectors have been denied access since June 2025. IAEA again urges Iran to admit inspectors promptly so any nuclear commitments can be verified against measurable benchmarks.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_74be713d98805a9f:initial:1",
+                  "action": "Issue a formal public statement by Israel's government declaring that Israel will assess any US-Iran final instrument solely by whether it imposes concrete, verifiable caps on Iran's enrichment and stockpile, and that Israel reserves freedom of action against Iranian nuclear sites if no verified limits are in place.\n承诺：Israel states it will judge any final deal by concrete verifiable nuclear limits and retains freedom of action absent them.\n触发或复核条件：If no verified limits on Iran's enrichment and stockpile are established.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a formal public statement by Israel's government declaring that Israel will assess any US-Iran final instrument solely by whether it imposes concrete, verifiable caps on Iran's enrichment and stockpile, and that Israel reserves freedom of action against Iranian nuclear sites if no verified limits are in place.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled event shows a signed or formally adopted final instrument; the June 14 MOU only set a 60-day negotiating window, and later reporting shows war, strikes on Natanz, and IAEA loss of access. Israel's Nov 9 statement conditions any deal on verifiable caps, adding friction, while the deadline remains unverified.",
+                "evidence_quote": "In September 2026, the IAEA said it could no longer verify the size, composition or location of Iran's enriched uranium stockpile because inspectors had been denied access to the country's main enrichment facilities since June 2025.",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_0dd9be9e7587581c.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.054
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "6930402c-f290-4008-8b47-cdb6f08fbce1",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:30:35.669844+00:00",
+      "contract_id": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a7dd946a598cc1911d4d14f2ee5719e7639d95c7ec5f0bd467383ce9a85a1da5",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 58.641
+    },
+    {
+      "calls": 53,
+      "tokens": 772836,
+      "input_tokens": 739651,
+      "output_tokens": 33185,
+      "accounted_tokens_upper": 772836,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:3",
+                  "action": "Iran takes no new outward step this round and monitors whether the United States signals willingness to negotiate concrete nuclear limits toward a final instrument.",
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Iran publicly states it is prepared to conclude the final deal contemplated by the June 14, 2026 MOU, and proposes to the United States a written instrument committing Iran to a concrete, measurable benchmark: capping uranium enrichment at 3.67% and diluting its stockpile of highly enriched uranium above that level, in exchange for sanctions relief. Iran invites the US to sign the same instrument within the 60-day negotiation window.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Iran offers the IAEA renewed access to its main enrichment facilities to verify the size, composition and location of its enriched uranium stockpile, framing this as a confidence-building step ahead of a final deal, without yet committing to a specific enrichment cap.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Iran takes no new outward step this round and monitors whether the United States signals willingness to negotiate concrete nuclear limits toward a final instrument.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "candidate_id": "agent_3afa30723fe65226:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "IAEA publicly reiterates that it cannot verify the size, composition or location of Iran's enriched uranium stockpile and urges Iran to restore inspector access to its main enrichment facilities, noting that any final deal's measurable benchmarks would require verification.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_74be713d98805a9f:initial:3",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public Israeli statement opposing any US-Iran final deal that leaves Iran with enrichment capability or an unverified stockpile, and calling on the US to require full IAEA access and a concrete enrichment cap as preconditions before signing.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The June 14, 2026 MOU only set a 60-day extendable negotiation window toward a final deal; no qualifying signed or adopted instrument with a concrete nuclear benchmark is evidenced. Subsequent war escalation, strikes on Natanz, and IAEA loss of access point against near-term finalization.",
+                "evidence_quote": "On February 28, 2026, Israel and the United States launched a joint attack on various sites in Iran, beginning a war between the three countries. The operation included the assassination of Ali Khamenei, Iran's supreme leader. After three months of war, the US and Iran announced on June 14, 2026, that they had agreed to halt hostilities. Mediated by Pakistan and Qatar, the memorandum of understanding presented a 60-day extension of the existing ceasefire to lay the groundwork for a final settlement.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                  "action": null,
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran issues a public statement reaffirming readiness to conclude a final deal with the United States by December 31, 2026 that includes a defined enrichment cap and dilution or export of highly enriched uranium, conditional on sanctions relief and protection from US sanctions.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Iran takes no new outward step this round and monitors US and IAEA signals before committing to any negotiating position.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The June 14, 2026 MOU only set a 60-day extendable negotiation window toward a final deal; no qualifying signed or adopted instrument with a concrete nuclear benchmark is evidenced. Subsequent war escalation, strikes on Natanz, and IAEA loss of access point against near-term finalization.",
+                "evidence_quote": "On February 28, 2026, Israel and the United States launched a joint attack on various sites in Iran, beginning a war between the three countries. The operation included the assassination of Ali Khamenei, Iran's supreme leader. After three months of war, the US and Iran announced on June 14, 2026, that they had agreed to halt hostilities. Mediated by Pakistan and Qatar, the memorandum of understanding presented a 60-day extension of the existing ceasefire to lay the groundwork for a final settlement.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly announced readiness to sign a final instrument with the United States that caps enrichment at a defined level and dilutes its highly enriched uranium stockpile to a concrete quantity, conditional on reciprocal US sanctions relief and verified by IAEA access, and invited the US to name a signing date before December 31, 2026."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Iran publicly announced readiness to sign a final instrument with the United States that caps enrichment at a defined level and dilutes its highly enriched uranium stockpile to a concrete quantity, conditional on reciprocal US sanctions relief and verified by IAEA access",
+                  "pending_actor_ids": [
+                    "agent_4a69d14a78e85072"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "Iran publicly announced readiness to sign a final instrument with the United States that caps enrichment at a defined level and dilutes its highly enriched uranium stockpile to a concrete quantity, conditional on reciprocal US sanctions relief and verified by IAEA access, and invited the US to name a signing date before December 31, 2026.",
+                  "date": "2026-12-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                  "action": "Iran publicly announces readiness to sign a final instrument with the US that caps enrichment at a defined level and dilutes its HEU stockpile to a concrete quantity, conditional on reciprocal US sanctions relief and verified by IAEA access; invites the US to name a signing date before December 31, 2026.\n承诺：Iran will accept a defined enrichment cap and stockpile dilution benchmark in a signed final instrument if the US offers reciprocal sanctions relief.\n触发或复核条件：US responds with a concrete-limits proposal or names a signing venue.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Iran publicly announces readiness to sign a final instrument with the US that caps enrichment at a defined level and dilutes its HEU stockpile to a concrete quantity, conditional on reciprocal US sanctions relief and verified by IAEA access; invites the US to name a signing date before December 31, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "candidate_id": "agent_3afa30723fe65226:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "IAEA publicly reiterates that it cannot verify the size, composition or location of Iran's enriched uranium stockpile, and states that any final US-Iran instrument's measurable benchmarks would be untestable without restored access, urging Iran to admit inspectors.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.1,
+                "basis": "Iran's Dec 5 readiness announcement is conditional on US sanctions relief and IAEA access, and no US signing commitment or shared text appears. Historical strikes and IAEA access denial show deep distrust, so a mutually signed qualifying instrument by Dec 31 remains unlikely.",
+                "evidence_quote": "Iran publicly announced readiness to sign a final instrument with the United States that caps enrichment at a defined level and dilutes its highly enriched uranium stockpile to a concrete quantity, conditional on reciprocal US sanctions relief and verified by IAEA access, and invited the US to name a signing date before December 31, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly issued a concrete draft final nuclear instrument capping uranium enrichment at 3.67% and diluting its highly enriched uranium stockpile to a defined quantity, to be signed with the United States before December 31, 2026, conditional on reciprocal US sanctions relief and IAEA verification, and invited the US to name a signing date and venue."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_4a69d14a78e85072",
+                    "action_3_agent_4a69d14a78e85072"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Iran publicly issued a concrete draft final nuclear instrument capping uranium enrichment at 3.67% and diluting its highly enriched uranium stockpile to a defined quantity"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Iran publicly issued a concrete draft final nuclear instrument capping uranium enrichment at 3.67% and diluting its highly enriched uranium stockpile to a defined quantity, to be signed with the United States before December 31, 2026, conditional on reciprocal US sanctions relief and IAEA verification",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Iran publicly issued a concrete draft final nuclear instrument capping uranium enrichment at 3.67% and diluting its highly enriched uranium stockpile to a defined quantity, to be signed with the United States before December 31, 2026, conditional on reciprocal US sanctions relief and IAEA verification, and invited the US to name a signing date and venue.",
+                  "date": "2026-12-15"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                  "action": "Iran publicly issues a concrete draft final instrument: enrichment capped at 3.67% and HEU stockpile diluted to a defined quantity, to be signed with the US before December 31, 2026, with reciprocal US sanctions relief and IAEA verification; invites the US to name a signing date and venue.\n承诺：Iran will sign this instrument with the stated enrichment cap and dilution benchmark if the US offers reciprocal sanctions relief.\n触发或复核条件：US responds with acceptance or a concrete counter-proposal and names a signing date before December 31, 2026.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Iran publicly issues a concrete draft final instrument: enrichment capped at 3.67% and HEU stockpile diluted to a defined quantity, to be signed with the US before December 31, 2026, with reciprocal US sanctions relief and IAEA verification; invites the US to name a signing date and venue.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:3",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Iran takes no new outward step this round and monitors whether the US responds to its December 5 readiness offer with a concrete-limits proposal or a signing date before December 31, 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_74be713d98805a9f:initial:3",
+                  "action": null,
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Israel publicly warns that it will not be bound by any US-Iran instrument that leaves Iran's enrichment or HEU stockpile above concrete limits, and states it retains freedom of action against Iranian nuclear sites if a deal lacks verifiable, enforceable caps.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "Iran's latest simulated draft is conditional on US sanctions relief and IAEA verification, and no US signature or formal adoption is evidenced. The June 14 MOU only set a 60-day negotiating framework; the record shows strikes and IAEA access denial, not a final instrument.",
+                "evidence_quote": "Iran publicly issued a concrete draft final nuclear instrument capping uranium enrichment at 3.67% and diluting its highly enriched uranium stockpile to a defined quantity, to be signed with the United States before December 31, 2026, conditional on reciprocal US sanctions relief and IAEA verification, and invited the US to name a signing date and venue.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Iran's December 2026 draft and signing invitation are unilateral and explicitly conditional on US sanctions relief and IAEA verification, so they show willingness, not mutual signature or adoption. No US acceptance, signature, or joint adoption appears before the deadline; the 60-day MOU track and IAEA access breakdown leave execution unknown.",
+                "evidence_quote": "Iran publicly issued a concrete draft final nuclear instrument capping uranium enrichment at 3.67% and diluting its highly enriched uranium stockpile to a defined quantity, to be signed with the United States before December 31, 2026, conditional on reciprocal US sanctions relief and IAEA verification, and invited the US to name a signing date and venue.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.00112266
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 1,
+        "sampled_decisions": 8,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 8,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "7b67eae2-7abb-4308-af40-456b7479151d",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:33:22.392753+00:00",
+      "contract_id": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a7dd946a598cc1911d4d14f2ee5719e7639d95c7ec5f0bd467383ce9a85a1da5",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 166.718
+    },
+    {
+      "calls": 115,
+      "tokens": 1639791,
+      "input_tokens": 1563307,
+      "output_tokens": 76484,
+      "accounted_tokens_upper": 1639791,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "status": "executed",
+                  "summary": "Israel publicly warned that if Iran's enrichment program remains unverified and uncapped, Israel reserves the right to act militarily against Iranian nuclear sites, as it did at Natanz in 2025."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Israel publicly warned that if Iran's enrichment program remains unverified and uncapped, Israel reserves the right to act militarily against Iranian nuclear sites, as it did at Natanz in 2025.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:3",
+                  "action": null,
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Iran publicly offers to conclude the final deal on the June 14 MOU track: a written instrument committing Iran to a defined enrichment cap and dilution/export of its highly enriched stockpile, conditioned on US sanctions relief and IAEA access terms. Iran invites US negotiators to finalize and sign before December 31, 2026.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Iran announces it will restore IAEA access to its main enrichment facilities and disclose its stockpile, framed as a confidence-building step within the final-deal negotiation, contingent on parallel progress on sanctions relief and a signed instrument.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "candidate_id": "agent_3afa30723fe65226:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "IAEA publicly reiterates that it cannot verify the size, composition or location of Iran's enriched uranium stockpile and urges Iran to admit inspectors to its main enrichment facilities, offering to conduct verification promptly if access is granted.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_74be713d98805a9f:supplement:2",
+                  "action": "Israeli officials publicly warn that if Iran's enrichment program remains unverified and uncapped, Israel reserves the right to act militarily against Iranian nuclear sites, as it did at Natanz in 2025.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Israeli officials publicly state that any US-Iran final instrument must contain a concrete, verifiable cap on Iranian enrichment and full IAEA access, and that Israel will not consider itself bound by arrangements that leave Iran's stockpile unverified.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:supplement:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Israeli officials publicly warn that if Iran's enrichment program remains unverified and uncapped, Israel reserves the right to act militarily against Iranian nuclear sites, as it did at Natanz in 2025.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:supplement:1",
+                      "action": "Israeli officials publicly state that any US-Iran final instrument must contain a concrete, verifiable cap on Iranian enrichment and full IAEA access, and that Israel will not consider itself bound by arrangements leaving Iran's stockpile unverified.",
+                      "code": "duplicate"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The June 14, 2026 MOU only set a 60-day negotiating window toward a final deal; no qualifying signed or adopted instrument with a concrete nuclear benchmark is evidenced. Subsequent war escalation, strikes on Natanz, and IAEA loss of access point against near-term finalization.",
+                "evidence_quote": "On February 28, 2026, Israel and the United States launched a joint attack on various sites in Iran, beginning a war between the three countries. The operation included the assassination of Ali Khamenei, Iran's supreme leader. After three months of war, the US and Iran announced on June 14, 2026, that they had agreed to halt hostilities. Mediated by Pakistan and Qatar, the memorandum of understanding presented a 60-day extension of the existing ceasefire to lay the groundwork for a final settlement.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The June 14, 2026 MOU only set a 60-day negotiating window toward a final deal; no qualifying signed or adopted instrument with a concrete nuclear benchmark is evidenced. Subsequent war escalation, strikes on Natanz, and IAEA loss of access point against near-term finalization.",
+                "evidence_quote": "On February 28, 2026, Israel and the United States launched a joint attack on various sites in Iran, beginning a war between the three countries. The operation included the assassination of Ali Khamenei, Iran's supreme leader. After three months of war, the US and Iran announced on June 14, 2026, that they had agreed to halt hostilities. Mediated by Pakistan and Qatar, the memorandum of understanding presented a 60-day extension of the existing ceasefire to lay the groundwork for a final settlement.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The June 14, 2026 MOU only set a 60-day negotiating window toward a final deal; no qualifying signed or adopted instrument with a concrete nuclear benchmark is evidenced. Subsequent war escalation, strikes on Natanz, and IAEA loss of access point against near-term finalization.",
+                "evidence_quote": "On February 28, 2026, Israel and the United States launched a joint attack on various sites in Iran, beginning a war between the three countries. The operation included the assassination of Ali Khamenei, Iran's supreme leader. After three months of war, the US and Iran announced on June 14, 2026, that they had agreed to halt hostilities. Mediated by Pakistan and Qatar, the memorandum of understanding presented a 60-day extension of the existing ceasefire to lay the groundwork for a final settlement.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly announced readiness to sign a final instrument with the United States before December 31, 2026, offering a concrete cap of 3.67% enrichment and dilution of its 60% enriched uranium stockpile, conditioned on verified US sanctions relief and entry into force upon signature."
+                },
+                {
+                  "action_id": "action_4_agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "status": "executed",
+                  "summary": "Israel publicly reiterated that Israel will not be bound by any US-Iran instrument that leaves Iran's enrichment unverified and uncapped, and restated that Israel reserves the right to act militarily against Iranian nuclear sites if such a deal is signed without a concrete, verifiable cap."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_4_agent_4a69d14a78e85072",
+                    "action_4_agent_74be713d98805a9f"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Israel will not be bound by any US-Iran instrument that leaves Iran's enrichment unverified and uncapped"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Iran publicly announced readiness to sign a final instrument with the United States before December 31, 2026",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Iran publicly announced readiness to sign a final instrument with the United States before December 31, 2026, offering a concrete cap of 3.67% enrichment and dilution of its 60% enriched uranium stockpile, conditioned on verified US sanctions relief and entry into force upon signature.",
+                  "date": "2026-12-15"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "Israel publicly reiterated that Israel will not be bound by any US-Iran instrument that leaves Iran's enrichment unverified and uncapped, and restated that Israel reserves the right to act militarily against Iranian nuclear sites if such a deal is signed without a concrete, verifiable cap.",
+                  "date": "2026-12-16"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                  "action": "Iran publicly announces readiness to sign a final instrument with the US before Dec 31, 2026, committing to a concrete cap of 3.67% enrichment and dilution of its 60% stockpile, conditioned on verified US sanctions relief and entry into force upon signature.\n承诺：Concrete, measurable enrichment cap and stockpile dilution offered in exchange for sanctions relief and signature before 2026-12-31.\n触发或复核条件：US provides credible sanctions relief and signs the same instrument.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Iran publicly announces readiness to sign a final instrument with the US before Dec 31, 2026, committing to a concrete cap of 3.67% enrichment and dilution of its 60% stockpile, conditioned on verified US sanctions relief and entry into force upon signature.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Iran publicly offers to restore IAEA access to enrichment facilities as part of a final deal, contingent on a signed instrument providing sanctions relief, framing access as tied to the deal rather than unilateral.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "candidate_id": "agent_3afa30723fe65226:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "IAEA publicly reiterates that it cannot verify the size, composition or location of Iran's enriched uranium stockpile, nor whether enrichment is suspended, and calls on Iran to admit inspectors promptly; states that any final US-Iran instrument's measurable nuclear benchmark would be untestable without restored access, and offers immediate verification once access is granted.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_74be713d98805a9f:initial:1",
+                  "action": "Israeli officials reiterate publicly that Israel will not be bound by any US-Iran instrument that leaves Iran's enrichment unverified and uncapped, and restate that Israel reserves the right to act militarily against Iranian nuclear sites if such a deal is signed without a concrete, verifiable cap.\n承诺：Israel conditions its acceptance of any US-Iran final deal on a concrete, verifiable enrichment cap and restored IAEA access.\n触发或复核条件：If a US-Iran instrument is signed or adopted without a concrete measurable nuclear limit and verification, Israel maintains its reserved right to act militarily.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Israeli officials reiterate publicly that Israel will not be bound by any US-Iran instrument that leaves Iran's enrichment unverified and uncapped, and restate that Israel reserves the right to act militarily against Iranian nuclear sites if such a deal is signed without a concrete, verifiable cap.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:supplement:1",
+                      "action": "Israeli officials publicly reiterate that Israel will not accept any US-Iran instrument leaving Iran's enrichment unverified and uncapped, and that Israel reserves the right to act militarily against Iranian nuclear sites if a deal is signed without a concrete verifiable cap and restored IAEA access.",
+                      "code": "duplicate"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Iran's Dec 15 simulated announcement of readiness to sign a final instrument with a 3.67% cap and stockpile dilution raises the chance, but it is only a stated willingness conditioned on US sanctions relief, not mutual signature or adoption. Israel's Dec 16 warning and the absence of any US acceptance keep execution uncertain before Dec 31.",
+                "evidence_quote": "Iran publicly announced readiness to sign a final instrument with the United States before December 31, 2026, offering a concrete cap of 3.67% enrichment and dilution of its 60% enriched uranium stockpile, conditioned on verified US sanctions relief and entry into force upon signature.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly restated its readiness to sign a final nuclear instrument before December 31, 2026, converting its earlier conditional offer into an unconditional present obligation: capping enrichment at 3.67% and diluting its 60% enriched uranium stockpile upon signature, with IAEA verification to follow, and called on the United States to sign the same instrument immediately."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_5_agent_4a69d14a78e85072",
+                    "action_4_agent_4a69d14a78e85072"
+                  ],
+                  "outcome": "realized",
+                  "effect": "converting its earlier conditional offer into an unconditional present obligation"
+                },
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_5_agent_4a69d14a78e85072",
+                    "action_4_agent_74be713d98805a9f"
+                  ],
+                  "outcome": "pending",
+                  "effect": "with IAEA verification to follow"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "pending",
+                  "after": "unmet",
+                  "summary": "called on the United States to sign the same instrument immediately",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_005_001",
+                  "text": "Iran publicly restated its readiness to sign a final nuclear instrument before December 31, 2026, converting its earlier conditional offer into an unconditional present obligation: capping enrichment at 3.67% and diluting its 60% enriched uranium stockpile upon signature, with IAEA verification to follow, and called on the United States to sign the same instrument immediately.",
+                  "date": "2026-12-22"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                  "action": "Iran publicly restates its readiness to sign before Dec 31, 2026, converting the conditional offer into an unconditional present obligation: cap enrichment at 3.67% and dilute its 60% stockpile upon signature, with IAEA verification to follow. Iran calls on the US to sign the same instrument immediately.\n承诺：Unconditional 3.67% enrichment cap and dilution of 60% stockpile, effective on signature before 2026-12-31.\n触发或复核条件：US signs or formally adopts the same instrument by Dec 31, 2026.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Iran publicly restates its readiness to sign before Dec 31, 2026, converting the conditional offer into an unconditional present obligation: cap enrichment at 3.67% and dilute its 60% stockpile upon signature, with IAEA verification to follow. Iran calls on the US to sign the same instrument immediately.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Iran's December statements offer a concrete 3.67% cap and dilution, but they remain conditioned on verified US sanctions relief, and no US signature or formal adoption appears in the record. The June 14 MOU's 60-day negotiating window has long elapsed without a settled final instrument.",
+                "evidence_quote": "Iran publicly announced readiness to sign a final instrument with the United States before December 31, 2026, offering a concrete cap of 3.67% enrichment and dilution of its 60% enriched uranium stockpile, conditioned on verified US sanctions relief and entry into force upon signature.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.0011434499999999998
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran offered to restore IAEA access to its main enrichment facilities and permit verification of its enriched uranium stockpile, framing the step as good-faith support for concluding a final deal and inviting the IAEA to schedule inspections; Iran stated the step is independent of, but supportive of, the final instrument."
+                },
+                {
+                  "action_id": "action_1_agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "status": "executed",
+                  "summary": "Israel publicly warned that any US-Iran final deal must include concrete, verifiable limits on Iran's enrichment and stockpile, and stated that Israel will not consider a deal without such benchmarks as addressing its security concerns."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_74be713d98805a9f",
+                    "action_1_agent_4a69d14a78e85072"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Israel publicly warned that any US-Iran final deal must include concrete, verifiable limits on Iran's enrichment and stockpile"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Iran offered to restore IAEA access to its main enrichment facilities and permit verification of its enriched uranium stockpile",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Iran offered to restore IAEA access to its main enrichment facilities and permit verification of its enriched uranium stockpile, framing the step as good-faith support for concluding a final deal and inviting the IAEA to schedule inspections; Iran stated the step is independent of, but supportive of, the final instrument.",
+                  "date": "2026-11"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Israel publicly warned that any US-Iran final deal must include concrete, verifiable limits on Iran's enrichment and stockpile, and stated that Israel will not consider a deal without such benchmarks as addressing its security concerns.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                  "action": "Iran offers to restore IAEA access to its main enrichment facilities and permit verification of its enriched uranium stockpile, framing this as a good-faith step toward a final deal and inviting the IAEA to schedule inspections. Iran states this step is independent of, but supportive of, concluding the final instrument.\n承诺：Iran will admit IAEA inspectors to main enrichment facilities to verify stockpile size and composition.\n触发或复核条件：IAEA schedules inspections and reports findings.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Iran publicly states it is prepared to conclude the final deal contemplated by the June 14, 2026 MOU, offering a concrete, unconditional benchmark — a defined cap on uranium enrichment purity (e.g., 3.67%) and dilution/export of its highly enriched stockpile — contingent only on the US signing the same instrument and delivering specified sanctions relief. Iran invites the US to exchange draft texts through the existing mediation channel before December 31, 2026.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Iran offers to restore IAEA access to its main enrichment facilities and permit verification of its enriched uranium stockpile, framing this as a good-faith step toward a final deal and inviting the IAEA to schedule inspections. Iran states this step is independent of, but supportive of, concluding the final instrument.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "No new outward move this round; monitor US signals on sanctions relief and any draft text through the mediation channel before deciding whether to table a formal proposal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "candidate_id": "agent_3afa30723fe65226:initial:2",
+                  "action": null,
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "IAEA publicly reiterates that it cannot verify the size, composition or location of Iran's enriched uranium stockpile, and calls on Iran to restore inspector access to its main enrichment facilities so that any final US-Iran instrument's nuclear benchmarks could be verified. No new verification claim is made.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_74be713d98805a9f:initial:1",
+                  "action": "Israeli officials publicly warn that any US-Iran final deal must include concrete, verifiable limits on Iran's enrichment and stockpile, and state that Israel will not consider a deal without such benchmarks as addressing its security concerns.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Israeli officials publicly warn that any US-Iran final deal must include concrete, verifiable limits on Iran's enrichment and stockpile, and state that Israel will not consider a deal without such benchmarks as addressing its security concerns.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The June 14, 2026 MOU set a 60-day extendable negotiation window toward a final deal, but the record shows renewed US strikes on Natanz in March 2026, an ongoing war, and IAEA inability to verify Iran's stockpile since June 2025. Iran's November offer to restore IAEA access is a confidence-building step, not a signed or adopted instrument with concrete enrichment limits, so it does not satisfy the outcome rule.",
+                "evidence_quote": "Iran offered to restore IAEA access to its main enrichment facilities and permit verification of its enriched uranium stockpile, framing the step as good-faith support for concluding a final deal and inviting the IAEA to schedule inspections; Iran stated the step is independent of, but supportive of, the final instrument.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran formally invited the IAEA to schedule inspections of its main enrichment facilities within the current period and stated it will permit stockpile verification so any benchmark in the final instrument is testable, conditioned on the IAEA scheduling the visit."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_4a69d14a78e85072",
+                    "action_2_agent_4a69d14a78e85072"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Iran formally invited the IAEA to schedule inspections of its main enrichment facilities within the current period"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Iran formally invited the IAEA to schedule inspections of its main enrichment facilities within the current period and stated it will permit stockpile verification so any benchmark in the final instrument is testable",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "Iran formally invited the IAEA to schedule inspections of its main enrichment facilities within the current period and stated it will permit stockpile verification so any benchmark in the final instrument is testable, conditioned on the IAEA scheduling the visit.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                  "action": "Iran confirms and operationalizes its November offer by formally inviting the IAEA to schedule inspections of its main enrichment facilities within the current period, and states it will permit stockpile verification so any benchmark in the final instrument is testable.\n承诺：Iran will admit IAEA inspectors and permit stockpile verification once the IAEA schedules the visit.\n触发或复核条件：IAEA schedules inspections.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Iran confirms and operationalizes its November offer by formally inviting the IAEA to schedule inspections of its main enrichment facilities within the current period, and states it will permit stockpile verification so any benchmark in the final instrument is testable.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:supplement:1",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Iran publicly states its readiness to conclude the final instrument and sets out its own concrete, measurable benchmark: a defined enrichment-purity cap and a commitment to dilute or export its highly enriched uranium stockpile, contingent on reciprocal, credible US sanctions relief. Iran invites the United States to exchange draft texts before December 31, 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "action": "Iran publicly states its readiness to conclude the final instrument with the United States and sets out its own concrete, measurable benchmark: a defined cap on enrichment purity and a commitment to dilute or export its highly enriched uranium stockpile, contingent on reciprocal, credible US sanctions relief. Iran invites the US to exchange draft texts before December 31, 2026.",
+                      "code": "program_rejected"
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:supplement:2",
+                      "action": "Iran confirms and operationalizes its November offer by formally inviting the IAEA to schedule inspections of its main enrichment facilities within the current period, and states it will permit stockpile verification so any benchmark in the final instrument is testable.",
+                      "code": "duplicate"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "status": "executed",
+                  "summary": "The IAEA formally responded to Iran's November invitation by scheduling inspection visits to Iran's main enrichment facilities within the current period and publicly stated it will verify the enriched uranium stockpile so any benchmark in the final instrument is testable, conditional on Iran admitting inspectors as offered."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "publicly stated it will verify the enriched uranium stockpile so any benchmark in the final instrument is testable",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "The IAEA formally responded to Iran's November invitation by scheduling inspection visits to Iran's main enrichment facilities within the current period and publicly stated it will verify the enriched uranium stockpile so any benchmark in the final instrument is testable, conditional on Iran admitting inspectors as offered.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "candidate_id": "agent_3afa30723fe65226:initial:1",
+                  "action": "IAEA formally responds to Iran's invitation by scheduling inspection visits to Iran's main enrichment facilities within the current period, and publicly states it will verify the enriched uranium stockpile so any benchmark in the final instrument is testable.\n承诺：IAEA commits to conduct the scheduled inspections and report findings if Iran admits inspectors as offered.\n触发或复核条件：Iran admits inspectors as its November invitation stated.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "IAEA formally responds to Iran's invitation by scheduling inspection visits to Iran's main enrichment facilities within the current period, and publicly states it will verify the enriched uranium stockpile so any benchmark in the final instrument is testable.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "IAEA publicly urges Iran to admit inspectors promptly and reiterates that without access it cannot verify the size, composition or location of Iran's enriched uranium stockpile, and that this remains an urgent proliferation concern.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran admitted IAEA inspectors to its main enrichment facilities as offered in November, permitting verification of the stockpile's size and composition so any benchmark in the final instrument is testable. Iran stated the access is a good-faith step supporting, but not conditioning, conclusion of the final deal."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_3_agent_3afa30723fe65226",
+                    "action_4_agent_4a69d14a78e85072"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Iran admitted IAEA inspectors to its main enrichment facilities as offered in November"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Iran stated the access is a good-faith step supporting, but not conditioning, conclusion of the final deal.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "Iran admitted IAEA inspectors to its main enrichment facilities as offered in November, permitting verification of the stockpile's size and composition so any benchmark in the final instrument is testable. Iran stated the access is a good-faith step supporting, but not conditioning, conclusion of the final deal.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4a69d14a78e85072",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                  "action": "Iran admits IAEA inspectors to its main enrichment facilities as offered, permitting verification of stockpile size and composition so any benchmark in the final instrument is testable; Iran states this access is a good-faith step supporting, but not conditioning, conclusion of the final deal.\n承诺：Iran will admit IAEA inspectors and permit stockpile verification as offered in November.\n触发或复核条件：IAEA conducts the scheduled inspection visits.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Iran admits IAEA inspectors to its main enrichment facilities as offered, permitting verification of stockpile size and composition so any benchmark in the final instrument is testable; Iran states this access is a good-faith step supporting, but not conditioning, conclusion of the final deal.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4a69d14a78e85072:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran publicly proposes to the United States a final instrument containing a concrete, measurable enrichment cap and stockpile disposition, framed as an unconditional present obligation, contingent on credible US sanctions relief, and calls for signature by December 31, 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_74be713d98805a9f",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_74be713d98805a9f:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_74be713d98805a9f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Israeli officials publicly reiterate that any US-Iran final deal must contain concrete, verifiable limits on Iran's enrichment and stockpile, and welcome the IAEA's scheduled inspections as a necessary first step, urging Iran to admit inspectors promptly so benchmarks become testable.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.14,
+                "basis": "Iran's November IAEA-access offer and December admission of inspectors are good-faith steps, but they are explicitly supportive of, not conditioning, a final deal. No evidence shows a signed or formally adopted instrument with a concrete, measurable nuclear benchmark by the deadline, and the June MOU's 60-day negotiating window has long lapsed.",
+                "evidence_quote": "Iran admitted IAEA inspectors to its main enrichment facilities as offered in November, permitting verification of the stockpile's size and composition so any benchmark in the final instrument is testable. Iran stated the access is a good-faith step supporting, but not conditioning, conclusion of the final deal.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "status": "executed",
+                  "summary": "The IAEA publicly urged the United States and Iran to conclude the final instrument with at least one concrete, measurable nuclear limit, noting that the current inspection access makes such a benchmark verifiable, while clarifying that it is not a party to the deal."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_5_agent_3afa30723fe65226",
+                    "action_4_agent_4a69d14a78e85072"
+                  ],
+                  "outcome": "realized",
+                  "effect": "noting that the current inspection access makes such a benchmark verifiable"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_5_agent_3afa30723fe65226",
+                    "action_1_agent_74be713d98805a9f"
+                  ],
+                  "outcome": "realized",
+                  "effect": "conclude the final instrument with at least one concrete, measurable nuclear limit"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-Iran Final Nuclear Deal by December 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "while clarifying that it is not a party to the deal",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_005_001",
+                  "text": "The IAEA publicly urged the United States and Iran to conclude the final instrument with at least one concrete, measurable nuclear limit, noting that the current inspection access makes such a benchmark verifiable, while clarifying that it is not a party to the deal.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_3afa30723fe65226",
+                  "actor_name": "IAEA",
+                  "candidate_id": "agent_3afa30723fe65226:initial:2",
+                  "action": "IAEA publicly urges the US and Iran to conclude the final instrument with at least one concrete, measurable nuclear limit, noting that the current inspection access makes such a benchmark verifiable, while clarifying it is not a party to the deal.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "IAEA publicly reports the results of the inspections now underway at Iran's main enrichment facilities, stating the verified size and composition of the enriched uranium stockpile and any remaining verification gaps, so that any concrete benchmark in a final instrument is testable.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_3afa30723fe65226:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "IAEA publicly urges the US and Iran to conclude the final instrument with at least one concrete, measurable nuclear limit, noting that the current inspection access makes such a benchmark verifiable, while clarifying it is not a party to the deal.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No signed or formally adopted final instrument appears in the settled record; the latest round only has IAEA urging conclusion, which is not a US-Iran adoption. Iran's inspection offers and IAEA access improve verifiability but remain framed as supportive, not as the final deal, and no US signature or joint adoption is evidenced.",
+                "evidence_quote": "The IAEA publicly urged the United States and Iran to conclude the final instrument with at least one concrete, measurable nuclear limit, noting that the current inspection access makes such a benchmark verifiable, while clarifying that it is not a party to the deal.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_005_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.00099225
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 8,
+        "draw_rounds": 8,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 15,
+        "public_event_count": 10,
+        "substantive_public_event_count": 10,
+        "state_change_count": 10,
+        "condition_change_count": 3,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 7,
+            "active_actor_count": 3,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 0,
+            "condition_change_count": 2,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 5,
+            "draw_rounds": 5,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 8,
+            "active_actor_count": 3,
+            "public_event_count": 6,
+            "substantive_public_event_count": 6,
+            "state_change_count": 10,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.15,
+      "covered_p_yes": 0.15,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.15,
+        0.1499999999999999
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "8c982c9f-8363-4660-8252-fec0184361e6",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:48:39.309364+00:00",
+      "contract_id": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a7dd946a598cc1911d4d14f2ee5719e7639d95c7ec5f0bd467383ce9a85a1da5",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 222.972
+    },
+    {
+      "calls": 128,
+      "tokens": 2004975,
+      "input_tokens": 1899087,
+      "output_tokens": 105888,
+      "accounted_tokens_upper": 2004975,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.3655816355,
+      "coverage": 0.32785305,
+      "unexplored_mass": 0.67214695,
+      "unknown_bounds": [
+        0.0295081605,
+        0.7016551105000001
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.32676936,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.294,
+          "visits": 9,
+          "search_value": 0.3442386666666667,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.20579999999999998,
+          "visits": 5,
+          "search_value": 0.286308,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.11319,
+          "visits": 2,
+          "search_value": 0.183864,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.04357815,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.04357815,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0013073445
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.0237699,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.002852388
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.04584195,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.09261,
+          "visits": 2,
+          "search_value": 0.228396,
+          "conditional_p_yes": 0.15,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.04537889999999999,
+          "visits": 1,
+          "search_value": 0.2604,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.04537889999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.0031765229999999997
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.0194481,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.09,
+          "frontier": true,
+          "contribution": 0.001750329
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.027783000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.08819999999999999,
+          "visits": 3,
+          "search_value": 0.37553600000000004,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.06173999999999999,
+          "visits": 2,
+          "search_value": 0.37130399999999997,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.025930799999999993,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.025930799999999993,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0031116959999999993
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.017287199999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.15,
+          "frontier": true,
+          "contribution": 0.0025930799999999993
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.018522,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.026459999999999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.0021167999999999994
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.126,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.1,
+          "frontier": true,
+          "contribution": 0.0126
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.5800000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "ff81dc36-93d4-4ddc-803e-2c32e6836802",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:45:59.538458+00:00",
+      "contract_id": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a7dd946a598cc1911d4d14f2ee5719e7639d95c7ec5f0bd467383ce9a85a1da5",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 542.08
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+  "group_id": "us-iran-final-nuclear-deal-by-20260621201254412",
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "a7dd946a598cc1911d4d14f2ee5719e7639d95c7ec5f0bd467383ce9a85a1da5",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 1569,
+    "input_tokens": 1470,
+    "output_tokens": 99,
+    "accounted_tokens_upper": 1569,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2,
+      "needs_evidence": 1,
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "unverified",
+      "seats": [],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "US President authorizes and signs or formally adopts the qualifying written diplomatic instrument.",
+        "Iran's Supreme Leader approves Iran's participation in and adoption of the final nuclear deal.",
+        "Iranian President signs or formally adopts the qualifying instrument on behalf of Iran.",
+        "Iran commits to at least one concrete, measurable benchmark limiting its nuclear program in the instrument.",
+        "United States signs or formally adopts the same qualifying instrument as Iran."
+      ],
+      "gaps": [
+        "No named current US President or Iranian Supreme Leader/President is identified in the sources as of 2026-11-09; seats use institutional titles.",
+        "The June 14, 2026 MOU text and any draft final deal are not provided, so the specific nuclear benchmark cannot be verified.",
+        "Whether Iran's Supreme Leader approval is legally required versus politically necessary is not specified in the sources.",
+        "No frozen source identifies Government of Iran; its decision remains unresolved.",
+        "No frozen source identifies Government of the United States; its decision remains unresolved.",
+        "No frozen source identifies President of Iran; its decision remains unresolved.",
+        "No frozen source identifies President of the United States; its decision remains unresolved.",
+        "No frozen source identifies Supreme Leader of Iran; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "US President authorizes and signs or formally adopts the qualifying written diplomatic instrument.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D2",
+          "choice": "Iran's Supreme Leader approves Iran's participation in and adoption of the final nuclear deal.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D3",
+          "choice": "Iranian President signs or formally adopts the qualifying instrument on behalf of Iran.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D4",
+          "choice": "Iran commits to at least one concrete, measurable benchmark limiting its nuclear program in the instrument.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D5",
+          "choice": "United States signs or formally adopts the same qualifying instrument as Iran.",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 35,
+    "tokens": 118451,
+    "input_tokens": 98195,
+    "output_tokens": 20256,
+    "accounted_tokens_upper": 118451,
+    "unknown_usage_requests": 0
+  }
+}

@@ -1,0 +1,1783 @@
+{
+  "run_id": "777054e1-ff4b-406f-bf85-c744cf3c74b3",
+  "case_id": "market_9b4c824e185779aad95df888",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 4698,
+      "input_tokens": 4688,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 4698,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 4688,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:29:20.475950+00:00",
+      "contract_id": "0x3b73c31eaf5cba67c7f78d22c580b2b1d5ca43fdb960a57d455fad79202e7e8d",
+      "forecast_cutoff": "2025-06-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b6770fae50afb0950e4f1aff8bd5243a66a5ea8bcb508858a0f52e124df42f3e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.698
+    },
+    {
+      "calls": 2,
+      "tokens": 9396,
+      "input_tokens": 9376,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 9396,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 4688,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 4688,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:29:21.769380+00:00",
+      "contract_id": "0x3b73c31eaf5cba67c7f78d22c580b2b1d5ca43fdb960a57d455fad79202e7e8d",
+      "forecast_cutoff": "2025-06-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b6770fae50afb0950e4f1aff8bd5243a66a5ea8bcb508858a0f52e124df42f3e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.292
+    },
+    {
+      "calls": 7,
+      "tokens": 84320,
+      "input_tokens": 80924,
+      "output_tokens": 3396,
+      "accounted_tokens_upper": 84320,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-06-25",
+                "interval_end": "2025-07-10",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 15,
+                "interval_days": 15,
+                "interval_start_utc": "2025-06-25T23:59:59+00:00",
+                "interval_end_utc": "2025-07-10T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "status": "executed",
+                  "summary": "President of the European Commission publicly stated that the Commission is intensifying negotiations toward a mutual US-EU tariff agreement before July 9, and that if no deal is reached by then the EU will activate its suspended retaliatory package and consider services-targeted countermeasures."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "the Commission is intensifying negotiations toward a mutual US-EU tariff agreement before July 9",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "President of the European Commission publicly stated that the Commission is intensifying negotiations toward a mutual US-EU tariff agreement before July 9, and that if no deal is reached by then the EU will activate its suspended retaliatory package and consider services-targeted countermeasures.",
+                  "date": "2025-06-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                  "action": "Publicly state that the Commission is intensifying negotiations toward a mutual US-EU tariff agreement before July 9, and that if no deal is reached by then the EU will activate its suspended retaliatory package and consider services-targeted countermeasures.\n承诺：EU seeks a mutual agreement before July 9; absent a deal, suspended countermeasures resume.\n触发或复核条件：No mutual agreement reached by July 9, 2025.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that the Commission is intensifying negotiations toward a mutual US-EU tariff agreement before July 9, and that if no deal is reached by then the EU will activate its suspended retaliatory package and consider services-targeted countermeasures.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Hold current posture and monitor negotiation progress toward July 9 without a new public move this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Only evidence in-window is the EU Commission president's statement that negotiations are intensifying before July 9, with retaliation threatened if no deal. That signals willingness, not a concluded mutual agreement; no US-side commitment or announced deal appears, and the deadline is imminent.",
+                "evidence_quote": "President of the European Commission publicly stated that the Commission is intensifying negotiations toward a mutual US-EU tariff agreement before July 9, and that if no deal is reached by then the EU will activate its suspended retaliatory package and consider services-targeted countermeasures.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.22,
+          "error": null,
+          "action_path_probability": 0.6
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.22,
+      "covered_p_yes": 0.22,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.22,
+        0.21999999999999997
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "bef247f1-b2f9-42a9-9194-12dc63e262a5",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:30:12.677029+00:00",
+      "contract_id": "0x3b73c31eaf5cba67c7f78d22c580b2b1d5ca43fdb960a57d455fad79202e7e8d",
+      "forecast_cutoff": "2025-06-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b6770fae50afb0950e4f1aff8bd5243a66a5ea8bcb508858a0f52e124df42f3e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 50.906
+    },
+    {
+      "calls": 54,
+      "tokens": 627243,
+      "input_tokens": 605180,
+      "output_tokens": 22063,
+      "accounted_tokens_upper": 627243,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-06-25",
+                "interval_end": "2025-06-28",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2025-06-25T23:59:59+00:00",
+                "interval_end_utc": "2025-06-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "status": "executed",
+                  "summary": "President of the European Commission publicly stated the EU's readiness to conclude a balanced US-EU trade agreement before July 9, while reaffirming that if negotiations fail by the end of the 90-day window the EU will activate countermeasures targeting the US services surplus."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "publicly stated the EU's readiness to conclude a balanced US-EU trade agreement before July 9",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "President of the European Commission publicly stated the EU's readiness to conclude a balanced US-EU trade agreement before July 9, while reaffirming that if negotiations fail by the end of the 90-day window the EU will activate countermeasures targeting the US services surplus.",
+                  "date": "2025-06-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                  "action": "Publicly state the EU's readiness to conclude a balanced US-EU trade agreement before July 9, reaffirming that if negotiations fail by the end of the 90-day window the EU will activate its countermeasures targeting the US services surplus.\n承诺：EU remains committed to negotiating an agreement up to the July 9 deadline; countermeasures remain the fallback if talks fail.\n触发或复核条件：If no agreement is reached by the end of the 90-day window.",
+                  "p_selected": 0.391304347826087,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                      "weight": 45.0,
+                      "probability": 0.391304347826087,
+                      "action": "Publicly state the EU's readiness to conclude a balanced US-EU trade agreement before July 9, reaffirming that if negotiations fail by the end of the 90-day window the EU will activate its countermeasures targeting the US services surplus.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:supplement:1",
+                      "action": "Publicly reaffirm the EU's readiness to conclude a balanced US-EU trade agreement before July 9, and repeat that if negotiations fail by the end of the 90-day window the EU will activate countermeasures targeting the US services surplus.",
+                      "code": "duplicate"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "EU leadership publicly signaled readiness to conclude a balanced US-EU trade deal before July 9, and the threatened 50% tariff was delayed to that date to allow negotiations. However, willingness is not a concluded mutual agreement, and no public evidence shows US approval or an announced deal within the window.",
+                "evidence_quote": "President of the European Commission publicly stated the EU's readiness to conclude a balanced US-EU trade agreement before July 9, while reaffirming that if negotiations fail by the end of the 90-day window the EU will activate countermeasures targeting the US services surplus.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-06-28",
+                "interval_end": "2025-07-02",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 7,
+                "interval_days": 4,
+                "interval_start_utc": "2025-06-28T00:00:00+00:00",
+                "interval_end_utc": "2025-07-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "status": "executed",
+                  "summary": "President of the European Commission publicly reaffirmed the EU's readiness to conclude a balanced US-EU trade agreement before July 9 and stated that EU negotiators are authorized to finalize terms with the US this week, with countermeasures held as fallback only if talks fail by the end of the 90-day window."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_6cc9c415ae6058e2",
+                    "action_2_agent_6cc9c415ae6058e2"
+                  ],
+                  "outcome": "realized",
+                  "effect": "EU negotiators are authorized to finalize terms with the US this week"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "publicly reaffirmed the EU's readiness to conclude a balanced US-EU trade agreement before July 9",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "President of the European Commission publicly reaffirmed the EU's readiness to conclude a balanced US-EU trade agreement before July 9 and stated that EU negotiators are authorized to finalize terms with the US this week, with countermeasures held as fallback only if talks fail by the end of the 90-day window.",
+                  "date": "2025-06-30"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                  "action": "Publicly reaffirm the EU's readiness to conclude a balanced US-EU trade agreement before July 9, and state that EU negotiators are authorized to finalize terms with the US this week, with countermeasures held as fallback only if talks fail by the 90-day window's end.\n承诺：EU will conclude and publicly announce a balanced agreement before July 9 if mutually acceptable terms are reached; countermeasures activate only on failure.\n触发或复核条件：If negotiations fail by the end of the 90-day window.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm the EU's readiness to conclude a balanced US-EU trade agreement before July 9, and state that EU negotiators are authorized to finalize terms with the US this week, with countermeasures held as fallback only if talks fail by the 90-day window's end.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:supplement:1",
+                      "action": "Publicly reaffirm the EU's readiness to conclude a balanced US-EU trade agreement before July 9, state that EU negotiators are authorized to finalize terms with the US this week, and keep countermeasures as fallback only if talks fail by the end of the 90-day window.",
+                      "code": "duplicate"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "EU executive reaffirmed readiness and authorization to finalize terms this week, but that is willingness, not a concluded mutual agreement. The 50% EU tariff was delayed to July 9 while talks continued, so a deal remains plausible but unconfirmed within the window.",
+                "evidence_quote": "President of the European Commission publicly reaffirmed the EU's readiness to conclude a balanced US-EU trade agreement before July 9 and stated that EU negotiators are authorized to finalize terms with the US this week, with countermeasures held as fallback only if talks fail by the end of the 90-day window.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-07-02",
+                "interval_end": "2025-07-06",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 11,
+                "interval_days": 4,
+                "interval_start_utc": "2025-07-02T00:00:00+00:00",
+                "interval_end_utc": "2025-07-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "EU executive reaffirmed readiness and authorization to finalize terms this week, but that is willingness, not a concluded mutual agreement. The 50% EU tariff was delayed to July 9 while talks continued, so a deal remains plausible but unconfirmed within the window.",
+                "evidence_quote": "President of the European Commission publicly reaffirmed the EU's readiness to conclude a balanced US-EU trade agreement before July 9 and stated that EU negotiators are authorized to finalize terms with the US this week, with countermeasures held as fallback only if talks fail by the end of the 90-day window.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-07-06",
+                "interval_end": "2025-07-10",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 15,
+                "interval_days": 4,
+                "interval_start_utc": "2025-07-06T00:00:00+00:00",
+                "interval_end_utc": "2025-07-10T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Only EU-side readiness statements appear in the settled rounds; no US counterpart commitment or mutual announcement is evidenced. The 50% EU tariff was delayed to July 9 pending talks, so a deal remains possible but unconfirmed within the window.",
+                "evidence_quote": "President of the European Commission publicly reaffirmed the EU's readiness to conclude a balanced US-EU trade agreement before July 9 and stated that EU negotiators are authorized to finalize terms with the US this week, with countermeasures held as fallback only if talks fail by the end of the 90-day window.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.22,
+          "error": null,
+          "action_path_probability": 0.27391304347826084
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-06-25",
+                "interval_end": "2025-06-28",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2025-06-25T23:59:59+00:00",
+                "interval_end_utc": "2025-06-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "proposing that both sides announce reciprocal lowering before July 9, subject to Commission-internal and member-state consultation",
+                  "pending_actor_ids": [
+                    "agent_6cc9c415ae6058e2"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The President of the European Commission communicated to the US side a concrete EU offer framework for mutual tariff reductions, proposing that both sides announce reciprocal lowering before July 9, subject to Commission-internal and member-state consultation. No public announcement of an agreement was made.",
+                  "date": "2025-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "candidate_id": "agent_6cc9c415ae6058e2:initial:2",
+                  "action": null,
+                  "p_selected": 0.3333333333333333,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.5,
+                      "action": "Publicly state that the Commission is intensifying negotiations with the US toward a mutual tariff agreement before July 9, and that the EU's suspended countermeasures remain ready if talks fail. Frame this as an EU negotiating position, not a concluded agreement.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The only current signal is an EU-side offer framework communicated to the US, explicitly without a public agreement and still subject to internal consultation. The US decision-maker is unbound in the evidence, and the 50% EU tariff was merely delayed to July 9, so a mutual announced deal inside the window remains unlikely.",
+                "evidence_quote": "The President of the European Commission communicated to the US side a concrete EU offer framework for mutual tariff reductions, proposing that both sides announce reciprocal lowering before July 9, subject to Commission-internal and member-state consultation. No public announcement of an agreement was made.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-06-28",
+                "interval_end": "2025-07-02",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 7,
+                "interval_days": 4,
+                "interval_start_utc": "2025-06-28T00:00:00+00:00",
+                "interval_end_utc": "2025-07-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_6cc9c415ae6058e2"
+                  ]
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly reaffirm the EU's readiness to conclude a mutual tariff-reduction agreement with the US before July 9 and urge the US to respond to the offer framework, while restating that EU countermeasures remain ready if talks fail.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The only current signal is an EU-side offer framework communicated to the US, explicitly without a public agreement and still subject to internal consultation. The US decision-maker is unbound in the evidence, and the 50% EU tariff was merely delayed to July 9, so a mutual announced deal inside the window remains unlikely.",
+                "evidence_quote": "The President of the European Commission communicated to the US side a concrete EU offer framework for mutual tariff reductions, proposing that both sides announce reciprocal lowering before July 9, subject to Commission-internal and member-state consultation. No public announcement of an agreement was made.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-07-02",
+                "interval_end": "2025-07-06",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 11,
+                "interval_days": 4,
+                "interval_start_utc": "2025-07-02T00:00:00+00:00",
+                "interval_end_utc": "2025-07-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "status": "executed",
+                  "summary": "The President of the European Commission publicly announced that the EU is internally cleared and ready to conclude a mutual tariff-reduction agreement with the US before July 9, setting out the EU's concrete offer framework and calling on the US to reciprocate so both sides can announce reciprocal lowering, contingent on a constructive US response."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "publicly announced that the EU is internally cleared and ready to conclude a mutual tariff-reduction agreement with the US before July 9",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "The President of the European Commission publicly announced that the EU is internally cleared and ready to conclude a mutual tariff-reduction agreement with the US before July 9, setting out the EU's concrete offer framework and calling on the US to reciprocate so both sides can announce reciprocal lowering, contingent on a constructive US response.",
+                  "date": "2025-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                  "action": "Publicly announce the EU's readiness to conclude a mutual tariff-reduction agreement with the US before July 9, stating the EU's concrete offer framework and calling on the US to reciprocate so both sides can announce reciprocal lowering. Frame it as the EU being internally cleared and ready, contingent on a constructive US response.\n承诺：EU is internally cleared and ready to publicly announce reciprocal tariff reductions with the US before July 9, contingent on a constructive US response.\n触发或复核条件：US responds constructively on reciprocal reductions.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly announce the EU's readiness to conclude a mutual tariff-reduction agreement with the US before July 9, stating the EU's concrete offer framework and calling on the US to reciprocate so both sides can announce reciprocal lowering. Frame it as the EU being internally cleared and ready, contingent on a constructive US response.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "EU executive now publicly signals internal clearance and readiness to conclude a mutual tariff-reduction deal before July 9, a modest upgrade from prior offer-only communication. But US reciprocal commitment remains unbound and no mutual announcement exists, so the outcome rule is still unmet.",
+                "evidence_quote": "The President of the European Commission publicly announced that the EU is internally cleared and ready to conclude a mutual tariff-reduction agreement with the US before July 9, setting out the EU's concrete offer framework and calling on the US to reciprocate so both sides can announce reciprocal lowering, contingent on a constructive US response.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-07-06",
+                "interval_end": "2025-07-10",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 15,
+                "interval_days": 4,
+                "interval_start_utc": "2025-07-06T00:00:00+00:00",
+                "interval_end_utc": "2025-07-10T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "EU side signaled readiness and an offer framework, but no mutual announcement occurred; the US side remains unbound with no reciprocal commitment. The July 9 tariff-delay deadline is a negotiating pressure point, not evidence of a concluded agreement.",
+                "evidence_quote": "The President of the European Commission publicly announced that the EU is internally cleared and ready to conclude a mutual tariff-reduction agreement with the US before July 9, setting out the EU's concrete offer framework and calling on the US to reciprocate so both sides can announce reciprocal lowering, contingent on a constructive US response.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.11999999999999998
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 5,
+        "draw_rounds": 5,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 5,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 0,
+        "condition_change_count": 2,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 4,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 3,
+            "active_actor_count": 1,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.2,
+      "covered_p_yes": 0.2,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.2,
+        0.19999999999999996
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "78173547-02f6-4e0a-9b6e-5ee796462a12",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:31:30.955052+00:00",
+      "contract_id": "0x3b73c31eaf5cba67c7f78d22c580b2b1d5ca43fdb960a57d455fad79202e7e8d",
+      "forecast_cutoff": "2025-06-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b6770fae50afb0950e4f1aff8bd5243a66a5ea8bcb508858a0f52e124df42f3e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 78.274
+    },
+    {
+      "calls": 19,
+      "tokens": 232981,
+      "input_tokens": 224410,
+      "output_tokens": 8571,
+      "accounted_tokens_upper": 232981,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-06-25",
+                "interval_end": "2025-06-28",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2025-06-25T23:59:59+00:00",
+                "interval_end_utc": "2025-06-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "status": "executed",
+                  "summary": "President of the European Commission Ursula von der Leyen stated that the Commission is intensively negotiating a mutual US-EU tariff agreement and is prepared to conclude and publicly announce one before July 9 if the US withdraws its threatened tariffs, reiterating that failure by the deadline would trigger EU countermeasures."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "is prepared to conclude and publicly announce one before July 9 if the US withdraws its threatened tariffs",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "President of the European Commission Ursula von der Leyen stated that the Commission is intensively negotiating a mutual US-EU tariff agreement and is prepared to conclude and publicly announce one before July 9 if the US withdraws its threatened tariffs, reiterating that failure by the deadline would trigger EU countermeasures.",
+                  "date": "2025-06-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                  "action": "Publicly state that the Commission is intensively negotiating a mutual US-EU tariff agreement and is prepared to conclude and announce one before July 9 if US tariff threats are withdrawn; reiterate that failure by the deadline triggers EU countermeasures.\n承诺：EU will conclude and publicly announce a mutual agreement before July 9 if the US drops threatened tariffs; otherwise countermeasures follow.\n触发或复核条件：US reciprocates by withdrawing or deferring threatened tariffs.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly state that the Commission is intensively negotiating a mutual US-EU tariff agreement and is prepared to conclude and announce one before July 9 if US tariff threats are withdrawn; reiterate that failure by the deadline triggers EU countermeasures.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Von der Leyen's June 26 statement conditions an EU announcement on the US withdrawing threatened tariffs, and the US side remains unbound. The 50% EU tariff was delayed to July 9 while talks continued, so a mutual announcement before the deadline is plausible but not established.",
+                "evidence_quote": "President of the European Commission Ursula von der Leyen stated that the Commission is intensively negotiating a mutual US-EU tariff agreement and is prepared to conclude and publicly announce one before July 9 if the US withdraws its threatened tariffs, reiterating that failure by the deadline would trigger EU countermeasures.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-06-28",
+                "interval_end": "2025-07-02",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 7,
+                "interval_days": 4,
+                "interval_start_utc": "2025-06-28T00:00:00+00:00",
+                "interval_end_utc": "2025-07-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Von der Leyen's June 26 statement conditions an EU announcement on the US withdrawing threatened tariffs, and the US side remains unbound. The 50% EU tariff was delayed to July 9 while talks continued, so a mutual announcement before the deadline is plausible but not established.",
+                "evidence_quote": "President of the European Commission Ursula von der Leyen stated that the Commission is intensively negotiating a mutual US-EU tariff agreement and is prepared to conclude and publicly announce one before July 9 if the US withdraws its threatened tariffs, reiterating that failure by the deadline would trigger EU countermeasures.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-07-02",
+                "interval_end": "2025-07-06",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 11,
+                "interval_days": 4,
+                "interval_start_utc": "2025-07-02T00:00:00+00:00",
+                "interval_end_utc": "2025-07-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Von der Leyen's June 26 statement conditions an EU announcement on the US withdrawing threatened tariffs, and the US side remains unbound. The 50% EU tariff was delayed to July 9 while talks continued, so a mutual announcement before the deadline is plausible but not established.",
+                "evidence_quote": "President of the European Commission Ursula von der Leyen stated that the Commission is intensively negotiating a mutual US-EU tariff agreement and is prepared to conclude and publicly announce one before July 9 if the US withdraws its threatened tariffs, reiterating that failure by the deadline would trigger EU countermeasures.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-07-06",
+                "interval_end": "2025-07-10",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 15,
+                "interval_days": 4,
+                "interval_start_utc": "2025-07-06T00:00:00+00:00",
+                "interval_end_utc": "2025-07-10T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "status": "executed",
+                  "summary": "President of the European Commission Ursula von der Leyen publicly reaffirmed that the Commission is ready to conclude and announce a mutual US-EU tariff agreement before July 9 if the US withdraws its threatened tariffs, and that absent that withdrawal EU countermeasures will proceed."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_6cc9c415ae6058e2",
+                    "action_4_agent_6cc9c415ae6058e2"
+                  ],
+                  "outcome": "pending",
+                  "effect": "ready to conclude and announce a mutual US-EU tariff agreement before July 9 if the US withdraws its threatened tariffs"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "ready to conclude and announce a mutual US-EU tariff agreement before July 9 if the US withdraws its threatened tariffs",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "President of the European Commission Ursula von der Leyen publicly reaffirmed that the Commission is ready to conclude and announce a mutual US-EU tariff agreement before July 9 if the US withdraws its threatened tariffs, and that absent that withdrawal EU countermeasures will proceed.",
+                  "date": "2025-07-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                  "action": "Publicly reaffirm that the Commission is ready to conclude and announce a mutual US-EU tariff agreement before July 9 if the US withdraws its threatened tariffs, and that absent that, EU countermeasures will proceed.\n承诺：EU will conclude and publicly announce a mutual agreement before July 9 if the US drops threatened tariffs; otherwise countermeasures follow.\n触发或复核条件：US withdraws or defers threatened tariffs.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm that the Commission is ready to conclude and announce a mutual US-EU tariff agreement before July 9 if the US withdraws its threatened tariffs, and that absent that, EU countermeasures will proceed.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The only in-window development is von der Leyen's conditional readiness to conclude a deal before July 9 if the US withdraws threatened tariffs; no US withdrawal or mutual announcement is evidenced. The 50% EU tariff was delayed to July 9 while talks continued, so a last-minute deal remains possible but unconfirmed.",
+                "evidence_quote": "President of the European Commission Ursula von der Leyen publicly reaffirmed that the Commission is ready to conclude and announce a mutual US-EU tariff agreement before July 9 if the US withdraws its threatened tariffs, and that absent that withdrawal EU countermeasures will proceed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.42
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 4,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "1844f913-5fdf-4720-9f0c-da0cf2cd1052",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:07:43.964660+00:00",
+      "contract_id": "0x3b73c31eaf5cba67c7f78d22c580b2b1d5ca43fdb960a57d455fad79202e7e8d",
+      "forecast_cutoff": "2025-06-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b6770fae50afb0950e4f1aff8bd5243a66a5ea8bcb508858a0f52e124df42f3e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 63.876
+    },
+    {
+      "calls": 12,
+      "tokens": 138389,
+      "input_tokens": 133569,
+      "output_tokens": 4820,
+      "accounted_tokens_upper": 138389,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-06-25",
+                "interval_end": "2025-07-10",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 15,
+                "interval_days": 15,
+                "interval_start_utc": "2025-06-25T23:59:59+00:00",
+                "interval_end_utc": "2025-07-10T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "status": "executed",
+                  "summary": "The President of the European Commission publicly stated the EU's readiness to conclude a mutual tariff-reduction agreement with the United States before July 9, conditioned on the US dropping its threatened 50% tariff on EU goods, and reaffirmed that suspended EU countermeasures would resume if no deal is reached."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "conditioned on the US dropping its threatened 50% tariff on EU goods",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The President of the European Commission publicly stated the EU's readiness to conclude a mutual tariff-reduction agreement with the United States before July 9, conditioned on the US dropping its threatened 50% tariff on EU goods, and reaffirmed that suspended EU countermeasures would resume if no deal is reached.",
+                  "date": "2025-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                  "action": "Publicly state the EU's readiness to conclude a mutual tariff-reduction agreement with the US before July 9, conditioning it on the US dropping the threatened 50% tariff on EU goods; reaffirm that suspended EU countermeasures resume if no deal is reached.\n承诺：EU will conclude and announce a mutual tariff-lowering deal if the US withdraws the 50% tariff threat before July 9.\n触发或复核条件：US agrees to drop the threatened 50% tariff on EU goods.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state the EU's readiness to conclude a mutual tariff-reduction agreement with the US before July 9, conditioning it on the US dropping the threatened 50% tariff on EU goods; reaffirm that suspended EU countermeasures resume if no deal is reached.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly reiterate that if no US-EU agreement is reached by the July 9 window's end, the EU will activate its 'trade bazooka' countermeasures targeting US services, without offering new concessions now.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Only evidence of movement is the EU Commission President's conditional willingness to conclude a deal before July 9 if the US drops its threatened 50% tariff; no US approval or mutual announcement is shown. The 50% tariff was delayed to July 9 while talks continued, so a deal remains possible but unverified.",
+                "evidence_quote": "Originally expected to begin June 1, Trump announced the tariff would be delayed until July 9, 2025, while trade negotiations continued.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.6
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-06-25",
+                "interval_end": "2025-07-10",
+                "horizon_end": "2025-07-10",
+                "elapsed_days": 15,
+                "interval_days": 15,
+                "interval_start_utc": "2025-06-25T23:59:59+00:00",
+                "interval_end_utc": "2025-07-10T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "status": "executed",
+                  "summary": "The President of the European Commission publicly offered a conditional framework under which the EU would suspend or limit retaliatory tariffs and discuss services and regulatory issues if the United States agrees to drop or delay the 50% tariff and move toward a mutual tariff-reduction package before July 9."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-EU trade agreement by July 9?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "publicly offered a conditional framework under which the EU would suspend or limit retaliatory tariffs and discuss services and regulatory issues if the United States agrees to drop or delay the 50% tariff",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The President of the European Commission publicly offered a conditional framework under which the EU would suspend or limit retaliatory tariffs and discuss services and regulatory issues if the United States agrees to drop or delay the 50% tariff and move toward a mutual tariff-reduction package before July 9.",
+                  "date": "2025-06-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6cc9c415ae6058e2",
+                  "actor_name": "President of the European Commission",
+                  "candidate_id": "agent_6cc9c415ae6058e2:initial:2",
+                  "action": "Publicly offer a conditional framework: EU would suspend/limit retaliatory tariffs and discuss services and regulatory issues if the US agrees to drop or delay the 50% tariff and move toward a mutual tariff-reduction package before July 9.\n承诺：EU offers tariff restraint conditional on US dropping the 50% tariff and agreeing a mutual reduction package.\n触发或复核条件：US reciprocates by dropping or delaying the 50% tariff before July 9.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that the Commission is intensifying negotiations toward a US-EU trade agreement before the July 9 tariff deadline, and that if no deal is reached the EU will activate its countermeasures, including targeting US services.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_6cc9c415ae6058e2:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly offer a conditional framework: EU would suspend/limit retaliatory tariffs and discuss services and regulatory issues if the US agrees to drop or delay the 50% tariff and move toward a mutual tariff-reduction package before July 9.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Only a conditional EU offer exists as of the horizon; no mutual agreement was announced. The 50% EU tariff was delayed to July 9 while talks continued, so a deal remains possible but unconfirmed.",
+                "evidence_quote": "Originally expected to begin June 1, Trump announced the tariff would be delayed until July 9, 2025, while trade negotiations continued.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.4
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 2,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.3,
+      "covered_p_yes": 0.3,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.3,
+        0.30000000000000004
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "0105c199-81c3-4bee-bf65-2e625961c914",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:08:02.690920+00:00",
+      "contract_id": "0x3b73c31eaf5cba67c7f78d22c580b2b1d5ca43fdb960a57d455fad79202e7e8d",
+      "forecast_cutoff": "2025-06-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b6770fae50afb0950e4f1aff8bd5243a66a5ea8bcb508858a0f52e124df42f3e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 18.725
+    },
+    {
+      "calls": 42,
+      "tokens": 476783,
+      "input_tokens": 455715,
+      "output_tokens": 21068,
+      "accounted_tokens_upper": 476783,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.11639999999999999,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.11639999999999999,
+        0.11639999999999999
+      ],
+      "search_iterations": 7,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 7,
+          "search_value": 0.5118685714285715,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.6,
+          "visits": 3,
+          "search_value": 0.46559999999999996,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.6,
+          "visits": 2,
+          "search_value": 0.4032,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.6,
+          "visits": 1,
+          "search_value": 0.384,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.42,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.05039999999999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.18,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.0144
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.4,
+          "visits": 3,
+          "search_value": 0.51916,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.4,
+          "visits": 2,
+          "search_value": 0.43554,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.4,
+          "visits": 1,
+          "search_value": 0.44867999999999997,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.27999999999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0336
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.12,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.15,
+          "frontier": true,
+          "contribution": 0.018
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "263f2fb1-d95b-4a1e-a56f-ecad639d4a0a",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:22:01.106400+00:00",
+      "contract_id": "0x3b73c31eaf5cba67c7f78d22c580b2b1d5ca43fdb960a57d455fad79202e7e8d",
+      "forecast_cutoff": "2025-06-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b6770fae50afb0950e4f1aff8bd5243a66a5ea8bcb508858a0f52e124df42f3e",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 150.993
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-06-25T23:59:59+00:00",
+  "forecast_key": "0x3b73c31eaf5cba67c7f78d22c580b2b1d5ca43fdb960a57d455fad79202e7e8d",
+  "group_id": "us-eu-trade-agreement-by-july-9",
+  "evidence_sha256": "b6770fae50afb0950e4f1aff8bd5243a66a5ea8bcb508858a0f52e124df42f3e",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 797,
+    "input_tokens": 681,
+    "output_tokens": 116,
+    "accounted_tokens_upper": 797,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-06-25",
+        "2025-07-10"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2025-06-25",
+        "2025-06-28",
+        "2025-07-02",
+        "2025-07-06",
+        "2025-07-10"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2025-06-25",
+        "2025-06-28",
+        "2025-07-02",
+        "2025-07-06",
+        "2025-07-10"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-06-25",
+        "2025-07-10"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2025-06-25",
+        "2025-06-28",
+        "2025-07-02",
+        "2025-07-06",
+        "2025-07-10"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-07-10T03:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-07-09T12:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_544f7fe38d28407c",
+          "name": "President of the European Commission",
+          "role": "Represents the EU in trade negotiations and can announce EU positions and agreements; Ursula von der Leyen is the incumbent.",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "US decision to conclude and publicly announce a mutual trade/tariff agreement with the EU."
+      ],
+      "gaps": [
+        "No source identifies a separate EU member-state approval or US congressional approval requirement for this agreement.",
+        "The exact form of public announcement by both sides is not specified in the sources.",
+        "No frozen source identifies President of the United States; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "EU decision to conclude and publicly announce a mutual trade/tariff agreement with the US.",
+          "owner": "President of the European Commission",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "US decision to conclude and publicly announce a mutual trade/tariff agreement with the EU.",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 21,
+    "tokens": 52519,
+    "input_tokens": 43701,
+    "output_tokens": 8818,
+    "accounted_tokens_upper": 52519,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

@@ -1,0 +1,1601 @@
+{
+  "run_id": "7f151495-385a-4291-9576-f284f371c6dd",
+  "case_id": "market_997bd3b3a030716124a31a26",
+  "status": "partial",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2455,
+      "input_tokens": 2445,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2455,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.01,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.01,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2445,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T16:51:13.861260+00:00",
+      "contract_id": "0x403a2992ce3adb0df0af7054074191b5dffe20fbd3bdcd4b993224529f6d4e4b",
+      "forecast_cutoff": "2026-07-19T00:05:55+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "bd6b5b7dfb674b68cec8bd7d0c9c315b2f02460db3f994c512bcf96c99cfaa46",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.572
+    },
+    {
+      "calls": 2,
+      "tokens": 4910,
+      "input_tokens": 4890,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 4910,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.01,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.01,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2445,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.01,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2445,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T16:51:15.088717+00:00",
+      "contract_id": "0x403a2992ce3adb0df0af7054074191b5dffe20fbd3bdcd4b993224529f6d4e4b",
+      "forecast_cutoff": "2026-07-19T00:05:55+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "bd6b5b7dfb674b68cec8bd7d0c9c315b2f02460db3f994c512bcf96c99cfaa46",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.226
+    },
+    {
+      "calls": 8,
+      "tokens": 60041,
+      "input_tokens": 57439,
+      "output_tokens": 2602,
+      "accounted_tokens_upper": 60041,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-07-19",
+                "interval_end": "2026-08-01",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 13,
+                "interval_days": 13,
+                "interval_start_utc": "2026-07-19T00:05:55+00:00",
+                "interval_end_utc": "2026-08-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                  "action": "Take no outward step toward dissolution; monitor whether Parliament rejects any prime-minister candidate, since the constitutional trigger of two consecutive rejections is unverified and no dissolution process is pending.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no outward step toward dissolution; monitor whether Parliament rejects any prime-minister candidate, since the constitutional trigger of two consecutive rejections is unverified and no dissolution process is pending.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c1adfe1deb575dac:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Issue a public statement clarifying that the President will not initiate dissolution before July 31 and that any dissolution would require Parliament to reject two consecutive prime-minister candidates as the Constitution requires.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "candidate_id": "agent_18cbedc3505b59a2:initial:2",
+                  "action": "Monitor for any formal presidential prime-minister candidate proposal and be ready to schedule a confirmation vote if one arrives before July 31.",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no parliamentary action on dissolution; no prime-minister candidate proposal or rejection vote is pending, and Parliament cannot itself initiate dissolution.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_18cbedc3505b59a2:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Monitor for any formal presidential prime-minister candidate proposal and be ready to schedule a confirmation vote if one arrives before July 31.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence of a dissolution attempt or of the constitutional precondition (two consecutive rejected PM candidates) being met; the frozen excerpt notes no dissolution has occurred since 1991. With the horizon at the market end date and no in-window action reported, dissolution by July 31 is very unlikely.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.17
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "3f40baac-3ae9-4cb7-b896-6ec30a001774",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T16:51:50.626770+00:00",
+      "contract_id": "0x403a2992ce3adb0df0af7054074191b5dffe20fbd3bdcd4b993224529f6d4e4b",
+      "forecast_cutoff": "2026-07-19T00:05:55+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "bd6b5b7dfb674b68cec8bd7d0c9c315b2f02460db3f994c512bcf96c99cfaa46",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 35.536
+    },
+    {
+      "calls": 30,
+      "tokens": 247446,
+      "input_tokens": 236796,
+      "output_tokens": 10650,
+      "accounted_tokens_upper": 247446,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-07-19",
+                "interval_end": "2026-07-23",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2026-07-19T00:05:55+00:00",
+                "interval_end_utc": "2026-07-23T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                  "action": null,
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c1adfe1deb575dac:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publicly nominate a prime-minister candidate for parliamentary confirmation, initiating the constitutional sequence whose two consecutive rejections would enable dissolution before July 31.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                  "action": "Parliament takes no dissolution-related action this round; it waits for any formal prime-minister candidate proposal from the President before scheduling votes or considering rejection.",
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "Parliament takes no dissolution-related action this round; it waits for any formal prime-minister candidate proposal from the President before scheduling votes or considering rejection.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_18cbedc3505b59a2:supplement:1",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Parliament takes no dissolution-related action this round; it waits for any formal prime-minister candidate proposal from the President before scheduling votes or considering rejection.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_18cbedc3505b59a2:initial:2",
+                      "action": "Parliament issues a public statement that it has received no prime-minister candidate proposal from the President and that no dissolution procedure is before it, while affirming it will process any formal proposal through normal procedure.",
+                      "code": "duplicate"
+                    }
+                  ],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a dissolution process underway; the cited constitutional mechanism requires two consecutive rejected PM candidates, and no dissolution has occurred since 1991. The forecast cutoff precedes the July 31 deadline, leaving little time for the full sequence to complete.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-07-23",
+                "interval_end": "2026-07-27",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 8,
+                "interval_days": 4,
+                "interval_start_utc": "2026-07-23T00:00:00+00:00",
+                "interval_end_utc": "2026-07-27T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a dissolution process underway; the cited constitutional mechanism requires two consecutive rejected PM candidates, and no dissolution has occurred since 1991. The forecast cutoff precedes the July 31 deadline, leaving little time for the full sequence to complete.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-07-27",
+                "interval_end": "2026-08-01",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 13,
+                "interval_days": 5,
+                "interval_start_utc": "2026-07-27T00:00:00+00:00",
+                "interval_end_utc": "2026-08-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event shows dissolution of the Romanian Chamber of Deputies and Senate by the deadline; the frozen evidence only describes the constitutional mechanism and notes no dissolution has occurred since 1991. The required two consecutive PM-candidate rejections and presidential dissolution remain unobserved, so the outcome is very unlikely but not impossible.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.765
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-07-19",
+                "interval_end": "2026-07-23",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2026-07-19T00:05:55+00:00",
+                "interval_end_utc": "2026-07-23T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                  "action": "Take no public action this round. No evidence indicates Parliament has rejected two consecutive prime-minister candidates, so the constitutional precondition for dissolution is unmet and no dissolution process is pending.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no public action this round. No evidence indicates Parliament has rejected two consecutive prime-minister candidates, so the constitutional precondition for dissolution is unmet and no dissolution process is pending.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                  "action": "Take no parliamentary action on prime-minister candidates or dissolution this round; monitor for any presidential proposal of a prime-minister candidate or dissolution decree before July 31.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no parliamentary action on prime-minister candidates or dissolution this round; monitor for any presidential proposal of a prime-minister candidate or dissolution decree before July 31.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_18cbedc3505b59a2:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a public statement that Parliament is not considering dissolution and that no prime-minister candidate has been proposed, affirming it will follow the constitutional process if one is.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a dissolution process underway; the cited constitutional mechanism requires two consecutive rejected PM candidates, and no dissolution has occurred since 1991. The forecast cutoff precedes the July 31 deadline, leaving little time for the full sequence to complete.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-07-23",
+                "interval_end": "2026-07-27",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 8,
+                "interval_days": 4,
+                "interval_start_utc": "2026-07-23T00:00:00+00:00",
+                "interval_end_utc": "2026-07-27T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a dissolution process underway; the cited constitutional mechanism requires two consecutive rejected PM candidates, and no dissolution has occurred since 1991. The forecast cutoff precedes the July 31 deadline, leaving little time for the full sequence to complete.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-07-27",
+                "interval_end": "2026-08-01",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 13,
+                "interval_days": 5,
+                "interval_start_utc": "2026-07-27T00:00:00+00:00",
+                "interval_end_utc": "2026-08-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event shows dissolution of the Romanian Chamber of Deputies and Senate by the deadline; the frozen evidence only describes the constitutional mechanism and notes no dissolution has occurred since 1991. The required two consecutive PM-candidate rejections and presidential dissolution remain unobserved, so the outcome is very unlikely but not impossible.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.8
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "d01f91a2-9e8b-4e56-a6e3-6da9a254d4f0",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T16:52:24.572659+00:00",
+      "contract_id": "0x403a2992ce3adb0df0af7054074191b5dffe20fbd3bdcd4b993224529f6d4e4b",
+      "forecast_cutoff": "2026-07-19T00:05:55+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "bd6b5b7dfb674b68cec8bd7d0c9c315b2f02460db3f994c512bcf96c99cfaa46",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 33.943
+    },
+    {
+      "calls": 17,
+      "tokens": 138682,
+      "input_tokens": 132745,
+      "output_tokens": 5937,
+      "accounted_tokens_upper": 138682,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-07-19",
+                "interval_end": "2026-07-23",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2026-07-19T00:05:55+00:00",
+                "interval_end_utc": "2026-07-23T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                  "action": "Take no dissolution step this round. No evidence shows Parliament has rejected two consecutive prime-minister candidates, so the constitutional trigger under L1 is unmet; continue monitoring for any presidential proposal or parliamentary rejection.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no dissolution step this round. No evidence shows Parliament has rejected two consecutive prime-minister candidates, so the constitutional trigger under L1 is unmet; continue monitoring for any presidential proposal or parliamentary rejection.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c1adfe1deb575dac:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a public statement clarifying that no parliamentary dissolution is underway and that any dissolution would require Parliament to reject two consecutive prime-minister candidates, as the Constitution provides.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                  "action": "Take no parliamentary action this round. Parliament cannot itself initiate dissolution; no presidential candidate proposals or rejection votes are pending in the public record. Continue monitoring for any formal presidential proposal of a prime-minister candidate.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no parliamentary action this round. Parliament cannot itself initiate dissolution; no presidential candidate proposals or rejection votes are pending in the public record. Continue monitoring for any formal presidential proposal of a prime-minister candidate.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a dissolution process underway; the cited source notes no dissolution has occurred since 1991 and dissolution requires two consecutive rejected PM candidates. With the window ending 2026-07-23 and no observed trigger, a near-term dissolution is unlikely.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-07-23",
+                "interval_end": "2026-07-27",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 8,
+                "interval_days": 4,
+                "interval_start_utc": "2026-07-23T00:00:00+00:00",
+                "interval_end_utc": "2026-07-27T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a dissolution process underway; the cited source notes no dissolution has occurred since 1991 and dissolution requires two consecutive rejected PM candidates. With the window ending 2026-07-23 and no observed trigger, a near-term dissolution is unlikely.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-07-27",
+                "interval_end": "2026-08-01",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 13,
+                "interval_days": 5,
+                "interval_start_utc": "2026-07-27T00:00:00+00:00",
+                "interval_end_utc": "2026-08-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event shows either constitutional precondition (two consecutive PM-candidate rejections) or a dissolution act; the frozen evidence notes no dissolution has occurred since 1991. With the horizon at the deadline and no in-window development, dissolution by July 31 is very unlikely.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.8
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "7f6ed5ff-ea95-41df-8a81-f5b3b10aa4ea",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:14:39.921960+00:00",
+      "contract_id": "0x403a2992ce3adb0df0af7054074191b5dffe20fbd3bdcd4b993224529f6d4e4b",
+      "forecast_cutoff": "2026-07-19T00:05:55+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "bd6b5b7dfb674b68cec8bd7d0c9c315b2f02460db3f994c512bcf96c99cfaa46",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 38.404
+    },
+    {
+      "calls": 16,
+      "tokens": 133399,
+      "input_tokens": 127801,
+      "output_tokens": 5598,
+      "accounted_tokens_upper": 133399,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-07-19",
+                "interval_end": "2026-08-01",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 13,
+                "interval_days": 13,
+                "interval_start_utc": "2026-07-19T00:05:55+00:00",
+                "interval_end_utc": "2026-08-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                  "action": "Take no public action on parliamentary dissolution during this interval; no prime-minister candidates are proposed and no dissolution decree is issued, since the constitutional precondition of two consecutive parliamentary rejections is absent from the public record.\n触发或复核条件：Reassess if the Romanian Parliament rejects two consecutive prime-minister candidates proposed by the President, or if credible reporting shows a dissolution process underway before July 31.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no public action on parliamentary dissolution during this interval; no prime-minister candidates are proposed and no dissolution decree is issued, since the constitutional precondition of two consecutive parliamentary rejections is absent from the public record.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                  "action": "Romanian Parliament takes no dissolution-related action this round; it has no power to initiate dissolution and no presidential prime-minister candidate proposals are on record. Monitor for any formal candidate proposal or rejection vote before July 31.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Romanian Parliament takes no dissolution-related action this round; it has no power to initiate dissolution and no presidential prime-minister candidate proposals are on record. Monitor for any formal candidate proposal or rejection vote before July 31.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.02,
+                "basis": "No settled event in the packet shows a dissolution of the Romanian Chamber of Deputies and Senate, and the frozen reference notes no dissolution has occurred since 1991. The constitutional precondition (two consecutive rejected PM candidates) is not evidenced as met, so the in-window outcome remains unverified but very unlikely.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.02,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-07-19",
+                "interval_end": "2026-08-01",
+                "horizon_end": "2026-08-01",
+                "elapsed_days": 13,
+                "interval_days": 13,
+                "interval_start_utc": "2026-07-19T00:05:55+00:00",
+                "interval_end_utc": "2026-08-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Romanian parliament dissolved by July 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c1adfe1deb575dac",
+                  "actor_name": "President of Romania",
+                  "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                  "action": "Take no dissolution-related action this round; monitor whether Parliament rejects two consecutive prime-minister candidates proposed by the President, the constitutional precondition for dissolution.\n触发或复核条件：Review if Parliament rejects two consecutive presidential prime-minister candidates before July 31, or if a dissolution process becomes publicly pending.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c1adfe1deb575dac:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no dissolution-related action this round; monitor whether Parliament rejects two consecutive prime-minister candidates proposed by the President, the constitutional precondition for dissolution.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c1adfe1deb575dac:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly nominate a prime-minister candidate for Parliament's confirmation vote, framing it as the first of the constitutional sequence whose rejection could enable dissolution.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_18cbedc3505b59a2",
+                  "actor_name": "Romanian Parliament",
+                  "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                  "action": "Parliament takes no dissolution-related action this round; it has no presidential candidate proposals or rejection votes pending, and dissolution cannot be initiated by Parliament itself.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_18cbedc3505b59a2:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Parliament takes no dissolution-related action this round; it has no presidential candidate proposals or rejection votes pending, and dissolution cannot be initiated by Parliament itself.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.02,
+                "basis": "No settled event in the packet shows a dissolution of the Romanian Chamber of Deputies and Senate, and the frozen reference notes no dissolution has occurred since 1991. The constitutional precondition (two consecutive rejected PM candidates) is not evidenced as met, so the in-window outcome remains unverified but very unlikely.",
+                "evidence_quote": "According to the Romanian Constitution, voted in 1991 and revised in 2003, the President may dissolve the Parliament only if the Parliament rejects two consecutive prime minister candidates proposed by the President. Both houses can be dissolved. No dissolution of the Parliament has taken place in Romania since 1991.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.02,
+          "error": null,
+          "action_path_probability": 0.8
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.02,
+      "covered_p_yes": 0.02,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.02,
+        0.020000000000000018
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "99863c15-3d21-44eb-aa39-897e2283930b",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:14:59.516760+00:00",
+      "contract_id": "0x403a2992ce3adb0df0af7054074191b5dffe20fbd3bdcd4b993224529f6d4e4b",
+      "forecast_cutoff": "2026-07-19T00:05:55+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "bd6b5b7dfb674b68cec8bd7d0c9c315b2f02460db3f994c512bcf96c99cfaa46",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 19.594
+    },
+    {
+      "calls": 29,
+      "tokens": 257743,
+      "input_tokens": 244247,
+      "output_tokens": 13496,
+      "accounted_tokens_upper": 257743,
+      "unknown_usage_requests": 0,
+      "p_yes": null,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.011000000000000001,
+        0.011000000000000001
+      ],
+      "search_iterations": 3,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 3,
+          "search_value": 0.05253333333333333,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.9,
+          "visits": 2,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.9,
+          "visits": 1,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.9,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.01,
+          "frontier": true,
+          "contribution": 0.009000000000000001
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.1,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.002
+        }
+      ],
+      "error": "ValueError: Master activation review did not cover the non-mandatory actors exactly once",
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "a6aa59b7-1a49-49bc-bc4c-fc1d06d08887",
+      "status": "partial",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:20:14.208794+00:00",
+      "contract_id": "0x403a2992ce3adb0df0af7054074191b5dffe20fbd3bdcd4b993224529f6d4e4b",
+      "forecast_cutoff": "2026-07-19T00:05:55+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "bd6b5b7dfb674b68cec8bd7d0c9c315b2f02460db3f994c512bcf96c99cfaa46",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 80.162,
+      "partial_tree_p_yes": 0.011000000000000001
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-07-19T00:05:55+00:00",
+  "forecast_key": "0x403a2992ce3adb0df0af7054074191b5dffe20fbd3bdcd4b993224529f6d4e4b",
+  "group_id": "romanian-parliament-dissolved-by-july-31",
+  "evidence_sha256": "bd6b5b7dfb674b68cec8bd7d0c9c315b2f02460db3f994c512bcf96c99cfaa46",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 627,
+    "input_tokens": 536,
+    "output_tokens": 91,
+    "accounted_tokens_upper": 627,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-07-19",
+        "2026-08-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-07-19",
+        "2026-07-23",
+        "2026-07-27",
+        "2026-08-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-07-19",
+        "2026-07-23",
+        "2026-07-27",
+        "2026-08-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-07-19",
+        "2026-08-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-07-19",
+        "2026-07-23",
+        "2026-07-27",
+        "2026-08-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-08-01T03:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_248dad5cbc0cacf8",
+          "name": "President of Romania",
+          "role": "Head of state with constitutional power to dissolve Parliament after two consecutive rejected prime-minister candidates",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_b7e377b2e35ef83e",
+          "name": "Romanian Parliament",
+          "role": "Bicameral legislature whose rejection of two consecutive prime-minister candidates triggers the dissolution condition",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No named incumbent President or parliamentary composition is identified in the sources as of 2026-07-19",
+        "No evidence that the two-rejection precondition has occurred or is underway",
+        "Dissolution outcome must be verified via official Romanian government information or credible reporting"
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "President decides to propose prime-minister candidates and, upon two consecutive rejections, to dissolve Parliament",
+          "owner": "President of Romania",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "Parliament rejects two consecutive prime-minister candidates proposed by the President, satisfying the constitutional precondition",
+          "owner": "Romanian Parliament",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 18,
+    "tokens": 43924,
+    "input_tokens": 39581,
+    "output_tokens": 4343,
+    "accounted_tokens_upper": 43924,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

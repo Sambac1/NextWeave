@@ -1,0 +1,2170 @@
+{
+  "run_id": "f9ce4293-63df-4582-b9f5-ff26b47aa085",
+  "case_id": "market_62fcf132edc89fe0c5924692",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3565,
+      "input_tokens": 3555,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3565,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.72,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.72,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3555,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:28:04.807432+00:00",
+      "contract_id": "0xf1050a8b0233348a95d75083825b1dd360e332557b15517a89fb4b0f05708ad2",
+      "forecast_cutoff": "2026-03-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "77dffdc60bfe357ce1808990830c862896334aa6de7a10ccf53756a54a2c2fa7",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.376
+    },
+    {
+      "calls": 2,
+      "tokens": 7130,
+      "input_tokens": 7110,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 7130,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.635,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.72,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3555,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.55,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3555,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:28:06.034493+00:00",
+      "contract_id": "0xf1050a8b0233348a95d75083825b1dd360e332557b15517a89fb4b0f05708ad2",
+      "forecast_cutoff": "2026-03-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "77dffdc60bfe357ce1808990830c862896334aa6de7a10ccf53756a54a2c2fa7",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.226
+    },
+    {
+      "calls": 6,
+      "tokens": 64467,
+      "input_tokens": 62077,
+      "output_tokens": 2390,
+      "accounted_tokens_upper": 64467,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-03-14",
+                "interval_end": "2026-05-01",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 48,
+                "interval_days": 48,
+                "interval_start_utc": "2026-03-14T23:59:59+00:00",
+                "interval_end_utc": "2026-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA publicly confirmed it is proceeding toward the announced April 2026 Artemis II launch windows on April 1–6 and April 30, stating that the actual launch date will be set only after a successful wet dress rehearsal and analysis of results, and that the April 30 window remains available if earlier windows are missed."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "the actual launch date will be set only after a successful wet dress rehearsal and analysis of results",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "NASA publicly confirmed it is proceeding toward the announced April 2026 Artemis II launch windows on April 1–6 and April 30, stating that the actual launch date will be set only after a successful wet dress rehearsal and analysis of results, and that the April 30 window remains available if earlier windows are missed.",
+                  "date": "2026-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                  "action": "NASA publicly confirms it is proceeding toward the announced April launch windows (April 1–6 and April 30, 2026), stating that the actual launch date will be set only after a successful wet dress rehearsal and analysis of results, and that the April 30 window remains available if earlier windows are missed.\n承诺：Proceed with Artemis II launch campaign targeting the April 2026 windows, with final date contingent on successful WDR and analysis.\n触发或复核条件：Successful wet dress rehearsal and analysis of results.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA publicly confirms it is proceeding toward the announced April launch windows (April 1–6 and April 30, 2026), stating that the actual launch date will be set only after a successful wet dress rehearsal and analysis of results, and that the April 30 window remains available if earlier windows are missed.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "NASA confirmed April 2026 windows (April 1–6 and April 30) after the March 12 FRR, but the actual date awaits a successful wet dress rehearsal and analysis. No launch result is in evidence, so the outcome remains unverified; the April 30 window is a scheduled opportunity, not an observed launch.",
+                "evidence_quote": "On March 12, after a Flight Readiness Review (FRR), seven two-hour launch windows were announced in April on the 1st through the 6th and the 30th. The first one is at 6:24 EDT (22:24 UTC), April 1, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.55,
+      "covered_p_yes": 0.55,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.55,
+        0.55
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "ff9b9944-3554-4e97-96fd-67d6db9e84b3",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:28:49.912019+00:00",
+      "contract_id": "0xf1050a8b0233348a95d75083825b1dd360e332557b15517a89fb4b0f05708ad2",
+      "forecast_cutoff": "2026-03-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "77dffdc60bfe357ce1808990830c862896334aa6de7a10ccf53756a54a2c2fa7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 43.875
+    },
+    {
+      "calls": 65,
+      "tokens": 795406,
+      "input_tokens": 761256,
+      "output_tokens": 34150,
+      "accounted_tokens_upper": 795406,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-03-14",
+                "interval_end": "2026-03-23",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 9,
+                "interval_days": 9,
+                "interval_start_utc": "2026-03-14T23:59:59+00:00",
+                "interval_end_utc": "2026-03-23T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA proceeds with launch preparations targeting the April 1, 2026 window, keeping the April 30 backup window available, contingent on completing the wet dress rehearsal and analyzing results."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "NASA proceeds with launch preparations targeting the April 1, 2026 window, keeping the April 30 backup window available, contingent on completing the wet dress rehearsal and analyzing results.",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "NASA proceeds with launch preparations targeting the April 1, 2026 window, keeping the April 30 backup window available, contingent on completing the wet dress rehearsal and analyzing results.",
+                  "date": "2026-03-23"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                  "action": "NASA proceeds with launch preparations targeting the April 1, 2026 window, keeping the April 30 backup window available, contingent on completing the wet dress rehearsal and analyzing results.\n承诺：Pursue April 1 launch attempt; fall back to later April windows only if the rehearsal or analysis fails.\n触发或复核条件：Wet dress rehearsal success and FRR clearance.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "NASA publicly confirms it is proceeding toward the April 1, 2026 launch window, stating that the wet dress rehearsal and its analysis remain the gating step before a final launch date is locked in.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "NASA proceeds with launch preparations targeting the April 1, 2026 window, keeping the April 30 backup window available, contingent on completing the wet dress rehearsal and analyzing results.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "NASA announced seven April launch windows (April 1–6 and April 30) after a March 12 Flight Readiness Review, and the simulated condition has NASA proceeding with preparations targeting April 1 while keeping April 30 available. The remaining risk is that the actual date is contingent on a successful wet dress rehearsal and analysis, so launch by April 30 is likely but not assured.",
+                "evidence_quote": "On March 12, after a Flight Readiness Review (FRR), seven two-hour launch windows were announced in April on the 1st through the 6th and the 30th. The first one is at 6:24 EDT (22:24 UTC), April 1, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-03-23",
+                "interval_end": "2026-04-02",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 19,
+                "interval_days": 10,
+                "interval_start_utc": "2026-03-23T00:00:00+00:00",
+                "interval_end_utc": "2026-04-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA reaffirms it is proceeding with the April 1, 2026 Artemis II launch attempt, conditioned on a successful wet dress rehearsal and analysis, and will fall back to later April windows including April 30 if that gate fails."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_da999500ef9c5c49",
+                    "action_2_agent_da999500ef9c5c49"
+                  ],
+                  "outcome": "pending",
+                  "effect": "NASA reaffirms it is proceeding with the April 1, 2026 Artemis II launch attempt, conditioned on a successful wet dress rehearsal and analysis"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "NASA reaffirms it is proceeding with the April 1, 2026 Artemis II launch attempt, conditioned on a successful wet dress rehearsal and analysis",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "NASA reaffirms it is proceeding with the April 1, 2026 Artemis II launch attempt, conditioned on a successful wet dress rehearsal and analysis, and will fall back to later April windows including April 30 if that gate fails.",
+                  "date": "2026-03-23"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                  "action": "NASA confirms it is proceeding with the April 1, 2026 launch attempt for Artemis II, conditioned on a successful wet dress rehearsal and analysis; if that gate fails, it will fall back to later April windows including April 30.\n承诺：Pursue April 1 launch attempt; retain later April windows including April 30 as fallback.\n触发或复核条件：Successful wet dress rehearsal and analysis; FRR clearance.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA confirms it is proceeding with the April 1, 2026 launch attempt for Artemis II, conditioned on a successful wet dress rehearsal and analysis; if that gate fails, it will fall back to later April windows including April 30.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "NASA states that no actual launch date is confirmed until the wet dress rehearsal is completed and its results analyzed, and that the April 1 and April 30 windows remain contingent on that gate.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "NASA has announced seven April launch windows (April 1–6 and April 30) after a Flight Readiness Review, and reaffirmed it is proceeding with the April 1 attempt contingent on a successful wet dress rehearsal. The April 30 backup window keeps a launch within the outcome window even if the first attempt slips.",
+                "evidence_quote": "On March 12, after a Flight Readiness Review (FRR), seven two-hour launch windows were announced in April on the 1st through the 6th and the 30th. The first one is at 6:24 EDT (22:24 UTC), April 1, 2026.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-04-02",
+                "interval_end": "2026-04-11",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 28,
+                "interval_days": 9,
+                "interval_start_utc": "2026-04-02T00:00:00+00:00",
+                "interval_end_utc": "2026-04-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "unknown",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                  "action": "NASA conducts the Artemis II launch from the launch pad within the announced April windows, beginning with the April 1, 2026 6:24 EDT window if the wet dress rehearsal and analysis clear it; otherwise it uses the next available April window, including April 30.\n承诺：Attempt launch in the first cleared April window; retain April 30 as the final fallback within the contract deadline.\n触发或复核条件：Successful wet dress rehearsal and analysis; FRR clearance.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA conducts the Artemis II launch from the launch pad within the announced April windows, beginning with the April 1, 2026 6:24 EDT window if the wet dress rehearsal and analysis clear it; otherwise it uses the next available April window, including April 30.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "NASA publicly confirms the specific next launch attempt date after completing the wet dress rehearsal and analyzing results, reaffirming that if the gate fails it will shift to the next announced April window up to and including April 30.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "NASA has announced seven April launch windows (April 1–6 and April 30) after a Flight Readiness Review, and reaffirmed it is proceeding with the April 1 attempt contingent on a successful wet dress rehearsal. The April 30 backup window keeps a launch within the outcome window even if the first attempt slips.",
+                "evidence_quote": "On March 12, after a Flight Readiness Review (FRR), seven two-hour launch windows were announced in April on the 1st through the 6th and the 30th. The first one is at 6:24 EDT (22:24 UTC), April 1, 2026.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-04-11",
+                "interval_end": "2026-04-21",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 38,
+                "interval_days": 10,
+                "interval_start_utc": "2026-04-11T00:00:00+00:00",
+                "interval_end_utc": "2026-04-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA publicly reaffirms the April Artemis II launch campaign, confirming it will attempt launch in the next available cleared April window and will not slip beyond the April 30 window unless the wet dress rehearsal or analysis fails."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "NASA publicly reaffirms the April Artemis II launch campaign, confirming it will attempt launch in the next available cleared April window",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "NASA publicly reaffirms the April Artemis II launch campaign, confirming it will attempt launch in the next available cleared April window and will not slip beyond the April 30 window unless the wet dress rehearsal or analysis fails.",
+                  "date": "2026-04-15"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                  "action": "NASA publicly reaffirms the April launch campaign, confirming it will attempt launch in the next available cleared April window and will not slip beyond the April 30 window unless the rehearsal or analysis fails.\n承诺：Keep all launch attempts within April, with April 30 as the last window before the deadline.\n触发或复核条件：Wet dress rehearsal success and FRR clearance.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA conducts the Artemis II launch from the launch pad, using the first cleared April window (April 1-6) if the wet dress rehearsal and analysis cleared it; otherwise it uses the next available April window, including April 30.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "NASA publicly reaffirms the April launch campaign, confirming it will attempt launch in the next available cleared April window and will not slip beyond the April 30 window unless the rehearsal or analysis fails.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-04-21",
+                "interval_end": "2026-05-01",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 48,
+                "interval_days": 10,
+                "interval_start_utc": "2026-04-21T00:00:00+00:00",
+                "interval_end_utc": "2026-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Frozen tables list Artemis II as NET April 1, 2026, and the FRR announced seven April windows including April 30. Simulated rounds reaffirm the April campaign but condition it on a successful wet dress rehearsal; no launch result is in evidence, so execution remains unverified.",
+                "evidence_quote": "On March 12, after a Flight Readiness Review (FRR), seven two-hour launch windows were announced in April on the 1st through the 6th and the 30th. The first one is at 6:24 EDT (22:24 UTC), April 1, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.05879999999999999
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-03-14",
+                "interval_end": "2026-03-23",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 9,
+                "interval_days": 9,
+                "interval_start_utc": "2026-03-14T23:59:59+00:00",
+                "interval_end_utc": "2026-03-23T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA publicly confirmed the seven April launch windows for Artemis II (April 1 through 6 and April 30, with the first at 6:24 EDT on April 1) and stated that the actual launch date remains contingent on a successful wet dress rehearsal and analysis of its results, targeting the earliest viable window."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "the actual launch date remains contingent on a successful wet dress rehearsal and analysis of its results",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "NASA publicly confirmed the seven April launch windows for Artemis II (April 1 through 6 and April 30, with the first at 6:24 EDT on April 1) and stated that the actual launch date remains contingent on a successful wet dress rehearsal and analysis of its results, targeting the earliest viable window.",
+                  "date": "2026-03-16"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                  "action": "NASA publicly confirms the seven April launch windows (April 1–6 and April 30, first at 6:24 EDT April 1) and states that the actual launch date remains contingent on a successful wet dress rehearsal and analysis of its results, with a target of the earliest viable window.\n承诺：Launch date will be confirmed only after a successful wet dress rehearsal and analysis; earliest viable April window targeted.\n触发或复核条件：Successful wet dress rehearsal and favorable analysis.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA publicly confirms the seven April launch windows (April 1–6 and April 30, first at 6:24 EDT April 1) and states that the actual launch date remains contingent on a successful wet dress rehearsal and analysis of its results, with a target of the earliest viable window.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "NASA announced seven April launch windows (April 1–6 and April 30) after a March 12 Flight Readiness Review, with the first at 6:24 EDT April 1. The actual date remains contingent on a successful wet dress rehearsal and analysis, so a slip past April 30 is still plausible but the schedule now targets April.",
+                "evidence_quote": "On March 12, after a Flight Readiness Review (FRR), seven two-hour launch windows were announced in April on the 1st through the 6th and the 30th. The first one is at 6:24 EDT (22:24 UTC), April 1, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-03-23",
+                "interval_end": "2026-04-02",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 19,
+                "interval_days": 10,
+                "interval_start_utc": "2026-03-23T00:00:00+00:00",
+                "interval_end_utc": "2026-04-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA announced that the wet dress rehearsal revealed issues requiring further analysis, so it will not confirm the April 1 window and instead targets a later April window, up to April 30, pending resolution of the rehearsal issues."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_da999500ef9c5c49",
+                    "action_2_agent_da999500ef9c5c49"
+                  ],
+                  "outcome": "realized",
+                  "effect": "NASA announced that the wet dress rehearsal revealed issues requiring further analysis, so it will not confirm the April 1 window and instead targets a later April window, up to April 30, pending resolution of the rehearsal issues."
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "it will not confirm the April 1 window and instead targets a later April window, up to April 30, pending resolution of the rehearsal issues",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "NASA announced that the wet dress rehearsal revealed issues requiring further analysis, so it will not confirm the April 1 window and instead targets a later April window, up to April 30, pending resolution of the rehearsal issues.",
+                  "date": "2026-03-23"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                  "action": "NASA announces that the wet dress rehearsal revealed issues requiring further analysis, so it will not confirm April 1 and instead targets a later April window (up to April 30) pending resolution.\n承诺：No April 1 confirmation; targets a later April window contingent on resolving rehearsal issues.\n触发或复核条件：Unfavorable wet dress rehearsal results.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA announces that the wet dress rehearsal has been completed and its results analyzed, and confirms April 1, 2026, 6:24 EDT as the target launch date for Artemis II, contingent on final launch-day readiness.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "NASA announces that the wet dress rehearsal revealed issues requiring further analysis, so it will not confirm April 1 and instead targets a later April window (up to April 30) pending resolution.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "NASA announced seven April launch windows (April 1–6 and April 30) after a March 12 Flight Readiness Review, with the first at 6:24 EDT April 1. The actual date remains contingent on a successful wet dress rehearsal and analysis, so a slip past April 30 is still plausible but the schedule now targets April.",
+                "evidence_quote": "On March 12, after a Flight Readiness Review (FRR), seven two-hour launch windows were announced in April on the 1st through the 6th and the 30th. The first one is at 6:24 EDT (22:24 UTC), April 1, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-04-02",
+                "interval_end": "2026-04-11",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 28,
+                "interval_days": 9,
+                "interval_start_utc": "2026-04-02T00:00:00+00:00",
+                "interval_end_utc": "2026-04-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA announced that wet dress rehearsal issues remain unresolved and that it cannot yet confirm any April launch window, including April 30, continuing analysis before committing to a launch date."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_2_agent_da999500ef9c5c49",
+                    "action_3_agent_da999500ef9c5c49"
+                  ],
+                  "outcome": "realized",
+                  "effect": "NASA announced that wet dress rehearsal issues remain unresolved and that it cannot yet confirm any April launch window, including April 30, continuing analysis before committing to a launch date."
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "NASA announced that wet dress rehearsal issues remain unresolved and that it cannot yet confirm any April launch window, including April 30, continuing analysis before committing to a launch date.",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "NASA announced that wet dress rehearsal issues remain unresolved and that it cannot yet confirm any April launch window, including April 30, continuing analysis before committing to a launch date.",
+                  "date": "2026-04-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                  "action": "NASA announces that wet dress rehearsal issues remain unresolved and that it cannot yet confirm any April launch window, continuing analysis before committing to a date.\n承诺：No April launch window confirmed until rehearsal issues are resolved.\n触发或复核条件：Rehearsal issues remain unresolved.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA announces that analysis of the wet dress rehearsal issues is complete and that it is now targeting the April 30 launch window, with launch date confirmation pending final readiness checks.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "NASA announces that wet dress rehearsal issues remain unresolved and that it cannot yet confirm any April launch window, continuing analysis before committing to a date.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "NASA announced seven April windows (April 1–6 and April 30) after a March 12 flight readiness review, but the launch date remains contingent on a successful wet dress rehearsal. A later report says wet dress rehearsal issues remain unresolved and no April window is confirmed, so launch by April 30 is plausible but not assured.",
+                "evidence_quote": "NASA announced that wet dress rehearsal issues remain unresolved and that it cannot yet confirm any April launch window, including April 30, continuing analysis before committing to a launch date.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-04-11",
+                "interval_end": "2026-04-21",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 38,
+                "interval_days": 10,
+                "interval_start_utc": "2026-04-11T00:00:00+00:00",
+                "interval_end_utc": "2026-04-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "NASA announced seven April windows (April 1–6 and April 30) after a March 12 flight readiness review, but the launch date remains contingent on a successful wet dress rehearsal. A later report says wet dress rehearsal issues remain unresolved and no April window is confirmed, so launch by April 30 is plausible but not assured.",
+                "evidence_quote": "NASA announced that wet dress rehearsal issues remain unresolved and that it cannot yet confirm any April launch window, including April 30, continuing analysis before committing to a launch date.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-04-21",
+                "interval_end": "2026-05-01",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 48,
+                "interval_days": 10,
+                "interval_start_utc": "2026-04-21T00:00:00+00:00",
+                "interval_end_utc": "2026-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_da999500ef9c5c49"
+                  ]
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The last settled simulated development (round 3, April 5) says wet dress rehearsal issues remain unresolved and NASA cannot confirm any April window, including April 30. That leaves only a narrow path to a launch before the deadline; no launch or confirmed date appears in the evidence.",
+                "evidence_quote": "NASA announced that wet dress rehearsal issues remain unresolved and that it cannot yet confirm any April launch window, including April 30, continuing analysis before committing to a launch date.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.063
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 7,
+        "draw_rounds": 7,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 7,
+        "public_event_count": 6,
+        "substantive_public_event_count": 6,
+        "state_change_count": 3,
+        "condition_change_count": 2,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 4,
+            "active_actor_count": 1,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 3,
+            "active_actor_count": 1,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.365,
+      "covered_p_yes": 0.365,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.365,
+        0.365
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "163e1683-279b-48d4-8141-bdf59846033b",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:30:40.524227+00:00",
+      "contract_id": "0xf1050a8b0233348a95d75083825b1dd360e332557b15517a89fb4b0f05708ad2",
+      "forecast_cutoff": "2026-03-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "77dffdc60bfe357ce1808990830c862896334aa6de7a10ccf53756a54a2c2fa7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 110.608
+    },
+    {
+      "calls": 29,
+      "tokens": 333684,
+      "input_tokens": 320250,
+      "output_tokens": 13434,
+      "accounted_tokens_upper": 333684,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-03-14",
+                "interval_end": "2026-03-23",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 9,
+                "interval_days": 9,
+                "interval_start_utc": "2026-03-14T23:59:59+00:00",
+                "interval_end_utc": "2026-03-23T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA publicly confirmed it is proceeding toward the announced April launch windows for Artemis II (April 1–6 and April 30) and stated that the actual launch date will be confirmed only after a successful wet dress rehearsal and analysis of results, with the FRR-cleared windows standing as the target."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "the actual launch date will be confirmed only after a successful wet dress rehearsal and analysis of results",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "NASA publicly confirmed it is proceeding toward the announced April launch windows for Artemis II (April 1–6 and April 30) and stated that the actual launch date will be confirmed only after a successful wet dress rehearsal and analysis of results, with the FRR-cleared windows standing as the target.",
+                  "date": "2026-03-16"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                  "action": "NASA publicly confirms it is proceeding toward the announced April launch windows (April 1–6 and April 30) and states that the actual launch date will be confirmed only after a successful wet dress rehearsal and analysis of results, with the FRR-cleared windows standing as the target.\n承诺：Launch date confirmed only after successful wet dress rehearsal and analysis.\n触发或复核条件：Successful wet dress rehearsal and analysis of results.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA publicly confirms it is proceeding toward the announced April launch windows (April 1–6 and April 30) and states that the actual launch date will be confirmed only after a successful wet dress rehearsal and analysis of results, with the FRR-cleared windows standing as the target.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Hold current posture and monitor wet dress rehearsal results, helium flow issue status, and FRR clearance criteria before any further public commitment on the launch date.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "NASA's FRR-cleared April windows (April 1–6 and April 30) and the frozen table's NET April 1, 2026 date place the launch inside the window. The remaining uncertainty is the pending wet dress rehearsal and date confirmation, so a launch slip past April 30 is still plausible but not the base case.",
+                "evidence_quote": "On March 12, after a Flight Readiness Review (FRR), seven two-hour launch windows were announced in April on the 1st through the 6th and the 30th. The first one is at 6:24 EDT (22:24 UTC), April 1, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-03-23",
+                "interval_end": "2026-04-02",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 19,
+                "interval_days": 10,
+                "interval_start_utc": "2026-03-23T00:00:00+00:00",
+                "interval_end_utc": "2026-04-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA publicly reported the completed wet dress rehearsal results and confirmed April 1, 2026 as the target launch attempt within the FRR-cleared window, stating that analysis of the rehearsal supported proceeding toward the first April window."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_da999500ef9c5c49",
+                    "action_2_agent_da999500ef9c5c49"
+                  ],
+                  "outcome": "realized",
+                  "effect": "NASA publicly reported the completed wet dress rehearsal results and confirmed April 1, 2026 as the target launch attempt"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "confirmed April 1, 2026 as the target launch attempt within the FRR-cleared window",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "NASA publicly reported the completed wet dress rehearsal results and confirmed April 1, 2026 as the target launch attempt within the FRR-cleared window, stating that analysis of the rehearsal supported proceeding toward the first April window.",
+                  "date": "2026-03-27"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                  "action": "NASA publicly reports the completed wet dress rehearsal results and, if analysis supports it, confirms the April 1, 2026 launch attempt within the FRR-cleared window; if analysis does not support it, NASA states the next available window (April 2–6 or April 30) as the target.\n承诺：Launch date confirmed only after successful wet dress rehearsal and analysis of results.\n触发或复核条件：Wet dress rehearsal completed and results analyzed.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA publicly reports the completed wet dress rehearsal results and, if analysis supports it, confirms the April 1, 2026 launch attempt within the FRR-cleared window; if analysis does not support it, NASA states the next available window (April 2–6 or April 30) as the target.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "NASA keeps the FRR-cleared April windows standing and makes no new public statement this round, awaiting wet dress rehearsal completion and analysis before confirming any launch date.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "NASA's simulated March 27 report confirms the wet dress rehearsal succeeded and April 1, 2026 remains the target within the FRR-cleared April 1–6 and April 30 windows, satisfying the pre-launch gating condition. Residual risk is a late scrub or anomaly pushing the attempt past April 30, but the confirmed window and completed rehearsal support a high likelihood.",
+                "evidence_quote": "NASA publicly reported the completed wet dress rehearsal results and confirmed April 1, 2026 as the target launch attempt within the FRR-cleared window, stating that analysis of the rehearsal supported proceeding toward the first April window.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-04-02",
+                "interval_end": "2026-04-11",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 28,
+                "interval_days": 9,
+                "interval_start_utc": "2026-04-02T00:00:00+00:00",
+                "interval_end_utc": "2026-04-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA publicly confirmed that Artemis II launched successfully from its launch pad on April 1, 2026 within the FRR-cleared window, reporting the launch outcome and mission status."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "pending",
+                  "after": "met",
+                  "summary": "launched successfully from its launch pad on April 1, 2026 within the FRR-cleared window",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "NASA publicly confirmed that Artemis II launched successfully from its launch pad on April 1, 2026 within the FRR-cleared window, reporting the launch outcome and mission status.",
+                  "date": "2026-04-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                  "action": "NASA publicly confirms that Artemis II launched successfully from its launch pad on April 1, 2026 within the FRR-cleared window, reporting the launch outcome and mission status.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA publicly confirms that Artemis II launched successfully from its launch pad on April 1, 2026 within the FRR-cleared window, reporting the launch outcome and mission status.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "If the April 1 attempt did not launch, NASA publicly states the reason and confirms the next available FRR-cleared window (April 2–6 or April 30) as the target launch attempt, pending resolution of the issue.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.99,
+                "basis": "A simulated current event reports Artemis II launched successfully from its launch pad on April 1, 2026, within the FRR-cleared window, satisfying the outcome rule before April 30. Earlier schedule evidence (NET April 1, 2026) is consistent, and no competing explanation undermines the reported launch.",
+                "evidence_quote": "NASA publicly confirmed that Artemis II launched successfully from its launch pad on April 1, 2026 within the FRR-cleared window, reporting the launch outcome and mission status.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-04-11",
+                "interval_end": "2026-04-21",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 38,
+                "interval_days": 10,
+                "interval_start_utc": "2026-04-11T00:00:00+00:00",
+                "interval_end_utc": "2026-04-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "met",
+                  "after": "met",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.99,
+                "basis": "A simulated current event reports Artemis II launched successfully from its launch pad on April 1, 2026, within the FRR-cleared window, satisfying the outcome rule before April 30. Earlier schedule evidence (NET April 1, 2026) is consistent, and no competing explanation undermines the reported launch.",
+                "evidence_quote": "NASA publicly confirmed that Artemis II launched successfully from its launch pad on April 1, 2026 within the FRR-cleared window, reporting the launch outcome and mission status.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-04-21",
+                "interval_end": "2026-05-01",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 48,
+                "interval_days": 10,
+                "interval_start_utc": "2026-04-21T00:00:00+00:00",
+                "interval_end_utc": "2026-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "met",
+                  "after": "met",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.97,
+                "basis": "A settled simulated event reports Artemis II launched successfully from its pad on April 1, 2026, inside the FRR-cleared window, which precedes the April 30 deadline. The only residual uncertainty is corroboration of that reported launch, since no independent verification is shown.",
+                "evidence_quote": "target_event: met. launched successfully from its launch pad on April 1, 2026 within the FRR-cleared window",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.97,
+          "error": null,
+          "action_path_probability": 0.3429999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 3,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 2,
+        "condition_change_count": 2,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 3,
+            "active_actor_count": 1,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 2,
+            "condition_change_count": 2,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.97,
+      "covered_p_yes": 0.97,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.97,
+        0.97
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "c685fa9e-0d24-48f4-9b86-d7db4e370fde",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:00:48.749760+00:00",
+      "contract_id": "0xf1050a8b0233348a95d75083825b1dd360e332557b15517a89fb4b0f05708ad2",
+      "forecast_cutoff": "2026-03-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "77dffdc60bfe357ce1808990830c862896334aa6de7a10ccf53756a54a2c2fa7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 101.793
+    },
+    {
+      "calls": 12,
+      "tokens": 129298,
+      "input_tokens": 124105,
+      "output_tokens": 5193,
+      "accounted_tokens_upper": 129298,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-03-14",
+                "interval_end": "2026-05-01",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 48,
+                "interval_days": 48,
+                "interval_start_utc": "2026-03-14T23:59:59+00:00",
+                "interval_end_utc": "2026-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA stated it would proceed with Artemis II launch preparations toward the announced April windows, confirming a specific launch date only after a successful wet dress rehearsal and FRR clearance."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "NASA stated it would proceed with Artemis II launch preparations toward the announced April windows, confirming a specific launch date only after a successful wet dress rehearsal and FRR clearance.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "NASA stated it would proceed with Artemis II launch preparations toward the announced April windows, confirming a specific launch date only after a successful wet dress rehearsal and FRR clearance.",
+                  "date": "2026-03-15"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                  "action": "As NASA, proceed with Artemis II launch preparations toward the announced April windows (April 1–6 and April 30), completing the wet dress rehearsal and analyzing results; confirm the specific launch date only after a successful WDR and FRR clearance.\n承诺：Launch within the April windows if WDR and FRR clear the vehicle.\n触发或复核条件：Successful wet dress rehearsal and analysis, plus FRR clearance.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As NASA, proceed with Artemis II launch preparations toward the announced April windows (April 1–6 and April 30), completing the wet dress rehearsal and analyzing results; confirm the specific launch date only after a successful WDR and FRR clearance.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "NASA does not confirm a firm launch date this round; it awaits the wet dress rehearsal outcome and analysis before committing to a specific April window, keeping the announced windows as planning targets only.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.62,
+                "basis": "Frozen evidence shows Artemis II scheduled NET April 1, 2026, with seven April launch windows (1st–6th and 30th) announced after the March 12 FRR, all inside the April 30 deadline. No settled event confirms an actual launch occurred, so the estimate reflects schedule readiness rather than a verified liftoff.",
+                "evidence_quote": "On March 12, after a Flight Readiness Review (FRR), seven two-hour launch windows were announced in April on the 1st through the 6th and the 30th. The first one is at 6:24 EDT (22:24 UTC), April 1, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.62,
+          "error": null,
+          "action_path_probability": 0.7
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-03-14",
+                "interval_end": "2026-05-01",
+                "horizon_end": "2026-05-01",
+                "elapsed_days": 48,
+                "interval_days": 48,
+                "interval_start_utc": "2026-03-14T23:59:59+00:00",
+                "interval_end_utc": "2026-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "status": "executed",
+                  "summary": "NASA publicly confirmed it is proceeding toward the announced April 1, 2026 launch window, stating that the wet dress rehearsal and its analysis must be successfully completed before the launch date is final; launch remains targeted to the April 1–6 and April 30 windows."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Artemis II launch by April 30?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "the wet dress rehearsal and its analysis must be successfully completed before the launch date is final",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "NASA publicly confirmed it is proceeding toward the announced April 1, 2026 launch window, stating that the wet dress rehearsal and its analysis must be successfully completed before the launch date is final; launch remains targeted to the April 1–6 and April 30 windows.",
+                  "date": "2026-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_da999500ef9c5c49",
+                  "actor_name": "NASA",
+                  "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                  "action": "NASA publicly confirms it is proceeding toward the announced April 1, 2026 launch window, stating that the wet dress rehearsal and its analysis must be successfully completed before the launch date is final.\n承诺：Launch remains targeted to the April 1–6 and April 30 windows; final confirmation contingent on successful WDR and analysis.\n触发或复核条件：Successful wet dress rehearsal and analysis of results.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_da999500ef9c5c49:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "NASA publicly confirms it is proceeding toward the announced April 1, 2026 launch window, stating that the wet dress rehearsal and its analysis must be successfully completed before the launch date is final.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "NASA announced seven April launch windows (April 1–6 and April 30) after a March 12 Flight Readiness Review, and the frozen table lists Artemis II as NET April 1, 2026. However, the launch date is not final until the wet dress rehearsal and its analysis succeed, and no launch result is in evidence, so the outcome remains unverified.",
+                "evidence_quote": "On March 12, after a Flight Readiness Review (FRR), seven two-hour launch windows were announced in April on the 1st through the 6th and the 30th. The first one is at 6:24 EDT (22:24 UTC), April 1, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 1,
+        "condition_change_count": 2,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.585,
+      "covered_p_yes": 0.585,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.585,
+        0.585
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "23a075b2-ea82-46a2-90d4-25453fbbeca1",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:01:08.161857+00:00",
+      "contract_id": "0xf1050a8b0233348a95d75083825b1dd360e332557b15517a89fb4b0f05708ad2",
+      "forecast_cutoff": "2026-03-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "77dffdc60bfe357ce1808990830c862896334aa6de7a10ccf53756a54a2c2fa7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 19.41
+    },
+    {
+      "calls": 63,
+      "tokens": 738039,
+      "input_tokens": 701992,
+      "output_tokens": 36047,
+      "accounted_tokens_upper": 738039,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.52946,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.52946,
+        0.52946
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.6907540000000001,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.6,
+          "visits": 6,
+          "search_value": 0.7733466666666667,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.42,
+          "visits": 5,
+          "search_value": 0.76472,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.294,
+          "visits": 2,
+          "search_value": 0.7061999999999999,
+          "conditional_p_yes": 0.82,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.294,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.294,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.03528
+        },
+        {
+          "path": [
+            1,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.126,
+          "visits": 2,
+          "search_value": 0.8959999999999999,
+          "conditional_p_yes": 0.78,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.0756,
+          "visits": 1,
+          "search_value": 0.9099999999999999,
+          "conditional_p_yes": 0.35,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.0756,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.35,
+          "frontier": true,
+          "contribution": 0.026459999999999997
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.0504,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.3,
+          "frontier": true,
+          "contribution": 0.01512
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.18,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.7,
+          "frontier": true,
+          "contribution": 0.126
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.4,
+          "visits": 3,
+          "search_value": 0.4688866666666667,
+          "conditional_p_yes": 0.62,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.26,
+          "visits": 2,
+          "search_value": 0.268,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.20800000000000002,
+          "visits": 1,
+          "search_value": 0.0,
+          "conditional_p_yes": 0.85,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.20800000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 1.0,
+          "frontier": true,
+          "contribution": 0.20800000000000002
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.052000000000000005,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.8,
+          "frontier": true,
+          "contribution": 0.041600000000000005
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.13999999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.077
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "18c56f84-b38e-4a10-a6d3-ac37c055f65e",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:05:18.833860+00:00",
+      "contract_id": "0xf1050a8b0233348a95d75083825b1dd360e332557b15517a89fb4b0f05708ad2",
+      "forecast_cutoff": "2026-03-14T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "77dffdc60bfe357ce1808990830c862896334aa6de7a10ccf53756a54a2c2fa7",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 250.895
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-03-14T23:59:59+00:00",
+  "forecast_key": "0xf1050a8b0233348a95d75083825b1dd360e332557b15517a89fb4b0f05708ad2",
+  "group_id": "nasa-artemis-ii",
+  "evidence_sha256": "77dffdc60bfe357ce1808990830c862896334aa6de7a10ccf53756a54a2c2fa7",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 692,
+    "input_tokens": 593,
+    "output_tokens": 99,
+    "accounted_tokens_upper": 692,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-03-14",
+        "2026-05-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-03-14",
+        "2026-03-23",
+        "2026-04-02",
+        "2026-04-11",
+        "2026-04-21",
+        "2026-05-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-03-14",
+        "2026-03-23",
+        "2026-04-02",
+        "2026-04-11",
+        "2026-04-21",
+        "2026-05-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-03-14",
+        "2026-05-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-03-14",
+        "2026-03-23",
+        "2026-04-02",
+        "2026-04-11",
+        "2026-04-21",
+        "2026-05-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-05-01T03:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2026-03-31T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_526cccd0cef37de0",
+          "name": "NASA",
+          "role": "Leads Artemis II; through the NASA Administrator and Flight Readiness Review, determines launch readiness and confirms the actual launch date after wet dress rehearsal.",
+          "decision_ids": [
+            "D1",
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "NASA Flight Readiness Review announces launch windows, including April 1 and April 30, 2026."
+      ],
+      "gaps": [
+        "No named individual or office is identified as the sole authority to give final launch approval; NASA as an agency is the responsible decision-maker.",
+        "The wet dress rehearsal outcome and any subsequent launch date confirmation are unknown as of the cutoff.",
+        "No frozen source identifies NASA Flight Readiness Review; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "NASA decides to proceed with launch preparations and sets the launch date after successful wet dress rehearsal and analysis.",
+          "owner": "NASA",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "NASA conducts the launch of Artemis II from the launch pad.",
+          "owner": "NASA",
+          "support": "represented"
+        },
+        {
+          "id": "D3",
+          "choice": "NASA Flight Readiness Review announces launch windows, including April 1 and April 30, 2026.",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 23,
+    "tokens": 49961,
+    "input_tokens": 42766,
+    "output_tokens": 7195,
+    "accounted_tokens_upper": 49961,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

@@ -1,0 +1,3074 @@
+{
+  "run_id": "83c46d77-94d8-4718-8766-5ec037b56047",
+  "case_id": "market_22be80eaaee57fc32437333e",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2846,
+      "input_tokens": 2836,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2846,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.04,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.04,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2836,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:11:02.489937+00:00",
+      "contract_id": "0xf273da5c76e0116c0ec63787453b54d74f0c182256dff4ed2f27f08b14048f7c",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ce9bf53f85ce7ab890e97867d8a9d76b6a952173edffe7162b9ed64a9df573c1",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.844
+    },
+    {
+      "calls": 2,
+      "tokens": 5692,
+      "input_tokens": 5672,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5692,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.04,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.04,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2836,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.04,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2836,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:11:03.977753+00:00",
+      "contract_id": "0xf273da5c76e0116c0ec63787453b54d74f0c182256dff4ed2f27f08b14048f7c",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ce9bf53f85ce7ab890e97867d8a9d76b6a952173edffe7162b9ed64a9df573c1",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.486
+    },
+    {
+      "calls": 8,
+      "tokens": 92244,
+      "input_tokens": 88189,
+      "output_tokens": 4055,
+      "accounted_tokens_upper": 92244,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 418,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde publicly stated that she is actively preparing a candidacy for the 2027 French presidential election but will make a final decision only after her February 2027 departure from the ECB, stopping short of a formal declaration."
+                },
+                {
+                  "action_id": "action_1_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "will make a final decision only after her February 2027 departure from the ECB",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Christine Lagarde publicly stated that she is actively preparing a candidacy for the 2027 French presidential election but will make a final decision only after her February 2027 departure from the ECB, stopping short of a formal declaration.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                  "action": "Publicly state that she is actively preparing a candidacy and will make a final decision after her February 2027 ECB departure, without formally declaring now.\n承诺：Final candidacy decision to be announced after stepping down from the ECB in February 2027.\n触发或复核条件：No formal candidacy until after the February 2027 ECB exit.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly declare candidacy for the 2027 French presidential election, framing the February 2027 ECB departure as clearing the way to run, and commit to building a campaign organization and seeking centre-right support ahead of the 18 April 2027 first round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly state that she is actively preparing a candidacy and will make a final decision after her February 2027 ECB departure, without formally declaring now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:1",
+                  "action": "The French electorate casts no ballots in this round; the first round is scheduled for 18 April 2027, with a runoff on 2 May if no candidate secures an absolute majority.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "The French electorate casts no ballots in this round; the first round is scheduled for 18 April 2027, with a runoff on 2 May if no candidate secures an absolute majority.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Monitor whether Christine Lagarde formally declares candidacy and secures party backing, and track any published polling or vote-share data ahead of the 18 April 2027 first round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Lagarde only said she was 'actively preparing' a candidacy and would decide after leaving the ECB in February 2027; no formal declaration or polling lead is shown. The election result itself is unobserved, and the frozen polling excerpt contains no numbers, so a win remains a low-probability tail.",
+                "evidence_quote": "Christine Lagarde publicly stated that she is actively preparing a candidacy for the 2027 French presidential election but will make a final decision only after her February 2027 departure from the ECB, stopping short of a formal declaration.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.27999999999999997
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "17b332fe-196f-4771-9cb4-ed451ac54ef4",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:11:57.100178+00:00",
+      "contract_id": "0xf273da5c76e0116c0ec63787453b54d74f0c182256dff4ed2f27f08b14048f7c",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ce9bf53f85ce7ab890e97867d8a9d76b6a952173edffe7162b9ed64a9df573c1",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 53.12
+    },
+    {
+      "calls": 15,
+      "tokens": 178574,
+      "input_tokens": 170746,
+      "output_tokens": 7828,
+      "accounted_tokens_upper": 178574,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 418,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde publicly stated she is seriously preparing a possible candidacy in the 2027 French presidential election and will decide after her February 2027 departure from the ECB, keeping the World Economic Forum option open while commissioning informal campaign groundwork."
+                },
+                {
+                  "action_id": "action_1_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_61d0508e998a55cf",
+                    "action_1_agent_783e4493ff125e12"
+                  ],
+                  "outcome": "pending",
+                  "effect": "will decide after her February 2027 departure from the ECB"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Christine Lagarde publicly stated she is seriously preparing a possible candidacy in the 2027 French presidential election and will decide after her February 2027 departure from the ECB",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Christine Lagarde publicly stated she is seriously preparing a possible candidacy in the 2027 French presidential election and will decide after her February 2027 departure from the ECB, keeping the World Economic Forum option open while commissioning informal campaign groundwork.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                  "action": "Publicly state that she is seriously preparing a candidacy and will decide after her February 2027 ECB departure, keeping the WEF option open while commissioning informal campaign groundwork.\n承诺：No formal candidacy yet; decision to follow the February 2027 departure.\n触发或复核条件：Decision contingent on post-ECB arrangements.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly declare candidacy for the 2027 French presidential election, framing the February 2027 ECB departure as preparation for a national campaign and committing to run regardless of party primary outcomes.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that she is seriously preparing a candidacy and will decide after her February 2027 ECB departure, keeping the WEF option open while commissioning informal campaign groundwork.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:1",
+                  "action": "The French electorate casts no ballots in this round; the first round is scheduled for 18 April 2027. Voter choice will occur only when the election is held, contingent on Lagarde formally standing as a candidate.\n触发或复核条件：Review when the first round is held or Lagarde formally declares candidacy.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "The French electorate casts no ballots in this round; the first round is scheduled for 18 April 2027. Voter choice will occur only when the election is held, contingent on Lagarde formally standing as a candidate.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Lagarde only signaled she is seriously preparing a possible candidacy and will decide after leaving the ECB; no filing or confirmed candidacy appears. No election result or polling evidence favoring her is present, so winning remains a low-probability tail.",
+                "evidence_quote": "Christine Lagarde publicly stated she is seriously preparing a possible candidacy in the 2027 French presidential election and will decide after her February 2027 departure from the ECB, keeping the World Economic Forum option open while commissioning informal campaign groundwork.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.3
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 418,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde publicly announced that she will stand as a candidate in the 2027 French presidential election, framing her February 2027 departure from the ECB presidency as preparation for the campaign and committing to present a full campaign platform before the 18 April 2027 first round."
+                },
+                {
+                  "action_id": "action_1_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_61d0508e998a55cf",
+                    "action_1_agent_783e4493ff125e12"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Christine Lagarde publicly announced that she will stand as a candidate in the 2027 French presidential election"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Christine Lagarde publicly announced that she will stand as a candidate in the 2027 French presidential election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Christine Lagarde publicly announced that she will stand as a candidate in the 2027 French presidential election, framing her February 2027 departure from the ECB presidency as preparation for the campaign and committing to present a full campaign platform before the 18 April 2027 first round.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                  "action": "Publicly announce that I will stand as a candidate in the 2027 French presidential election, framing my February 2027 ECB departure as preparation for the campaign and committing to present a full platform before the April 2027 first round.\n承诺：Declare candidacy and present a campaign platform ahead of the 18 April 2027 first round.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly announce that I will stand as a candidate in the 2027 French presidential election, framing my February 2027 ECB departure as preparation for the campaign and committing to present a full platform before the April 2027 first round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "State publicly that I am seriously considering a presidential run and will decide by a set date after my February 2027 ECB departure, keeping the WEF option open until then.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:2",
+                  "action": "Monitor public reporting on the candidate field and any formal declaration by Christine Lagarde, including her February 2027 ECB departure, without casting any vote or endorsing a candidate.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "The French electorate casts no ballots in this round; the first round is scheduled for 18 April 2027 and the runoff, if needed, two weeks later. No voter decision is due before the election date.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Monitor public reporting on the candidate field and any formal declaration by Christine Lagarde, including her February 2027 ECB departure, without casting any vote or endorsing a candidate.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Lagarde's simulated announcement of candidacy is a necessary but weak step; no polling or election result shows her winning. The frozen excerpt lists her among centre-right figures but shows no nomination or lead, and the 2027 result remains unobserved.",
+                "evidence_quote": "Christine Lagarde publicly announced that she will stand as a candidate in the 2027 French presidential election, framing her February 2027 departure from the ECB presidency as preparation for the campaign and committing to present a full campaign platform before the 18 April 2027 first round.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.18
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 2,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "6ec0cd3e-c488-4984-9854-94a5d97abcd3",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:12:20.210468+00:00",
+      "contract_id": "0xf273da5c76e0116c0ec63787453b54d74f0c182256dff4ed2f27f08b14048f7c",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ce9bf53f85ce7ab890e97867d8a9d76b6a952173edffe7162b9ed64a9df573c1",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 23.109
+    },
+    {
+      "calls": 56,
+      "tokens": 599363,
+      "input_tokens": 575382,
+      "output_tokens": 23981,
+      "accounted_tokens_upper": 599363,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde announced that she will stand as a candidate in the 2027 French presidential election, saying the formal campaign launch will come after she leaves the ECB in February 2027, and that she is beginning to organize a campaign team."
+                },
+                {
+                  "action_id": "action_1_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Christine Lagarde announced that she will stand as a candidate in the 2027 French presidential election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Christine Lagarde announced that she will stand as a candidate in the 2027 French presidential election, saying the formal campaign launch will come after she leaves the ECB in February 2027, and that she is beginning to organize a campaign team.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                  "action": "Announce that I will stand as a candidate in the 2027 French presidential election, to be formally launched after I leave the ECB in February 2027, and begin organizing a campaign team.\n承诺：Declare candidacy contingent on the February 2027 ECB departure.\n触发或复核条件：Formal launch after February 2027 departure.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state that I will not be a candidate in the 2027 French presidential election, confirming my February 2027 ECB departure is to hand over to a successor and take the WEF chair role, not to campaign.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Announce that I will stand as a candidate in the 2027 French presidential election, to be formally launched after I leave the ECB in February 2027, and begin organizing a campaign team.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:1",
+                  "action": "Take no collective electoral action this round; the electorate has no vote to cast until the campaign and first round in April 2027.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no collective electoral action this round; the electorate has no vote to cast until the campaign and first round in April 2027.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Lagarde's simulated December 2026 announcement of candidacy is a necessary but weak step; she has no established party base, and the field already includes Glucksmann's primary win and other declared contenders. Winning the two-round national vote remains a long shot.",
+                "evidence_quote": "Christine Lagarde announced that she will stand as a candidate in the 2027 French presidential election, saying the formal campaign launch will come after she leaves the ECB in February 2027, and that she is beginning to organize a campaign team.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-12-31",
+                "interval_end": "2027-02-21",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 104,
+                "interval_days": 52,
+                "interval_start_utc": "2026-12-31T00:00:00+00:00",
+                "interval_end_utc": "2027-02-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde began public outreach to French voters, framing her case around economic competence and stability, while stating that no formal policy platform would be presented before she leaves the ECB in February 2027."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_61d0508e998a55cf",
+                    "action_2_agent_61d0508e998a55cf"
+                  ],
+                  "outcome": "pending",
+                  "effect": "no formal policy platform would be presented before she leaves the ECB in February 2027"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Christine Lagarde began public outreach to French voters, framing her case around economic competence and stability",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Christine Lagarde began public outreach to French voters, framing her case around economic competence and stability, while stating that no formal policy platform would be presented before she leaves the ECB in February 2027.",
+                  "date": "2027-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                  "action": "Begin public outreach framing my case to French voters — economic competence and stability — while still ECB President, without announcing policy platform details reserved for the formal launch.\n承诺：No formal platform before the February 2027 departure.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "In the run-up to my February 2027 ECB departure, publicly confirm the candidacy remains on track and name a campaign leadership team and interim campaign structure, keeping the formal campaign launch for after I leave the ECB.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Begin public outreach framing my case to French voters — economic competence and stability — while still ECB President, without announcing policy platform details reserved for the formal launch.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-21",
+                "interval_end": "2027-04-14",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 156,
+                "interval_days": 52,
+                "interval_start_utc": "2027-02-21T00:00:00+00:00",
+                "interval_end_utc": "2027-04-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-04-14",
+                "interval_end": "2027-06-06",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 209,
+                "interval_days": 53,
+                "interval_start_utc": "2027-04-14T00:00:00+00:00",
+                "interval_end_utc": "2027-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:2",
+                  "action": "Await the scheduled first round (18 April 2027) and, if no absolute majority, the runoff two weeks later, before any collective electoral act.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no collective electoral action this round; the electorate casts no ballot until the scheduled first round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Await the scheduled first round (18 April 2027) and, if no absolute majority, the runoff two weeks later, before any collective electoral act.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-06-06",
+                "interval_end": "2027-07-28",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 261,
+                "interval_days": 52,
+                "interval_start_utc": "2027-06-06T00:00:00+00:00",
+                "interval_end_utc": "2027-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde formally launched her presidential campaign, releasing the deferred policy platform on economic competence and stability and naming campaign leadership, and began nationwide voter outreach as a declared candidate in the 2027 French presidential election."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Christine Lagarde formally launched her presidential campaign, releasing the deferred policy platform on economic competence and stability",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_005_001",
+                  "text": "Christine Lagarde formally launched her presidential campaign, releasing the deferred policy platform on economic competence and stability and naming campaign leadership, and began nationwide voter outreach as a declared candidate in the 2027 French presidential election.",
+                  "date": "2027-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                  "action": "Formally launch my presidential campaign now that I have left the ECB: release the deferred policy platform on economic competence and stability, name campaign leadership, and begin nationwide voter outreach as a declared candidate.\n承诺：Stand as a candidate in the 2027 election with a published platform.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Formally launch my presidential campaign now that I have left the ECB: release the deferred policy platform on economic competence and stability, name campaign leadership, and begin nationwide voter outreach as a declared candidate.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Seek endorsements and unity support from centre-right figures and the 'Bâtir ensemble 2027' initiative to consolidate a single centre-right bloc behind my candidacy before the first round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "Lagarde's simulated candidacy and campaign launch are represented, but no polling or electoral result shows her winning the two-round contest. The 2027 election remains ahead, so candidacy is necessary but far from sufficient.",
+                "evidence_quote": "Christine Lagarde formally launched her presidential campaign, releasing the deferred policy platform on economic competence and stability and naming campaign leadership, and began nationwide voter outreach as a declared candidate in the 2027 French presidential election.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_005_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-28",
+                "interval_end": "2027-09-18",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 313,
+                "interval_days": 52,
+                "interval_start_utc": "2027-07-28T00:00:00+00:00",
+                "interval_end_utc": "2027-09-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_6_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:1",
+                  "action": "Take no collective electoral act this round; the electorate casts ballots only at the scheduled first round and any runoff, and no vote is due in this interval.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no collective electoral act this round; the electorate casts ballots only at the scheduled first round and any runoff, and no vote is due in this interval.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "Lagarde's simulated candidacy and campaign launch are represented, but no polling or electoral result shows her winning the two-round contest. The 2027 election remains ahead, so candidacy is necessary but far from sufficient.",
+                "evidence_quote": "Christine Lagarde formally launched her presidential campaign, releasing the deferred policy platform on economic competence and stability and naming campaign leadership, and began nationwide voter outreach as a declared candidate in the 2027 French presidential election.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_005_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-18",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 365,
+                "interval_days": 52,
+                "interval_start_utc": "2027-09-18T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "Lagarde's simulated candidacy and campaign launch are represented, but no polling or electoral result shows her winning the two-round contest. The 2027 election remains ahead, so candidacy is necessary but far from sufficient.",
+                "evidence_quote": "Christine Lagarde formally launched her presidential campaign, releasing the deferred policy platform on economic competence and stability and naming campaign leadership, and began nationwide voter outreach as a declared candidate in the 2027 French presidential election.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_005_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 53,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_8_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde publicly pressed her economic-competence and stability case to the French electorate and called for consolidation of the fragmented centre-right behind her candidacy, urging supporters to back her in any runoff."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Christine Lagarde publicly pressed her economic-competence and stability case to the French electorate and called for consolidation of the fragmented centre-right behind her candidacy, urging supporters to back her in any runoff.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_008_001",
+                  "text": "Christine Lagarde publicly pressed her economic-competence and stability case to the French electorate and called for consolidation of the fragmented centre-right behind her candidacy, urging supporters to back her in any runoff.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                  "action": "With the first round now past, publicly press my economic-competence and stability case to the French electorate and call for consolidation of the fragmented centre-right behind my candidacy, urging supporters to back me in any runoff.\n承诺：Stand as candidate; seek centre-right consolidation and runoff support.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "With the first round now past, publicly press my economic-competence and stability case to the French electorate and call for consolidation of the fragmented centre-right behind my candidacy, urging supporters to back me in any runoff.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Commission and publicly release internal polling on my candidacy and seek named endorsements from centre-right figures to calibrate strategy, stating I will adjust outreach based on the results.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "Lagarde's candidacy is well supported: she announced in December 2026, launched in July 2027, and was still campaigning in January 2028. But no election result or polling data is in evidence, and the field includes a consolidated Socialist candidate and a fragmented centre-right she has only urged to unite.",
+                "evidence_quote": "Christine Lagarde formally launched her presidential campaign, releasing the deferred policy platform on economic competence and stability and naming campaign leadership, and began nationwide voter outreach as a declared candidate in the 2027 French presidential election.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_005_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 0.017639999999999996
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 6,
+        "draw_rounds": 6,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 7,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 3,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 6,
+            "draw_rounds": 6,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 7,
+            "active_actor_count": 2,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 3,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.08,
+      "covered_p_yes": 0.08,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.08,
+        0.08000000000000007
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "bc5c70a3-bb70-432b-81f9-3edefaa711ce",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:15:07.017428+00:00",
+      "contract_id": "0xf273da5c76e0116c0ec63787453b54d74f0c182256dff4ed2f27f08b14048f7c",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ce9bf53f85ce7ab890e97867d8a9d76b6a952173edffe7162b9ed64a9df573c1",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 166.803
+    },
+    {
+      "calls": 102,
+      "tokens": 1195333,
+      "input_tokens": 1145463,
+      "output_tokens": 49870,
+      "accounted_tokens_upper": 1195333,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde stated publicly that she is seriously considering a candidacy in the 2027 French presidential election but will decide only after leaving the ECB in February 2027, keeping the option open without a formal declaration this round."
+                },
+                {
+                  "action_id": "action_1_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_61d0508e998a55cf",
+                    "action_1_agent_783e4493ff125e12"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Christine Lagarde stated publicly that she is seriously considering a candidacy in the 2027 French presidential election"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "will decide only after leaving the ECB in February 2027",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Christine Lagarde stated publicly that she is seriously considering a candidacy in the 2027 French presidential election but will decide only after leaving the ECB in February 2027, keeping the option open without a formal declaration this round.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                  "action": "State publicly that I am seriously considering a 2027 candidacy and will decide after leaving the ECB in February 2027, keeping the option open without a formal declaration this round.\n承诺：Decide on candidacy by the time of my February 2027 ECB departure.\n触发或复核条件：If conditions remain favorable after the ECB exit.",
+                  "p_selected": 0.3333333333333333,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.5,
+                      "action": "Announce publicly that I will be a candidate in France's 2027 presidential election, framing the run as a pro-European, economic-competence candidacy and confirming I will leave the ECB in February 2027 as already planned to campaign full-time.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.3333333333333333,
+                      "action": "State publicly that I am seriously considering a 2027 candidacy and will decide after leaving the ECB in February 2027, keeping the option open without a formal declaration this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:1",
+                  "action": "Take no collective electoral action before the campaign; observe whether Lagarde formally declares candidacy and how the centre-right field consolidates ahead of the 18 April 2027 first round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no collective electoral action before the campaign; observe whether Lagarde formally declares candidacy and how the centre-right field consolidates ahead of the 18 April 2027 first round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "Lagarde has kept the option open but deferred any decision until after leaving the ECB in February 2027, so no candidacy exists yet. Even if she runs, she would face established party candidates and a compressed timeline before the April 2027 vote, making a win unlikely.",
+                "evidence_quote": "Christine Lagarde stated publicly that she is seriously considering a candidacy in the 2027 French presidential election but will decide only after leaving the ECB in February 2027, keeping the option open without a formal declaration this round.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-12-31",
+                "interval_end": "2027-02-21",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 104,
+                "interval_days": 52,
+                "interval_start_utc": "2026-12-31T00:00:00+00:00",
+                "interval_end_utc": "2027-02-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde publicly restated that she will announce her candidacy decision upon leaving the ECB in February 2027, and said that if she runs she intends to compete to win rather than merely enter the race."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_61d0508e998a55cf",
+                    "action_2_agent_61d0508e998a55cf"
+                  ],
+                  "outcome": "pending",
+                  "effect": "restated that she will announce her candidacy decision upon leaving the ECB in February 2027"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "restated that she will announce her candidacy decision upon leaving the ECB in February 2027",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Christine Lagarde publicly restated that she will announce her candidacy decision upon leaving the ECB in February 2027, and said that if she runs she intends to compete to win rather than merely enter the race.",
+                  "date": "2027-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                  "action": "Restate publicly that I will announce my candidacy decision upon leaving the ECB in February 2027, and that if I run I intend to compete to win rather than merely enter the race.\n承诺：Announce the candidacy decision at my February 2027 ECB departure.\n触发或复核条件：If circumstances remain favorable after the ECB exit.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Declare formally that I am a candidate in the 2027 French presidential election, launching the campaign now that my February 2027 ECB departure is confirmed.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Restate publicly that I will announce my candidacy decision upon leaving the ECB in February 2027, and that if I run I intend to compete to win rather than merely enter the race.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-21",
+                "interval_end": "2027-04-14",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 156,
+                "interval_days": 52,
+                "interval_start_utc": "2027-02-21T00:00:00+00:00",
+                "interval_end_utc": "2027-04-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde announced publicly that, after leaving the ECB, she has decided not to stand in the 2027 French presidential election and will pursue other roles instead."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unmet",
+                  "summary": "Christine Lagarde announced publicly that, after leaving the ECB, she has decided not to stand in the 2027 French presidential election and will pursue other roles instead.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "Christine Lagarde announced publicly that, after leaving the ECB, she has decided not to stand in the 2027 French presidential election and will pursue other roles instead.",
+                  "date": "2027-04"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                  "action": "State publicly that after leaving the ECB I have decided not to stand in the 2027 presidential election, and that I will pursue other roles instead.\n承诺：I will not be a candidate in the 2027 presidential election.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Declare my candidacy for the 2027 French presidential election now that I have left the ECB, presenting a competitive campaign aimed at winning the presidency, and confirm I am forgoing the WEF chair path to run.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "State publicly that after leaving the ECB I have decided not to stand in the 2027 presidential election, and that I will pursue other roles instead.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Announce that I am entering the race only if I secure sufficient backing and a credible campaign structure within a short window, otherwise I will not stand; set a firm deadline for that determination.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "A simulated current event reports Lagarde publicly declined to stand in 2027 after leaving the ECB, which removes the candidacy prerequisite. Earlier signals only kept the option open; no evidence shows a formal candidacy or electoral support.",
+                "evidence_quote": "Christine Lagarde announced publicly that, after leaving the ECB, she has decided not to stand in the 2027 French presidential election and will pursue other roles instead.",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-04-14",
+                "interval_end": "2027-06-06",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 209,
+                "interval_days": 53,
+                "interval_start_utc": "2027-04-14T00:00:00+00:00",
+                "interval_end_utc": "2027-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unmet",
+                  "after": "unmet",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:1",
+                  "action": "Take no collective electoral action this round: Lagarde has publicly declined to stand, so there is no Lagarde candidacy for voters to support or oppose. Continue observing the field and await the official candidate list and first-round campaign.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no collective electoral action this round: Lagarde has publicly declined to stand, so there is no Lagarde candidacy for voters to support or oppose. Continue observing the field and await the official candidate list and first-round campaign.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "A simulated current event reports Lagarde publicly declined to stand in 2027 after leaving the ECB, which removes the candidacy prerequisite. Earlier signals only kept the option open; no evidence shows a formal candidacy or electoral support.",
+                "evidence_quote": "Christine Lagarde announced publicly that, after leaving the ECB, she has decided not to stand in the 2027 French presidential election and will pursue other roles instead.",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-06-06",
+                "interval_end": "2027-07-28",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 261,
+                "interval_days": 52,
+                "interval_start_utc": "2027-06-06T00:00:00+00:00",
+                "interval_end_utc": "2027-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unmet",
+                  "after": "unmet",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "A simulated current event reports Lagarde publicly declined to stand in 2027 after leaving the ECB, which removes the candidacy prerequisite. Earlier signals only kept the option open; no evidence shows a formal candidacy or electoral support.",
+                "evidence_quote": "Christine Lagarde announced publicly that, after leaving the ECB, she has decided not to stand in the 2027 French presidential election and will pursue other roles instead.",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-28",
+                "interval_end": "2027-09-18",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 313,
+                "interval_days": 52,
+                "interval_start_utc": "2027-07-28T00:00:00+00:00",
+                "interval_end_utc": "2027-09-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_6_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unmet",
+                  "after": "unmet",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                  "action": "Take no new public action; my April 2027 non-candidacy announcement stands and I am pursuing other roles rather than the 2027 presidential race.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no new public action; my April 2027 non-candidacy announcement stands and I am pursuing other roles rather than the 2027 presidential race.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "A simulated current event reports Lagarde publicly declined to stand in 2027 after leaving the ECB, which removes the candidacy prerequisite. Earlier signals only kept the option open; no evidence shows a formal candidacy or electoral support.",
+                "evidence_quote": "Christine Lagarde announced publicly that, after leaving the ECB, she has decided not to stand in the 2027 French presidential election and will pursue other roles instead.",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-18",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 365,
+                "interval_days": 52,
+                "interval_start_utc": "2027-09-18T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unmet",
+                  "after": "unmet",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:1",
+                  "action": "Take no collective electoral action this round. Lagarde has publicly declined to stand, so there is no Lagarde candidacy for voters to support or oppose; await the official candidate list and the first-round campaign before any ballot behavior matters.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no collective electoral action this round. Lagarde has publicly declined to stand, so there is no Lagarde candidacy for voters to support or oppose; await the official candidate list and the first-round campaign before any ballot behavior matters.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "A simulated current event reports Lagarde publicly declined to stand in 2027 after leaving the ECB, which removes the candidacy prerequisite. Earlier signals only kept the option open; no evidence shows a formal candidacy or electoral support.",
+                "evidence_quote": "Christine Lagarde announced publicly that, after leaving the ECB, she has decided not to stand in the 2027 French presidential election and will pursue other roles instead.",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 53,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unmet",
+                  "after": "unmet",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "A settled simulated event in round 3 states Lagarde publicly decided not to stand in 2027, which removes the candidacy prerequisite. No later event reverses that, so winning the election is near-impossible; only an unobserved reversal remains unknown.",
+                "evidence_quote": "Christine Lagarde announced publicly that, after leaving the ECB, she has decided not to stand in the 2027 French presidential election and will pursue other roles instead.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_003_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.01,
+          "error": null,
+          "action_path_probability": 0.04583333333333334
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde publicly declared that she will stand as a candidate in the 2027 French presidential election, confirming she will step down from the ECB in February 2027 to campaign and beginning to build a campaign organization."
+                },
+                {
+                  "action_id": "action_1_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_61d0508e998a55cf",
+                    "action_1_agent_783e4493ff125e12"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Christine Lagarde publicly declared that she will stand as a candidate in the 2027 French presidential election"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Christine Lagarde publicly declared that she will stand as a candidate in the 2027 French presidential election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Christine Lagarde publicly declared that she will stand as a candidate in the 2027 French presidential election, confirming she will step down from the ECB in February 2027 to campaign and beginning to build a campaign organization.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                  "action": "Publicly declare that I will be a candidate in the 2027 French presidential election, confirming I will leave the ECB in February 2027 to campaign, and begin building a campaign organization.\n承诺：I will stand as a candidate in the 2027 presidential election and step down from the ECB in February 2027 to campaign.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly declare that I will be a candidate in the 2027 French presidential election, confirming I will leave the ECB in February 2027 to campaign, and begin building a campaign organization.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly state that I am seriously considering a 2027 run and will decide after leaving the ECB in February 2027, while keeping the World Economic Forum option open; no formal candidacy yet.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:1",
+                  "action": "The French electorate takes no collective action this round; ballots are cast only at the scheduled election. Monitor whether Lagarde formally declares candidacy and whether the first round remains set for 18 April 2027.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "The French electorate takes no collective action this round; ballots are cast only at the scheduled election. Monitor whether Lagarde formally declares candidacy and whether the first round remains set for 18 April 2027.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Lagarde has signaled interest and is reportedly leaving the ECB early, but no confirmed candidacy exists and she is only one listed centre-right figure. Winning a two-round national election requires far more than exploratory positioning, so the chance remains low.",
+                "evidence_quote": "In July 2026 she said she could leave the ECB before the end of her term to take part in France’s 2027 presidential election.",
+                "change_driver": null,
+                "evidence_ref": "hist_6287af2432fb56a3.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-12-31",
+                "interval_end": "2027-02-21",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 104,
+                "interval_days": 52,
+                "interval_start_utc": "2026-12-31T00:00:00+00:00",
+                "interval_end_utc": "2027-02-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Lagarde has signaled interest and is reportedly leaving the ECB early, but no confirmed candidacy exists and she is only one listed centre-right figure. Winning a two-round national election requires far more than exploratory positioning, so the chance remains low.",
+                "evidence_quote": "In July 2026 she said she could leave the ECB before the end of her term to take part in France’s 2027 presidential election.",
+                "change_driver": null,
+                "evidence_ref": "hist_6287af2432fb56a3.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-21",
+                "interval_end": "2027-04-14",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 156,
+                "interval_days": 52,
+                "interval_start_utc": "2027-02-21T00:00:00+00:00",
+                "interval_end_utc": "2027-04-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "Lagarde has signaled interest and is reportedly leaving the ECB early, but no confirmed candidacy exists and she is only one listed centre-right figure. Winning a two-round national election requires far more than exploratory positioning, so the chance remains low.",
+                "evidence_quote": "In July 2026 she said she could leave the ECB before the end of her term to take part in France’s 2027 presidential election.",
+                "change_driver": null,
+                "evidence_ref": "hist_6287af2432fb56a3.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-04-14",
+                "interval_end": "2027-06-06",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 209,
+                "interval_days": 53,
+                "interval_start_utc": "2027-04-14T00:00:00+00:00",
+                "interval_end_utc": "2027-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde publicly asked French voters to back her candidacy in the 18 April 2027 first round, presenting her ECB and IMF record as governing competence, and asked them to commit to supporting her in the runoff if she qualifies."
+                },
+                {
+                  "action_id": "action_4_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_61d0508e998a55cf",
+                    "action_4_agent_783e4493ff125e12"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Christine Lagarde publicly asked French voters to back her candidacy in the 18 April 2027 first round"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Christine Lagarde publicly asked French voters to back her candidacy in the 18 April 2027 first round",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "Christine Lagarde publicly asked French voters to back her candidacy in the 18 April 2027 first round, presenting her ECB and IMF record as governing competence, and asked them to commit to supporting her in the runoff if she qualifies.",
+                  "date": "2027-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                  "action": "Directly ask the French electorate to back my candidacy in the 18 April 2027 first round, framing my ECB and IMF record as governing competence, and solicit their vote commitment ahead of the runoff.\n承诺：I ask voters to support me in the first round and, if I qualify, in the runoff.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "With the first round on 18 April 2027 imminent, appeal publicly to the fragmented centre-right and right electorate to unite behind my declared candidacy, presenting myself as the candidate best placed to reach the 2 May runoff and win it.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Directly ask the French electorate to back my candidacy in the 18 April 2027 first round, framing my ECB and IMF record as governing competence, and solicit their vote commitment ahead of the runoff.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:1",
+                  "action": "The French electorate takes no collective action this round; there is no collective vote or endorsement mechanism available outside the scheduled ballot. Monitor the first round scheduled for 18 April 2027 and, absent a first-round majority, the runoff on 2 May 2027.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "The French electorate takes no collective action this round; there is no collective vote or endorsement mechanism available outside the scheduled ballot. Monitor the first round scheduled for 18 April 2027 and, absent a first-round majority, the runoff on 2 May 2027.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "Lagarde's simulated declaration and campaign appeal show candidacy, but no polling or electoral result establishes she leads or wins the two-round contest. The 2027 election remains the decisive unobserved step.",
+                "evidence_quote": "Christine Lagarde publicly asked French voters to back her candidacy in the 18 April 2027 first round, presenting her ECB and IMF record as governing competence, and asked them to commit to supporting her in the runoff if she qualifies.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-06-06",
+                "interval_end": "2027-07-28",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 261,
+                "interval_days": 52,
+                "interval_start_utc": "2027-06-06T00:00:00+00:00",
+                "interval_end_utc": "2027-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "Lagarde's simulated declaration and campaign appeal show candidacy, but no polling or electoral result establishes she leads or wins the two-round contest. The 2027 election remains the decisive unobserved step.",
+                "evidence_quote": "Christine Lagarde publicly asked French voters to back her candidacy in the 18 April 2027 first round, presenting her ECB and IMF record as governing competence, and asked them to commit to supporting her in the runoff if she qualifies.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-28",
+                "interval_end": "2027-09-18",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 313,
+                "interval_days": 52,
+                "interval_start_utc": "2027-07-28T00:00:00+00:00",
+                "interval_end_utc": "2027-09-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "Lagarde's simulated declaration and campaign appeal show candidacy, but no polling or electoral result establishes she leads or wins the two-round contest. The 2027 election remains the decisive unobserved step.",
+                "evidence_quote": "Christine Lagarde publicly asked French voters to back her candidacy in the 18 April 2027 first round, presenting her ECB and IMF record as governing competence, and asked them to commit to supporting her in the runoff if she qualifies.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-18",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 365,
+                "interval_days": 52,
+                "interval_start_utc": "2027-09-18T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "status": "executed",
+                  "summary": "Christine Lagarde publicly renewed her appeal to French voters, asking them to commit to voting for her in the 18 April 2027 first round and, if she qualifies, in the 2 May runoff, presenting her ECB and IMF record as governing competence."
+                },
+                {
+                  "action_id": "action_7_agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_7_agent_61d0508e998a55cf",
+                    "action_7_agent_783e4493ff125e12"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Christine Lagarde publicly renewed her appeal to French voters, asking them to commit to voting for her in the 18 April 2027 first round"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Christine Lagarde publicly renewed her appeal to French voters, asking them to commit to voting for her in the 18 April 2027 first round",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_007_001",
+                  "text": "Christine Lagarde publicly renewed her appeal to French voters, asking them to commit to voting for her in the 18 April 2027 first round and, if she qualifies, in the 2 May runoff, presenting her ECB and IMF record as governing competence.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_61d0508e998a55cf",
+                  "actor_name": "Christine Lagarde",
+                  "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                  "action": "Directly ask the French electorate to commit to voting for me in the 18 April 2027 first round and, if I qualify, in the 2 May runoff, framing my record as governing competence.\n承诺：I ask voters to support me in the first round and, if I qualify, in the runoff.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly appeal to centre-right and divided-right voters and local officials to unite behind my candidacy, presenting my ECB/IMF record as competence and asking fragmented right-wing figures' supporters to back me in the 18 April 2027 first round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_61d0508e998a55cf:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Directly ask the French electorate to commit to voting for me in the 18 April 2027 first round and, if I qualify, in the 2 May runoff, framing my record as governing competence.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_783e4493ff125e12",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_783e4493ff125e12:initial:1",
+                  "action": "The French electorate takes no collective action this round; ballots are cast only at the scheduled election. Monitor whether the first round remains set for 18 April 2027 and whether Lagarde's candidacy is formally filed.\n触发或复核条件：Review when first-round results are reported, the election date changes, or the presidency falls vacant.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_783e4493ff125e12:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "The French electorate takes no collective action this round; ballots are cast only at the scheduled election. Monitor whether the first round remains set for 18 April 2027 and whether Lagarde's candidacy is formally filed.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 53,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Christine Lagarde win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "Lagarde's candidacy and active campaigning are documented, but no polling or election result appears in the evidence. The outcome window runs through the 2027 runoff; with no measured result, a win remains unlikely given the competitive field and absence of any observed vote share.",
+                "evidence_quote": "Christine Lagarde publicly renewed her appeal to French voters, asking them to commit to voting for her in the 18 April 2027 first round and, if she qualifies, in the 2 May runoff, presenting her ECB and IMF record as governing competence.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_007_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 0.096
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 16,
+        "active_rounds": 9,
+        "draw_rounds": 9,
+        "audited_silent_rounds": 7,
+        "sampled_decisions": 13,
+        "public_event_count": 6,
+        "substantive_public_event_count": 6,
+        "state_change_count": 3,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 6,
+            "draw_rounds": 6,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 7,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 6,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.045,
+      "covered_p_yes": 0.045,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.045,
+        0.04499999999999993
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "cc32a3cb-a7d5-4ae4-93f7-6c32b60dcfe4",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:18:02.216343+00:00",
+      "contract_id": "0xf273da5c76e0116c0ec63787453b54d74f0c182256dff4ed2f27f08b14048f7c",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ce9bf53f85ce7ab890e97867d8a9d76b6a952173edffe7162b9ed64a9df573c1",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 175.193
+    },
+    {
+      "calls": 146,
+      "tokens": 1713286,
+      "input_tokens": 1636255,
+      "output_tokens": 77031,
+      "accounted_tokens_upper": 1713286,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.26906489999999994,
+      "coverage": 0.7992250000000001,
+      "unexplored_mass": 0.20077499999999993,
+      "unknown_bounds": [
+        0.1686774,
+        0.3694523999999999
+      ],
+      "search_iterations": 16,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 16,
+          "search_value": 0.43430500000000005,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.55,
+          "visits": 13,
+          "search_value": 0.5049323076923076,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.55,
+          "visits": 12,
+          "search_value": 0.53421,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.55,
+          "visits": 11,
+          "search_value": 0.5721927272727272,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.385,
+          "visits": 8,
+          "search_value": 0.6926000000000001,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.385,
+          "visits": 7,
+          "search_value": 0.7494857142857142,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.34650000000000003,
+          "visits": 3,
+          "search_value": 0.88,
+          "conditional_p_yes": 0.5,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.24255000000000002,
+          "visits": 1,
+          "search_value": 1.0,
+          "conditional_p_yes": 0.5,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.24255000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.5,
+          "frontier": true,
+          "contribution": 0.12127500000000001
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.10395,
+          "visits": 1,
+          "search_value": 0.6400000000000001,
+          "conditional_p_yes": 0.5,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.10395,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.2,
+          "frontier": true,
+          "contribution": 0.020790000000000003
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 6,
+          "mass": 0.038500000000000006,
+          "visits": 3,
+          "search_value": 0.5354666666666668,
+          "conditional_p_yes": 0.5,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.022907500000000004,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.2,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.022907500000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0027489000000000003
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.009817500000000002,
+          "visits": 1,
+          "search_value": 0.6400000000000001,
+          "conditional_p_yes": 0.2,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.009817500000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.2,
+          "frontier": true,
+          "contribution": 0.0019635000000000004
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            3
+          ],
+          "depth": 7,
+          "mass": 0.0057750000000000015,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.165,
+          "visits": 2,
+          "search_value": 0.2944,
+          "conditional_p_yes": 0.05,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.165,
+          "visits": 1,
+          "search_value": 0.2944,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.165,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.013200000000000002
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.3,
+          "visits": 2,
+          "search_value": 0.13268,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.3,
+          "visits": 1,
+          "search_value": 0.11176,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.18,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.04,
+          "frontier": true,
+          "contribution": 0.0072
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.075,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0015
+        },
+        {
+          "path": [
+            2,
+            1,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.045000000000000005,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.1499999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "2d1c04cf-5428-4efb-89e1-a2ad7bd443a1",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:25:38.615495+00:00",
+      "contract_id": "0xf273da5c76e0116c0ec63787453b54d74f0c182256dff4ed2f27f08b14048f7c",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ce9bf53f85ce7ab890e97867d8a9d76b6a952173edffe7162b9ed64a9df573c1",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 456.339
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0xf273da5c76e0116c0ec63787453b54d74f0c182256dff4ed2f27f08b14048f7c",
+  "group_id": "next-french-presidential-election",
+  "stage": "finished",
+  "outcome_deadline": "2028-01-01T04:59:00+00:00",
+  "deadline_basis": "explicit_election_result_window_including_runoff",
+  "nominal_market_end": "2027-04-19T03:59:00+00:00",
+  "evidence_sha256": "ce9bf53f85ce7ab890e97867d8a9d76b6a952173edffe7162b9ed64a9df573c1",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 750,
+    "input_tokens": 690,
+    "output_tokens": 60,
+    "accounted_tokens_upper": 750,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31",
+        "2027-02-21",
+        "2027-04-14",
+        "2027-06-06",
+        "2027-07-28",
+        "2027-09-18",
+        "2027-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31",
+        "2027-02-21",
+        "2027-04-14",
+        "2027-06-06",
+        "2027-07-28",
+        "2027-09-18",
+        "2027-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31",
+        "2027-02-21",
+        "2027-04-14",
+        "2027-06-06",
+        "2027-07-28",
+        "2027-09-18",
+        "2027-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_df0ad10d3a3d591c",
+          "name": "Christine Lagarde",
+          "role": "President of the European Central Bank who has said she could leave early to take part in France's 2027 presidential election; her own decision to become a candidate is a prerequisite to winning.",
+          "decision_ids": [
+            "lagarde_candidacy"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_3a32faf3436ce0f7",
+          "name": "French electorate",
+          "role": "Voters in the two-round presidential election who determine the winner; winning the election is an outcome of their votes, not a separate actor choice.",
+          "decision_ids": [
+            "election_outcome"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [],
+      "decision_dependencies": [
+        {
+          "id": "lagarde_candidacy",
+          "choice": "Christine Lagarde must decide to become a candidate in the 2027 French presidential election; without her candidacy she cannot win.",
+          "owner": "Christine Lagarde",
+          "support": "represented"
+        },
+        {
+          "id": "election_outcome",
+          "choice": "The 2027 French presidential election must be held and its two-round result must produce a winner; Lagarde must receive the winning vote share.",
+          "owner": "French electorate",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 26,
+    "tokens": 63748,
+    "input_tokens": 54668,
+    "output_tokens": 9080,
+    "accounted_tokens_upper": 63748,
+    "unknown_usage_requests": 0
+  }
+}

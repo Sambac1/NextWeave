@@ -1,0 +1,1814 @@
+{
+  "run_id": "2472faf7-4a8a-4c28-be2a-92e46fd43e3d",
+  "case_id": "market_b48e81bb258c9628ff876c28",
+  "status": "partial",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3071,
+      "input_tokens": 3061,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3071,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3061,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:24:58.236166+00:00",
+      "contract_id": "0x2f91477e922e33aa5a6b15ed24bbb42d9bd17662c23674f133d3b200372ff7dc",
+      "forecast_cutoff": "2025-05-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fbeff3ac6fc3d7dde696d200281846d0147762aab2bf5249a55a971706c460a1",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.473
+    },
+    {
+      "calls": 2,
+      "tokens": 6142,
+      "input_tokens": 6122,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6142,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3061,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3061,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:25:00.011842+00:00",
+      "contract_id": "0x2f91477e922e33aa5a6b15ed24bbb42d9bd17662c23674f133d3b200372ff7dc",
+      "forecast_cutoff": "2025-05-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fbeff3ac6fc3d7dde696d200281846d0147762aab2bf5249a55a971706c460a1",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.774
+    },
+    {
+      "calls": 8,
+      "tokens": 84212,
+      "input_tokens": 81352,
+      "output_tokens": 2860,
+      "accounted_tokens_upper": 84212,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-05-08",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 238,
+                "interval_days": 238,
+                "interval_start_utc": "2025-05-08T23:59:59+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "status": "executed",
+                  "summary": "China publicly signaled openness to a negotiated US-China trade and tariff arrangement, proposing reciprocal tariff reductions and structured talks, conditional on reciprocal US tariff relief and a mutual official announcement within 2025, while maintaining the trilateral RCEP/FTA track as a parallel hedge."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "conditional on reciprocal US tariff relief and a mutual official announcement within 2025",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "China publicly signaled openness to a negotiated US-China trade and tariff arrangement, proposing reciprocal tariff reductions and structured talks, conditional on reciprocal US tariff relief and a mutual official announcement within 2025, while maintaining the trilateral RCEP/FTA track as a parallel hedge.",
+                  "date": "2026-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "candidate_id": "agent_2e47274801625b33:supplement:2",
+                  "action": "Publicly signal China's openness to a negotiated US-China trade and tariff arrangement, proposing reciprocal tariff reductions and structured talks, while keeping the trilateral RCEP/FTA track as a parallel hedge. Any deal must be mutually announced and finalized within 2025.\n承诺：China offers structured negotiations toward a mutual tariff/trade agreement with the US in 2025, conditional on reciprocal US tariff relief and mutual official announcement.\n触发或复核条件：US responds with willingness to negotiate reciprocal tariff relief.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Pursue and deepen trade cooperation with Japan and South Korea — advancing RCEP implementation and trilateral FTA negotiations — as a hedge against US tariff pressure, without closing the door to a US deal.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_2e47274801625b33:supplement:2",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly signal China's openness to a negotiated US-China trade and tariff arrangement, proposing reciprocal tariff reductions and structured talks, while keeping the trilateral RCEP/FTA track as a parallel hedge. Any deal must be mutually announced and finalized within 2025.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:1",
+                      "action": "Publicly signal China's openness to a negotiated US-China trade and tariff arrangement, proposing reciprocal tariff reductions and structured talks, while keeping the trilateral RCEP/FTA track with Japan and South Korea as a parallel hedge. Any deal must be mutually announced and finalized within 2025.",
+                      "code": "program_rejected"
+                    },
+                    {
+                      "candidate_id": "agent_2e47274801625b33:supplement:1",
+                      "action": "Pursue and deepen trade cooperation with Japan and South Korea — advancing RCEP implementation and trilateral FTA negotiations — as a hedge against US tariff pressure, without closing the door to a US deal.",
+                      "code": "duplicate"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "China's simulated signal of openness to reciprocal tariff cuts is conditional and unconfirmed; no US official acceptance or mutual announcement appears. The target event remains pending, so willingness alone does not satisfy the finalized-agreement rule.",
+                "evidence_quote": "China publicly signaled openness to a negotiated US-China trade and tariff arrangement, proposing reciprocal tariff reductions and structured talks, conditional on reciprocal US tariff relief and a mutual official announcement within 2025, while maintaining the trilateral RCEP/FTA track as a parallel hedge.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.6
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.3,
+      "covered_p_yes": 0.3,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.3,
+        0.30000000000000004
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "aa71c36b-6032-48d5-ac97-9f6bb84f955c",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:25:49.196905+00:00",
+      "contract_id": "0x2f91477e922e33aa5a6b15ed24bbb42d9bd17662c23674f133d3b200372ff7dc",
+      "forecast_cutoff": "2025-05-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fbeff3ac6fc3d7dde696d200281846d0147762aab2bf5249a55a971706c460a1",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 49.182
+    },
+    {
+      "calls": 30,
+      "tokens": 340829,
+      "input_tokens": 326694,
+      "output_tokens": 14135,
+      "accounted_tokens_upper": 340829,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [],
+          "branches": [],
+          "status": "failed",
+          "p_yes": null,
+          "error": "ValueError: Execution quote must identify its registered subject at the start of the quoted action",
+          "action_path_probability": null
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-05-08",
+                "interval_end": "2025-06-16",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 39,
+                "interval_days": 39,
+                "interval_start_utc": "2025-05-08T23:59:59+00:00",
+                "interval_end_utc": "2025-06-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "status": "executed",
+                  "summary": "China pursues enhanced trade cooperation with Japan and South Korea, advancing RCEP implementation and trilateral FTA discussions as a diversification hedge against US tariff pressure; China commits to continue the trilateral trade-cooperation track with no commitment to a US deal."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "China pursues enhanced trade cooperation with Japan and South Korea, advancing RCEP implementation and trilateral FTA discussions as a diversification hedge against US tariff pressure; China commits to continue the trilateral trade-cooperation track with no commitment to a US deal.",
+                  "date": "2025-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "candidate_id": "agent_2e47274801625b33:initial:2",
+                  "action": "China pursues enhanced trade cooperation with Japan and South Korea, advancing RCEP implementation and trilateral FTA discussions as a diversification hedge against US tariff pressure.\n承诺：Continue trilateral trade-cooperation track; no commitment to a US deal.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "China publicly states its willingness to negotiate a mutual US-China trade and tariff agreement in 2025 and proposes that both sides immediately begin talks on tariff reduction and structural issues, without itself announcing a finalized deal.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "China pursues enhanced trade cooperation with Japan and South Korea, advancing RCEP implementation and trilateral FTA discussions as a diversification hedge against US tariff pressure.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the May 8 cutoff, no US-China mutual trade agreement has been announced; recent evidence shows escalating tariffs and China hedging toward Japan/Korea. A 2020 Phase One precedent shows deals are possible, but the 2025 window has no qualifying announcement yet.",
+                "evidence_quote": "China pursues enhanced trade cooperation with Japan and South Korea, advancing RCEP implementation and trilateral FTA discussions as a diversification hedge against US tariff pressure; China commits to continue the trilateral trade-cooperation track with no commitment to a US deal.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-06-16",
+                "interval_end": "2025-07-26",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 79,
+                "interval_days": 40,
+                "interval_start_utc": "2025-06-16T00:00:00+00:00",
+                "interval_end_utc": "2025-07-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the May 8 cutoff, no US-China mutual trade agreement has been announced; recent evidence shows escalating tariffs and China hedging toward Japan/Korea. A 2020 Phase One precedent shows deals are possible, but the 2025 window has no qualifying announcement yet.",
+                "evidence_quote": "China pursues enhanced trade cooperation with Japan and South Korea, advancing RCEP implementation and trilateral FTA discussions as a diversification hedge against US tariff pressure; China commits to continue the trilateral trade-cooperation track with no commitment to a US deal.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-07-26",
+                "interval_end": "2025-09-04",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 119,
+                "interval_days": 40,
+                "interval_start_utc": "2025-07-26T00:00:00+00:00",
+                "interval_end_utc": "2025-09-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the May 8 cutoff, no US-China mutual trade agreement has been announced; recent evidence shows escalating tariffs and China hedging toward Japan/Korea. A 2020 Phase One precedent shows deals are possible, but the 2025 window has no qualifying announcement yet.",
+                "evidence_quote": "China pursues enhanced trade cooperation with Japan and South Korea, advancing RCEP implementation and trilateral FTA discussions as a diversification hedge against US tariff pressure; China commits to continue the trilateral trade-cooperation track with no commitment to a US deal.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-09-04",
+                "interval_end": "2025-10-13",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 158,
+                "interval_days": 39,
+                "interval_start_utc": "2025-09-04T00:00:00+00:00",
+                "interval_end_utc": "2025-10-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "candidate_id": "agent_2e47274801625b33:initial:2",
+                  "action": null,
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "China publicly signals openness to a negotiated US-China trade arrangement, stating it is willing to resume bilateral trade talks with the United States aimed at a mutual tariff/trade agreement, while continuing the Japan–South Korea trilateral track. No deal is announced this round; any agreement requires US counterpart consent.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the May 8 cutoff, no US-China mutual trade agreement has been announced; recent evidence shows escalating tariffs and China hedging toward Japan/Korea. A 2020 Phase One precedent shows deals are possible, but the 2025 window has no qualifying announcement yet.",
+                "evidence_quote": "China pursues enhanced trade cooperation with Japan and South Korea, advancing RCEP implementation and trilateral FTA discussions as a diversification hedge against US tariff pressure; China commits to continue the trilateral trade-cooperation track with no commitment to a US deal.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-10-13",
+                "interval_end": "2025-11-22",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 198,
+                "interval_days": 40,
+                "interval_start_utc": "2025-10-13T00:00:00+00:00",
+                "interval_end_utc": "2025-11-22T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the May 8 cutoff, no US-China mutual trade agreement has been announced; recent evidence shows escalating tariffs and China hedging toward Japan/Korea. A 2020 Phase One precedent shows deals are possible, but the 2025 window has no qualifying announcement yet.",
+                "evidence_quote": "China pursues enhanced trade cooperation with Japan and South Korea, advancing RCEP implementation and trilateral FTA discussions as a diversification hedge against US tariff pressure; China commits to continue the trilateral trade-cooperation track with no commitment to a US deal.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-11-22",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 238,
+                "interval_days": 40,
+                "interval_start_utc": "2025-11-22T00:00:00+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No settled event shows a mutual US-China trade agreement announced within the May 5–Dec 31, 2025 window. The only in-window simulated development is China's June 2025 trilateral cooperation with Japan and South Korea, explicitly without a US deal commitment, which points away from the required bilateral announcement.",
+                "evidence_quote": "China pursues enhanced trade cooperation with Japan and South Korea, advancing RCEP implementation and trilateral FTA discussions as a diversification hedge against US tariff pressure; China commits to continue the trilateral trade-cooperation track with no commitment to a US deal.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.18000000000000002
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 0.5,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 0,
+            "active_rounds": 0,
+            "draw_rounds": 0,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 0,
+            "active_actor_count": 0,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": false,
+            "outcome_observed": false,
+            "conditional_only": false
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 6,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 4,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": null,
+      "covered_p_yes": 0.18,
+      "coverage": 0.5,
+      "unknown_bounds": [
+        0.09,
+        0.5900000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 1,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": true,
+      "status": "partial",
+      "error": "ValueError: Execution quote must identify its registered subject at the start of the quoted action",
+      "planned_samples": 2,
+      "simulation_run_id": "dab4c7cd-49a8-4919-a56a-04a4c826a6d0",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:35:35.592581+00:00",
+      "contract_id": "0x2f91477e922e33aa5a6b15ed24bbb42d9bd17662c23674f133d3b200372ff7dc",
+      "forecast_cutoff": "2025-05-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fbeff3ac6fc3d7dde696d200281846d0147762aab2bf5249a55a971706c460a1",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 76.773
+    },
+    {
+      "calls": 27,
+      "tokens": 291626,
+      "input_tokens": 279547,
+      "output_tokens": 12079,
+      "accounted_tokens_upper": 291626,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-05-08",
+                "interval_end": "2025-06-16",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 39,
+                "interval_days": 39,
+                "interval_start_utc": "2025-05-08T23:59:59+00:00",
+                "interval_end_utc": "2025-06-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "status": "executed",
+                  "summary": "China publicly stated willingness to hold high-level trade talks with the United States and to negotiate a mutual tariff/trade arrangement in 2025, while reiterating its call for the US to lift tariffs and sanctions; no agreement was announced and talks were framed as conditional on US willingness to meet."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "no agreement was announced and talks were framed as conditional on US willingness to meet",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "China publicly stated willingness to hold high-level trade talks with the United States and to negotiate a mutual tariff/trade arrangement in 2025, while reiterating its call for the US to lift tariffs and sanctions; no agreement was announced and talks were framed as conditional on US willingness to meet.",
+                  "date": "2025-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "candidate_id": "agent_2e47274801625b33:initial:1",
+                  "action": "China's trade ministry publicly states willingness to hold high-level trade talks with the United States and to negotiate a mutual tariff/trade arrangement in 2025, while reiterating its call for the US to lift tariffs and sanctions. No agreement is announced this round; talks are framed as conditional on US willingness to meet.\n承诺：Conditional offer to negotiate a mutual trade arrangement with the US in 2025, contingent on US willingness to engage and ease tariffs.\n触发或复核条件：US signals willingness to hold high-level talks and address tariffs.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "China's trade ministry publicly states willingness to hold high-level trade talks with the United States and to negotiate a mutual tariff/trade arrangement in 2025, while reiterating its call for the US to lift tariffs and sanctions. No agreement is announced this round; talks are framed as conditional on US willingness to meet.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "China advances trade cooperation with Japan and South Korea, pushing RCEP implementation and a trilateral FTA framework, as a hedge against US tariffs. This round it endorses continued trilateral trade-official discussions without concluding any US deal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the forecast cutoff, no mutual US-China trade agreement had been announced; the simulated June 2025 evidence shows only China expressing conditional willingness to talk, with no deal. Historical precedent (Phase One 2020) shows deals are possible but required prolonged escalation and negotiation, and the current round remains at the willingness stage.",
+                "evidence_quote": "China publicly stated willingness to hold high-level trade talks with the United States and to negotiate a mutual tariff/trade arrangement in 2025, while reiterating its call for the US to lift tariffs and sanctions; no agreement was announced and talks were framed as conditional on US willingness to meet.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-06-16",
+                "interval_end": "2025-07-26",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 79,
+                "interval_days": 40,
+                "interval_start_utc": "2025-06-16T00:00:00+00:00",
+                "interval_end_utc": "2025-07-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the forecast cutoff, no mutual US-China trade agreement had been announced; the simulated June 2025 evidence shows only China expressing conditional willingness to talk, with no deal. Historical precedent (Phase One 2020) shows deals are possible but required prolonged escalation and negotiation, and the current round remains at the willingness stage.",
+                "evidence_quote": "China publicly stated willingness to hold high-level trade talks with the United States and to negotiate a mutual tariff/trade arrangement in 2025, while reiterating its call for the US to lift tariffs and sanctions; no agreement was announced and talks were framed as conditional on US willingness to meet.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-07-26",
+                "interval_end": "2025-09-04",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 119,
+                "interval_days": 40,
+                "interval_start_utc": "2025-07-26T00:00:00+00:00",
+                "interval_end_utc": "2025-09-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "As of the forecast cutoff, no mutual US-China trade agreement had been announced; the simulated June 2025 evidence shows only China expressing conditional willingness to talk, with no deal. Historical precedent (Phase One 2020) shows deals are possible but required prolonged escalation and negotiation, and the current round remains at the willingness stage.",
+                "evidence_quote": "China publicly stated willingness to hold high-level trade talks with the United States and to negotiate a mutual tariff/trade arrangement in 2025, while reiterating its call for the US to lift tariffs and sanctions; no agreement was announced and talks were framed as conditional on US willingness to meet.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-09-04",
+                "interval_end": "2025-10-13",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 158,
+                "interval_days": 39,
+                "interval_start_utc": "2025-09-04T00:00:00+00:00",
+                "interval_end_utc": "2025-10-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "status": "executed",
+                  "summary": "China announced it is advancing trilateral trade cooperation with Japan and South Korea, pushing RCEP implementation and a trilateral FTA framework as a hedge against US tariff pressure; no US-China trade agreement was announced."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "no US-China trade agreement was announced",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "China announced it is advancing trilateral trade cooperation with Japan and South Korea, pushing RCEP implementation and a trilateral FTA framework as a hedge against US tariff pressure; no US-China trade agreement was announced.",
+                  "date": "2025-10"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "candidate_id": "agent_2e47274801625b33:initial:2",
+                  "action": "China advances trade cooperation with Japan and South Korea, pushing RCEP implementation and a trilateral FTA framework, as a hedge against US tariff pressure; no US deal is announced this round.\n承诺：Pursue enhanced trilateral trade cooperation with Japan and South Korea.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "China's trade ministry publicly reaffirms its conditional offer to negotiate a mutual tariff/trade arrangement with the US in 2025, stating it is prepared to hold high-level talks if the US lifts the February/March 2025 tariffs; no agreement is announced this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "China advances trade cooperation with Japan and South Korea, pushing RCEP implementation and a trilateral FTA framework, as a hedge against US tariff pressure; no US deal is announced this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No official US-China trade agreement has been announced; the latest simulated evidence shows China advancing trilateral/RCEP cooperation as a hedge while no US deal was announced. Historical precedent (Phase One 2020) shows deals are possible but required sustained negotiations, and current signals remain conditional willingness rather than finalized mutual agreement.",
+                "evidence_quote": "China announced it is advancing trilateral trade cooperation with Japan and South Korea, pushing RCEP implementation and a trilateral FTA framework as a hedge against US tariff pressure; no US-China trade agreement was announced.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-10-13",
+                "interval_end": "2025-11-22",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 198,
+                "interval_days": 40,
+                "interval_start_utc": "2025-10-13T00:00:00+00:00",
+                "interval_end_utc": "2025-11-22T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No official US-China trade agreement has been announced; the latest simulated evidence shows China advancing trilateral/RCEP cooperation as a hedge while no US deal was announced. Historical precedent (Phase One 2020) shows deals are possible but required sustained negotiations, and current signals remain conditional willingness rather than finalized mutual agreement.",
+                "evidence_quote": "China announced it is advancing trilateral trade cooperation with Japan and South Korea, pushing RCEP implementation and a trilateral FTA framework as a hedge against US tariff pressure; no US-China trade agreement was announced.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-11-22",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 238,
+                "interval_days": 40,
+                "interval_start_utc": "2025-11-22T00:00:00+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No official mutual US-China trade agreement was announced in the window; the latest simulated rounds show only conditional Chinese willingness (June 2025) and a pivot to trilateral/RCEP hedging (October 2025). Both parties' required announcements remain unobserved, so a late in-window deal is unlikely but not excluded.",
+                "evidence_quote": "China publicly stated willingness to hold high-level trade talks with the United States and to negotiate a mutual tariff/trade arrangement in 2025, while reiterating its call for the US to lift tariffs and sanctions; no agreement was announced and talks were framed as conditional on US willingness to meet.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.24
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 6,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 4,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "3a291da4-281a-4b5b-b8d4-8f7e1a9f5159",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T00:52:42.135165+00:00",
+      "contract_id": "0x2f91477e922e33aa5a6b15ed24bbb42d9bd17662c23674f133d3b200372ff7dc",
+      "forecast_cutoff": "2025-05-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fbeff3ac6fc3d7dde696d200281846d0147762aab2bf5249a55a971706c460a1",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 92.198
+    },
+    {
+      "calls": 14,
+      "tokens": 151510,
+      "input_tokens": 145679,
+      "output_tokens": 5831,
+      "accounted_tokens_upper": 151510,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-05-08",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 238,
+                "interval_days": 238,
+                "interval_start_utc": "2025-05-08T23:59:59+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "status": "executed",
+                  "summary": "China announced it would proceed with RCEP implementation and trilateral FTA framework discussions with Japan and South Korea, publicly framing the move as trade diversification amid US tariff pressure."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "China announced it would proceed with RCEP implementation and trilateral FTA framework discussions with Japan and South Korea, publicly framing the move as trade diversification amid US tariff pressure.",
+                  "date": "2026-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "candidate_id": "agent_2e47274801625b33:initial:2",
+                  "action": "Proceed with RCEP implementation and trilateral FTA framework discussions with Japan and South Korea, publicly framing this as trade diversification amid US tariff pressure.",
+                  "p_selected": 0.6086956521739131,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:2",
+                      "weight": 70.0,
+                      "probability": 0.6086956521739131,
+                      "action": "Proceed with RCEP implementation and trilateral FTA framework discussions with Japan and South Korea, publicly framing this as trade diversification amid US tariff pressure.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:1",
+                      "action": "Publicly announce China's willingness to negotiate a reciprocal tariff-reduction and trade agreement with the United States, conditioned on the US lifting the 2025 emergency tariffs on Chinese imports; state that China's trade team is ready to meet US counterparts.",
+                      "code": "program_rejected"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No settled event in the window shows a mutual US-China trade agreement announced by both parties. The only in-window simulated development is China's RCEP/Japan-Korea diversification framing, which signals continued friction rather than a bilateral deal; historical Phase One precedent shows deals are possible but rare and slow.",
+                "evidence_quote": "China announced it would proceed with RCEP implementation and trilateral FTA framework discussions with Japan and South Korea, publicly framing the move as trade diversification amid US tariff pressure.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.6086956521739131
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-05-08",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 238,
+                "interval_days": 238,
+                "interval_start_utc": "2025-05-08T23:59:59+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "status": "executed",
+                  "summary": "China publicly stated its readiness to negotiate a mutual tariff and trade agreement with the United States and proposed resuming high-level bilateral trade talks, while keeping the March 2025 trilateral cooperation track with Japan and South Korea; no agreement was signed or implemented."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "US-China trade deal in 2025?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "China publicly stated its readiness to negotiate a mutual tariff and trade agreement with the United States and proposed resuming high-level bilateral trade talks",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "China publicly stated its readiness to negotiate a mutual tariff and trade agreement with the United States and proposed resuming high-level bilateral trade talks, while keeping the March 2025 trilateral cooperation track with Japan and South Korea; no agreement was signed or implemented.",
+                  "date": "2026-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2e47274801625b33",
+                  "actor_name": "China",
+                  "candidate_id": "agent_2e47274801625b33:supplement:1",
+                  "action": "Publicly state China's readiness to negotiate a mutual tariff and trade agreement with the United States and propose resuming high-level bilateral trade talks, while keeping the March 2025 trilateral cooperation track with Japan and South Korea. No agreement is signed or implemented this round; this is an offer contingent on the US engaging at the negotiating table.\n承诺：Offer to negotiate a mutual US-China trade and tariff agreement; no unilateral concessions or signed deal this round.\n触发或复核条件：US willingness to engage in bilateral talks",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm and advance trade cooperation with Japan and South Korea, including RCEP implementation and trilateral FTA framework discussions, as a hedge against US tariffs. This is not a US-China agreement and does not by itself satisfy the contract.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_2e47274801625b33:supplement:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly state China's readiness to negotiate a mutual tariff and trade agreement with the United States and propose resuming high-level bilateral trade talks, while keeping the March 2025 trilateral cooperation track with Japan and South Korea. No agreement is signed or implemented this round; this is an offer contingent on the US engaging at the negotiating table.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_2e47274801625b33:initial:1",
+                      "action": "Publicly state China's readiness to negotiate a mutual tariff and trade agreement with the United States, and propose resuming high-level bilateral trade talks, while keeping the March 2025 trilateral cooperation track with Japan and South Korea. No agreement is signed or implemented this round; this is an offer, contingent on the US responding at the negotiating table.",
+                      "code": "program_rejected"
+                    },
+                    {
+                      "candidate_id": "agent_2e47274801625b33:supplement:2",
+                      "action": "Publicly reaffirm and advance trade cooperation with Japan and South Korea, including RCEP implementation and trilateral FTA framework discussions, as a hedge against US tariffs. This is not a US-China agreement and does not by itself satisfy the contract.",
+                      "code": "duplicate"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Only evidence in the outcome window is China's stated readiness to negotiate and proposal to resume high-level talks; no mutual agreement was announced or signed. Willingness is not independent approval or execution, and the US side's decision remains unbound.",
+                "evidence_quote": "China publicly stated its readiness to negotiate a mutual tariff and trade agreement with the United States and proposed resuming high-level bilateral trade talks, while keeping the March 2025 trilateral cooperation track with Japan and South Korea; no agreement was signed or implemented.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.22,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 2,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.2,
+      "covered_p_yes": 0.2,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.2,
+        0.19999999999999996
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "22971633-a5c1-4879-bd31-df787dd02dc8",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T00:53:05.828223+00:00",
+      "contract_id": "0x2f91477e922e33aa5a6b15ed24bbb42d9bd17662c23674f133d3b200372ff7dc",
+      "forecast_cutoff": "2025-05-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fbeff3ac6fc3d7dde696d200281846d0147762aab2bf5249a55a971706c460a1",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 23.691
+    },
+    {
+      "calls": 72,
+      "tokens": 750335,
+      "input_tokens": 714469,
+      "output_tokens": 35866,
+      "accounted_tokens_upper": 750335,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.22440384615384612,
+      "coverage": 0.7057692307692308,
+      "unexplored_mass": 0.2942307692307692,
+      "unknown_bounds": [
+        0.07728846153846154,
+        0.3715192307692307
+      ],
+      "search_iterations": 12,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 12,
+          "search_value": 0.49524974358974355,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.45,
+          "visits": 6,
+          "search_value": 0.46940000000000004,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.45,
+          "visits": 5,
+          "search_value": 0.4452000000000001,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.45,
+          "visits": 4,
+          "search_value": 0.40890000000000004,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.3375,
+          "visits": 2,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.3375,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.3375,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0405
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.1125,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.1125,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0135
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.35,
+          "visits": 5,
+          "search_value": 0.5112553846153847,
+          "conditional_p_yes": 0.32,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.35,
+          "visits": 4,
+          "search_value": 0.39546923076923074,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.35,
+          "visits": 3,
+          "search_value": 0.3304923076923077,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.14807692307692308,
+          "visits": 2,
+          "search_value": 0.34140000000000004,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.14807692307692308,
+          "visits": 1,
+          "search_value": 0.2604,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.14807692307692308,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.010365384615384617
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.1076923076923077,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.012923076923076923
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.0942307692307692,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.19999999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "2892e388-8709-465b-8e0e-dc75e6a387a4",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T00:57:17.457336+00:00",
+      "contract_id": "0x2f91477e922e33aa5a6b15ed24bbb42d9bd17662c23674f133d3b200372ff7dc",
+      "forecast_cutoff": "2025-05-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fbeff3ac6fc3d7dde696d200281846d0147762aab2bf5249a55a971706c460a1",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 251.625
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-05-08T23:59:59+00:00",
+  "forecast_key": "0x2f91477e922e33aa5a6b15ed24bbb42d9bd17662c23674f133d3b200372ff7dc",
+  "group_id": "us-china-trade-deal-in-2025",
+  "evidence_sha256": "fbeff3ac6fc3d7dde696d200281846d0147762aab2bf5249a55a971706c460a1",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 769,
+    "input_tokens": 660,
+    "output_tokens": 109,
+    "accounted_tokens_upper": 769,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-05-08",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2025-05-08",
+        "2025-06-16",
+        "2025-07-26",
+        "2025-09-04",
+        "2025-10-13",
+        "2025-11-22",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2025-05-08",
+        "2025-06-16",
+        "2025-07-26",
+        "2025-09-04",
+        "2025-10-13",
+        "2025-11-22",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-05-08",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2025-05-08",
+        "2025-06-16",
+        "2025-07-26",
+        "2025-09-04",
+        "2025-10-13",
+        "2025-11-22",
+        "2026-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-01-01T04:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-12-31T12:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "needs_evidence": 1,
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "unverified",
+      "seats": [],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "United States officially agrees to and announces a mutual trade agreement with China.",
+        "China officially agrees to and announces a mutual trade agreement with the United States."
+      ],
+      "gaps": [
+        "No source identifies the current (as of May 8, 2025) President of the People's Republic of China; the seat is bound to the office based on historical evidence of the role in US-China trade deals.",
+        "No frozen source identifies President of the People's Republic of China; its decision remains unresolved.",
+        "No frozen source identifies President of the United States; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "United States officially agrees to and announces a mutual trade agreement with China.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D2",
+          "choice": "China officially agrees to and announces a mutual trade agreement with the United States.",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 14,
+    "tokens": 50746,
+    "input_tokens": 42653,
+    "output_tokens": 8093,
+    "accounted_tokens_upper": 50746,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

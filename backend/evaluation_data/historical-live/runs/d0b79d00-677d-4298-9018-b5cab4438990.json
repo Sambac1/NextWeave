@@ -1,0 +1,3097 @@
+{
+  "run_id": "d0b79d00-677d-4298-9018-b5cab4438990",
+  "case_id": "market_9f405f511b50dd968f399727",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2722,
+      "input_tokens": 2712,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2722,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.01,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.01,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2712,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:11:02.931251+00:00",
+      "contract_id": "0xce610556ec78cfd7894f4169d91fe70e31c2fb49f927fffd7fe7d06530f88d56",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "eacc5f50309089a3af1d7c177286b7c4480221a1ae746a516348c60c5f23c6db",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.635
+    },
+    {
+      "calls": 2,
+      "tokens": 5444,
+      "input_tokens": 5424,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5444,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.01,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.01,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2712,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.01,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2712,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:11:04.631259+00:00",
+      "contract_id": "0xce610556ec78cfd7894f4169d91fe70e31c2fb49f927fffd7fe7d06530f88d56",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "eacc5f50309089a3af1d7c177286b7c4480221a1ae746a516348c60c5f23c6db",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.698
+    },
+    {
+      "calls": 11,
+      "tokens": 105243,
+      "input_tokens": 100084,
+      "output_tokens": 5159,
+      "accounted_tokens_upper": 105243,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 418,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard announced that, having left The Republicans after its members voted to endorse Bruno Retailleau outright rather than hold an open primary, he will run for president in 2027 as an independent, and called for a single unified centre-right and right candidate to be chosen through an open process."
+                },
+                {
+                  "action_id": "action_1_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_9af6ce9718b255a0",
+                    "action_1_agent_60ab2bd9ee5955d9"
+                  ],
+                  "outcome": "pending",
+                  "effect": "he will run for president in 2027 as an independent"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "he will run for president in 2027 as an independent",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "David Lisnard announced that, having left The Republicans after its members voted to endorse Bruno Retailleau outright rather than hold an open primary, he will run for president in 2027 as an independent, and called for a single unified centre-right and right candidate to be chosen through an open process.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Publicly announce that, having left The Republicans after its members voted to endorse Bruno Retailleau outright rather than hold an open primary, I will run for president in 2027 as an independent, and call for a single unified centre-right and right candidate to be chosen through an open process.\n承诺：I will stand as a candidate in the 2027 presidential election outside The Republicans, while continuing to advocate an open, unified centre-right primary.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce that, having left The Republicans after its members voted to endorse Bruno Retailleau outright rather than hold an open primary, I will run for president in 2027 as an independent, and call for a single unified centre-right and right candidate to be chosen through an open process.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly press for an open primary open to the whole centre-right and right, inviting Xavier Bertrand and other non-Retailleau figures to join a single selection process, without yet declaring my own candidacy.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "The French electorate takes no collective pre-election action this round; it monitors whether David Lisnard secures and maintains a first-round candidacy and how the centre-right field consolidates, ahead of the scheduled 18 April 2027 first round and 2 May runoff.\n触发或复核条件：Reassess when the first-round candidate field is set or any early election trigger (e.g., presidential vacancy) appears.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "The French electorate takes no collective pre-election action this round; it monitors whether David Lisnard secures and maintains a first-round candidacy and how the centre-right field consolidates, ahead of the scheduled 18 April 2027 first round and 2 May runoff.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard's candidacy is documented, but no settled result or polling number shows him winning; the frozen excerpt only places him in one polling scenario. The scheduled April 2027 election and December 2027 resolution cutoff remain unverified, so the outcome is unknown.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.01,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.01,
+      "covered_p_yes": 0.01,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.01,
+        0.010000000000000009
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "424932a3-ee67-4ff4-a100-05bf1d2a1fe3",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:49:23.130713+00:00",
+      "contract_id": "0xce610556ec78cfd7894f4169d91fe70e31c2fb49f927fffd7fe7d06530f88d56",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "eacc5f50309089a3af1d7c177286b7c4480221a1ae746a516348c60c5f23c6db",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 67.641
+    },
+    {
+      "calls": 20,
+      "tokens": 184649,
+      "input_tokens": 175426,
+      "output_tokens": 9223,
+      "accounted_tokens_upper": 184649,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 418,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard announced an independent candidacy for the 2027 presidential election, framing it as the open centre-right alternative after The Republicans' members voted to endorse Bruno Retailleau outright rather than hold a primary, and launched a national campaign from his Cannes base."
+                },
+                {
+                  "action_id": "action_1_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_9af6ce9718b255a0",
+                    "action_1_agent_60ab2bd9ee5955d9"
+                  ],
+                  "outcome": "pending",
+                  "effect": "David Lisnard announced an independent candidacy for the 2027 presidential election"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "David Lisnard announced an independent candidacy for the 2027 presidential election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "David Lisnard announced an independent candidacy for the 2027 presidential election, framing it as the open centre-right alternative after The Republicans' members voted to endorse Bruno Retailleau outright rather than hold a primary, and launched a national campaign from his Cannes base.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Publicly announce an independent candidacy for the 2027 presidential election, framing it as the open centre-right alternative now that The Republicans' members voted to endorse Bruno Retailleau outright rather than hold a primary, and launch a national campaign from the Cannes base.\n承诺：I will stand as an independent candidate in the 2027 presidential election regardless of The Republicans' endorsement of Retailleau.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly announce an independent candidacy for the 2027 presidential election, framing it as the open centre-right alternative now that The Republicans' members voted to endorse Bruno Retailleau outright rather than hold a primary, and launch a national campaign from the Cannes base.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement pressing for an open, unified centre-right primary and criticising the 19 April 2026 membership vote as a closed process, without yet declaring an independent candidacy; invite other centre-right figures to support an open selection.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "The French electorate casts no vote in this round; the first round is scheduled for 18 April 2027, with a runoff on 2 May if no absolute majority. Voting occurs only when the election is held.\n触发或复核条件：Review when the first-round ballot and date are confirmed or the election is held.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "The French electorate casts no vote in this round; the first round is scheduled for 18 April 2027, with a runoff on 2 May if no absolute majority. Voting occurs only when the election is held.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard's candidacy is documented, but the only polling evidence places him in a single third scenario, not as a leading contender. No settled election result exists; the scheduled April 2027 vote and runoff remain unobserved, so a win is highly unlikely but not impossible.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.01,
+          "error": null,
+          "action_path_probability": 0.7
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 418,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard publicly declared himself a candidate in the 2027 presidential election as an independent, stating that The Republicans' 19 April 2026 vote to endorse Retailleau outright closed the open-primary route I had set as my condition, so I now run outside the party and will campaign for an open, unified centre-right alternative."
+                },
+                {
+                  "action_id": "action_1_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_9af6ce9718b255a0",
+                    "action_1_agent_60ab2bd9ee5955d9"
+                  ],
+                  "outcome": "pending",
+                  "effect": "David Lisnard publicly declared himself a candidate in the 2027 presidential election as an independent"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "David Lisnard publicly declared himself a candidate in the 2027 presidential election as an independent",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "David Lisnard publicly declared himself a candidate in the 2027 presidential election as an independent, stating that The Republicans' 19 April 2026 vote to endorse Retailleau outright closed the open-primary route I had set as my condition, so I now run outside the party and will campaign for an open, unified centre-right alternative.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Publicly declare myself a candidate in the 2027 presidential election as an independent, stating that The Republicans' 19 April 2026 vote to endorse Retailleau outright closed the open-primary route I had set as my condition, so I now run outside the party and will campaign for an open, unified centre-right alternative.\n承诺：I will remain a candidate through the first round scheduled 18 April 2027 and any runoff, unless I publicly withdraw.\n触发或复核条件：No further precondition; the failed open-primary route is the stated reason for running.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly declare myself a candidate in the 2027 presidential election as an independent, stating that The Republicans' 19 April 2026 vote to endorse Retailleau outright closed the open-primary route I had set as my condition, so I now run outside the party and will campaign for an open, unified centre-right alternative.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly call on the centre-right and right, including The Republicans, Horizons and independent figures such as Xavier Bertrand, to convene a single open primary for the whole right and centre-right before the 2027 first round, and offer to submit to that primary rather than run unilaterally if it is genuinely open.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "The French electorate casts no vote in this round; no election is scheduled before 18 April 2027. Monitor whether David Lisnard appears on the first-round ballot and any polling or endorsement evidence before deciding.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "The French electorate casts no vote in this round; no election is scheduled before 18 April 2027. Monitor whether David Lisnard appears on the first-round ballot and any polling or endorsement evidence before deciding.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after the 19 April 2026 vote and is only a scenario filler in one Cluster 17 poll; no vote share or result shows him competitive. The simulated January 2028 declaration falls after the scheduled April 2027 election, and no 2027 result is in evidence.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.01,
+          "error": null,
+          "action_path_probability": 0.6
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 3,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.01,
+      "covered_p_yes": 0.01,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.01,
+        0.010000000000000009
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "fe7fa405-91bc-44bb-ae29-7aa4b501fece",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:49:53.351725+00:00",
+      "contract_id": "0xce610556ec78cfd7894f4169d91fe70e31c2fb49f927fffd7fe7d06530f88d56",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "eacc5f50309089a3af1d7c177286b7c4480221a1ae746a516348c60c5f23c6db",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 30.216
+    },
+    {
+      "calls": 45,
+      "tokens": 520022,
+      "input_tokens": 496454,
+      "output_tokens": 23568,
+      "accounted_tokens_upper": 520022,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard publicly declared that he will run in the 2027 presidential election as an independent, framing the bid as the open centre-right candidacy that The Republicans' members were denied when the party endorsed Bruno Retailleau outright without a primary. He committed to remain a candidate through the first round scheduled for 18 April 2027, absent a unified open primary among centre-right and right candidates, and said he would submit to such a primary if one were created before the first round."
+                },
+                {
+                  "action_id": "action_1_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_9af6ce9718b255a0",
+                    "action_1_agent_60ab2bd9ee5955d9"
+                  ],
+                  "outcome": "pending",
+                  "effect": "David Lisnard publicly declared that he will run in the 2027 presidential election as an independent"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "David Lisnard publicly declared that he will run in the 2027 presidential election as an independent",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "David Lisnard publicly declared that he will run in the 2027 presidential election as an independent, framing the bid as the open centre-right candidacy that The Republicans' members were denied when the party endorsed Bruno Retailleau outright without a primary. He committed to remain a candidate through the first round scheduled for 18 April 2027, absent a unified open primary among centre-right and right candidates, and said he would submit to such a primary if one were created before the first round.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Publicly declare that I will run in the 2027 presidential election as an independent, framing the bid as the open centre-right candidacy that The Republicans' members were denied when the party endorsed Retailleau outright without a primary.\n承诺：I will remain a candidate through the first round scheduled for 18 April 2027, absent a unified open primary among centre-right and right candidates.\n触发或复核条件：If an open, unified centre-right/right primary is created before the first round, I will submit to it rather than run separately.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly declare that I will run in the 2027 presidential election as an independent, framing the bid as the open centre-right candidacy that The Republicans' members were denied when the party endorsed Retailleau outright without a primary.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly call on the centre-right and right, including The Republicans, Xavier Bertrand and other independent figures, to convene a single open primary before the first round, and state I will take part in it if it is genuinely open to all centre-right and right candidates.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "As a role group, the French electorate cannot act before the scheduled first round on 18 April 2027; there is no ballot, no candidate list and no vote to cast in this interval. Hold and observe whether David Lisnard enters the race and secures ballot access.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "As a role group, the French electorate cannot act before the scheduled first round on 18 April 2027; there is no ballot, no candidate list and no vote to cast in this interval. Hold and observe whether David Lisnard enters the race and secures ballot access.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is a declared independent candidate after leaving The Republicans, but polling excerpts place him only as a substitute in one scenario, not a frontrunner. Winning the two-round presidential election requires broad national support far beyond his current base.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-12-31",
+                "interval_end": "2027-02-21",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 104,
+                "interval_days": 52,
+                "interval_start_utc": "2026-12-31T00:00:00+00:00",
+                "interval_end_utc": "2027-02-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is a declared independent candidate after leaving The Republicans, but polling excerpts place him only as a substitute in one scenario, not a frontrunner. Winning the two-round presidential election requires broad national support far beyond his current base.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-21",
+                "interval_end": "2027-04-14",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 156,
+                "interval_days": 52,
+                "interval_start_utc": "2027-02-21T00:00:00+00:00",
+                "interval_end_utc": "2027-04-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is a declared independent candidate after leaving The Republicans, but polling excerpts place him only as a substitute in one scenario, not a frontrunner. Winning the two-round presidential election requires broad national support far beyond his current base.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-04-14",
+                "interval_end": "2027-06-06",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 209,
+                "interval_days": 53,
+                "interval_start_utc": "2027-04-14T00:00:00+00:00",
+                "interval_end_utc": "2027-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard launched his independent presidential campaign for the 18 April 2027 first round, presenting himself as the open centre-right alternative denied a primary and calling on centre-right and right voters and elected officials to rally to his candidacy; he restated that he remains a candidate through the first round unless a unified open centre-right/right primary is created, in which case he would submit to it."
+                },
+                {
+                  "action_id": "action_4_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_9af6ce9718b255a0",
+                    "action_4_agent_60ab2bd9ee5955d9"
+                  ],
+                  "outcome": "pending",
+                  "effect": "David Lisnard launched his independent presidential campaign for the 18 April 2027 first round"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "David Lisnard launched his independent presidential campaign for the 18 April 2027 first round",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "David Lisnard launched his independent presidential campaign for the 18 April 2027 first round, presenting himself as the open centre-right alternative denied a primary and calling on centre-right and right voters and elected officials to rally to his candidacy; he restated that he remains a candidate through the first round unless a unified open centre-right/right primary is created, in which case he would submit to it.",
+                  "date": "2027-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Launch my independent presidential campaign for the 18 April 2027 first round, presenting myself as the open centre-right alternative denied a primary, and call on centre-right and right voters and elected officials to rally to my candidacy.\n承诺：I remain a candidate through the first round unless a unified open centre-right/right primary is created, in which case I will submit to it.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch my independent presidential campaign for the 18 April 2027 first round, presenting myself as the open centre-right alternative denied a primary, and call on centre-right and right voters and elected officials to rally to my candidacy.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reiterate that I would stand down and submit to a unified open centre-right/right primary if one is created before 18 April 2027, and challenge Retailleau and Bertrand to join such a process.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "The French electorate has no collective vote to cast in this interval; the first round is scheduled for 18 April 2027. Hold and observe whether David Lisnard appears on the certified first-round ballot and how the race develops before any vote is cast.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "The French electorate has no collective vote to cast in this interval; the first round is scheduled for 18 April 2027. Hold and observe whether David Lisnard appears on the certified first-round ballot and how the race develops before any vote is cast.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is a declared independent candidate, but polling evidence places him only in a third scenario and he lacks a party base after leaving The Republicans. No observed result or runoff qualification supports a win; the estimate stays near the prior low.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-06-06",
+                "interval_end": "2027-07-28",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 261,
+                "interval_days": 52,
+                "interval_start_utc": "2027-06-06T00:00:00+00:00",
+                "interval_end_utc": "2027-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is a declared independent candidate, but polling evidence places him only in a third scenario and he lacks a party base after leaving The Republicans. No observed result or runoff qualification supports a win; the estimate stays near the prior low.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-28",
+                "interval_end": "2027-09-18",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 313,
+                "interval_days": 52,
+                "interval_start_utc": "2027-07-28T00:00:00+00:00",
+                "interval_end_utc": "2027-09-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is a declared independent candidate, but polling evidence places him only in a third scenario and he lacks a party base after leaving The Republicans. No observed result or runoff qualification supports a win; the estimate stays near the prior low.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-18",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 365,
+                "interval_days": 52,
+                "interval_start_utc": "2027-09-18T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard publicly reaffirmed his independent candidacy for the 18 April 2027 first round and called on centre-right and right elected officials and voters to consolidate behind his campaign, presenting it as the open alternative to Bruno Retailleau's uncontested party endorsement; he restated that he remains a candidate through the first round unless a unified open centre-right/right primary is created, in which case he would submit to it."
+                },
+                {
+                  "action_id": "action_7_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_7_agent_9af6ce9718b255a0",
+                    "action_7_agent_60ab2bd9ee5955d9"
+                  ],
+                  "outcome": "pending",
+                  "effect": "David Lisnard publicly reaffirmed his independent candidacy for the 18 April 2027 first round"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "David Lisnard publicly reaffirmed his independent candidacy for the 18 April 2027 first round",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_007_001",
+                  "text": "David Lisnard publicly reaffirmed his independent candidacy for the 18 April 2027 first round and called on centre-right and right elected officials and voters to consolidate behind his campaign, presenting it as the open alternative to Bruno Retailleau's uncontested party endorsement; he restated that he remains a candidate through the first round unless a unified open centre-right/right primary is created, in which case he would submit to it.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Publicly reaffirm my independent candidacy for the 18 April 2027 first round and call on centre-right and right elected officials and voters to consolidate behind my campaign, presenting it as the open alternative to Retailleau's uncontested party endorsement.\n承诺：I remain a candidate through the first round unless a unified open centre-right/right primary is created, in which case I will submit to it.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm my independent candidacy for the 18 April 2027 first round and call on centre-right and right elected officials and voters to consolidate behind my campaign, presenting it as the open alternative to Retailleau's uncontested party endorsement.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reiterate that I will submit to a unified open centre-right and right primary if one is created before the first round, and invite Retailleau, Bertrand and other centre-right figures to join such a process rather than let the nomination be settled by party endorsement alone.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "The French electorate has no ballot to cast in this interval: the first round is scheduled for 18 April 2027 and no certified candidate list or vote exists yet. Hold and observe whether David Lisnard appears on the certified first-round ballot and how the race develops.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "The French electorate has no ballot to cast in this interval: the first round is scheduled for 18 April 2027 and no certified candidate list or vote exists yet. Hold and observe whether David Lisnard appears on the certified first-round ballot and how the race develops.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is a declared independent candidate for the 18 April 2027 first round, but polling excerpts place him only in a minor scenario and he lacks the party endorsement that went to Retailleau. No observed result or runoff qualification supports a higher chance.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 53,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is an independent candidate after leaving The Republicans, while the party endorsed Retailleau outright; polling excerpts only place him in one scenario and show no lead. No election result exists, so a win remains highly unlikely but unverified.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.01,
+          "error": null,
+          "action_path_probability": 0.294
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 5,
+        "sampled_decisions": 6,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 2,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 6,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 2,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.01,
+      "covered_p_yes": 0.01,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.01,
+        0.010000000000000009
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "7a6da39c-e6ba-410e-8f12-eed2447423d1",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:52:23.992008+00:00",
+      "contract_id": "0xce610556ec78cfd7894f4169d91fe70e31c2fb49f927fffd7fe7d06530f88d56",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "eacc5f50309089a3af1d7c177286b7c4480221a1ae746a516348c60c5f23c6db",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 150.631
+    },
+    {
+      "calls": 107,
+      "tokens": 1194414,
+      "input_tokens": 1139117,
+      "output_tokens": 55297,
+      "accounted_tokens_upper": 1194414,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard announced that, having left The Republicans after its 19 April 2026 vote bypassed an open primary, he will run for president in 2027 as an independent, and called for a single unified centre-right and right candidate to be chosen through an open process."
+                },
+                {
+                  "action_id": "action_1_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "he will run for president in 2027 as an independent",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "David Lisnard announced that, having left The Republicans after its 19 April 2026 vote bypassed an open primary, he will run for president in 2027 as an independent, and called for a single unified centre-right and right candidate to be chosen through an open process.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Publicly announce that, having left The Republicans after its 19 April 2026 vote bypassed an open primary, I will run for president in 2027 as an independent, and call for a single unified centre-right and right candidate to be chosen through an open process.\n承诺：I will contest the 2027 presidential election as an independent candidate while continuing to advocate an open, unified centre-right primary.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly announce that, having left The Republicans after its 19 April 2026 vote bypassed an open primary, I will run for president in 2027 as an independent, and call for a single unified centre-right and right candidate to be chosen through an open process.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Issue a public statement reiterating that the 19 April 2026 endorsement process was 'rigged' against an open primary, and press centre-right and right figures to convene a single open primary before deciding any 2027 candidacy, without yet declaring my own independent run.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "The French electorate takes no collective act in this round; voters' decisive role is casting first-round votes on 18 April 2027 and, if needed, runoff votes on 2 May 2027. No ballot or vote is scheduled before then.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "The French electorate takes no collective act in this round; voters' decisive role is casting first-round votes on 18 April 2027 and, if needed, runoff votes on 2 May 2027. No ballot or vote is scheduled before then.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard has signaled a 2027 independent run after leaving The Republicans, but no polling shows him as a leading contender; the frozen excerpt only places him in one poll scenario. Winning the presidency requires topping a crowded field and a runoff, which remains highly unlikely.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-12-31",
+                "interval_end": "2027-02-21",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 104,
+                "interval_days": 52,
+                "interval_start_utc": "2026-12-31T00:00:00+00:00",
+                "interval_end_utc": "2027-02-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard publicly invited Xavier Bertrand, Édouard Philippe, Gabriel Attal and other centre-right and centrist figures to a joint open selection process for a single unified candidate, offering to submit his own candidacy to that process if it is open and fair, and stating he would abide by the outcome of a genuinely open, unified centre-right selection process and support its winner, provided the process is open to the whole centre-right and centre rather than a closed party endorsement."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_9af6ce9718b255a0",
+                    "action_2_agent_9af6ce9718b255a0"
+                  ],
+                  "outcome": "realized",
+                  "effect": "offering to submit his own candidacy to that process if it is open and fair"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "offering to submit his own candidacy to that process if it is open and fair",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "David Lisnard publicly invited Xavier Bertrand, Édouard Philippe, Gabriel Attal and other centre-right and centrist figures to a joint open selection process for a single unified candidate, offering to submit his own candidacy to that process if it is open and fair, and stating he would abide by the outcome of a genuinely open, unified centre-right selection process and support its winner, provided the process is open to the whole centre-right and centre rather than a closed party endorsement.",
+                  "date": "2027-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                  "action": "Publicly invite Xavier Bertrand, Édouard Philippe, Gabriel Attal and other centre-right and centrist figures to a joint open selection process for a single unified candidate, offering to submit my own candidacy to that process if it is open and fair.\n承诺：I will abide by the outcome of a genuinely open, unified centre-right selection process and support its winner.\n触发或复核条件：The process must be open to the whole centre-right and centre, not a closed party endorsement.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Launch the independent presidential campaign in this round: open a campaign structure, name a campaign director and launch a membership/supporter drive, framing the run as the open, unified centre-right alternative to the party's closed endorsement of Retailleau.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly invite Xavier Bertrand, Édouard Philippe, Gabriel Attal and other centre-right and centrist figures to a joint open selection process for a single unified candidate, offering to submit my own candidacy to that process if it is open and fair.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after the April 2026 vote and is pursuing an open centre-right selection, but no polling shows him as a leading contender. The election is scheduled for April 2027, and a win remains a remote tail outcome.",
+                "evidence_quote": "At the start of 2025, Lisnard announced his intention to run in the 2027 French presidential election, provided that the Republicans' primary be extended to a single candidate for the entire centre-right and right.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-21",
+                "interval_end": "2027-04-14",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 156,
+                "interval_days": 52,
+                "interval_start_utc": "2027-02-21T00:00:00+00:00",
+                "interval_end_utc": "2027-04-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after the April 2026 vote and is pursuing an open centre-right selection, but no polling shows him as a leading contender. The election is scheduled for April 2027, and a win remains a remote tail outcome.",
+                "evidence_quote": "At the start of 2025, Lisnard announced his intention to run in the 2027 French presidential election, provided that the Republicans' primary be extended to a single candidate for the entire centre-right and right.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-04-14",
+                "interval_end": "2027-06-06",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 209,
+                "interval_days": 53,
+                "interval_start_utc": "2027-04-14T00:00:00+00:00",
+                "interval_end_utc": "2027-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "The French electorate takes no collective act this round. Voters' decisive role is casting first-round ballots on 18 April 2027 and, if no absolute majority, runoff ballots on 2 May 2027; no ballot is scheduled before then.",
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "The French electorate takes no collective act this round. Voters' decisive role is casting first-round ballots on 18 April 2027 and, if no absolute majority, runoff ballots on 2 May 2027; no ballot is scheduled before then.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after the April 2026 vote and is pursuing an open centre-right selection, but no polling shows him as a leading contender. The election is scheduled for April 2027, and a win remains a remote tail outcome.",
+                "evidence_quote": "At the start of 2025, Lisnard announced his intention to run in the 2027 French presidential election, provided that the Republicans' primary be extended to a single candidate for the entire centre-right and right.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-06-06",
+                "interval_end": "2027-07-28",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 261,
+                "interval_days": 52,
+                "interval_start_utc": "2027-06-06T00:00:00+00:00",
+                "interval_end_utc": "2027-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard publicly appealed to centre-right and centrist voters and figures to consolidate behind a single candidate, naming his open selection process as the vehicle and asking them to join or endorse it before any further campaign steps, while repeating that he will abide by and support the winner of any genuinely open unified centre-right selection process."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_2_agent_9af6ce9718b255a0",
+                    "action_5_agent_9af6ce9718b255a0"
+                  ],
+                  "outcome": "pending",
+                  "effect": "naming his open selection process as the vehicle and asking them to join or endorse it before any further campaign steps"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "repeating that he will abide by and support the winner of any genuinely open unified centre-right selection process",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_005_001",
+                  "text": "David Lisnard publicly appealed to centre-right and centrist voters and figures to consolidate behind a single candidate, naming his open selection process as the vehicle and asking them to join or endorse it before any further campaign steps, while repeating that he will abide by and support the winner of any genuinely open unified centre-right selection process.",
+                  "date": "2027-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                  "action": "Send a direct message to the French electorate's representatives is not possible; instead publicly appeal to centre-right and centrist voters and figures to consolidate behind a single candidate, naming my open process as the vehicle and asking them to join or endorse it before any further campaign steps.\n承诺：I will abide by and support the winner of any genuinely open unified centre-right selection process.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm my independent 2027 candidacy now that the first round (18 April 2027) has passed, presenting myself as the centre-right/centre standard-bearer and urging supporters of a unified centre-right to back me; restate that my February 2027 open-selection offer remains open to Bertrand, Philippe, Attal and others.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Send a direct message to the French electorate's representatives is not possible; instead publicly appeal to centre-right and centrist voters and figures to consolidate behind a single candidate, naming my open process as the vehicle and asking them to join or endorse it before any further campaign steps.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after the April 2026 endorsement of Retailleau and is pursuing an open centre-right selection, but no polling shows him as a leading presidential contender. The election is scheduled for April 2027, and a win remains a remote tail outcome.",
+                "evidence_quote": "Since Retailleau secured the party's endorsement, Wauquiez withdrew his bid, Lisnard left the party, and Bertrand is running as an independent candidate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-28",
+                "interval_end": "2027-09-18",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 313,
+                "interval_days": 52,
+                "interval_start_utc": "2027-07-28T00:00:00+00:00",
+                "interval_end_utc": "2027-09-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after the April 2026 endorsement of Retailleau and is pursuing an open centre-right selection, but no polling shows him as a leading presidential contender. The election is scheduled for April 2027, and a win remains a remote tail outcome.",
+                "evidence_quote": "Since Retailleau secured the party's endorsement, Wauquiez withdrew his bid, Lisnard left the party, and Bertrand is running as an independent candidate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-18",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 365,
+                "interval_days": 52,
+                "interval_start_utc": "2027-09-18T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "The French electorate takes no collective act this round; its decisive role is casting first-round ballots on 18 April 2027 and, if no absolute majority, runoff ballots on 2 May 2027. No ballot is scheduled before then.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "The French electorate takes no collective act this round; its decisive role is casting first-round ballots on 18 April 2027 and, if no absolute majority, runoff ballots on 2 May 2027. No ballot is scheduled before then.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after the April 2026 endorsement of Retailleau and is pursuing an open centre-right selection, but no polling shows him as a leading presidential contender. The election is scheduled for April 2027, and a win remains a remote tail outcome.",
+                "evidence_quote": "Since Retailleau secured the party's endorsement, Wauquiez withdrew his bid, Lisnard left the party, and Bertrand is running as an independent candidate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 53,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_8_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard publicly confirmed he remains an independent candidate for the 18 April 2027 first round and launched the practical build-out of his campaign, designating a campaign director, opening a campaign structure and fundraising vehicle, and beginning the sponsorship and ballot-access drive required for a presidential run, while keeping his open unified-selection offer on the table. David Lisnard restated that he will contest the first round as an independent unless a genuinely open unified centre-right selection process produces a single agreed candidate, and that his open-selection offer remains available to any centre-right or centrist figure who joins a genuinely open process."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_8_agent_9af6ce9718b255a0",
+                    "action_1_agent_9af6ce9718b255a0"
+                  ],
+                  "outcome": "realized",
+                  "effect": "David Lisnard publicly confirmed he remains an independent candidate for the 18 April 2027 first round"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "David Lisnard publicly confirmed he remains an independent candidate for the 18 April 2027 first round and launched the practical build-out of his campaign",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_008_001",
+                  "text": "David Lisnard publicly confirmed he remains an independent candidate for the 18 April 2027 first round and launched the practical build-out of his campaign, designating a campaign director, opening a campaign structure and fundraising vehicle, and beginning the sponsorship and ballot-access drive required for a presidential run, while keeping his open unified-selection offer on the table.",
+                  "date": "2028-01"
+                },
+                {
+                  "id": "sim_0001_008_002",
+                  "text": "David Lisnard restated that he will contest the first round as an independent unless a genuinely open unified centre-right selection process produces a single agreed candidate, and that his open-selection offer remains available to any centre-right or centrist figure who joins a genuinely open process.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Publicly confirm I remain an independent candidate for the 18 April 2027 first round and launch the practical campaign build-out: designate a campaign director, open a campaign structure and fundraising vehicle, and begin the sponsorship/ballot-access drive required for a presidential run, while keeping my open unified-selection offer on the table.\n承诺：I will contest the first round as an independent unless a genuinely open unified centre-right selection process produces a single agreed candidate.\n触发或复核条件：The open-selection offer remains available to any centre-right or centrist figure who joins a genuinely open process.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly confirm I remain an independent candidate for the 18 April 2027 first round and launch the practical campaign build-out: designate a campaign director, open a campaign structure and fundraising vehicle, and begin the sponsorship/ballot-access drive required for a presidential run, while keeping my open unified-selection offer on the table.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly restate the open unified-selection offer with a concrete deadline: invite Bertrand, Philippe, Attal and other centre-right and centrist figures to join a genuinely open joint process before the end of 2027, and state that absent any taker I will proceed as the sole independent centre-right candidate.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is an independent with no party base after leaving The Republicans, while the party endorsed Retailleau and centre-right rivals Philippe and Attal also run. His own statements describe conditional offers and an independent first-round bid, not a lead; no polling or result shows him winning.",
+                "evidence_quote": "Since Retailleau secured the party's endorsement, Wauquiez withdrew his bid, Lisnard left the party, and Bertrand is running as an independent candidate.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.01,
+          "error": null,
+          "action_path_probability": 0.03888
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard publicly announced an independent candidacy for the 2027 presidential election, presenting it as the open, unified centre-right alternative foreclosed by The Republicans' 19 April 2026 endorsement of Bruno Retailleau, and committing to compete in the first round on 18 April 2027 subject to meeting legal sponsorship (parrainages) and ballot-access requirements."
+                },
+                {
+                  "action_id": "action_1_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_9af6ce9718b255a0",
+                    "action_1_agent_60ab2bd9ee5955d9"
+                  ],
+                  "outcome": "pending",
+                  "effect": "subject to meeting legal sponsorship (parrainages) and ballot-access requirements"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "subject to meeting legal sponsorship (parrainages) and ballot-access requirements",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "David Lisnard publicly announced an independent candidacy for the 2027 presidential election, presenting it as the open, unified centre-right alternative foreclosed by The Republicans' 19 April 2026 endorsement of Bruno Retailleau, and committing to compete in the first round on 18 April 2027 subject to meeting legal sponsorship (parrainages) and ballot-access requirements.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Publicly announce an independent candidacy for the 2027 presidential election, framing it as the open, unified centre-right alternative that The Republicans' 19 April 2026 vote foreclosed, and commit to competing in the first round on 18 April 2027.\n承诺：I will run as an independent candidate in the 2027 presidential election, subject to meeting the legal sponsorship requirements.\n触发或复核条件：Legal sponsorship (parrainages) and ballot-access requirements are met.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly announce an independent candidacy for the 2027 presidential election, framing it as the open, unified centre-right alternative that The Republicans' 19 April 2026 vote foreclosed, and commit to competing in the first round on 18 April 2027.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly call on the centre-right and centre to hold a single open primary to choose one candidate against Bruno Retailleau, and state that I would enter such a primary if it were open to candidates outside The Republicans.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "Hold no electoral act this round: no vote is scheduled before 18 April 2027, and the electorate has no candidate slate to act on. Monitor whether David Lisnard formally enters and secures ballot access as an independent after leaving The Republicans, and whether any polls show him in contention for a top-two runoff place.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Hold no electoral act this round: no vote is scheduled before 18 April 2027, and the electorate has no candidate slate to act on. Monitor whether David Lisnard formally enters and secures ballot access as an independent after leaving The Republicans, and whether any polls show him in contention for a top-two runoff place.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after their April 2026 endorsement of Retailleau and is only a minor polling figure; a simulated December 2026 independent candidacy is not an observed result. Winning the 2027 two-round election would require a major, unevidenced surge.",
+                "evidence_quote": "Since Retailleau secured the party's endorsement, Wauquiez withdrew his bid, Lisnard left the party, and Bertrand is running as an independent candidate.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-12-31",
+                "interval_end": "2027-02-21",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 104,
+                "interval_days": 52,
+                "interval_start_utc": "2026-12-31T00:00:00+00:00",
+                "interval_end_utc": "2027-02-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard publicly renewed his call for a single open centre-right and centre candidate for 2027, inviting Xavier Bertrand, Édouard Philippe and other centre-right figures to join a transparent joint selection process, while stating he remains an independent candidate if no such consolidation occurs."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "David Lisnard publicly renewed his call for a single open centre-right and centre candidate for 2027, inviting Xavier Bertrand, Édouard Philippe and other centre-right figures to join a transparent joint selection process, while stating he remains an independent candidate if no such consolidation occurs.",
+                  "date": "2027-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                  "action": "Publicly renew my call for a single open centre-right and centre candidate for 2027, inviting Xavier Bertrand, Édouard Philippe and other centre-right figures to join a transparent joint selection process, while stating I remain an independent candidate if no such consolidation occurs.\n承诺：I remain an independent candidate if no open consolidation occurs.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly launch a national parrainage (sponsorship) collection drive for my independent 2027 candidacy, calling on elected officials across the centre-right and centre to sign, and stating that I will submit the required signatures to the Constitutional Council before the legal deadline.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly renew my call for a single open centre-right and centre candidate for 2027, inviting Xavier Bertrand, Édouard Philippe and other centre-right figures to join a transparent joint selection process, while stating I remain an independent candidate if no such consolidation occurs.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after the April 2026 endorsement of Retailleau and is pursuing an independent or open-primary path, but no polling shows him as a leading contender. His simulated February 2027 call for consolidation is communication, not evidence of electoral support or ballot access.",
+                "evidence_quote": "David Lisnard publicly renewed his call for a single open centre-right and centre candidate for 2027, inviting Xavier Bertrand, Édouard Philippe and other centre-right figures to join a transparent joint selection process, while stating he remains an independent candidate if no such consolidation occurs.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-21",
+                "interval_end": "2027-04-14",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 156,
+                "interval_days": 52,
+                "interval_start_utc": "2027-02-21T00:00:00+00:00",
+                "interval_end_utc": "2027-04-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard publicly confirmed that he is collecting the 500 parrainages required for the 18 April 2027 first round, launched a national campaign apparatus including staff, funding and a regional tour, and presented himself as the independent centre-right alternative to Bruno Retailleau, Édouard Philippe and Gabriel Attal, while restating that he will contest the first round provided the legal sponsorship threshold is met."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_2_agent_9af6ce9718b255a0",
+                    "action_3_agent_9af6ce9718b255a0"
+                  ],
+                  "outcome": "realized",
+                  "effect": "presented himself as the independent centre-right alternative to Bruno Retailleau, Édouard Philippe and Gabriel Attal"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "restating that he will contest the first round provided the legal sponsorship threshold is met",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "David Lisnard publicly confirmed that he is collecting the 500 parrainages required for the 18 April 2027 first round, launched a national campaign apparatus including staff, funding and a regional tour, and presented himself as the independent centre-right alternative to Bruno Retailleau, Édouard Philippe and Gabriel Attal, while restating that he will contest the first round provided the legal sponsorship threshold is met.",
+                  "date": "2027-04"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Publicly confirm I am collecting the 500 parrainages required for the 18 April 2027 first round, launch the national campaign apparatus (staff, funding, regional tour), and present myself as the independent centre-right alternative to Retailleau, Philippe and Attal.\n承诺：I will contest the first round on 18 April 2027 provided the legal sponsorship threshold is met.\n触发或复核条件：Parrainages and ballot-access requirements are secured.",
+                  "p_selected": 0.65,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 65.0,
+                      "probability": 0.65,
+                      "action": "Publicly confirm I am collecting the 500 parrainages required for the 18 April 2027 first round, launch the national campaign apparatus (staff, funding, regional tour), and present myself as the independent centre-right alternative to Retailleau, Philippe and Attal.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Publicly restate the offer of a single open centre-right and centre candidate, this time naming a deadline before the parrainage filing window closes and proposing a transparent joint selection method, while confirming I stay in the race if no agreement is reached.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is an independent centre-right candidate collecting parrainages, but no polling shows him as a frontrunner; the frozen excerpt places him only in a third polling scenario. Candidacy and ballot access are not the same as winning a two-round national election.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-04-14",
+                "interval_end": "2027-06-06",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 209,
+                "interval_days": 53,
+                "interval_start_utc": "2027-04-14T00:00:00+00:00",
+                "interval_end_utc": "2027-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "Hold no electoral act: the first round is scheduled for 18 April 2027 and the electorate casts no vote before then. Monitor whether David Lisnard clears the 500 parrainages and appears on the first-round ballot, and whether any credible polling places him in top-two runoff contention.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Hold no electoral act: the first round is scheduled for 18 April 2027 and the electorate casts no vote before then. Monitor whether David Lisnard clears the 500 parrainages and appears on the first-round ballot, and whether any credible polling places him in top-two runoff contention.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is an independent centre-right candidate collecting parrainages, but no polling shows him as a frontrunner; the frozen excerpt places him only in a third polling scenario. Candidacy and ballot access are not the same as winning a two-round national election.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-06-06",
+                "interval_end": "2027-07-28",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 261,
+                "interval_days": 52,
+                "interval_start_utc": "2027-06-06T00:00:00+00:00",
+                "interval_end_utc": "2027-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is an independent centre-right candidate collecting parrainages, but no polling shows him as a frontrunner; the frozen excerpt places him only in a third polling scenario. Candidacy and ballot access are not the same as winning a two-round national election.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-28",
+                "interval_end": "2027-09-18",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 313,
+                "interval_days": 52,
+                "interval_start_utc": "2027-07-28T00:00:00+00:00",
+                "interval_end_utc": "2027-09-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_6_agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "status": "executed",
+                  "summary": "David Lisnard publicly confirmed that his 500 parrainages are secured or credibly on track and launched his full national campaign for the 18 April 2027 first round, presenting himself as the independent centre-right alternative to Bruno Retailleau, Édouard Philippe and Gabriel Attal, and committing to contest the first round having met the legal sponsorship threshold."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_6_agent_9af6ce9718b255a0",
+                    "action_3_agent_9af6ce9718b255a0"
+                  ],
+                  "outcome": "realized",
+                  "effect": "confirmed that his 500 parrainages are secured or credibly on track"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "launched his full national campaign for the 18 April 2027 first round",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_006_001",
+                  "text": "David Lisnard publicly confirmed that his 500 parrainages are secured or credibly on track and launched his full national campaign for the 18 April 2027 first round, presenting himself as the independent centre-right alternative to Bruno Retailleau, Édouard Philippe and Gabriel Attal, and committing to contest the first round having met the legal sponsorship threshold.",
+                  "date": "2027-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9af6ce9718b255a0",
+                  "actor_name": "David Lisnard",
+                  "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                  "action": "Publicly confirm that the 500 parrainages are secured or on track, and launch the full national campaign for the 18 April 2027 first round, presenting myself as the independent centre-right alternative to Retailleau, Philippe and Attal.\n承诺：I will contest the first round on 18 April 2027, having met the legal sponsorship threshold.\n触发或复核条件：Legal sponsorship (parrainages) and ballot-access requirements are met or credibly on track.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly confirm that the 500 parrainages are secured or on track, and launch the full national campaign for the 18 April 2027 first round, presenting myself as the independent centre-right alternative to Retailleau, Philippe and Attal.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9af6ce9718b255a0:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly renew my offer of a single open centre-right and centre candidate, inviting Xavier Bertrand, Édouard Philippe and other figures to a transparent joint selection, while stating I stay an independent candidate if no consolidation occurs.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after the April 2026 endorsement of Retailleau and is pursuing an independent centre-right bid, but polling excerpts place him only in a single scenario and show no lead. A national campaign and secured parrainages establish ballot access, not electoral victory against Philippe, Attal, Retailleau and the far right.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-18",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 365,
+                "interval_days": 52,
+                "interval_start_utc": "2027-09-18T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_60ab2bd9ee5955d9",
+                  "actor_name": "French electorate",
+                  "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                  "action": "Hold no electoral act this round: no vote occurs before the scheduled 18 April 2027 first round, and the electorate has no ballot to act on. Monitor whether Lisnard's 500 parrainages are formally validated and he appears on the first-round ballot, and whether any credible polling places him in top-two runoff contention.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60ab2bd9ee5955d9:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Hold no electoral act this round: no vote occurs before the scheduled 18 April 2027 first round, and the electorate has no ballot to act on. Monitor whether Lisnard's 500 parrainages are formally validated and he appears on the first-round ballot, and whether any credible polling places him in top-two runoff contention.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard left The Republicans after the April 2026 endorsement of Retailleau and is pursuing an independent centre-right bid, but polling excerpts place him only in a single scenario and show no lead. A national campaign and secured parrainages establish ballot access, not electoral victory against Philippe, Attal, Retailleau and the far right.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-01-01",
+                "horizon_end": "2028-01-01",
+                "elapsed_days": 418,
+                "interval_days": 53,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will David Lisnard win the 2027 French presidential election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.01,
+                "basis": "Lisnard is an independent centre-right candidate who has secured ballot access and is campaigning, but no polling or result evidence shows him winning. The frozen polling excerpt only places him in one scenario, and the election outcome remains unobserved.",
+                "evidence_quote": "Finally, Éric Zemmour appears in the first two scenarios but not the last, where he is replaced by David Lisnard.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.01,
+          "error": null,
+          "action_path_probability": 0.0702
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 16,
+        "active_rounds": 12,
+        "draw_rounds": 12,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 14,
+        "public_event_count": 9,
+        "substantive_public_event_count": 9,
+        "state_change_count": 6,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 6,
+            "draw_rounds": 6,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 7,
+            "active_actor_count": 2,
+            "public_event_count": 5,
+            "substantive_public_event_count": 5,
+            "state_change_count": 2,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 8,
+            "active_rounds": 6,
+            "draw_rounds": 6,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 7,
+            "active_actor_count": 2,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 4,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.01,
+      "covered_p_yes": 0.01,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.01,
+        0.010000000000000009
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "559f773d-0ce3-4e75-a816-de3f40a7ac49",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:55:40.132819+00:00",
+      "contract_id": "0xce610556ec78cfd7894f4169d91fe70e31c2fb49f927fffd7fe7d06530f88d56",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "eacc5f50309089a3af1d7c177286b7c4480221a1ae746a516348c60c5f23c6db",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 196.143
+    },
+    {
+      "calls": 127,
+      "tokens": 1421594,
+      "input_tokens": 1345424,
+      "output_tokens": 76170,
+      "accounted_tokens_upper": 1421594,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.06385999999999999,
+      "coverage": 0.886,
+      "unexplored_mass": 0.11399999999999998,
+      "unknown_bounds": [
+        0.00686,
+        0.12085999999999998
+      ],
+      "search_iterations": 16,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 16,
+          "search_value": 0.036382500000000005,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.6,
+          "visits": 9,
+          "search_value": 0.03894,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.6,
+          "visits": 8,
+          "search_value": 0.0388575,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.6,
+          "visits": 7,
+          "search_value": 0.03875142857142857,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.36,
+          "visits": 4,
+          "search_value": 0.038115,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.36,
+          "visits": 3,
+          "search_value": 0.03762000000000001,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.36,
+          "visits": 2,
+          "search_value": 0.03663,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.1683,
+          "visits": 1,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.1683,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.01,
+          "frontier": true,
+          "contribution": 0.001683
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.1377,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.01,
+          "frontier": true,
+          "contribution": 0.001377
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 7,
+          "mass": 0.053999999999999965,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.24,
+          "visits": 2,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.24,
+          "visits": 1,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.24,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.01,
+          "frontier": true,
+          "contribution": 0.0024
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.4,
+          "visits": 6,
+          "search_value": 0.032010000000000004,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.4,
+          "visits": 5,
+          "search_value": 0.030492,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.4,
+          "visits": 4,
+          "search_value": 0.028214999999999997,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.2,
+          "visits": 2,
+          "search_value": 0.0198,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.2,
+          "visits": 1,
+          "search_value": 0.0,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.2,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.0,
+          "frontier": true,
+          "contribution": 0.0
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.13999999999999999,
+          "visits": 1,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.13999999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.01,
+          "frontier": true,
+          "contribution": 0.0014
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.06000000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "143b044c-91ea-4dbb-9a51-bc296448f90c",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:59:13.334324+00:00",
+      "contract_id": "0xce610556ec78cfd7894f4169d91fe70e31c2fb49f927fffd7fe7d06530f88d56",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "eacc5f50309089a3af1d7c177286b7c4480221a1ae746a516348c60c5f23c6db",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 431.953
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0xce610556ec78cfd7894f4169d91fe70e31c2fb49f927fffd7fe7d06530f88d56",
+  "group_id": "next-french-presidential-election",
+  "stage": "finished",
+  "outcome_deadline": "2028-01-01T04:59:00+00:00",
+  "deadline_basis": "explicit_election_result_window_including_runoff",
+  "nominal_market_end": "2027-04-19T03:59:00+00:00",
+  "evidence_sha256": "eacc5f50309089a3af1d7c177286b7c4480221a1ae746a516348c60c5f23c6db",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 749,
+    "input_tokens": 690,
+    "output_tokens": 59,
+    "accounted_tokens_upper": 749,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31",
+        "2027-02-21",
+        "2027-04-14",
+        "2027-06-06",
+        "2027-07-28",
+        "2027-09-18",
+        "2027-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31",
+        "2027-02-21",
+        "2027-04-14",
+        "2027-06-06",
+        "2027-07-28",
+        "2027-09-18",
+        "2027-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31",
+        "2027-02-21",
+        "2027-04-14",
+        "2027-06-06",
+        "2027-07-28",
+        "2027-09-18",
+        "2027-11-09",
+        "2028-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_55a57049b9f10504",
+          "name": "David Lisnard",
+          "role": "Mayor of Cannes; announced intention to run for president in 2027 conditional on an open centre-right primary, then left The Republicans after alleging the process was rigged",
+          "decision_ids": [
+            "lisnard_candidacy"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_3a32faf3436ce0f7",
+          "name": "French electorate",
+          "role": "Voters participating in the two-round presidential election; their votes determine the winner",
+          "decision_ids": [
+            "election_outcome"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No source establishes that David Lisnard has formally declared a 2027 presidential candidacy after leaving The Republicans; his earlier intention was conditional on an open primary.",
+        "The French electorate's vote is a collective outcome, not a single actor's choice; no individual or institution is bound to the election_outcome seat beyond the role_group.",
+        "The Ministry of the Interior is the official reporting source and is not modeled as a decision seat."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "lisnard_candidacy",
+          "choice": "David Lisnard must decide to become and remain a candidate in the 2027 presidential election, including any independent or party-backed bid after leaving The Republicans.",
+          "owner": "David Lisnard",
+          "support": "represented"
+        },
+        {
+          "id": "election_outcome",
+          "choice": "The two-round election must be held and the electorate's votes must produce a winner; Lisnard must secure over 50% in the first round or win the runoff.",
+          "owner": "French electorate",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 27,
+    "tokens": 63906,
+    "input_tokens": 55748,
+    "output_tokens": 8158,
+    "accounted_tokens_upper": 63906,
+    "unknown_usage_requests": 0
+  }
+}

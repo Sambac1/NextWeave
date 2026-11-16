@@ -1,0 +1,2240 @@
+{
+  "run_id": "4697bf2a-c6e3-4d84-b021-ea5e3644b56e",
+  "case_id": "market_79f5d6089b39baf64ed16fde",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3083,
+      "input_tokens": 3073,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3083,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.72,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.72,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3073,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:33:04.400881+00:00",
+      "contract_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "80bfab7984bf9752725b4f9cc57af7b75b79c15b23cc5ad218faf95e80e5aa9e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.748
+    },
+    {
+      "calls": 2,
+      "tokens": 6166,
+      "input_tokens": 6146,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6166,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.82,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.82,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3073,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.82,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3073,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:33:05.691957+00:00",
+      "contract_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "80bfab7984bf9752725b4f9cc57af7b75b79c15b23cc5ad218faf95e80e5aa9e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.29
+    },
+    {
+      "calls": 9,
+      "tokens": 132354,
+      "input_tokens": 125904,
+      "output_tokens": 6450,
+      "accounted_tokens_upper": 132354,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez publicly reaffirmed that she continues to exercise all presidential powers under the Constitutional Chamber order and Article 233, and convened the Council of Ministers to confirm administrative continuity through the end of the year."
+                },
+                {
+                  "action_id": "action_1_agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "status": "executed",
+                  "summary": "The Venezuelan military publicly stated that its recognition of Rodríguez as acting president is conditioned on continued constitutional process and a transition framework acceptable to the armed forces, signaling support is not unconditional."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Delcy Rodríguez publicly reaffirmed that she continues to exercise all presidential powers under the Constitutional Chamber order and Article 233",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Delcy Rodríguez publicly reaffirmed that she continues to exercise all presidential powers under the Constitutional Chamber order and Article 233, and convened the Council of Ministers to confirm administrative continuity through the end of the year.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "The Venezuelan military publicly stated that its recognition of Rodríguez as acting president is conditioned on continued constitutional process and a transition framework acceptable to the armed forces, signaling support is not unconditional.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                  "action": "As acting president, publicly reaffirm that I continue to exercise all presidential powers under the Constitutional Chamber order and Article 233, and convene the Council of Ministers to confirm administrative continuity through the end of the year.\n承诺：Remain in office as acting president through 31 December 2026, absent a lawful order or vacancy procedure ending the mandate.\n触发或复核条件：No reversal by the Constitutional Chamber and continued military recognition.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As acting president, publicly reaffirm that I continue to exercise all presidential powers under the Constitutional Chamber order and Article 233, and convene the Council of Ministers to confirm administrative continuity through the end of the year.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "candidate_id": "agent_f8d7afe61f6b56cc:initial:2",
+                  "action": "Publicly state that military recognition of Rodríguez as acting president is conditioned on continued constitutional process and a transition framework acceptable to the armed forces, signaling support is not unconditional.\n承诺：Support persists only while constitutional continuity and institutional guarantees are maintained.\n触发或复核条件：Any move to displace the acting presidency or alter the transition framework triggers review of recognition.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement reaffirming the military's recognition of Delcy Rodríguez as acting president and calling for institutional continuity and normalcy through the end of 2026, with no new conditions attached.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that military recognition of Rodríguez as acting president is conditioned on continued constitutional process and a transition framework acceptable to the armed forces, signaling support is not unconditional.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was sworn in as acting president in January 2026 and, per round-1 simulated evidence, reaffirmed in December 2026 that she still exercises presidential powers and convened the Council of Ministers through year-end. The military's conditional recognition is the main risk to her holding office at the Dec 31 observation time.",
+                "evidence_quote": "Delcy Rodríguez publicly reaffirmed that she continues to exercise all presidential powers under the Constitutional Chamber order and Article 233, and convened the Council of Ministers to confirm administrative continuity through the end of the year.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.21
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 2,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.72,
+      "covered_p_yes": 0.72,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.72,
+        0.72
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "8fad812a-664d-40a1-abc2-71361a84bffc",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:34:13.991519+00:00",
+      "contract_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "80bfab7984bf9752725b4f9cc57af7b75b79c15b23cc5ad218faf95e80e5aa9e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 68.296
+    },
+    {
+      "calls": 16,
+      "tokens": 205005,
+      "input_tokens": 195598,
+      "output_tokens": 9407,
+      "accounted_tokens_upper": 205005,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez publicly reaffirmed that she continues to exercise all presidential powers under the Constitutional Chamber's order and Article 233, and that the Council of Ministers and security forces remain under her authority through the end of the year, committing to continue in office as acting president through 31 December 2026 unless formally replaced by the constitutional process."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "committing to continue in office as acting president through 31 December 2026 unless formally replaced by the constitutional process",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Delcy Rodríguez publicly reaffirmed that she continues to exercise all presidential powers under the Constitutional Chamber's order and Article 233, and that the Council of Ministers and security forces remain under her authority through the end of the year, committing to continue in office as acting president through 31 December 2026 unless formally replaced by the constitutional process.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                  "action": "As acting president, publicly reaffirm that I continue to exercise all presidential powers under the Constitutional Chamber's order and Article 233, and that the Council of Ministers and security forces remain under my authority through the end of the year.\n承诺：Continue in office as acting president through 31 December 2026 unless formally replaced by the constitutional process.",
+                  "p_selected": 0.6363636363636364,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.6363636363636364,
+                      "action": "As acting president, publicly reaffirm that I continue to exercise all presidential powers under the Constitutional Chamber's order and Article 233, and that the Council of Ministers and security forces remain under my authority through the end of the year.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "candidate_id": "agent_f8d7afe61f6b56cc:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement reaffirming institutional recognition of Delcy Rodríguez as acting president and reiterating the call for normalcy through the end of 2026, with no new conditions attached.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.88,
+                "basis": "Rodríguez was ordered by the Constitutional Chamber to assume acting presidential powers and was sworn in on 5 January 2026; the military recognized her, and she presided over the Council of Ministers. A December 2026 statement reaffirms she continues exercising presidential powers through 31 December 2026, though it is self-reported and not independent confirmation.",
+                "evidence_quote": "On 3 January, the Constitutional Chamber of the Supreme Tribunal of Justice ordered Rodríguez to \"assume and exercise, as acting president, all the powers, duties, and faculties inherent to the office of President of the Bolivarian Republic of Venezuela, in order to guarantee administrative continuity and the comprehensive defense of the nation.\"",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.88,
+          "error": null,
+          "action_path_probability": 0.1909090909090909
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez issued a public address from Miraflores reaffirming that, under the 3 January Constitutional Chamber order and Article 233, she continues to exercise the presidency as acting head of state and will remain in office through the end of 2026 pending any lawful transition."
+                },
+                {
+                  "action_id": "action_1_agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "status": "executed",
+                  "summary": "The Venezuelan military publicly reaffirmed institutional recognition of Delcy Rodríguez as acting president of Venezuela and restated its call for normalcy through the end of 2026, framing continuity as necessary for stability and orderly transition."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_cc19b60498c157b4",
+                    "action_1_agent_f8d7afe61f6b56cc"
+                  ],
+                  "outcome": "realized",
+                  "effect": "The Venezuelan military publicly reaffirmed institutional recognition of Delcy Rodríguez as acting president of Venezuela"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Delcy Rodríguez issued a public address from Miraflores reaffirming that, under the 3 January Constitutional Chamber order and Article 233, she continues to exercise the presidency as acting head of state",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Delcy Rodríguez issued a public address from Miraflores reaffirming that, under the 3 January Constitutional Chamber order and Article 233, she continues to exercise the presidency as acting head of state and will remain in office through the end of 2026 pending any lawful transition.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "The Venezuelan military publicly reaffirmed institutional recognition of Delcy Rodríguez as acting president of Venezuela and restated its call for normalcy through the end of 2026, framing continuity as necessary for stability and orderly transition.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                  "action": "Issue a public address from Miraflores reaffirming that, under the 3 January Constitutional Chamber order and Article 233, she continues to exercise the presidency as acting head of state, and that she will remain in office through the end of 2026 pending any lawful transition.\n承诺：Remain acting head of state through 31 December 2026 absent a lawful removal or transition.\n触发或复核条件：No superseding Supreme Tribunal order or lawful removal.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Issue a public address from Miraflores reaffirming that, under the 3 January Constitutional Chamber order and Article 233, she continues to exercise the presidency as acting head of state, and that she will remain in office through the end of 2026 pending any lawful transition.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                  "action": "Publicly reaffirm institutional recognition of Delcy Rodríguez as acting president of Venezuela and restate the call for normalcy through the end of 2026, framing continuity as necessary for stability and orderly transition.\n承诺：Recognition remains in effect through 31 December 2026 absent a formal legal transition.\n触发或复核条件：No formal legal transition or removal order supersedes the current arrangement.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm institutional recognition of Delcy Rodríguez as acting president of Venezuela and restate the call for normalcy through the end of 2026, framing continuity as necessary for stability and orderly transition.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Simulated December 2026 events show Rodríguez publicly reaffirming she exercises the presidency as acting head of state through end-2026, with the military restating recognition. The 5 January 2026 oath and Constitutional Chamber order establish her formal standing; residual risk is an unobserved lawful transition before the deadline.",
+                "evidence_quote": "Delcy Rodríguez issued a public address from Miraflores reaffirming that, under the 3 January Constitutional Chamber order and Article 233, she continues to exercise the presidency as acting head of state and will remain in office through the end of 2026 pending any lawful transition.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.82,
+          "error": null,
+          "action_path_probability": 0.385
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 1,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.85,
+      "covered_p_yes": 0.85,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.85,
+        0.8500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "56a4cfeb-2c28-4637-86b5-c5a81d85aecd",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:34:41.288166+00:00",
+      "contract_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "80bfab7984bf9752725b4f9cc57af7b75b79c15b23cc5ad218faf95e80e5aa9e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 27.295
+    },
+    {
+      "calls": 26,
+      "tokens": 331347,
+      "input_tokens": 320479,
+      "output_tokens": 10868,
+      "accounted_tokens_upper": 331347,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                  "action": "Continue exercising the acting presidency and presiding over the Council of Ministers; issue no new public announcement this round.\n触发或复核条件：Review if any public signal of a transition, election, removal, or challenge to the acting presidency appears before 31 December 2026.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Continue exercising the acting presidency and presiding over the Council of Ministers; issue no new public announcement this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm, in my capacity as acting president, that I continue to hold and exercise the presidency under the Constitutional Chamber order and Article 233, and convene the Council of Ministers to confirm administrative continuity.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "candidate_id": "agent_f8d7afe61f6b56cc:initial:2",
+                  "action": "Maintain existing recognition of Rodríguez without a new public statement this round.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement reaffirming the military's recognition of Delcy Rodríguez as acting president and calling for institutional continuity and normalcy through the end of 2026.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Maintain existing recognition of Rodríguez without a new public statement this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was ordered by the Constitutional Chamber to assume acting presidential powers and was sworn in on 5 January 2026, with military recognition and de facto US backing. The Economist poll shows only 13% prefer her, but no evidence indicates removal before the 31 December 2026 observation point.",
+                "evidence_quote": "On 3 January, the Constitutional Chamber of the Supreme Tribunal of Justice ordered Rodríguez to \"assume and exercise, as acting president, all the powers, duties, and faculties inherent to the office of President of the Bolivarian Republic of Venezuela, in order to guarantee administrative continuity and the comprehensive defense of the nation.\"",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-29",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 20,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-29T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was ordered by the Constitutional Chamber to assume acting presidential powers and was sworn in on 5 January 2026, with military recognition and de facto US backing. The Economist poll shows only 13% prefer her, but no evidence indicates removal before the 31 December 2026 observation point.",
+                "evidence_quote": "On 3 January, the Constitutional Chamber of the Supreme Tribunal of Justice ordered Rodríguez to \"assume and exercise, as acting president, all the powers, duties, and faculties inherent to the office of President of the Bolivarian Republic of Venezuela, in order to guarantee administrative continuity and the comprehensive defense of the nation.\"",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-29",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 31,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-29T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was ordered by the Constitutional Chamber to assume acting presidential powers and was sworn in on 5 January 2026, with military recognition and de facto US backing. The Economist poll shows only 13% prefer her, but no evidence indicates removal before the 31 December 2026 observation point.",
+                "evidence_quote": "On 3 January, the Constitutional Chamber of the Supreme Tribunal of Justice ordered Rodríguez to \"assume and exercise, as acting president, all the powers, duties, and faculties inherent to the office of President of the Bolivarian Republic of Venezuela, in order to guarantee administrative continuity and the comprehensive defense of the nation.\"",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-20",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 41,
+                "interval_days": 10,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                  "action": "Continue exercising the acting presidency and presiding over the Council of Ministers; issue no new public announcement this round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Continue exercising the acting presidency and presiding over the Council of Ministers; issue no new public announcement this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "candidate_id": "agent_f8d7afe61f6b56cc:initial:2",
+                  "action": "Hold existing recognition of Rodríguez as acting president without a new public statement; review if a leadership challenge, Constitutional Chamber ruling, or transition announcement appears.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public military communiqué reaffirming institutional recognition of Delcy Rodríguez as acting president and commander-in-chief through the constitutional transition, and calling for normalcy and unity ahead of the 31 December 2026 handover point.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Hold existing recognition of Rodríguez as acting president without a new public statement; review if a leadership challenge, Constitutional Chamber ruling, or transition announcement appears.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was ordered by the Constitutional Chamber to assume acting presidential powers and was sworn in on 5 January 2026, with military recognition and de facto US backing. The Economist poll shows only 13% prefer her, but no evidence indicates removal before the 31 December 2026 observation point.",
+                "evidence_quote": "On 3 January, the Constitutional Chamber of the Supreme Tribunal of Justice ordered Rodríguez to \"assume and exercise, as acting president, all the powers, duties, and faculties inherent to the office of President of the Bolivarian Republic of Venezuela, in order to guarantee administrative continuity and the comprehensive defense of the nation.\"",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-20",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-20T00:00:00+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was ordered by the Constitutional Chamber to assume acting presidential powers and was sworn in on 5 January 2026, with military recognition and de facto governance noted through February 2026. No later settled event shows her removal before the 31 December 2026 measurement, so continuity is the most supported reading, though the final status is unverified.",
+                "evidence_quote": "On 3 January, the Constitutional Chamber of the Supreme Tribunal of Justice ordered Rodríguez to \"assume and exercise, as acting president, all the powers, duties, and faculties inherent to the office of President of the Bolivarian Republic of Venezuela, in order to guarantee administrative continuity and the comprehensive defense of the nation.\"",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.084
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.72,
+      "covered_p_yes": 0.72,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.72,
+        0.72
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "3538abaf-90b7-4cc3-8312-cc23314b7d22",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:36:03.140117+00:00",
+      "contract_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "80bfab7984bf9752725b4f9cc57af7b75b79c15b23cc5ad218faf95e80e5aa9e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 81.848
+    },
+    {
+      "calls": 68,
+      "tokens": 867681,
+      "input_tokens": 829399,
+      "output_tokens": 38282,
+      "accounted_tokens_upper": 867681,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez issued a public statement reaffirming that, as acting president under the Constitutional Chamber's order and Article 233, she continues to exercise all presidential powers and will maintain administrative continuity through the end of 2026, directing the Council of Ministers to continue governing without interruption."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "she continues to exercise all presidential powers and will maintain administrative continuity through the end of 2026",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Delcy Rodríguez issued a public statement reaffirming that, as acting president under the Constitutional Chamber's order and Article 233, she continues to exercise all presidential powers and will maintain administrative continuity through the end of 2026, directing the Council of Ministers to continue governing without interruption.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                  "action": "Issue a public statement reaffirming that, as acting president under the Constitutional Chamber's order and Article 233, I continue to exercise all presidential powers and will maintain administrative continuity through the end of 2026, and direct the Council of Ministers to continue governing without interruption.\n承诺：Continue exercising the acting presidency and administrative continuity through 31 December 2026.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement reaffirming that, as acting president under the Constitutional Chamber's order and Article 233, I continue to exercise all presidential powers and will maintain administrative continuity through the end of 2026, and direct the Council of Ministers to continue governing without interruption.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "candidate_id": "agent_f8d7afe61f6b56cc:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement reaffirming the Venezuelan military's recognition of Delcy Rodríguez as acting president and its commitment to institutional continuity and normalcy through the end of 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was sworn in as acting president in January 2026 after the Constitutional Chamber order, and a November 2026 statement says she will maintain administrative continuity through year-end. The main risk is a transition or opposition takeover before Dec 31, 2026, which polling suggests many voters favor.",
+                "evidence_quote": "Delcy Rodríguez issued a public statement reaffirming that, as acting president under the Constitutional Chamber's order and Article 233, she continues to exercise all presidential powers and will maintain administrative continuity through the end of 2026, directing the Council of Ministers to continue governing without interruption.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-29",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 20,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-29T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez convened the Council of Ministers at Miraflores and issued a decree reaffirming that, under the Constitutional Chamber order and Article 233, she remains acting president exercising all presidential powers through 31 December 2026, instructing ministers to maintain administrative continuity and that no vacancy or transition process will be initiated before then."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_cc19b60498c157b4",
+                    "action_2_agent_cc19b60498c157b4"
+                  ],
+                  "outcome": "realized",
+                  "effect": "issued a decree reaffirming that, under the Constitutional Chamber order and Article 233, she remains acting president exercising all presidential powers through 31 December 2026"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "she remains acting president exercising all presidential powers through 31 December 2026",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Delcy Rodríguez convened the Council of Ministers at Miraflores and issued a decree reaffirming that, under the Constitutional Chamber order and Article 233, she remains acting president exercising all presidential powers through 31 December 2026, instructing ministers to maintain administrative continuity and that no vacancy or transition process will be initiated before then.",
+                  "date": "2026-11-19"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                  "action": "Convene the Council of Ministers at Miraflores and issue a decree reaffirming that, under the Constitutional Chamber order and Article 233, I remain acting president exercising all presidential powers through 31 December 2026, with ministers instructed to keep administrative continuity and no transition or vacancy process initiated before then.\n承诺：No vacancy or transition process will be initiated before 31 December 2026; administrative continuity continues under the acting presidency.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Convene the Council of Ministers at Miraflores and issue a decree reaffirming that, under the Constitutional Chamber order and Article 233, I remain acting president exercising all presidential powers through 31 December 2026, with ministers instructed to keep administrative continuity and no transition or vacancy process initiated before then.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.8,
+                "basis": "Rodríguez was sworn in as acting president in January 2026 and has since exercised presidential powers, with a simulated November 2026 decree reaffirming she remains acting president through 31 December 2026. Competing risk is a transition or opposition figure displacing her before the observation date, but no settled event shows that.",
+                "evidence_quote": "Delcy Rodríguez convened the Council of Ministers at Miraflores and issued a decree reaffirming that, under the Constitutional Chamber order and Article 233, she remains acting president exercising all presidential powers through 31 December 2026",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-29",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 31,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-29T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.8,
+                "basis": "Rodríguez was sworn in as acting president in January 2026 and has since exercised presidential powers, with a simulated November 2026 decree reaffirming she remains acting president through 31 December 2026. Competing risk is a transition or opposition figure displacing her before the observation date, but no settled event shows that.",
+                "evidence_quote": "Delcy Rodríguez convened the Council of Ministers at Miraflores and issued a decree reaffirming that, under the Constitutional Chamber order and Article 233, she remains acting president exercising all presidential powers through 31 December 2026",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-20",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 41,
+                "interval_days": 10,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "status": "executed",
+                  "summary": "The Venezuelan military publicly reaffirmed its recognition of Delcy Rodríguez as acting president exercising all presidential powers under the Constitutional Chamber order and Article 233 through 31 December 2026, calling for continued institutional normalcy and stating no transition should occur before then, conditioned on the absence of a contrary Constitutional Chamber order or a new binding transition mandate."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "The Venezuelan military publicly reaffirmed its recognition of Delcy Rodríguez as acting president exercising all presidential powers under the Constitutional Chamber order and Article 233 through 31 December 2026, calling for continued institutional normalcy and stating no transition should occur before then, conditioned on the absence of a contrary Constitutional Chamber order or a new binding transition mandate.",
+                  "date": "2026-12-15"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                  "action": "Publicly reaffirm the military's recognition of Delcy Rodríguez as acting president exercising all presidential powers under the Constitutional Chamber order and Article 233 through 31 December 2026, and call for continued institutional normalcy and no transition before then.\n承诺：Recognition holds through 31 December 2026 absent a contrary constitutional order.\n触发或复核条件：No contrary order from the Constitutional Chamber or a new binding transition mandate.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm the military's recognition of Delcy Rodríguez as acting president exercising all presidential powers under the Constitutional Chamber order and Article 233 through 31 December 2026, and call for continued institutional normalcy and no transition before then.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Rodríguez was sworn in as acting president in January 2026 and multiple simulated events through December 2026 reaffirm she exercises presidential powers through year-end. The main risk is a transition or new binding mandate before Dec 31, but no settled event shows that.",
+                "evidence_quote": "The Venezuelan military publicly reaffirmed its recognition of Delcy Rodríguez as acting president exercising all presidential powers under the Constitutional Chamber order and Article 233 through 31 December 2026, calling for continued institutional normalcy and stating no transition should occur before then, conditioned on the absence of a contrary Constitutional Chamber order or a new binding transition mandate.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-20",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-20T00:00:00+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_cc19b60498c157b4:initial:2",
+                  "action": "No new outward act this round; continue implementing the 19 November decree and cabinet continuity instructions.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a year-end public statement that, under the Constitutional Chamber order and Article 233, I remain acting president exercising all presidential powers through 31 December 2026, that the Council of Ministers continues governing without interruption, and that no vacancy or transition process is initiated before then.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "No new outward act this round; continue implementing the 19 November decree and cabinet continuity instructions.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.88,
+                "basis": "Multiple settled simulated events show Rodríguez exercising acting-presidential powers under the Constitutional Chamber order and Article 233, with military recognition reaffirmed through 31 December 2026. The main uncertainty is whether an unobserved transition or contrary order before the contract's 12 PM ET measurement could displace her.",
+                "evidence_quote": "The Venezuelan military publicly reaffirmed its recognition of Delcy Rodríguez as acting president exercising all presidential powers under the Constitutional Chamber order and Article 233 through 31 December 2026, calling for continued institutional normalcy and stating no transition should occur before then, conditioned on the absence of a contrary Constitutional Chamber order or a new binding transition mandate.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.88,
+          "error": null,
+          "action_path_probability": 0.02268
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "status": "executed",
+                  "summary": "The Venezuelan military issued a public statement reaffirming its recognition of Delcy Rodríguez as acting president of Venezuela and reiterating its call for institutional normalcy and constitutional continuity through the end of 2026, conditional on no new constitutional order displacing the acting presidency."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "reaffirming its recognition of Delcy Rodríguez as acting president of Venezuela",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The Venezuelan military issued a public statement reaffirming its recognition of Delcy Rodríguez as acting president of Venezuela and reiterating its call for institutional normalcy and constitutional continuity through the end of 2026, conditional on no new constitutional order displacing the acting presidency.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm, via a state address, that the acting presidency continues under the Constitutional Chamber order and Article 233, and that Council of Ministers governance proceeds through the end of the year.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                  "action": "Issue a public statement reaffirming the Venezuelan military's recognition of Delcy Rodríguez as acting president and reiterating its call for institutional normalcy and constitutional continuity through the end of 2026.\n承诺：Continue to recognize Rodríguez as acting head of state through 31 December 2026 absent a constitutional vacancy.\n触发或复核条件：No new constitutional order displacing the acting presidency.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement reaffirming the Venezuelan military's recognition of Delcy Rodríguez as acting president and reiterating its call for institutional normalcy and constitutional continuity through the end of 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Maintain the existing recognition of Rodríguez as acting president without a new public statement this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was ordered by the Constitutional Chamber to assume acting presidential powers and was sworn in on 5 January 2026; the military reaffirmed recognition through end-2026. Competing risk is a transition displacing her before 31 December 2026, but no settled event shows that.",
+                "evidence_quote": "On 3 January, the Constitutional Chamber of the Supreme Tribunal of Justice ordered Rodríguez to \"assume and exercise, as acting president, all the powers, duties, and faculties inherent to the office of President of the Bolivarian Republic of Venezuela, in order to guarantee administrative continuity and the comprehensive defense of the nation.\"",
+                "change_driver": "validated_state",
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-29",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 20,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-29T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was ordered by the Constitutional Chamber to assume acting presidential powers and was sworn in on 5 January 2026; the military reaffirmed recognition through end-2026. Competing risk is a transition displacing her before 31 December 2026, but no settled event shows that.",
+                "evidence_quote": "On 3 January, the Constitutional Chamber of the Supreme Tribunal of Justice ordered Rodríguez to \"assume and exercise, as acting president, all the powers, duties, and faculties inherent to the office of President of the Bolivarian Republic of Venezuela, in order to guarantee administrative continuity and the comprehensive defense of the nation.\"",
+                "change_driver": "validated_state",
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-29",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 31,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-29T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was ordered by the Constitutional Chamber to assume acting presidential powers and was sworn in on 5 January 2026; the military reaffirmed recognition through end-2026. Competing risk is a transition displacing her before 31 December 2026, but no settled event shows that.",
+                "evidence_quote": "On 3 January, the Constitutional Chamber of the Supreme Tribunal of Justice ordered Rodríguez to \"assume and exercise, as acting president, all the powers, duties, and faculties inherent to the office of President of the Bolivarian Republic of Venezuela, in order to guarantee administrative continuity and the comprehensive defense of the nation.\"",
+                "change_driver": "validated_state",
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-20",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 41,
+                "interval_days": 10,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_cc19b60498c157b4",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_cc19b60498c157b4:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_cc19b60498c157b4:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement reaffirming constitutional continuity under the acting presidency through 31 December 2026 and thanking the military for its recognition, committing to complete the amnesty implementation and transition talks.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f8d7afe61f6b56cc",
+                  "actor_name": "Venezuelan military",
+                  "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                  "action": "Maintain the existing public recognition of Delcy Rodríguez as acting president issued in the prior round; issue no new statement this round.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Maintain the existing public recognition of Delcy Rodríguez as acting president issued in the prior round; issue no new statement this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_f8d7afe61f6b56cc:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a further public statement reaffirming recognition of Delcy Rodríguez as acting president and calling for constitutional continuity through 31 December 2026, conditional on no new constitutional order displacing the acting presidency.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Rodríguez was ordered by the Constitutional Chamber to assume acting presidential powers and was sworn in on 5 January 2026; the military reaffirmed recognition through end-2026. Competing risk is a transition displacing her before 31 December 2026, but no settled event shows that.",
+                "evidence_quote": "On 3 January, the Constitutional Chamber of the Supreme Tribunal of Justice ordered Rodríguez to \"assume and exercise, as acting president, all the powers, duties, and faculties inherent to the office of President of the Bolivarian Republic of Venezuela, in order to guarantee administrative continuity and the comprehensive defense of the nation.\"",
+                "change_driver": "validated_state",
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-20",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-20T00:00:00+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Rodríguez was sworn in as acting president in January 2026 and the military reaffirmed recognition through end-2026 in the final round. No settled event shows displacement before the Dec 31 observation time; remaining risk is an unobserved transition or UN listing conflict.",
+                "evidence_quote": "The Venezuelan military issued a public statement reaffirming its recognition of Delcy Rodríguez as acting president of Venezuela and reiterating its call for institutional normalcy and constitutional continuity through the end of 2026, conditional on no new constitutional order displacing the acting presidency.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.82,
+          "error": null,
+          "action_path_probability": 0.24009999999999992
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 6,
+        "draw_rounds": 6,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 9,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 3,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 5,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 3,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.85,
+      "covered_p_yes": 0.85,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.85,
+        0.8500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "1c87ab44-1ee5-4c14-92c6-7c980de0107c",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:38:27.316093+00:00",
+      "contract_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "80bfab7984bf9752725b4f9cc57af7b75b79c15b23cc5ad218faf95e80e5aa9e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 144.17
+    },
+    {
+      "calls": 74,
+      "tokens": 930716,
+      "input_tokens": 882473,
+      "output_tokens": 48243,
+      "accounted_tokens_upper": 930716,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.668364,
+      "coverage": 0.49,
+      "unexplored_mass": 0.51,
+      "unknown_bounds": [
+        0.4133639999999999,
+        0.9233639999999999
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.5433603999999999,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.42,
+          "visits": 4,
+          "search_value": 0.2930499999999999,
+          "conditional_p_yes": 0.82,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.42,
+          "visits": 3,
+          "search_value": 0.2707333333333332,
+          "conditional_p_yes": 0.9,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.42,
+          "visits": 2,
+          "search_value": 0.22609999999999986,
+          "conditional_p_yes": 0.9,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.17639999999999997,
+          "visits": 1,
+          "search_value": 0.26039999999999985,
+          "conditional_p_yes": 0.93,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.17639999999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.93,
+          "frontier": true,
+          "contribution": 0.16405199999999998
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.11759999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.92,
+          "frontier": true,
+          "contribution": 0.10819199999999998
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.126,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.27999999999999997,
+          "visits": 5,
+          "search_value": 0.7556472,
+          "conditional_p_yes": 0.7,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.27999999999999997,
+          "visits": 4,
+          "search_value": 0.7429589999999999,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.27999999999999997,
+          "visits": 3,
+          "search_value": 0.7218119999999999,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.13719999999999996,
+          "visits": 1,
+          "search_value": 0.8064,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.13719999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.72,
+          "frontier": true,
+          "contribution": 0.09878399999999997
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.05879999999999999,
+          "visits": 1,
+          "search_value": 0.8064,
+          "conditional_p_yes": 0.75,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.05879999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.72,
+          "frontier": true,
+          "contribution": 0.04233599999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.084,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "c61695eb-dd70-40bb-8824-abd6dc680263",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:42:45.378027+00:00",
+      "contract_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "80bfab7984bf9752725b4f9cc57af7b75b79c15b23cc5ad218faf95e80e5aa9e",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 258.016
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+  "group_id": "venezuela-leader-end-of-2026",
+  "stage": "finished",
+  "outcome_deadline": "2026-12-31T17:00:00+00:00",
+  "deadline_basis": "explicit_contract_observation_time",
+  "nominal_market_end": "2027-01-01T04:59:00+00:00",
+  "evidence_sha256": "80bfab7984bf9752725b4f9cc57af7b75b79c15b23cc5ad218faf95e80e5aa9e",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 974,
+    "input_tokens": 889,
+    "output_tokens": 85,
+    "accounted_tokens_upper": 974,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-29",
+        "2026-12-10",
+        "2026-12-20",
+        "2026-12-31"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-29",
+        "2026-12-10",
+        "2026-12-20",
+        "2026-12-31"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-29",
+        "2026-12-10",
+        "2026-12-20",
+        "2026-12-31"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1,
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_3ece35357d569d9c",
+          "name": "Delcy Rodríguez",
+          "role": "Acting president of Venezuela since 5 January 2026; must remain in office through 31 December 2026 for market to resolve Yes.",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_4abc5dc42c07ea47",
+          "name": "Venezuelan military",
+          "role": "Announced recognition of Rodríguez as acting president and called for return to normalcy.",
+          "decision_ids": [
+            "D4"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Supreme Tribunal of Justice (Constitutional Chamber) must have ordered Rodríguez to assume and exercise presidential powers as acting president.",
+        "National Assembly must have administered the oath of office to Rodríguez as acting president."
+      ],
+      "gaps": [
+        "No frozen source identifies National Assembly of Venezuela; its decision remains unresolved.",
+        "No frozen source identifies Supreme Tribunal of Justice (Constitutional Chamber); its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Delcy Rodríguez must continue to officially hold the position of head of state of Venezuela on 31 December 2026 at 12 PM ET.",
+          "owner": "Delcy Rodríguez",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "Supreme Tribunal of Justice (Constitutional Chamber) must have ordered Rodríguez to assume and exercise presidential powers as acting president.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D3",
+          "choice": "National Assembly must have administered the oath of office to Rodríguez as acting president.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D4",
+          "choice": "Venezuelan military must have recognized Rodríguez as acting president.",
+          "owner": "Venezuelan military",
+          "support": "represented"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 30,
+    "tokens": 76809,
+    "input_tokens": 64869,
+    "output_tokens": 11940,
+    "accounted_tokens_upper": 76809,
+    "unknown_usage_requests": 0
+  }
+}

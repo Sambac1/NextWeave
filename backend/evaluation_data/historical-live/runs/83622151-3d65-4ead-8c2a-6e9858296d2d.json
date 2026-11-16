@@ -1,0 +1,2120 @@
+{
+  "run_id": "83622151-3d65-4ead-8c2a-6e9858296d2d",
+  "case_id": "market_f7120e9ae0cd93a64580d11c",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3508,
+      "input_tokens": 3498,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3508,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3498,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:37:05.340169+00:00",
+      "contract_id": "0x6db92cee58b72e61b3874cce633a0457ade010ef377a0eeeaf1fcf88ad0c3fd4",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8b3d4ea43c97d7ba4aa708e2fdde421a3eef409c45caa8beea15bdb1584c4b68",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.755
+    },
+    {
+      "calls": 2,
+      "tokens": 7016,
+      "input_tokens": 6996,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 7016,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3498,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3498,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:37:07.178862+00:00",
+      "contract_id": "0x6db92cee58b72e61b3874cce633a0457ade010ef377a0eeeaf1fcf88ad0c3fd4",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8b3d4ea43c97d7ba4aa708e2fdde421a3eef409c45caa8beea15bdb1584c4b68",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.837
+    },
+    {
+      "calls": 9,
+      "tokens": 123419,
+      "input_tokens": 118388,
+      "output_tokens": 5031,
+      "accounted_tokens_upper": 123419,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 22,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                  "action": "Maintain Iran's existing public position conveyed through the Qatari mediator; no new diplomatic initiative this round.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Maintain Iran's existing public position conveyed through the Qatari mediator; no new diplomatic initiative this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The last qualifying senior engagement was the September 22 indirect shuttle talks in New York; by early November, diplomacy had stalled after Rezaei rejected the US counterproposal and strikes resumed. No later meeting is evidenced before the December 1 deadline, so only a short window remains for renewed senior talks.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.12
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "dc1e6476-e33a-442a-b444-3a33b53c062d",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:38:25.413090+00:00",
+      "contract_id": "0x6db92cee58b72e61b3874cce633a0457ade010ef377a0eeeaf1fcf88ad0c3fd4",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8b3d4ea43c97d7ba4aa708e2fdde421a3eef409c45caa8beea15bdb1584c4b68",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 78.231
+    },
+    {
+      "calls": 16,
+      "tokens": 216848,
+      "input_tokens": 205966,
+      "output_tokens": 10882,
+      "accounted_tokens_upper": 216848,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 22,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "status": "executed",
+                  "summary": "Iranian Foreign Minister Abbas Araghchi publicly stated that Iran remains open to a senior-level diplomatic meeting through mediators before November 30, provided the US halts military actions and lifts the naval blockade, and that he would represent Iran."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "remains open to a senior-level diplomatic meeting through mediators before November 30, provided the US halts military actions and lifts the naval blockade",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Iranian Foreign Minister Abbas Araghchi publicly stated that Iran remains open to a senior-level diplomatic meeting through mediators before November 30, provided the US halts military actions and lifts the naval blockade, and that he would represent Iran.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "US Special Envoy Steve Witkoff sent a direct message to Iranian Foreign Minister Abbas Araghchi through the Qatari mediator proposing a senior indirect round with Witkoff and Kushner in a neutral venue before November 30, without preconditions on agenda.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                  "action": "Publicly state that Iran remains open to a senior-level diplomatic meeting through mediators before November 30, provided the US halts military actions and lifts the naval blockade, and that Foreign Minister Araghchi would represent Iran.\n承诺：Araghchi would represent Iran at a senior-level mediated meeting before Nov 30 if the US halts military actions and lifts the blockade.\n触发或复核条件：US halts military actions and lifts the naval blockade.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly state that Iran remains open to a senior-level diplomatic meeting through mediators before November 30, provided the US halts military actions and lifts the naval blockade, and that Foreign Minister Araghchi would represent Iran.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0720461052af58f8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that the US is ready to send Witkoff and Kushner to a further senior round with Araghchi through the existing mediator channel, and urge Iran to name a date and venue before November 30.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Witkoff's mediated proposal and Araghchi's conditional openness show mutual willingness, but Iran's preconditions (halt military actions, lift blockade) remain unmet and Rezaei publicly rejected the US counterproposal on 3 November. Willingness is not authorization or execution; no qualifying meeting is confirmed before the deadline.",
+                "evidence_quote": "US Special Envoy Steve Witkoff sent a direct message to Iranian Foreign Minister Abbas Araghchi through the Qatari mediator proposing a senior indirect round with Witkoff and Kushner in a neutral venue before November 30, without preconditions on agenda.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.16000000000000003
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 22,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Iran's readiness to hold a further indirect senior round in the 9–30 November window",
+                  "pending_actor_ids": [
+                    "agent_0720461052af58f8"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Iranian Foreign Minister Abbas Araghchi conveyed to US Special Envoy Steve Witkoff, through the Qatari mediator channel, Iran's readiness to hold a further indirect senior round in the 9–30 November window, restating that blockade lifting and asset release remain Iran's conditions for substantive movement; the offer is conditional on the mediator channel functioning and Iranian authorization being confirmed.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "US Special Envoy Steve Witkoff conveyed to Foreign Minister Abbas Araghchi a proposal for a direct senior-level meeting with him and Jared Kushner before November 30, 2026, at a mutually acceptable venue, with no preconditions on the agenda and Iran's seven demands open for discussion; the offer is conditional on Iranian authorization and counterpart participation and on US principal authorization.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0720461052af58f8:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that the United States remains ready to send senior envoys to meet Iranian representatives anywhere, anytime, and that I am prepared to travel for a further round of talks; note that the door remains open despite the current standstill.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Both sides exchanged conditional offers for a senior round in the 9–30 November window, but each is contingent on unconfirmed authorization and mediator functioning. The 3 November standstill and Rezaei's rejection of the US counterproposal show substantive gaps remain, so execution by the deadline is uncertain.",
+                "evidence_quote": "Iranian Foreign Minister Abbas Araghchi conveyed to US Special Envoy Steve Witkoff, through the Qatari mediator channel, Iran's readiness to hold a further indirect senior round in the 9–30 November window, restating that blockade lifting and asset release remain Iran's conditions for substantive movement; the offer is conditional on the mediator channel functioning and Iranian authorization being confirmed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.42
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 4,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.385,
+      "covered_p_yes": 0.385,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.385,
+        0.385
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "5d5bb48f-f749-41eb-822d-97bee27b784c",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:38:57.469552+00:00",
+      "contract_id": "0x6db92cee58b72e61b3874cce633a0457ade010ef377a0eeeaf1fcf88ad0c3fd4",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8b3d4ea43c97d7ba4aa708e2fdde421a3eef409c45caa8beea15bdb1584c4b68",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 32.055
+    },
+    {
+      "calls": 36,
+      "tokens": 498730,
+      "input_tokens": 477223,
+      "output_tokens": 21507,
+      "accounted_tokens_upper": 498730,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "status": "executed",
+                  "summary": "Iranian Foreign Minister Abbas Araghchi publicly reaffirmed that Iran remains open to a senior-level diplomatic meeting with the United States before end-November through authorized mediators, restating Iran's demands — lifting the naval blockade, releasing frozen assets, ending the war on all fronts, and halting US military actions — as the basis, without committing to a date."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "publicly reaffirmed that Iran remains open to a senior-level diplomatic meeting with the United States before end-November through authorized mediators",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Iranian Foreign Minister Abbas Araghchi publicly reaffirmed that Iran remains open to a senior-level diplomatic meeting with the United States before end-November through authorized mediators, restating Iran's demands — lifting the naval blockade, releasing frozen assets, ending the war on all fronts, and halting US military actions — as the basis, without committing to a date.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                  "action": "Publicly reaffirm Iran's willingness to hold a senior-level diplomatic meeting before end-November through authorized mediators, restating the seven demands (blockade lifting, asset release, end of war on all fronts, halt to US military actions) as the basis, without committing to a date.\n承诺：Iran remains open to a mediated senior meeting before November 30 if its stated demands are engaged.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly reaffirm Iran's willingness to hold a senior-level diplomatic meeting before end-November through authorized mediators, restating the seven demands (blockade lifting, asset release, end of war on all fronts, halt to US military actions) as the basis, without committing to a date.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0720461052af58f8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly state that I, as US special envoy, am ready to meet Foreign Minister Araghchi in a further senior round through the existing Qatari/Pakistani mediator channels, and ask mediators to convey this offer to Tehran; no preconditions set on my side beyond counterpart attendance and authorization.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Iran publicly reaffirmed openness to a senior-level meeting before end-November, but no date was committed and talks stalled after the November 3 rejection of a US counterproposal. Willingness is not execution; a qualifying meeting must still be convened and held by the deadline.",
+                "evidence_quote": "Iranian Foreign Minister Abbas Araghchi publicly reaffirmed that Iran remains open to a senior-level diplomatic meeting with the United States before end-November through authorized mediators, restating Iran's demands — lifting the naval blockade, releasing frozen assets, ending the war on all fronts, and halting US military actions — as the basis, without committing to a date.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-14",
+                "interval_end": "2026-11-20",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 11,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Iran conditioned sending Araghchi on the US naming a qualifying envoy and accepting a mediator-conveyed format",
+                  "pending_actor_ids": [
+                    "agent_0720461052af58f8"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Through the Qatari mediator, Iranian Foreign Minister Abbas Araghchi conveyed to US Special Envoy Steve Witkoff a concrete proposal for an indirect senior-level meeting in a single venue before November 30, with Araghchi and a named US envoy physically present and the mediator conveying communications same-day, agenda covering blockade lifting and frozen assets; Iran conditioned sending Araghchi on the US naming a qualifying envoy and accepting a mediator-conveyed format.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly state that Iran's foreign ministry is ready to send FM Araghchi to a neutral venue for a mediated senior meeting with a named US envoy before November 30, and call on the US to name its representative and drop preconditions on the meeting format.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Iran's latest mediated proposal is a concrete step toward a qualifying indirect meeting, but it remains conditional on the US naming a qualifying envoy and accepting the mediator format. US principals reportedly favor continued pressure over a deal, and prior rounds collapsed, so execution by November 30 is plausible but not likely.",
+                "evidence_quote": "Through the Qatari mediator, Iranian Foreign Minister Abbas Araghchi conveyed to US Special Envoy Steve Witkoff a concrete proposal for an indirect senior-level meeting in a single venue before November 30, with Araghchi and a named US envoy physically present and the mediator conveying communications same-day, agenda covering blockade lifting and frozen assets; Iran conditioned sending Araghchi on the US naming a qualifying envoy and accepting a mediator-conveyed format.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-20",
+                "interval_end": "2026-11-25",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-20T00:00:00+00:00",
+                "interval_end_utc": "2026-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_0720461052af58f8"
+                  ]
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Iran's latest mediated proposal is a concrete step toward a qualifying indirect meeting, but it remains conditional on the US naming a qualifying envoy and accepting the mediator format. US principals reportedly favor continued pressure over a deal, and prior rounds collapsed, so execution by November 30 is plausible but not likely.",
+                "evidence_quote": "Through the Qatari mediator, Iranian Foreign Minister Abbas Araghchi conveyed to US Special Envoy Steve Witkoff a concrete proposal for an indirect senior-level meeting in a single venue before November 30, with Araghchi and a named US envoy physically present and the mediator conveying communications same-day, agenda covering blockade lifting and frozen assets; Iran conditioned sending Araghchi on the US naming a qualifying envoy and accepting a mediator-conveyed format.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-25",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-25T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "conditioned on the US naming a qualifying envoy and Washington's authorization holding",
+                  "pending_actor_ids": [
+                    "agent_0720461052af58f8"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Iranian Foreign Minister Abbas Araghchi, through the Qatari mediator, confirmed Iran's readiness to send him to a same-venue mediator-conveyed senior meeting with the United States before November 30, conditioned on the US naming a qualifying envoy and Washington's authorization holding, and proposed Doha or Muscat as venues while urging a date be fixed within days.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:1",
+                  "action": null,
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly state that Iran has confirmed readiness to send FM Araghchi to a mediator-conveyed same-venue senior meeting before November 30 and that the remaining obstacle is the US naming a qualifying envoy and fixing venue/date, restating blockade lifting and frozen assets as the agenda.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Pre-deadline evidence shows only an Iranian proposal for a mediated senior meeting, conditioned on the US naming a qualifying envoy and accepting the format; no US acceptance or scheduled date appears. Early-November reporting of stalled diplomacy and 'no war, no deal' advice cuts against convening before the deadline.",
+                "evidence_quote": "Through the Qatari mediator, Iranian Foreign Minister Abbas Araghchi conveyed to US Special Envoy Steve Witkoff a concrete proposal for an indirect senior-level meeting in a single venue before November 30, with Araghchi and a named US envoy physically present and the mediator conveying communications same-day, agenda covering blockade lifting and frozen assets; Iran conditioned sending Araghchi on the US naming a qualifying envoy and accepting a mediator-conveyed format.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.009719999999999998
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 4,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 6,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.3,
+      "covered_p_yes": 0.3,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.3,
+        0.30000000000000004
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "aa4e0616-787a-4485-ba22-05cb3afb48a6",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:41:08.438191+00:00",
+      "contract_id": "0x6db92cee58b72e61b3874cce633a0457ade010ef377a0eeeaf1fcf88ad0c3fd4",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8b3d4ea43c97d7ba4aa708e2fdde421a3eef409c45caa8beea15bdb1584c4b68",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 130.927
+    },
+    {
+      "calls": 73,
+      "tokens": 1061998,
+      "input_tokens": 1011949,
+      "output_tokens": 50049,
+      "accounted_tokens_upper": 1061998,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                  "action": "Take no new outward step this round; keep Iran's existing public conditions unchanged while awaiting leadership authorization and a US response through mediators.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Take no new outward step this round; keep Iran's existing public conditions unchanged while awaiting leadership authorization and a US response through mediators.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0720461052af58f8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that, as US special envoy, I am prepared to meet Foreign Minister Araghchi in a further indirect shuttle round through a mutually acceptable mediator, and call on Iran to name a date and venue before November 30, 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Indirect shuttle talks resumed in September 2026, but by early November strikes and a public rejection of the US counterproposal had stalled diplomacy. With only days left in the window and no announced senior meeting, a qualifying session is unlikely though not excluded.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-14",
+                "interval_end": "2026-11-20",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 11,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Indirect shuttle talks resumed in September 2026, but by early November strikes and a public rejection of the US counterproposal had stalled diplomacy. With only days left in the window and no announced senior meeting, a qualifying session is unlikely though not excluded.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-20",
+                "interval_end": "2026-11-25",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-20T00:00:00+00:00",
+                "interval_end_utc": "2026-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "status": "unknown",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:1",
+                  "action": "Approach Qatari and Omani channels to confirm a mediator and lock a date for a same-day indirect shuttle round in Muscat before November 30, 2026, and notify Araghchi that mediator facilitation is being secured so Iranian leadership authorization can proceed.\n承诺：I will keep the Muscat offer open without adding new conditions and press to confirm a mediator and date before November 30.\n触发或复核条件：Mediator confirms facilitation and Iran's leadership authorizes Araghchi to attend.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0720461052af58f8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Approach Qatari and Omani channels to confirm a mediator and lock a date for a same-day indirect shuttle round in Muscat before November 30, 2026, and notify Araghchi that mediator facilitation is being secured so Iranian leadership authorization can proceed.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Indirect shuttle talks resumed in September 2026, but by early November strikes and a public rejection of the US counterproposal had stalled diplomacy. With only days left in the window and no announced senior meeting, a qualifying session is unlikely though not excluded.",
+                "evidence_quote": "On 2 November, small-scale strikes were carried out by the US against Iranian positions on Qeshm Island in the Strait of Hormuz. According to a US official, who framed the strikes as \"defensive\", the operation was directed at Iranians who were using surface-to-air missiles against American aircraft. The next day, diplomatic attempts to end the conflict came to a standstill, when Mohsen Rezaei publicly rejected a US counterproposal.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-25",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-25T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "The last settled senior-level engagement was the 22 September shuttle talks in New York, and by 3 November diplomacy had stalled after Iran rejected the US counterproposal. No qualifying meeting is reported between then and the 30 November deadline, so the remaining window is short and the parties remain far apart.",
+                "evidence_quote": "On 22 September, indirect \"shuttle talks\" between Iranian foreign minister Abbas Araghchi and US envoys Jared Kushner and Steve Witkoff through international mediators briefly resumed on the sidelines of the United Nations General Assembly  in New York City.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.047040000000000005
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "status": "executed",
+                  "summary": "Iranian Foreign Minister Abbas Araghchi publicly reaffirmed Iran's readiness for a senior-level meeting with the United States through the Qatari mediator, restating the four standing demands — complete lifting of the naval blockade, release of frozen Iranian assets, end of the war on all fronts, and a halt to US military actions — as the agenda, and indicated he would personally attend if the US designates a qualifying representative and a mediator convenes the meeting before November 30."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "indicated he would personally attend if the US designates a qualifying representative and a mediator convenes the meeting before November 30",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Iranian Foreign Minister Abbas Araghchi publicly reaffirmed Iran's readiness for a senior-level meeting with the United States through the Qatari mediator, restating the four standing demands — complete lifting of the naval blockade, release of frozen Iranian assets, end of the war on all fronts, and a halt to US military actions — as the agenda, and indicated he would personally attend if the US designates a qualifying representative and a mediator convenes the meeting before November 30.",
+                  "date": "2026-11-14"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:1",
+                  "action": "Publicly reaffirm Iran's readiness for a senior-level meeting with the US through the Qatari mediator, restating the four standing demands (blockade lifting, asset release, end of war, halt to US military actions) as the agenda, and indicate Araghchi would participate if the US authorizes a qualifying counterpart.\n承诺：Araghchi will personally attend a senior-level meeting if the US designates a qualifying representative and a mediator convenes it before November 30.\n触发或复核条件：US authorization of a qualifying representative and a functioning mediator channel.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0bb86dfb9df25b85:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm Iran's readiness for a senior-level meeting with the US through the Qatari mediator, restating the four standing demands (blockade lifting, asset release, end of war, halt to US military actions) as the agenda, and indicate Araghchi would participate if the US authorizes a qualifying counterpart.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:3",
+                  "action": null,
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0720461052af58f8:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state that I, as US Special Envoy, am ready to meet Iranian Foreign Minister Araghchi in a senior-level diplomatic round before November 30, 2026, in a mutually agreed venue with mediators, and call on Iran to name a date.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Araghchi's stated willingness to attend a senior-level meeting is only a conditional signal; US authorization and mediator convening remain unbound, and the November 3 standstill plus reported 'no war, no deal' advice cut against near-term talks. No settled event confirms a qualifying meeting in the window.",
+                "evidence_quote": "Iranian Foreign Minister Abbas Araghchi publicly reaffirmed Iran's readiness for a senior-level meeting with the United States through the Qatari mediator, restating the four standing demands — complete lifting of the naval blockade, release of frozen Iranian assets, end of the war on all fronts, and a halt to US military actions — as the agenda, and indicated he would personally attend if the US designates a qualifying representative and a mediator convenes the meeting before November 30.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-14",
+                "interval_end": "2026-11-20",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 11,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "status": "executed",
+                  "summary": "Iranian Foreign Minister Abbas Araghchi conveyed through the Qatari mediator a renewed, dated offer that he will personally attend a senior-level meeting with a designated US qualifying representative in Doha or Muscat before November 30, with the four standing demands as the agenda, if Washington names its representative and the mediator convenes by November 25."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "if Washington names its representative and the mediator convenes by November 25",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "Iranian Foreign Minister Abbas Araghchi conveyed through the Qatari mediator a renewed, dated offer that he will personally attend a senior-level meeting with a designated US qualifying representative in Doha or Muscat before November 30, with the four standing demands as the agenda, if Washington names its representative and the mediator convenes by November 25.",
+                  "date": "2026-11-16"
+                },
+                {
+                  "id": "sim_0002_002_002",
+                  "text": "US Special Envoy Steve Witkoff conveyed through the Qatari mediator to Araghchi that he, as a named qualifying US representative, is ready to join a mediated senior round before November 30 if Washington authorizes it, and asked the mediator to propose dates and a venue, making clear this is a readiness signal, not US authorization or acceptance of Iran's four demands.",
+                  "date": "2026-11-18"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:1",
+                  "action": "Convey through the Qatari mediator a renewed, dated offer: Araghchi will personally attend a senior-level meeting with a designated US qualifying representative in Doha or Muscat before November 30, with the four standing demands as the agenda, if Washington names its representative and the mediator convenes by November 25.\n承诺：Araghchi will personally attend a senior-level meeting before November 30 if the US designates a qualifying representative and the mediator convenes by November 25.\n触发或复核条件：US designation of a qualifying representative and mediator convening by November 25.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0bb86dfb9df25b85:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Convey through the Qatari mediator a renewed, dated offer: Araghchi will personally attend a senior-level meeting with a designated US qualifying representative in Doha or Muscat before November 30, with the four standing demands as the agenda, if Washington names its representative and the mediator convenes by November 25.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Araghchi's dated offer and Witkoff's readiness signal raise the chance of a mediated senior round, but both are conditional on US authorization and mediator convening by November 25. Recent reporting shows talks stalled and US advisers favoring continued pressure, so execution remains uncertain.",
+                "evidence_quote": "US Special Envoy Steve Witkoff conveyed through the Qatari mediator to Araghchi that he, as a named qualifying US representative, is ready to join a mediated senior round before November 30 if Washington authorizes it, and asked the mediator to propose dates and a venue, making clear this is a readiness signal, not US authorization or acceptance of Iran's four demands.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_002_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-20",
+                "interval_end": "2026-11-25",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-20T00:00:00+00:00",
+                "interval_end_utc": "2026-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "if Washington authorizes it",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "US Special Envoy Steve Witkoff conveyed through the Qatari mediator that he remains ready to join a mediated senior round in Doha or Muscat before November 30 if Washington authorizes it, urged the mediator to hold provisional dates open, and stated that he is pressing Washington for authorization while making clear this is readiness, not US authorization or acceptance of Iran's four demands.",
+                  "date": "2026-11-22"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0720461052af58f8",
+                  "actor_name": "US Special Envoy Steve Witkoff",
+                  "candidate_id": "agent_0720461052af58f8:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.38,
+                "basis": "Witkoff's repeated readiness signals and Araghchi's dated offer show both sides willing, but the US authorization remains unbound and prior rounds collapsed without agreement. Readiness is not execution, so the chance of a qualifying meeting before the deadline stays below even.",
+                "evidence_quote": "US Special Envoy Steve Witkoff conveyed through the Qatari mediator that he remains ready to join a mediated senior round in Doha or Muscat before November 30 if Washington authorizes it, urged the mediator to hold provisional dates open, and stated that he is pressing Washington for authorization while making clear this is readiness, not US authorization or acceptance of Iran's four demands.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-25",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-25T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "status": "executed",
+                  "summary": "Iranian Foreign Minister Abbas Araghchi publicly stated that Iran's side was ready and willing to attend a senior-level meeting before November 30, that the four standing demands remain the agenda, and that any failure to convene rests on the absence of US authorization of a qualifying representative and a mediator-convened date."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+                  "before": "pending",
+                  "after": "unmet",
+                  "summary": "any failure to convene rests on the absence of US authorization of a qualifying representative and a mediator-convened date",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "Iranian Foreign Minister Abbas Araghchi publicly stated that Iran's side was ready and willing to attend a senior-level meeting before November 30, that the four standing demands remain the agenda, and that any failure to convene rests on the absence of US authorization of a qualifying representative and a mediator-convened date.",
+                  "date": "2026-11-30"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0bb86dfb9df25b85",
+                  "actor_name": "Iranian Foreign Minister Abbas Araghchi",
+                  "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                  "action": "Publicly state that Iran's side was ready and willing to attend a senior-level meeting before November 30, that the four standing demands remain the agenda, and that any failure to convene rests on the absence of US authorization of a qualifying representative and a mediator-convened date.\n承诺：Iran remains ready to attend a senior-level meeting before November 30 under the stated conditions.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0bb86dfb9df25b85:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly state that Iran's side was ready and willing to attend a senior-level meeting before November 30, that the four standing demands remain the agenda, and that any failure to convene rests on the absence of US authorization of a qualifying representative and a mediator-convened date.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Iran repeatedly signaled readiness and a dated offer, but the final round shows no US authorization of a qualifying representative or mediator-convened date, so no meeting occurred by the deadline. Willingness is not execution; the unmet target condition drives the low estimate.",
+                "evidence_quote": "target_event: unmet. any failure to convene rests on the absence of US authorization of a qualifying representative and a mediator-convened date",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.031751999999999996
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 8,
+        "draw_rounds": 8,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 11,
+        "public_event_count": 5,
+        "substantive_public_event_count": 5,
+        "state_change_count": 9,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 5,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 4,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 6,
+            "active_actor_count": 2,
+            "public_event_count": 5,
+            "substantive_public_event_count": 5,
+            "state_change_count": 9,
+            "condition_change_count": 2,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.21,
+      "covered_p_yes": 0.21,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.21,
+        0.20999999999999996
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "b9f1db97-4878-40a9-9d20-aeb93afe8928",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T03:28:18.158590+00:00",
+      "contract_id": "0x6db92cee58b72e61b3874cce633a0457ade010ef377a0eeeaf1fcf88ad0c3fd4",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8b3d4ea43c97d7ba4aa708e2fdde421a3eef409c45caa8beea15bdb1584c4b68",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 195.698
+    },
+    {
+      "calls": 87,
+      "tokens": 1411361,
+      "input_tokens": 1306614,
+      "output_tokens": 104747,
+      "accounted_tokens_upper": 1411361,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.3641582402750001,
+      "coverage": 0.45412604999999984,
+      "unexplored_mass": 0.5458739500000002,
+      "unknown_bounds": [
+        0.09122126527499999,
+        0.6370952152750001
+      ],
+      "search_iterations": 8,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 8,
+          "search_value": 0.557736,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.385,
+          "visits": 4,
+          "search_value": 0.49463999999999997,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.23099999999999998,
+          "visits": 3,
+          "search_value": 0.48,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.16169999999999998,
+          "visits": 1,
+          "search_value": 0.42504,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.07923299999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.22,
+          "frontier": true,
+          "contribution": 0.017431259999999997
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.033956999999999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.004074839999999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.048510000000000005,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.06929999999999999,
+          "visits": 1,
+          "search_value": 0.44867999999999997,
+          "conditional_p_yes": 0.15,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.04850999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.005821199999999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.020789999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.15,
+          "frontier": true,
+          "contribution": 0.0031184999999999993
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.11549999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.013859999999999999
+        },
+        {
+          "path": [
+            1,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.038500000000000034,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.315,
+          "visits": 3,
+          "search_value": 0.635304,
+          "conditional_p_yes": 0.28,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.1323,
+          "visits": 2,
+          "search_value": 0.6656759999999999,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.06019649999999999,
+          "visits": 1,
+          "search_value": 0.685902,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.027389407499999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.42,
+          "frontier": true,
+          "contribution": 0.011503551149999998
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.014748142499999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.45,
+          "frontier": true,
+          "contribution": 0.006636664124999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.01805895,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.025798500000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.5,
+          "frontier": true,
+          "contribution": 0.012899250000000001
+        },
+        {
+          "path": [
+            2,
+            1,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.04630500000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.08819999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 0.015875999999999998
+        },
+        {
+          "path": [
+            2,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.09450000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "b3b85cb1-0b40-4220-9a9e-f0def28d2414",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T06:17:10.059322+00:00",
+      "contract_id": "0x6db92cee58b72e61b3874cce633a0457ade010ef377a0eeeaf1fcf88ad0c3fd4",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "8b3d4ea43c97d7ba4aa708e2fdde421a3eef409c45caa8beea15bdb1584c4b68",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 567.372
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x6db92cee58b72e61b3874cce633a0457ade010ef377a0eeeaf1fcf88ad0c3fd4",
+  "group_id": "next-us-iran-senior-diplomatic-meeting-byptptpt",
+  "stage": "finished",
+  "outcome_deadline": "2026-12-01T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "8b3d4ea43c97d7ba4aa708e2fdde421a3eef409c45caa8beea15bdb1584c4b68",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 1316,
+    "input_tokens": 1218,
+    "output_tokens": 98,
+    "accounted_tokens_upper": 1316,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-14",
+        "2026-11-20",
+        "2026-11-25",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-14",
+        "2026-11-20",
+        "2026-11-25",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-14",
+        "2026-11-20",
+        "2026-11-25",
+        "2026-12-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_1ef82097620e62e8",
+          "name": "US Special Envoy Steve Witkoff",
+          "role": "US special envoy and named qualifying representative who has conducted shuttle talks with Iranian counterparts.",
+          "decision_ids": [
+            "us_participate"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_251a76092311b7b9",
+          "name": "Iranian Foreign Minister Abbas Araghchi",
+          "role": "Iranian foreign minister and named qualifying representative leading Iranian diplomatic engagement.",
+          "decision_ids": [
+            "iran_participate"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "US President or authorized principal decides to pursue and authorize a senior-level diplomatic meeting with Iran.",
+        "Iranian governing authority authorizes senior diplomatic engagement with the United States."
+      ],
+      "gaps": [
+        "Iranian authorization structure is unresolved; no current Iranian principal is clearly identified as consenting to talks.",
+        "No evidence establishes that a further meeting was actually scheduled or held after September 22, 2026.",
+        "Mediator authorization and same-day physical presence requirements for an indirect meeting are unverified.",
+        "No frozen source identifies Iranian decision authority (unresolved); its decision remains unresolved.",
+        "No frozen source identifies President of the United States; its decision remains unresolved.",
+        "No frozen source identifies US Envoy Jared Kushner; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "us_authorize_meeting",
+          "choice": "US President or authorized principal decides to pursue and authorize a senior-level diplomatic meeting with Iran.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "us_participate",
+          "choice": "Named US qualifying representatives Witkoff and Kushner agree to participate in the meeting.",
+          "owner": "US Special Envoy Steve Witkoff",
+          "support": "represented"
+        },
+        {
+          "id": "iran_authorize_meeting",
+          "choice": "Iranian governing authority authorizes senior diplomatic engagement with the United States.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "iran_participate",
+          "choice": "Iranian Foreign Minister Araghchi participates as a qualifying representative in the meeting.",
+          "owner": "Iranian Foreign Minister Abbas Araghchi",
+          "support": "represented"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 29,
+    "tokens": 85291,
+    "input_tokens": 68883,
+    "output_tokens": 16408,
+    "accounted_tokens_upper": 85291,
+    "unknown_usage_requests": 0
+  }
+}

@@ -1,0 +1,1604 @@
+{
+  "run_id": "92d97321-71b5-4daa-b0c2-fae6fcaf472c",
+  "case_id": "market_01e3fa43c620efbd9d59dd8e",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2543,
+      "input_tokens": 2533,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2543,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2533,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:33:18.096374+00:00",
+      "contract_id": "0x7a8c707fb249d07d578a30ec22f2532eda55b76784e1bf0e52d64802209e0f0a",
+      "forecast_cutoff": "2025-06-17T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ee7902532062bed96c13483bedd4ecf8bb1b9a45cb492e916afa46571d4bf1d6",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.738
+    },
+    {
+      "calls": 2,
+      "tokens": 5086,
+      "input_tokens": 5066,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5086,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.065,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.05,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2533,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2533,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:33:20.030455+00:00",
+      "contract_id": "0x7a8c707fb249d07d578a30ec22f2532eda55b76784e1bf0e52d64802209e0f0a",
+      "forecast_cutoff": "2025-06-17T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ee7902532062bed96c13483bedd4ecf8bb1b9a45cb492e916afa46571d4bf1d6",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.934
+    },
+    {
+      "calls": 8,
+      "tokens": 77667,
+      "input_tokens": 74729,
+      "output_tokens": 2938,
+      "accounted_tokens_upper": 77667,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-06-17",
+                "interval_end": "2025-06-21",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2025-06-17T23:59:59+00:00",
+                "interval_end_utc": "2025-06-21T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                  "action": "Take no outward action this round; monitor for any FDA announcement or Regeneron filing on a Dupixent sBLA for bullous pemphigoid before the 2025-06-21 horizon.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no outward action this round; monitor for any FDA announcement or Regeneron filing on a Dupixent sBLA for bullous pemphigoid before the 2025-06-21 horizon.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_b6d8d44e1db85e91:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Regeneron publicly confirms whether it has submitted a BLA/sBLA to FDA for Dupixent in bullous pemphigoid, clarifying filing status without asserting FDA approval.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e5e73d2f76515f79:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a brief public statement that the FDA has no confirmed BLA/sBLA under review for Dupixent in bullous pemphigoid and will evaluate any complete application through CBER's standard review; this is informational only, not an approval or a decline.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No settled evidence shows an FDA approval of Dupixent for bullous pemphigoid by the deadline; the frozen excerpts only document earlier Dupixent approvals for atopic dermatitis (2017) and asthma (2018). With the horizon reached and no qualifying approval or CRL reported, the in-window outcome is very unlikely, though absence of a final measurement leaves some uncertainty.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 0.48999999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.08,
+      "covered_p_yes": 0.08,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.08,
+        0.08000000000000007
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "43a3e6a2-0876-45fd-b41f-115c09aed50e",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:33:59.477955+00:00",
+      "contract_id": "0x7a8c707fb249d07d578a30ec22f2532eda55b76784e1bf0e52d64802209e0f0a",
+      "forecast_cutoff": "2025-06-17T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ee7902532062bed96c13483bedd4ecf8bb1b9a45cb492e916afa46571d4bf1d6",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 39.445
+    },
+    {
+      "calls": 27,
+      "tokens": 280562,
+      "input_tokens": 269005,
+      "output_tokens": 11557,
+      "accounted_tokens_upper": 280562,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-06-17",
+                "interval_end": "2025-06-18",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2025-06-17T23:59:59+00:00",
+                "interval_end_utc": "2025-06-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                  "action": "Regeneron takes no new outward regulatory step this round; it continues internal preparation and monitoring of Dupixent's bullous pemphigoid program without announcing a filing or submission.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Regeneron takes no new outward regulatory step this round; it continues internal preparation and monitoring of Dupixent's bullous pemphigoid program without announcing a filing or submission.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                  "action": "Take no public action this round; monitor for any Regeneron BLA/sBLA submission or FDA review activity on Dupixent for bullous pemphigoid before the June 20, 2025 deadline.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no public action this round; monitor for any Regeneron BLA/sBLA submission or FDA review activity on Dupixent for bullous pemphigoid before the June 20, 2025 deadline.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows an FDA approval or even a submitted BLA/sBLA for Dupixent in bullous pemphigoid by the cutoff. The cited sources only document Dupixent's prior approvals for atopic dermatitis and asthma, so approval within days is unlikely.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-06-18",
+                "interval_end": "2025-06-19",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 2,
+                "interval_days": 1,
+                "interval_start_utc": "2025-06-18T00:00:00+00:00",
+                "interval_end_utc": "2025-06-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows an FDA approval or even a submitted BLA/sBLA for Dupixent in bullous pemphigoid by the cutoff. The cited sources only document Dupixent's prior approvals for atopic dermatitis and asthma, so approval within days is unlikely.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-06-19",
+                "interval_end": "2025-06-21",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2025-06-19T00:00:00+00:00",
+                "interval_end_utc": "2025-06-21T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No settled evidence shows an FDA approval of Dupixent for bullous pemphigoid by the deadline; the frozen excerpts only cover Dupixent's earlier atopic dermatitis/asthma approvals and general BLA process. With the window closing and no reported submission or approval, the outcome is likely No, though absence of a final FDA action is unverified.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-06-17",
+                "interval_end": "2025-06-18",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2025-06-17T23:59:59+00:00",
+                "interval_end_utc": "2025-06-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                  "action": "Take no outward FDA action this round: no Dupixent bullous pemphigoid BLA/sBLA is evidenced as submitted or under review, so there is no approval or CRL decision to issue before the June 20, 2025 deadline.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no outward FDA action this round: no Dupixent bullous pemphigoid BLA/sBLA is evidenced as submitted or under review, so there is no approval or CRL decision to issue before the June 20, 2025 deadline.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_e5e73d2f76515f79:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Issue a brief public statement that the FDA has no Dupixent bullous pemphigoid application decision to announce as of this date and will not comment on any pending or unsubmitted application.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows an FDA approval or even a submitted BLA/sBLA for Dupixent in bullous pemphigoid by the cutoff. The cited sources only document Dupixent's prior approvals for atopic dermatitis and asthma, so approval within days is unlikely.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-06-18",
+                "interval_end": "2025-06-19",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 2,
+                "interval_days": 1,
+                "interval_start_utc": "2025-06-18T00:00:00+00:00",
+                "interval_end_utc": "2025-06-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows an FDA approval or even a submitted BLA/sBLA for Dupixent in bullous pemphigoid by the cutoff. The cited sources only document Dupixent's prior approvals for atopic dermatitis and asthma, so approval within days is unlikely.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-06-19",
+                "interval_end": "2025-06-21",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2025-06-19T00:00:00+00:00",
+                "interval_end_utc": "2025-06-21T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No settled evidence shows an FDA approval of Dupixent for bullous pemphigoid by the deadline; the frozen excerpts only cover Dupixent's earlier atopic dermatitis/asthma approvals and general BLA process. With the window closing and no reported submission or approval, the outcome is likely No, though absence of a final FDA action is unverified.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 0.85
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.08,
+      "covered_p_yes": 0.08,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.08,
+        0.08000000000000007
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "4380a119-f692-418b-8c5b-1dc6268785ec",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:34:33.044532+00:00",
+      "contract_id": "0x7a8c707fb249d07d578a30ec22f2532eda55b76784e1bf0e52d64802209e0f0a",
+      "forecast_cutoff": "2025-06-17T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ee7902532062bed96c13483bedd4ecf8bb1b9a45cb492e916afa46571d4bf1d6",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 33.564
+    },
+    {
+      "calls": 15,
+      "tokens": 151300,
+      "input_tokens": 145188,
+      "output_tokens": 6112,
+      "accounted_tokens_upper": 151300,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-06-17",
+                "interval_end": "2025-06-18",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2025-06-17T23:59:59+00:00",
+                "interval_end_utc": "2025-06-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                  "action": "Hold current position and monitor for any public FDA action, Regeneron filing announcement, or credible reporting on a Dupixent BLA/sBLA for bullous pemphigoid before the June 20, 2025 deadline.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Hold current position and monitor for any public FDA action, Regeneron filing announcement, or credible reporting on a Dupixent BLA/sBLA for bullous pemphigoid before the June 20, 2025 deadline.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                  "action": "Take no outward FDA action this round; internally monitor for any Regeneron BLA/sBLA submission for Dupixent in bullous pemphigoid and any pending review status. No public statement or decision is issued.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no outward FDA action this round; internally monitor for any Regeneron BLA/sBLA submission for Dupixent in bullous pemphigoid and any pending review status. No public statement or decision is issued.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "No public evidence shows an FDA approval or even a submitted BLA/sBLA for Dupixent in bullous pemphigoid by the cutoff. The cited sources only document Dupixent's earlier approvals for atopic dermatitis and asthma, so the required in-window regulatory action is unsupported.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-06-18",
+                "interval_end": "2025-06-19",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 2,
+                "interval_days": 1,
+                "interval_start_utc": "2025-06-18T00:00:00+00:00",
+                "interval_end_utc": "2025-06-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.05,
+                "basis": "No public evidence shows an FDA approval or even a submitted BLA/sBLA for Dupixent in bullous pemphigoid by the cutoff. The cited sources only document Dupixent's earlier approvals for atopic dermatitis and asthma, so the required in-window regulatory action is unsupported.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-06-19",
+                "interval_end": "2025-06-21",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2025-06-19T00:00:00+00:00",
+                "interval_end_utc": "2025-06-21T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No settled evidence shows an FDA approval of Dupixent for bullous pemphigoid by the deadline; the frozen excerpts only document earlier Dupixent approvals for atopic dermatitis and asthma. The submission and FDA decision remain unverified, so the outcome is likely No absent a reported approval.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.08,
+      "covered_p_yes": 0.08,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.08,
+        0.08000000000000007
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "ef106f00-7f3e-4848-81ef-a8f45ee506e7",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:14:15.263510+00:00",
+      "contract_id": "0x7a8c707fb249d07d578a30ec22f2532eda55b76784e1bf0e52d64802209e0f0a",
+      "forecast_cutoff": "2025-06-17T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ee7902532062bed96c13483bedd4ecf8bb1b9a45cb492e916afa46571d4bf1d6",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 39.124
+    },
+    {
+      "calls": 16,
+      "tokens": 175062,
+      "input_tokens": 166774,
+      "output_tokens": 8288,
+      "accounted_tokens_upper": 175062,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-06-17",
+                "interval_end": "2025-06-21",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2025-06-17T23:59:59+00:00",
+                "interval_end_utc": "2025-06-21T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                  "action": "Take no outward filing or announcement this round; monitor FDA communications and any public docket activity on a Dupixent BLA/sBLA for bullous pemphigoid through the June 20, 2025 deadline.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no outward filing or announcement this round; monitor FDA communications and any public docket activity on a Dupixent BLA/sBLA for bullous pemphigoid through the June 20, 2025 deadline.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_b6d8d44e1db85e91:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement confirming Regeneron's continued development interest in Dupixent for bullous pemphigoid, without asserting a filing or a submission date.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                  "action": "Take no public FDA action this round on Dupixent for bullous pemphigoid; the packet shows no filed BLA/sBLA for this indication and no pending decision before the June 20 deadline.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no public FDA action this round on Dupixent for bullous pemphigoid; the packet shows no filed BLA/sBLA for this indication and no pending decision before the June 20 deadline.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No settled evidence shows an FDA approval of Dupixent for bullous pemphigoid by the deadline. The frozen excerpts only document Dupixent's earlier approvals for atopic dermatitis (2017) and asthma (2018), and general BLA process; the submission and FDA decision remain unverified.",
+                "evidence_quote": "It received approval from the US Food and Drug Administration (FDA) for moderate-to-severe atopic dermatitis in 2017, and for asthma in 2018.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 0.7
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-06-17",
+                "interval_end": "2025-06-21",
+                "horizon_end": "2025-06-21",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2025-06-17T23:59:59+00:00",
+                "interval_end_utc": "2025-06-21T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "status": "executed",
+                  "summary": "Regeneron Pharmaceuticals submitted a BLA/sBLA to the FDA seeking approval of Dupixent (dupilumab) for bullous pemphigoid, initiating FDA review before the June 20, 2025 deadline."
+                },
+                {
+                  "action_id": "action_1_agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_b6d8d44e1db85e91",
+                    "action_1_agent_e5e73d2f76515f79"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Regeneron Pharmaceuticals submitted a BLA/sBLA to the FDA seeking approval of Dupixent (dupilumab) for bullous pemphigoid"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Regeneron Pharmaceuticals submitted a BLA/sBLA to the FDA seeking approval of Dupixent (dupilumab) for bullous pemphigoid",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Regeneron Pharmaceuticals submitted a BLA/sBLA to the FDA seeking approval of Dupixent (dupilumab) for bullous pemphigoid, initiating FDA review before the June 20, 2025 deadline.",
+                  "date": "2025-06-18"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_b6d8d44e1db85e91",
+                  "actor_name": "Regeneron Pharmaceuticals",
+                  "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                  "action": "Regeneron submits a BLA/sBLA to FDA seeking approval of Dupixent (dupilumab) for bullous pemphigoid, initiating FDA review before the June 20, 2025 deadline.\n承诺：Regeneron files the application for the bullous pemphigoid indication.\n触发或复核条件：Regeneron has completed the application package for this indication.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b6d8d44e1db85e91:initial:1",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Regeneron submits a BLA/sBLA to FDA seeking approval of Dupixent (dupilumab) for bullous pemphigoid, initiating FDA review before the June 20, 2025 deadline.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_e5e73d2f76515f79",
+                  "actor_name": "U.S. Food and Drug Administration",
+                  "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                  "action": "Take no public action this round; hold the FDA's review posture and watch for any Regeneron BLA/sBLA submission for Dupixent in bullous pemphigoid or any FDA decision/CRL before the June 20, 2025 deadline.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e5e73d2f76515f79:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no public action this round; hold the FDA's review posture and watch for any Regeneron BLA/sBLA submission for Dupixent in bullous pemphigoid or any FDA decision/CRL before the June 20, 2025 deadline.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Only evidence is that Regeneron submitted a BLA/sBLA for bullous pemphigoid, initiating FDA review before the deadline. No FDA approval, CRL, or decision is reported by the horizon; submission alone does not establish approval, and typical review timing makes an in-window approval unlikely.",
+                "evidence_quote": "Regeneron Pharmaceuticals submitted a BLA/sBLA to the FDA seeking approval of Dupixent (dupilumab) for bullous pemphigoid, initiating FDA review before the June 20, 2025 deadline.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.4
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.1,
+      "covered_p_yes": 0.1,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.1,
+        0.10000000000000009
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "749bfa97-2980-4c85-8395-ad7b52403627",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:14:42.896147+00:00",
+      "contract_id": "0x7a8c707fb249d07d578a30ec22f2532eda55b76784e1bf0e52d64802209e0f0a",
+      "forecast_cutoff": "2025-06-17T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ee7902532062bed96c13483bedd4ecf8bb1b9a45cb492e916afa46571d4bf1d6",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 27.632
+    },
+    {
+      "calls": 40,
+      "tokens": 381124,
+      "input_tokens": 363908,
+      "output_tokens": 17216,
+      "accounted_tokens_upper": 381124,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.11040000000000003,
+      "coverage": 0.7999999999999999,
+      "unexplored_mass": 0.20000000000000007,
+      "unknown_bounds": [
+        0.0104,
+        0.21040000000000006
+      ],
+      "search_iterations": 5,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 5,
+          "search_value": 0.059744,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.5599999999999999,
+          "visits": 2,
+          "search_value": 0.059,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.5599999999999999,
+          "visits": 1,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.5599999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.01,
+          "frontier": true,
+          "contribution": 0.0056
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.24,
+          "visits": 2,
+          "search_value": 0.059,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.24,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.24,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0048
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.20000000000000007,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "19eb1bd5-a38c-4012-8e08-48f4b44b9f21",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:16:24.923252+00:00",
+      "contract_id": "0x7a8c707fb249d07d578a30ec22f2532eda55b76784e1bf0e52d64802209e0f0a",
+      "forecast_cutoff": "2025-06-17T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ee7902532062bed96c13483bedd4ecf8bb1b9a45cb492e916afa46571d4bf1d6",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 102.028
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-06-17T23:59:59+00:00",
+  "forecast_key": "0x7a8c707fb249d07d578a30ec22f2532eda55b76784e1bf0e52d64802209e0f0a",
+  "group_id": "fda-approves-regenerons-dupixent-for-bullous-pemphigoid",
+  "evidence_sha256": "ee7902532062bed96c13483bedd4ecf8bb1b9a45cb492e916afa46571d4bf1d6",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 783,
+    "input_tokens": 640,
+    "output_tokens": 143,
+    "accounted_tokens_upper": 783,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-06-17",
+        "2025-06-21"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-06-17",
+        "2025-06-18",
+        "2025-06-19",
+        "2025-06-21"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-06-17",
+        "2025-06-18",
+        "2025-06-19",
+        "2025-06-21"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-06-17",
+        "2025-06-21"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-06-17",
+        "2025-06-18",
+        "2025-06-19",
+        "2025-06-21"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-06-21T03:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-06-20T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_1c27b25c0bfa1bf4",
+          "name": "Regeneron Pharmaceuticals",
+          "role": "Sponsor of the BLA/sBLA for Dupixent in bullous pemphigoid; must submit the application for FDA review.",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_492b0d2351237819",
+          "name": "U.S. Food and Drug Administration",
+          "role": "Federal agency responsible for reviewing and approving BLAs; grants full or conditional approval or issues a Complete Response Letter.",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No source evidence confirms that Regeneron has submitted a BLA/sBLA for Dupixent in bullous pemphigoid.",
+        "No source evidence confirms FDA review or a decision on such an application."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Regeneron submits a BLA or sBLA to the FDA for Dupixent as a treatment for bullous pemphigoid.",
+          "owner": "Regeneron Pharmaceuticals",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "FDA grants full or conditional approval for the BLA/sBLA for Dupixent in bullous pemphigoid (or issues a CRL/declines).",
+          "owner": "U.S. Food and Drug Administration",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 18,
+    "tokens": 47180,
+    "input_tokens": 41419,
+    "output_tokens": 5761,
+    "accounted_tokens_upper": 47180,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

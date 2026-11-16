@@ -1,0 +1,1904 @@
+{
+  "run_id": "26d9824b-ee37-4a1d-a396-9d57924c09a6",
+  "case_id": "market_be8455d1ef04f7db63d93244",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2730,
+      "input_tokens": 2720,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2730,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.85,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.85,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2720,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:28:27.096789+00:00",
+      "contract_id": "0x68ff092a4ea332946bc7ca59efc2b2a56bb702fd0d85d02ba883d29d7fdc5f2e",
+      "forecast_cutoff": "2024-12-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "6279d54d43fe11833a6cfbb6b5a65db0f4c29a89a3b23dd886605c7c8dd4b5ac",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.481
+    },
+    {
+      "calls": 2,
+      "tokens": 5460,
+      "input_tokens": 5440,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5460,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.85,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.85,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2720,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.85,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2720,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:28:28.596824+00:00",
+      "contract_id": "0x68ff092a4ea332946bc7ca59efc2b2a56bb702fd0d85d02ba883d29d7fdc5f2e",
+      "forecast_cutoff": "2024-12-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "6279d54d43fe11833a6cfbb6b5a65db0f4c29a89a3b23dd886605c7c8dd4b5ac",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.498
+    },
+    {
+      "calls": 7,
+      "tokens": 70772,
+      "input_tokens": 66701,
+      "output_tokens": 4071,
+      "accounted_tokens_upper": 70772,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2024-12-08",
+                "interval_end": "2025-01-01",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 24,
+                "interval_days": 24,
+                "interval_start_utc": "2024-12-08T23:59:59+00:00",
+                "interval_end_utc": "2025-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "status": "executed",
+                  "summary": "The People Power Party publicly signaled that it would allow its members to participate and vote on a future impeachment motion only if President Yoon Suk Yeol agrees to an orderly resignation timeline, and that otherwise it keeps its boycott; the party framed this as a conditional proposal with no binding commitment until a party decision."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "only if President Yoon Suk Yeol agrees to an orderly resignation timeline",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The People Power Party publicly signaled that it would allow its members to participate and vote on a future impeachment motion only if President Yoon Suk Yeol agrees to an orderly resignation timeline, and that otherwise it keeps its boycott; the party framed this as a conditional proposal with no binding commitment until a party decision.",
+                  "date": "2025-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                  "action": "PPP signals it would allow members to participate and vote on a future impeachment motion only if Yoon agrees to an orderly resignation timeline; otherwise it keeps the boycott. This is a conditional proposal, not implementation.\n承诺：Participation conditional on a Yoon resignation commitment; no binding commitment until party decision.\n触发或复核条件：Yoon publicly commits to a resignation timetable.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "PPP leadership reaffirms its 7 December stance: party representatives will not participate in a second impeachment vote, denying the two-thirds quorum again, while leaving room to revisit if Yoon resigns or new evidence emerges.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "PPP signals it would allow members to participate and vote on a future impeachment motion only if Yoon agrees to an orderly resignation timeline; otherwise it keeps the boycott. This is a conditional proposal, not implementation.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "No new outward PPP move this round; observe whether the Democratic Party refiles and how Yoon responds before fixing a position on the next vote.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.62,
+                "basis": "The first impeachment motion was canceled on 7 December with only 195 lawmakers present of the 200 needed, and the PPP's later willingness to vote was conditional on a resignation timeline with no binding commitment. The opposition's pledge to file new motions weekly keeps a qualifying vote plausible before the deadline, but the decisive two-thirds threshold remains unverified.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.62,
+          "error": null,
+          "action_path_probability": 0.3
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.62,
+      "covered_p_yes": 0.62,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.62,
+        0.6200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "8d63c9e5-236c-4def-b14f-7548fb7708f5",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:29:15.701685+00:00",
+      "contract_id": "0x68ff092a4ea332946bc7ca59efc2b2a56bb702fd0d85d02ba883d29d7fdc5f2e",
+      "forecast_cutoff": "2024-12-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "6279d54d43fe11833a6cfbb6b5a65db0f4c29a89a3b23dd886605c7c8dd4b5ac",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 47.102
+    },
+    {
+      "calls": 36,
+      "tokens": 358792,
+      "input_tokens": 336017,
+      "output_tokens": 22775,
+      "accounted_tokens_upper": 358792,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-08",
+                "interval_end": "2024-12-14",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-08T23:59:59+00:00",
+                "interval_end_utc": "2024-12-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "status": "executed",
+                  "summary": "People Power Party signaled it would allow its representatives to participate in a renewed impeachment vote only if President Yoon commits to an orderly early exit acceptable to the party; otherwise the boycott continues. The party framed this as a conditional proposal, not an executed vote commitment."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "People Power Party signaled it would allow its representatives to participate in a renewed impeachment vote only if President Yoon commits to an orderly early exit acceptable to the party",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "People Power Party signaled it would allow its representatives to participate in a renewed impeachment vote only if President Yoon commits to an orderly early exit acceptable to the party; otherwise the boycott continues. The party framed this as a conditional proposal, not an executed vote commitment.",
+                  "date": "2024-12-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                  "action": "PPP signals it would allow representatives to participate in a renewed impeachment vote only if Yoon commits to an orderly early exit and the party's conditions are met; otherwise the boycott continues. This is a conditional proposal, not an executed vote commitment.\n承诺：Participation conditional on Yoon's early-exit commitment and party conditions; no unconditional yes vote.\n触发或复核条件：Yoon offers an orderly resignation timetable acceptable to PPP.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "PPP leadership maintains its 7 December boycott stance: party representatives will not participate in a renewed impeachment vote, denying the opposition the two-thirds quorum needed. No binding commitment beyond this round is made; the stance is reviewed if a new motion is tabled.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "PPP signals it would allow representatives to participate in a renewed impeachment vote only if Yoon commits to an orderly early exit and the party's conditions are met; otherwise the boycott continues. This is a conditional proposal, not an executed vote commitment.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first impeachment motion was filed on 4 December but failed on 7 December when PPP lawmakers boycotted, leaving only 195 present of the 200 needed. The opposition pledged weekly new motions, and public pressure (58% favoring resignation or impeachment) plus the martial-law crisis make a successful second vote plausible before the deadline.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-14",
+                "interval_end": "2024-12-20",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 12,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-14T00:00:00+00:00",
+                "interval_end_utc": "2024-12-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first impeachment motion was filed on 4 December but failed on 7 December when PPP lawmakers boycotted, leaving only 195 present of the 200 needed. The opposition pledged weekly new motions, and public pressure (58% favoring resignation or impeachment) plus the martial-law crisis make a successful second vote plausible before the deadline.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-20",
+                "interval_end": "2024-12-26",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 18,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-20T00:00:00+00:00",
+                "interval_end_utc": "2024-12-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first impeachment motion was filed on 4 December but failed on 7 December when PPP lawmakers boycotted, leaving only 195 present of the 200 needed. The opposition pledged weekly new motions, and public pressure (58% favoring resignation or impeachment) plus the martial-law crisis make a successful second vote plausible before the deadline.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-26",
+                "interval_end": "2025-01-01",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 24,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-26T00:00:00+00:00",
+                "interval_end_utc": "2025-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "status": "executed",
+                  "summary": "People Power Party announced that its representatives will participate in the next impeachment vote without requiring President Yoon's prior early-exit commitment, leaving individual members to vote their conscience; no bloc vote instruction was issued."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_23a7f2667c0c57ca",
+                    "action_4_agent_23a7f2667c0c57ca"
+                  ],
+                  "outcome": "realized",
+                  "effect": "People Power Party announced that its representatives will participate in the next impeachment vote without requiring President Yoon's prior early-exit commitment"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "People Power Party announced that its representatives will participate in the next impeachment vote without requiring President Yoon's prior early-exit commitment",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "People Power Party announced that its representatives will participate in the next impeachment vote without requiring President Yoon's prior early-exit commitment, leaving individual members to vote their conscience; no bloc vote instruction was issued.",
+                  "date": "2024-12-27"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                  "action": "Announce that PPP representatives will participate in the next impeachment vote without requiring Yoon's prior early-exit commitment, leaving individual members to vote their conscience.\n承诺：Unconditional participation in the next vote; no bloc vote instruction.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm that PPP will let its representatives vote on a renewed impeachment motion only if Yoon commits to an orderly early exit acceptable to the party; absent that commitment by the vote, the boycott continues. Conditional proposal, not an executed yes vote.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Announce that PPP representatives will participate in the next impeachment vote without requiring Yoon's prior early-exit commitment, leaving individual members to vote their conscience.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first motion failed on 7 December when PPP boycotted (195 present vs 200 needed). By round 4 the PPP said its members could join the next vote without a prior Yoon exit commitment, removing the main obstacle; opposition parties had pledged weekly new motions. Still unverified is whether a second motion actually reached two-thirds before the deadline.",
+                "evidence_quote": "People Power Party announced that its representatives will participate in the next impeachment vote without requiring President Yoon's prior early-exit commitment, leaving individual members to vote their conscience; no bloc vote instruction was issued.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.075
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-08",
+                "interval_end": "2024-12-14",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-08T23:59:59+00:00",
+                "interval_end_utc": "2024-12-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "status": "executed",
+                  "summary": "The People Power Party issued a public statement maintaining its caucus position of non-participation in the current impeachment motion, framing it as opposing a rushed process while leaving open that PPP will attend and vote if the opposition sets a fixed schedule and drops unrelated demands."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "People Power Party issued a public statement maintaining its caucus position of non-participation in the current impeachment motion",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The People Power Party issued a public statement maintaining its caucus position of non-participation in the current impeachment motion, framing it as opposing a rushed process while leaving open that PPP will attend and vote if the opposition sets a fixed schedule and drops unrelated demands.",
+                  "date": "2024-12-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "candidate_id": "agent_23a7f2667c0c57ca:initial:1",
+                  "action": "Issue a public party statement maintaining the caucus position of non-participation in the current impeachment motion, framing it as opposing a rushed process while leaving open that PPP will attend and vote if the opposition sets a fixed schedule and drops unrelated demands.\n承诺：Maintain non-participation unless the opposition meets the stated conditions.\n触发或复核条件：Opposition agrees to a fixed vote schedule and narrows the motion's scope.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public party statement maintaining the caucus position of non-participation in the current impeachment motion, framing it as opposing a rushed process while leaving open that PPP will attend and vote if the opposition sets a fixed schedule and drops unrelated demands.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first impeachment motion was filed on 4 December but failed on 7 December when PPP lawmakers boycotted, leaving only 195 present of the 200 needed. The opposition pledged weekly new motions, and public pressure (58% favoring resignation or impeachment) plus the martial-law crisis make a successful second vote plausible before the deadline.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-14",
+                "interval_end": "2024-12-20",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 12,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-14T00:00:00+00:00",
+                "interval_end_utc": "2024-12-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first impeachment motion was filed on 4 December but failed on 7 December when PPP lawmakers boycotted, leaving only 195 present of the 200 needed. The opposition pledged weekly new motions, and public pressure (58% favoring resignation or impeachment) plus the martial-law crisis make a successful second vote plausible before the deadline.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-20",
+                "interval_end": "2024-12-26",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 18,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-20T00:00:00+00:00",
+                "interval_end_utc": "2024-12-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first impeachment motion was filed on 4 December but failed on 7 December when PPP lawmakers boycotted, leaving only 195 present of the 200 needed. The opposition pledged weekly new motions, and public pressure (58% favoring resignation or impeachment) plus the martial-law crisis make a successful second vote plausible before the deadline.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-26",
+                "interval_end": "2025-01-01",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 24,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-26T00:00:00+00:00",
+                "interval_end_utc": "2025-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                  "action": "Keep the existing 9 December public position without a new outward statement this round.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public PPP statement reiterating caucus non-participation in the current impeachment motion unless the opposition fixes a vote schedule and narrows scope; state that if those conditions are met, PPP will attend and vote as a caucus rather than boycott.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Keep the existing 9 December public position without a new outward statement this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first motion failed on 7 December with only 195 lawmakers present versus 200 needed, and PPP maintained non-participation as of 9 December. But the opposition pledged weekly new motions, PPP left open attending if a fixed schedule is set, and public pressure (58% favoring resignation/impeachment) plus the martial-law episode keep a later successful vote plausible before the deadline.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.18
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 4,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 1,
+        "condition_change_count": 2,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.72,
+      "covered_p_yes": 0.72,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.72,
+        0.72
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "1890c606-5982-41bf-8157-f73e52f68624",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:30:31.373981+00:00",
+      "contract_id": "0x68ff092a4ea332946bc7ca59efc2b2a56bb702fd0d85d02ba883d29d7fdc5f2e",
+      "forecast_cutoff": "2024-12-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "6279d54d43fe11833a6cfbb6b5a65db0f4c29a89a3b23dd886605c7c8dd4b5ac",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 75.669
+    },
+    {
+      "calls": 18,
+      "tokens": 164829,
+      "input_tokens": 156395,
+      "output_tokens": 8434,
+      "accounted_tokens_upper": 164829,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-08",
+                "interval_end": "2024-12-14",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-08T23:59:59+00:00",
+                "interval_end_utc": "2024-12-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "status": "executed",
+                  "summary": "The People Power Party issued a public statement reaffirming that it will decide its participation in any renewed impeachment vote through its own internal process, without committing to either boycott or support."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "The People Power Party issued a public statement reaffirming that it will decide its participation in any renewed impeachment vote through its own internal process, without committing to either boycott or support.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The People Power Party issued a public statement reaffirming that it will decide its participation in any renewed impeachment vote through its own internal process, without committing to either boycott or support.",
+                  "date": "2024-12-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                  "action": "Issue a public statement reaffirming the party's position that it will decide participation in any renewed impeachment vote through its own internal process, without committing to boycott or support.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Issue a public statement reaffirming the party's position that it will decide participation in any renewed impeachment vote through its own internal process, without committing to boycott or support.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first impeachment motion was filed on 4 December but failed on 7 December when PPP lawmakers boycotted, leaving only 195 present of the 200 needed. The opposition has pledged weekly new motions, and public pressure (58% favoring resignation or impeachment) plus the martial-law crisis make a successful vote before the deadline plausible, though the PPP boycott remains the key obstacle.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-14",
+                "interval_end": "2024-12-20",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 12,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-14T00:00:00+00:00",
+                "interval_end_utc": "2024-12-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first impeachment motion was filed on 4 December but failed on 7 December when PPP lawmakers boycotted, leaving only 195 present of the 200 needed. The opposition has pledged weekly new motions, and public pressure (58% favoring resignation or impeachment) plus the martial-law crisis make a successful vote before the deadline plausible, though the PPP boycott remains the key obstacle.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-20",
+                "interval_end": "2024-12-26",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 18,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-20T00:00:00+00:00",
+                "interval_end_utc": "2024-12-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The first impeachment motion was filed on 4 December but failed on 7 December when PPP lawmakers boycotted, leaving only 195 present of the 200 needed. The opposition has pledged weekly new motions, and public pressure (58% favoring resignation or impeachment) plus the martial-law crisis make a successful vote before the deadline plausible, though the PPP boycott remains the key obstacle.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2024-12-26",
+                "interval_end": "2025-01-01",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 24,
+                "interval_days": 6,
+                "interval_start_utc": "2024-12-26T00:00:00+00:00",
+                "interval_end_utc": "2025-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "status": "executed",
+                  "summary": "The People Power Party issued a public statement reaffirming that it will maintain its collective boycott of any renewed impeachment vote, citing the need for due process and party unity."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "The People Power Party issued a public statement reaffirming that it will maintain its collective boycott of any renewed impeachment vote",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "The People Power Party issued a public statement reaffirming that it will maintain its collective boycott of any renewed impeachment vote, citing the need for due process and party unity.",
+                  "date": "2024-12-27"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                  "action": "Issue a public statement reaffirming that PPP will maintain its collective boycott of any renewed impeachment vote, citing the need for due process and party unity.\n承诺：PPP representatives will collectively abstain from any renewed impeachment vote before the 2024 deadline.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Issue a public statement that PPP will not collectively boycott a renewed impeachment vote: its representatives will attend and vote according to conscience, with the party taking no binding whip position.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement reaffirming that PPP will maintain its collective boycott of any renewed impeachment vote, citing the need for due process and party unity.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The first impeachment motion was canceled on 7 December after PPP boycotted, leaving only 195 of the 200 needed. The latest simulated event has PPP reaffirming a collective boycott of any renewed vote, making the required two-thirds majority unlikely before the deadline.",
+                "evidence_quote": "The People Power Party issued a public statement reaffirming that it will maintain its collective boycott of any renewed impeachment vote, citing the need for due process and party unity.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.12
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 4,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "8a247138-981e-4bf3-a138-6d400bcf0954",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:02:43.663644+00:00",
+      "contract_id": "0x68ff092a4ea332946bc7ca59efc2b2a56bb702fd0d85d02ba883d29d7fdc5f2e",
+      "forecast_cutoff": "2024-12-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "6279d54d43fe11833a6cfbb6b5a65db0f4c29a89a3b23dd886605c7c8dd4b5ac",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 67.968
+    },
+    {
+      "calls": 14,
+      "tokens": 134692,
+      "input_tokens": 127476,
+      "output_tokens": 7216,
+      "accounted_tokens_upper": 134692,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2024-12-08",
+                "interval_end": "2025-01-01",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 24,
+                "interval_days": 24,
+                "interval_start_utc": "2024-12-08T23:59:59+00:00",
+                "interval_end_utc": "2025-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "status": "executed",
+                  "summary": "The People Power Party publicly offered the opposition a negotiated exit: it would allow a free vote on impeachment only if Yoon Suk Yeol first agrees to an orderly resignation timeline and the opposition drops other punitive measures."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The People Power Party publicly offered the opposition a negotiated exit: it would allow a free vote on impeachment only if Yoon Suk Yeol first agrees to an orderly resignation timeline and the opposition drops other punitive measures.",
+                  "date": "2025-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                  "action": "People Power Party offers the opposition a negotiated exit: it will allow a free vote on impeachment only if Yoon first agrees to an orderly resignation timeline and the opposition drops other punitive measures.\n承诺：No PPP participation in an impeachment vote unless the stated preconditions are met.\n触发或复核条件：Yoon commits to a resignation timeline and opposition narrows its demands.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "People Power Party publicly reaffirms its decision to boycott any new impeachment vote, calling on members to stay away from the floor so the opposition cannot reach the two-thirds threshold, and urges Yoon to present a stabilization plan.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "People Power Party offers the opposition a negotiated exit: it will allow a free vote on impeachment only if Yoon first agrees to an orderly resignation timeline and the opposition drops other punitive measures.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The Dec 7 motion failed because PPP boycotted (195 present vs 200 needed), but the opposition pledged weekly new motions and a Jan 2025 simulated PPP offer conditions a free vote on an orderly resignation. That conditional opening plus sustained public pressure makes a later in-window approval more likely than not, though PPP cooperation remains unconfirmed.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.3
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2024-12-08",
+                "interval_end": "2025-01-01",
+                "horizon_end": "2025-01-01",
+                "elapsed_days": 24,
+                "interval_days": 24,
+                "interval_start_utc": "2024-12-08T23:59:59+00:00",
+                "interval_end_utc": "2025-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "status": "executed",
+                  "summary": "People Power Party leadership communicated to its National Assembly members a party position to continue withholding participation from any renewed Yoon Suk Yeol impeachment vote unless the party formally reverses the boycott, with the party whip instructed to keep the caucus aligned; the stance applies to any renewed impeachment motion filed before December 31, 2024."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "South Korean President impeached in 2024?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "continue withholding participation from any renewed Yoon Suk Yeol impeachment vote",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "People Power Party leadership communicated to its National Assembly members a party position to continue withholding participation from any renewed Yoon Suk Yeol impeachment vote unless the party formally reverses the boycott, with the party whip instructed to keep the caucus aligned; the stance applies to any renewed impeachment motion filed before December 31, 2024.",
+                  "date": "2025-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_23a7f2667c0c57ca",
+                  "actor_name": "People Power Party",
+                  "candidate_id": "agent_23a7f2667c0c57ca:initial:1",
+                  "action": "People Power Party leadership adopts and communicates a party position to its National Assembly members: continue withholding participation from a renewed Yoon Suk Yeol impeachment vote unless the party formally reverses the boycott decision, with the party whip instructed to keep the caucus aligned.\n承诺：Maintain the boycott of the impeachment vote unless the party formally reverses this stance.\n触发或复核条件：Applies to any renewed impeachment motion filed before December 31, 2024.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "People Power Party leadership adopts and communicates a party position to its National Assembly members: continue withholding participation from a renewed Yoon Suk Yeol impeachment vote unless the party formally reverses the boycott decision, with the party whip instructed to keep the caucus aligned.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "People Power Party signals it would allow a free or partial-participation vote on a future impeachment motion if Yoon presents a concrete resignation timetable or the party's own conditions for orderly transition are met, framing this as a party decision rather than endorsement of impeachment.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_23a7f2667c0c57ca:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Hold the existing boycott stance without a new outward move; monitor whether the Democratic Party files a renewed motion and whether PPP members defect, then reassess.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The first impeachment motion was canceled on 7 December with only 195 lawmakers present of the 200 needed, and the PPP leadership's communicated stance is to keep withholding participation from any renewed vote. That makes a two-thirds majority by December 31 uncertain, though the opposition's weekly refiling and public pressure keep a later successful vote plausible.",
+                "evidence_quote": "A majority of the ruling People Power Party (PPP)'s representatives boycotted the vote, causing the motion to be canceled with only 195 lawmakers present of the 200 needed to impeach on 7 December. The Democratic Party vowed to file new impeachment motions weekly after the first one failed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.6
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.5349999999999999,
+      "covered_p_yes": 0.5349999999999999,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.5349999999999999,
+        0.5349999999999999
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "0ea60b80-0380-45dc-b1a1-a410fab1a5f2",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:03:18.430196+00:00",
+      "contract_id": "0x68ff092a4ea332946bc7ca59efc2b2a56bb702fd0d85d02ba883d29d7fdc5f2e",
+      "forecast_cutoff": "2024-12-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "6279d54d43fe11833a6cfbb6b5a65db0f4c29a89a3b23dd886605c7c8dd4b5ac",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 34.988
+    },
+    {
+      "calls": 46,
+      "tokens": 457128,
+      "input_tokens": 427514,
+      "output_tokens": 29614,
+      "accounted_tokens_upper": 457128,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.549707,
+      "coverage": 0.7297,
+      "unexplored_mass": 0.27029999999999993,
+      "unknown_bounds": [
+        0.414557,
+        0.6848569999999999
+      ],
+      "search_iterations": 8,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 8,
+          "search_value": 0.7275324999999999,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.55,
+          "visits": 3,
+          "search_value": 0.6213333333333333,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.55,
+          "visits": 2,
+          "search_value": 0.677,
+          "conditional_p_yes": 0.85,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.55,
+          "visits": 1,
+          "search_value": 0.844,
+          "conditional_p_yes": 0.85,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.33,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.18150000000000002
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.1375,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.5,
+          "frontier": true,
+          "contribution": 0.06875
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.08250000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.3,
+          "visits": 4,
+          "search_value": 0.812905,
+          "conditional_p_yes": 0.68,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.18,
+          "visits": 3,
+          "search_value": 0.7633933333333335,
+          "conditional_p_yes": 0.62,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.099,
+          "visits": 1,
+          "search_value": 0.7838400000000001,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.0594,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.72,
+          "frontier": true,
+          "contribution": 0.042768
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.0396,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.75,
+          "frontier": true,
+          "contribution": 0.029700000000000004
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.054,
+          "visits": 1,
+          "search_value": 0.76582,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            2,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.0297,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.62,
+          "frontier": true,
+          "contribution": 0.018414
+        },
+        {
+          "path": [
+            2,
+            1,
+            2,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.0135,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.007425
+        },
+        {
+          "path": [
+            2,
+            1,
+            2,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.010799999999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.026999999999999982,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.12,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.066
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.1499999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "e362c920-4422-431f-84a3-6cf581f5ade3",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:06:40.048833+00:00",
+      "contract_id": "0x68ff092a4ea332946bc7ca59efc2b2a56bb702fd0d85d02ba883d29d7fdc5f2e",
+      "forecast_cutoff": "2024-12-08T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "6279d54d43fe11833a6cfbb6b5a65db0f4c29a89a3b23dd886605c7c8dd4b5ac",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 201.622
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2024-12-08T23:59:59+00:00",
+  "forecast_key": "0x68ff092a4ea332946bc7ca59efc2b2a56bb702fd0d85d02ba883d29d7fdc5f2e",
+  "group_id": "south-korean-president-impeached-in-2024",
+  "evidence_sha256": "6279d54d43fe11833a6cfbb6b5a65db0f4c29a89a3b23dd886605c7c8dd4b5ac",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 754,
+    "input_tokens": 594,
+    "output_tokens": 160,
+    "accounted_tokens_upper": 754,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2024-12-08",
+        "2025-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2024-12-08",
+        "2024-12-14",
+        "2024-12-20",
+        "2024-12-26",
+        "2025-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2024-12-08",
+        "2024-12-14",
+        "2024-12-20",
+        "2024-12-26",
+        "2025-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2024-12-08",
+        "2025-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2024-12-08",
+        "2024-12-14",
+        "2024-12-20",
+        "2024-12-26",
+        "2025-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-01-01T04:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2024-12-31T12:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_5688a2720d589cbf",
+          "name": "People Power Party",
+          "role": "Ruling party whose representatives decide participation or boycott in the impeachment vote.",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "National Assembly proposes and approves an impeachment motion against Yoon Suk Yeol by the required two-thirds majority.",
+        "Opposition parties file/submit an impeachment motion against Yoon Suk Yeol to the National Assembly.",
+        "Current authority for PPP representatives decide whether to participate in or boycott the impeachment vote, affecting attainment of the required majority. requires independent evidence; People Power Party can participate conditionally."
+      ],
+      "gaps": [
+        "No named individual officeholder is identified as casting the decisive National Assembly vote; the collective legislature is used.",
+        "PPP internal stance and individual members' intentions are unknown as of the cutoff.",
+        "Constitutional Court review is explicitly irrelevant to resolution and thus not seated."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "National Assembly proposes and approves an impeachment motion against Yoon Suk Yeol by the required two-thirds majority.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D2",
+          "choice": "Opposition parties file/submit an impeachment motion against Yoon Suk Yeol to the National Assembly.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D3",
+          "choice": "PPP representatives decide whether to participate in or boycott the impeachment vote, affecting attainment of the required majority.",
+          "owner": "People Power Party",
+          "support": "conditional"
+        }
+      ],
+      "gap_repair": {
+        "status": "participants_added",
+        "added": 1
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 11,
+    "tokens": 30030,
+    "input_tokens": 26113,
+    "output_tokens": 3917,
+    "accounted_tokens_upper": 30030,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

@@ -1,0 +1,2214 @@
+{
+  "run_id": "4e035d0f-0e2a-477c-8afe-9d3a0308c1e0",
+  "case_id": "market_bd2856faf30cd75964fbdfde",
+  "status": "partial",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2823,
+      "input_tokens": 2813,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2823,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2813,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:29:44.169612+00:00",
+      "contract_id": "0xe0097a5f3d9739ca64e2ba58c70261482a3e7ed33afdbb381b230cbd5e494ba7",
+      "forecast_cutoff": "2025-03-24T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c715beddddde21c031ca5e26e8d186b5e3ac11f7f9939c5050945ff898413418",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.82
+    },
+    {
+      "calls": 2,
+      "tokens": 5646,
+      "input_tokens": 5626,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5646,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2813,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2813,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:29:45.397538+00:00",
+      "contract_id": "0xe0097a5f3d9739ca64e2ba58c70261482a3e7ed33afdbb381b230cbd5e494ba7",
+      "forecast_cutoff": "2025-03-24T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c715beddddde21c031ca5e26e8d186b5e3ac11f7f9939c5050945ff898413418",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.227
+    },
+    {
+      "calls": 8,
+      "tokens": 98508,
+      "input_tokens": 93274,
+      "output_tokens": 5234,
+      "accounted_tokens_upper": 98508,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-03-24",
+                "interval_end": "2025-05-01",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 38,
+                "interval_days": 38,
+                "interval_start_utc": "2025-03-24T23:59:59+00:00",
+                "interval_end_utc": "2025-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "status": "executed",
+                  "summary": "ByteDance issued a public statement that it is actively pursuing a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant structure, while noting that any sale must satisfy applicable Chinese export-control requirements."
+                },
+                {
+                  "action_id": "action_1_agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "status": "executed",
+                  "summary": "President Donald Trump signed a further executive order extending non-enforcement of PAFACA beyond the initial 75-day window, keeping the statute legally unenforced through the April 30 horizon and continuing immunity for service providers."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_dc51a59a2f8d540f",
+                    "action_1_agent_9c395be9de7b577d"
+                  ],
+                  "outcome": "realized",
+                  "effect": "President Donald Trump signed a further executive order extending non-enforcement of PAFACA beyond the initial 75-day window"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "unknown",
+                  "after": "unmet",
+                  "summary": "keeping the statute legally unenforced through the April 30 horizon",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "ByteDance issued a public statement that it is actively pursuing a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant structure, while noting that any sale must satisfy applicable Chinese export-control requirements.",
+                  "date": "2025-05"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "President Donald Trump signed a further executive order extending non-enforcement of PAFACA beyond the initial 75-day window, keeping the statute legally unenforced through the April 30 horizon and continuing immunity for service providers.",
+                  "date": "2025-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                  "action": "Issue a public statement that ByteDance is actively pursuing a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant structure, while noting that any sale must satisfy applicable Chinese export-control requirements.\n承诺：Publicly commit to pursuing a qualified divestiture path rather than a shutdown.\n触发或复核条件：Contingent on U.S. government approval and Chinese export-control clearance.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement that ByteDance is actively pursuing a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant structure, while noting that any sale must satisfy applicable Chinese export-control requirements.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                  "action": "Sign a further executive order extending non-enforcement of PAFACA beyond the initial 75-day window (which lapses in early April), keeping the statute legally unenforced through the April 30 horizon and continuing immunity for service providers.\n承诺：Extend executive non-enforcement of PAFACA past the original 75-day period so no ban becomes legally enforceable before May.\n触发或复核条件：No qualified divestiture or compliant sale is concluded by ByteDance before the current non-enforcement window ends.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Sign a further executive order extending non-enforcement of PAFACA beyond the initial 75-day window (which lapses in early April), keeping the statute legally unenforced through the April 30 horizon and continuing immunity for service providers.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm that a U.S. government 50% ownership arrangement for TikTok would satisfy PAFACA ownership concerns, and signal that enforcement will be held while such a deal is negotiated, without yet signing a new order.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "Simulated round-1 events show Trump extended non-enforcement beyond the initial 75-day window through the April 30 horizon, and ByteDance described an active divestiture pursuit. No settled event shows the ban becoming legally enforceable in-window, so Yes requires an unobserved reversal.",
+                "evidence_quote": "President Donald Trump signed a further executive order extending non-enforcement of PAFACA beyond the initial 75-day window, keeping the statute legally unenforced through the April 30 horizon and continuing immunity for service providers.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 0.42
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 2,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.08,
+      "covered_p_yes": 0.08,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.08,
+        0.08000000000000007
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "0aa58caa-b8b7-446a-8846-a7a6ec896b21",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:30:39.184441+00:00",
+      "contract_id": "0xe0097a5f3d9739ca64e2ba58c70261482a3e7ed33afdbb381b230cbd5e494ba7",
+      "forecast_cutoff": "2025-03-24T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c715beddddde21c031ca5e26e8d186b5e3ac11f7f9939c5050945ff898413418",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 53.784
+    },
+    {
+      "calls": 47,
+      "tokens": 637517,
+      "input_tokens": 607787,
+      "output_tokens": 29730,
+      "accounted_tokens_upper": 637517,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-03-24",
+                "interval_end": "2025-04-02",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 9,
+                "interval_days": 9,
+                "interval_start_utc": "2025-03-24T23:59:59+00:00",
+                "interval_end_utc": "2025-04-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "status": "executed",
+                  "summary": "ByteDance issued a public statement that it continues to pursue a qualified divestiture of TikTok's U.S. operations and is engaged with U.S. authorities toward a compliant deal, while warning that any sale must clear Chinese export-control review."
+                },
+                {
+                  "action_id": "action_1_agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "status": "executed",
+                  "summary": "President Donald Trump signed a new executive order extending non-enforcement of PAFACA against TikTok beyond the original 75-day window, preserving immunity for service providers and app stores, and stated the extension is to allow a negotiated ownership arrangement to conclude."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_9c395be9de7b577d",
+                    "action_1_agent_dc51a59a2f8d540f"
+                  ],
+                  "outcome": "realized",
+                  "effect": "extending non-enforcement of PAFACA against TikTok beyond the original 75-day window"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "extending non-enforcement of PAFACA against TikTok beyond the original 75-day window",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "ByteDance issued a public statement that it continues to pursue a qualified divestiture of TikTok's U.S. operations and is engaged with U.S. authorities toward a compliant deal, while warning that any sale must clear Chinese export-control review.",
+                  "date": "2025-03-26"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "President Donald Trump signed a new executive order extending non-enforcement of PAFACA against TikTok beyond the original 75-day window, preserving immunity for service providers and app stores, and stated the extension is to allow a negotiated ownership arrangement to conclude.",
+                  "date": "2025-03-31"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                  "action": "Issue a public statement that ByteDance continues to pursue a qualified divestiture of TikTok's U.S. operations and is engaged with U.S. authorities to reach a compliant deal, while warning that any sale must clear Chinese export-control review.\n承诺：Pursue a qualified divestiture subject to Chinese export-control approval\n触发或复核条件：If a compliant buyer and regulatory approvals are achievable before the enforcement deadline",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement that ByteDance continues to pursue a qualified divestiture of TikTok's U.S. operations and is engaged with U.S. authorities to reach a compliant deal, while warning that any sale must clear Chinese export-control review.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                  "action": "Sign a new executive order extending non-enforcement of PAFACA against TikTok beyond the original 75-day window, preserving immunity for service providers and app stores, and publicly state the extension is to allow a negotiated ownership arrangement to conclude.\n承诺：Extend non-enforcement of PAFACA beyond the initial 75-day period so the ban does not become enforceable before May.\n触发或复核条件：Contingent on no completed qualified divestiture being in place when the current window lapses.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Sign a new executive order extending non-enforcement of PAFACA against TikTok beyond the original 75-day window, preserving immunity for service providers and app stores, and publicly state the extension is to allow a negotiated ownership arrangement to conclude.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly press for a U.S. government 50% ownership arrangement in TikTok and call on ByteDance to reach a compliant deal, framing this as the path that avoids enforcement, without issuing a new enforcement order this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 75-day non-enforcement order signed January 20 runs to roughly April 5, past the April 30 window end, so a legally enforceable ban requires the order to be lifted early or expire without compliance. No evidence shows such a step before the cutoff; the January 18-19 shutdown predates the outcome window.",
+                "evidence_quote": "Trump signed the executive order on January 20 following his inauguration, delaying the enforcement of PAFACA for at least 75 days for his administration and promising immunity for companies that provided services to TikTok during that time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-04-02",
+                "interval_end": "2025-04-12",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 19,
+                "interval_days": 10,
+                "interval_start_utc": "2025-04-02T00:00:00+00:00",
+                "interval_end_utc": "2025-04-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 75-day non-enforcement order signed January 20 runs to roughly April 5, past the April 30 window end, so a legally enforceable ban requires the order to be lifted early or expire without compliance. No evidence shows such a step before the cutoff; the January 18-19 shutdown predates the outcome window.",
+                "evidence_quote": "Trump signed the executive order on January 20 following his inauguration, delaying the enforcement of PAFACA for at least 75 days for his administration and promising immunity for companies that provided services to TikTok during that time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-04-12",
+                "interval_end": "2025-04-21",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 28,
+                "interval_days": 9,
+                "interval_start_utc": "2025-04-12T00:00:00+00:00",
+                "interval_end_utc": "2025-04-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 75-day non-enforcement order signed January 20 runs to roughly April 5, past the April 30 window end, so a legally enforceable ban requires the order to be lifted early or expire without compliance. No evidence shows such a step before the cutoff; the January 18-19 shutdown predates the outcome window.",
+                "evidence_quote": "Trump signed the executive order on January 20 following his inauguration, delaying the enforcement of PAFACA for at least 75 days for his administration and promising immunity for companies that provided services to TikTok during that time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-04-21",
+                "interval_end": "2025-05-01",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 38,
+                "interval_days": 10,
+                "interval_start_utc": "2025-04-21T00:00:00+00:00",
+                "interval_end_utc": "2025-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "status": "executed",
+                  "summary": "ByteDance publicly reaffirmed that it is actively pursuing a qualified divestiture of TikTok's U.S. operations and remains engaged with U.S. authorities, while noting that any sale must clear Chinese export-control review; no new shutdown or sale was executed."
+                },
+                {
+                  "action_id": "action_4_agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "status": "executed",
+                  "summary": "President Donald Trump publicly reaffirmed support for a negotiated ownership arrangement, including a possible U.S. government stake, and signaled continued non-enforcement while talks proceed, without signing a new order."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_dc51a59a2f8d540f",
+                    "action_4_agent_9c395be9de7b577d"
+                  ],
+                  "outcome": "realized",
+                  "effect": "signaled continued non-enforcement while talks proceed, without signing a new order"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "pending",
+                  "after": "unmet",
+                  "summary": "signaled continued non-enforcement while talks proceed, without signing a new order",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "ByteDance publicly reaffirmed that it is actively pursuing a qualified divestiture of TikTok's U.S. operations and remains engaged with U.S. authorities, while noting that any sale must clear Chinese export-control review; no new shutdown or sale was executed.",
+                  "date": "2025-04-24"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "President Donald Trump publicly reaffirmed support for a negotiated ownership arrangement, including a possible U.S. government stake, and signaled continued non-enforcement while talks proceed, without signing a new order.",
+                  "date": "2025-04-28"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                  "action": "Reaffirm publicly that ByteDance is actively pursuing a qualified divestiture of TikTok's U.S. operations and remains engaged with U.S. authorities, while noting any sale must clear Chinese export-control review. No new unilateral shutdown or sale is executed this round.\n承诺：Continue pursuing a qualified divestiture subject to Chinese export-control approval\n触发或复核条件：If a compliant buyer and both U.S. and Chinese approvals remain achievable before enforcement resumes",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Reaffirm publicly that ByteDance is actively pursuing a qualified divestiture of TikTok's U.S. operations and remains engaged with U.S. authorities, while noting any sale must clear Chinese export-control review. No new unilateral shutdown or sale is executed this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "candidate_id": "agent_9c395be9de7b577d:initial:2",
+                  "action": "Publicly reaffirm support for a negotiated ownership arrangement, including a possible U.S. government stake, and signal continued non-enforcement while talks proceed, without signing a new order this round.\n承诺：Signal continued non-enforcement while a negotiated ownership arrangement proceeds.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "Sign a further executive order extending non-enforcement of PAFACA against TikTok through the end of April and beyond, preserving service-provider and app-store immunity, and publicly state the extension is to let the negotiated ownership arrangement conclude.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly reaffirm support for a negotiated ownership arrangement, including a possible U.S. government stake, and signal continued non-enforcement while talks proceed, without signing a new order this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 75-day non-enforcement window from Jan 20 would lapse around early April, but a simulated Mar 31 order extended non-enforcement, and late-April statements show talks continuing without a shutdown or sale. No in-window ban became legally enforceable; only an unexecuted divestiture path remains.",
+                "evidence_quote": "President Donald Trump signed a new executive order extending non-enforcement of PAFACA against TikTok beyond the original 75-day window, preserving immunity for service providers and app stores, and stated the extension is to allow a negotiated ownership arrangement to conclude.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.057749999999999996
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-03-24",
+                "interval_end": "2025-04-02",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 9,
+                "interval_days": 9,
+                "interval_start_utc": "2025-03-24T23:59:59+00:00",
+                "interval_end_utc": "2025-04-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "status": "executed",
+                  "summary": "President Donald Trump signed a further executive order extending non-enforcement of PAFACA through at least April 30, 2025, contingent on continued divestiture/ownership negotiations, while continuing immunity assurances for companies providing services to TikTok."
+                },
+                {
+                  "action_id": "action_1_agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_9c395be9de7b577d",
+                    "action_1_agent_dc51a59a2f8d540f"
+                  ],
+                  "outcome": "pending",
+                  "effect": "contingent on continued divestiture/ownership negotiations"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "extending non-enforcement of PAFACA through at least April 30, 2025",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "President Donald Trump signed a further executive order extending non-enforcement of PAFACA through at least April 30, 2025, contingent on continued divestiture/ownership negotiations, while continuing immunity assurances for companies providing services to TikTok.",
+                  "date": "2025-04-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                  "action": "Hold current posture: keep TikTok operating under the 75-day non-enforcement window while monitoring whether a qualified divestiture satisfying both U.S. approval and Chinese export-control requirements can be reached before the order lapses. No new outward move this round.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Hold current posture: keep TikTok operating under the 75-day non-enforcement window while monitoring whether a qualified divestiture satisfying both U.S. approval and Chinese export-control requirements can be reached before the order lapses. No new outward move this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that ByteDance is actively working toward a qualified divestiture of TikTok's U.S. operations that would satisfy PAFACA, contingent on U.S. government approval and compliance with applicable Chinese export-control requirements.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                  "action": "Sign a further executive order extending non-enforcement of PAFACA beyond the initial 75-day window, keeping the ban legally unenforceable and continuing immunity assurances for service providers, while pressing for a U.S. government 50% ownership arrangement with ByteDance.\n承诺：Extend non-enforcement through at least April 30, 2025, contingent on continued divestiture/ownership negotiations.\n触发或复核条件：Contingent on progress toward a compliant ownership arrangement.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Sign a further executive order extending non-enforcement of PAFACA beyond the initial 75-day window, keeping the ban legally unenforceable and continuing immunity assurances for service providers, while pressing for a U.S. government 50% ownership arrangement with ByteDance.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly signal that I will not seek enforcement of PAFACA against TikTok or its service providers while a sale/ownership deal is being negotiated, urging ByteDance to reach a qualified divestiture or 50% U.S. ownership arrangement.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 75-day non-enforcement order signed January 20 runs to roughly April 5, past the April 30 window end, so a legally enforceable ban requires the order to be lifted early or expire without compliance. No evidence shows such a step before the cutoff; the January 18-19 shutdown predates the outcome window.",
+                "evidence_quote": "Trump signed the executive order on January 20 following his inauguration, delaying the enforcement of PAFACA for at least 75 days for his administration and promising immunity for companies that provided services to TikTok during that time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-04-02",
+                "interval_end": "2025-04-12",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 19,
+                "interval_days": 10,
+                "interval_start_utc": "2025-04-02T00:00:00+00:00",
+                "interval_end_utc": "2025-04-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 75-day non-enforcement order signed January 20 runs to roughly April 5, past the April 30 window end, so a legally enforceable ban requires the order to be lifted early or expire without compliance. No evidence shows such a step before the cutoff; the January 18-19 shutdown predates the outcome window.",
+                "evidence_quote": "Trump signed the executive order on January 20 following his inauguration, delaying the enforcement of PAFACA for at least 75 days for his administration and promising immunity for companies that provided services to TikTok during that time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-04-12",
+                "interval_end": "2025-04-21",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 28,
+                "interval_days": 9,
+                "interval_start_utc": "2025-04-12T00:00:00+00:00",
+                "interval_end_utc": "2025-04-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 75-day non-enforcement order signed January 20 runs to roughly April 5, past the April 30 window end, so a legally enforceable ban requires the order to be lifted early or expire without compliance. No evidence shows such a step before the cutoff; the January 18-19 shutdown predates the outcome window.",
+                "evidence_quote": "Trump signed the executive order on January 20 following his inauguration, delaying the enforcement of PAFACA for at least 75 days for his administration and promising immunity for companies that provided services to TikTok during that time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            }
+          ],
+          "branches": [],
+          "status": "failed",
+          "p_yes": null,
+          "error": "ValueError: Settlement state path has no object parent: pafaca_non_enforcement.extended_through",
+          "action_path_probability": 0.42
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 7,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 6,
+        "public_event_count": 5,
+        "substantive_public_event_count": 5,
+        "state_change_count": 3,
+        "condition_change_count": 3,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 0.5,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 2,
+            "condition_change_count": 2,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": false,
+            "outcome_observed": false,
+            "conditional_only": false
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": null,
+      "covered_p_yes": 0.12,
+      "coverage": 0.5,
+      "unknown_bounds": [
+        0.06,
+        0.56
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 1,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": true,
+      "status": "partial",
+      "error": "ValueError: Settlement state path has no object parent: pafaca_non_enforcement.extended_through",
+      "planned_samples": 2,
+      "simulation_run_id": "f9ef2702-8097-4021-9dd2-f51b560d8115",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:35:40.031609+00:00",
+      "contract_id": "0xe0097a5f3d9739ca64e2ba58c70261482a3e7ed33afdbb381b230cbd5e494ba7",
+      "forecast_cutoff": "2025-03-24T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c715beddddde21c031ca5e26e8d186b5e3ac11f7f9939c5050945ff898413418",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 84.339
+    },
+    {
+      "calls": 24,
+      "tokens": 301737,
+      "input_tokens": 287057,
+      "output_tokens": 14680,
+      "accounted_tokens_upper": 301737,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-03-24",
+                "interval_end": "2025-04-02",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 9,
+                "interval_days": 9,
+                "interval_start_utc": "2025-03-24T23:59:59+00:00",
+                "interval_end_utc": "2025-04-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "status": "executed",
+                  "summary": "ByteDance issued a public statement that it continues to pursue a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant transaction, while warning that any sale must satisfy Chinese export-control requirements."
+                },
+                {
+                  "action_id": "action_1_agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "status": "executed",
+                  "summary": "President Donald Trump issued a further executive order extending the period of non-enforcement of PAFACA beyond the initial 75-day window, continuing immunity assurances for service providers, to preserve the status quo while a qualified divestiture or U.S. ownership arrangement is negotiated."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_dc51a59a2f8d540f",
+                    "action_1_agent_9c395be9de7b577d"
+                  ],
+                  "outcome": "realized",
+                  "effect": "extending the period of non-enforcement of PAFACA beyond the initial 75-day window"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "extending the period of non-enforcement of PAFACA beyond the initial 75-day window",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "ByteDance issued a public statement that it continues to pursue a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant transaction, while warning that any sale must satisfy Chinese export-control requirements.",
+                  "date": "2025-03-25"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "President Donald Trump issued a further executive order extending the period of non-enforcement of PAFACA beyond the initial 75-day window, continuing immunity assurances for service providers, to preserve the status quo while a qualified divestiture or U.S. ownership arrangement is negotiated.",
+                  "date": "2025-03-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                  "action": "Issue a public statement that ByteDance continues to pursue a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant transaction, while warning that any sale must satisfy Chinese export-control requirements.\n承诺：Pursue a qualified divestiture to achieve compliance rather than face a ban.\n触发或复核条件：A transaction acceptable to U.S. authorities and consistent with Chinese export-control rules can be agreed.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement that ByteDance continues to pursue a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant transaction, while warning that any sale must satisfy Chinese export-control requirements.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                  "action": "Issue a further executive order extending the period of non-enforcement of PAFACA beyond the initial 75-day window, continuing immunity assurances for service providers, to preserve the status quo while a qualified divestiture or U.S. ownership arrangement is negotiated.\n承诺：Extend non-enforcement of PAFACA and maintain service-provider immunity for the duration of the extended window.\n触发或复核条件：Contingent on no compliant divestiture being completed before the current non-enforcement window lapses.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a further executive order extending the period of non-enforcement of PAFACA beyond the initial 75-day window, continuing immunity assurances for service providers, to preserve the status quo while a qualified divestiture or U.S. ownership arrangement is negotiated.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly signal support for a U.S. government 50% ownership stake in TikTok as the path to PAFACA compliance, inviting ByteDance to negotiate a qualified divestiture/ownership arrangement within the non-enforcement window.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The 75-day non-enforcement order signed January 20 runs to roughly April 5, past the April 30 window end, so a legally enforceable ban requires early expiration, removal, or non-compliance. No public evidence shows such a change by the cutoff; mid-February app-store restoration suggests continued non-enforcement.",
+                "evidence_quote": "Trump signed the executive order on January 20 following his inauguration, delaying the enforcement of PAFACA for at least 75 days for his administration and promising immunity for companies that provided services to TikTok during that time. TikTok and other ByteDance apps remained unable to be downloaded from app stores in the aftermath of the ban, until being restored in mid-February.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-04-02",
+                "interval_end": "2025-04-12",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 19,
+                "interval_days": 10,
+                "interval_start_utc": "2025-04-02T00:00:00+00:00",
+                "interval_end_utc": "2025-04-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The 75-day non-enforcement order signed January 20 runs to roughly April 5, past the April 30 window end, so a legally enforceable ban requires early expiration, removal, or non-compliance. No public evidence shows such a change by the cutoff; mid-February app-store restoration suggests continued non-enforcement.",
+                "evidence_quote": "Trump signed the executive order on January 20 following his inauguration, delaying the enforcement of PAFACA for at least 75 days for his administration and promising immunity for companies that provided services to TikTok during that time. TikTok and other ByteDance apps remained unable to be downloaded from app stores in the aftermath of the ban, until being restored in mid-February.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-04-12",
+                "interval_end": "2025-04-21",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 28,
+                "interval_days": 9,
+                "interval_start_utc": "2025-04-12T00:00:00+00:00",
+                "interval_end_utc": "2025-04-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The 75-day non-enforcement order signed January 20 runs to roughly April 5, past the April 30 window end, so a legally enforceable ban requires early expiration, removal, or non-compliance. No public evidence shows such a change by the cutoff; mid-February app-store restoration suggests continued non-enforcement.",
+                "evidence_quote": "Trump signed the executive order on January 20 following his inauguration, delaying the enforcement of PAFACA for at least 75 days for his administration and promising immunity for companies that provided services to TikTok during that time. TikTok and other ByteDance apps remained unable to be downloaded from app stores in the aftermath of the ban, until being restored in mid-February.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2025-04-21",
+                "interval_end": "2025-05-01",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 38,
+                "interval_days": 10,
+                "interval_start_utc": "2025-04-21T00:00:00+00:00",
+                "interval_end_utc": "2025-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "status": "executed",
+                  "summary": "ByteDance publicly reaffirmed that it continues to pursue a qualified divestiture of TikTok's U.S. operations and remains engaged with the U.S. government on a compliant transaction, noting any sale must satisfy Chinese export-control requirements; it stated no new shutdown and that service continues under the extended non-enforcement order."
+                },
+                {
+                  "action_id": "action_4_agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "status": "executed",
+                  "summary": "President Donald Trump publicly signaled that he will let PAFACA enforcement resume if no compliant divestiture or U.S. ownership arrangement is reached before the non-enforcement window lapses, pressing ByteDance to conclude a deal."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_9c395be9de7b577d",
+                    "action_4_agent_dc51a59a2f8d540f"
+                  ],
+                  "outcome": "pending",
+                  "effect": "will let PAFACA enforcement resume if no compliant divestiture or U.S. ownership arrangement is reached"
+                },
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_9c395be9de7b577d",
+                    "action_4_agent_9c395be9de7b577d"
+                  ],
+                  "outcome": "realized",
+                  "effect": "will let PAFACA enforcement resume if no compliant divestiture or U.S. ownership arrangement is reached"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "pending",
+                  "after": "unmet",
+                  "summary": "will let PAFACA enforcement resume if no compliant divestiture or U.S. ownership arrangement is reached",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "ByteDance publicly reaffirmed that it continues to pursue a qualified divestiture of TikTok's U.S. operations and remains engaged with the U.S. government on a compliant transaction, noting any sale must satisfy Chinese export-control requirements; it stated no new shutdown and that service continues under the extended non-enforcement order.",
+                  "date": "2025-04-23"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "President Donald Trump publicly signaled that he will let PAFACA enforcement resume if no compliant divestiture or U.S. ownership arrangement is reached before the non-enforcement window lapses, pressing ByteDance to conclude a deal.",
+                  "date": "2025-04-25"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                  "action": "Reaffirm publicly that ByteDance is actively pursuing a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government, noting any sale must satisfy Chinese export-control requirements. No new shutdown; service continues under the extended non-enforcement order.\n承诺：Continue pursuing a qualified divestiture rather than precipitating a shutdown while non-enforcement holds.\n触发或复核条件：A transaction acceptable to U.S. authorities and consistent with Chinese export-control rules can be agreed.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Reaffirm publicly that ByteDance is actively pursuing a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government, noting any sale must satisfy Chinese export-control requirements. No new shutdown; service continues under the extended non-enforcement order.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "candidate_id": "agent_9c395be9de7b577d:initial:2",
+                  "action": "Publicly signal that I will let PAFACA enforcement resume if no compliant divestiture or U.S. ownership arrangement is reached, pressing ByteDance to conclude a deal before the window lapses.\n承诺：Resume enforcement absent a compliant deal or ownership arrangement.\n触发或复核条件：If no compliant divestiture or U.S. ownership arrangement is reached before the window lapses.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a further executive order extending non-enforcement of PAFACA beyond the current window through the end of April, maintaining service-provider immunity, to preserve the status quo while a qualified divestiture or U.S. ownership arrangement is negotiated.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly signal that I will let PAFACA enforcement resume if no compliant divestiture or U.S. ownership arrangement is reached, pressing ByteDance to conclude a deal before the window lapses.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The extended non-enforcement order kept PAFACA suspended through the April 30 window; ByteDance reported no shutdown and continued service. Trump's April 25 signal that enforcement could resume if no deal is reached is a threat, not a settled ban, so a legally enforceable ban within the window remains unconfirmed.",
+                "evidence_quote": "President Donald Trump publicly signaled that he will let PAFACA enforcement resume if no compliant divestiture or U.S. ownership arrangement is reached before the non-enforcement window lapses, pressing ByteDance to conclude a deal.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.0756
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 4,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 4,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 2,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 2,
+            "condition_change_count": 2,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "279aff93-f4da-40c9-8c2e-f719a79338a9",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:08:11.438433+00:00",
+      "contract_id": "0xe0097a5f3d9739ca64e2ba58c70261482a3e7ed33afdbb381b230cbd5e494ba7",
+      "forecast_cutoff": "2025-03-24T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c715beddddde21c031ca5e26e8d186b5e3ac11f7f9939c5050945ff898413418",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 81.998
+    },
+    {
+      "calls": 16,
+      "tokens": 197129,
+      "input_tokens": 186879,
+      "output_tokens": 10250,
+      "accounted_tokens_upper": 197129,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-03-24",
+                "interval_end": "2025-05-01",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 38,
+                "interval_days": 38,
+                "interval_start_utc": "2025-03-24T23:59:59+00:00",
+                "interval_end_utc": "2025-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "status": "executed",
+                  "summary": "ByteDance publicly signaled openness to a qualified divestiture of TikTok's U.S. operations that would satisfy PAFACA and opened talks with the Trump administration on deal terms, noting any sale must clear Chinese export-control review; no shutdown or service change was made."
+                },
+                {
+                  "action_id": "action_1_agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "status": "executed",
+                  "summary": "President Donald Trump issued a new executive order extending the PAFACA non-enforcement period beyond the original 75-day window, continuing immunity for service providers, conditioned on ByteDance continuing good-faith divestiture talks and no compliant sale being completed."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_dc51a59a2f8d540f",
+                    "action_1_agent_9c395be9de7b577d"
+                  ],
+                  "outcome": "realized",
+                  "effect": "conditioned on ByteDance continuing good-faith divestiture talks and no compliant sale being completed"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "unknown",
+                  "after": "unmet",
+                  "summary": "extending the PAFACA non-enforcement period beyond the original 75-day window",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "ByteDance publicly signaled openness to a qualified divestiture of TikTok's U.S. operations that would satisfy PAFACA and opened talks with the Trump administration on deal terms, noting any sale must clear Chinese export-control review; no shutdown or service change was made.",
+                  "date": "2025-05"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "President Donald Trump issued a new executive order extending the PAFACA non-enforcement period beyond the original 75-day window, continuing immunity for service providers, conditioned on ByteDance continuing good-faith divestiture talks and no compliant sale being completed.",
+                  "date": "2025-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                  "action": "Publicly signal openness to a qualified divestiture of TikTok's U.S. operations that satisfies PAFACA, and open talks with the Trump administration on deal terms while noting any sale must clear Chinese export-control review. No shutdown or service change this round.\n承诺：Willing to negotiate a qualified divestiture that brings TikTok into compliance, subject to U.S. approval and Chinese export-control requirements.\n触发或复核条件：A buyer and terms acceptable to both U.S. and Chinese authorities can be found before enforcement resumes.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly signal openness to a qualified divestiture of TikTok's U.S. operations that satisfies PAFACA, and open talks with the Trump administration on deal terms while noting any sale must clear Chinese export-control review. No shutdown or service change this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Continue and publicly reaffirm the legal challenge to PAFACA and any renewed enforcement, arguing the divest-or-ban mandate is unlawful, and seek to keep enforcement suspended past the executive order's expiration.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                  "action": "Issue a new executive order extending the 75-day PAFACA non-enforcement period beyond its mid-April expiry, continuing immunity for service providers, conditioned on ByteDance continuing divestiture talks and no compliant sale being completed.\n承诺：Extend non-enforcement past the 75-day window rather than let PAFACA enforcement resume before April 30.\n触发或复核条件：Conditioned on ByteDance continuing a good-faith divestiture process; revocable if a compliant qualified divestiture is reached.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a new executive order extending the 75-day PAFACA non-enforcement period beyond its mid-April expiry, continuing immunity for service providers, conditioned on ByteDance continuing divestiture talks and no compliant sale being completed.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly signal that if ByteDance does not reach a compliant qualified divestiture or U.S. ownership arrangement before the non-enforcement window ends, I will allow PAFACA enforcement to resume rather than issue a further extension.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "A new executive order extended PAFACA non-enforcement beyond the original 75-day window, conditioned on continued divestiture talks with no compliant sale completed. That keeps the ban non-enforceable through the April 30 window, so a qualifying ban is unlikely; a later sale or order removal remains unknown.",
+                "evidence_quote": "President Donald Trump issued a new executive order extending the PAFACA non-enforcement period beyond the original 75-day window, continuing immunity for service providers, conditioned on ByteDance continuing good-faith divestiture talks and no compliant sale being completed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.42
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-03-24",
+                "interval_end": "2025-05-01",
+                "horizon_end": "2025-05-01",
+                "elapsed_days": 38,
+                "interval_days": 38,
+                "interval_start_utc": "2025-03-24T23:59:59+00:00",
+                "interval_end_utc": "2025-05-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "status": "executed",
+                  "summary": "ByteDance publicly stated it is actively pursuing a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant transaction, while noting any sale remains subject to Chinese export-control review."
+                },
+                {
+                  "action_id": "action_1_agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "status": "executed",
+                  "summary": "President Donald Trump signed a new executive order extending non-enforcement of PAFACA beyond the original 75-day window through April 30, 2025, continuing immunity for service providers and directing the Attorney General not to pursue enforcement against TikTok while a divestiture/ownership deal is negotiated, conditioned on continued good-faith negotiations."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_9c395be9de7b577d",
+                    "action_1_agent_dc51a59a2f8d540f"
+                  ],
+                  "outcome": "realized",
+                  "effect": "conditioned on continued good-faith negotiations"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will TikTok be banned again before May?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "extending non-enforcement of PAFACA beyond the original 75-day window through April 30, 2025",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "ByteDance publicly stated it is actively pursuing a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant transaction, while noting any sale remains subject to Chinese export-control review.",
+                  "date": "2025-05"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "President Donald Trump signed a new executive order extending non-enforcement of PAFACA beyond the original 75-day window through April 30, 2025, continuing immunity for service providers and directing the Attorney General not to pursue enforcement against TikTok while a divestiture/ownership deal is negotiated, conditioned on continued good-faith negotiations.",
+                  "date": "2025-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_dc51a59a2f8d540f",
+                  "actor_name": "ByteDance",
+                  "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                  "action": "ByteDance publicly states it is actively pursuing a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant transaction, while noting any sale remains subject to Chinese export-control review.\n承诺：Commit to pursuing a qualified divestiture that satisfies PAFACA rather than a shutdown.\n触发或复核条件：Contingent on U.S. government approval and Chinese export-control clearance.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "ByteDance publicly states it is actively pursuing a qualified divestiture of TikTok's U.S. operations and is engaged with the U.S. government on a compliant transaction, while noting any sale remains subject to Chinese export-control review.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_dc51a59a2f8d540f:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "ByteDance files or advances a legal challenge seeking to block re-enforcement of PAFACA should the executive order's non-enforcement period lapse before a divestiture is completed.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_9c395be9de7b577d",
+                  "actor_name": "President Donald Trump",
+                  "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                  "action": "Sign a new executive order extending non-enforcement of PAFACA beyond the original 75-day window (which lapses around April 5, 2025), continuing immunity for service providers and directing the Attorney General not to pursue enforcement against TikTok while a divestiture/ownership deal is negotiated through April 30, 2025.\n承诺：Non-enforcement and service-provider immunity will continue through at least April 30, 2025, conditioned on continued negotiation of a qualified divestiture or U.S. ownership arrangement.\n触发或复核条件：Conditioned on ByteDance continuing good-faith divestiture/ownership negotiations.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Sign a new executive order extending non-enforcement of PAFACA beyond the original 75-day window (which lapses around April 5, 2025), continuing immunity for service providers and directing the Attorney General not to pursue enforcement against TikTok while a divestiture/ownership deal is negotiated through April 30, 2025.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9c395be9de7b577d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly announce that the U.S. government is pursuing a 50% ownership stake in TikTok and that a qualified divestiture deal is on track, while stating the current non-enforcement posture will be maintained to allow the deal to close.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "A simulated round-1 executive order extended non-enforcement through April 30, 2025, and ByteDance reported pursuing a qualified divestiture. No settled event shows the ban becoming legally enforceable within the window; the order's expiration timing and any actual sale remain unverified.",
+                "evidence_quote": "President Donald Trump signed a new executive order extending non-enforcement of PAFACA beyond the original 75-day window through April 30, 2025, continuing immunity for service providers and directing the Attorney General not to pursue enforcement against TikTok while a divestiture/ownership deal is negotiated, conditioned on continued good-faith negotiations.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.42
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 3,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "93aaac1f-3046-4006-a191-ac178df53831",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:08:39.151284+00:00",
+      "contract_id": "0xe0097a5f3d9739ca64e2ba58c70261482a3e7ed33afdbb381b230cbd5e494ba7",
+      "forecast_cutoff": "2025-03-24T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c715beddddde21c031ca5e26e8d186b5e3ac11f7f9939c5050945ff898413418",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 27.712
+    },
+    {
+      "calls": 71,
+      "tokens": 982053,
+      "input_tokens": 925710,
+      "output_tokens": 56343,
+      "accounted_tokens_upper": 982053,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.3496333,
+      "coverage": 0.37383500000000003,
+      "unexplored_mass": 0.626165,
+      "unknown_bounds": [
+        0.0365508,
+        0.6627158
+      ],
+      "search_iterations": 8,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 8,
+          "search_value": 0.271304,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.33,
+          "visits": 4,
+          "search_value": 0.237485,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.23099999999999998,
+          "visits": 3,
+          "search_value": 0.18208666666666665,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.16169999999999998,
+          "visits": 1,
+          "search_value": 0.15492399999999998,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.07923299999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.05,
+          "frontier": true,
+          "contribution": 0.00396165
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.033956999999999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.0027165599999999994
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.048510000000000005,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.06929999999999999,
+          "visits": 1,
+          "search_value": 0.096936,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.03395699999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0010187099999999995
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.014552999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.05,
+          "frontier": true,
+          "contribution": 0.0007276499999999998
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.02079,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.099,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.1,
+          "frontier": true,
+          "contribution": 0.0099
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.22000000000000003,
+          "visits": 3,
+          "search_value": 0.3339666666666667,
+          "conditional_p_yes": 0.1,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.07865000000000003,
+          "visits": 2,
+          "search_value": 0.30569999999999997,
+          "conditional_p_yes": 0.2,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.04719000000000002,
+          "visits": 1,
+          "search_value": 0.24995999999999996,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.03303300000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.0023123100000000006
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.014157000000000005,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.06,
+          "frontier": true,
+          "contribution": 0.0008494200000000003
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.02359500000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.1,
+          "frontier": true,
+          "contribution": 0.002359500000000001
+        },
+        {
+          "path": [
+            2,
+            1,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.00786500000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.042350000000000006,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.3,
+          "frontier": true,
+          "contribution": 0.012705000000000001
+        },
+        {
+          "path": [
+            2,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.099,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.44999999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "3fda9f9c-daf5-4e74-84a6-83ce2189bd3e",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:13:32.713262+00:00",
+      "contract_id": "0xe0097a5f3d9739ca64e2ba58c70261482a3e7ed33afdbb381b230cbd5e494ba7",
+      "forecast_cutoff": "2025-03-24T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c715beddddde21c031ca5e26e8d186b5e3ac11f7f9939c5050945ff898413418",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 293.567
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-03-24T23:59:59+00:00",
+  "forecast_key": "0xe0097a5f3d9739ca64e2ba58c70261482a3e7ed33afdbb381b230cbd5e494ba7",
+  "group_id": "tiktok-banned-again-before-may",
+  "evidence_sha256": "c715beddddde21c031ca5e26e8d186b5e3ac11f7f9939c5050945ff898413418",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 866,
+    "input_tokens": 736,
+    "output_tokens": 130,
+    "accounted_tokens_upper": 866,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-03-24",
+        "2025-05-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2025-03-24",
+        "2025-04-02",
+        "2025-04-12",
+        "2025-04-21",
+        "2025-05-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2025-03-24",
+        "2025-04-02",
+        "2025-04-12",
+        "2025-04-21",
+        "2025-05-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-03-24",
+        "2025-05-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2025-03-24",
+        "2025-04-02",
+        "2025-04-12",
+        "2025-04-21",
+        "2025-05-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-05-01T03:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-04-30T12:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1,
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_0e71a22fc141b122",
+          "name": "President Donald Trump",
+          "role": "President of the United States; issued executive order delaying PAFACA enforcement and may extend or remove it",
+          "decision_ids": [
+            "D1",
+            "D2"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        },
+        {
+          "seat_id": "seat_43673f6f849471aa",
+          "name": "ByteDance",
+          "role": "Parent company of TikTok; may divest TikTok to achieve compliance",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "U.S. Congress decides whether to amend or repeal PAFACA, affecting the legal enforceability of the ban"
+      ],
+      "gaps": [
+        "No named decision-maker for official resolution; resolution relies on U.S. federal government information or consensus reporting.",
+        "No frozen source identifies U.S. Congress; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "President Trump decides whether to extend, remove, or allow the executive order delaying PAFACA enforcement to expire",
+          "owner": "President Donald Trump",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "President Trump decides whether to enforce the PAFACA ban if the executive order is removed or expires",
+          "owner": "President Donald Trump",
+          "support": "represented"
+        },
+        {
+          "id": "D3",
+          "choice": "ByteDance decides whether to execute a qualified divestiture of TikTok to come into compliance with U.S. laws",
+          "owner": "ByteDance",
+          "support": "represented"
+        },
+        {
+          "id": "D4",
+          "choice": "U.S. Congress decides whether to amend or repeal PAFACA, affecting the legal enforceability of the ban",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 27,
+    "tokens": 68940,
+    "input_tokens": 57700,
+    "output_tokens": 11240,
+    "accounted_tokens_upper": 68940,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

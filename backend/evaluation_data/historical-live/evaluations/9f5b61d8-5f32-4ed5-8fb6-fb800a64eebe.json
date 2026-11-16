@@ -1,0 +1,2663 @@
+{
+  "run_id": "9f5b61d8-5f32-4ed5-8fb6-fb800a64eebe",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "single_step_simulation",
+    "single_step_ensemble",
+    "single_trajectory_simulation",
+    "multi_trajectory_simulation",
+    "mcts_simulation"
+  ],
+  "forecast_protocol": "sequential-action-outlook-v6",
+  "status": "Awaiting Resolution",
+  "quick_test": false,
+  "error": null,
+  "total": 30,
+  "active_run_id": null,
+  "created_at": "2026-11-09T02:11:00.270571+00:00",
+  "current": 30,
+  "settings": {
+    "question_count": 30,
+    "qa_samples": 2,
+    "single_step_samples": 2,
+    "steps": null,
+    "sample_count": 2,
+    "max_model_calls": 254,
+    "max_total_tokens": 4100000
+  },
+  "selection": {
+    "policy": "Fixed political Top 30, ranked by 24-hour Polymarket volume. Prospectively forecast all seven methods on the same public Wikipedia evidence and contract cutoff. Market prices are recorded separately for later scoring.",
+    "target": 30,
+    "collected": 30,
+    "accepted": 30,
+    "not_screened": 0,
+    "excluded": []
+  },
+  "knowledge_cutoff": {
+    "status": "Prospective"
+  },
+  "questions": [
+    {
+      "case_id": "market_8e17f2dea0c6f2e0dac53d38",
+      "question": "Will the U.S. invade Iran before 2027?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "0e5fd8f6-3901-4623-a5f3-a7f5d3e20db5",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.125,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.08,
+        "single_step_simulation": 0.12,
+        "single_step_ensemble": 0.12,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.07,
+        "mcts_simulation": 0.24564100000000003
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_d6b9d03da29f2ff07c15d86b",
+      "question": "US announces end of Iranian blockade by November 15, 2026?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "07091719-d4c2-464d-ab11-deae2942a5b7",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-16"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-16"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-16"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-16"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-16"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.0555,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.08,
+        "single_step_simulation": 0.12,
+        "single_step_ensemble": 0.12,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.1,
+        "mcts_simulation": 0.045
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_94242dfabca41def1faf82f9",
+      "question": "Will Abdul El-Sayed win the 2028 Democratic presidential nomination?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "922200fb-4459-4a77-815a-182aab067960",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-11-07"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-11-07"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2027-02-08",
+            "2027-05-10",
+            "2027-08-09",
+            "2027-11-08",
+            "2028-02-07",
+            "2028-05-08",
+            "2028-08-07",
+            "2028-11-07"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2027-02-08",
+            "2027-05-10",
+            "2027-08-09",
+            "2027-11-08",
+            "2028-02-07",
+            "2028-05-08",
+            "2028-08-07",
+            "2028-11-07"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2027-02-08",
+            "2027-05-10",
+            "2027-08-09",
+            "2027-11-08",
+            "2028-02-07",
+            "2028-05-08",
+            "2028-08-07",
+            "2028-11-07"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.0185,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.02,
+        "qa_ensemble": 0.025,
+        "single_step_simulation": 0.04,
+        "single_step_ensemble": 0.035,
+        "single_trajectory_simulation": 0.04,
+        "multi_trajectory_simulation": 0.04,
+        "mcts_simulation": 0.24162140000000004
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_1b48926a7c62ef8cd1d77580",
+      "question": "Israel x Iran ceasefire continues through November 15?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "0d4fdd5e-bbe3-4616-be41-9491aecca740",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-15"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-15"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-15"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-15"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.915,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.35,
+        "qa_ensemble": 0.35,
+        "single_step_simulation": 0.82,
+        "single_step_ensemble": 0.77,
+        "single_trajectory_simulation": 0.82,
+        "multi_trajectory_simulation": 0.72,
+        "mcts_simulation": 0.450216
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_187214aa08460f25a0e9f27c",
+      "question": "US announces end of Iranian blockade by November 30, 2026?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "26c7aa96-4abd-405b-b5a5-8dc369f05914",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.205,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.97,
+        "qa_ensemble": 0.97,
+        "single_step_simulation": 0.12,
+        "single_step_ensemble": 0.12,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.1,
+        "mcts_simulation": 0.03005
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_2e5c64f7c193c70e0808dc4c",
+      "question": "Iran leadership change by December 31?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "2c93006d-9052-46f2-8b70-ea6474d7c71f",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.085,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.235,
+        "single_step_simulation": 0.12,
+        "single_step_ensemble": 0.235,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.51,
+        "mcts_simulation": 0.476055560624
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_57e8fce14956062605fa3f9a",
+      "question": "Pete Hegseth out as Secretary of Defense by December 31?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "8808bbf2-8f55-4375-99d2-3def26b7a028",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.435,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.18,
+        "qa_ensemble": 0.12,
+        "single_step_simulation": 0.12,
+        "single_step_ensemble": 0.12,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.12,
+        "mcts_simulation": 0.24882200000000002
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_9ff09055d3c8ab7995c301f5",
+      "question": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "2e8836d4-2416-405c-8af1-116962fda1bb",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.135,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.04,
+        "qa_ensemble": 0.060000000000000005,
+        "single_step_simulation": 0.04,
+        "single_step_ensemble": 0.07,
+        "single_trajectory_simulation": 0.07,
+        "multi_trajectory_simulation": 0.05500000000000001,
+        "mcts_simulation": 0.0398
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_79783df85878b9854881d8df",
+      "question": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "2710c848-f736-4682-8d06-101a880a86b3",
+      "status": "partial",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-11-08"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-11-08"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2027-02-08",
+            "2027-05-10",
+            "2027-08-09",
+            "2027-11-09",
+            "2028-02-08",
+            "2028-05-09",
+            "2028-08-08",
+            "2028-11-08"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2027-02-08",
+            "2027-05-10",
+            "2027-08-09",
+            "2027-11-09",
+            "2028-02-08",
+            "2028-05-09",
+            "2028-08-08",
+            "2028-11-08"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2027-02-08",
+            "2027-05-10",
+            "2027-08-09",
+            "2027-11-09",
+            "2028-02-08",
+            "2028-05-09",
+            "2028-08-08",
+            "2028-11-08"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.033,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.04,
+        "qa_ensemble": 0.05,
+        "single_step_simulation": 0.07,
+        "single_step_ensemble": 0.07,
+        "single_trajectory_simulation": null,
+        "multi_trajectory_simulation": 0.095,
+        "mcts_simulation": 0.17219071264999997
+      },
+      "partial_forecasts": {
+        "single_trajectory_simulation": {
+          "valid_samples": 0,
+          "planned_samples": 1,
+          "covered_p_yes": null,
+          "unknown_bounds": [
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "reason": null
+    },
+    {
+      "case_id": "market_98247ef202727920d7cee392",
+      "question": "US announces end of Iranian blockade by December 31, 2026?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "14edf83e-1cd7-4f9d-ae03-6cd2ce503851",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.352,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.97,
+        "qa_ensemble": 0.97,
+        "single_step_simulation": 0.12,
+        "single_step_ensemble": 0.12,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.12,
+        "mcts_simulation": 0.036000000000000004
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_3cf9c242eed9365d0748da44",
+      "question": "Pete Hegseth out as Secretary of Defense by November 30?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "00376a9e-f20b-4d6a-84a5-0ca4a099f419",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.285,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.08,
+        "single_step_simulation": 0.12,
+        "single_step_ensemble": 0.12,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.12,
+        "mcts_simulation": 0.12271999999999993
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_273b830657c52c63acd529ec",
+      "question": "Putin out as President of Russia by December 31, 2026?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "bf8b43c1-e87a-457e-ad52-841cd64aaa33",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.0145,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.02,
+        "qa_ensemble": 0.03,
+        "single_step_simulation": 0.03,
+        "single_step_ensemble": 0.03,
+        "single_trajectory_simulation": 0.03,
+        "multi_trajectory_simulation": 0.03,
+        "mcts_simulation": 0.011000000000000001
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_5e5f55ffe5295c4d92cb4efc",
+      "question": "Trump out as President before 2027?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "4fa3276f-1c0e-407b-a3b7-4a810c502bd1",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.0215,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.03,
+        "qa_ensemble": 0.03,
+        "single_step_simulation": 0.04,
+        "single_step_ensemble": 0.03,
+        "single_trajectory_simulation": 0.04,
+        "multi_trajectory_simulation": 0.03,
+        "mcts_simulation": 0.09455000000000001
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_48677f56e192954cfbb7ef5b",
+      "question": "Strait of Hormuz traffic returns to normal by December 31?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "49640619-62cd-498c-9522-800f75960159",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.065,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.18,
+        "qa_ensemble": 0.18,
+        "single_step_simulation": 0.18,
+        "single_step_ensemble": 0.21,
+        "single_trajectory_simulation": 0.35,
+        "multi_trajectory_simulation": 0.235,
+        "mcts_simulation": 0.24464000000000002
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_48a61b52d97ebc3cf6bdfd8a",
+      "question": "Israel x Iran ceasefire continues through December 31?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "11ecec38-a765-4ce7-b255-0344197c6158",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-29",
+            "2026-12-10",
+            "2026-12-20",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-29",
+            "2026-12-10",
+            "2026-12-20",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-29",
+            "2026-12-10",
+            "2026-12-20",
+            "2026-12-31"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.565,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.35,
+        "qa_ensemble": 0.35,
+        "single_step_simulation": 0.62,
+        "single_step_ensemble": 0.5349999999999999,
+        "single_trajectory_simulation": 0.72,
+        "multi_trajectory_simulation": 0.45,
+        "mcts_simulation": 0.30687000000000003
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_c7cda7156cf319b1909d67ca",
+      "question": "Iran leadership change by November 30?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "85a6f2fd-30fc-451e-9411-48a8fc8a76f0",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.023,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.08,
+        "single_step_simulation": 0.12,
+        "single_step_ensemble": 0.1,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.335,
+        "mcts_simulation": 0.421697771534
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_a2e00579d5b1393636884e9a",
+      "question": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "5f68d561-f7b5-4e3d-bc34-5a7cb6a074ef",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-29",
+            "2026-12-10",
+            "2026-12-20",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-29",
+            "2026-12-10",
+            "2026-12-20",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-29",
+            "2026-12-10",
+            "2026-12-20",
+            "2026-12-31"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.942,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.08,
+        "single_step_simulation": 0.18,
+        "single_step_ensemble": 0.42500000000000004,
+        "single_trajectory_simulation": 0.35,
+        "multi_trajectory_simulation": 0.62,
+        "mcts_simulation": 0.534631632
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_bb06ea9b0edb85316633c0e7",
+      "question": "Will Dana F. White Jr be the next White House Press Secretary?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "0fb896b7-9173-4ce0-a29a-3a0cc9c30189",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.022,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.55,
+        "qa_ensemble": 0.55,
+        "single_step_simulation": 0.03,
+        "single_step_ensemble": 0.35,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.15,
+        "mcts_simulation": 0.0248
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_c8367c94cb3602e7044a9511",
+      "question": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "8b490549-33ca-410c-9de9-16a5faaa4adb",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-04-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-04-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-11",
+            "2027-03-16",
+            "2027-05-18",
+            "2027-07-21",
+            "2027-09-23",
+            "2027-11-25",
+            "2028-01-28",
+            "2028-04-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-11",
+            "2027-03-16",
+            "2027-05-18",
+            "2027-07-21",
+            "2027-09-23",
+            "2027-11-25",
+            "2028-01-28",
+            "2028-04-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-11",
+            "2027-03-16",
+            "2027-05-18",
+            "2027-07-21",
+            "2027-09-23",
+            "2027-11-25",
+            "2028-01-28",
+            "2028-04-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.925,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.42,
+        "qa_ensemble": 0.42,
+        "single_step_simulation": 0.18,
+        "single_step_ensemble": 0.18,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.26,
+        "mcts_simulation": 0.37725404015999997
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_bc6be0b3212ad77332a29642",
+      "question": "Will the Iranian regime fall before 2027?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "161b711c-a91b-4571-9640-f740972d6095",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.0275,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.07500000000000001,
+        "single_step_simulation": 0.07,
+        "single_step_ensemble": 0.07,
+        "single_trajectory_simulation": 0.07,
+        "multi_trajectory_simulation": 0.035,
+        "mcts_simulation": 0.034600000000000006
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_1bf93bb19ff78141ecf11ae6",
+      "question": "Pete Hegseth impeached by December 31, 2026?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "aae75985-df41-48a3-9c82-9351129ecb2a",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.731,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.03,
+        "qa_ensemble": 0.06,
+        "single_step_simulation": 0.04,
+        "single_step_ensemble": 0.04,
+        "single_trajectory_simulation": 0.04,
+        "multi_trajectory_simulation": 0.05500000000000001,
+        "mcts_simulation": 0.02
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_003b34f86030f48aa41c15bf",
+      "question": "US-Iran Final Nuclear Deal by December 31, 2026?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "2c84557d-0184-4acd-8b10-000e317069f1",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.095,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.1,
+        "single_step_simulation": 0.07,
+        "single_step_ensemble": 0.12,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.15,
+        "mcts_simulation": 0.3655816355
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_fec68c476ffe61c922cb0f5b",
+      "question": "Strait of Hormuz traffic returns to normal by November 30?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "14c8aa99-dfa7-4ca8-90db-efed922a2171",
+      "status": "partial",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.0235,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.18,
+        "qa_ensemble": 0.15,
+        "single_step_simulation": 0.18,
+        "single_step_ensemble": null,
+        "single_trajectory_simulation": 0.3,
+        "multi_trajectory_simulation": 0.15,
+        "mcts_simulation": 0.4595849132
+      },
+      "partial_forecasts": {
+        "single_step_ensemble": {
+          "valid_samples": 1,
+          "planned_samples": 2,
+          "covered_p_yes": 0.12,
+          "unknown_bounds": [
+            0.06,
+            0.56
+          ]
+        }
+      },
+      "reason": null
+    },
+    {
+      "case_id": "market_287b14fa6e5388b75b602364",
+      "question": "Israel x Iran ceasefire continues through November 22?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "d9e1f4a1-abc8-4ff9-a35c-08e6361096b2",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-22"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-22"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-13",
+            "2026-11-17",
+            "2026-11-22"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-13",
+            "2026-11-17",
+            "2026-11-22"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-13",
+            "2026-11-17",
+            "2026-11-22"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.835,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.12,
+        "qa_ensemble": 0.12,
+        "single_step_simulation": 0.35,
+        "single_step_ensemble": 0.35,
+        "single_trajectory_simulation": 0.55,
+        "multi_trajectory_simulation": 0.35,
+        "mcts_simulation": 0.402945
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_f2a596d7c7408c751048e137",
+      "question": "Will Chiang Wan-an win the next Taipei Mayor election?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "fe02e228-19e6-4562-9f85-bb0f228ea801",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-07-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-07-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-28",
+            "2027-01-20",
+            "2027-02-16",
+            "2027-03-15",
+            "2027-05-08",
+            "2027-07-01"
+          ],
+          "milestones": [
+            "2026-11-28"
+          ]
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-28",
+            "2027-01-20",
+            "2027-02-16",
+            "2027-03-15",
+            "2027-05-08",
+            "2027-07-01"
+          ],
+          "milestones": [
+            "2026-11-28"
+          ]
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-28",
+            "2027-01-20",
+            "2027-02-16",
+            "2027-03-15",
+            "2027-05-08",
+            "2027-07-01"
+          ],
+          "milestones": [
+            "2026-11-28"
+          ]
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.665,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.72,
+        "qa_ensemble": 0.77,
+        "single_step_simulation": 0.72,
+        "single_step_ensemble": 0.82,
+        "single_trajectory_simulation": 0.82,
+        "multi_trajectory_simulation": 0.77,
+        "mcts_simulation": 0.6539216
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_f7120e9ae0cd93a64580d11c",
+      "question": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "83622151-3d65-4ead-8c2a-6e9858296d2d",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-14",
+            "2026-11-20",
+            "2026-11-25",
+            "2026-12-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.155,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.18,
+        "qa_ensemble": 0.18,
+        "single_step_simulation": 0.18,
+        "single_step_ensemble": 0.385,
+        "single_trajectory_simulation": 0.3,
+        "multi_trajectory_simulation": 0.21,
+        "mcts_simulation": 0.3641582402750001
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_22be80eaaee57fc32437333e",
+      "question": "Will Christine Lagarde win the 2027 French presidential election?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "83c46d77-94d8-4718-8766-5ec037b56047",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.0695,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.04,
+        "qa_ensemble": 0.04,
+        "single_step_simulation": 0.04,
+        "single_step_ensemble": 0.04,
+        "single_trajectory_simulation": 0.08,
+        "multi_trajectory_simulation": 0.045,
+        "mcts_simulation": 0.26906489999999994
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_82bcdce72fef041dedc41af4",
+      "question": "Israeli airspace closed by December 31, 2026?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "2a38bbcb-b601-40b5-9013-9e372906fa00",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-30",
+            "2026-12-10",
+            "2026-12-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.305,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.18,
+        "qa_ensemble": 0.18,
+        "single_step_simulation": 0.18,
+        "single_step_ensemble": 0.1,
+        "single_trajectory_simulation": 0.12,
+        "multi_trajectory_simulation": 0.12,
+        "mcts_simulation": 0.23022
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_9f405f511b50dd968f399727",
+      "question": "Will David Lisnard win the 2027 French presidential election?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "d0b79d00-677d-4298-9018-b5cab4438990",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31",
+            "2027-02-21",
+            "2027-04-14",
+            "2027-06-06",
+            "2027-07-28",
+            "2027-09-18",
+            "2027-11-09",
+            "2028-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.1485,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.01,
+        "qa_ensemble": 0.01,
+        "single_step_simulation": 0.01,
+        "single_step_ensemble": 0.01,
+        "single_trajectory_simulation": 0.01,
+        "multi_trajectory_simulation": 0.01,
+        "mcts_simulation": 0.06385999999999999
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_79f5d6089b39baf64ed16fde",
+      "question": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+      "as_of": "2026-11-09T02:02:45+00:00",
+      "run_id": "4697bf2a-c6e3-4d84-b021-ea5e3644b56e",
+      "status": "completed",
+      "resolution": "Awaiting Resolution",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-11-09",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-29",
+            "2026-12-10",
+            "2026-12-20",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-29",
+            "2026-12-10",
+            "2026-12-20",
+            "2026-12-31"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-11-09",
+            "2026-11-19",
+            "2026-11-29",
+            "2026-12-10",
+            "2026-12-20",
+            "2026-12-31"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": null,
+      "quote": 0.06,
+      "quote_at": "2026-11-09T02:02:45+00:00",
+      "forecasts": {
+        "direct_qa": 0.72,
+        "qa_ensemble": 0.82,
+        "single_step_simulation": 0.72,
+        "single_step_ensemble": 0.85,
+        "single_trajectory_simulation": 0.72,
+        "multi_trajectory_simulation": 0.85,
+        "mcts_simulation": 0.668364
+      },
+      "partial_forecasts": {},
+      "reason": null
+    }
+  ],
+  "scores": null,
+  "method_usage": {
+    "direct_qa": {
+      "calls": {
+        "total": 30,
+        "count": 30
+      },
+      "tokens": {
+        "total": 92944,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 31.344000000000005,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    },
+    "qa_ensemble": {
+      "calls": {
+        "total": 60,
+        "count": 30
+      },
+      "tokens": {
+        "total": 185888,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 50.05200000000001,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    },
+    "single_step_simulation": {
+      "calls": {
+        "total": 302,
+        "count": 30
+      },
+      "tokens": {
+        "total": 3766615,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 2032.23,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    },
+    "single_step_ensemble": {
+      "calls": {
+        "total": 572,
+        "count": 30
+      },
+      "tokens": {
+        "total": 7323461,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 1081.5439999999999,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    },
+    "single_trajectory_simulation": {
+      "calls": {
+        "total": 1048,
+        "count": 30
+      },
+      "tokens": {
+        "total": 12804231,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 3213.5199999999995,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    },
+    "multi_trajectory_simulation": {
+      "calls": {
+        "total": 2265,
+        "count": 30
+      },
+      "tokens": {
+        "total": 28086581,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 4601.926,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 2,
+        "count": 30
+      }
+    },
+    "mcts_simulation": {
+      "calls": {
+        "total": 2895,
+        "count": 30
+      },
+      "tokens": {
+        "total": 35472460,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 9681.597999999998,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    }
+  },
+  "active_stage": null
+}

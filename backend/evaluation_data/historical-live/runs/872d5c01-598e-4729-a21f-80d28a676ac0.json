@@ -1,0 +1,1420 @@
+{
+  "run_id": "872d5c01-598e-4729-a21f-80d28a676ac0",
+  "case_id": "market_6e2430c9b77a8fd682ef7809",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 6035,
+      "input_tokens": 6025,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 6035,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 6025,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:32:15.620520+00:00",
+      "contract_id": "0xc7781eb0e4ab55dcecb64bba3cdb58a03d1275cfdc87ff4bbc4c20005b283681",
+      "forecast_cutoff": "2026-06-04T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2c0bd2a378fcf61ff0817b84d2f9fc630a32daaea3b52fca77766b9e7f493e9e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.972
+    },
+    {
+      "calls": 2,
+      "tokens": 12070,
+      "input_tokens": 12050,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 12070,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.065,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.05,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 6025,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 6025,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:32:17.363729+00:00",
+      "contract_id": "0xc7781eb0e4ab55dcecb64bba3cdb58a03d1275cfdc87ff4bbc4c20005b283681",
+      "forecast_cutoff": "2026-06-04T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2c0bd2a378fcf61ff0817b84d2f9fc630a32daaea3b52fca77766b9e7f493e9e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.742
+    },
+    {
+      "calls": 7,
+      "tokens": 123571,
+      "input_tokens": 120531,
+      "output_tokens": 3040,
+      "accounted_tokens_upper": 123571,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-06-04",
+                "interval_end": "2026-06-11",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2026-06-04T23:59:59+00:00",
+                "interval_end_utc": "2026-06-11T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "candidate_id": "agent_26904afeeb305887:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26904afeeb305887:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a Governing Council communication reaffirming the price-stability mandate (HICP below but close to 2% over the medium term) and stating that the June 11, 2026 decision will be data-dependent, without pre-committing to a 25 bps increase.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "No settled June 2026 decision appears in the evidence; the only rate data is a November 2024 snapshot showing the deposit facility at 3.25%. With no post-meeting release or guidance, the 25 bps outcome remains unverified and is estimated from base-rate uncertainty rather than observed action.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%\n|",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "6743ccb6-f972-4ecd-b705-e6d763bce5ff",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:33:06.053877+00:00",
+      "contract_id": "0xc7781eb0e4ab55dcecb64bba3cdb58a03d1275cfdc87ff4bbc4c20005b283681",
+      "forecast_cutoff": "2026-06-04T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2c0bd2a378fcf61ff0817b84d2f9fc630a32daaea3b52fca77766b9e7f493e9e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 48.687
+    },
+    {
+      "calls": 23,
+      "tokens": 328583,
+      "input_tokens": 320679,
+      "output_tokens": 7904,
+      "accounted_tokens_upper": 328583,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-04",
+                "interval_end": "2026-06-06",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2026-06-04T23:59:59+00:00",
+                "interval_end_utc": "2026-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "candidate_id": "agent_26904afeeb305887:initial:1",
+                  "action": "Take no public rate action before the June 11, 2026 Governing Council meeting; the decision on any 25 bps move is reserved to that meeting and no evidence establishes a pre-commitment.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26904afeeb305887:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Take no public rate action before the June 11, 2026 Governing Council meeting; the decision on any 25 bps move is reserved to that meeting and no evidence establishes a pre-commitment.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.25,
+                "basis": "No evidence addresses the June 2026 policy stance; the packet only shows institutional composition and a November 2024 instrument table with the deposit facility at 3.25%. A 25 bps move is one plausible outcome among hold, cut, or hike, so the estimate stays near an uninformative prior.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%\n|",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-06",
+                "interval_end": "2026-06-08",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2026-06-06T00:00:00+00:00",
+                "interval_end_utc": "2026-06-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.25,
+                "basis": "No evidence addresses the June 2026 policy stance; the packet only shows institutional composition and a November 2024 instrument table with the deposit facility at 3.25%. A 25 bps move is one plausible outcome among hold, cut, or hike, so the estimate stays near an uninformative prior.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%\n|",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-08",
+                "interval_end": "2026-06-11",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 7,
+                "interval_days": 3,
+                "interval_start_utc": "2026-06-08T00:00:00+00:00",
+                "interval_end_utc": "2026-06-11T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.5,
+                "basis": "No settled evidence addresses the June 2026 rate decision; the packet only shows ECB governance rosters and a November 2024 instrument table with the deposit facility at 3.25%. The decision itself remains unobserved, so the estimate stays near an uninformative midpoint.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%\n|",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.5,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-04",
+                "interval_end": "2026-06-06",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2026-06-04T23:59:59+00:00",
+                "interval_end_utc": "2026-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "candidate_id": "agent_26904afeeb305887:initial:1",
+                  "action": "Take no public rate action in this interval; the Governing Council's next scheduled decision opportunity is the June 11, 2026 meeting, and no new outward communication is issued before then.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26904afeeb305887:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no public rate action in this interval; the Governing Council's next scheduled decision opportunity is the June 11, 2026 meeting, and no new outward communication is issued before then.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.25,
+                "basis": "No evidence addresses the June 2026 policy stance; the packet only shows institutional composition and a November 2024 instrument table with the deposit facility at 3.25%. A 25 bps move is one plausible outcome among hold, cut, or hike, so the estimate stays near an uninformative prior.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%\n|",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-06",
+                "interval_end": "2026-06-08",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2026-06-06T00:00:00+00:00",
+                "interval_end_utc": "2026-06-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.25,
+                "basis": "No evidence addresses the June 2026 policy stance; the packet only shows institutional composition and a November 2024 instrument table with the deposit facility at 3.25%. A 25 bps move is one plausible outcome among hold, cut, or hike, so the estimate stays near an uninformative prior.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%\n|",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-08",
+                "interval_end": "2026-06-11",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 7,
+                "interval_days": 3,
+                "interval_start_utc": "2026-06-08T00:00:00+00:00",
+                "interval_end_utc": "2026-06-11T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.5,
+                "basis": "No settled evidence addresses the June 2026 rate decision; the packet only shows ECB governance rosters and a November 2024 instrument table with the deposit facility at 3.25%. The decision itself remains unobserved, so the estimate stays near an uninformative midpoint.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%\n|",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.5,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.5,
+      "covered_p_yes": 0.5,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.5,
+        0.5
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "3158798b-e436-4b6b-93e1-038b2e83c318",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:33:37.465905+00:00",
+      "contract_id": "0xc7781eb0e4ab55dcecb64bba3cdb58a03d1275cfdc87ff4bbc4c20005b283681",
+      "forecast_cutoff": "2026-06-04T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2c0bd2a378fcf61ff0817b84d2f9fc630a32daaea3b52fca77766b9e7f493e9e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 31.41
+    },
+    {
+      "calls": 13,
+      "tokens": 195426,
+      "input_tokens": 191362,
+      "output_tokens": 4064,
+      "accounted_tokens_upper": 195426,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-04",
+                "interval_end": "2026-06-06",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2026-06-04T23:59:59+00:00",
+                "interval_end_utc": "2026-06-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "candidate_id": "agent_26904afeeb305887:initial:1",
+                  "action": "Take no external rate action this round; the Governing Council's decision is scheduled for the June 11, 2026 meeting, after this interval. Continue internal preparation without public announcement.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26904afeeb305887:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Take no external rate action this round; the Governing Council's decision is scheduled for the June 11, 2026 meeting, after this interval. Continue internal preparation without public announcement.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "No current evidence addresses the June 2026 policy stance; the packet only shows institutional membership and November 2024 instrument rates (deposit facility 3.25%). With no inflation, guidance, or market-pricing data, a 25 bps move is plausible but unconfirmed.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-06",
+                "interval_end": "2026-06-08",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2026-06-06T00:00:00+00:00",
+                "interval_end_utc": "2026-06-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "No current evidence addresses the June 2026 policy stance; the packet only shows institutional membership and November 2024 instrument rates (deposit facility 3.25%). With no inflation, guidance, or market-pricing data, a 25 bps move is plausible but unconfirmed.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-06-08",
+                "interval_end": "2026-06-11",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 7,
+                "interval_days": 3,
+                "interval_start_utc": "2026-06-08T00:00:00+00:00",
+                "interval_end_utc": "2026-06-11T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.5,
+                "basis": "No settled evidence addresses the June 2026 rate decision; the packet only shows ECB governance rosters and a November 2024 instrument table with the deposit facility at 3.25%. The decision itself remains unobserved, so the estimate is uninformative.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%\n|",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.5,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 1,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.5,
+      "covered_p_yes": 0.5,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.5,
+        0.5
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "b1bc68d8-e5d0-4e30-9486-de7032bb6f97",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:12:08.725196+00:00",
+      "contract_id": "0xc7781eb0e4ab55dcecb64bba3cdb58a03d1275cfdc87ff4bbc4c20005b283681",
+      "forecast_cutoff": "2026-06-04T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2c0bd2a378fcf61ff0817b84d2f9fc630a32daaea3b52fca77766b9e7f493e9e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 36.285
+    },
+    {
+      "calls": 10,
+      "tokens": 165616,
+      "input_tokens": 161628,
+      "output_tokens": 3988,
+      "accounted_tokens_upper": 165616,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-06-04",
+                "interval_end": "2026-06-11",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2026-06-04T23:59:59+00:00",
+                "interval_end_utc": "2026-06-11T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "candidate_id": "agent_26904afeeb305887:initial:1",
+                  "action": "Take no public rate announcement before the scheduled June 11, 2026 Governing Council meeting; reserve any decision on the deposit facility rate for that meeting's post-decision communication.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26904afeeb305887:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no public rate announcement before the scheduled June 11, 2026 Governing Council meeting; reserve any decision on the deposit facility rate for that meeting's post-decision communication.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_26904afeeb305887:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public Governing Council communication reaffirming the price-stability mandate and stating that the June 2026 rate decision will be taken at the scheduled June 11 meeting, without pre-committing to any basis-point change.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "No settled June 2026 decision appears in the packet; the only rate data is a November 2024 snapshot showing the deposit facility at 3.25%. Governing Council membership is current but silent on the June vote, so the 25 bps outcome remains unverified and the estimate rests on base-rate uncertainty rather than a measured signal.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%\n|",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.7
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-06-04",
+                "interval_end": "2026-06-11",
+                "horizon_end": "2026-06-11",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2026-06-04T23:59:59+00:00",
+                "interval_end_utc": "2026-06-11T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_26904afeeb305887",
+                  "actor_name": "European Central Bank",
+                  "candidate_id": "agent_26904afeeb305887:initial:1",
+                  "action": "Take no public rate announcement before the June 11, 2026 Governing Council meeting; hold the current deposit facility rate stance and let the scheduled meeting produce the decision.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_26904afeeb305887:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no public rate announcement before the June 11, 2026 Governing Council meeting; hold the current deposit facility rate stance and let the scheduled meeting produce the decision.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "No settled June 2026 decision appears in the packet; the only rate data is a November 2024 snapshot showing the deposit facility at 3.25%. Governing Council membership is current but silent on the June vote, so the 25 bps outcome remains unverified and the estimate rests on base-rate uncertainty rather than a measured signal.",
+                "evidence_quote": "|Deposit facility\n|Overnight\n| 3.25%\n|",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_1.row_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "7371abca-d56f-4175-a81e-1183c81476d4",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:12:26.096242+00:00",
+      "contract_id": "0xc7781eb0e4ab55dcecb64bba3cdb58a03d1275cfdc87ff4bbc4c20005b283681",
+      "forecast_cutoff": "2026-06-04T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2c0bd2a378fcf61ff0817b84d2f9fc630a32daaea3b52fca77766b9e7f493e9e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 17.37
+    },
+    {
+      "calls": 30,
+      "tokens": 391500,
+      "input_tokens": 375470,
+      "output_tokens": 16030,
+      "accounted_tokens_upper": 391500,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.088,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.088,
+        0.088
+      ],
+      "search_iterations": 5,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 5,
+          "search_value": 0.3456,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.8,
+          "visits": 2,
+          "search_value": 0.2944,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.8,
+          "visits": 1,
+          "search_value": 0.2944,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.8,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.064
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.2,
+          "visits": 2,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.2,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.2,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.024
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "0473d25f-ba83-41a1-9b85-7ad18aa2c74e",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:14:16.783688+00:00",
+      "contract_id": "0xc7781eb0e4ab55dcecb64bba3cdb58a03d1275cfdc87ff4bbc4c20005b283681",
+      "forecast_cutoff": "2026-06-04T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2c0bd2a378fcf61ff0817b84d2f9fc630a32daaea3b52fca77766b9e7f493e9e",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 110.689
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-06-04T23:59:59+00:00",
+  "forecast_key": "0xc7781eb0e4ab55dcecb64bba3cdb58a03d1275cfdc87ff4bbc4c20005b283681",
+  "group_id": "ecb-interest-rates-june-2026",
+  "evidence_sha256": "2c0bd2a378fcf61ff0817b84d2f9fc630a32daaea3b52fca77766b9e7f493e9e",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 860,
+    "input_tokens": 772,
+    "output_tokens": 88,
+    "accounted_tokens_upper": 860,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-06-04",
+        "2026-06-11"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-06-04",
+        "2026-06-06",
+        "2026-06-08",
+        "2026-06-11"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-06-04",
+        "2026-06-06",
+        "2026-06-08",
+        "2026-06-11"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-06-04",
+        "2026-06-11"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-06-04",
+        "2026-06-06",
+        "2026-06-08",
+        "2026-06-11"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-06-11T21:59:59+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2026-06-11T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1,
+      "needs_evidence": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "unverified",
+      "seats": [],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "The ECB Governing Council decides whether to change the deposit facility rate by 25 basis points at the June 2026 meeting."
+      ],
+      "gaps": [
+        "No named individual or body is explicitly identified as the sole decision-maker for the June 2026 rate change; the Governing Council is the relevant collective body.",
+        "The actual outcome of the June 2026 meeting is unknown as of 2026-06-04.",
+        "No frozen source identifies Governing Council of the European Central Bank; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "ecb_rate_decision",
+          "choice": "The ECB Governing Council decides whether to change the deposit facility rate by 25 basis points at the June 2026 meeting.",
+          "owner": null,
+          "support": "unbound"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 27,
+    "tokens": 88175,
+    "input_tokens": 77262,
+    "output_tokens": 10913,
+    "accounted_tokens_upper": 88175,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

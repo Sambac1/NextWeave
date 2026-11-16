@@ -1,0 +1,2410 @@
+{
+  "run_id": "49640619-62cd-498c-9522-800f75960159",
+  "case_id": "market_48677f56e192954cfbb7ef5b",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3420,
+      "input_tokens": 3410,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3420,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3410,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:25:40.411876+00:00",
+      "contract_id": "0x5c79dfde05559b79a9cb9f7c4187e4d49632dd042572ae676952f812732591cc",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "777f90b187283d870e1c8ad103cc31d943da2bbd37f25551dadaeb9d5195128d",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.834
+    },
+    {
+      "calls": 2,
+      "tokens": 6840,
+      "input_tokens": 6820,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6840,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3410,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3410,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:25:42.114523+00:00",
+      "contract_id": "0x5c79dfde05559b79a9cb9f7c4187e4d49632dd042572ae676952f812732591cc",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "777f90b187283d870e1c8ad103cc31d943da2bbd37f25551dadaeb9d5195128d",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.7
+    },
+    {
+      "calls": 9,
+      "tokens": 115311,
+      "input_tokens": 108802,
+      "output_tokens": 6509,
+      "accounted_tokens_upper": 115311,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "status": "executed",
+                  "summary": "UP announced that, given progress toward an agreement with Iran and the Navy's completed mine-clearing of the Hormuz Traffic Separation Scheme, the U.S. will keep 'Project Freedom' paused and will not impede commercial transits, urging carriers to resume normal Hormuz sailings, conditional on Iran not re-closing or mining the strait."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "will not impede commercial transits, urging carriers to resume normal Hormuz sailings",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "UP announced that, given progress toward an agreement with Iran and the Navy's completed mine-clearing of the Hormuz Traffic Separation Scheme, the U.S. will keep 'Project Freedom' paused and will not impede commercial transits, urging carriers to resume normal Hormuz sailings, conditional on Iran not re-closing or mining the strait.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Maersk signaled to the U.S. that it would resume normal Hormuz transits if the U.S. Navy sustains safe passage and mine clearance in the Traffic Separation Scheme and insurers restore war-risk cover; no transit was executed.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Maersk keeps its Hormuz transits suspended this round and monitors security, insurer and authority positions before any resumption decision; no new public or contractual commitment is made.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                  "action": "Publicly announce that, given progress toward an agreement with Iran and the Navy's completed mine-clearing of the Hormuz Traffic Separation Scheme, the U.S. will keep 'Project Freedom' paused and will not impede commercial transits, urging carriers to resume normal Hormuz sailings.\n承诺：Keep U.S. reopening operations paused and refrain from blocking commercial transit while the agreement track holds; resume if Iran re-closes or mines the strait.\n触发或复核条件：Conditional on Iran not re-closing or mining the strait.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly announce that, given progress toward an agreement with Iran and the Navy's completed mine-clearing of the Hormuz Traffic Separation Scheme, the U.S. will keep 'Project Freedom' paused and will not impede commercial transits, urging carriers to resume normal Hormuz sailings.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly state that a complete and final agreement with Iran is close and that, contingent on it, the U.S. will guarantee safe passage and keep the Navy's reopening operations suspended through year-end, inviting Iran to confirm the strait stays open.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The only in-window signals are conditional: the U.S. kept 'Project Freedom' paused and urged carriers to resume, while Maersk said it would resume only if safe passage and war-risk cover were restored, and no transit was executed. No IMF Portwatch 7-day average at or above 60 is shown, and the last observed traffic data were near-zero transits.",
+                "evidence_quote": "Maersk signaled to the U.S. that it would resume normal Hormuz transits if the U.S. Navy sustains safe passage and mine clearance in the Traffic Separation Scheme and insurers restore war-risk cover; no transit was executed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.18
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 3,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 3,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "de4a3b17-9fcb-4f01-86bd-d02f263a09be",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:26:59.911622+00:00",
+      "contract_id": "0x5c79dfde05559b79a9cb9f7c4187e4d49632dd042572ae676952f812732591cc",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "777f90b187283d870e1c8ad103cc31d943da2bbd37f25551dadaeb9d5195128d",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 77.794
+    },
+    {
+      "calls": 18,
+      "tokens": 228928,
+      "input_tokens": 217213,
+      "output_tokens": 11715,
+      "accounted_tokens_upper": 228928,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "status": "executed",
+                  "summary": "Maersk stated publicly that it will resume container transits through the Strait of Hormuz only when war-risk insurance is available at sustainable premiums, naval escorts or a durable ceasefire are in place, and the traffic separation scheme is verified clear of mines, setting no resumption date."
+                },
+                {
+                  "action_id": "action_1_agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "status": "executed",
+                  "summary": "UP announced that, with the pause having run since 6 May, the U.S. is resuming 'Project Freedom' escort and mine-clearance operations to restore commercial transit through the Strait of Hormuz and called on carriers to resume transits under U.S. Navy protection, framed as conditional on no renewed Iranian mining or attacks on shipping."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d27ec2c5addc502e",
+                    "action_1_agent_ca62e8730cee5ec0"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Maersk stated publicly that it will resume container transits through the Strait of Hormuz only when war-risk insurance is available at sustainable premiums"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Maersk stated publicly that it will resume container transits through the Strait of Hormuz only when war-risk insurance is available at sustainable premiums",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Maersk stated publicly that it will resume container transits through the Strait of Hormuz only when war-risk insurance is available at sustainable premiums, naval escorts or a durable ceasefire are in place, and the traffic separation scheme is verified clear of mines, setting no resumption date.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "UP announced that, with the pause having run since 6 May, the U.S. is resuming 'Project Freedom' escort and mine-clearance operations to restore commercial transit through the Strait of Hormuz and called on carriers to resume transits under U.S. Navy protection, framed as conditional on no renewed Iranian mining or attacks on shipping.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:2",
+                  "action": "State publicly that Maersk will resume Hormuz container transits only when war-risk insurance is available at sustainable premiums, naval escorts or a durable ceasefire are in place, and the traffic separation scheme is verified clear of mines; no resumption date is set.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Hold Maersk's suspension of Hormuz transits and conduct an internal security, insurer and authority review before any resumption decision; no public announcement this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "State publicly that Maersk will resume Hormuz container transits only when war-risk insurance is available at sustainable premiums, naval escorts or a durable ceasefire are in place, and the traffic separation scheme is verified clear of mines; no resumption date is set.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                  "action": "Publicly announce that, with the pause having run since 6 May, the U.S. is resuming 'Project Freedom' escort and mine-clearance operations to restore commercial transit through the Strait of Hormuz, and call on carriers to resume transits under U.S. Navy protection.\n承诺：Resume U.S. Navy escort and mine-clearing operations supporting commercial transit through Hormuz.\n触发或复核条件：Framed as conditional on no renewed Iranian mining or attacks on shipping.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly announce that, with the pause having run since 6 May, the U.S. is resuming 'Project Freedom' escort and mine-clearance operations to restore commercial transit through the Strait of Hormuz, and call on carriers to resume transits under U.S. Navy protection.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No IMF Portwatch 7-day average at or above 60 is shown for any in-window date. August reporting shows transits collapsed to a handful versus about 90/day pre-war, and Maersk's January 2027 statement sets conditions with no resumption date, so normal traffic by Dec 31 is unlikely.",
+                "evidence_quote": "Tracked transits through the strait fell from about 90 a day before the war to a handful, and berths at Jebel Ali that normally worked more than 80 scheduled services a week were left idle.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.165
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "status": "executed",
+                  "summary": "UP publicly announced that, with mines cleared from the Hormuz Traffic Separation Scheme and progress toward an agreement with Iran, the U.S. will resume 'Project Freedom' escort and mine-clearance support to restore normal commercial transit through the Strait of Hormuz before December 31, 2026, and called on carriers to resume transits; the commitment is contingent on no renewed Iranian mining or attacks on shipping."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "the U.S. will resume 'Project Freedom' escort and mine-clearance support to restore normal commercial transit",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "UP publicly announced that, with mines cleared from the Hormuz Traffic Separation Scheme and progress toward an agreement with Iran, the U.S. will resume 'Project Freedom' escort and mine-clearance support to restore normal commercial transit through the Strait of Hormuz before December 31, 2026, and called on carriers to resume transits; the commitment is contingent on no renewed Iranian mining or attacks on shipping.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:3",
+                  "action": null,
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Maersk publicly states it will resume normal Hormuz container transits once the strait is assessed as safe and insurers and authorities permit, and will begin a phased resumption with a small number of vessels rather than a full schedule restart. No binding commitment to a specific date is made in this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                  "action": "Publicly announce that, with mines cleared from the Hormuz Traffic Separation Scheme and progress toward an agreement with Iran, the U.S. will resume 'Project Freedom' escort and mine-clearance support to restore normal commercial transit through the Strait of Hormuz before December 31, 2026, and call on carriers to resume transits.\n承诺：U.S. resumes reopening operations and offers escort support to commercial shipping through year-end.\n触发或复核条件：Contingent on no renewed Iranian mining or attacks on shipping.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly announce that, with mines cleared from the Hormuz Traffic Separation Scheme and progress toward an agreement with Iran, the U.S. will resume 'Project Freedom' escort and mine-clearance support to restore normal commercial transit through the Strait of Hormuz before December 31, 2026, and call on carriers to resume transits.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly state that the U.S. pause in 'Project Freedom' continues while talks with Iran advance, and that the U.S. will keep the strait open for commercial shipping provided Iran refrains from mining or attacking vessels; offer to extend the pause if Iran publicly guarantees free passage.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "No IMF Portwatch 7-day average is in evidence; the latest observed data show transits collapsed to a handful per day in August, far below 60. The January 2027 announcement of resumed escort support is a stated intention contingent on no renewed attacks, not an observed return to normal traffic.",
+                "evidence_quote": "Tracked transits through the strait fell from about 90 a day before the war to a handful, and berths at Jebel Ali that normally worked more than 80 scheduled services a week were left idle.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.09
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.21,
+      "covered_p_yes": 0.21,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.21,
+        0.20999999999999996
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "bede6fbc-04f7-4c44-9d75-497688ddc429",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:27:39.969446+00:00",
+      "contract_id": "0x5c79dfde05559b79a9cb9f7c4187e4d49632dd042572ae676952f812732591cc",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "777f90b187283d870e1c8ad103cc31d943da2bbd37f25551dadaeb9d5195128d",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 40.056
+    },
+    {
+      "calls": 36,
+      "tokens": 477821,
+      "input_tokens": 454237,
+      "output_tokens": 23584,
+      "accounted_tokens_upper": 477821,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "status": "executed",
+                  "summary": "Maersk stated publicly that it will resume Strait of Hormuz transits only once independent security assessments and acceptable war-risk insurance terms permit, and called on authorities to guarantee safe passage; it committed to no transit date."
+                },
+                {
+                  "action_id": "action_1_agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "status": "executed",
+                  "summary": "UP publicly stated that, with Strait of Hormuz mine-clearance work completed and holding, the U.S. will not impede lawful commercial transit and urged carriers to resume normal Hormuz sailings, offering U.S. Navy escort coordination for willing shippers, conditioned on no new mining or attacks on shipping."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_ca62e8730cee5ec0",
+                    "action_1_agent_d27ec2c5addc502e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "the U.S. will not impede lawful commercial transit and urged carriers to resume normal Hormuz sailings"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "it committed to no transit date",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Maersk stated publicly that it will resume Strait of Hormuz transits only once independent security assessments and acceptable war-risk insurance terms permit, and called on authorities to guarantee safe passage; it committed to no transit date.",
+                  "date": "2026-11"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "UP publicly stated that, with Strait of Hormuz mine-clearance work completed and holding, the U.S. will not impede lawful commercial transit and urged carriers to resume normal Hormuz sailings, offering U.S. Navy escort coordination for willing shippers, conditioned on no new mining or attacks on shipping.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:2",
+                  "action": "Maersk states publicly that it will resume Hormuz transits only once independent security assessments and war-risk insurance terms permit, and calls on authorities to guarantee safe passage; no transit date is committed.\n承诺：Resume only when security and insurance conditions permit; no date committed.\n触发或复核条件：Independent security assessment and acceptable war-risk insurance terms.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Hold Maersk's suspension of Hormuz transits while internal security and insurer assessments are reviewed; no new public announcement or resumption commitment this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Maersk states publicly that it will resume Hormuz transits only once independent security assessments and war-risk insurance terms permit, and calls on authorities to guarantee safe passage; no transit date is committed.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                  "action": "Publicly state that, with the Strait of Hormuz mine-clearance work completed and holding, the U.S. will not impede commercial transit and urges carriers to resume normal Hormuz sailings; offer U.S. Navy escort coordination for willing shippers.\n承诺：U.S. will not impede lawful commercial transit through the Strait of Hormuz and will coordinate escorts on request.\n触发或复核条件：Mine-clearance gains hold and no new mining or attacks on shipping occur.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state that, with the Strait of Hormuz mine-clearance work completed and holding, the U.S. will not impede commercial transit and urges carriers to resume normal Hormuz sailings; offer U.S. Navy escort coordination for willing shippers.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Recent statements show U.S. willingness to allow transit and Maersk's conditional interest, but neither is an executed resumption. August data showed transits near zero, and no Portwatch 7-day average at or above 60 is evidenced, so reaching the threshold by December 31 remains uncertain.",
+                "evidence_quote": "Maersk stated publicly that it will resume Strait of Hormuz transits only once independent security assessments and acceptable war-risk insurance terms permit, and called on authorities to guarantee safe passage; it committed to no transit date.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Recent statements show U.S. willingness to allow transit and Maersk's conditional interest, but neither is an executed resumption. August data showed transits near zero, and no Portwatch 7-day average at or above 60 is evidenced, so reaching the threshold by December 31 remains uncertain.",
+                "evidence_quote": "Maersk stated publicly that it will resume Strait of Hormuz transits only once independent security assessments and acceptable war-risk insurance terms permit, and called on authorities to guarantee safe passage; it committed to no transit date.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Recent statements show U.S. willingness to allow transit and Maersk's conditional interest, but neither is an executed resumption. August data showed transits near zero, and no Portwatch 7-day average at or above 60 is evidenced, so reaching the threshold by December 31 remains uncertain.",
+                "evidence_quote": "Maersk stated publicly that it will resume Strait of Hormuz transits only once independent security assessments and acceptable war-risk insurance terms permit, and called on authorities to guarantee safe passage; it committed to no transit date.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "status": "executed",
+                  "summary": "Maersk announced a phased schedule of Strait of Hormuz transits beginning in this window, contingent on its independent security assessment remaining favorable and war-risk insurance terms being acceptable; it committed to publish a first sailing date within days and to use U.S. Navy escort coordination where offered."
+                },
+                {
+                  "action_id": "action_4_agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "status": "executed",
+                  "summary": "UP reiterated that U.S. Navy mine-clearance in the Hormuz Traffic Separation Scheme is complete and holding, that the U.S. will not impede lawful commercial transit, and that Navy escort coordination remains available on request, urging Maersk and other carriers to resume normal Hormuz sailings before December 31."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_ca62e8730cee5ec0",
+                    "action_4_agent_d27ec2c5addc502e"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Navy escort coordination remains available on request"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_ca62e8730cee5ec0",
+                    "action_1_agent_ca62e8730cee5ec0"
+                  ],
+                  "outcome": "pending",
+                  "effect": "contingent on its independent security assessment remaining favorable and war-risk insurance terms being acceptable"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Maersk announced a phased schedule of Strait of Hormuz transits beginning in this window, contingent on its independent security assessment remaining favorable and war-risk insurance terms being acceptable",
+                  "pending_actor_ids": [
+                    "agent_ca62e8730cee5ec0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Maersk announced a phased schedule of Strait of Hormuz transits beginning in this window, contingent on its independent security assessment remaining favorable and war-risk insurance terms being acceptable; it committed to publish a first sailing date within days and to use U.S. Navy escort coordination where offered.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "UP reiterated that U.S. Navy mine-clearance in the Hormuz Traffic Separation Scheme is complete and holding, that the U.S. will not impede lawful commercial transit, and that Navy escort coordination remains available on request, urging Maersk and other carriers to resume normal Hormuz sailings before December 31.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                  "action": "Maersk publicly announces it will resume a phased schedule of Strait of Hormuz transits beginning in this window, contingent on its independent security assessment remaining favorable and war-risk insurance terms being acceptable; it commits to publish a first sailing date within days and to use U.S. Navy escort coordination where offered.\n承诺：Phased Hormuz resumption contingent on favorable security assessment and acceptable war-risk insurance; first sailing date published within days.\n触发或复核条件：Independent security assessment favorable and acceptable war-risk insurance terms.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Maersk publicly announces it will resume a phased schedule of Strait of Hormuz transits beginning in this window, contingent on its independent security assessment remaining favorable and war-risk insurance terms being acceptable; it commits to publish a first sailing date within days and to use U.S. Navy escort coordination where offered.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                  "action": "Publicly reiterate that U.S. Navy mine-clearance in the Hormuz Traffic Separation Scheme is complete and holding, that the U.S. will not impede lawful commercial transit, and that Navy escort coordination remains available to any carrier that requests it. Urge Maersk and other carriers to resume normal Hormuz sailings before December 31.\n承诺：U.S. will not impede lawful commercial transit and will provide escort coordination on request, conditioned on no new mining or attacks on shipping.\n触发或复核条件：Mine-clearance gains hold and no new mining or attacks on shipping occur.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reiterate that U.S. Navy mine-clearance in the Hormuz Traffic Separation Scheme is complete and holding, that the U.S. will not impede lawful commercial transit, and that Navy escort coordination remains available to any carrier that requests it. Urge Maersk and other carriers to resume normal Hormuz sailings before December 31.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Maersk's December announcement of phased Hormuz transits is contingent on security and insurance terms, with no sailing date committed; U.S. officials urge resumption but cannot compel carriers. August attacks and the collapse in transits show how fragile recovery is, so a 7-day average of 60+ by Dec 31 remains unlikely though possible.",
+                "evidence_quote": "Maersk announced a phased schedule of Strait of Hormuz transits beginning in this window, contingent on its independent security assessment remaining favorable and war-risk insurance terms being acceptable; it committed to publish a first sailing date within days and to use U.S. Navy escort coordination where offered.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "status": "executed",
+                  "summary": "Maersk published a first Strait of Hormuz sailing date and stated its phased transit schedule proceeds because its independent security assessment is favorable and war-risk insurance terms are acceptable, adding that it will use U.S. Navy escort coordination where offered."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_5_agent_ca62e8730cee5ec0",
+                    "action_4_agent_d27ec2c5addc502e"
+                  ],
+                  "outcome": "realized",
+                  "effect": "it will use U.S. Navy escort coordination where offered"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Maersk published a first Strait of Hormuz sailing date and stated its phased transit schedule proceeds because its independent security assessment is favorable and war-risk insurance terms are acceptable",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_005_001",
+                  "text": "Maersk published a first Strait of Hormuz sailing date and stated its phased transit schedule proceeds because its independent security assessment is favorable and war-risk insurance terms are acceptable, adding that it will use U.S. Navy escort coordination where offered.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                  "action": "Maersk publicly publishes a first Hormuz sailing date within this window, stating the phased schedule proceeds because its independent security assessment is favorable and war-risk insurance terms are acceptable, and that it will use U.S. Navy escort coordination where offered.\n承诺：Publish first sailing date and begin phased Hormuz transits in this window, contingent on security assessment and insurance terms holding.\n触发或复核条件：Independent security assessment remains favorable and war-risk insurance terms acceptable.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Maersk publicly publishes a first Hormuz sailing date within this window, stating the phased schedule proceeds because its independent security assessment is favorable and war-risk insurance terms are acceptable, and that it will use U.S. Navy escort coordination where offered.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Maersk publicly states its phased Hormuz schedule remains conditional and that it is still finalizing war-risk insurance terms, so the first sailing date will be published only once those terms are confirmed; it reiterates the request for Navy escort coordination.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Maersk's published first sailing date and favorable security/insurance assessment (round 5) support resumed transits, but the outcome requires IMF Portwatch's 7-day average of transit calls to reach 60 by Dec 31, 2026. No Portwatch measurement is in evidence, and August Kpler data showed only a handful of crossings, so actual volume recovery remains unverified.",
+                "evidence_quote": "Maersk published a first Strait of Hormuz sailing date and stated its phased transit schedule proceeds because its independent security assessment is favorable and war-risk insurance terms are acceptable, adding that it will use U.S. Navy escort coordination where offered.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_005_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.04752
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 5,
+        "public_event_count": 5,
+        "substantive_public_event_count": 5,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 5,
+            "active_actor_count": 2,
+            "public_event_count": 5,
+            "substantive_public_event_count": 5,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "d39b72fb-262f-42ba-8d2e-d927ffeaacbd",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:29:49.259920+00:00",
+      "contract_id": "0x5c79dfde05559b79a9cb9f7c4187e4d49632dd042572ae676952f812732591cc",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "777f90b187283d870e1c8ad103cc31d943da2bbd37f25551dadaeb9d5195128d",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 129.286
+    },
+    {
+      "calls": 88,
+      "tokens": 1206523,
+      "input_tokens": 1145949,
+      "output_tokens": 60574,
+      "accounted_tokens_upper": 1206523,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "status": "executed",
+                  "summary": "Maersk publicly stated that it will resume Strait of Hormuz transits only when security conditions permit safe passage and insurer and authority guidance allow, making no fixed date or volume commitment now."
+                },
+                {
+                  "action_id": "action_1_agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "status": "executed",
+                  "summary": "UP publicly announced that the pause in 'Project Freedom' remains in effect while negotiations with Iran toward a complete and final agreement continue, and that the U.S. Navy will not conduct new reopening operations in the Strait of Hormuz during this period."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_ca62e8730cee5ec0",
+                    "action_1_agent_d27ec2c5addc502e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "the U.S. Navy will not conduct new reopening operations in the Strait of Hormuz during this period"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Maersk publicly stated that it will resume Strait of Hormuz transits only when security conditions permit safe passage",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Maersk publicly stated that it will resume Strait of Hormuz transits only when security conditions permit safe passage and insurer and authority guidance allow, making no fixed date or volume commitment now.",
+                  "date": "2026-11-10"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "UP publicly announced that the pause in 'Project Freedom' remains in effect while negotiations with Iran toward a complete and final agreement continue, and that the U.S. Navy will not conduct new reopening operations in the Strait of Hormuz during this period.",
+                  "date": "2026-11-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:2",
+                  "action": "Publicly state that Maersk will resume Strait of Hormuz transits only when security conditions permit safe passage and insurer and authority guidance allow; no fixed date or volume commitment is made now.\n承诺：Resume only when security, insurer and authority conditions permit safe passage.\n触发或复核条件：Security conditions in the strait and insurer/authority guidance permit safe transit.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Review current security conditions, insurer and authority positions, and IMF Portwatch transit-call data for the Strait of Hormuz before deciding whether to resume Maersk transits. No public resumption announcement or commitment this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that Maersk will resume Strait of Hormuz transits only when security conditions permit safe passage and insurer and authority guidance allow; no fixed date or volume commitment is made now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                  "action": "As U.S. President, publicly announce that the pause in 'Project Freedom' remains in effect while negotiations with Iran toward a complete and final agreement continue, and that the U.S. Navy will not conduct new reopening operations in the Strait of Hormuz during this period.\n承诺：Hold the pause on new U.S. reopening operations pending an agreement with Iran.\n触发或复核条件：Reassess if agreement status changes or Iranian mining resumes.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "As U.S. President, publicly announce that the pause in 'Project Freedom' remains in effect while negotiations with Iran toward a complete and final agreement continue, and that the U.S. Navy will not conduct new reopening operations in the Strait of Hormuz during this period.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "As U.S. President, announce that if Iran resumes mining or attacks shipping in the Strait of Hormuz, the U.S. Navy is authorized to resume 'Project Freedom' and destroy Iranian boats laying mines, while offering to lift the naval blockade if Iran keeps the strait open.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "As U.S. President, publicly call on commercial carriers, including Maersk, to resume Strait of Hormuz transits, citing mine-clearing of the Traffic Separation Scheme, and state that the U.S. Navy will escort transiting commercial vessels during the pause.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Recent simulated statements show Maersk conditioning resumption on security and insurer guidance with no date, and UP keeping the Project Freedom pause in effect. Historical 2026 evidence shows repeated closures and attacks, with transits collapsing to a handful, so reaching a 60 seven-day average by December 31 is unlikely but not impossible if a rapid reopening occurs.",
+                "evidence_quote": "Maersk publicly stated that it will resume Strait of Hormuz transits only when security conditions permit safe passage and insurer and authority guidance allow, making no fixed date or volume commitment now.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Recent simulated statements show Maersk conditioning resumption on security and insurer guidance with no date, and UP keeping the Project Freedom pause in effect. Historical 2026 evidence shows repeated closures and attacks, with transits collapsing to a handful, so reaching a 60 seven-day average by December 31 is unlikely but not impossible if a rapid reopening occurs.",
+                "evidence_quote": "Maersk publicly stated that it will resume Strait of Hormuz transits only when security conditions permit safe passage and insurer and authority guidance allow, making no fixed date or volume commitment now.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Recent simulated statements show Maersk conditioning resumption on security and insurer guidance with no date, and UP keeping the Project Freedom pause in effect. Historical 2026 evidence shows repeated closures and attacks, with transits collapsing to a handful, so reaching a 60 seven-day average by December 31 is unlikely but not impossible if a rapid reopening occurs.",
+                "evidence_quote": "Maersk publicly stated that it will resume Strait of Hormuz transits only when security conditions permit safe passage and insurer and authority guidance allow, making no fixed date or volume commitment now.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "status": "executed",
+                  "summary": "UP publicly announced that the pause on new U.S. reopening operations in the Strait of Hormuz remains in effect while negotiations with Iran continue, and that the U.S. Navy will not conduct new reopening operations during this period."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "the pause on new U.S. reopening operations in the Strait of Hormuz remains in effect while negotiations with Iran continue",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "UP publicly announced that the pause on new U.S. reopening operations in the Strait of Hormuz remains in effect while negotiations with Iran continue, and that the U.S. Navy will not conduct new reopening operations during this period.",
+                  "date": "2026-12-15"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                  "action": "Maintain the existing public position: Maersk resumes Strait of Hormuz transits only when security conditions permit safe passage and insurer and authority guidance allow. No new announcement, date or volume commitment this round.\n触发或复核条件：Security conditions, insurer guidance and authority guidance permit safe transit.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Maintain the existing public position: Maersk resumes Strait of Hormuz transits only when security conditions permit safe passage and insurer and authority guidance allow. No new announcement, date or volume commitment this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                  "action": "As U.S. President, publicly announce that the pause on new U.S. reopening operations in the Strait of Hormuz remains in effect while negotiations with Iran continue, and that the U.S. Navy will not conduct new reopening operations during this period.\n承诺：Hold the pause on new U.S. reopening operations pending an agreement with Iran.\n触发或复核条件：Reassess if agreement status changes or Iranian mining resumes.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As U.S. President, publicly announce that the pause on new U.S. reopening operations in the Strait of Hormuz remains in effect while negotiations with Iran continue, and that the U.S. Navy will not conduct new reopening operations during this period.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:2",
+                      "action": "As U.S. President, publicly announce that the U.S. Navy will resume 'Project Freedom' reopening operations in the Strait of Hormuz to restore safe commercial passage, and call on Iran to keep the strait open.",
+                      "code": "model_rejected"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The latest simulated evidence shows the U.S. pause on reopening operations remains in effect through mid-December 2026, and Maersk conditions resumption on security and insurer guidance without a date. With the window closing December 31, 2026, a 7-day average of 60 transit calls is unlikely absent a rapid, unannounced reopening.",
+                "evidence_quote": "UP publicly announced that the pause on new U.S. reopening operations in the Strait of Hormuz remains in effect while negotiations with Iran continue, and that the U.S. Navy will not conduct new reopening operations during this period.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No IMF Portwatch transit-call figure is in evidence, so the threshold is unverified. The latest settled events show the U.S. reopening pause still in effect in mid-December and Maersk conditioning resumption on security, while August tracking showed transits near zero, making a 7-day average of 60 by December 31 unlikely.",
+                "evidence_quote": "UP publicly announced that the pause on new U.S. reopening operations in the Strait of Hormuz remains in effect while negotiations with Iran continue, and that the U.S. Navy will not conduct new reopening operations during this period.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.11549999999999999
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "status": "executed",
+                  "summary": "President UP publicly announced that, with the Strait of Hormuz open and mines cleared from the Traffic Separation Scheme, the United States is lifting restrictions on commercial passage and will not resume 'Project Freedom' reopening operations absent renewed Iranian interference, and called on carriers to resume normal transits."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "the United States is lifting restrictions on commercial passage",
+                  "pending_actor_ids": [
+                    "agent_d27ec2c5addc502e"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "President UP publicly announced that, with the Strait of Hormuz open and mines cleared from the Traffic Separation Scheme, the United States is lifting restrictions on commercial passage and will not resume 'Project Freedom' reopening operations absent renewed Iranian interference, and called on carriers to resume normal transits.",
+                  "date": "2026-11-10"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Maersk announces it will not resume normal Hormuz transits this round; it will keep rerouting via the Cape of Good Hope and will only consider resuming after a sustained period without vessel attacks and acceptable war-risk insurance terms.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                  "action": "Publicly announce that, with the Strait of Hormuz open and mines cleared from the Traffic Separation Scheme, the U.S. is lifting restrictions on commercial passage and will not resume 'Project Freedom' reopening operations absent renewed Iranian interference; call on carriers to resume normal transits.\n承诺：U.S. will not resume offensive reopening operations while the strait remains open and no new mining occurs.\n触发或复核条件：Iran refrains from closing the strait or laying new mines.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly announce that, with the Strait of Hormuz open and mines cleared from the Traffic Separation Scheme, the U.S. is lifting restrictions on commercial passage and will not resume 'Project Freedom' reopening operations absent renewed Iranian interference; call on carriers to resume normal transits.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "A simulated announcement says restrictions are being lifted and carriers are called to resume normal transits, but that is communication, not observed Portwatch transit data. August evidence shows transits collapsed to a handful per day, so reaching a 7-day average of 60 by December 31 requires a large, unverified recovery.",
+                "evidence_quote": "President UP publicly announced that, with the Strait of Hormuz open and mines cleared from the Traffic Separation Scheme, the United States is lifting restrictions on commercial passage and will not resume 'Project Freedom' reopening operations absent renewed Iranian interference, and called on carriers to resume normal transits.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_d27ec2c5addc502e"
+                  ]
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm that the Strait of Hormuz is open, mines are cleared from the Traffic Separation Scheme, and the U.S. is not impeding lawful commercial transit; urge insurers, flag states and carriers to treat the corridor as navigable and resume normal transits.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "A simulated announcement says restrictions are being lifted and carriers are called to resume normal transits, but that is communication, not observed Portwatch transit data. August evidence shows transits collapsed to a handful per day, so reaching a 7-day average of 60 by December 31 requires a large, unverified recovery.",
+                "evidence_quote": "President UP publicly announced that, with the Strait of Hormuz open and mines cleared from the Traffic Separation Scheme, the United States is lifting restrictions on commercial passage and will not resume 'Project Freedom' reopening operations absent renewed Iranian interference, and called on carriers to resume normal transits.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "status": "executed",
+                  "summary": "Maersk publicly announced it will resume Hormuz container transits via the cleared Traffic Separation Scheme with UKMTO routing coordination, phased over the coming weeks, while maintaining a security review and pausing again if new mining or attacks occur; no escort was requested."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d27ec2c5addc502e",
+                    "action_3_agent_ca62e8730cee5ec0"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Maersk publicly announced it will resume Hormuz container transits via the cleared Traffic Separation Scheme with UKMTO routing coordination"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Maersk publicly announced it will resume Hormuz container transits via the cleared Traffic Separation Scheme with UKMTO routing coordination, phased over the coming weeks",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "Maersk publicly announced it will resume Hormuz container transits via the cleared Traffic Separation Scheme with UKMTO routing coordination, phased over the coming weeks, while maintaining a security review and pausing again if new mining or attacks occur; no escort was requested.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                  "action": "Maersk publicly announces it will resume Hormuz container transits via the cleared Traffic Separation Scheme with UKMTO routing coordination, phased over the coming weeks, while maintaining a security review and pausing again if new mining or attacks occur. No escort is requested.\n承诺：Maersk commits to resume transits on the cleared TSS, conditioned on no renewed Iranian closure or new mining and on insurer war-risk terms remaining acceptable.\n触发或复核条件：Iran refrains from closing the strait or laying new mines; war-risk premiums stay within acceptable bounds.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Maersk publicly announces it will resume Hormuz container transits via the cleared Traffic Separation Scheme with UKMTO routing coordination, phased over the coming weeks, while maintaining a security review and pausing again if new mining or attacks occur. No escort is requested.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Recent simulated announcements (U.S. lifting restrictions, Maersk resuming phased transits) support reopening, but they are plans, not observed Portwatch transit counts. August data showed transits near zero, so reaching a 7-day average of 60 by Dec 31 requires substantial, sustained recovery.",
+                "evidence_quote": "Maersk publicly announced it will resume Hormuz container transits via the cleared Traffic Separation Scheme with UKMTO routing coordination, phased over the coming weeks, while maintaining a security review and pausing again if new mining or attacks occur; no escort was requested.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "status": "executed",
+                  "summary": "President UP publicly reaffirmed that U.S. naval forces are not impeding lawful commercial transit through the Strait of Hormuz, that the Traffic Separation Scheme is cleared, and that 'Project Freedom' reopening operations remain suspended absent renewed Iranian mining or closure, urging carriers to proceed via the cleared TSS with UKMTO routing and noting no escort is being offered or needed."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_d27ec2c5addc502e",
+                    "action_3_agent_ca62e8730cee5ec0"
+                  ],
+                  "outcome": "pending",
+                  "effect": "urging carriers to proceed via the cleared TSS with UKMTO routing and noting no escort is being offered or needed"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "urging carriers to proceed via the cleared TSS with UKMTO routing and noting no escort is being offered or needed",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "President UP publicly reaffirmed that U.S. naval forces are not impeding lawful commercial transit through the Strait of Hormuz, that the Traffic Separation Scheme is cleared, and that 'Project Freedom' reopening operations remain suspended absent renewed Iranian mining or closure, urging carriers to proceed via the cleared TSS with UKMTO routing and noting no escort is being offered or needed.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d27ec2c5addc502e",
+                  "actor_name": "UP",
+                  "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                  "action": "Publicly reaffirm that U.S. naval forces are not impeding lawful commercial transit through the Strait, the TSS is cleared, and 'Project Freedom' reopening operations remain suspended absent renewed Iranian mining or closure; urge carriers to proceed via the cleared TSS with UKMTO routing and note no escort is being offered or needed.\n承诺：U.S. will not resume offensive reopening operations while the strait stays open and no new mining occurs.\n触发或复核条件：Iran refrains from closing the strait or laying new mines.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d27ec2c5addc502e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm that U.S. naval forces are not impeding lawful commercial transit through the Strait, the TSS is cleared, and 'Project Freedom' reopening operations remain suspended absent renewed Iranian mining or closure; urge carriers to proceed via the cleared TSS with UKMTO routing and note no escort is being offered or needed.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "status": "executed",
+                  "summary": "Maersk publicly confirmed it has begun the phased resumption of Hormuz container transits on the cleared Traffic Separation Scheme with UKMTO routing coordination, requesting no escort, and stated it will scale toward normal schedules as security holds, pausing again if new mining or attacks occur or insurer war-risk terms become unacceptable."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_3_agent_ca62e8730cee5ec0",
+                    "action_5_agent_ca62e8730cee5ec0"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Maersk publicly confirmed it has begun the phased resumption of Hormuz container transits on the cleared Traffic Separation Scheme with UKMTO routing coordination"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_d27ec2c5addc502e",
+                    "action_5_agent_ca62e8730cee5ec0"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Maersk publicly confirmed it has begun the phased resumption of Hormuz container transits on the cleared Traffic Separation Scheme with UKMTO routing coordination"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Strait of Hormuz traffic returns to normal by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Maersk publicly confirmed it has begun the phased resumption of Hormuz container transits on the cleared Traffic Separation Scheme with UKMTO routing coordination",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_005_001",
+                  "text": "Maersk publicly confirmed it has begun the phased resumption of Hormuz container transits on the cleared Traffic Separation Scheme with UKMTO routing coordination, requesting no escort, and stated it will scale toward normal schedules as security holds, pausing again if new mining or attacks occur or insurer war-risk terms become unacceptable.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ca62e8730cee5ec0",
+                  "actor_name": "Maersk",
+                  "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                  "action": "Maersk publicly confirms it has begun the phased resumption of Hormuz container transits on the cleared TSS with UKMTO routing, no escort requested, and will scale toward normal schedules as security holds.\n承诺：Maersk commits to proceed with phased transits via the cleared TSS, pausing again if new mining or attacks occur or insurer war-risk terms become unacceptable.\n触发或复核条件：Iran refrains from closing the strait or laying new mines; war-risk premiums stay within acceptable bounds.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ca62e8730cee5ec0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Maersk publicly confirms it has begun the phased resumption of Hormuz container transits on the cleared TSS with UKMTO routing, no escort requested, and will scale toward normal schedules as security holds.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Maersk confirmed phased resumption in January 2027, but that is after the December 31, 2026 window; no IMF Portwatch 7-day average at or above 60 is shown in-window. August 2026 Kpler data showed transits collapsing to 5 and 0 versus 31 the prior weekend, so normal volume by year-end remains unverified.",
+                "evidence_quote": "Maersk publicly confirmed it has begun the phased resumption of Hormuz container transits on the cleared Traffic Separation Scheme with UKMTO routing coordination, requesting no escort, and stated it will scale toward normal schedules as security holds",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_005_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.037043999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 7,
+        "draw_rounds": 7,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 10,
+        "public_event_count": 7,
+        "substantive_public_event_count": 7,
+        "state_change_count": 3,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 5,
+            "draw_rounds": 5,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 6,
+            "active_actor_count": 2,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 3,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.235,
+      "covered_p_yes": 0.235,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.235,
+        0.23499999999999988
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "e467d019-e1e5-4a8c-8f4c-1ec9add619c7",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T03:35:09.228592+00:00",
+      "contract_id": "0x5c79dfde05559b79a9cb9f7c4187e4d49632dd042572ae676952f812732591cc",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "777f90b187283d870e1c8ad103cc31d943da2bbd37f25551dadaeb9d5195128d",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 319.923
+    },
+    {
+      "calls": 79,
+      "tokens": 1032208,
+      "input_tokens": 981987,
+      "output_tokens": 50221,
+      "accounted_tokens_upper": 1032208,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.24464000000000002,
+      "coverage": 0.5459999999999999,
+      "unexplored_mass": 0.45400000000000007,
+      "unknown_bounds": [
+        0.01764,
+        0.47164000000000006
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.176563,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.42,
+          "visits": 5,
+          "search_value": 0.15655999999999998,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.42,
+          "visits": 4,
+          "search_value": 0.1221,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.42,
+          "visits": 3,
+          "search_value": 0.124,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.20159999999999997,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.20159999999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.006047999999999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.13440000000000002,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.13440000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.004032000000000001
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.08399999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.27999999999999997,
+          "visits": 4,
+          "search_value": 0.1541475,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.27999999999999997,
+          "visits": 3,
+          "search_value": 0.11872999999999999,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.27999999999999997,
+          "visits": 2,
+          "search_value": 0.11989499999999997,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.14699999999999996,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.14699999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.004409999999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.06299999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.05,
+          "frontier": true,
+          "contribution": 0.0031499999999999996
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.07000000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "b75c061b-26c6-489e-8b53-65ae8ce0a601",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:36:24.021419+00:00",
+      "contract_id": "0x5c79dfde05559b79a9cb9f7c4187e4d49632dd042572ae676952f812732591cc",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "777f90b187283d870e1c8ad103cc31d943da2bbd37f25551dadaeb9d5195128d",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 264.046
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x5c79dfde05559b79a9cb9f7c4187e4d49632dd042572ae676952f812732591cc",
+  "group_id": "strait-of-hormuz-traffic-returns-to-normal-by-december-31",
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "777f90b187283d870e1c8ad103cc31d943da2bbd37f25551dadaeb9d5195128d",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 991,
+    "input_tokens": 870,
+    "output_tokens": 121,
+    "accounted_tokens_upper": 991,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1,
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_b360043256226d45",
+          "name": "UP",
+          "role": "President Trump ordered the U.S. Navy to prevent ships passing through the Strait, later announced help freeing ships and a pause in 'Project Freedom' to assess an agreement with Iran.",
+          "decision_ids": [
+            "d_us_operation"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_4e378f804d45ede8",
+          "name": "Maersk",
+          "role": "Container shipping company that suspended Hormuz transits and could decide to resume them.",
+          "decision_ids": [
+            "d_shipping_resume"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Iranian political leadership decides to keep the Strait of Hormuz open to commercial shipping rather than close or threaten it.",
+        "Current authority for Commercial shipping companies decide to resume transits through the Strait of Hormuz at normal volumes. requires independent evidence; Maersk can participate conditionally."
+      ],
+      "gaps": [],
+      "decision_dependencies": [
+        {
+          "id": "d_iran_reopen",
+          "choice": "Iranian political leadership decides to keep the Strait of Hormuz open to commercial shipping rather than close or threaten it.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "d_us_operation",
+          "choice": "U.S. President decides whether to continue, pause, or end military operations affecting Strait of Hormuz shipping.",
+          "owner": "UP",
+          "support": "represented"
+        },
+        {
+          "id": "d_shipping_resume",
+          "choice": "Commercial shipping companies decide to resume transits through the Strait of Hormuz at normal volumes.",
+          "owner": "Maersk",
+          "support": "conditional"
+        }
+      ],
+      "gap_repair": {
+        "status": "participants_added",
+        "added": 1
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 30,
+    "tokens": 82324,
+    "input_tokens": 67173,
+    "output_tokens": 15151,
+    "accounted_tokens_upper": 82324,
+    "unknown_usage_requests": 0
+  }
+}

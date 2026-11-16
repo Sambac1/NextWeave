@@ -1,0 +1,1940 @@
+{
+  "run_id": "850462ed-7958-49ec-9a2d-7a7506814059",
+  "case_id": "market_1109dc3a14d50254fdbf3934",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 9460,
+      "input_tokens": 9450,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 9460,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.55,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.55,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 9450,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:30:32.387133+00:00",
+      "contract_id": "0xd009ac14bccdd12925a2d9f8d910411556e4ed153337abb18a97b97fabcf7db0",
+      "forecast_cutoff": "2025-05-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "dad6e50107775a361f45eb4f51db7129fdb108258c241c348899099fd0f48068",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.961
+    },
+    {
+      "calls": 2,
+      "tokens": 18920,
+      "input_tokens": 18900,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 18920,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.55,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.55,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 9450,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.55,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 9450,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:30:33.281232+00:00",
+      "contract_id": "0xd009ac14bccdd12925a2d9f8d910411556e4ed153337abb18a97b97fabcf7db0",
+      "forecast_cutoff": "2025-05-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "dad6e50107775a361f45eb4f51db7129fdb108258c241c348899099fd0f48068",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.893
+    },
+    {
+      "calls": 10,
+      "tokens": 219038,
+      "input_tokens": 211676,
+      "output_tokens": 7362,
+      "accounted_tokens_upper": 219038,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-05-25",
+                "interval_end": "2025-06-01",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2025-05-25T23:59:59+00:00",
+                "interval_end_utc": "2025-06-01T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "status": "executed",
+                  "summary": "Rafał Trzaskowski issued a public runoff campaign appeal to Polish voters ahead of the 1 June vote, framing the choice against Karol Nawrocki and urging turnout and consolidation behind his candidacy."
+                },
+                {
+                  "action_id": "action_1_agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "status": "executed",
+                  "summary": "Polish voters cast ballots in the scheduled 1 June 2025 presidential runoff between Rafał Trzaskowski and Karol Nawrocki; the aggregate popular vote tally was not officially announced by the National Electoral Commission within the window."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_c6d14522be08540d",
+                    "action_1_agent_31e56611ba2d583e"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Polish voters cast ballots in the scheduled 1 June 2025 presidential runoff between Rafał Trzaskowski and Karol Nawrocki"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "the aggregate popular vote tally was not officially announced by the National Electoral Commission within the window",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Rafał Trzaskowski issued a public runoff campaign appeal to Polish voters ahead of the 1 June vote, framing the choice against Karol Nawrocki and urging turnout and consolidation behind his candidacy.",
+                  "date": "2025-05-26"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Polish voters cast ballots in the scheduled 1 June 2025 presidential runoff between Rafał Trzaskowski and Karol Nawrocki; the aggregate popular vote tally was not officially announced by the National Electoral Commission within the window.",
+                  "date": "2025-06-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "candidate_id": "agent_c6d14522be08540d:initial:1",
+                  "action": "Issue a public runoff campaign appeal to Polish voters ahead of the 1 June vote, framing the choice against Karol Nawrocki and urging turnout and consolidation behind my candidacy.\n承诺：I commit to contesting the 1 June runoff as the Civic Coalition candidate and to campaigning for every available vote.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Issue a public runoff campaign appeal to Polish voters ahead of the 1 June vote, framing the choice against Karol Nawrocki and urging turnout and consolidation behind my candidacy.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly court first-round candidates and parties that have not yet endorsed either runoff candidate, seeking their supporters' backing before 1 June.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                  "action": "Polish voters cast ballots in the 1 June 2025 presidential runoff between Rafał Trzaskowski and Karol Nawrocki, with the aggregate popular vote determining which candidate is elected president.\n承诺：Voters participate in the scheduled runoff and the winner is decided by the popular vote tally.\n触发或复核条件：A runoff occurs because no candidate won a first-round majority; voters are eligible and turn out.",
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "Polish voters cast ballots in the 1 June 2025 presidential runoff between Rafał Trzaskowski and Karol Nawrocki, with the aggregate popular vote determining which candidate is elected president.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_31e56611ba2d583e:initial:2",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Take no further collective action this round beyond the scheduled vote; await the National Electoral Commission's official announcement of the winner.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "First round put Trzaskowski ahead but Nawrocki close, and the runoff result was not officially announced by PKW within the window. With no verified tally, the outcome is unresolved; the 2020 precedent (Trzaskowski lost 48.97-51.03) and close first round keep Yes below even.",
+                "evidence_quote": "Rafał Trzaskowski issued a public runoff campaign appeal to Polish voters ahead of the 1 June vote, framing the choice against Karol Nawrocki and urging turnout and consolidation behind his candidacy.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.7200000000000001
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "64ef59db-b228-474d-9d2e-f808b4f047e8",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:35:35.970191+00:00",
+      "contract_id": "0xd009ac14bccdd12925a2d9f8d910411556e4ed153337abb18a97b97fabcf7db0",
+      "forecast_cutoff": "2025-05-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "dad6e50107775a361f45eb4f51db7129fdb108258c241c348899099fd0f48068",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 52.952
+    },
+    {
+      "calls": 45,
+      "tokens": 851673,
+      "input_tokens": 832078,
+      "output_tokens": 19595,
+      "accounted_tokens_upper": 851673,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-25",
+                "interval_end": "2025-05-27",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-25T23:59:59+00:00",
+                "interval_end_utc": "2025-05-27T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "status": "executed",
+                  "summary": "Rafał Trzaskowski publicly addressed Polish voters as the Civic Coalition candidate in the 1 June runoff, urging turnout and support for his candidacy against Karol Nawrocki and framing the choice around the runoff stakes; he stated he remains a candidate and will contest the 1 June runoff."
+                },
+                {
+                  "action_id": "action_1_agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_c6d14522be08540d",
+                    "action_1_agent_31e56611ba2d583e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Rafał Trzaskowski publicly addressed Polish voters as the Civic Coalition candidate in the 1 June runoff, urging turnout and support for his candidacy against Karol Nawrocki"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "he stated he remains a candidate and will contest the 1 June runoff",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Rafał Trzaskowski publicly addressed Polish voters as the Civic Coalition candidate in the 1 June runoff, urging turnout and support for his candidacy against Karol Nawrocki and framing the choice around the runoff stakes; he stated he remains a candidate and will contest the 1 June runoff.",
+                  "date": "2025-05-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "candidate_id": "agent_c6d14522be08540d:initial:1",
+                  "action": "Publicly address Polish voters as the Civic Coalition candidate in the 1 June runoff, urging turnout and support for my candidacy against Karol Nawrocki, framing the choice around the runoff stakes.\n承诺：I remain a candidate and will contest the 1 June runoff.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly address Polish voters as the Civic Coalition candidate in the 1 June runoff, urging turnout and support for my candidacy against Karol Nawrocki, framing the choice around the runoff stakes.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public message contrasting my record and program with Karol Nawrocki's, targeting undecided and first-round-other-candidate voters, without claiming any authority over other campaigns.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                  "action": "Polish voters take no coordinated public act this round; balloting in the 1 June runoff is a collective act occurring on election day, not a discrete move available now.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Polish voters take no coordinated public act this round; balloting in the 1 June runoff is a collective act occurring on election day, not a discrete move available now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "First-round results show Trzaskowski ahead but Nawrocki close, with a 1 June runoff pending. Endorsements favor Trzaskowski, but no PKW winner announcement exists yet, so the outcome remains uncertain.",
+                "evidence_quote": "Incumbent government supported candidate Rafał Trzaskowski, the Mayor of Warsaw and runner-up of the 2020 election, came first in the first round of voting, followed closely by conservative candidate Karol Nawrocki.",
+                "change_driver": null,
+                "evidence_ref": "history_3.prose_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-27",
+                "interval_end": "2025-05-29",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-27T00:00:00+00:00",
+                "interval_end_utc": "2025-05-29T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "First-round results show Trzaskowski ahead but Nawrocki close, with a 1 June runoff pending. Endorsements favor Trzaskowski, but no PKW winner announcement exists yet, so the outcome remains uncertain.",
+                "evidence_quote": "Incumbent government supported candidate Rafał Trzaskowski, the Mayor of Warsaw and runner-up of the 2020 election, came first in the first round of voting, followed closely by conservative candidate Karol Nawrocki.",
+                "change_driver": null,
+                "evidence_ref": "history_3.prose_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-29",
+                "interval_end": "2025-06-01",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 7,
+                "interval_days": 3,
+                "interval_start_utc": "2025-05-29T00:00:00+00:00",
+                "interval_end_utc": "2025-06-01T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "First round put Trzaskowski first with Nawrocki second (29.1%), setting up the 1 June runoff; Trzaskowski's public statement confirms he contests it. No PKW winner announcement is in evidence, so the runoff result remains unknown.",
+                "evidence_quote": "He finished second in the first round held on 18 May 2025 with 29.1% of the vote, and will face Civic Platform candidate Rafał Trzaskowski in a runoff scheduled on 1 June.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.7
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-25",
+                "interval_end": "2025-05-27",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-25T23:59:59+00:00",
+                "interval_end_utc": "2025-05-27T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "status": "executed",
+                  "summary": "Rafał Trzaskowski publicly commits to address the concerns of voters whose first-round candidates were eliminated and to seek their support in the 1 June runoff, directing outreach at supporters of non-endorsing first-round candidates such as Confederation/Mentzen and Razem/Zandberg."
+                },
+                {
+                  "action_id": "action_1_agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Rafał Trzaskowski publicly commits to address the concerns of voters whose first-round candidates were eliminated and to seek their support in the 1 June runoff",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Rafał Trzaskowski publicly commits to address the concerns of voters whose first-round candidates were eliminated and to seek their support in the 1 June runoff, directing outreach at supporters of non-endorsing first-round candidates such as Confederation/Mentzen and Razem/Zandberg.",
+                  "date": "2025-05-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "candidate_id": "agent_c6d14522be08540d:initial:2",
+                  "action": "Directly court supporters of first-round candidates who have not endorsed me (notably Confederation/Mentzen and Razem/Zandberg voters), offering programmatic commitments on issues salient to them in exchange for runoff support.\n承诺：I will address the concerns of voters whose first-round candidates were eliminated and seek their support in the runoff.",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Publicly appeal to voters ahead of the 1 June runoff, framing the contest as a choice between a pro-European, centrist Poland and the Law and Justice-aligned alternative, and urging supporters of eliminated first-round candidates to turn out and back me.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Directly court supporters of first-round candidates who have not endorsed me (notably Confederation/Mentzen and Razem/Zandberg voters), offering programmatic commitments on issues salient to them in exchange for runoff support.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                  "action": "Polish voters wait for the 1 June 2025 runoff ballot between Rafał Trzaskowski and Karol Nawrocki; no collective voter act occurs in this round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Polish voters wait for the 1 June 2025 runoff ballot between Rafał Trzaskowski and Karol Nawrocki; no collective voter act occurs in this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.62,
+                "basis": "First-round results place Trzaskowski in the 1 June runoff against Nawrocki, with most eliminated parties endorsing Trzaskowski. The PKW winner announcement is still pending, so this remains a forecast rather than a settled outcome.",
+                "evidence_quote": "Incumbent government supported candidate Rafał Trzaskowski, the Mayor of Warsaw and runner-up of the 2020 election, came first in the first round of voting, followed closely by conservative candidate Karol Nawrocki.",
+                "change_driver": null,
+                "evidence_ref": "history_3.prose_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-27",
+                "interval_end": "2025-05-29",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-27T00:00:00+00:00",
+                "interval_end_utc": "2025-05-29T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "status": "executed",
+                  "summary": "Rafał Trzaskowski publicly addresses voters whose first-round candidates were eliminated, especially Confederation/Mentzen and Razem/Zandberg supporters, presenting concrete programmatic commitments on their salient concerns and asking them to back him in the 1 June runoff."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_c6d14522be08540d",
+                    "action_2_agent_c6d14522be08540d"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Rafał Trzaskowski publicly addresses voters whose first-round candidates were eliminated"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Rafał Trzaskowski publicly addresses voters whose first-round candidates were eliminated",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "Rafał Trzaskowski publicly addresses voters whose first-round candidates were eliminated, especially Confederation/Mentzen and Razem/Zandberg supporters, presenting concrete programmatic commitments on their salient concerns and asking them to back him in the 1 June runoff.",
+                  "date": "2025-05-27"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "candidate_id": "agent_c6d14522be08540d:initial:1",
+                  "action": "Publicly address voters whose first-round candidates were eliminated, especially Confederation/Mentzen and Razem/Zandberg supporters, presenting concrete programmatic commitments on their salient concerns and asking them to back me in the 1 June runoff.\n承诺：I will address the concerns of eliminated first-round candidates' voters and seek their support in the runoff.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly address voters whose first-round candidates were eliminated, especially Confederation/Mentzen and Razem/Zandberg supporters, presenting concrete programmatic commitments on their salient concerns and asking them to back me in the 1 June runoff.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly thank and mobilize the parties and figures already backing me (Poland 2050, PSL, The Left, Modern, Greens, Hołownia, Biejat) and urge their voters to turn out on 1 June, framing the runoff as a choice against the Law and Justice-backed rival.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-29",
+                "interval_end": "2025-06-01",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 7,
+                "interval_days": 3,
+                "interval_start_utc": "2025-05-29T00:00:00+00:00",
+                "interval_end_utc": "2025-06-01T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "status": "executed",
+                  "summary": "Rafał Trzaskowski publicly presents himself as a unifying candidate for all Poles, including those skeptical of the incumbent government, pledging to represent voters beyond his own coalition and to keep the presidency independent of party control."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_3_agent_c6d14522be08540d",
+                    "action_2_agent_c6d14522be08540d"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Rafał Trzaskowski publicly presents himself as a unifying candidate for all Poles"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Rafał Trzaskowski publicly presents himself as a unifying candidate for all Poles",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "Rafał Trzaskowski publicly presents himself as a unifying candidate for all Poles, including those skeptical of the incumbent government, pledging to represent voters beyond his own coalition and to keep the presidency independent of party control.",
+                  "date": "2025-05-30"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "candidate_id": "agent_c6d14522be08540d:initial:2",
+                  "action": "Publicly present myself as a unifying candidate for all Poles, including those skeptical of the incumbent government, pledging to represent voters beyond my own coalition and to keep the presidency independent of party control.\n承诺：I will govern as a unifying president representing voters beyond my coalition.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "In the final days before the 1 June runoff, publicly call on all voters who backed pro-democratic and centrist first-round candidates to turn out and vote, framing the runoff as decisive for Poland's European course, and reiterate my concrete programmatic commitments to eliminated-candidate supporters.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly present myself as a unifying candidate for all Poles, including those skeptical of the incumbent government, pledging to represent voters beyond my own coalition and to keep the presidency independent of party control.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "First-round results show Trzaskowski ahead but Nawrocki close, with the runoff scheduled for 1 June. Endorsements favor Trzaskowski, but no PKW winner announcement exists at the horizon, so the outcome remains unverified.",
+                "evidence_quote": "Incumbent government supported candidate Rafał Trzaskowski, the Mayor of Warsaw and runner-up of the 2020 election, came first in the first round of voting, followed closely by conservative candidate Karol Nawrocki.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.prose_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.036
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 6,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 0,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.55,
+      "covered_p_yes": 0.55,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.55,
+        0.55
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "93df2261-7c55-4657-8417-6d24bbd47877",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:32:28.264436+00:00",
+      "contract_id": "0xd009ac14bccdd12925a2d9f8d910411556e4ed153337abb18a97b97fabcf7db0",
+      "forecast_cutoff": "2025-05-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "dad6e50107775a361f45eb4f51db7129fdb108258c241c348899099fd0f48068",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 72.417
+    },
+    {
+      "calls": 26,
+      "tokens": 481841,
+      "input_tokens": 469387,
+      "output_tokens": 12454,
+      "accounted_tokens_upper": 481841,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-25",
+                "interval_end": "2025-05-27",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-25T23:59:59+00:00",
+                "interval_end_utc": "2025-05-27T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "status": "executed",
+                  "summary": "Rafał Trzaskowski publicly appealed to Polish voters ahead of the 1 June runoff, presenting himself as the candidate who can unite the country and asking for their vote, while signaling outreach to first-round supporters of other candidates."
+                },
+                {
+                  "action_id": "action_1_agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Rafał Trzaskowski publicly appealed to Polish voters ahead of the 1 June runoff",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Rafał Trzaskowski publicly appealed to Polish voters ahead of the 1 June runoff, presenting himself as the candidate who can unite the country and asking for their vote, while signaling outreach to first-round supporters of other candidates.",
+                  "date": "2025-05-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "candidate_id": "agent_c6d14522be08540d:initial:1",
+                  "action": "Publicly appeal to Polish voters ahead of the 1 June runoff, presenting myself as the candidate who can unite the country and asking for their vote, while signaling outreach to first-round supporters of other candidates.\n承诺：I will contest the 1 June runoff and ask voters for their support.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly appeal to Polish voters ahead of the 1 June runoff, presenting myself as the candidate who can unite the country and asking for their vote, while signaling outreach to first-round supporters of other candidates.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Announce a runoff campaign push consolidating endorsements from parties and first-round candidates who backed me, framing the 1 June vote as a choice about Poland's direction.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                  "action": "As the Polish voter group, take no coordinated public act this round; the decisive action is individual ballot-casting in the 1 June 2025 runoff between Rafał Trzaskowski and Karol Nawrocki, which falls at the horizon boundary rather than in this interval.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "As the Polish voter group, take no coordinated public act this round; the decisive action is individual ballot-casting in the 1 June 2025 runoff between Rafał Trzaskowski and Karol Nawrocki, which falls at the horizon boundary rather than in this interval.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "First round results show Trzaskowski ahead but Nawrocki close, with a runoff scheduled 1 June. Endorsement table shows most centrist parties backing Trzaskowski, but no PKW winner announcement exists yet, so the outcome remains uncertain.",
+                "evidence_quote": "Rafał Trzaskowski, the Mayor of Warsaw and runner-up of the 2020 election, came first in the first round of voting, followed closely by conservative candidate Karol Nawrocki.",
+                "change_driver": null,
+                "evidence_ref": "history_3.prose_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-27",
+                "interval_end": "2025-05-29",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-27T00:00:00+00:00",
+                "interval_end_utc": "2025-05-29T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "status": "executed",
+                  "summary": "Rafał Trzaskowski publicly courted first-round supporters of Szymon Hołownia, Magdalena Biejat, Adrian Zandberg and Sławomir Mentzen, announcing that his runoff campaign will address their priorities on local government, rule of law and cost of living, and asking them to vote for him on 1 June."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_c6d14522be08540d",
+                    "action_2_agent_c6d14522be08540d"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Rafał Trzaskowski publicly courted first-round supporters of Szymon Hołownia, Magdalena Biejat, Adrian Zandberg and Sławomir Mentzen"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Rafał Trzaskowski publicly courted first-round supporters of Szymon Hołownia, Magdalena Biejat, Adrian Zandberg and Sławomir Mentzen",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Rafał Trzaskowski publicly courted first-round supporters of Szymon Hołownia, Magdalena Biejat, Adrian Zandberg and Sławomir Mentzen, announcing that his runoff campaign will address their priorities on local government, rule of law and cost of living, and asking them to vote for him on 1 June.",
+                  "date": "2025-05-28"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "candidate_id": "agent_c6d14522be08540d:initial:1",
+                  "action": "Publicly court first-round supporters of Hołownia, Biejat, Zandberg and Mentzen, announcing that my runoff campaign will address their priorities (local government, rule of law, cost of living) and asking them to vote for me on 1 June.\n承诺：I will keep campaigning on a unifying platform through the 1 June runoff and ask all first-round supporters to back me.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly court first-round supporters of Hołownia, Biejat, Zandberg and Mentzen, announcing that my runoff campaign will address their priorities (local government, rule of law, cost of living) and asking them to vote for me on 1 June.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Launch a public get-out-the-vote push urging supporters to turn out on 1 June, emphasizing that the runoff is decided by turnout and that every vote counts, and directing voters to polling information.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "First-round results show Trzaskowski ahead but Nawrocki close, with a runoff scheduled for 1 June. Endorsements favor Trzaskowski, but the outcome remains uncertain and no PKW winner announcement is in evidence.",
+                "evidence_quote": "He finished second in the first round held on 18 May 2025 with 29.1% of the vote, and will face Civic Platform candidate Rafał Trzaskowski in a runoff scheduled on 1 June.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-29",
+                "interval_end": "2025-06-01",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 7,
+                "interval_days": 3,
+                "interval_start_utc": "2025-05-29T00:00:00+00:00",
+                "interval_end_utc": "2025-06-01T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "status": "executed",
+                  "summary": "Rafał Trzaskowski publicly addressed voters skeptical of both camps, presenting himself as a president for all Poles and pledging to respect the PKW-announced result and work with the incoming parliament regardless of the runoff outcome."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_3_agent_c6d14522be08540d",
+                    "action_2_agent_c6d14522be08540d"
+                  ],
+                  "outcome": "realized",
+                  "effect": "presenting himself as a president for all Poles and pledging to respect the PKW-announced result"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "pledging to respect the PKW-announced result and work with the incoming parliament regardless of the runoff outcome",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "Rafał Trzaskowski publicly addressed voters skeptical of both camps, presenting himself as a president for all Poles and pledging to respect the PKW-announced result and work with the incoming parliament regardless of the runoff outcome.",
+                  "date": "2025-06-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "candidate_id": "agent_c6d14522be08540d:initial:2",
+                  "action": "Publicly address voters skeptical of both camps, presenting myself as a president for all Poles and pledging to respect the result and work with the incoming parliament regardless of the runoff outcome.\n承诺：I will respect the PKW-announced result and seek to govern inclusively if elected.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "Publicly issue a final appeal to Polish voters before the 1 June runoff, urging turnout and repeating my commitments on local government, rule of law and cost of living, and asking first-round supporters of Hołownia, Biejat, Zandberg and Mentzen to vote for me.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly address voters skeptical of both camps, presenting myself as a president for all Poles and pledging to respect the result and work with the incoming parliament regardless of the runoff outcome.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "First round put Trzaskowski first with Nawrocki second (29.1%), and most eliminated parties endorsed Trzaskowski, but no PKW runoff result is in evidence. The runoff outcome and official PKW announcement remain unknown, so this is a probabilistic estimate, not a verified result.",
+                "evidence_quote": "| Sławomir Mentzen\n| 14.81%\n| colspan=\"2\"",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.table_0.row_18",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.105
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.55,
+      "covered_p_yes": 0.55,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.55,
+        0.55
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "6929632c-9391-4e88-9453-36cf711a0941",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:08:41.366562+00:00",
+      "contract_id": "0xd009ac14bccdd12925a2d9f8d910411556e4ed153337abb18a97b97fabcf7db0",
+      "forecast_cutoff": "2025-05-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "dad6e50107775a361f45eb4f51db7129fdb108258c241c348899099fd0f48068",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 76.184
+    },
+    {
+      "calls": 19,
+      "tokens": 406974,
+      "input_tokens": 395165,
+      "output_tokens": 11809,
+      "accounted_tokens_upper": 406974,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-05-25",
+                "interval_end": "2025-06-01",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2025-05-25T23:59:59+00:00",
+                "interval_end_utc": "2025-06-01T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "status": "executed",
+                  "summary": "Rafał Trzaskowski publicly appealed to voters ahead of the 1 June runoff, framing the contest as a choice between himself and Karol Nawrocki and urging turnout and support for his candidacy, while affirming he remains the Civic Coalition candidate and will contest the runoff."
+                },
+                {
+                  "action_id": "action_1_agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "status": "partial",
+                  "summary": "Polish voters turned out on the scheduled 1 June 2025 runoff date to cast ballots between Rafał Trzaskowski and Karol Nawrocki; no vote count or official winner announcement was observed within the window."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_c6d14522be08540d",
+                    "action_1_agent_31e56611ba2d583e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Polish voters turned out on the scheduled 1 June 2025 runoff date to cast ballots between Rafał Trzaskowski and Karol Nawrocki"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "no vote count or official winner announcement was observed within the window",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Rafał Trzaskowski publicly appealed to voters ahead of the 1 June runoff, framing the contest as a choice between himself and Karol Nawrocki and urging turnout and support for his candidacy, while affirming he remains the Civic Coalition candidate and will contest the runoff.",
+                  "date": "2025-05-26"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Polish voters turned out on the scheduled 1 June 2025 runoff date to cast ballots between Rafał Trzaskowski and Karol Nawrocki; no vote count or official winner announcement was observed within the window.",
+                  "date": "2025-06-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "candidate_id": "agent_c6d14522be08540d:initial:1",
+                  "action": "Publicly appeal to voters ahead of the 1 June runoff, framing the choice between myself and Karol Nawrocki and urging turnout and support for my candidacy.\n承诺：I remain the Civic Coalition candidate and will contest the 1 June runoff.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Publicly appeal to voters ahead of the 1 June runoff, framing the choice between myself and Karol Nawrocki and urging turnout and support for my candidacy.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly court endorsements and supporters of first-round candidates not yet committed, presenting myself as the unifying choice against Nawrocki.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                  "action": "Eligible Polish voters turn out on 1 June 2025 and cast ballots in the runoff between Rafał Trzaskowski and Karol Nawrocki, producing a popular-vote winner.\n承诺：Voters participate in the scheduled 1 June runoff and determine the winner by popular vote.\n触发或复核条件：A runoff between the top two first-round candidates occurs as scheduled.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Eligible Polish voters turn out on 1 June 2025 and cast ballots in the runoff between Rafał Trzaskowski and Karol Nawrocki, producing a popular-vote winner.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_31e56611ba2d583e:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "No new voter act this round beyond the scheduled runoff; voters' role is complete once ballots are cast, pending PKW's official announcement of the winner.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "First round results show Trzaskowski ahead but Nawrocki close, and many party endorsements favor Trzaskowski. However, no runoff vote count or PKW winner announcement was observed within the window, so the outcome remains unverified and the contract's July 31 deadline is the key risk.",
+                "evidence_quote": "Incumbent government supported candidate Rafał Trzaskowski, the Mayor of Warsaw and runner-up of the 2020 election, came first in the first round of voting, followed closely by conservative candidate Karol Nawrocki.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.prose_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.68
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-05-25",
+                "interval_end": "2025-06-01",
+                "horizon_end": "2025-06-01",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2025-05-25T23:59:59+00:00",
+                "interval_end_utc": "2025-06-01T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "status": "executed",
+                  "summary": "Rafał Trzaskowski publicly thanked Civic Coalition partners and first-round rivals' electorates and called on their supporters to back him in the 1 June runoff."
+                },
+                {
+                  "action_id": "action_1_agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Rafał Trzaskowski be the next President of Poland?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "called on their supporters to back him in the 1 June runoff",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Rafał Trzaskowski publicly thanked Civic Coalition partners and first-round rivals' electorates and called on their supporters to back him in the 1 June runoff.",
+                  "date": "2025-05-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_c6d14522be08540d",
+                  "actor_name": "Rafał Trzaskowski",
+                  "candidate_id": "agent_c6d14522be08540d:initial:2",
+                  "action": "Publicly thank and consolidate endorsements from Civic Coalition partners and first-round rivals' electorates (Hołownia, Biejat, Senyszyn supporters), calling on them to back me in the runoff.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public closing appeal to Polish voters ahead of the 1 June runoff, urging turnout and support for my candidacy against Karol Nawrocki, framing the choice as between continued pro-European, pro-reform government and a PiS-backed presidency.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_c6d14522be08540d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly thank and consolidate endorsements from Civic Coalition partners and first-round rivals' electorates (Hołownia, Biejat, Senyszyn supporters), calling on them to back me in the runoff.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_31e56611ba2d583e",
+                  "actor_name": "Polish voters",
+                  "candidate_id": "agent_31e56611ba2d583e:initial:2",
+                  "action": "Take no further collective action beyond the scheduled runoff; await the National Electoral Commission's official announcement of the winner.",
+                  "p_selected": 0.1,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31e56611ba2d583e:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "Polish voters turn out and cast ballots in the 1 June 2025 runoff between Rafał Trzaskowski and Karol Nawrocki, determining the winner by popular vote.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_31e56611ba2d583e:initial:2",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Take no further collective action beyond the scheduled runoff; await the National Electoral Commission's official announcement of the winner.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "First round put Trzaskowski first with Nawrocki second, and several eliminated candidates' parties endorsed Trzaskowski, while some endorsed Nawrocki or opposed him. The runoff result and PKW's official announcement remain unknown at the horizon, so this is an unverified estimate.",
+                "evidence_quote": "| style=\"background-color: ;\" |\n| Civic Platform\n| rowspan=\"2\" | 23.12%\n| style=\"background-color: ;\" |\n| Rafał Trzaskowski",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.table_0.row_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.03
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.485,
+      "covered_p_yes": 0.485,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.485,
+        0.4849999999999999
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "2ce5f2c2-8b64-435a-8420-fb9e9ef79667",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:17:19.216699+00:00",
+      "contract_id": "0xd009ac14bccdd12925a2d9f8d910411556e4ed153337abb18a97b97fabcf7db0",
+      "forecast_cutoff": "2025-05-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "dad6e50107775a361f45eb4f51db7129fdb108258c241c348899099fd0f48068",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 43.669
+    },
+    {
+      "calls": 52,
+      "tokens": 864848,
+      "input_tokens": 838228,
+      "output_tokens": 26620,
+      "accounted_tokens_upper": 864848,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.5634399999999999,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.5634399999999999,
+        0.5634399999999999
+      ],
+      "search_iterations": 6,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 6,
+          "search_value": 0.9829466666666667,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.7,
+          "visits": 3,
+          "search_value": 0.9758933333333332,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.48999999999999994,
+          "visits": 1,
+          "search_value": 0.99,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.36749999999999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.20212499999999997
+        },
+        {
+          "path": [
+            1,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.12249999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.06737499999999999
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.21,
+          "visits": 1,
+          "search_value": 0.9476799999999999,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.147,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.62,
+          "frontier": true,
+          "contribution": 0.09114
+        },
+        {
+          "path": [
+            1,
+            2,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.063,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.6,
+          "frontier": true,
+          "contribution": 0.0378
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.3,
+          "visits": 2,
+          "search_value": 0.99,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.3,
+          "visits": 1,
+          "search_value": 0.99,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.3,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.165
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "f55c42d0-04ee-407c-84ad-cb99c024ec46",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:11:32.400629+00:00",
+      "contract_id": "0xd009ac14bccdd12925a2d9f8d910411556e4ed153337abb18a97b97fabcf7db0",
+      "forecast_cutoff": "2025-05-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "dad6e50107775a361f45eb4f51db7129fdb108258c241c348899099fd0f48068",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 146.93
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-05-25T23:59:59+00:00",
+  "forecast_key": "0xd009ac14bccdd12925a2d9f8d910411556e4ed153337abb18a97b97fabcf7db0",
+  "group_id": "poland-presidential-election",
+  "evidence_sha256": "dad6e50107775a361f45eb4f51db7129fdb108258c241c348899099fd0f48068",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 820,
+    "input_tokens": 635,
+    "output_tokens": 185,
+    "accounted_tokens_upper": 820,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-05-25",
+        "2025-06-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-05-25",
+        "2025-05-27",
+        "2025-05-29",
+        "2025-06-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-05-25",
+        "2025-05-27",
+        "2025-05-29",
+        "2025-06-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-05-25",
+        "2025-06-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-05-25",
+        "2025-05-27",
+        "2025-05-29",
+        "2025-06-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-06-01T21:59:59+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-05-18T12:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_e65262fb8e7387fc",
+          "name": "Rafał Trzaskowski",
+          "role": "Civic Coalition candidate for President of Poland in the 2025 election; his candidacy and participation in the runoff are necessary for him to win.",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_ace7908e820b205d",
+          "name": "Polish voters",
+          "role": "Eligible voters who cast ballots in the presidential election, determining the winner by popular vote.",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "The National Electoral Commission (PKW) officially announces the winner of the election."
+      ],
+      "gaps": [
+        "No frozen source identifies National Electoral Commission (PKW); its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Rafał Trzaskowski participates as a candidate in the 2025 presidential election and any runoff.",
+          "owner": "Rafał Trzaskowski",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "Voters cast ballots in the election, producing a winner.",
+          "owner": "Polish voters",
+          "support": "represented"
+        },
+        {
+          "id": "D3",
+          "choice": "The National Electoral Commission (PKW) officially announces the winner of the election.",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 12,
+    "tokens": 57357,
+    "input_tokens": 51958,
+    "output_tokens": 5399,
+    "accounted_tokens_upper": 57357,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

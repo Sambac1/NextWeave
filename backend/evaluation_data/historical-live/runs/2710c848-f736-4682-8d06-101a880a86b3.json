@@ -1,0 +1,2768 @@
+{
+  "run_id": "2710c848-f736-4682-8d06-101a880a86b3",
+  "case_id": "market_79783df85878b9854881d8df",
+  "status": "partial",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2177,
+      "input_tokens": 2167,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2177,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.04,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.04,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2167,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:11:03.507798+00:00",
+      "contract_id": "0x20d0bc282552ac5ec6f61cd7101cb42a5948cae07e7651bdf40ede1a8b2c5eac",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d7f8e68bea2c4c547c301b2a27768153c4b4f47debb7f8b161755255ef4c4823",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 2.335
+    },
+    {
+      "calls": 2,
+      "tokens": 4354,
+      "input_tokens": 4334,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 4354,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.05,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.04,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2167,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.06,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2167,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:11:05.848572+00:00",
+      "contract_id": "0x20d0bc282552ac5ec6f61cd7101cb42a5948cae07e7651bdf40ede1a8b2c5eac",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d7f8e68bea2c4c547c301b2a27768153c4b4f47debb7f8b161755255ef4c4823",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 2.338
+    },
+    {
+      "calls": 12,
+      "tokens": 133517,
+      "input_tokens": 127240,
+      "output_tokens": 6277,
+      "accounted_tokens_upper": 133517,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-11-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 730,
+                "interval_days": 730,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-11-08T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "status": "executed",
+                  "summary": "Ro Khanna formally declared a 2028 Democratic presidential candidacy, authorizing 'Run Ro' to begin fundraising and organizing in early-voting states, with the goal of competing for delegates in the 2028 primaries and caucuses."
+                },
+                {
+                  "action_id": "action_1_agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_2af81e02204a58d8",
+                    "action_1_agent_f7495c907cc05623"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Ro Khanna formally declared a 2028 Democratic presidential candidacy"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_2af81e02204a58d8",
+                    "action_1_agent_b00e1f2994e75be2"
+                  ],
+                  "outcome": "pending",
+                  "effect": "with the goal of competing for delegates in the 2028 primaries and caucuses"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Ro Khanna formally declared a 2028 Democratic presidential candidacy",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Ro Khanna formally declared a 2028 Democratic presidential candidacy, authorizing 'Run Ro' to begin fundraising and organizing in early-voting states, with the goal of competing for delegates in the 2028 primaries and caucuses.",
+                  "date": "2028-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                  "action": "Formally declare a 2028 Democratic presidential candidacy, authorizing 'Run Ro' to begin fundraising and organizing in early-voting states, with the goal of competing for delegates in the 2028 primaries and caucuses.\n承诺：Commits to seeking the 2028 Democratic nomination and competing for delegates.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that I am strongly considering a 2028 Democratic presidential run, that Ron Klain is advising me and the 'Run Ro' allies are preparing, and that I will make a formal decision after the 2026–27 cycle; no formal declaration or FEC filing this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Formally declare a 2028 Democratic presidential candidacy, authorizing 'Run Ro' to begin fundraising and organizing in early-voting states, with the goal of competing for delegates in the 2028 primaries and caucuses.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "candidate_id": "agent_b00e1f2994e75be2:supplement:1",
+                  "action": "Take no convention action now: delegates have not yet been selected and no nomination contest is before the body. Monitor primary and caucus results and delegate allocation as they emerge ahead of the 2028 convention.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b00e1f2994e75be2:supplement:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no convention action now: delegates have not yet been selected and no nomination contest is before the body. Monitor primary and caucus results and delegate allocation as they emerge ahead of the 2028 convention.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                      "action": "Take no convention action now; delegates have not been selected and no nomination contest is before the body. Monitor primary and caucus results and delegate allocation as they emerge ahead of the 2028 convention.",
+                      "code": "program_rejected"
+                    }
+                  ],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "candidate_id": "agent_f7495c907cc05623:initial:1",
+                  "action": "Take no collective action this round; primary and caucus voters have no scheduled contests and no measurable preference data. Monitor candidate declarations and field formation before any delegate-selection choice arises.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f7495c907cc05623:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no collective action this round; primary and caucus voters have no scheduled contests and no measurable preference data. Monitor candidate declarations and field formation before any delegate-selection choice arises.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_f7495c907cc05623:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Defer any collective stance until the Democratic Party finalizes 2028 delegate-allocation and ranked-choice rules; no endorsement or preference signal is issued now.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Khanna's formal declaration and the 'Run Ro' organizing group show real intent, but the outcome requires winning delegates across the primary calendar and securing the convention nomination against a large field. Declaration is only the first step; no primary results or delegate counts are observed.",
+                "evidence_quote": "Ro Khanna formally declared a 2028 Democratic presidential candidacy, authorizing 'Run Ro' to begin fundraising and organizing in early-voting states, with the goal of competing for delegates in the 2028 primaries and caucuses.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.34
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.07,
+      "covered_p_yes": 0.07,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.07,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "44c9a541-ec31-4b65-8359-09f0f2a5dea6",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:12:12.235375+00:00",
+      "contract_id": "0x20d0bc282552ac5ec6f61cd7101cb42a5948cae07e7651bdf40ede1a8b2c5eac",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d7f8e68bea2c4c547c301b2a27768153c4b4f47debb7f8b161755255ef4c4823",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 66.384
+    },
+    {
+      "calls": 25,
+      "tokens": 298835,
+      "input_tokens": 284765,
+      "output_tokens": 14070,
+      "accounted_tokens_upper": 298835,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-11-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 730,
+                "interval_days": 730,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-11-08T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "status": "executed",
+                  "summary": "Ro Khanna formally declared his candidacy for the 2028 Democratic presidential nomination and filed with the FEC, launching a progressive campaign aligned with the Sanders wing and the 'Run Ro' network."
+                },
+                {
+                  "action_id": "action_1_agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_2af81e02204a58d8",
+                    "action_1_agent_f7495c907cc05623"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Ro Khanna formally declared his candidacy for the 2028 Democratic presidential nomination and filed with the FEC"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Ro Khanna formally declared his candidacy for the 2028 Democratic presidential nomination and filed with the FEC",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Ro Khanna formally declared his candidacy for the 2028 Democratic presidential nomination and filed with the FEC, launching a progressive campaign aligned with the Sanders wing and the 'Run Ro' network.",
+                  "date": "2028-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                  "action": "Formally declare candidacy for the 2028 Democratic presidential nomination and file with the FEC, launching a progressive campaign aligned with the Sanders wing and the 'Run Ro' network.\n承诺：Formal declaration and FEC filing for the 2028 Democratic nomination.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly confirm I am actively preparing a 2028 Democratic presidential campaign, citing the 'Run Ro' group and Ron Klain's advice, while stopping short of a formal FEC filing this round; commit to a formal declaration decision after early-state organizing is in place.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Formally declare candidacy for the 2028 Democratic presidential nomination and file with the FEC, launching a progressive campaign aligned with the Sanders wing and the 'Run Ro' network.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                  "action": "Take no convention action now; delegates are not yet selected and no nomination vote is pending. Monitor primary and caucus results and delegate allocation as they emerge.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no convention action now; delegates are not yet selected and no nomination vote is pending. Monitor primary and caucus results and delegate allocation as they emerge.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_b00e1f2994e75be2:initial:2",
+                      "action": "Issue a public statement that delegates will remain neutral through the primary process and will honor the outcome of pledged delegate selection, declining to endorse any candidate including Ro Khanna before voting.",
+                      "code": "program_rejected"
+                    },
+                    {
+                      "candidate_id": "agent_b00e1f2994e75be2:supplement:1",
+                      "action": "Take no convention action now: delegates are not yet selected and no nomination vote is pending. Monitor primary and caucus results and delegate allocation as they emerge.",
+                      "code": "program_rejected"
+                    }
+                  ],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "candidate_id": "agent_f7495c907cc05623:initial:1",
+                  "action": "Take no collective action this round; Democratic primary and caucus voters have no scheduled primary or caucus before the 2028 cycle and no declared field to choose among.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f7495c907cc05623:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round; Democratic primary and caucus voters have no scheduled primary or caucus before the 2028 cycle and no declared field to choose among.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Khanna's simulated declaration and FEC filing (round 1) establish candidacy, but the nomination requires winning primaries and delegate votes against a large field. Filing is not nomination; no primary results or delegate counts are observed, so the outcome remains unverified.",
+                "evidence_quote": "Ro Khanna formally declared his candidacy for the 2028 Democratic presidential nomination and filed with the FEC, launching a progressive campaign aligned with the Sanders wing and the 'Run Ro' network.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.4
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-11-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 730,
+                "interval_days": 730,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-11-08T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "status": "executed",
+                  "summary": "Ro Khanna announced a formal 2028 Democratic presidential campaign, declaring: \"I am running for the Democratic nomination for president in 2028.\" The launch draws on the 'Run Ro' group formed by allies in November 2026 and on advice from former White House Chief of Staff Ron Klain, and begins organizing in early-voting states."
+                },
+                {
+                  "action_id": "action_1_agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_2af81e02204a58d8",
+                    "action_1_agent_f7495c907cc05623"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Ro Khanna announced a formal 2028 Democratic presidential campaign"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_2af81e02204a58d8",
+                    "action_1_agent_b00e1f2994e75be2"
+                  ],
+                  "outcome": "pending",
+                  "effect": "begins organizing in early-voting states"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Ro Khanna announced a formal 2028 Democratic presidential campaign",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Ro Khanna announced a formal 2028 Democratic presidential campaign, declaring: \"I am running for the Democratic nomination for president in 2028.\" The launch draws on the 'Run Ro' group formed by allies in November 2026 and on advice from former White House Chief of Staff Ron Klain, and begins organizing in early-voting states.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                  "action": "Announce a formal 2028 Democratic presidential campaign, leveraging the existing 'Run Ro' group and Ron Klain's advice, and begin organizing in early-voting states.\n承诺：I am running for the Democratic nomination for president in 2028.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Announce a formal 2028 Democratic presidential campaign, leveraging the existing 'Run Ro' group and Ron Klain's advice, and begin organizing in early-voting states.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Establish an exploratory committee and publicly state he is actively preparing a 2028 bid, without yet formally declaring candidacy.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                  "action": "Take no convention action now; delegates are not yet selected and no nomination contest exists. Monitor whether Khanna declares a candidacy and whether primary/caucus results produce delegates committed to him.\n触发或复核条件：Review when Khanna declares a candidacy or primary/caucus delegate results begin to accumulate.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no convention action now; delegates are not yet selected and no nomination contest exists. Monitor whether Khanna declares a candidacy and whether primary/caucus results produce delegates committed to him.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "candidate_id": "agent_f7495c907cc05623:initial:1",
+                  "action": "Take no collective action this round; Democratic primary and caucus voters have no scheduled contests or declared field yet. Monitor candidate declarations, polling, and delegate-selection rules before any preference is expressed.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f7495c907cc05623:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round; Democratic primary and caucus voters have no scheduled contests or declared field yet. Monitor candidate declarations, polling, and delegate-selection rules before any preference is expressed.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Khanna's formal campaign launch (round 1) makes him an actual contender, but a declared candidacy is far from winning the nomination. The field includes other plausible candidates (Beshear, Warnock, Buttigieg, Yang), and no primary results, polling, or delegate counts exist; the nomination requires winning delegates and acceptance, which remain unobserved.",
+                "evidence_quote": "Ro Khanna announced a formal 2028 Democratic presidential campaign, declaring: \"I am running for the Democratic nomination for president in 2028.\" The launch draws on the 'Run Ro' group formed by allies in November 2026 and on advice from former White House Chief of Staff Ron Klain, and begins organizing in early-voting states.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.55
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 1,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.07,
+      "covered_p_yes": 0.07,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.07,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "091591fb-a717-48c2-8bd0-0539b9213958",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:12:56.860896+00:00",
+      "contract_id": "0x20d0bc282552ac5ec6f61cd7101cb42a5948cae07e7651bdf40ede1a8b2c5eac",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d7f8e68bea2c4c547c301b2a27768153c4b4f47debb7f8b161755255ef4c4823",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 44.623
+    },
+    {
+      "calls": 11,
+      "tokens": 129477,
+      "input_tokens": 123531,
+      "output_tokens": 5946,
+      "accounted_tokens_upper": 129477,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [],
+          "branches": [],
+          "status": "failed",
+          "p_yes": null,
+          "error": "ValueError: 主体 agent_b00e1f2994e75be2 补充后仍无有效行动候选",
+          "action_path_probability": null
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 0,
+        "active_rounds": 0,
+        "draw_rounds": 0,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 0,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 0,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 0,
+        "valid_estimate_coverage": 0.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 0,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 0,
+        "public_trajectory_samples": 0,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 0,
+            "active_rounds": 0,
+            "draw_rounds": 0,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 0,
+            "active_actor_count": 0,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": false,
+            "outcome_observed": false,
+            "conditional_only": false
+          }
+        ],
+        "warnings": [
+          {
+            "code": "limited_actor_coverage",
+            "message": "Fewer than two of the supplied actors participated in recorded decisions. This does not require every actor to act."
+          }
+        ]
+      },
+      "p_yes": null,
+      "covered_p_yes": null,
+      "coverage": 0.0,
+      "unknown_bounds": [
+        0.0,
+        1.0
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 1,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": true,
+      "status": "failed",
+      "error": "ValueError: 主体 agent_b00e1f2994e75be2 补充后仍无有效行动候选",
+      "planned_samples": 1,
+      "simulation_run_id": "6153b3fd-45dc-45a7-8b78-4d05c9aa64f2",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:48:31.666776+00:00",
+      "contract_id": "0x20d0bc282552ac5ec6f61cd7101cb42a5948cae07e7651bdf40ede1a8b2c5eac",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d7f8e68bea2c4c547c301b2a27768153c4b4f47debb7f8b161755255ef4c4823",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 21.796
+    },
+    {
+      "calls": 133,
+      "tokens": 1413408,
+      "input_tokens": 1352790,
+      "output_tokens": 60618,
+      "accounted_tokens_upper": 1413408,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-02-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 91,
+                "interval_days": 91,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-02-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "candidate_id": "agent_2af81e02204a58d8:initial:3",
+                  "action": null,
+                  "p_selected": 0.1,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Announce a formal 2028 Democratic presidential campaign, publicly committing to seek the nomination and to accept it if the delegates select him. Frame the launch around the 'Run Ro' allied group and continued advice from Ron Klain.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Establish a formal exploratory committee for a 2028 presidential bid, publicly stating he is strongly considering a run and will decide after assessing fundraising and early-state support. No declaration of candidacy this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "candidate_id": "agent_f7495c907cc05623:initial:1",
+                  "action": "Primary and caucus voters take no collective action this round; no primaries or caucuses are scheduled before 2027, and the field remains undeclared. The group monitors candidate signals and any DNC rules changes, including ranked-choice voting proposals.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f7495c907cc05623:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Primary and caucus voters take no collective action this round; no primaries or caucuses are scheduled before 2027, and the field remains undeclared. The group monitors candidate signals and any DNC rules changes, including ranked-choice voting proposals.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Khanna is credibly preparing a 2028 bid: Klain advising him and a \"Run Ro\" group formed in November 2026, plus his own statement he is \"strongly considering it.\" But no candidacy is declared and the nomination requires winning primaries and delegates against a large field, so the chance remains low.",
+                "evidence_quote": "In November 2026, allies of Khanna formed the \"Run Ro\" group, which would prepare for a 2028 Khanna presidential campaign. Jamaal Bowman and Nomiki Konst are co-chairs of the group.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-08",
+                "interval_end": "2027-05-10",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 182,
+                "interval_days": 91,
+                "interval_start_utc": "2027-02-08T00:00:00+00:00",
+                "interval_end_utc": "2027-05-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Khanna is credibly preparing a 2028 bid: Klain advising him and a \"Run Ro\" group formed in November 2026, plus his own statement he is \"strongly considering it.\" But no candidacy is declared and the nomination requires winning primaries and delegates against a large field, so the chance remains low.",
+                "evidence_quote": "In November 2026, allies of Khanna formed the \"Run Ro\" group, which would prepare for a 2028 Khanna presidential campaign. Jamaal Bowman and Nomiki Konst are co-chairs of the group.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-05-10",
+                "interval_end": "2027-08-09",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 273,
+                "interval_days": 91,
+                "interval_start_utc": "2027-05-10T00:00:00+00:00",
+                "interval_end_utc": "2027-08-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Khanna is credibly preparing a 2028 bid: Klain advising him and a \"Run Ro\" group formed in November 2026, plus his own statement he is \"strongly considering it.\" But no candidacy is declared and the nomination requires winning primaries and delegates against a large field, so the chance remains low.",
+                "evidence_quote": "In November 2026, allies of Khanna formed the \"Run Ro\" group, which would prepare for a 2028 Khanna presidential campaign. Jamaal Bowman and Nomiki Konst are co-chairs of the group.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-08-09",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 365,
+                "interval_days": 92,
+                "interval_start_utc": "2027-08-09T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "status": "executed",
+                  "summary": "Ro Khanna formally announced a 2028 Democratic presidential campaign, publicly confirming Ron Klain's advisory role and the 'Run Ro' group as the campaign's foundation."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Ro Khanna formally announced a 2028 Democratic presidential campaign",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Ro Khanna formally announced a 2028 Democratic presidential campaign, publicly confirming Ron Klain's advisory role and the 'Run Ro' group as the campaign's foundation.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                  "action": "Formally announce a 2028 Democratic presidential campaign, framing it around the working-class and civil-liberties themes from the West Bank trip, and publicly confirm Ron Klain's advisory role and the 'Run Ro' group as the campaign's foundation.\n承诺：Declare candidacy and begin organizing in early-voting states.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Formally announce a 2028 Democratic presidential campaign, framing it around the working-class and civil-liberties themes from the West Bank trip, and publicly confirm Ron Klain's advisory role and the 'Run Ro' group as the campaign's foundation.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Announce formation of an exploratory committee for a 2028 presidential bid, naming Klain as senior adviser and the 'Run Ro' co-chairs, while stopping short of a formal candidacy declaration.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "candidate_id": "agent_f7495c907cc05623:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.09,
+                "basis": "Khanna's simulated formal campaign launch in Nov 2027 and prior Klain advising/'Run Ro' groundwork raise his candidacy odds, but winning the nomination still requires prevailing over a large Democratic field and delegate selection. The evidence shows intent and organization, not nomination approval.",
+                "evidence_quote": "Ro Khanna formally announced a 2028 Democratic presidential campaign, publicly confirming Ron Klain's advisory role and the 'Run Ro' group as the campaign's foundation.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-02-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 456,
+                "interval_days": 91,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-02-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.09,
+                "basis": "Khanna's simulated formal campaign launch in Nov 2027 and prior Klain advising/'Run Ro' groundwork raise his candidacy odds, but winning the nomination still requires prevailing over a large Democratic field and delegate selection. The evidence shows intent and organization, not nomination approval.",
+                "evidence_quote": "Ro Khanna formally announced a 2028 Democratic presidential campaign, publicly confirming Ron Klain's advisory role and the 'Run Ro' group as the campaign's foundation.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-02-08",
+                "interval_end": "2028-05-09",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 547,
+                "interval_days": 91,
+                "interval_start_utc": "2028-02-08T00:00:00+00:00",
+                "interval_end_utc": "2028-05-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.09,
+                "basis": "Khanna's simulated formal campaign launch in Nov 2027 and prior Klain advising/'Run Ro' groundwork raise his candidacy odds, but winning the nomination still requires prevailing over a large Democratic field and delegate selection. The evidence shows intent and organization, not nomination approval.",
+                "evidence_quote": "Ro Khanna formally announced a 2028 Democratic presidential campaign, publicly confirming Ron Klain's advisory role and the 'Run Ro' group as the campaign's foundation.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-05-09",
+                "interval_end": "2028-08-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 638,
+                "interval_days": 91,
+                "interval_start_utc": "2028-05-09T00:00:00+00:00",
+                "interval_end_utc": "2028-08-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "status": "executed",
+                  "summary": "Ro Khanna publicly addressed Democratic primary and caucus voters, urging them to back his declared campaign and to elect delegates committed to him in their primaries and caucuses, emphasizing working-class and civil-liberties themes."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Ro Khanna publicly addressed Democratic primary and caucus voters, urging them to back his declared campaign and to elect delegates committed to him in their primaries and caucuses",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_007_001",
+                  "text": "Ro Khanna publicly addressed Democratic primary and caucus voters, urging them to back his declared campaign and to elect delegates committed to him in their primaries and caucuses, emphasizing working-class and civil-liberties themes.",
+                  "date": "2028-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                  "action": "Publicly address Democratic primary and caucus voters to consolidate support behind my declared campaign, emphasizing working-class and civil-liberties themes and urging them to select delegates committed to me in their primaries and caucuses.\n承诺：Ask primary voters to back my campaign and elect delegates committed to me.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly address Democratic primary and caucus voters to consolidate support behind my declared campaign, emphasizing working-class and civil-liberties themes and urging them to select delegates committed to me in their primaries and caucuses.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that if Democratic primary and caucus voters select a delegate majority supporting me, I will accept the 2028 Democratic nomination, and call on convention delegates to respect the primary results.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "candidate_id": "agent_f7495c907cc05623:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.14,
+                "basis": "Khanna has moved from speculation to a declared campaign and active primary outreach, but winning the nomination still requires delegate selection and convention acceptance. The simulated August 2028 outreach is a campaign step, not evidence of a nomination outcome.",
+                "evidence_quote": "Ro Khanna publicly addressed Democratic primary and caucus voters, urging them to back his declared campaign and to elect delegates committed to him in their primaries and caucuses, emphasizing working-class and civil-liberties themes.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_007_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-08-08",
+                "interval_end": "2028-11-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 730,
+                "interval_days": 92,
+                "interval_start_utc": "2028-08-08T00:00:00+00:00",
+                "interval_end_utc": "2028-11-08T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Khanna declared a campaign (Nov 2027) and addressed primary voters in Aug 2028, but no settled result shows delegate counts or convention outcome. Declaration and campaigning are necessary but not sufficient; the nomination depends on unobserved primary voting and delegate selection against a competitive field.",
+                "evidence_quote": "Ro Khanna publicly addressed Democratic primary and caucus voters, urging them to back his declared campaign and to elect delegates committed to him in their primaries and caucuses, emphasizing working-class and civil-liberties themes.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_007_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.041999999999999996
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-02-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 91,
+                "interval_days": 91,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-02-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "status": "executed",
+                  "summary": "Ro Khanna announced the formation of a presidential exploratory committee to test a 2028 Democratic bid, citing the 'Run Ro' allies and Ron Klain's advice, while explicitly stopping short of a formal candidacy declaration and framing the committee as fundraising and organizing groundwork pending a later decision."
+                },
+                {
+                  "action_id": "action_1_agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_2af81e02204a58d8",
+                    "action_1_agent_f7495c907cc05623"
+                  ],
+                  "outcome": "pending",
+                  "effect": "explicitly stopping short of a formal candidacy declaration and framing the committee as fundraising and organizing groundwork pending a later decision"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_2af81e02204a58d8",
+                    "action_1_agent_b00e1f2994e75be2"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Ro Khanna announced the formation of a presidential exploratory committee to test a 2028 Democratic bid"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "explicitly stopping short of a formal candidacy declaration and framing the committee as fundraising and organizing groundwork pending a later decision",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Ro Khanna announced the formation of a presidential exploratory committee to test a 2028 Democratic bid, citing the 'Run Ro' allies and Ron Klain's advice, while explicitly stopping short of a formal candidacy declaration and framing the committee as fundraising and organizing groundwork pending a later decision.",
+                  "date": "2027-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                  "action": "Announce formation of a presidential exploratory committee to test a 2028 Democratic bid, citing the 'Run Ro' allies and Klain's advice; explicitly stop short of a formal candidacy declaration, framing the committee as fundraising and organizing groundwork pending a later decision.\n承诺：No formal candidacy declaration this round; a final run decision follows the exploratory phase.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Announce formation of a presidential exploratory committee to test a 2028 Democratic bid, citing the 'Run Ro' allies and Klain's advice; explicitly stop short of a formal candidacy declaration, framing the committee as fundraising and organizing groundwork pending a later decision.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "In a media interview, reaffirm that he is 'strongly considering' a 2028 run and say a decision will come after consulting allies and assessing the field; no committee or filing announced this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "candidate_id": "agent_b00e1f2994e75be2:supplement:1",
+                  "action": "Take no convention action this round. Delegates are not yet selected and no nomination decision is before the body; monitor candidate-side signals and any DNC rulemaking on delegate allocation or ranked-choice voting.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b00e1f2994e75be2:supplement:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no convention action this round. Delegates are not yet selected and no nomination decision is before the body; monitor candidate-side signals and any DNC rulemaking on delegate allocation or ranked-choice voting.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                      "action": "Take no convention action in this round. Delegates do not exist as a selected body until the 2028 primaries and caucuses occur; monitor candidate-side signals and any DNC rulemaking on delegate allocation or ranked-choice voting.",
+                      "code": "program_rejected"
+                    }
+                  ],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "candidate_id": "agent_f7495c907cc05623:initial:1",
+                  "action": "Take no collective action this round; primary and caucus voters have no scheduled contests or candidate-selection decision before delegate selection begins. Continue monitoring whether Khanna declares a candidacy and how the field forms.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f7495c907cc05623:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round; primary and caucus voters have no scheduled contests or candidate-selection decision before delegate selection begins. Continue monitoring whether Khanna declares a candidacy and how the field forms.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Khanna is a credible contender: allies formed the \"Run Ro\" group in November 2026 and he said he was \"strongly considering\" a bid, but no formal candidacy exists. An exploratory committee is groundwork, not the nomination, and a large field plus primary voters and convention delegates stand between him and acceptance.",
+                "evidence_quote": "In November 2026, allies of Khanna formed the \"Run Ro\" group, which would prepare for a 2028 Khanna presidential campaign. Jamaal Bowman and Nomiki Konst are co-chairs of the group.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-02-08",
+                "interval_end": "2027-05-10",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 182,
+                "interval_days": 91,
+                "interval_start_utc": "2027-02-08T00:00:00+00:00",
+                "interval_end_utc": "2027-05-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "status": "executed",
+                  "summary": "Ro Khanna announced that the exploratory committee is expanding, naming a campaign manager and policy team and opening organizing operations in Iowa, New Hampshire, South Carolina and Nevada, while again stopping short of a formal candidacy declaration. Ro Khanna set a public fundraising target for the exploratory phase and said a final decision on running depends on fundraising and early-state organizing results."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_2af81e02204a58d8",
+                    "action_2_agent_2af81e02204a58d8"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Ro Khanna announced that the exploratory committee is expanding, naming a campaign manager and policy team and opening organizing operations in Iowa, New Hampshire, South Carolina and Nevada"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "again stopping short of a formal candidacy declaration",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "Ro Khanna announced that the exploratory committee is expanding, naming a campaign manager and policy team and opening organizing operations in Iowa, New Hampshire, South Carolina and Nevada, while again stopping short of a formal candidacy declaration.",
+                  "date": "2027-05"
+                },
+                {
+                  "id": "sim_0002_002_002",
+                  "text": "Ro Khanna set a public fundraising target for the exploratory phase and said a final decision on running depends on fundraising and early-state organizing results.",
+                  "date": "2027-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                  "action": "Announce that the exploratory committee is expanding: name a campaign manager and policy team, open organizing operations in early-voting states (Iowa, New Hampshire, South Carolina, Nevada), and set a public fundraising target for the exploratory phase. Continue to stop short of a formal candidacy declaration this round.\n承诺：No formal candidacy declaration this round; a final run decision follows the exploratory phase and depends on fundraising and early-state organizing results.\n触发或复核条件：Proceed only if the 'Run Ro' group and Klain's advisory circle can staff early-state operations.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Announce that the exploratory committee is expanding: name a campaign manager and policy team, open organizing operations in early-voting states (Iowa, New Hampshire, South Carolina, Nevada), and set a public fundraising target for the exploratory phase. Continue to stop short of a formal candidacy declaration this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Formally declare candidacy for the 2028 Democratic presidential nomination, converting the exploratory committee into a campaign and filing with the FEC, while stating he will accept the nomination if the delegates choose him.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Khanna is a credible contender: allies formed the \"Run Ro\" group in November 2026 and he said he was \"strongly considering\" a bid, but no formal candidacy exists. An exploratory committee is groundwork, not the nomination, and a large field plus primary voters and convention delegates stand between him and acceptance.",
+                "evidence_quote": "In November 2026, allies of Khanna formed the \"Run Ro\" group, which would prepare for a 2028 Khanna presidential campaign. Jamaal Bowman and Nomiki Konst are co-chairs of the group.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-05-10",
+                "interval_end": "2027-08-09",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 273,
+                "interval_days": 91,
+                "interval_start_utc": "2027-05-10T00:00:00+00:00",
+                "interval_end_utc": "2027-08-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "status": "executed",
+                  "summary": "Ro Khanna declared a formal 2028 Democratic presidential candidacy, converting his exploratory committee into a campaign, and committed to competing in the early primaries and caucuses and to accepting the Democratic nomination if delegates select him."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "committed to competing in the early primaries and caucuses and to accepting the Democratic nomination if delegates select him",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "Ro Khanna declared a formal 2028 Democratic presidential candidacy, converting his exploratory committee into a campaign, and committed to competing in the early primaries and caucuses and to accepting the Democratic nomination if delegates select him.",
+                  "date": "2027-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                  "action": "Declare a formal 2028 Democratic presidential candidacy, converting the exploratory committee into a campaign, and commit to competing in the early primaries and caucuses and to accepting the Democratic nomination if delegates select him.\n承诺：Formal candidacy declared this round; will accept the nomination if offered.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Declare a formal 2028 Democratic presidential candidacy, converting the exploratory committee into a campaign, and commit to competing in the early primaries and caucuses and to accepting the Democratic nomination if delegates select him.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Announce that the exploratory committee will continue through the interval, report progress toward the public fundraising target and early-state organizing benchmarks, and state that a formal candidacy decision will follow once those benchmarks are assessed.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Khanna's simulated formal declaration and commitment to compete and accept the nomination raise his standing above the prior 0.07, but the nomination still depends on primary voters and convention delegates. Competing candidates and the long path to 2028 keep the probability low.",
+                "evidence_quote": "Ro Khanna declared a formal 2028 Democratic presidential candidacy, converting his exploratory committee into a campaign, and committed to competing in the early primaries and caucuses and to accepting the Democratic nomination if delegates select him.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-08-09",
+                "interval_end": "2027-11-09",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 365,
+                "interval_days": 92,
+                "interval_start_utc": "2027-08-09T00:00:00+00:00",
+                "interval_end_utc": "2027-11-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                  "action": "Take no convention action this round. No delegates have been selected and no nomination decision is before the body; continue monitoring DNC rulemaking on delegate allocation and ranked-choice voting and the developing primary field.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Take no convention action this round. No delegates have been selected and no nomination decision is before the body; continue monitoring DNC rulemaking on delegate allocation and ranked-choice voting and the developing primary field.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "candidate_id": "agent_f7495c907cc05623:supplement:2",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_f7495c907cc05623:initial:1",
+                      "action": "Take no collective action this round: no primaries, caucuses, or delegate-selection contests are scheduled in this interval, so the primary electorate has no formal choice to make yet. Continue monitoring the declared field and any early-state polling or party rule changes.",
+                      "code": "program_rejected"
+                    },
+                    {
+                      "candidate_id": "agent_f7495c907cc05623:supplement:1",
+                      "action": "Take no collective action this round: no primaries, caucuses, or delegate-selection contests are scheduled in this interval, so the primary electorate has no formal choice to make yet. Continue monitoring the declared field and any early-state polling or party rule changes.",
+                      "code": "program_rejected"
+                    }
+                  ],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Khanna's simulated formal declaration and commitment to compete and accept the nomination raise his standing above the prior 0.07, but the nomination still depends on primary voters and convention delegates. Competing candidates and the long path to 2028 keep the probability low.",
+                "evidence_quote": "Ro Khanna declared a formal 2028 Democratic presidential candidacy, converting his exploratory committee into a campaign, and committed to competing in the early primaries and caucuses and to accepting the Democratic nomination if delegates select him.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-09",
+                "interval_end": "2028-02-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 456,
+                "interval_days": 91,
+                "interval_start_utc": "2027-11-09T00:00:00+00:00",
+                "interval_end_utc": "2028-02-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Khanna's simulated formal declaration and commitment to compete and accept the nomination raise his standing above the prior 0.07, but the nomination still depends on primary voters and convention delegates. Competing candidates and the long path to 2028 keep the probability low.",
+                "evidence_quote": "Ro Khanna declared a formal 2028 Democratic presidential candidacy, converting his exploratory committee into a campaign, and committed to competing in the early primaries and caucuses and to accepting the Democratic nomination if delegates select him.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-02-08",
+                "interval_end": "2028-05-09",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 547,
+                "interval_days": 91,
+                "interval_start_utc": "2028-02-08T00:00:00+00:00",
+                "interval_end_utc": "2028-05-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "requested meetings ahead of convention decisions",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_006_001",
+                  "text": "Ro Khanna sent Democratic National Convention delegates a written summary of the campaign's early-state results and policy commitments, restating his standing pledge to accept the nomination if delegates select him, and requested meetings ahead of convention decisions.",
+                  "date": "2028-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_2af81e02204a58d8",
+                  "actor_name": "Ro Khanna",
+                  "candidate_id": "agent_2af81e02204a58d8:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_2af81e02204a58d8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Announce a sustained early-state campaign push through the spring 2028 primary window: expanded organizing and paid outreach in Iowa, New Hampshire, South Carolina and Nevada, a public fundraising benchmark, and a schedule of town halls, while reaffirming the pledge to accept the nomination if delegates select him.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-05-09",
+                "interval_end": "2028-08-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 638,
+                "interval_days": 91,
+                "interval_start_utc": "2028-05-09T00:00:00+00:00",
+                "interval_end_utc": "2028-08-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_7_agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_b00e1f2994e75be2",
+                  "actor_name": "Democratic National Convention delegates",
+                  "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                  "action": "Take no convention action this round. Delegates remain unselected and no nomination vote is before the body; Khanna's written summary and meeting request do not require a collective response. Continue monitoring DNC delegate-allocation and ranked-choice rulemaking and primary results.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b00e1f2994e75be2:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no convention action this round. Delegates remain unselected and no nomination vote is before the body; Khanna's written summary and meeting request do not require a collective response. Continue monitoring DNC delegate-allocation and ranked-choice rulemaking and primary results.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f7495c907cc05623",
+                  "actor_name": "Democratic primary and caucus voters",
+                  "candidate_id": "agent_f7495c907cc05623:supplement:1",
+                  "action": "Take no collective action this round; primary and caucus voters have no scheduled contests or delegate-selection decision in this interval, and no polling, vote data or delegate counts exist to ground a collective endorsement.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f7495c907cc05623:supplement:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Take no collective action this round; primary and caucus voters have no scheduled contests or delegate-selection decision in this interval, and no polling, vote data or delegate counts exist to ground a collective endorsement.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-08-08",
+                "interval_end": "2028-11-08",
+                "horizon_end": "2028-11-08",
+                "elapsed_days": 730,
+                "interval_days": 92,
+                "interval_start_utc": "2028-08-08T00:00:00+00:00",
+                "interval_end_utc": "2028-11-08T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Khanna converted his exploratory committee into a formal candidacy and pledged to accept the nomination if delegates select him, but no delegate count or convention result is in evidence. The nomination depends on primary voters and convention delegates, so declared candidacy and outreach to delegates are only prerequisites, not an outcome.",
+                "evidence_quote": "Ro Khanna declared a formal 2028 Democratic presidential candidacy, converting his exploratory committee into a campaign, and committed to competing in the early primaries and caucuses and to accepting the Democratic nomination if delegates select him.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_003_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.03564
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 16,
+        "active_rounds": 9,
+        "draw_rounds": 9,
+        "audited_silent_rounds": 7,
+        "sampled_decisions": 19,
+        "public_event_count": 7,
+        "substantive_public_event_count": 7,
+        "state_change_count": 6,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 9,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 8,
+            "active_rounds": 6,
+            "draw_rounds": 6,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 10,
+            "active_actor_count": 3,
+            "public_event_count": 5,
+            "substantive_public_event_count": 5,
+            "state_change_count": 4,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.095,
+      "covered_p_yes": 0.095,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.095,
+        0.09499999999999997
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "0a5bbcf8-9304-4805-9beb-bcdca3e369ae",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T03:36:33.734415+00:00",
+      "contract_id": "0x20d0bc282552ac5ec6f61cd7101cb42a5948cae07e7651bdf40ede1a8b2c5eac",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d7f8e68bea2c4c547c301b2a27768153c4b4f47debb7f8b161755255ef4c4823",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 339.273
+    },
+    {
+      "calls": 197,
+      "tokens": 2268983,
+      "input_tokens": 2145728,
+      "output_tokens": 123255,
+      "accounted_tokens_upper": 2268983,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.17219071264999997,
+      "coverage": 0.781153875,
+      "unexplored_mass": 0.21884612499999995,
+      "unknown_bounds": [
+        0.06276765014999999,
+        0.28161377514999997
+      ],
+      "search_iterations": 16,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 16,
+          "search_value": 0.28271931250000004,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.49500000000000005,
+          "visits": 10,
+          "search_value": 0.3010315,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.34650000000000003,
+          "visits": 7,
+          "search_value": 0.31172500000000003,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.24255000000000002,
+          "visits": 5,
+          "search_value": 0.338384,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.169785,
+          "visits": 4,
+          "search_value": 0.35533,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.10187099999999999,
+          "visits": 2,
+          "search_value": 0.3747,
+          "conditional_p_yes": 0.09,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.07130969999999999,
+          "visits": 1,
+          "search_value": 0.30072,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.042785819999999995,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.09,
+          "frontier": true,
+          "contribution": 0.0038507237999999993
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.028523879999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.0019966716
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 6,
+          "mass": 0.030561299999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.15,
+          "frontier": true,
+          "contribution": 0.004584194999999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.067914,
+          "visits": 1,
+          "search_value": 0.3712,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.0407484,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.004889808
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 6,
+          "mass": 0.0271656,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.002173248
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.072765,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.0058211999999999995
+        },
+        {
+          "path": [
+            1,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.10395,
+          "visits": 1,
+          "search_value": 0.219555,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.048596625000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.09,
+          "frontier": true,
+          "contribution": 0.004373696250000001
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.02650725,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.0018555075000000001
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.028846124999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.14850000000000002,
+          "visits": 2,
+          "search_value": 0.28392,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.10395000000000001,
+          "visits": 1,
+          "search_value": 0.28728000000000004,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.06237000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.004365900000000001
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.041580000000000006,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.09,
+          "frontier": true,
+          "contribution": 0.0037422
+        },
+        {
+          "path": [
+            1,
+            2,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.044550000000000006,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.09,
+          "frontier": true,
+          "contribution": 0.0040095
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.315,
+          "visits": 5,
+          "search_value": 0.258312,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.315,
+          "visits": 4,
+          "search_value": 0.25779,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.315,
+          "visits": 3,
+          "search_value": 0.25692000000000004,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.22049999999999997,
+          "visits": 2,
+          "search_value": 0.2604,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.22049999999999997,
+          "visits": 1,
+          "search_value": 0.2604,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.22049999999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.015434999999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.0945,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.06,
+          "frontier": true,
+          "contribution": 0.00567
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.18999999999999995,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "4c95656a-8860-49af-a706-30c1fff077e6",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T03:42:56.513722+00:00",
+      "contract_id": "0x20d0bc282552ac5ec6f61cd7101cb42a5948cae07e7651bdf40ede1a8b2c5eac",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d7f8e68bea2c4c547c301b2a27768153c4b4f47debb7f8b161755255ef4c4823",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 530.961
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x20d0bc282552ac5ec6f61cd7101cb42a5948cae07e7651bdf40ede1a8b2c5eac",
+  "group_id": "democratic-presidential-nominee-2028",
+  "stage": "finished",
+  "outcome_deadline": "2028-11-08T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "d7f8e68bea2c4c547c301b2a27768153c4b4f47debb7f8b161755255ef4c4823",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 635,
+    "input_tokens": 546,
+    "output_tokens": 89,
+    "accounted_tokens_upper": 635,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-11-08"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-11-08"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2027-02-08",
+        "2027-05-10",
+        "2027-08-09",
+        "2027-11-09",
+        "2028-02-08",
+        "2028-05-09",
+        "2028-08-08",
+        "2028-11-08"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2027-02-08",
+        "2027-05-10",
+        "2027-08-09",
+        "2027-11-09",
+        "2028-02-08",
+        "2028-05-09",
+        "2028-08-08",
+        "2028-11-08"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2027-02-08",
+        "2027-05-10",
+        "2027-08-09",
+        "2027-11-09",
+        "2028-02-08",
+        "2028-05-09",
+        "2028-08-08",
+        "2028-11-08"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1,
+      "restricted": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_b9d342a823a78f73",
+          "name": "Ro Khanna",
+          "role": "U.S. Representative and potential 2028 Democratic presidential candidate who must decide to run and accept the nomination",
+          "decision_ids": [
+            "khanna_run",
+            "khanna_accept"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_148c380319d9ddcd",
+          "name": "Democratic primary and caucus voters",
+          "role": "Democratic Party primary and caucus participants who select delegates to the 2028 Democratic National Convention",
+          "decision_ids": [
+            "voters_select"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        },
+        {
+          "seat_id": "seat_a42f1d3c42a22b5f",
+          "name": "Democratic National Convention delegates",
+          "role": "Delegates selected through primaries and caucuses who determine the party's presidential nominee at the 2028 Democratic National Convention",
+          "decision_ids": [
+            "delegates_nominate"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No source identifies the specific individuals who will serve as 2028 convention delegates or how they will vote.",
+        "No source establishes that Ro Khanna has decided to run or accept the nomination as of the cutoff."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "khanna_run",
+          "choice": "Ro Khanna decides to seek the 2028 Democratic presidential nomination",
+          "owner": "Ro Khanna",
+          "support": "represented"
+        },
+        {
+          "id": "voters_select",
+          "choice": "Democratic primary and caucus voters select delegates supporting a candidate",
+          "owner": "Democratic primary and caucus voters",
+          "support": "represented"
+        },
+        {
+          "id": "delegates_nominate",
+          "choice": "Democratic National Convention delegates determine the party's presidential nominee",
+          "owner": "Democratic National Convention delegates",
+          "support": "represented"
+        },
+        {
+          "id": "khanna_accept",
+          "choice": "Ro Khanna accepts the 2028 Democratic presidential nomination",
+          "owner": "Ro Khanna",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 27,
+    "tokens": 68977,
+    "input_tokens": 58892,
+    "output_tokens": 10085,
+    "accounted_tokens_upper": 68977,
+    "unknown_usage_requests": 0
+  }
+}

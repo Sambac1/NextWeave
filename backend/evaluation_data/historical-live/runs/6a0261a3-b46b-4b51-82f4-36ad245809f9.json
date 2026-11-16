@@ -1,0 +1,2695 @@
+{
+  "run_id": "6a0261a3-b46b-4b51-82f4-36ad245809f9",
+  "case_id": "market_5cf69eb7abaad431d53ef3da",
+  "status": "partial",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2273,
+      "input_tokens": 2263,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2273,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.72,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.72,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2263,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:26:56.948031+00:00",
+      "contract_id": "0x3b40221adf21a481d1eb3c84bd52e828384fe2558a9889afa86068874f84f7b8",
+      "forecast_cutoff": "2025-01-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "051e5f6a366c1c1c755814ef907fe2acc00e9d878e4cc9f92dd343f03825daf2",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.994
+    },
+    {
+      "calls": 2,
+      "tokens": 4546,
+      "input_tokens": 4526,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 4546,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.72,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.72,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2263,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.72,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2263,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:26:58.453414+00:00",
+      "contract_id": "0x3b40221adf21a481d1eb3c84bd52e828384fe2558a9889afa86068874f84f7b8",
+      "forecast_cutoff": "2025-01-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "051e5f6a366c1c1c755814ef907fe2acc00e9d878e4cc9f92dd343f03825daf2",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.503
+    },
+    {
+      "calls": 11,
+      "tokens": 111935,
+      "input_tokens": 105715,
+      "output_tokens": 6220,
+      "accounted_tokens_upper": 111935,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-01-10",
+                "interval_end": "2025-07-01",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 172,
+                "interval_days": 172,
+                "interval_start_utc": "2025-01-10T23:59:59+00:00",
+                "interval_end_utc": "2025-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "status": "executed",
+                  "summary": "The Senate Armed Services Committee proceeds with its scheduled January 14, 2025 hearing on the Hegseth nomination, giving members the opportunity to question the nominee and review the record before the nomination advances to the full Senate."
+                },
+                {
+                  "action_id": "action_1_agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d53214b4fc705af9",
+                    "action_1_agent_92c3c8b038ab5dad"
+                  ],
+                  "outcome": "pending",
+                  "effect": "proceeds with its scheduled January 14, 2025 hearing on the Hegseth nomination"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "proceeds with its scheduled January 14, 2025 hearing on the Hegseth nomination",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Senate Armed Services Committee proceeds with its scheduled January 14, 2025 hearing on the Hegseth nomination, giving members the opportunity to question the nominee and review the record before the nomination advances to the full Senate.",
+                  "date": "2025-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_6f9cb8423b33523d:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm support for Pete Hegseth's nomination and urge the Senate Armed Services Committee to proceed with the scheduled January 14 hearing, signaling no withdrawal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                  "action": "Proceed with the scheduled January 14, 2025 Armed Services Committee hearing on the Hegseth nomination, giving members the opportunity to question the nominee and review the record before the nomination advances to the full Senate.\n承诺：Hold the scheduled hearing and complete committee review before the nomination is presented to the full Senate.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Proceed with the scheduled January 14, 2025 Armed Services Committee hearing on the Hegseth nomination, giving members the opportunity to question the nominee and review the record before the nomination advances to the full Senate.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                  "action": "Take no Senate floor action this round; the full Senate vote must follow Armed Services Committee hearings, and the hearing is scheduled for January 14, 2025. Hold the nomination pending committee presentation.\n触发或复核条件：Resume floor consideration once the Armed Services Committee completes review and presents the nomination.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no Senate floor action this round; the full Senate vote must follow Armed Services Committee hearings, and the hearing is scheduled for January 14, 2025. Hold the nomination pending committee presentation.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Commit to scheduling a full Senate confirmation vote on Pete Hegseth after the Armed Services Committee presents the nomination, with confirmation requiring a majority vote; no recess appointment will substitute for Senate confirmation.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Hegseth's nomination was announced and a Senate Armed Services Committee hearing was scheduled for January 14, 2025, indicating the process was advancing normally. No settled event shows withdrawal, rejection, or confirmation, so the outcome remains unverified; the estimate reflects a functioning nomination path rather than a recorded Senate vote.",
+                "evidence_quote": "He is scheduled to appear before the Senate Armed Services Committee on January 14, 2025.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.20400000000000001
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.72,
+      "covered_p_yes": 0.72,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.72,
+        0.72
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "dea22417-d41a-4d6f-9d39-d9025b52fc22",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:27:49.793318+00:00",
+      "contract_id": "0x3b40221adf21a481d1eb3c84bd52e828384fe2558a9889afa86068874f84f7b8",
+      "forecast_cutoff": "2025-01-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "051e5f6a366c1c1c755814ef907fe2acc00e9d878e4cc9f92dd343f03825daf2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 51.338
+    },
+    {
+      "calls": 77,
+      "tokens": 745801,
+      "input_tokens": 708050,
+      "output_tokens": 37751,
+      "accounted_tokens_upper": 745801,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-01-10",
+                "interval_end": "2025-02-07",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 28,
+                "interval_days": 28,
+                "interval_start_utc": "2025-01-10T23:59:59+00:00",
+                "interval_end_utc": "2025-02-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly reaffirmed that Pete Hegseth remains his nominee for Secretary of Defense ahead of the January 14 Senate Armed Services Committee hearing and urged the Senate to proceed to a full confirmation vote, stating he would not withdraw the nomination while the process proceeds unless new disqualifying information emerges."
+                },
+                {
+                  "action_id": "action_1_agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "status": "executed",
+                  "summary": "The Senate Armed Services Committee convened its scheduled January 14, 2025 hearing on the Hegseth nomination, taking members' questions and public testimony on the record, without committing in advance to a recommendation to the full Senate."
+                },
+                {
+                  "action_id": "action_1_agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_6f9cb8423b33523d",
+                    "action_1_agent_d53214b4fc705af9"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Donald Trump publicly reaffirmed that Pete Hegseth remains his nominee for Secretary of Defense"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d53214b4fc705af9",
+                    "action_1_agent_92c3c8b038ab5dad"
+                  ],
+                  "outcome": "pending",
+                  "effect": "The Senate Armed Services Committee convened its scheduled January 14, 2025 hearing on the Hegseth nomination"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "The Senate Armed Services Committee convened its scheduled January 14, 2025 hearing on the Hegseth nomination",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Donald Trump publicly reaffirmed that Pete Hegseth remains his nominee for Secretary of Defense ahead of the January 14 Senate Armed Services Committee hearing and urged the Senate to proceed to a full confirmation vote, stating he would not withdraw the nomination while the process proceeds unless new disqualifying information emerges.",
+                  "date": "2025-02"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "The Senate Armed Services Committee convened its scheduled January 14, 2025 hearing on the Hegseth nomination, taking members' questions and public testimony on the record, without committing in advance to a recommendation to the full Senate.",
+                  "date": "2025-01-14"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_6f9cb8423b33523d:supplement:1",
+                  "action": "Publicly reaffirm that Pete Hegseth remains my nominee for Secretary of Defense ahead of the January 14 Senate Armed Services Committee hearing, and urge the Senate to proceed to a full confirmation vote. No withdrawal; I back Hegseth through committee review and the Senate floor.\n承诺：Keep Hegseth as the nominee and press for Senate confirmation; will not withdraw the nomination while the process proceeds.\n触发或复核条件：Unless new disqualifying information emerges.",
+                  "p_selected": 0.56,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:supplement:1",
+                      "weight": 70.0,
+                      "probability": 0.56,
+                      "action": "Publicly reaffirm that Pete Hegseth remains my nominee for Secretary of Defense ahead of the January 14 Senate Armed Services Committee hearing, and urge the Senate to proceed to a full confirmation vote. No withdrawal; I back Hegseth through committee review and the Senate floor.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:1",
+                      "action": "Publicly reaffirm support for Pete Hegseth's nomination ahead of the January 14 Senate Armed Services Committee hearing, stating the nomination stands and urging the Senate to proceed to confirmation. No withdrawal; continue backing Hegseth through committee review and the full Senate vote.",
+                      "code": "program_rejected"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                  "action": "Proceed with the scheduled January 14, 2025 Armed Services Committee hearing on the Hegseth nomination, taking members' questions and public testimony on the record, without committing in advance to a recommendation to the full Senate.\n承诺：Conduct the scheduled hearing and review; no advance commitment on the committee's recommendation outcome.\n触发或复核条件：Nomination remains pending and not withdrawn.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Proceed with the scheduled January 14, 2025 Armed Services Committee hearing on the Hegseth nomination, taking members' questions and public testimony on the record, without committing in advance to a recommendation to the full Senate.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                  "action": "Hold the full Senate vote pending Armed Services Committee hearings and recommendation on the Hegseth nomination; no confirmation or rejection vote is taken in this round.\n触发或复核条件：Full Senate acts only after the nomination is presented following committee review.",
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "Hold the full Senate vote pending Armed Services Committee hearings and recommendation on the Hegseth nomination; no confirmation or rejection vote is taken in this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Announce that the full Senate will hold a confirmation vote on Pete Hegseth promptly after the Armed Services Committee completes its review, committing to a recorded majority vote rather than a recess appointment.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Trump's reaffirmation that Hegseth remains the nominee and the scheduled Jan 14 committee hearing indicate the process is proceeding toward a Senate vote. No confirmation or rejection has occurred yet, so the outcome remains open within the window.",
+                "evidence_quote": "Donald Trump publicly reaffirmed that Pete Hegseth remains his nominee for Secretary of Defense ahead of the January 14 Senate Armed Services Committee hearing and urged the Senate to proceed to a full confirmation vote",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-02-07",
+                "interval_end": "2025-03-08",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 57,
+                "interval_days": 29,
+                "interval_start_utc": "2025-02-07T00:00:00+00:00",
+                "interval_end_utc": "2025-03-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Trump's reaffirmation that Hegseth remains the nominee and the scheduled Jan 14 committee hearing indicate the process is proceeding toward a Senate vote. No confirmation or rejection has occurred yet, so the outcome remains open within the window.",
+                "evidence_quote": "Donald Trump publicly reaffirmed that Pete Hegseth remains his nominee for Secretary of Defense ahead of the January 14 Senate Armed Services Committee hearing and urged the Senate to proceed to a full confirmation vote",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-03-08",
+                "interval_end": "2025-04-06",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 86,
+                "interval_days": 29,
+                "interval_start_utc": "2025-03-08T00:00:00+00:00",
+                "interval_end_utc": "2025-04-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Trump's reaffirmation that Hegseth remains the nominee and the scheduled Jan 14 committee hearing indicate the process is proceeding toward a Senate vote. No confirmation or rejection has occurred yet, so the outcome remains open within the window.",
+                "evidence_quote": "Donald Trump publicly reaffirmed that Pete Hegseth remains his nominee for Secretary of Defense ahead of the January 14 Senate Armed Services Committee hearing and urged the Senate to proceed to a full confirmation vote",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-04-06",
+                "interval_end": "2025-05-04",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 114,
+                "interval_days": 28,
+                "interval_start_utc": "2025-04-06T00:00:00+00:00",
+                "interval_end_utc": "2025-05-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_6f9cb8423b33523d:initial:2",
+                  "action": "Take no new outward step this round; keep Hegseth as the nominee and monitor Senate scheduling and any committee recommendation, ready to act if a floor vote is set or the nomination is threatened.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reiterate that Pete Hegseth remains my nominee and call on the Senate to schedule and hold a full confirmation vote without further delay, restating that I will not withdraw the nomination while the process proceeds.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Take no new outward step this round; keep Hegseth as the nominee and monitor Senate scheduling and any committee recommendation, ready to act if a floor vote is set or the nomination is threatened.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "candidate_id": "agent_d53214b4fc705af9:initial:2",
+                  "action": "Take no new public step this round; the committee's hearing record stands and no recommendation is issued while members' positions remain unresolved.\n触发或复核条件：Review when new member positions, scheduling signals, or a Senate floor vote are evidenced.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly report that the Armed Services Committee has completed its review of the Hegseth nomination and transmit the nomination to the full Senate for a confirmation vote, without endorsing or opposing the nominee.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Take no new public step this round; the committee's hearing record stands and no recommendation is issued while members' positions remain unresolved.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                  "action": "Take no Senate floor action this round on the Hegseth nomination; the full Senate vote remains contingent on the Armed Services Committee completing its review and presenting the nomination.\n触发或复核条件：Committee reports the nomination or the hearing outcome becomes public.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no Senate floor action this round on the Hegseth nomination; the full Senate vote remains contingent on the Armed Services Committee completing its review and presenting the nomination.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publicly signal the Senate is prepared to proceed to a confirmation vote promptly once the Armed Services Committee presents the Hegseth nomination, without committing to an outcome.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Trump's reaffirmation that Hegseth remains the nominee and the scheduled Jan 14 committee hearing indicate the process is proceeding toward a Senate vote. No confirmation or rejection has occurred yet, so the outcome remains open within the window.",
+                "evidence_quote": "Donald Trump publicly reaffirmed that Pete Hegseth remains his nominee for Secretary of Defense ahead of the January 14 Senate Armed Services Committee hearing and urged the Senate to proceed to a full confirmation vote",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-05-04",
+                "interval_end": "2025-06-02",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 143,
+                "interval_days": 29,
+                "interval_start_utc": "2025-05-04T00:00:00+00:00",
+                "interval_end_utc": "2025-06-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Trump's reaffirmation that Hegseth remains the nominee and the scheduled Jan 14 committee hearing indicate the process is proceeding toward a Senate vote. No confirmation or rejection has occurred yet, so the outcome remains open within the window.",
+                "evidence_quote": "Donald Trump publicly reaffirmed that Pete Hegseth remains his nominee for Secretary of Defense ahead of the January 14 Senate Armed Services Committee hearing and urged the Senate to proceed to a full confirmation vote",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-06-02",
+                "interval_end": "2025-07-01",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 172,
+                "interval_days": 29,
+                "interval_start_utc": "2025-06-02T00:00:00+00:00",
+                "interval_end_utc": "2025-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.62,
+                "basis": "Trump's public reaffirmation that Hegseth remains the nominee and the committee hearing proceeding support eventual confirmation, but no Senate floor vote or confirmation is recorded by the horizon. The gap between committee review and full-Senate action leaves the outcome unverified.",
+                "evidence_quote": "Donald Trump publicly reaffirmed that Pete Hegseth remains his nominee for Secretary of Defense ahead of the January 14 Senate Armed Services Committee hearing and urged the Senate to proceed to a full confirmation vote, stating he would not withdraw the nomination while the process proceeds unless new disqualifying information emerges.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.62,
+          "error": null,
+          "action_path_probability": 0.034272000000000004
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-01-10",
+                "interval_end": "2025-02-07",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 28,
+                "interval_days": 28,
+                "interval_start_utc": "2025-01-10T23:59:59+00:00",
+                "interval_end_utc": "2025-02-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly reaffirmed support for Pete Hegseth's nomination and called on the Senate to confirm him, stating no intention to withdraw the nomination."
+                },
+                {
+                  "action_id": "action_1_agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "status": "executed",
+                  "summary": "Senate Armed Services Committee conducted the scheduled January 14, 2025 public hearing on Pete Hegseth's nomination and reported the nomination to the full Senate without a recommendation blocking the floor vote."
+                },
+                {
+                  "action_id": "action_1_agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d53214b4fc705af9",
+                    "action_1_agent_92c3c8b038ab5dad"
+                  ],
+                  "outcome": "pending",
+                  "effect": "reported the nomination to the full Senate without a recommendation blocking the floor vote"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_6f9cb8423b33523d",
+                    "action_1_agent_d53214b4fc705af9"
+                  ],
+                  "outcome": "realized",
+                  "effect": "stating no intention to withdraw the nomination"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "reported the nomination to the full Senate without a recommendation blocking the floor vote",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Donald Trump publicly reaffirmed support for Pete Hegseth's nomination and called on the Senate to confirm him, stating no intention to withdraw the nomination.",
+                  "date": "2025-02"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Senate Armed Services Committee conducted the scheduled January 14, 2025 public hearing on Pete Hegseth's nomination and reported the nomination to the full Senate without a recommendation blocking the floor vote.",
+                  "date": "2025-01-14"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_6f9cb8423b33523d:initial:1",
+                  "action": "Publicly reaffirm support for Pete Hegseth's nomination and call on the Senate to confirm him, stating no intention to withdraw the nomination.\n承诺：Nomination remains active; no withdrawal.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm support for Pete Hegseth's nomination and call on the Senate to confirm him, stating no intention to withdraw the nomination.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Keep the nomination in place and let the Senate Armed Services Committee process proceed without new presidential statement this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "candidate_id": "agent_d53214b4fc705af9:supplement:1",
+                  "action": "Conduct the scheduled January 14, 2025 public hearing on Pete Hegseth's nomination, question the nominee on qualifications, the public allegations and defense policy, then report the nomination to the full Senate without a recommendation blocking the floor vote.\n承诺：Hold the January 14 hearing and advance the nomination to the full Senate for its vote.\n触发或复核条件：Hearing proceeds as scheduled and a majority of the committee supports reporting the nomination.",
+                  "p_selected": 0.5,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.17857142857142858,
+                      "action": "Take no new outward step this round; monitor the January 14 hearing and members' positions before deciding whether to report the nomination.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:supplement:1",
+                      "weight": 70.0,
+                      "probability": 0.5,
+                      "action": "Conduct the scheduled January 14, 2025 public hearing on Pete Hegseth's nomination, question the nominee on qualifications, the public allegations and defense policy, then report the nomination to the full Senate without a recommendation blocking the floor vote.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:supplement:2",
+                      "weight": 45.0,
+                      "probability": 0.32142857142857145,
+                      "action": "Issue a public statement confirming the committee will hold the January 14 hearing as scheduled and inviting members to submit questions in advance, without committing to a recommendation outcome.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                      "action": "Conduct the scheduled January 14, 2025 public hearing on Pete Hegseth's nomination, question the nominee on qualifications, allegations and defense policy, then report the nomination to the full Senate without a recommendation blocking the floor vote.",
+                      "code": "program_rejected"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "candidate_id": "agent_92c3c8b038ab5dad:initial:2",
+                  "action": "Maintain no public position on the Hegseth nomination this round; no statement, endorsement, or rejection is issued while committee review is pending.\n触发或复核条件：Reassess when the Armed Services Committee reports or the nomination is withdrawn.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no Senate floor action this round; the full Senate vote on Hegseth's nomination must follow Armed Services Committee hearings, with Hegseth scheduled to appear January 14, 2025.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Maintain no public position on the Hegseth nomination this round; no statement, endorsement, or rejection is issued while committee review is pending.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The nomination advanced past committee review toward a full Senate vote, and Trump reaffirmed support with no withdrawal. Senate confirmation remains the required step; committee reporting without a blocking recommendation raises but does not establish that outcome.",
+                "evidence_quote": "Senate Armed Services Committee conducted the scheduled January 14, 2025 public hearing on Pete Hegseth's nomination and reported the nomination to the full Senate without a recommendation blocking the floor vote.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0002_001_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-02-07",
+                "interval_end": "2025-03-08",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 57,
+                "interval_days": 29,
+                "interval_start_utc": "2025-02-07T00:00:00+00:00",
+                "interval_end_utc": "2025-03-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The nomination advanced past committee review toward a full Senate vote, and Trump reaffirmed support with no withdrawal. Senate confirmation remains the required step; committee reporting without a blocking recommendation raises but does not establish that outcome.",
+                "evidence_quote": "Senate Armed Services Committee conducted the scheduled January 14, 2025 public hearing on Pete Hegseth's nomination and reported the nomination to the full Senate without a recommendation blocking the floor vote.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0002_001_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-03-08",
+                "interval_end": "2025-04-06",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 86,
+                "interval_days": 29,
+                "interval_start_utc": "2025-03-08T00:00:00+00:00",
+                "interval_end_utc": "2025-04-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "The nomination advanced past committee review toward a full Senate vote, and Trump reaffirmed support with no withdrawal. Senate confirmation remains the required step; committee reporting without a blocking recommendation raises but does not establish that outcome.",
+                "evidence_quote": "Senate Armed Services Committee conducted the scheduled January 14, 2025 public hearing on Pete Hegseth's nomination and reported the nomination to the full Senate without a recommendation blocking the floor vote.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0002_001_002",
+                "estimate_kind": null
+              }
+            }
+          ],
+          "branches": [],
+          "status": "failed",
+          "p_yes": null,
+          "error": "ValueError: Execution quote must identify its registered subject at the start of the quoted action",
+          "action_path_probability": 0.105
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 9,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 6,
+        "sampled_decisions": 9,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 2,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 0.5,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 6,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 4,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": false,
+            "outcome_observed": false,
+            "conditional_only": false
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": null,
+      "covered_p_yes": 0.62,
+      "coverage": 0.5,
+      "unknown_bounds": [
+        0.31,
+        0.81
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 1,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": true,
+      "status": "partial",
+      "error": "ValueError: Execution quote must identify its registered subject at the start of the quoted action",
+      "planned_samples": 2,
+      "simulation_run_id": "c4d67df3-ac33-4a1c-bbd8-fc71dfa0bf12",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:35:36.609430+00:00",
+      "contract_id": "0x3b40221adf21a481d1eb3c84bd52e828384fe2558a9889afa86068874f84f7b8",
+      "forecast_cutoff": "2025-01-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "051e5f6a366c1c1c755814ef907fe2acc00e9d878e4cc9f92dd343f03825daf2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 100.987
+    },
+    {
+      "calls": 42,
+      "tokens": 383971,
+      "input_tokens": 366532,
+      "output_tokens": 17439,
+      "accounted_tokens_upper": 383971,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-01-10",
+                "interval_end": "2025-02-07",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 28,
+                "interval_days": 28,
+                "interval_start_utc": "2025-01-10T23:59:59+00:00",
+                "interval_end_utc": "2025-02-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "status": "executed",
+                  "summary": "The Senate Armed Services Committee proceeded with its scheduled public hearing on the Hegseth nomination, with members questioning the nominee on qualifications, management experience, and the publicly reported allegations, and committed to reporting the nomination to the full Senate for its decision without prejudging the outcome."
+                },
+                {
+                  "action_id": "action_1_agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "committed to reporting the nomination to the full Senate for its decision without prejudging the outcome",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Senate Armed Services Committee proceeded with its scheduled public hearing on the Hegseth nomination, with members questioning the nominee on qualifications, management experience, and the publicly reported allegations, and committed to reporting the nomination to the full Senate for its decision without prejudging the outcome.",
+                  "date": "2025-01-14"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_6f9cb8423b33523d:initial:2",
+                  "action": "Hold current position without new outward act; monitor the January 14 Armed Services Committee hearing and Senate developments.",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Publicly reaffirm support for Pete Hegseth's nomination ahead of the January 14 Senate Armed Services Committee hearing, urging the Senate to confirm him promptly.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Hold current position without new outward act; monitor the January 14 Armed Services Committee hearing and Senate developments.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                  "action": "Proceed with the scheduled January 14, 2025 public hearing on the Hegseth nomination, with members questioning the nominee on qualifications, management experience, and the publicly reported allegations, then advance the nomination to the full Senate for a vote without prejudging the outcome.\n承诺：Hold the hearing as scheduled and report the nomination to the full Senate for its decision.\n触发或复核条件：Hearing proceeds on January 14, 2025 as reported.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Proceed with the scheduled January 14, 2025 public hearing on the Hegseth nomination, with members questioning the nominee on qualifications, management experience, and the publicly reported allegations, then advance the nomination to the full Senate for a vote without prejudging the outcome.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                  "action": "Take no Senate floor action this round; await the Armed Services Committee hearing and referral of the Hegseth nomination before scheduling any confirmation or rejection vote.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no Senate floor action this round; await the Armed Services Committee hearing and referral of the Hegseth nomination before scheduling any confirmation or rejection vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "As of the forecast cutoff, Hegseth was the announced nominee with a scheduled Jan 14 Armed Services hearing, but no Senate confirmation vote had occurred. Confirmation requires a full Senate vote before the deadline; the hearing is a step, not the outcome.",
+                "evidence_quote": "He is scheduled to appear before the Senate Armed Services Committee on January 14, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-02-07",
+                "interval_end": "2025-03-08",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 57,
+                "interval_days": 29,
+                "interval_start_utc": "2025-02-07T00:00:00+00:00",
+                "interval_end_utc": "2025-03-08T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "As of the forecast cutoff, Hegseth was the announced nominee with a scheduled Jan 14 Armed Services hearing, but no Senate confirmation vote had occurred. Confirmation requires a full Senate vote before the deadline; the hearing is a step, not the outcome.",
+                "evidence_quote": "He is scheduled to appear before the Senate Armed Services Committee on January 14, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-03-08",
+                "interval_end": "2025-04-06",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 86,
+                "interval_days": 29,
+                "interval_start_utc": "2025-03-08T00:00:00+00:00",
+                "interval_end_utc": "2025-04-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "As of the forecast cutoff, Hegseth was the announced nominee with a scheduled Jan 14 Armed Services hearing, but no Senate confirmation vote had occurred. Confirmation requires a full Senate vote before the deadline; the hearing is a step, not the outcome.",
+                "evidence_quote": "He is scheduled to appear before the Senate Armed Services Committee on January 14, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-04-06",
+                "interval_end": "2025-05-04",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 114,
+                "interval_days": 28,
+                "interval_start_utc": "2025-04-06T00:00:00+00:00",
+                "interval_end_utc": "2025-05-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_6f9cb8423b33523d:supplement:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm support for Pete Hegseth's nomination and urge the full Senate to confirm him promptly, framing him as the designee for Secretary of Defense.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:2",
+                      "action": "Hold current position without a new outward act; keep the nomination in place and monitor Senate floor scheduling and vote signals.",
+                      "code": "program_rejected"
+                    },
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:supplement:1",
+                      "action": "Publicly reaffirm support for Pete Hegseth's nomination and urge the full Senate to confirm him promptly, framing him as the designee for Secretary of Defense.",
+                      "code": "duplicate"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                  "action": "Take no new public action this round; the committee's review step is already discharged by the January 14 hearing and the nomination has been reported to the full Senate, where the confirmation decision now sits.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Take no new public action this round; the committee's review step is already discharged by the January 14 hearing and the nomination has been reported to the full Senate, where the confirmation decision now sits.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                  "action": "Hold no Senate floor vote this round; await presentation of the Hegseth nomination following Armed Services Committee review before scheduling a confirmation or rejection vote.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Hold no Senate floor vote this round; await presentation of the Hegseth nomination following Armed Services Committee review before scheduling a confirmation or rejection vote.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly request that the Armed Services Committee formally report the Hegseth nomination to the full Senate so the chamber can schedule a confirmation vote, without committing to a vote outcome.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "As of the forecast cutoff, Hegseth was the announced nominee with a scheduled Jan 14 Armed Services hearing, but no Senate confirmation vote had occurred. Confirmation requires a full Senate vote before the deadline; the hearing is a step, not the outcome.",
+                "evidence_quote": "He is scheduled to appear before the Senate Armed Services Committee on January 14, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-05-04",
+                "interval_end": "2025-06-02",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 143,
+                "interval_days": 29,
+                "interval_start_utc": "2025-05-04T00:00:00+00:00",
+                "interval_end_utc": "2025-06-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "As of the forecast cutoff, Hegseth was the announced nominee with a scheduled Jan 14 Armed Services hearing, but no Senate confirmation vote had occurred. Confirmation requires a full Senate vote before the deadline; the hearing is a step, not the outcome.",
+                "evidence_quote": "He is scheduled to appear before the Senate Armed Services Committee on January 14, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2025-06-02",
+                "interval_end": "2025-07-01",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 172,
+                "interval_days": 29,
+                "interval_start_utc": "2025-06-02T00:00:00+00:00",
+                "interval_end_utc": "2025-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Hegseth was formally nominated and the Armed Services Committee held its scheduled hearing, committing to report the nomination to the full Senate without prejudging the outcome. No confirmation vote or withdrawal is recorded by the horizon, so Senate approval remains the key unverified step.",
+                "evidence_quote": "The Senate Armed Services Committee proceeded with its scheduled public hearing on the Hegseth nomination, with members questioning the nominee on qualifications, management experience, and the publicly reported allegations, and committed to reporting the nomination to the full Senate for its decision without prejudging the outcome.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.051200000000000016
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 6,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 6,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 4,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.72,
+      "covered_p_yes": 0.72,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.72,
+        0.72
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "f9864dec-3706-4cd5-9b68-af095948fed0",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T00:58:56.194341+00:00",
+      "contract_id": "0x3b40221adf21a481d1eb3c84bd52e828384fe2558a9889afa86068874f84f7b8",
+      "forecast_cutoff": "2025-01-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "051e5f6a366c1c1c755814ef907fe2acc00e9d878e4cc9f92dd343f03825daf2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 98.702
+    },
+    {
+      "calls": 24,
+      "tokens": 214164,
+      "input_tokens": 201545,
+      "output_tokens": 12619,
+      "accounted_tokens_upper": 214164,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-01-10",
+                "interval_end": "2025-07-01",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 172,
+                "interval_days": 172,
+                "interval_start_utc": "2025-01-10T23:59:59+00:00",
+                "interval_end_utc": "2025-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly reaffirmed support for Pete Hegseth's nomination ahead of the January 14 Senate Armed Services Committee hearing and urged the Senate to confirm him, committing to continue backing Hegseth through committee review and a floor vote."
+                },
+                {
+                  "action_id": "action_1_agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "status": "executed",
+                  "summary": "The Senate Armed Services Committee convened its scheduled January 14, 2025 public hearing on the Hegseth nomination, took testimony, and reported the nomination to the full Senate without a binding endorsement or rejection."
+                },
+                {
+                  "action_id": "action_1_agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d53214b4fc705af9",
+                    "action_1_agent_92c3c8b038ab5dad"
+                  ],
+                  "outcome": "realized",
+                  "effect": "reported the nomination to the full Senate without a binding endorsement or rejection"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_6f9cb8423b33523d",
+                    "action_1_agent_92c3c8b038ab5dad"
+                  ],
+                  "outcome": "pending",
+                  "effect": "urged the Senate to confirm him"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "reported the nomination to the full Senate without a binding endorsement or rejection",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Donald Trump publicly reaffirmed support for Pete Hegseth's nomination ahead of the January 14 Senate Armed Services Committee hearing and urged the Senate to confirm him, committing to continue backing Hegseth through committee review and a floor vote.",
+                  "date": "2025-01-10"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "The Senate Armed Services Committee convened its scheduled January 14, 2025 public hearing on the Hegseth nomination, took testimony, and reported the nomination to the full Senate without a binding endorsement or rejection.",
+                  "date": "2025-01-14"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_6f9cb8423b33523d:initial:2",
+                  "action": "Publicly reaffirm support for Pete Hegseth's nomination ahead of the January 14 Senate Armed Services Committee hearing, urging the Senate to confirm him.\n承诺：Continue backing Hegseth through committee review and a floor vote.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Keep the Hegseth nomination in place and let the Senate Armed Services Committee hearing proceed as scheduled; issue no withdrawal and no new public statement this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm support for Pete Hegseth's nomination ahead of the January 14 Senate Armed Services Committee hearing, urging the Senate to confirm him.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                  "action": "Convene the scheduled January 14, 2025 public hearing on the Hegseth nomination, take testimony, and then report the nomination to the full Senate without a binding endorsement or rejection commitment at this stage.\n承诺：Hold the hearing and transmit the nomination to the full Senate for its vote.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Convene the scheduled January 14, 2025 public hearing on the Hegseth nomination, take testimony, and then report the nomination to the full Senate without a binding endorsement or rejection commitment at this stage.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                  "action": "The full Senate takes no vote this round; it waits for the Armed Services Committee hearing scheduled for 2025-01-14 and for the nomination to be presented to the floor before acting on confirmation or rejection.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "The full Senate takes no vote this round; it waits for the Armed Services Committee hearing scheduled for 2025-01-14 and for the nomination to be presented to the floor before acting on confirmation or rejection.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:supplement:1",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "The full Senate takes no floor vote this round; it awaits the Armed Services Committee hearing scheduled for 2025-01-14 and presentation of the Hegseth nomination to the floor before acting on confirmation or rejection.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:2",
+                      "action": "The full Senate proceeds to a confirmation vote on Pete Hegseth as Secretary of Defense, requiring a majority for confirmation.",
+                      "code": "model_rejected"
+                    },
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:3",
+                      "action": "The full Senate votes to reject the Hegseth nomination, which would resolve the contract No.",
+                      "code": "model_rejected"
+                    }
+                  ],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Trump's public reaffirmation and the committee's reporting of the nomination to the full Senate (without rejection) are the latest settled developments, both consistent with eventual confirmation. No floor vote or final confirmation is recorded, so the outcome remains unverified and the estimate rests on pre-vote momentum.",
+                "evidence_quote": "The Senate Armed Services Committee convened its scheduled January 14, 2025 public hearing on the Hegseth nomination, took testimony, and reported the nomination to the full Senate without a binding endorsement or rejection.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.16799999999999998
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-01-10",
+                "interval_end": "2025-07-01",
+                "horizon_end": "2025-07-01",
+                "elapsed_days": 172,
+                "interval_days": 172,
+                "interval_start_utc": "2025-01-10T23:59:59+00:00",
+                "interval_end_utc": "2025-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly reaffirmed support for Pete Hegseth's nomination and pressed the Senate to proceed, stating he had no intention of withdrawing the nomination and expected a confirmation vote, unless new disqualifying information emerged."
+                },
+                {
+                  "action_id": "action_1_agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "status": "executed",
+                  "summary": "The Senate Armed Services Committee announced it would proceed with the scheduled January 14, 2025 public hearing on the Hegseth nomination, with members questioning the nominee on qualifications, allegations, and defense priorities, and would advance the nomination to the full Senate without prejudging its recommendation."
+                },
+                {
+                  "action_id": "action_1_agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "status": "executed",
+                  "summary": "The U.S. Senate publicly stated it would follow regular order on the Hegseth nomination: committee hearings first, then a full floor vote, without prejudging the outcome."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_6f9cb8423b33523d",
+                    "action_1_agent_d53214b4fc705af9"
+                  ],
+                  "outcome": "realized",
+                  "effect": "no intention of withdrawing the nomination"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d53214b4fc705af9",
+                    "action_1_agent_92c3c8b038ab5dad"
+                  ],
+                  "outcome": "pending",
+                  "effect": "committee hearings first, then a full floor vote"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth confirmed as Secretary of Defense?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "committee hearings first, then a full floor vote",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Donald Trump publicly reaffirmed support for Pete Hegseth's nomination and pressed the Senate to proceed, stating he had no intention of withdrawing the nomination and expected a confirmation vote, unless new disqualifying information emerged.",
+                  "date": "2025-07"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "The Senate Armed Services Committee announced it would proceed with the scheduled January 14, 2025 public hearing on the Hegseth nomination, with members questioning the nominee on qualifications, allegations, and defense priorities, and would advance the nomination to the full Senate without prejudging its recommendation.",
+                  "date": "2025-07"
+                },
+                {
+                  "id": "sim_0002_001_003",
+                  "text": "The U.S. Senate publicly stated it would follow regular order on the Hegseth nomination: committee hearings first, then a full floor vote, without prejudging the outcome.",
+                  "date": "2025-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_6f9cb8423b33523d",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_6f9cb8423b33523d:initial:1",
+                  "action": "As President-elect, publicly reaffirm support for Pete Hegseth's nomination and press the Senate to proceed, stating I have no intention of withdrawing the nomination and expect a confirmation vote.\n承诺：Will not withdraw the Hegseth nomination while it remains pending.\n触发或复核条件：Unless new disqualifying information emerges.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As President-elect, publicly reaffirm support for Pete Hegseth's nomination and press the Senate to proceed, stating I have no intention of withdrawing the nomination and expect a confirmation vote.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_6f9cb8423b33523d:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Take no new public step on the Hegseth nomination this round; allow the scheduled January 14 Armed Services Committee hearing to proceed without added pressure or withdrawal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d53214b4fc705af9",
+                  "actor_name": "Senate Armed Services Committee",
+                  "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                  "action": "Proceed with the scheduled January 14, 2025 public hearing on the Hegseth nomination, with members questioning the nominee on qualifications, allegations, and defense priorities, then advance the nomination to the full Senate without prejudging the recommendation.\n承诺：Hold the January 14 hearing and report the nomination to the full Senate for a vote.\n触发或复核条件：Nomination remains pending and not withdrawn before the hearing.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d53214b4fc705af9:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Proceed with the scheduled January 14, 2025 public hearing on the Hegseth nomination, with members questioning the nominee on qualifications, allegations, and defense priorities, then advance the nomination to the full Senate without prejudging the recommendation.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_92c3c8b038ab5dad",
+                  "actor_name": "U.S. Senate",
+                  "candidate_id": "agent_92c3c8b038ab5dad:initial:2",
+                  "action": "Publicly state that the Senate will follow regular order: committee hearings first, then a full floor vote on the Hegseth nomination, without prejudging the outcome.",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no Senate floor action this round; await the Armed Services Committee's hearing and referral of the Hegseth nomination before scheduling a confirmation vote.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_92c3c8b038ab5dad:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly state that the Senate will follow regular order: committee hearings first, then a full floor vote on the Hegseth nomination, without prejudging the outcome.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Trump reaffirmed support and ruled out withdrawal; the Senate committed to regular order with a January 14 hearing, keeping confirmation on track before the June 30 deadline. No floor vote or final confirmation is recorded, so the outcome remains unverified.",
+                "evidence_quote": "Donald Trump publicly reaffirmed support for Pete Hegseth's nomination and pressed the Senate to proceed, stating he had no intention of withdrawing the nomination and expected a confirmation vote, unless new disqualifying information emerged.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.09799999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 5,
+        "substantive_public_event_count": 5,
+        "state_change_count": 1,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.72,
+      "covered_p_yes": 0.72,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.72,
+        0.72
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "4e5edcb3-405c-4491-bd4a-90f1257da8c0",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T00:59:32.681823+00:00",
+      "contract_id": "0x3b40221adf21a481d1eb3c84bd52e828384fe2558a9889afa86068874f84f7b8",
+      "forecast_cutoff": "2025-01-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "051e5f6a366c1c1c755814ef907fe2acc00e9d878e4cc9f92dd343f03825daf2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 36.486
+    },
+    {
+      "calls": 141,
+      "tokens": 1482693,
+      "input_tokens": 1389655,
+      "output_tokens": 93038,
+      "accounted_tokens_upper": 1482693,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.63328385,
+      "coverage": 0.41789999999999994,
+      "unexplored_mass": 0.5821000000000001,
+      "unknown_bounds": [
+        0.3422338499999999,
+        0.92433385
+      ],
+      "search_iterations": 12,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 12,
+          "search_value": 0.4002126666666667,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.36749999999999994,
+          "visits": 10,
+          "search_value": 0.37809079999999995,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.2572499999999999,
+          "visits": 5,
+          "search_value": 0.2668368,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.18007499999999993,
+          "visits": 2,
+          "search_value": 0.0,
+          "conditional_p_yes": 0.85,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.16206749999999995,
+          "visits": 1,
+          "search_value": 0.0,
+          "conditional_p_yes": 1.0,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.13775737499999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 1.0,
+          "frontier": true,
+          "contribution": 0.13775737499999996
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.02431012499999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 1.0,
+          "frontier": true,
+          "contribution": 0.02431012499999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.018007499999999992,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 1.0,
+          "frontier": true,
+          "contribution": 0.018007499999999992
+        },
+        {
+          "path": [
+            1,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.07717499999999998,
+          "visits": 2,
+          "search_value": 0.34459199999999995,
+          "conditional_p_yes": 0.6,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.043217999999999986,
+          "visits": 1,
+          "search_value": 0.0,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.043217999999999986,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 1.0,
+          "frontier": true,
+          "contribution": 0.043217999999999986
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.018521999999999993,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.010187099999999998
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.015435,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.11024999999999997,
+          "visits": 4,
+          "search_value": 0.39631099999999997,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.06063749999999999,
+          "visits": 3,
+          "search_value": 0.2559146666666667,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.033956999999999994,
+          "visits": 2,
+          "search_value": 0.0,
+          "conditional_p_yes": 0.62,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.033956999999999994,
+          "visits": 1,
+          "search_value": 0.0,
+          "conditional_p_yes": 1.0,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.033956999999999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 1.0,
+          "frontier": true,
+          "contribution": 0.033956999999999994
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.014552999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.5,
+          "frontier": true,
+          "contribution": 0.007276499999999998
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.012127500000000003,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.03307499999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.35,
+          "frontier": true,
+          "contribution": 0.011576249999999996
+        },
+        {
+          "path": [
+            1,
+            2,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.016537499999999986,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.15749999999999997,
+          "visits": 1,
+          "search_value": 0.576864,
+          "conditional_p_yes": 0.62,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.056699999999999987,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.62,
+          "frontier": true,
+          "contribution": 0.03515399999999999
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.03779999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.02079
+        },
+        {
+          "path": [
+            2,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.06299999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.4750000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "c97c3192-96c0-473d-8ac4-ceccac44664e",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:06:51.850909+00:00",
+      "contract_id": "0x3b40221adf21a481d1eb3c84bd52e828384fe2558a9889afa86068874f84f7b8",
+      "forecast_cutoff": "2025-01-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "051e5f6a366c1c1c755814ef907fe2acc00e9d878e4cc9f92dd343f03825daf2",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 439.393
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-01-10T23:59:59+00:00",
+  "forecast_key": "0x3b40221adf21a481d1eb3c84bd52e828384fe2558a9889afa86068874f84f7b8",
+  "group_id": "which-trump-picks-will-be-confirmed",
+  "evidence_sha256": "051e5f6a366c1c1c755814ef907fe2acc00e9d878e4cc9f92dd343f03825daf2",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 795,
+    "input_tokens": 626,
+    "output_tokens": 169,
+    "accounted_tokens_upper": 795,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-01-10",
+        "2025-07-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2025-01-10",
+        "2025-02-07",
+        "2025-03-08",
+        "2025-04-06",
+        "2025-05-04",
+        "2025-06-02",
+        "2025-07-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2025-01-10",
+        "2025-02-07",
+        "2025-03-08",
+        "2025-04-06",
+        "2025-05-04",
+        "2025-06-02",
+        "2025-07-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-01-10",
+        "2025-07-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2025-01-10",
+        "2025-02-07",
+        "2025-03-08",
+        "2025-04-06",
+        "2025-05-04",
+        "2025-06-02",
+        "2025-07-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-07-01T03:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-06-30T12:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2,
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_7e812f24215b924b",
+          "name": "Donald Trump",
+          "role": "President-elect who announced intention to nominate Pete Hegseth for Secretary of Defense; retains power to withdraw the nomination.",
+          "decision_ids": [
+            "nomination_withdrawal"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_0b05010707b76759",
+          "name": "U.S. Senate",
+          "role": "Full Senate that must confirm the nominee by majority vote; also may reject the nomination.",
+          "decision_ids": [
+            "senate_confirmation",
+            "senate_rejection"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_c3e1fd2edc520ce9",
+          "name": "Senate Armed Services Committee",
+          "role": "Reviews the Secretary of Defense nomination in hearings before presenting it to the full Senate.",
+          "decision_ids": [
+            "committee_review"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Current authority for Senate Armed Services Committee conducts hearings and reviews the nomination. requires independent evidence; Senate Armed Services Committee can participate conditionally."
+      ],
+      "gaps": [
+        "No source identifies a specific date for the Senate confirmation vote or the committee vote.",
+        "The President-elect's formal nomination submission is not explicitly described in the sources; only the announcement of intent is cited."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "nomination_withdrawal",
+          "choice": "President-elect Trump decides whether to formally withdraw Hegseth's nomination.",
+          "owner": "Donald Trump",
+          "support": "represented"
+        },
+        {
+          "id": "committee_review",
+          "choice": "Senate Armed Services Committee conducts hearings and reviews the nomination.",
+          "owner": "Senate Armed Services Committee",
+          "support": "conditional"
+        },
+        {
+          "id": "senate_confirmation",
+          "choice": "Full Senate votes to confirm Pete Hegseth as Secretary of Defense.",
+          "owner": "U.S. Senate",
+          "support": "represented"
+        },
+        {
+          "id": "senate_rejection",
+          "choice": "Full Senate votes to reject the nomination, which would resolve the market No.",
+          "owner": "U.S. Senate",
+          "support": "represented"
+        }
+      ],
+      "gap_repair": {
+        "status": "participants_added",
+        "added": 1
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 27,
+    "tokens": 64446,
+    "input_tokens": 58751,
+    "output_tokens": 5695,
+    "accounted_tokens_upper": 64446,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

@@ -1,0 +1,3027 @@
+{
+  "run_id": "b5b3c1e4-72d2-4e12-847c-6b9dc4985771",
+  "case_id": "market_2e6bdb08288f29fff2071fba",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2804,
+      "input_tokens": 2794,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2804,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.12,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.12,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2794,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:24:58.506200+00:00",
+      "contract_id": "0x780eda657742337ca48284a55e7f2103d35484f16e05c49271cf1ed4e8cac89c",
+      "forecast_cutoff": "2026-05-10T00:07:31+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "215209c0ce24b8e21294136e012d32ef87af8362fea072abf638b007c7247c6c",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.712
+    },
+    {
+      "calls": 2,
+      "tokens": 5608,
+      "input_tokens": 5588,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5608,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2794,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2794,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:25:00.106739+00:00",
+      "contract_id": "0x780eda657742337ca48284a55e7f2103d35484f16e05c49271cf1ed4e8cac89c",
+      "forecast_cutoff": "2026-05-10T00:07:31+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "215209c0ce24b8e21294136e012d32ef87af8362fea072abf638b007c7247c6c",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.599
+    },
+    {
+      "calls": 11,
+      "tokens": 129032,
+      "input_tokens": 123001,
+      "output_tokens": 6031,
+      "accounted_tokens_upper": 129032,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-05-10",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 205,
+                "interval_days": 205,
+                "interval_start_utc": "2026-05-10T00:07:31+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn launched a runoff campaign aimed at Texas Republican runoff voters ahead of the May 26, 2026 runoff, emphasizing his 42% first-round showing and contrasting his record with Ken Paxton's legal troubles and 2023 impeachment."
+                },
+                {
+                  "action_id": "action_1_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton launched a public runoff campaign message to Texas Republican runoff voters contrasting Cornyn's record on Ukraine aid, the DREAM Act and the bipartisan gun bill as insufficiently conservative, framing the runoff as a choice between a fighter and the establishment incumbent."
+                },
+                {
+                  "action_id": "action_1_agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_4d6a795788bb5d30",
+                    "action_1_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Ken Paxton launched a public runoff campaign message to Texas Republican runoff voters contrasting Cornyn's record"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_4d6a795788bb5d30",
+                    "action_1_agent_0c4a9d6c361f514b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "John Cornyn launched a runoff campaign aimed at Texas Republican runoff voters ahead of the May 26, 2026 runoff"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "John Cornyn launched a runoff campaign aimed at Texas Republican runoff voters ahead of the May 26, 2026 runoff",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "John Cornyn launched a runoff campaign aimed at Texas Republican runoff voters ahead of the May 26, 2026 runoff, emphasizing his 42% first-round showing and contrasting his record with Ken Paxton's legal troubles and 2023 impeachment.",
+                  "date": "2026-05-10"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Ken Paxton launched a public runoff campaign message to Texas Republican runoff voters contrasting Cornyn's record on Ukraine aid, the DREAM Act and the bipartisan gun bill as insufficiently conservative, framing the runoff as a choice between a fighter and the establishment incumbent.",
+                  "date": "2026-05-10"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                  "action": "Launch a runoff campaign targeting Republican runoff voters in Texas ahead of the May 26, 2026 runoff, emphasizing Cornyn's 42% first-round showing and contrasting his record with Paxton's legal troubles and 2023 impeachment.\n承诺：Campaign through the May 26 runoff to maximize Cornyn's vote share.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch a runoff campaign targeting Republican runoff voters in Texas ahead of the May 26, 2026 runoff, emphasizing Cornyn's 42% first-round showing and contrasting his record with Paxton's legal troubles and 2023 impeachment.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Launch a public runoff campaign message to Texas Republican runoff voters contrasting Cornyn's record (Ukraine aid, DREAM Act, bipartisan gun bill) as insufficiently conservative, framing the runoff as a choice between a fighter and the establishment incumbent.\n承诺：Paxton will campaign through the May 26 runoff on this contrast message.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch a public runoff campaign message to Texas Republican runoff voters contrasting Cornyn's record (Ukraine aid, DREAM Act, bipartisan gun bill) as insufficiently conservative, framing the runoff as a choice between a fighter and the establishment incumbent.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly press Cornyn to answer for his record and urge runoff voters not to defer to Washington or a possible Trump endorsement, arguing the nomination should be decided on conservative credentials.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                  "action": "Texas Republican runoff voters take no collective public action this round; their decisive act is casting valid ballots in the May 26, 2026 runoff between Cornyn and Paxton, which determines the percentages and margin.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Texas Republican runoff voters take no collective public action this round; their decisive act is casting valid ballots in the May 26, 2026 runoff between Cornyn and Paxton, which determines the percentages and margin.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Only first-round data exists: Cornyn got 42% and no one cleared 50%, forcing a May 26 runoff. Campaign launches and expected Trump backing are signals, not vote counts; no runoff result or polling margin is in evidence, so a 9-point Cornyn win is plausible but unverified.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.48999999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "7b6b8a2d-43ec-4dfb-8818-89a4e4508d33",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:25:50.763353+00:00",
+      "contract_id": "0x780eda657742337ca48284a55e7f2103d35484f16e05c49271cf1ed4e8cac89c",
+      "forecast_cutoff": "2026-05-10T00:07:31+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "215209c0ce24b8e21294136e012d32ef87af8362fea072abf638b007c7247c6c",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 50.654
+    },
+    {
+      "calls": 106,
+      "tokens": 1217552,
+      "input_tokens": 1163969,
+      "output_tokens": 53583,
+      "accounted_tokens_upper": 1217552,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-05-10",
+                "interval_end": "2026-05-26",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 16,
+                "interval_start_utc": "2026-05-10T00:07:31+00:00",
+                "interval_end_utc": "2026-05-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn launched a runoff campaign push to Texas Republican runoff voters emphasizing his 42% first-round overperformance and drawing a contrast with Ken Paxton's legal troubles and 2023 impeachment, while courting the reported Trump endorsement."
+                },
+                {
+                  "action_id": "action_1_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton launched a runoff campaign message to Texas Republican runoff voters attacking Cornyn's record as insufficiently conservative on Ukraine aid, the DREAM Act and the bipartisan gun safety bill, demanding he answer for it before May 26."
+                },
+                {
+                  "action_id": "action_1_agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_4d6a795788bb5d30",
+                    "action_1_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Ken Paxton launched a runoff campaign message to Texas Republican runoff voters attacking Cornyn's record as insufficiently conservative"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_4d6a795788bb5d30",
+                    "action_1_agent_0c4a9d6c361f514b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "John Cornyn launched a runoff campaign push to Texas Republican runoff voters"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "John Cornyn launched a runoff campaign push to Texas Republican runoff voters",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "John Cornyn launched a runoff campaign push to Texas Republican runoff voters emphasizing his 42% first-round overperformance and drawing a contrast with Ken Paxton's legal troubles and 2023 impeachment, while courting the reported Trump endorsement.",
+                  "date": "2026-05"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Ken Paxton launched a runoff campaign message to Texas Republican runoff voters attacking Cornyn's record as insufficiently conservative on Ukraine aid, the DREAM Act and the bipartisan gun safety bill, demanding he answer for it before May 26.",
+                  "date": "2026-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                  "action": "Launch a runoff campaign push to Texas Republican runoff voters emphasizing my first-round overperformance (42%) and drawing a sharp contrast with Paxton's legal troubles and 2023 impeachment, while courting the reported Trump endorsement.\n承诺：Campaign through the May 26, 2026 runoff to maximize my vote share and margin.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch a runoff campaign push to Texas Republican runoff voters emphasizing my first-round overperformance (42%) and drawing a sharp contrast with Paxton's legal troubles and 2023 impeachment, while courting the reported Trump endorsement.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly welcome and solicit Donald Trump's endorsement in the runoff, framing my first-round strength as the reason for it.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Launch a runoff campaign message to Texas Republican runoff voters attacking Cornyn's record as insufficiently conservative — Ukraine aid, the DREAM Act, and the bipartisan gun safety bill — and demanding he answer for it before May 26.\n承诺：I will keep pressing this contrast through the May 26 runoff.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch a runoff campaign message to Texas Republican runoff voters attacking Cornyn's record as insufficiently conservative — Ukraine aid, the DREAM Act, and the bipartisan gun safety bill — and demanding he answer for it before May 26.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly call on Donald Trump to withhold any runoff endorsement until voters hear both candidates, framing a Cornyn endorsement as rewarding a senator who backed Ukraine aid and the gun bill.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                  "action": "Take no collective action this round; eligible Texas Republican runoff voters have no organized decision before the May 26, 2026 runoff, when valid ballots will determine the Cornyn–Paxton percentages and margin.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round; eligible Texas Republican runoff voters have no organized decision before the May 26, 2026 runoff, when valid ballots will determine the Cornyn–Paxton percentages and margin.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn overperformed in the March 3 primary (42%) and reportedly expects a Trump endorsement, but no runoff polling or results exist as of the May 10 cutoff. A 9-point runoff win over Paxton is plausible but far from established; the outcome depends on unobserved runoff voting.",
+                "evidence_quote": "On March 5, The Atlantic reported that Trump advisers expected the president to endorse Cornyn in the runoff election after his unexpectedly strong performance in the first round of voting.",
+                "change_driver": null,
+                "evidence_ref": "hist_6f6db16ca6855e77.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-05-26",
+                "interval_end": "2026-07-12",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 63,
+                "interval_days": 47,
+                "interval_start_utc": "2026-05-26T00:00:00+00:00",
+                "interval_end_utc": "2026-07-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn issued a targeted runoff message to Texas Republican runoff voters focused solely on Ken Paxton's legal troubles and 2023 impeachment, framing the runoff as a character and electability choice without new policy concessions."
+                },
+                {
+                  "action_id": "action_2_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton continued his runoff message to Texas Republican runoff voters, pressing John Cornyn to answer for his Ukraine aid, DREAM Act and gun safety votes and tying that record to the reported Trump endorsement question."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_2_agent_4d6a795788bb5d30",
+                    "action_2_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Ken Paxton continued his runoff message to Texas Republican runoff voters, pressing John Cornyn to answer for his Ukraine aid, DREAM Act and gun safety votes"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "John Cornyn issued a targeted runoff message to Texas Republican runoff voters focused solely on Ken Paxton's legal troubles and 2023 impeachment",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "John Cornyn issued a targeted runoff message to Texas Republican runoff voters focused solely on Ken Paxton's legal troubles and 2023 impeachment, framing the runoff as a character and electability choice without new policy concessions.",
+                  "date": "2026-07"
+                },
+                {
+                  "id": "sim_0001_002_002",
+                  "text": "Ken Paxton continued his runoff message to Texas Republican runoff voters, pressing John Cornyn to answer for his Ukraine aid, DREAM Act and gun safety votes and tying that record to the reported Trump endorsement question.",
+                  "date": "2026-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:2",
+                  "action": "Issue a targeted message to Texas Republican runoff voters focused solely on Paxton's legal troubles and 2023 impeachment, framing the runoff as a character and electability choice, without new policy concessions.\n承诺：Continue the character/electability contrast through May 26, 2026.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Run a runoff closing push to Texas Republican runoff voters: rebut Paxton's attacks on Ukraine aid, the DREAM Act and the gun bill with a conservative-record message, keep stressing my 42% first-round overperformance and Paxton's legal troubles, and publicly welcome the reported Trump endorsement.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a targeted message to Texas Republican runoff voters focused solely on Paxton's legal troubles and 2023 impeachment, framing the runoff as a character and electability choice, without new policy concessions.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Continue the runoff message to Texas Republican runoff voters, pressing Cornyn to answer for his Ukraine aid, DREAM Act and gun safety votes, and tying his record to the reported Trump endorsement question before May 26.\n承诺：I will keep pressing this contrast through the May 26 runoff.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Continue the runoff message to Texas Republican runoff voters, pressing Cornyn to answer for his Ukraine aid, DREAM Act and gun safety votes, and tying his record to the reported Trump endorsement question before May 26.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Send a direct challenge to John Cornyn demanding he publicly answer for his Ukraine aid, DREAM Act and bipartisan gun safety votes before May 26, and commit to a public response deadline.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-07-12",
+                "interval_end": "2026-08-28",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 110,
+                "interval_days": 47,
+                "interval_start_utc": "2026-07-12T00:00:00+00:00",
+                "interval_end_utc": "2026-08-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn issued a runoff message to Texas Republican runoff voters directly defending his Ukraine aid, DREAM Act and gun safety votes on national-security and border-security grounds, paired with the character and electability contrast on Ken Paxton's legal troubles and 2023 impeachment."
+                },
+                {
+                  "action_id": "action_3_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton continued his runoff message to Texas Republican runoff voters, pressing John Cornyn to answer for his Ukraine aid, DREAM Act and gun safety votes and tying that record to the unconfirmed reported Trump endorsement, framing the runoff as conservative conviction versus a Washington incumbent."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_3_agent_4d6a795788bb5d30",
+                    "action_3_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Ken Paxton continued his runoff message to Texas Republican runoff voters, pressing John Cornyn to answer for his Ukraine aid, DREAM Act and gun safety votes"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "John Cornyn issued a runoff message to Texas Republican runoff voters directly defending his Ukraine aid, DREAM Act and gun safety votes on national-security and border-security grounds",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "John Cornyn issued a runoff message to Texas Republican runoff voters directly defending his Ukraine aid, DREAM Act and gun safety votes on national-security and border-security grounds, paired with the character and electability contrast on Ken Paxton's legal troubles and 2023 impeachment.",
+                  "date": "2026-08"
+                },
+                {
+                  "id": "sim_0001_003_002",
+                  "text": "Ken Paxton continued his runoff message to Texas Republican runoff voters, pressing John Cornyn to answer for his Ukraine aid, DREAM Act and gun safety votes and tying that record to the unconfirmed reported Trump endorsement, framing the runoff as conservative conviction versus a Washington incumbent.",
+                  "date": "2026-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                  "action": "Issue a runoff message to Texas Republican runoff voters directly answering Paxton's attacks: defend my Ukraine aid, DREAM Act and gun safety votes on national-security and border-security grounds, and pair that with the character/electability contrast on Paxton's legal troubles and 2023 impeachment.\n承诺：Keep answering Paxton's record attacks through the May 26, 2026 runoff while pressing the character contrast.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a runoff message to Texas Republican runoff voters directly answering Paxton's attacks: defend my Ukraine aid, DREAM Act and gun safety votes on national-security and border-security grounds, and pair that with the character/electability contrast on Paxton's legal troubles and 2023 impeachment.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly welcome and seek a confirmed endorsement from Donald Trump, framing my 42% first-round overperformance as the reason, and urge supporters to consolidate behind me ahead of May 26.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Continue the runoff message to Texas Republican runoff voters, pressing Cornyn to answer for his Ukraine aid, DREAM Act and gun safety votes and tying that record to the unconfirmed reported Trump endorsement, framing the runoff as a choice between conservative conviction and a Washington incumbent.\n承诺：I will keep pressing this record contrast through the May 26 runoff.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Continue the runoff message to Texas Republican runoff voters, pressing Cornyn to answer for his Ukraine aid, DREAM Act and gun safety votes and tying that record to the unconfirmed reported Trump endorsement, framing the runoff as a choice between conservative conviction and a Washington incumbent.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Send a direct message to John Cornyn demanding he state publicly, before May 26, whether he welcomes the reported Trump endorsement and defend his Ukraine aid, DREAM Act and gun safety votes to Republican runoff voters.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-08-28",
+                "interval_end": "2026-10-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 157,
+                "interval_days": 47,
+                "interval_start_utc": "2026-08-28T00:00:00+00:00",
+                "interval_end_utc": "2026-10-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                  "action": "Take no organized collective action this round; the runoff vote has already occurred and the group's only structural role was casting valid ballots, so no further voter-group move is feasible before official results.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no organized collective action this round; the runoff vote has already occurred and the group's only structural role was casting valid ballots, so no further voter-group move is feasible before official results.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-10-14",
+                "interval_end": "2026-11-07",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 181,
+                "interval_days": 24,
+                "interval_start_utc": "2026-10-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No runoff result or polling margin exists yet; the only in-window facts are the March 3 primary runoff trigger and Cornyn's 42% first-round share. A 9-point runoff win remains a tail outcome given Paxton's competitive base and no settled vote count.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-11-07",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 205,
+                "interval_days": 24,
+                "interval_start_utc": "2026-11-07T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_6_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn issued a closing runoff message to Texas Republican runoff voters defending his Ukraine aid, DREAM Act and gun safety votes on national-security and border-security grounds, pressing the character and electability contrast on Ken Paxton's legal troubles and 2023 impeachment, and citing his 42% first-round overperformance, with no new policy concessions."
+                },
+                {
+                  "action_id": "action_6_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton continued his runoff message to Texas Republican runoff voters, pressing John Cornyn to specify what he concedes in his Ukraine aid, DREAM Act and gun safety votes now that he has defended them, and framing the runoff as conservative conviction versus a Washington incumbent."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_6_agent_4d6a795788bb5d30",
+                    "action_6_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Ken Paxton continued his runoff message to Texas Republican runoff voters, pressing John Cornyn to specify what he concedes in his Ukraine aid, DREAM Act and gun safety votes now that he has defended them"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "John Cornyn issued a closing runoff message to Texas Republican runoff voters defending his Ukraine aid, DREAM Act and gun safety votes on national-security and border-security grounds",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_006_001",
+                  "text": "John Cornyn issued a closing runoff message to Texas Republican runoff voters defending his Ukraine aid, DREAM Act and gun safety votes on national-security and border-security grounds, pressing the character and electability contrast on Ken Paxton's legal troubles and 2023 impeachment, and citing his 42% first-round overperformance, with no new policy concessions.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_006_002",
+                  "text": "Ken Paxton continued his runoff message to Texas Republican runoff voters, pressing John Cornyn to specify what he concedes in his Ukraine aid, DREAM Act and gun safety votes now that he has defended them, and framing the runoff as conservative conviction versus a Washington incumbent.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                  "action": "Issue a closing runoff message to Texas Republican runoff voters: defend my Ukraine aid, DREAM Act and gun safety votes on national-security and border-security grounds, press the character/electability contrast on Paxton's legal troubles and 2023 impeachment, and cite my 42% first-round overperformance. No new policy concessions.\n承诺：Keep this national-security defense and character contrast through the May 26, 2026 runoff.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a closing runoff message to Texas Republican runoff voters: defend my Ukraine aid, DREAM Act and gun safety votes on national-security and border-security grounds, press the character/electability contrast on Paxton's legal troubles and 2023 impeachment, and cite my 42% first-round overperformance. No new policy concessions.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly welcome and amplify the reported expectation that Trump will endorse me in the runoff, inviting the president to make it formal before May 26, 2026, while not claiming an endorsement that has not occurred.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Continue the runoff message to Texas Republican runoff voters, pressing Cornyn to specify what he concedes in his Ukraine aid, DREAM Act and gun safety votes now that he has defended them, and framing the runoff as conservative conviction versus a Washington incumbent.\n承诺：I will keep pressing this record contrast through the May 26 runoff.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Continue the runoff message to Texas Republican runoff voters, pressing Cornyn to specify what he concedes in his Ukraine aid, DREAM Act and gun safety votes now that he has defended them, and framing the runoff as conservative conviction versus a Washington incumbent.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Press the unconfirmed reported Trump endorsement of Cornyn as a loyalty and conviction test with Texas Republican runoff voters, noting the report is unconfirmed and demanding Cornyn say whether he sought it, while keeping my record contrast.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn's 42% first-round showing and reported Trump-endorsement expectation favor him, but no runoff result or margin is in evidence. Simulated rounds show only campaign messaging, so a 9-point win remains plausible but unverified.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.02117681999999999
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-05-10",
+                "interval_end": "2026-05-26",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 16,
+                "interval_start_utc": "2026-05-10T00:07:31+00:00",
+                "interval_end_utc": "2026-05-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn launched a runoff campaign push to Texas Republican runoff voters, emphasizing his 42% first-round overperformance, his conservative record, and Ken Paxton's legal troubles and 2023 impeachment, while soliciting the reported Trump endorsement."
+                },
+                {
+                  "action_id": "action_1_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton launched a runoff campaign attacking Cornyn's record as insufficiently conservative, citing Ukraine aid, the DREAM Act, and the bipartisan gun safety bill, framing the runoff as a choice between a career incumbent and a true conservative."
+                },
+                {
+                  "action_id": "action_1_agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_4d6a795788bb5d30",
+                    "action_1_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Ken Paxton launched a runoff campaign attacking Cornyn's record as insufficiently conservative"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "John Cornyn launched a runoff campaign push to Texas Republican runoff voters",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "John Cornyn launched a runoff campaign push to Texas Republican runoff voters, emphasizing his 42% first-round overperformance, his conservative record, and Ken Paxton's legal troubles and 2023 impeachment, while soliciting the reported Trump endorsement.",
+                  "date": "2026-05-10"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Ken Paxton launched a runoff campaign attacking Cornyn's record as insufficiently conservative, citing Ukraine aid, the DREAM Act, and the bipartisan gun safety bill, framing the runoff as a choice between a career incumbent and a true conservative.",
+                  "date": "2026-05-10"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                  "action": "Launch a runoff campaign push to Texas Republican runoff voters, emphasizing my 42% first-round overperformance, conservative record, and Paxton's legal troubles and 2023 impeachment, while soliciting the reported Trump endorsement.\n承诺：Campaign through May 26 runoff to maximize my vote share and margin.\n触发或复核条件：Runoff scheduled May 26, 2026.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch a runoff campaign push to Texas Republican runoff voters, emphasizing my 42% first-round overperformance, conservative record, and Paxton's legal troubles and 2023 impeachment, while soliciting the reported Trump endorsement.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly press the contrast case against Ken Paxton, highlighting his legal proceedings and impeachment, and challenge him to defend his record before runoff voters.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Launch a runoff campaign attacking Cornyn's record as insufficiently conservative — citing Ukraine aid, the DREAM Act, and the bipartisan gun safety bill — and directly to Texas Republican runoff voters, framing the runoff as a choice between a career incumbent and a true conservative.\n承诺：Paxton will campaign to Republican runoff voters through May 26, 2026, emphasizing Cornyn's record on Ukraine aid, the DREAM Act, and gun safety.\n触发或复核条件：Runoff remains scheduled for May 26, 2026.",
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "Launch a runoff campaign attacking Cornyn's record as insufficiently conservative — citing Ukraine aid, the DREAM Act, and the bipartisan gun safety bill — and directly to Texas Republican runoff voters, framing the runoff as a choice between a career incumbent and a true conservative.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly contrast the candidates' records, reminding runoff voters of Cornyn's role in bipartisan deals while presenting Paxton as the anti-establishment conservative, and challenge Cornyn to defend his record before runoff voters.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                  "action": "Texas Republican runoff voters take no collective pre-vote action this round; eligible voters will cast valid ballots in the May 26, 2026 runoff when the election occurs.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Texas Republican runoff voters take no collective pre-vote action this round; eligible voters will cast valid ballots in the May 26, 2026 runoff when the election occurs.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn overperformed in the March 3 first round (42%) and reportedly expects a Trump endorsement, but no runoff result exists and the 9-point margin threshold is demanding. Paxton's aggressive runoff campaign and the absence of polling make a large Cornyn win uncertain.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-05-26",
+                "interval_end": "2026-07-12",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 63,
+                "interval_days": 47,
+                "interval_start_utc": "2026-05-26T00:00:00+00:00",
+                "interval_end_utc": "2026-07-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn overperformed in the March 3 first round (42%) and reportedly expects a Trump endorsement, but no runoff result exists and the 9-point margin threshold is demanding. Paxton's aggressive runoff campaign and the absence of polling make a large Cornyn win uncertain.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-07-12",
+                "interval_end": "2026-08-28",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 110,
+                "interval_days": 47,
+                "interval_start_utc": "2026-07-12T00:00:00+00:00",
+                "interval_end_utc": "2026-08-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn overperformed in the March 3 first round (42%) and reportedly expects a Trump endorsement, but no runoff result exists and the 9-point margin threshold is demanding. Paxton's aggressive runoff campaign and the absence of polling make a large Cornyn win uncertain.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-08-28",
+                "interval_end": "2026-10-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 157,
+                "interval_days": 47,
+                "interval_start_utc": "2026-08-28T00:00:00+00:00",
+                "interval_end_utc": "2026-10-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn continued his runoff campaign to Texas Republican runoff voters, pressing his 42% first-round overperformance and conservative record against Ken Paxton's legal troubles and 2023 impeachment, and said he would welcome a Trump endorsement only if formally given."
+                },
+                {
+                  "action_id": "action_4_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton escalated his runoff campaign to Texas Republican runoff voters, tying Cornyn's 42% first-round result to his Washington record and pairing the insufficiently-conservative attack on Ukraine aid, the DREAM Act and the gun safety bill with his own conservative case and a turnout appeal."
+                },
+                {
+                  "action_id": "action_4_agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_4_agent_4d6a795788bb5d30",
+                    "action_4_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Ken Paxton escalated his runoff campaign to Texas Republican runoff voters"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_4d6a795788bb5d30",
+                    "action_4_agent_0c4a9d6c361f514b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "John Cornyn continued his runoff campaign to Texas Republican runoff voters"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "John Cornyn continued his runoff campaign to Texas Republican runoff voters",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "John Cornyn continued his runoff campaign to Texas Republican runoff voters, pressing his 42% first-round overperformance and conservative record against Ken Paxton's legal troubles and 2023 impeachment, and said he would welcome a Trump endorsement only if formally given.",
+                  "date": "2026-10"
+                },
+                {
+                  "id": "sim_0002_004_002",
+                  "text": "Ken Paxton escalated his runoff campaign to Texas Republican runoff voters, tying Cornyn's 42% first-round result to his Washington record and pairing the insufficiently-conservative attack on Ukraine aid, the DREAM Act and the gun safety bill with his own conservative case and a turnout appeal.",
+                  "date": "2026-10"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                  "action": "Continue the runoff campaign to Texas Republican runoff voters, pressing my 42% first-round overperformance and conservative record against Paxton's legal troubles and 2023 impeachment, and publicly welcome the expected Trump endorsement if and when it is formally given.\n承诺：Campaign through the May 26 runoff to maximize my vote share and margin.\n触发或复核条件：If Trump formally endorses, amplify it; if not, continue without claiming it.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Continue the runoff campaign to Texas Republican runoff voters, pressing my 42% first-round overperformance and conservative record against Paxton's legal troubles and 2023 impeachment, and publicly welcome the expected Trump endorsement if and when it is formally given.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Directly ask Donald Trump to formally endorse my runoff campaign now, offering to amplify the endorsement across Texas, and publicly note that his advisers were reported to expect it.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Escalate the runoff campaign to Texas Republican runoff voters, tying Cornyn's first-round 42% to his long Washington record and pairing the insufficiently-conservative attack (Ukraine aid, DREAM Act, gun safety bill) with Paxton's own conservative case, and pressing voters to turn out for the runoff.\n承诺：Paxton will keep campaigning to Republican runoff voters on this contrast through the runoff period.\n触发或复核条件：Runoff remains the decisive contest against Cornyn.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Escalate the runoff campaign to Texas Republican runoff voters, tying Cornyn's first-round 42% to his long Washington record and pairing the insufficiently-conservative attack (Ukraine aid, DREAM Act, gun safety bill) with Paxton's own conservative case, and pressing voters to turn out for the runoff.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly press Cornyn to confirm whether Trump has actually endorsed him, arguing that reports of an expected endorsement are not an endorsement, and challenge Cornyn to debate the conservative record before runoff voters.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                  "action": "Texas Republican runoff voters take no collective pre-vote action; eligible voters cast valid ballots in the May 26, 2026 runoff when it occurs, and the official count determines the margin.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Texas Republican runoff voters take no collective pre-vote action; eligible voters cast valid ballots in the May 26, 2026 runoff when it occurs, and the official count determines the margin.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No runoff result or official count is in evidence; the last packet shows only campaign activity, with Cornyn's 42% first-round share and a possible Trump endorsement as context. A 9-point runoff win remains plausible but unverified, so the estimate stays near the prior.",
+                "evidence_quote": "John Cornyn continued his runoff campaign to Texas Republican runoff voters, pressing his 42% first-round overperformance and conservative record against Ken Paxton's legal troubles and 2023 impeachment, and said he would welcome a Trump endorsement only if formally given.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-10-14",
+                "interval_end": "2026-11-07",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 181,
+                "interval_days": 24,
+                "interval_start_utc": "2026-10-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No runoff result or official count is in evidence; the last packet shows only campaign activity, with Cornyn's 42% first-round share and a possible Trump endorsement as context. A 9-point runoff win remains plausible but unverified, so the estimate stays near the prior.",
+                "evidence_quote": "John Cornyn continued his runoff campaign to Texas Republican runoff voters, pressing his 42% first-round overperformance and conservative record against Ken Paxton's legal troubles and 2023 impeachment, and said he would welcome a Trump endorsement only if formally given.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-11-07",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 205,
+                "interval_days": 24,
+                "interval_start_utc": "2026-11-07T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn's 42% first-round showing and reported Trump-adviser endorsement expectation favor him, but no runoff result or polling margin exists. A 9-point win requires a large runoff swing; Paxton's conservative attacks and turnout appeal remain material unknowns.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.2572499999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 12,
+        "active_rounds": 7,
+        "draw_rounds": 7,
+        "audited_silent_rounds": 5,
+        "sampled_decisions": 16,
+        "public_event_count": 12,
+        "substantive_public_event_count": 12,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 6,
+            "active_rounds": 5,
+            "draw_rounds": 5,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 10,
+            "active_actor_count": 3,
+            "public_event_count": 8,
+            "substantive_public_event_count": 8,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 6,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 4,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "203a6381-93f6-4138-af0c-44a9150e319e",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:28:17.113588+00:00",
+      "contract_id": "0x780eda657742337ca48284a55e7f2103d35484f16e05c49271cf1ed4e8cac89c",
+      "forecast_cutoff": "2026-05-10T00:07:31+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "215209c0ce24b8e21294136e012d32ef87af8362fea072abf638b007c7247c6c",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 146.346
+    },
+    {
+      "calls": 45,
+      "tokens": 514453,
+      "input_tokens": 491609,
+      "output_tokens": 22844,
+      "accounted_tokens_upper": 514453,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-05-10",
+                "interval_end": "2026-05-26",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 16,
+                "interval_start_utc": "2026-05-10T00:07:31+00:00",
+                "interval_end_utc": "2026-05-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn launched a runoff campaign push to Texas Republican runoff voters, emphasizing his stronger-than-expected March 3 primary showing, his conservative record, and Ken Paxton's legal troubles and 2023 impeachment, while seeking to consolidate his 42% first-round coalition and win over supporters of eliminated candidates."
+                },
+                {
+                  "action_id": "action_1_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton launched a runoff campaign push to Texas Republican runoff voters framing John Cornyn as insufficiently conservative over Ukraine aid, the DREAM Act and the Uvalde gun safety bill, and arguing the nomination should be decided on conservative records rather than an expected Trump endorsement."
+                },
+                {
+                  "action_id": "action_1_agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "competes_for_resource",
+                  "action_ids": [
+                    "action_1_agent_4d6a795788bb5d30",
+                    "action_1_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Ken Paxton launched a runoff campaign push to Texas Republican runoff voters"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_4d6a795788bb5d30",
+                    "action_1_agent_0c4a9d6c361f514b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "John Cornyn launched a runoff campaign push to Texas Republican runoff voters"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "John Cornyn launched a runoff campaign push to Texas Republican runoff voters, emphasizing his stronger-than-expected March 3 primary showing, his conservative record, and Ken Paxton's legal troubles and 2023 impeachment, while seeking to consolidate his 42% first-round coalition and win over supporters of eliminated candidates.",
+                  "date": "2026-05-10"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Ken Paxton launched a runoff campaign push to Texas Republican runoff voters framing John Cornyn as insufficiently conservative over Ukraine aid, the DREAM Act and the Uvalde gun safety bill, and arguing the nomination should be decided on conservative records rather than an expected Trump endorsement.",
+                  "date": "2026-05-10"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                  "action": "Launch a runoff campaign push to Texas Republican runoff voters, emphasizing the stronger-than-expected March 3 primary showing, my conservative record, and Paxton's legal troubles and 2023 impeachment, while seeking to consolidate the 42% first-round coalition and win over supporters of eliminated candidates.\n承诺：Campaign actively through the May 26 runoff to maximize my vote share and margin.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch a runoff campaign push to Texas Republican runoff voters, emphasizing the stronger-than-expected March 3 primary showing, my conservative record, and Paxton's legal troubles and 2023 impeachment, while seeking to consolidate the 42% first-round coalition and win over supporters of eliminated candidates.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly court and welcome Donald Trump's endorsement in the runoff, building on reports that his advisers expected him to back me after my strong first round; frame the runoff as a choice between a proven conservative and Paxton's legal baggage.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Launch a runoff campaign push to Texas Republican runoff voters framing Cornyn as insufficiently conservative over Ukraine aid, the DREAM Act and the Uvalde gun safety bill, and countering his expected Trump endorsement by arguing the nomination should be decided on conservative records.\n承诺：Paxton campaigns through May 26 on this contrast message; no withdrawal and no pledge to back Cornyn.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch a runoff campaign push to Texas Republican runoff voters framing Cornyn as insufficiently conservative over Ukraine aid, the DREAM Act and the Uvalde gun safety bill, and countering his expected Trump endorsement by arguing the nomination should be decided on conservative records.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly press the character-and-corruption contrast against Cornyn, emphasizing his Washington record and incumbency while defending against Cornyn's attacks on Paxton's legal troubles and 2023 impeachment.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                  "action": "Cast no collective action this round; Texas Republican runoff voters have no organized decision until the May 26, 2026 runoff ballot. Monitor for any new public polling, turnout or endorsement information before voting begins.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Cast no collective action this round; Texas Republican runoff voters have no organized decision until the May 26, 2026 runoff ballot. Monitor for any new public polling, turnout or endorsement information before voting begins.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn led the March 3 primary with 42% and reportedly overperformed, but a 9-point runoff win over Paxton is a high bar. Paxton's runoff push and the absence of an observed runoff result leave substantial uncertainty.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-05-26",
+                "interval_end": "2026-07-12",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 63,
+                "interval_days": 47,
+                "interval_start_utc": "2026-05-26T00:00:00+00:00",
+                "interval_end_utc": "2026-07-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn led the March 3 primary with 42% and reportedly overperformed, but a 9-point runoff win over Paxton is a high bar. Paxton's runoff push and the absence of an observed runoff result leave substantial uncertainty.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-07-12",
+                "interval_end": "2026-08-28",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 110,
+                "interval_days": 47,
+                "interval_start_utc": "2026-07-12T00:00:00+00:00",
+                "interval_end_utc": "2026-08-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn led the March 3 primary with 42% and reportedly overperformed, but a 9-point runoff win over Paxton is a high bar. Paxton's runoff push and the absence of an observed runoff result leave substantial uncertainty.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-08-28",
+                "interval_end": "2026-10-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 157,
+                "interval_days": 47,
+                "interval_start_utc": "2026-08-28T00:00:00+00:00",
+                "interval_end_utc": "2026-10-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn continued his runoff push to Texas Republican runoff voters, sharpening the contrast on Ken Paxton's legal troubles and 2023 impeachment and courting supporters of eliminated primary candidates, with any Trump endorsement to be featured if confirmed."
+                },
+                {
+                  "action_id": "action_4_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton continued his runoff contrast push to Texas Republican runoff voters, framing John Cornyn as insufficiently conservative on Ukraine aid, the DREAM Act and the Uvalde gun bill and arguing the nomination should turn on conservative records rather than the expected Trump endorsement, with no withdrawal."
+                },
+                {
+                  "action_id": "action_4_agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_4_agent_4d6a795788bb5d30",
+                    "action_4_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Ken Paxton continued his runoff contrast push to Texas Republican runoff voters"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_4d6a795788bb5d30",
+                    "action_4_agent_0c4a9d6c361f514b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "John Cornyn continued his runoff push to Texas Republican runoff voters"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "John Cornyn continued his runoff push to Texas Republican runoff voters, sharpening the contrast on Ken Paxton's legal troubles and 2023 impeachment and courting supporters of eliminated primary candidates, with any Trump endorsement to be featured if confirmed.",
+                  "date": "2026-10"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "Ken Paxton continued his runoff contrast push to Texas Republican runoff voters, framing John Cornyn as insufficiently conservative on Ukraine aid, the DREAM Act and the Uvalde gun bill and arguing the nomination should turn on conservative records rather than the expected Trump endorsement, with no withdrawal.",
+                  "date": "2026-10"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                  "action": "Continue the runoff push to Texas Republican runoff voters, sharpening the contrast on Paxton's legal troubles and 2023 impeachment while courting supporters of eliminated primary candidates and amplifying any Trump endorsement if confirmed.\n承诺：Campaign actively through the May 26 runoff to maximize vote share and margin.\n触发或复核条件：If a Trump endorsement is confirmed, feature it prominently.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Continue the runoff push to Texas Republican runoff voters, sharpening the contrast on Paxton's legal troubles and 2023 impeachment while courting supporters of eliminated primary candidates and amplifying any Trump endorsement if confirmed.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly welcome and seek Donald Trump's endorsement in the runoff, framing it as consolidation of the party behind my candidacy; no endorsement is claimed unless confirmed.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Continue the runoff contrast push to Texas Republican runoff voters: keep framing Cornyn as insufficiently conservative on Ukraine aid, the DREAM Act and the Uvalde gun bill, and argue the nomination should turn on conservative records rather than the expected Trump endorsement. No withdrawal; no pledge to back Cornyn.\n承诺：Paxton campaigns on this contrast message through the runoff; no withdrawal and no pledge to back Cornyn.",
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "Continue the runoff contrast push to Texas Republican runoff voters: keep framing Cornyn as insufficiently conservative on Ukraine aid, the DREAM Act and the Uvalde gun bill, and argue the nomination should turn on conservative records rather than the expected Trump endorsement. No withdrawal; no pledge to back Cornyn.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly court supporters of candidates eliminated in the March 3 primary, presenting Paxton as the conservative alternative to Cornyn and asking them to back him in the May 26 runoff.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                  "action": "Cast no collective action this round. Texas Republican runoff voters have no organized decision point until the May 26, 2026 runoff ballot; monitor for new public polling, turnout or endorsement information before voting begins.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Cast no collective action this round. Texas Republican runoff voters have no organized decision point until the May 26, 2026 runoff ballot; monitor for new public polling, turnout or endorsement information before voting begins.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "outlook_issue": "unsupported_quote"
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-10-14",
+                "interval_end": "2026-11-07",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 181,
+                "interval_days": 24,
+                "interval_start_utc": "2026-10-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-07T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn's 42% first-round showing and expected Trump endorsement suggest he is favored in the runoff, but a 9-point margin is a high bar against Paxton's committed base. No runoff result or polling margin exists yet, so the estimate stays modest.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": null,
+                "evidence_ref": "history_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 6,
+                "interval_start": "2026-11-07",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 205,
+                "interval_days": 24,
+                "interval_start_utc": "2026-11-07T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn entered the runoff with 42% and a better-than-expected first round, but no runoff result or polling margin exists in the evidence. A 9-point win over Paxton is a demanding threshold, and the only late-round signals are campaign messaging, not vote counts.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.2572499999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 6,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 2,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 6,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 4,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 2,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "669f06f0-8b56-4429-8284-c9788b80f7a2",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T00:53:01.065910+00:00",
+      "contract_id": "0x780eda657742337ca48284a55e7f2103d35484f16e05c49271cf1ed4e8cac89c",
+      "forecast_cutoff": "2026-05-10T00:07:31+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "215209c0ce24b8e21294136e012d32ef87af8362fea072abf638b007c7247c6c",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 111.061
+    },
+    {
+      "calls": 25,
+      "tokens": 284524,
+      "input_tokens": 271704,
+      "output_tokens": 12820,
+      "accounted_tokens_upper": 284524,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-05-10",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 205,
+                "interval_days": 205,
+                "interval_start_utc": "2026-05-10T00:07:31+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn launched a runoff campaign push targeting Texas Republican runoff voters, emphasizing his better-than-expected 42% first-round showing and contrasting his record with Ken Paxton's legal troubles and 2023 impeachment, while stating he would court a Trump endorsement."
+                },
+                {
+                  "action_id": "action_1_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton launched a runoff campaign attacking Cornyn's record as insufficiently conservative on Ukraine aid, the DREAM Act and the Uvalde gun bill, framing the runoff as a choice between a career incumbent and a fighter ahead of May 26."
+                },
+                {
+                  "action_id": "action_1_agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_4d6a795788bb5d30",
+                    "action_1_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Ken Paxton launched a runoff campaign attacking Cornyn's record as insufficiently conservative"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_4d6a795788bb5d30",
+                    "action_1_agent_0c4a9d6c361f514b"
+                  ],
+                  "outcome": "pending",
+                  "effect": "John Cornyn launched a runoff campaign push targeting Texas Republican runoff voters"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "John Cornyn launched a runoff campaign push targeting Texas Republican runoff voters",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "John Cornyn launched a runoff campaign push targeting Texas Republican runoff voters, emphasizing his better-than-expected 42% first-round showing and contrasting his record with Ken Paxton's legal troubles and 2023 impeachment, while stating he would court a Trump endorsement.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Ken Paxton launched a runoff campaign attacking Cornyn's record as insufficiently conservative on Ukraine aid, the DREAM Act and the Uvalde gun bill, framing the runoff as a choice between a career incumbent and a fighter ahead of May 26.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                  "action": "Launch a runoff campaign push targeting Texas Republican runoff voters, emphasizing the better-than-expected 42% first-round showing and contrasting my record with Paxton's legal troubles and 2023 impeachment, while courting a Trump endorsement.\n承诺：Campaign actively through the May 26, 2026 runoff to maximize my vote share and margin.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch a runoff campaign push targeting Texas Republican runoff voters, emphasizing the better-than-expected 42% first-round showing and contrasting my record with Paxton's legal troubles and 2023 impeachment, while courting a Trump endorsement.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly and privately seek Donald Trump's endorsement for the runoff, building on reports that his advisers expected him to back me after my strong first-round performance.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Launch a runoff campaign attacking Cornyn's record as insufficiently conservative — Ukraine aid, the DREAM Act, and the Uvalde gun bill — and frame the runoff as a choice between a career incumbent and a fighter, appealing to Republican runoff voters ahead of May 26.\n承诺：Paxton personally campaigns on this contrast through the May 26 runoff.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Launch a runoff campaign attacking Cornyn's record as insufficiently conservative — Ukraine aid, the DREAM Act, and the Uvalde gun bill — and frame the runoff as a choice between a career incumbent and a fighter, appealing to Republican runoff voters ahead of May 26.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly press the case that Cornyn's Washington record and establishment backing, not grassroots Texas Republicans, decide this runoff, urging voters not to let outside endorsements substitute for a conservative record.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                  "action": "Cast no collective action this round; Texas Republican runoff voters' valid ballots on May 26, 2026 will determine the Cornyn–Paxton percentages and margin, and no runoff result exists as of the packet date.\n触发或复核条件：Review after the May 26, 2026 runoff vote count or any official results reporting.",
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "Cast no collective action this round; Texas Republican runoff voters' valid ballots on May 26, 2026 will determine the Cornyn–Paxton percentages and margin, and no runoff result exists as of the packet date.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_0c4a9d6c361f514b:initial:2",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Monitor public runoff developments (endorsements, polling, campaign activity) without any collective statement or coordinated move by the voter group.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn's 42% first-round showing and expected Trump endorsement suggest he is favored in the runoff, but no runoff result or polling margin exists. A 9-point win over Paxton is a demanding threshold, and the outcome remains unverified.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.44099999999999995
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-05-10",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 205,
+                "interval_days": 205,
+                "interval_start_utc": "2026-05-10T00:07:31+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "status": "executed",
+                  "summary": "John Cornyn launched his runoff campaign to Texas Republican runoff voters, contrasting his 42% first-round showing and record with Ken Paxton's legal troubles and impeachment, and seeking a decisive margin on May 26."
+                },
+                {
+                  "action_id": "action_1_agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "status": "executed",
+                  "summary": "Ken Paxton launched a runoff campaign attacking Cornyn's record as insufficiently conservative — Ukraine aid, the DREAM Act, and the bipartisan gun safety bill — and argued Cornyn is the establishment choice, urging Republican runoff voters to reject him on May 26."
+                },
+                {
+                  "action_id": "action_1_agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_4d6a795788bb5d30",
+                    "action_1_agent_606c8a4d6e0b5e1b"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Ken Paxton launched a runoff campaign attacking Cornyn's record as insufficiently conservative"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "John Cornyn launched his runoff campaign to Texas Republican runoff voters",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "John Cornyn launched his runoff campaign to Texas Republican runoff voters, contrasting his 42% first-round showing and record with Ken Paxton's legal troubles and impeachment, and seeking a decisive margin on May 26.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Ken Paxton launched a runoff campaign attacking Cornyn's record as insufficiently conservative — Ukraine aid, the DREAM Act, and the bipartisan gun safety bill — and argued Cornyn is the establishment choice, urging Republican runoff voters to reject him on May 26.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_4d6a795788bb5d30",
+                  "actor_name": "John Cornyn",
+                  "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                  "action": "Launch the runoff campaign to Texas Republican runoff voters, contrasting my 42% first-round showing and record with Paxton's legal troubles and impeachment, and seeking a decisive margin on May 26.\n承诺：Campaign actively through the May 26 runoff for a decisive win.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Launch the runoff campaign to Texas Republican runoff voters, contrasting my 42% first-round showing and record with Paxton's legal troubles and impeachment, and seeking a decisive margin on May 26.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_4d6a795788bb5d30:supplement:1",
+                      "action": "Launch the runoff campaign to Texas Republican runoff voters, contrasting my 42% first-round showing and record with Paxton's legal troubles and 2023 impeachment, and seeking a decisive margin on May 26.",
+                      "code": "duplicate"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_606c8a4d6e0b5e1b",
+                  "actor_name": "Ken Paxton",
+                  "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                  "action": "Launch a runoff campaign attacking Cornyn's record as insufficiently conservative — Ukraine aid, the DREAM Act, and the bipartisan gun safety bill — and directly counter the reported expected Trump endorsement by arguing Cornyn is the establishment choice, urging Republican runoff voters to reject him on May 26.\n承诺：Paxton personally campaigns against Cornyn's record through the May 26 runoff.\n触发或复核条件：Runoff proceeds as scheduled May 26, 2026.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Launch a runoff campaign attacking Cornyn's record as insufficiently conservative — Ukraine aid, the DREAM Act, and the bipartisan gun safety bill — and directly counter the reported expected Trump endorsement by arguing Cornyn is the establishment choice, urging Republican runoff voters to reject him on May 26.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_606c8a4d6e0b5e1b:supplement:1",
+                      "action": "Launch a runoff campaign attacking Cornyn's record as insufficiently conservative — Ukraine aid, the DREAM Act, and the bipartisan gun safety bill — and directly counter the reported expected Trump endorsement by arguing Cornyn is the establishment choice, urging Republican runoff voters to reject him on May 26.",
+                      "code": "duplicate"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_0c4a9d6c361f514b",
+                  "actor_name": "Texas Republican runoff voters",
+                  "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                  "action": "Texas Republican runoff voters await the May 26, 2026 runoff and cast valid ballots then; no collective action is feasible or coordinated before election day.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_0c4a9d6c361f514b:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Texas Republican runoff voters await the May 26, 2026 runoff and cast valid ballots then; no collective action is feasible or coordinated before election day.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Cornyn's 42% first-round showing and reported better-than-expected performance, plus expected Trump endorsement, suggest he could win the runoff, but a 9-point margin is a high bar against Paxton. No runoff result or polling margin is in evidence, so the actual margin remains unknown.",
+                "evidence_quote": "In the 2026 election, Cornyn received 42% of the vote in the Republican primary. He faces Texas attorney general Ken Paxton in the runoff election.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "12ec5621-fc22-47a4-8424-b90d781a38ea",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T00:53:30.549722+00:00",
+      "contract_id": "0x780eda657742337ca48284a55e7f2103d35484f16e05c49271cf1ed4e8cac89c",
+      "forecast_cutoff": "2026-05-10T00:07:31+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "215209c0ce24b8e21294136e012d32ef87af8362fea072abf638b007c7247c6c",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 29.482
+    },
+    {
+      "calls": 132,
+      "tokens": 1519782,
+      "input_tokens": 1441284,
+      "output_tokens": 78498,
+      "accounted_tokens_upper": 1519782,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.36072519999999997,
+      "coverage": 0.4445,
+      "unexplored_mass": 0.5555,
+      "unknown_bounds": [
+        0.08297519999999999,
+        0.6384752
+      ],
+      "search_iterations": 12,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 12,
+          "search_value": 0.6080213333333332,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.45499999999999996,
+          "visits": 10,
+          "search_value": 0.6533367999999999,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.19109999999999996,
+          "visits": 5,
+          "search_value": 0.7001600000000001,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.19109999999999996,
+          "visits": 4,
+          "search_value": 0.7276,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.19109999999999996,
+          "visits": 3,
+          "search_value": 0.6901333333333334,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.15288,
+          "visits": 1,
+          "search_value": 0.6400000000000001,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.15288,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.2,
+          "frontier": true,
+          "contribution": 0.030576
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.03822,
+          "visits": 1,
+          "search_value": 0.5904,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.03822,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 0.0068796
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.08189999999999999,
+          "visits": 4,
+          "search_value": 0.6732,
+          "conditional_p_yes": 0.15,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.08189999999999999,
+          "visits": 3,
+          "search_value": 0.7568000000000001,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.08189999999999999,
+          "visits": 2,
+          "search_value": 0.7152000000000001,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.06552,
+          "visits": 1,
+          "search_value": 0.5904,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.06552,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 0.011793599999999998
+        },
+        {
+          "path": [
+            1,
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.01638,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.3,
+          "frontier": true,
+          "contribution": 0.004913999999999999
+        },
+        {
+          "path": [
+            1,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.182,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.24499999999999997,
+          "visits": 1,
+          "search_value": 0.390768,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.10289999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 0.018521999999999997
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.06859999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.15,
+          "frontier": true,
+          "contribution": 0.010289999999999997
+        },
+        {
+          "path": [
+            2,
+            3
+          ],
+          "depth": 2,
+          "mass": 0.0735,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "0e7f0cac-be99-4f7f-b50c-191acf0b4d2f",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T00:59:06.906019+00:00",
+      "contract_id": "0x780eda657742337ca48284a55e7f2103d35484f16e05c49271cf1ed4e8cac89c",
+      "forecast_cutoff": "2026-05-10T00:07:31+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "215209c0ce24b8e21294136e012d32ef87af8362fea072abf638b007c7247c6c",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 336.351
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-05-10T00:07:31+00:00",
+  "forecast_key": "0x780eda657742337ca48284a55e7f2103d35484f16e05c49271cf1ed4e8cac89c",
+  "group_id": "texas-senate-republican-primary-runoff-margin-of-victory",
+  "evidence_sha256": "215209c0ce24b8e21294136e012d32ef87af8362fea072abf638b007c7247c6c",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 867,
+    "input_tokens": 796,
+    "output_tokens": 71,
+    "accounted_tokens_upper": 867,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-05-10",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2026-05-10",
+        "2026-05-26",
+        "2026-07-12",
+        "2026-08-28",
+        "2026-10-14",
+        "2026-11-07",
+        "2026-12-01"
+      ],
+      "milestones": [
+        "2026-05-26"
+      ]
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2026-05-10",
+        "2026-05-26",
+        "2026-07-12",
+        "2026-08-28",
+        "2026-10-14",
+        "2026-11-07",
+        "2026-12-01"
+      ],
+      "milestones": [
+        "2026-05-26"
+      ]
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-05-10",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 6,
+      "boundaries": [
+        "2026-05-10",
+        "2026-05-26",
+        "2026-07-12",
+        "2026-08-28",
+        "2026-10-14",
+        "2026-11-07",
+        "2026-12-01"
+      ],
+      "milestones": [
+        "2026-05-26"
+      ]
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-12-01T04:59:00+00:00",
+  "deadline_basis": "explicit_contract_deadline",
+  "nominal_market_end": "2026-05-25T00:00:00+00:00",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 3
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_1e74c641be28ee8f",
+          "name": "John Cornyn",
+          "role": "Incumbent U.S. Senator and candidate in the 2026 Texas Republican Senate primary runoff; his campaign's performance determines whether he wins by 9% or more.",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_18f641e4fe9a7851",
+          "name": "Ken Paxton",
+          "role": "Texas Attorney General and candidate in the 2026 Texas Republican Senate primary runoff against John Cornyn; his vote share determines the margin.",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_0b40661264a2e801",
+          "name": "Texas Republican runoff voters",
+          "role": "Eligible Republican primary runoff voters whose valid votes determine each candidate's percentage and the margin of victory.",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "John Cornyn's campaign participates in and contests the May 26, 2026 Republican Senate primary runoff.",
+          "owner": "John Cornyn",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "Ken Paxton's campaign participates in and contests the May 26, 2026 Republican Senate primary runoff.",
+          "owner": "Ken Paxton",
+          "support": "represented"
+        },
+        {
+          "id": "D3",
+          "choice": "Texas Republican runoff voters cast valid votes determining the candidates' percentages and margin.",
+          "owner": "Texas Republican runoff voters",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 27,
+    "tokens": 77537,
+    "input_tokens": 69018,
+    "output_tokens": 8519,
+    "accounted_tokens_upper": 77537,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

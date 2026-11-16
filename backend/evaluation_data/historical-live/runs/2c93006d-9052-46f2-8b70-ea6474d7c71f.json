@@ -1,0 +1,3224 @@
+{
+  "run_id": "2c93006d-9052-46f2-8b70-ea6474d7c71f",
+  "case_id": "market_2e5c64f7c193c70e0808dc4c",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3225,
+      "input_tokens": 3215,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3225,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3215,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:17:14.736218+00:00",
+      "contract_id": "0x377e7fe65cf198a7fc4fdae3f2136b74729279267858daaf96718b23bc2a5607",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b36c49492c29d6250d060fe853a7c9c3091afcefd25a3993b75f4bc36b504733",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.973
+    },
+    {
+      "calls": 2,
+      "tokens": 6450,
+      "input_tokens": 6430,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6450,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.235,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.12,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3215,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.35,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3215,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:17:16.446546+00:00",
+      "contract_id": "0x377e7fe65cf198a7fc4fdae3f2136b74729279267858daaf96718b23bc2a5607",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b36c49492c29d6250d060fe853a7c9c3091afcefd25a3993b75f4bc36b504733",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.708
+    },
+    {
+      "calls": 14,
+      "tokens": 199976,
+      "input_tokens": 189177,
+      "output_tokens": 10799,
+      "accounted_tokens_upper": 199976,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly restated the standing conditional warning that if no deal is reached and the Strait of Hormuz is not reopened, the United States will strike Iran's power plants, oil wells, Kharg Island and possibly desalinization plants, framing it as a warning rather than an execution order."
+                },
+                {
+                  "action_id": "action_1_agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "status": "executed",
+                  "summary": "The Assembly of Experts publicly affirmed the Interim Leadership Council's authority under Article 111 and stated that it is deliberating the election of a new Supreme Leader, without naming a candidate or setting a date."
+                },
+                {
+                  "action_id": "action_1_agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "status": "executed",
+                  "summary": "The Interim Leadership Council issued a public statement affirming that it holds leader duties only temporarily under Article 111 and calling on the Assembly of Experts to proceed promptly to elect a new supreme leader, without endorsing or opposing any candidate."
+                },
+                {
+                  "action_id": "action_1_agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "status": "executed",
+                  "summary": "Reza Pahlavi publicly urged supporters to stay home and remain organized, stating the final call will come only when conditions inside Iran make success plausible, and rejected premature action."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_ee8d72e843315352",
+                    "action_1_agent_f5591bb442a25898"
+                  ],
+                  "outcome": "realized",
+                  "effect": "The Assembly of Experts publicly affirmed the Interim Leadership Council's authority under Article 111"
+                },
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_a1f7c183d2895241",
+                    "action_1_agent_b3998935941058dc"
+                  ],
+                  "outcome": "pending",
+                  "effect": "the final call will come only when conditions inside Iran make success plausible"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "stated that it is deliberating the election of a new Supreme Leader, without naming a candidate or setting a date",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Donald Trump publicly restated the standing conditional warning that if no deal is reached and the Strait of Hormuz is not reopened, the United States will strike Iran's power plants, oil wells, Kharg Island and possibly desalinization plants, framing it as a warning rather than an execution order.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "The Assembly of Experts publicly affirmed the Interim Leadership Council's authority under Article 111 and stated that it is deliberating the election of a new Supreme Leader, without naming a candidate or setting a date.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "The Interim Leadership Council issued a public statement affirming that it holds leader duties only temporarily under Article 111 and calling on the Assembly of Experts to proceed promptly to elect a new supreme leader, without endorsing or opposing any candidate.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_004",
+                  "text": "Reza Pahlavi publicly urged supporters to stay home and remain organized, stating the final call will come only when conditions inside Iran make success plausible, and rejected premature action.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                  "action": "Publicly restate the standing condition: if no deal is reached and the Strait of Hormuz is not reopened, the U.S. will strike Iran's power plants, oil wells, Kharg Island and possibly desalinization plants. Frame it as a conditional warning, not an order to execute this round.\n触发或复核条件：Only if no deal is reached and the Strait of Hormuz remains closed",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Issue a public statement reiterating that U.S. objectives include preventing Iran from restoring a hostile leadership, calling on the Iranian people and opposition to determine their own government, and warning that further destabilizing conduct or attacks on U.S. partners will draw continued military pressure. No new strike is ordered this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly restate the standing condition: if no deal is reached and the Strait of Hormuz is not reopened, the U.S. will strike Iran's power plants, oil wells, Kharg Island and possibly desalinization plants. Frame it as a conditional warning, not an order to execute this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:2",
+                  "action": "The Assembly of Experts publicly affirms the Interim Leadership Council's authority under Article 111 and states that it is deliberating the election of a new Supreme Leader, without naming a candidate or setting a date.\n承诺：Affirm the interim arrangement and continue deliberation toward an election.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "The Assembly of Experts convenes and completes the Article 111 process by electing a new Supreme Leader, formally ending the interim arrangement and filling the vacant office.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "The Assembly of Experts publicly affirms the Interim Leadership Council's authority under Article 111 and states that it is deliberating the election of a new Supreme Leader, without naming a candidate or setting a date.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "candidate_id": "agent_f5591bb442a25898:initial:2",
+                  "action": "Issue a public statement affirming the Council holds leader duties only temporarily under Article 111 and calling on the Assembly of Experts to proceed promptly to elect a new supreme leader, without endorsing or opposing any candidate.\n承诺：Council will hand over leader duties upon election of a new supreme leader.\n触发或复核条件：Only if the Council judges a public clarification is needed.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement affirming the Council holds leader duties only temporarily under Article 111 and calling on the Assembly of Experts to proceed promptly to elect a new supreme leader, without endorsing or opposing any candidate.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "candidate_id": "agent_b3998935941058dc:initial:2",
+                  "action": "Publicly extend the waiting posture: urge supporters to stay home and remain organized, stating the final call will come only when conditions inside Iran make success plausible, and reject premature action.\n承诺：I will not issue the final call until conditions make success plausible; supporters should stay home and organized.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Issue the 'final call' publicly, urging supporters inside Iran to move against the government now, framing it as the decisive moment and calling for mass mobilization and seizure of state institutions.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly extend the waiting posture: urge supporters to stay home and remain organized, stating the final call will come only when conditions inside Iran make success plausible, and reject premature action.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The only in-window simulated developments show the Interim Leadership Council exercising leader duties under Article 111 while the Assembly of Experts deliberates without naming a candidate or date. That is evidence of an unresolved succession, not of Mojtaba Khamenei being removed, detained, or resigning, so Yes remains unlikely though not excluded.",
+                "evidence_quote": "The Assembly of Experts publicly affirmed the Interim Leadership Council's authority under Article 111 and stated that it is deliberating the election of a new Supreme Leader, without naming a candidate or setting a date.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.010799999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 4,
+        "available_actor_count": 4,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 4,
+            "active_actor_count": 4,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "edd547c5-ce82-4c70-a3e8-a5f8383aff84",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:18:36.967540+00:00",
+      "contract_id": "0x377e7fe65cf198a7fc4fdae3f2136b74729279267858daaf96718b23bc2a5607",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b36c49492c29d6250d060fe853a7c9c3091afcefd25a3993b75f4bc36b504733",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 80.519
+    },
+    {
+      "calls": 27,
+      "tokens": 400509,
+      "input_tokens": 379468,
+      "output_tokens": 21041,
+      "accounted_tokens_upper": 400509,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump restated that absent a deal and the reopening of the Strait of Hormuz, the United States will strike Iran's power plants, oil wells, Kharg Island, and desalinization plants."
+                },
+                {
+                  "action_id": "action_1_agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "status": "partial",
+                  "summary": "The Assembly of Experts conditioned any formal removal statement on first determining that an incumbent holds or claims the office; no such public determination was recorded this round."
+                },
+                {
+                  "action_id": "action_1_agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "status": "executed",
+                  "summary": "Reza Pahlavi publicly reaffirmed that supporters should stay home and await his signal, citing the absence of conditions for a decisive move, and set no new timeline for the 'final call'."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_a1f7c183d2895241",
+                    "action_1_agent_b3998935941058dc"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Reza Pahlavi publicly reaffirmed that supporters should stay home and await his signal, citing the absence of conditions for a decisive move, and set no new timeline for the 'final call'."
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "The Assembly of Experts conditioned any formal removal statement on first determining that an incumbent holds or claims the office; no such public determination was recorded this round.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Donald Trump restated that absent a deal and the reopening of the Strait of Hormuz, the United States will strike Iran's power plants, oil wells, Kharg Island, and desalinization plants.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Reza Pahlavi publicly reaffirmed that supporters should stay home and await his signal, citing the absence of conditions for a decisive move, and set no new timeline for the 'final call'.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "The Assembly of Experts conditioned any formal removal statement on first determining that an incumbent holds or claims the office; no such public determination was recorded this round.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                  "action": "Restate the conditional threat: absent a deal and reopening of the Strait of Hormuz, the U.S. will strike Iran's power plants, oil wells, Kharg Island, and desalinization plants.\n触发或复核条件：If no deal is reached and the Strait of Hormuz is not reopened.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly reiterate that the U.S. objective remains preventing Iran from reconstituting a hostile leadership, and warn that any new Supreme Leader hostile to U.S. interests will face continued military and economic pressure.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Restate the conditional threat: absent a deal and reopening of the Strait of Hormuz, the U.S. will strike Iran's power plants, oil wells, Kharg Island, and desalinization plants.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:2",
+                  "action": "The Assembly of Experts issues a formal public statement removing any incumbent de facto leader and affirming the Interim Leadership Council's authority pending election.\n承诺：Formally declare the incumbent removed and reaffirm the interim council's Article 111 authority.\n触发或复核条件：The Assembly determines the incumbent holds or claims the office.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "The Assembly of Experts convenes and formally elects a new Supreme Leader under Article 111, concluding the interim period and publicly announcing the result.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "The Assembly of Experts issues a formal public statement removing any incumbent de facto leader and affirming the Interim Leadership Council's authority pending election.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "candidate_id": "agent_f5591bb442a25898:initial:2",
+                  "action": null,
+                  "p_selected": 0.35,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Issue a public statement that the Interim Leadership Council continues to exercise the duties of the Supreme Leader under Article 111 pending the Assembly of Experts' election of a new supreme leader, and that no individual has been designated de facto leader in the interim.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "candidate_id": "agent_b3998935941058dc:initial:2",
+                  "action": "Publicly reaffirm that supporters should stay home and await my signal, citing the absence of conditions for a decisive move, and set no new timeline for the 'final call'.\n承诺：Maintains the wait posture without committing to a date for action.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue the long-promised 'final call' publicly, urging supporters inside Iran to take to the streets and move to overthrow the government, framing this as the moment to act rather than wait.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly reaffirm that supporters should stay home and await my signal, citing the absence of conditions for a decisive move, and set no new timeline for the 'final call'.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled event shows Mojtaba Khamenei removed, detained, or displaced; the Assembly of Experts made no public determination, and Pahlavi withheld his 'final call' with no new timeline. Military pressure and internal paralysis raise risk, but the qualifying action remains unobserved.",
+                "evidence_quote": "The Assembly of Experts conditioned any formal removal statement on first determining that an incumbent holds or claims the office; no such public determination was recorded this round.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_003",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.0105
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly reiterated that regime change in Iran remains the objective and warned that if no deal is reached and the Strait of Hormuz is not reopened, the US will strike Iran's power plants, oil wells, Kharg Island and desalinization plants, again urging the Iranian opposition and security forces to move against the current leadership; no new strike was ordered."
+                },
+                {
+                  "action_id": "action_1_agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "status": "partial",
+                  "summary": "The Assembly of Experts announced it was convening to elect a new Supreme Leader under Article 111, stating its intent to publicly name the new officeholder and thereby end any claim that Mojtaba Khamenei acts as de facto leader; no vote count, quorum or named successor was observed."
+                },
+                {
+                  "action_id": "action_1_agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "status": "executed",
+                  "summary": "The Interim Leadership Council issued a public statement confirming it continues to exercise the duties of the Supreme Leader under Article 111 pending the Assembly of Experts' election of a new supreme leader, and called on the Assembly to complete that election without delay."
+                },
+                {
+                  "action_id": "action_1_agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "status": "executed",
+                  "summary": "Reza Pahlavi issued the long-promised public 'final call' urging supporters inside Iran to move against the government now, framing it as the decisive moment while the leadership remains paralyzed and divided; no mass response or government collapse was observed."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_ee8d72e843315352",
+                    "action_1_agent_f5591bb442a25898"
+                  ],
+                  "outcome": "pending",
+                  "effect": "called on the Assembly to complete that election without delay"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_a1f7c183d2895241",
+                    "action_1_agent_b3998935941058dc"
+                  ],
+                  "outcome": "pending",
+                  "effect": "again urging the Iranian opposition and security forces to move against the current leadership"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Donald Trump publicly reiterated that regime change in Iran remains the objective and warned that if no deal is reached and the Strait of Hormuz is not reopened, the US will strike Iran's power plants, oil wells, Kharg Island and desalinization plants, again urging the Iranian opposition and security forces to move against the current leadership; no new strike was ordered.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "The Interim Leadership Council issued a public statement confirming it continues to exercise the duties of the Supreme Leader under Article 111 pending the Assembly of Experts' election of a new supreme leader, and called on the Assembly to complete that election without delay.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0002_001_003",
+                  "text": "The Assembly of Experts announced it was convening to elect a new Supreme Leader under Article 111, stating its intent to publicly name the new officeholder and thereby end any claim that Mojtaba Khamenei acts as de facto leader; no vote count, quorum or named successor was observed.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0002_001_004",
+                  "text": "Reza Pahlavi issued the long-promised public 'final call' urging supporters inside Iran to move against the government now, framing it as the decisive moment while the leadership remains paralyzed and divided; no mass response or government collapse was observed.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                  "action": "Publicly reiterate that regime change in Iran remains the objective and warn that if no deal is reached and the Strait of Hormuz is not reopened, the US will strike Iran's power plants, oil wells, Kharg Island and desalinization plants, while again urging the Iranian opposition and security forces to move against the current leadership.\n承诺：Reaffirm the conditional strike threat tied to a deal and Hormuz reopening; no new strike is ordered this round.\n触发或复核条件：If no deal is reached and Hormuz remains closed, strikes follow.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reiterate that regime change in Iran remains the objective and warn that if no deal is reached and the Strait of Hormuz is not reopened, the US will strike Iran's power plants, oil wells, Kharg Island and desalinization plants, while again urging the Iranian opposition and security forces to move against the current leadership.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:1",
+                  "action": "Convene and elect a new Supreme Leader under Article 111, concluding the interim period. Publicly announce the election result and the new officeholder, thereby ending any claim that Mojtaba Khamenei acts as de facto leader.\n承诺：Complete the Article 111 election and publicly name the new Supreme Leader before 31 December 2026.\n触发或复核条件：Proceed once the Assembly can convene with sufficient membership despite disrupted communications.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Convene and elect a new Supreme Leader under Article 111, concluding the interim period. Publicly announce the election result and the new officeholder, thereby ending any claim that Mojtaba Khamenei acts as de facto leader.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a formal public declaration that the Assembly of Experts does not recognize Mojtaba Khamenei as Supreme Leader and that leadership rests with the Interim Leadership Council pending election, inviting the Council to confirm assumption of duties.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "candidate_id": "agent_f5591bb442a25898:initial:1",
+                  "action": "Issue a public statement confirming the Interim Leadership Council continues to exercise the duties of the Supreme Leader under Article 111 pending the Assembly of Experts' election of a new supreme leader, and call on the Assembly to complete that election without delay.\n承诺：Council holds leader duties only until a new supreme leader is elected; it will not claim permanent leadership.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Issue a public statement confirming the Interim Leadership Council continues to exercise the duties of the Supreme Leader under Article 111 pending the Assembly of Experts' election of a new supreme leader, and call on the Assembly to complete that election without delay.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "candidate_id": "agent_b3998935941058dc:initial:1",
+                  "action": "Issue the long-promised public 'final call' urging supporters inside Iran to move against the government now, framing it as the decisive moment while the leadership remains paralyzed and divided.\n承诺：I call on supporters to act now, not to wait further; this is the signal they have been told to await.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue the long-promised public 'final call' urging supporters inside Iran to move against the government now, framing it as the decisive moment while the leadership remains paralyzed and divided.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly restate that supporters should stay home and stay safe for now, and that the 'final call' will come only once the regime's security forces visibly fracture; no date set.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The only in-window developments are announcements of intent: the Assembly of Experts said it would convene to elect a successor, and the Interim Leadership Council confirmed it is exercising Article 111 duties. No vote, removal, detention, or resignation of Mojtaba Khamenei was observed, so the qualifying event remains unverified.",
+                "evidence_quote": "The Assembly of Experts announced it was convening to elect a new Supreme Leader under Article 111, stating its intent to publicly name the new officeholder and thereby end any claim that Mojtaba Khamenei acts as de facto leader; no vote count, quorum or named successor was observed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_003",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.18864999999999996
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 8,
+        "public_event_count": 7,
+        "substantive_public_event_count": 7,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 4,
+        "available_actor_count": 4,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 4,
+            "active_actor_count": 4,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 4,
+            "active_actor_count": 4,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.235,
+      "covered_p_yes": 0.235,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.235,
+        0.23499999999999988
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "56867ec9-1169-486f-9de1-eb1fe8c8fe10",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:19:37.377926+00:00",
+      "contract_id": "0x377e7fe65cf198a7fc4fdae3f2136b74729279267858daaf96718b23bc2a5607",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b36c49492c29d6250d060fe853a7c9c3091afcefd25a3993b75f4bc36b504733",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 60.408
+    },
+    {
+      "calls": 51,
+      "tokens": 731432,
+      "input_tokens": 697146,
+      "output_tokens": 34286,
+      "accounted_tokens_upper": 731432,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly renewed his call for the Iranian opposition and security forces to seize the opportunity and take over their government, framing it as the moment to act, without announcing new military operations."
+                },
+                {
+                  "action_id": "action_1_agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "status": "executed",
+                  "summary": "Reza Pahlavi issued his long-promised 'final call', publicly urging supporters to take to the streets and move to overthrow the government, framing the post-Khamenei leadership transition as the moment to act."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Donald Trump publicly renewed his call for the Iranian opposition and security forces to seize the opportunity and take over their government, framing it as the moment to act, without announcing new military operations.",
+                  "date": "2026-11-10"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Reza Pahlavi issued his long-promised 'final call', publicly urging supporters to take to the streets and move to overthrow the government, framing the post-Khamenei leadership transition as the moment to act.",
+                  "date": "2026-11-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                  "action": "Publicly renew the call for the Iranian opposition and security forces to seize the opportunity and take over their government, framing it as the moment to act, without announcing new military operations.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly reiterate that if no deal is reached and the Strait of Hormuz is not reopened, the US will strike Iran's power plants, oil wells, Kharg Island, and possibly desalinization plants — restating the existing 30 March conditional threat as still live rather than announcing new strikes this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly renew the call for the Iranian opposition and security forces to seize the opportunity and take over their government, framing it as the moment to act, without announcing new military operations.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "candidate_id": "agent_f5591bb442a25898:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement that the Interim Leadership Council continues to exercise the duties of the Supreme Leader under Article 111 pending the Assembly of Experts' election of a new supreme leader, and call on the Assembly to complete that election promptly.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "candidate_id": "agent_b3998935941058dc:initial:2",
+                  "action": "Issue the long-promised 'final call', publicly urging supporters to take to the streets and move to overthrow the government, framing the post-Khamenei leadership transition as the moment to act.\n承诺：Supporters are called to act now to overthrow the government.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement declining to give the 'final call' now, citing the absence of an uprising and the risk of unarmed civilians facing state forces; urge supporters to stay home and keep organizing peacefully while he continues to assess conditions.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Issue the long-promised 'final call', publicly urging supporters to take to the streets and move to overthrow the government, framing the post-Khamenei leadership transition as the moment to act.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Evidence shows Ali Khamenei was assassinated in February 2026 and an Interim Leadership Council took over, but no source confirms Mojtaba Khamenei ever held or lost the de facto leadership role. Leadership paralysis and continued strikes raise instability, yet the specific outcome remains unverified.",
+                "evidence_quote": "The article was invoked for the first time following the assassination of Ali Khamenei in 2026, by which an interim council comprising President Masoud Pezeshkian, Chief Justice Gholam-Hossein Mohseni-Eje'i and Alireza Arafi of the Guardian Council was established pending the election of a new supreme leader.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Evidence shows Ali Khamenei was assassinated in February 2026 and an Interim Leadership Council took over, but no source confirms Mojtaba Khamenei ever held or lost the de facto leadership role. Leadership paralysis and continued strikes raise instability, yet the specific outcome remains unverified.",
+                "evidence_quote": "The article was invoked for the first time following the assassination of Ali Khamenei in 2026, by which an interim council comprising President Masoud Pezeshkian, Chief Justice Gholam-Hossein Mohseni-Eje'i and Alireza Arafi of the Guardian Council was established pending the election of a new supreme leader.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Evidence shows Ali Khamenei was assassinated in February 2026 and an Interim Leadership Council took over, but no source confirms Mojtaba Khamenei ever held or lost the de facto leadership role. Leadership paralysis and continued strikes raise instability, yet the specific outcome remains unverified.",
+                "evidence_quote": "The article was invoked for the first time following the assassination of Ali Khamenei in 2026, by which an interim council comprising President Masoud Pezeshkian, Chief Justice Gholam-Hossein Mohseni-Eje'i and Alireza Arafi of the Guardian Council was established pending the election of a new supreme leader.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly reiterated that the Iranian people and security forces should seize the moment to take over their government and warned that continued repression would bring consequences, without announcing new military operations."
+                },
+                {
+                  "action_id": "action_4_agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "status": "executed",
+                  "summary": "Reza Pahlavi publicly reiterated his 'final call', setting a concrete trigger that if security forces do not defect or the government does not begin a transition by year-end, supporters should escalate to sustained strikes and civil disobedience, and called on the IRGC and police to stand down and join the transition."
+                },
+                {
+                  "action_id": "action_4_agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "status": "executed",
+                  "summary": "The Interim Leadership Council issued a public statement reaffirming its temporary caretaker role under Article 111, calling for calm and rejecting external calls for violent overthrow, without claiming to have replaced or removed any supreme leader."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_4_agent_a1f7c183d2895241",
+                    "action_4_agent_b3998935941058dc",
+                    "action_4_agent_f5591bb442a25898"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "The Interim Leadership Council issued a public statement reaffirming its temporary caretaker role under Article 111, calling for calm and rejecting external calls for violent overthrow"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "The Interim Leadership Council issued a public statement reaffirming its temporary caretaker role under Article 111, calling for calm and rejecting external calls for violent overthrow, without claiming to have replaced or removed any supreme leader.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Donald Trump publicly reiterated that the Iranian people and security forces should seize the moment to take over their government and warned that continued repression would bring consequences, without announcing new military operations.",
+                  "date": "2026-12-12"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "Reza Pahlavi publicly reiterated his 'final call', setting a concrete trigger that if security forces do not defect or the government does not begin a transition by year-end, supporters should escalate to sustained strikes and civil disobedience, and called on the IRGC and police to stand down and join the transition.",
+                  "date": "2026-12-14"
+                },
+                {
+                  "id": "sim_0001_004_003",
+                  "text": "The Interim Leadership Council issued a public statement reaffirming its temporary caretaker role under Article 111, calling for calm and rejecting external calls for violent overthrow, without claiming to have replaced or removed any supreme leader.",
+                  "date": "2026-12-16"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                  "action": "Publicly reiterate that the Iranian people and security forces should seize the moment to take over their government, and warn that continued repression will bring consequences, without announcing new military operations this round.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reiterate that the Iranian people and security forces should seize the moment to take over their government, and warn that continued repression will bring consequences, without announcing new military operations this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:supplement:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly restate that if Iran does not reach a deal and reopen the Strait of Hormuz, the U.S. will strike Iran's power plants, oil wells, Kharg Island and desalinization plants, setting a clear deadline for compliance.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                      "action": "Publicly restate that if Iran does not reach a deal and reopen the Strait of Hormuz, the U.S. will strike Iran's power plants, oil wells, Kharg Island and desalinization plants, setting a clear deadline for compliance.",
+                      "code": "program_rejected"
+                    },
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:supplement:1",
+                      "action": "Publicly reiterate that the Iranian people and security forces should seize the moment to take over their government, and warn that continued repression will bring consequences, without announcing new military operations this round.",
+                      "code": "duplicate"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "candidate_id": "agent_b3998935941058dc:initial:1",
+                  "action": "Publicly reiterate the 'final call' and set a concrete trigger: if security forces do not defect or the government does not begin a transition by year-end, supporters should escalate to sustained strikes and civil disobedience; call on IRGC and police to stand down and join the transition.\n承诺：Escalation to sustained civil disobedience if no defections or transition steps by year-end.\n触发或复核条件：No security-force defections or visible transition by late December.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reiterate the 'final call' and set a concrete trigger: if security forces do not defect or the government does not begin a transition by year-end, supporters should escalate to sustained strikes and civil disobedience; call on IRGC and police to stand down and join the transition.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "candidate_id": "agent_f5591bb442a25898:initial:2",
+                  "action": "Issue a public statement reaffirming the Council's temporary caretaker role under Article 111, calling for calm and rejecting external calls for violent overthrow, without claiming to have replaced or removed any supreme leader.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Issue a public statement reaffirming the Council's temporary caretaker role under Article 111, calling for calm and rejecting external calls for violent overthrow, without claiming to have replaced or removed any supreme leader.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Evidence shows Ali Khamenei was assassinated in February 2026 and an Interim Leadership Council took over, but no source confirms Mojtaba Khamenei ever held or lost the de facto leadership role. Leadership paralysis and continued strikes raise instability, yet the specific outcome remains unverified.",
+                "evidence_quote": "The article was invoked for the first time following the assassination of Ali Khamenei in 2026, by which an interim council comprising President Masoud Pezeshkian, Chief Justice Gholam-Hossein Mohseni-Eje'i and Alireza Arafi of the Guardian Council was established pending the election of a new supreme leader.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled event shows Mojtaba Khamenei removed, detained, or displaced; the Interim Leadership Council reaffirmed its caretaker role without claiming to replace any supreme leader. Opposition 'final calls' and Trump appeals are rhetoric, not independent approval or execution of a leadership change.",
+                "evidence_quote": "The Interim Leadership Council issued a public statement reaffirming its temporary caretaker role under Article 111, calling for calm and rejecting external calls for violent overthrow, without claiming to have replaced or removed any supreme leader.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_003",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.0021168000000000003
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 8,
+        "public_event_count": 5,
+        "substantive_public_event_count": 5,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 4,
+        "available_actor_count": 4,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 8,
+            "active_actor_count": 4,
+            "public_event_count": 5,
+            "substantive_public_event_count": 5,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "5c398d47-8e2d-4399-8306-78d039d128ba",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:50:20.434007+00:00",
+      "contract_id": "0x377e7fe65cf198a7fc4fdae3f2136b74729279267858daaf96718b23bc2a5607",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b36c49492c29d6250d060fe853a7c9c3091afcefd25a3993b75f4bc36b504733",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 151.893
+    },
+    {
+      "calls": 130,
+      "tokens": 1864931,
+      "input_tokens": 1774926,
+      "output_tokens": 90005,
+      "accounted_tokens_upper": 1864931,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly called on the Iranian opposition and security forces to act now to remove the current leadership, offering immunity to those who lay down arms and stating that the U.S. will support a transition."
+                },
+                {
+                  "action_id": "action_1_agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "status": "executed",
+                  "summary": "The Assembly of Experts issued a formal statement declining to recognize Mojtaba Khamenei as de facto Supreme Leader absent its own election, asserting that leadership duties remain with the Interim Leadership Council until the Assembly completes a vote."
+                },
+                {
+                  "action_id": "action_1_agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "status": "executed",
+                  "summary": "Reza Pahlavi publicly stated that the 'final call' will come only when the security forces visibly fracture or a named trigger occurs, and that until then supporters should stay home; no uprising was called this round."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_a1f7c183d2895241",
+                    "action_1_agent_b3998935941058dc"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "no uprising was called this round"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "declining to recognize Mojtaba Khamenei as de facto Supreme Leader absent its own election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Donald Trump publicly called on the Iranian opposition and security forces to act now to remove the current leadership, offering immunity to those who lay down arms and stating that the U.S. will support a transition.",
+                  "date": "2026-11-10"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "The Assembly of Experts issued a formal statement declining to recognize Mojtaba Khamenei as de facto Supreme Leader absent its own election, asserting that leadership duties remain with the Interim Leadership Council until the Assembly completes a vote.",
+                  "date": "2026-11-12"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "Reza Pahlavi publicly stated that the 'final call' will come only when the security forces visibly fracture or a named trigger occurs, and that until then supporters should stay home; no uprising was called this round.",
+                  "date": "2026-11-14"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                  "action": "Publicly call on the Iranian opposition and security forces to act now to remove the current leadership, offering immunity to those who lay down arms, and state that the U.S. will support a transition.\n承诺：Public endorsement of opposition takeover and immunity offer to security forces.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly reiterate that U.S. pressure aims at Iranian regime change and warn that if Iran's leadership does not change and the Strait of Hormuz is not reopened, the U.S. will strike Iran's power plants, oil wells, Kharg Island and desalinization plants.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly call on the Iranian opposition and security forces to act now to remove the current leadership, offering immunity to those who lay down arms, and state that the U.S. will support a transition.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:2",
+                  "action": "The Assembly of Experts issues a formal statement declining to recognize Mojtaba Khamenei as de facto Supreme Leader absent its own election, and asserts that leadership duties remain with the Interim Leadership Council until the Assembly completes a vote.\n承诺：The Assembly commits to treating any unelected claim to the leadership as unrecognized and to retaining succession authority in itself pending a formal vote.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "The Assembly of Experts convenes in closed session to complete the Article 111 succession: it formally confirms the vacancy left by Ali Khamenei's assassination and proceeds to elect a new Supreme Leader, coordinating with the Interim Leadership Council to hand over the leader's duties once a successor is chosen.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "The Assembly of Experts issues a formal statement declining to recognize Mojtaba Khamenei as de facto Supreme Leader absent its own election, and asserts that leadership duties remain with the Interim Leadership Council until the Assembly completes a vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "candidate_id": "agent_f5591bb442a25898:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement that the Interim Leadership Council continues to exercise the duties of the Supreme Leader under Article 111 pending the Assembly of Experts' election of a new leader, and call on the Assembly to convene promptly to complete that election.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "candidate_id": "agent_b3998935941058dc:initial:2",
+                  "action": "Publicly state that the 'final call' will come only when the security forces visibly fracture or a named trigger occurs, and that until then supporters should stay home; no uprising is called this round.\n承诺：The final call will follow only a visible break in the security forces.\n触发或复核条件：Visible fracture of security forces or stated trigger.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue the long-promised 'final call' publicly, urging supporters inside Iran to move now against the government, framing the current paralysis of the leadership as the opening he told them to await.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly state that the 'final call' will come only when the security forces visibly fracture or a named trigger occurs, and that until then supporters should stay home; no uprising is called this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Evidence shows Ali Khamenei was assassinated in February 2026 and an Interim Leadership Council took over, but no source names Mojtaba Khamenei as de facto leader or reports his removal within the window. Leadership paralysis and continued strikes raise instability, yet the required in-window event is unconfirmed.",
+                "evidence_quote": "The article was invoked for the first time following the assassination of Ali Khamenei in 2026, by which an interim council comprising President Masoud Pezeshkian, Chief Justice Gholam-Hossein Mohseni-Eje'i and Alireza Arafi of the Guardian Council was established pending the election of a new supreme leader.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "status": "executed",
+                  "summary": "The Assembly of Experts publicly confirmed it is proceeding under Article 111 and announced it has convened to begin the process of electing a new Supreme Leader, reiterating that Mojtaba Khamenei is not recognized absent that vote and committing to complete a formal election vote rather than leaving succession indefinitely with the Interim Leadership Council."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "reiterating that Mojtaba Khamenei is not recognized absent that vote",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "The Assembly of Experts publicly confirmed it is proceeding under Article 111 and announced it has convened to begin the process of electing a new Supreme Leader, reiterating that Mojtaba Khamenei is not recognized absent that vote and committing to complete a formal election vote rather than leaving succession indefinitely with the Interim Leadership Council.",
+                  "date": "2026-11-24"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:1",
+                  "action": "The Assembly of Experts publicly confirms it is proceeding under Article 111 and announces it has convened to begin the process of electing a new Supreme Leader, while reiterating that Mojtaba Khamenei is not recognized absent that vote.\n承诺：The Assembly commits to completing a formal election vote under Article 111 rather than leaving succession indefinitely with the Interim Leadership Council.\n触发或复核条件：Proceeds only within the Assembly's own constitutional authority; no claim to displace the Interim Council's interim duties before a vote.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "The Assembly of Experts publicly confirms it is proceeding under Article 111 and announces it has convened to begin the process of electing a new Supreme Leader, while reiterating that Mojtaba Khamenei is not recognized absent that vote.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "The Assembly of Experts issues a public statement that it will hold its election vote on a defined schedule before the end of the year, and that until then it continues to withhold recognition of any unelected claimant to the leadership.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Evidence shows Ali Khamenei was assassinated in February 2026 and an Interim Leadership Council took over, but no source names Mojtaba Khamenei as de facto leader or reports his removal within the window. Leadership paralysis and continued strikes raise instability, yet the required in-window event is unconfirmed.",
+                "evidence_quote": "The article was invoked for the first time following the assassination of Ali Khamenei in 2026, by which an interim council comprising President Masoud Pezeshkian, Chief Justice Gholam-Hossein Mohseni-Eje'i and Alireza Arafi of the Guardian Council was established pending the election of a new supreme leader.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "status": "executed",
+                  "summary": "The Interim Leadership Council publicly confirmed that it continues to exercise leader duties under Article 111 only on a caretaker basis, that it does not claim the Supreme Leadership, and that it will transfer duties immediately to whoever the Assembly of Experts elects."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_3_agent_f5591bb442a25898",
+                    "action_2_agent_ee8d72e843315352"
+                  ],
+                  "outcome": "pending",
+                  "effect": "it will transfer duties immediately to whoever the Assembly of Experts elects"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "it will transfer duties immediately to whoever the Assembly of Experts elects",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "The Interim Leadership Council publicly confirmed that it continues to exercise leader duties under Article 111 only on a caretaker basis, that it does not claim the Supreme Leadership, and that it will transfer duties immediately to whoever the Assembly of Experts elects.",
+                  "date": "2026-12-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:3",
+                  "action": null,
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 45.0,
+                      "probability": 0.45,
+                      "action": "The Assembly of Experts publicly announces that it has completed its Article 111 election vote and names the new Supreme Leader, formally ending the interim-council phase and confirming that Mojtaba Khamenei holds no leadership role absent this vote.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "The Assembly of Experts publicly confirms it remains convened in the Article 111 election process, reiterates that Mojtaba Khamenei is not recognized absent its vote, and states it will announce the result once the vote concludes, without setting a date.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "candidate_id": "agent_f5591bb442a25898:initial:1",
+                  "action": "Issue a public statement confirming the Council continues to exercise leader duties under Article 111 only on a caretaker basis, that it does not claim the Supreme Leadership, and that it will transfer duties immediately to whoever the Assembly of Experts elects.\n承诺：Caretaker exercise only; immediate transfer of leader duties to the Assembly's elected successor.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement confirming the Council continues to exercise leader duties under Article 111 only on a caretaker basis, that it does not claim the Supreme Leadership, and that it will transfer duties immediately to whoever the Assembly of Experts elects.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Evidence shows Ali Khamenei was assassinated in February 2026 and an Interim Leadership Council took over, but no source names Mojtaba Khamenei as de facto leader or reports his removal within the window. Leadership paralysis and continued strikes raise instability, yet the required in-window event is unconfirmed.",
+                "evidence_quote": "The article was invoked for the first time following the assassination of Ali Khamenei in 2026, by which an interim council comprising President Masoud Pezeshkian, Chief Justice Gholam-Hossein Mohseni-Eje'i and Alireza Arafi of the Guardian Council was established pending the election of a new supreme leader.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly reiterated that the U.S. will not accept Mojtaba Khamenei as Supreme Leader and demanded the Assembly of Experts complete its Article 111 election promptly, warning that continued delay keeps U.S. pressure options open."
+                },
+                {
+                  "action_id": "action_4_agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "status": "executed",
+                  "summary": "The Assembly of Experts announced the completion of its Article 111 vote and proclaimed the newly elected Supreme Leader, stating that Mojtaba Khamenei was not elected and holds no leadership role, and that the Interim Leadership Council's caretaker duties now transfer to the new officeholder."
+                },
+                {
+                  "action_id": "action_4_agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_ee8d72e843315352",
+                    "action_3_agent_f5591bb442a25898"
+                  ],
+                  "outcome": "realized",
+                  "effect": "the Interim Leadership Council's caretaker duties now transfer to the new officeholder"
+                },
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_4_agent_a1f7c183d2895241",
+                    "action_4_agent_ee8d72e843315352"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "demanded the Assembly of Experts complete its Article 111 election promptly"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "pending",
+                  "after": "met",
+                  "summary": "Mojtaba Khamenei was not elected and holds no leadership role",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Donald Trump publicly reiterated that the U.S. will not accept Mojtaba Khamenei as Supreme Leader and demanded the Assembly of Experts complete its Article 111 election promptly, warning that continued delay keeps U.S. pressure options open.",
+                  "date": "2026-12-14"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "The Assembly of Experts announced the completion of its Article 111 vote and proclaimed the newly elected Supreme Leader, stating that Mojtaba Khamenei was not elected and holds no leadership role, and that the Interim Leadership Council's caretaker duties now transfer to the new officeholder.",
+                  "date": "2026-12-17"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                  "action": "Publicly reiterate that the U.S. will not accept Mojtaba Khamenei as Supreme Leader and demand the Assembly of Experts complete its Article 111 election promptly, warning that continued delay keeps U.S. pressure options open.\n承诺：Public rejection of Mojtaba Khamenei as leader and demand for a prompt Assembly election.\n触发或复核条件：If the Assembly delays or seats Mojtaba Khamenei, U.S. pressure options remain open.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly reiterate that the U.S. will not accept Mojtaba Khamenei as Supreme Leader and demand the Assembly of Experts complete its Article 111 election promptly, warning that continued delay keeps U.S. pressure options open.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly restate the standing threat: if no acceptable leadership outcome and Hormuz reopening occur, the U.S. will strike Iran's power plants, oil wells, Kharg Island and desalinization plants.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:1",
+                  "action": "The Assembly of Experts announces the completion of its Article 111 vote and proclaims the newly elected Supreme Leader, stating that Mojtaba Khamenei was not elected and holds no leadership role, and that the Interim Leadership Council's caretaker duties now transfer to the new officeholder.\n承诺：The Assembly commits to having concluded a formal Article 111 election vote and to transferring leader duties from the caretaker Council to the elected officeholder.\n触发或复核条件：Only if the Assembly's internal deliberations have produced a completed vote; otherwise no announcement this round.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "The Assembly of Experts announces the completion of its Article 111 vote and proclaims the newly elected Supreme Leader, stating that Mojtaba Khamenei was not elected and holds no leadership role, and that the Interim Leadership Council's caretaker duties now transfer to the new officeholder.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "The Assembly of Experts issues a public statement that its Article 111 election deliberations are ongoing, that no candidate has yet been elected, and that Mojtaba Khamenei remains unrecognized as de facto leader pending the vote, reaffirming the Interim Leadership Council's caretaker role.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "candidate_id": "agent_b3998935941058dc:initial:1",
+                  "action": "Keep the standing public position: the 'final call' comes only upon a visible fracture of the security forces or a named trigger; supporters stay home until then. No new announcement this round.\n承诺：Final call only after visible security-force fracture or named trigger.\n触发或复核条件：Review if security forces visibly fracture, a named trigger occurs, or the Assembly completes/abandons its election.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Keep the standing public position: the 'final call' comes only upon a visible fracture of the security forces or a named trigger; supporters stay home until then. No new announcement this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Evidence shows Ali Khamenei was assassinated in February 2026 and an Interim Leadership Council took over, but no source names Mojtaba Khamenei as de facto leader or reports his removal within the window. Leadership paralysis and continued strikes raise instability, yet the required in-window event is unconfirmed.",
+                "evidence_quote": "The article was invoked for the first time following the assassination of Ali Khamenei in 2026, by which an interim council comprising President Masoud Pezeshkian, Chief Justice Gholam-Hossein Mohseni-Eje'i and Alireza Arafi of the Guardian Council was established pending the election of a new supreme leader.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "status": "executed",
+                  "summary": "The Interim Leadership Council issued a public statement confirming that the Council has transferred its caretaker leader duties to the Supreme Leader elected by the Assembly of Experts on 17 December, that it makes no claim to the Supreme Leadership, and that it will support the new officeholder and assist an orderly handover."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "met",
+                  "after": "met",
+                  "summary": "the Council has transferred its caretaker leader duties to the Supreme Leader elected by the Assembly of Experts on 17 December",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_005_001",
+                  "text": "The Interim Leadership Council issued a public statement confirming that the Council has transferred its caretaker leader duties to the Supreme Leader elected by the Assembly of Experts on 17 December, that it makes no claim to the Supreme Leadership, and that it will support the new officeholder and assist an orderly handover.",
+                  "date": "2026-12-24"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "candidate_id": "agent_f5591bb442a25898:initial:1",
+                  "action": "Issue a public statement confirming the Council has transferred its caretaker leader duties to the Supreme Leader elected by the Assembly of Experts on 17 December, that it makes no claim to the Supreme Leadership, and that it will support the new officeholder and assist an orderly handover.\n承诺：Full transfer of caretaker leader duties to the Assembly's elected successor; no residual leadership claim.",
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "Issue a public statement confirming the Council has transferred its caretaker leader duties to the Supreme Leader elected by the Assembly of Experts on 17 December, that it makes no claim to the Supreme Leadership, and that it will support the new officeholder and assist an orderly handover.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.9,
+                "basis": "The Assembly of Experts completed its Article 111 vote on 17 December and proclaimed a new Supreme Leader, stating Mojtaba Khamenei was not elected and holds no leadership role; the Interim Leadership Council then transferred caretaker duties on 24 December. That is a settled in-window displacement, though the exact mechanism of his exclusion remains unverified.",
+                "evidence_quote": "The Assembly of Experts announced the completion of its Article 111 vote and proclaimed the newly elected Supreme Leader, stating that Mojtaba Khamenei was not elected and holds no leadership role, and that the Interim Leadership Council's caretaker duties now transfer to the new officeholder.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.9,
+          "error": null,
+          "action_path_probability": 0.000543312
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly reiterated that U.S. objectives in Iran include a leadership change and said Washington will keep applying military and economic pressure until Iran's leadership changes, calling on the Iranian opposition to act."
+                },
+                {
+                  "action_id": "action_1_agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "status": "executed",
+                  "summary": "The Assembly of Experts convened to deliberate on the vacancy in the Supreme Leader position created by the 2026 assassination and began the Article 111 process of selecting a new Supreme Leader, coordinating with the Interim Leadership Council that holds interim duties."
+                },
+                {
+                  "action_id": "action_1_agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "status": "executed",
+                  "summary": "Reza Pahlavi issued the long-deferred 'final call' publicly, urging supporters inside Iran to take to the streets and move against the government now, framing this as the decisive moment before the year ends."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_ee8d72e843315352",
+                    "action_1_agent_f5591bb442a25898"
+                  ],
+                  "outcome": "realized",
+                  "effect": "began the Article 111 process of selecting a new Supreme Leader, coordinating with the Interim Leadership Council that holds interim duties"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_a1f7c183d2895241",
+                    "action_1_agent_b3998935941058dc"
+                  ],
+                  "outcome": "pending",
+                  "effect": "calling on the Iranian opposition to act"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "began the Article 111 process of selecting a new Supreme Leader",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Donald Trump publicly reiterated that U.S. objectives in Iran include a leadership change and said Washington will keep applying military and economic pressure until Iran's leadership changes, calling on the Iranian opposition to act.",
+                  "date": "2026-11-09"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "The Assembly of Experts convened to deliberate on the vacancy in the Supreme Leader position created by the 2026 assassination and began the Article 111 process of selecting a new Supreme Leader, coordinating with the Interim Leadership Council that holds interim duties.",
+                  "date": "2026-11-10"
+                },
+                {
+                  "id": "sim_0002_001_003",
+                  "text": "Reza Pahlavi issued the long-deferred 'final call' publicly, urging supporters inside Iran to take to the streets and move against the government now, framing this as the decisive moment before the year ends.",
+                  "date": "2026-11-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                  "action": "Publicly reiterate that U.S. objectives in Iran include a leadership change and that Washington will keep applying military and economic pressure until Iran's leadership changes, while calling on the Iranian opposition to act.\n承诺：Sustained public pressure for leadership change through the end of the year.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reiterate that U.S. objectives in Iran include a leadership change and that Washington will keep applying military and economic pressure until Iran's leadership changes, while calling on the Iranian opposition to act.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Restate the standing threat: if no deal is reached and the Strait of Hormuz is not reopened, the U.S. will strike Iran's power plants, oil wells, Kharg Island and desalinization plants, and will target leadership if required.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:1",
+                  "action": "Convene the Assembly of Experts to deliberate on the vacancy in the Supreme Leader position created by the 2026 assassination, and begin the Article 111 process of selecting a new Supreme Leader, coordinating with the Interim Leadership Council that holds interim duties.\n承诺：Commit to opening the Article 111 election process this round; no candidate is endorsed yet.\n触发或复核条件：Proceeds only while the Interim Leadership Council continues to hold interim duties pending election.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Convene the Assembly of Experts to deliberate on the vacancy in the Supreme Leader position created by the 2026 assassination, and begin the Article 111 process of selecting a new Supreme Leader, coordinating with the Interim Leadership Council that holds interim duties.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "candidate_id": "agent_f5591bb442a25898:initial:1",
+                  "action": "Continue exercising the temporary duties of the Supreme Leader under Article 111 without a new public act this round, awaiting the Assembly of Experts' election of a new supreme leader.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Continue exercising the temporary duties of the Supreme Leader under Article 111 without a new public act this round, awaiting the Assembly of Experts' election of a new supreme leader.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement affirming the Council is exercising the Supreme Leader's duties under Article 111 only temporarily and calling on the Assembly of Experts to convene promptly to elect a new supreme leader, without asserting any removal of the incumbent.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "candidate_id": "agent_b3998935941058dc:initial:1",
+                  "action": "Issue the long-deferred 'final call' publicly, urging supporters inside Iran to take to the streets and move against the government now, framing this as the decisive moment before the year ends.\n承诺：I call on supporters to act now rather than wait further; I will not defer the signal again.",
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:1",
+                      "weight": 45.0,
+                      "probability": 0.45,
+                      "action": "Issue the long-deferred 'final call' publicly, urging supporters inside Iran to take to the streets and move against the government now, framing this as the decisive moment before the year ends.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Publicly reiterate the call to stay home for now and set an explicit trigger: I will issue the final call only if the Interim Leadership Council or Assembly of Experts moves to entrench a new supreme leader, or if security forces visibly fracture.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 4,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Public evidence shows decapitation strikes and external pressure aimed at regime change, but no verified removal, detention, or resignation of Mojtaba Khamenei within the window. The latest item is rhetorical pressure, not an executed leadership change, so the chance remains low though nonzero.",
+                "evidence_quote": "Donald Trump publicly reiterated that U.S. objectives in Iran include a leadership change and said Washington will keep applying military and economic pressure until Iran's leadership changes, calling on the Iranian opposition to act.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "status": "unknown",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:1",
+                  "action": "Conclude the Article 111 deliberations by formally electing a new Supreme Leader and publicly announcing the result, ending the Interim Leadership Council's interim duties upon the new officeholder's investiture.\n承诺：Commit to completing the election and public announcement this round, with the interim council standing down at investiture.\n触发或复核条件：Proceeds only if the Assembly's deliberations reach the required internal consensus; otherwise the process continues.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Conclude the Article 111 deliberations by formally electing a new Supreme Leader and publicly announcing the result, ending the Interim Leadership Council's interim duties upon the new officeholder's investiture.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Continue the Article 111 selection process by convening a further closed session to narrow candidates, and publicly reaffirm that the Assembly is proceeding in coordination with the Interim Leadership Council without external interference.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Public evidence shows decapitation strikes and external pressure aimed at regime change, but no verified removal, detention, or resignation of Mojtaba Khamenei within the window. The latest item is rhetorical pressure, not an executed leadership change, so the chance remains low though nonzero.",
+                "evidence_quote": "Donald Trump publicly reiterated that U.S. objectives in Iran include a leadership change and said Washington will keep applying military and economic pressure until Iran's leadership changes, calling on the Iranian opposition to act.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "status": "executed",
+                  "summary": "The Assembly of Experts publicly reaffirmed the Article 111 succession timeline and its coordination with the Interim Leadership Council, stating that closed deliberations on candidates for Supreme Leader continue and that no candidate is endorsed yet, with a decision to be announced once internal consensus forms."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_3_agent_ee8d72e843315352",
+                    "action_1_agent_ee8d72e843315352"
+                  ],
+                  "outcome": "realized",
+                  "effect": "closed deliberations on candidates for Supreme Leader continue"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "closed deliberations on candidates for Supreme Leader continue",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "The Assembly of Experts publicly reaffirmed the Article 111 succession timeline and its coordination with the Interim Leadership Council, stating that closed deliberations on candidates for Supreme Leader continue and that no candidate is endorsed yet, with a decision to be announced once internal consensus forms.",
+                  "date": "2026-12-04"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:2",
+                  "action": "Continue closed deliberations on candidates for Supreme Leader, publicly reaffirming the Article 111 timeline and coordination with the Interim Leadership Council without endorsing any candidate yet.\n承诺：Commit to continuing deliberations and to announcing a decision once internal consensus forms.\n触发或复核条件：Proceeds while the Interim Leadership Council holds interim duties.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Conclude the Article 111 process by formally electing a new Supreme Leader and publicly announcing the result, with the Interim Leadership Council standing down at investiture.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Continue closed deliberations on candidates for Supreme Leader, publicly reaffirming the Article 111 timeline and coordination with the Interim Leadership Council without endorsing any candidate yet.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Public evidence shows decapitation strikes and external pressure aimed at regime change, but no verified removal, detention, or resignation of Mojtaba Khamenei within the window. The latest item is rhetorical pressure, not an executed leadership change, so the chance remains low though nonzero.",
+                "evidence_quote": "Donald Trump publicly reiterated that U.S. objectives in Iran include a leadership change and said Washington will keep applying military and economic pressure until Iran's leadership changes, calling on the Iranian opposition to act.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly restated that, absent a deal and a reopening of the Strait of Hormuz, the United States would strike Iran's power plants, oil wells, Kharg Island, and possibly its desalinization plants; no strike was reported."
+                },
+                {
+                  "action_id": "action_4_agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "status": "partial",
+                  "summary": "The Assembly of Experts ended its December session without a public announcement of a newly elected Supreme Leader, leaving the Article 111 vacancy and the Interim Leadership Council's caretaker duties in place."
+                },
+                {
+                  "action_id": "action_4_agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_ee8d72e843315352",
+                    "action_4_agent_f5591bb442a25898"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "leaving the Article 111 vacancy and the Interim Leadership Council's caretaker duties in place"
+                },
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_4_agent_a1f7c183d2895241",
+                    "action_4_agent_ee8d72e843315352"
+                  ],
+                  "outcome": "pending",
+                  "effect": "no strike was reported"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "ended its December session without a public announcement of a newly elected Supreme Leader",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "Donald Trump publicly restated that, absent a deal and a reopening of the Strait of Hormuz, the United States would strike Iran's power plants, oil wells, Kharg Island, and possibly its desalinization plants; no strike was reported.",
+                  "date": "2026-12-15"
+                },
+                {
+                  "id": "sim_0002_004_002",
+                  "text": "The Assembly of Experts ended its December session without a public announcement of a newly elected Supreme Leader, leaving the Article 111 vacancy and the Interim Leadership Council's caretaker duties in place.",
+                  "date": "2026-12-18"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a1f7c183d2895241",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                  "action": "Publicly restate the conditional threat: absent a deal and reopening of the Strait of Hormuz, the U.S. would strike Iran's power plants, oil wells, Kharg Island, and possibly desalinization plants.\n承诺：Threat executed only if no deal and Hormuz remains closed.\n触发或复核条件：No deal reached and Strait of Hormuz not reopened.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reiterate that U.S. objectives include a leadership change in Iran and that military and economic pressure will continue until Iran's leadership changes, again urging the Iranian opposition to act before year end.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_a1f7c183d2895241:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly restate the conditional threat: absent a deal and reopening of the Strait of Hormuz, the U.S. would strike Iran's power plants, oil wells, Kharg Island, and possibly desalinization plants.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ee8d72e843315352",
+                  "actor_name": "Assembly of Experts",
+                  "candidate_id": "agent_ee8d72e843315352:initial:1",
+                  "action": "Conclude Article 111 deliberations by formally electing a new Supreme Leader and publicly announcing the result, with the Interim Leadership Council standing down at investiture.\n承诺：Commit to completing the election and public announcement this round if internal consensus is reached.\n触发或复核条件：Proceeds only if the Assembly reaches the required internal consensus; otherwise deliberations continue.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Conclude Article 111 deliberations by formally electing a new Supreme Leader and publicly announcing the result, with the Interim Leadership Council standing down at investiture.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ee8d72e843315352:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Continue closed deliberations on candidates for Supreme Leader, publicly reaffirming the Article 111 timeline and coordination with the Interim Leadership Council without endorsing any candidate yet.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f5591bb442a25898",
+                  "actor_name": "Interim Leadership Council",
+                  "candidate_id": "agent_f5591bb442a25898:initial:1",
+                  "action": "Continue exercising the temporary Article 111 leader duties without a new public act this round, leaving candidate selection to the Assembly of Experts.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Continue exercising the temporary Article 111 leader duties without a new public act this round, leaving candidate selection to the Assembly of Experts.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_f5591bb442a25898:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement confirming the Council continues caretaker duties under Article 111, that it defers to the Assembly of Experts on candidate selection, and urging the Assembly to complete consensus before year-end to preserve continuity.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_b3998935941058dc",
+                  "actor_name": "Reza Pahlavi",
+                  "candidate_id": "agent_b3998935941058dc:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b3998935941058dc:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reiterate that the final call stands and that the decisive moment is now, urging supporters inside Iran to act before year-end rather than wait for further signals; call on the Assembly of Experts' deliberations not to entrench the incumbent and demand a transparent succession.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 4,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The December Assembly of Experts session ended without electing a new Supreme Leader, leaving the Article 111 caretaker arrangement in place near the deadline. That continuity, plus no reported removal or detention of Mojtaba Khamenei, lowers the chance of a qualifying leadership change before December 31.",
+                "evidence_quote": "The Assembly of Experts ended its December session without a public announcement of a newly elected Supreme Leader, leaving the Article 111 vacancy and the Interim Leadership Council's caretaker duties in place.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Iran leadership change by December 31?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The Assembly of Experts ended its December session without electing a new Supreme Leader, leaving the Article 111 caretaker arrangement in place; no public report shows Mojtaba Khamenei removed, detained, or resigning. External pressure and Pahlavi's call are not execution, so the in-window change remains unverified.",
+                "evidence_quote": "The Assembly of Experts ended its December session without a public announcement of a newly elected Supreme Leader, leaving the Article 111 vacancy and the Interim Leadership Council's caretaker duties in place.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.0008251551
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 9,
+        "draw_rounds": 9,
+        "audited_silent_rounds": 1,
+        "sampled_decisions": 21,
+        "public_event_count": 14,
+        "substantive_public_event_count": 14,
+        "state_change_count": 2,
+        "condition_change_count": 3,
+        "active_actor_count": 4,
+        "available_actor_count": 4,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 5,
+            "draw_rounds": 5,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 11,
+            "active_actor_count": 4,
+            "public_event_count": 8,
+            "substantive_public_event_count": 8,
+            "state_change_count": 2,
+            "condition_change_count": 2,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 10,
+            "active_actor_count": 4,
+            "public_event_count": 6,
+            "substantive_public_event_count": 6,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.51,
+      "covered_p_yes": 0.51,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.51,
+        0.51
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "bd8c5571-d6c2-4a87-b97f-9a275d739c86",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:23:51.503944+00:00",
+      "contract_id": "0x377e7fe65cf198a7fc4fdae3f2136b74729279267858daaf96718b23bc2a5607",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b36c49492c29d6250d060fe853a7c9c3091afcefd25a3993b75f4bc36b504733",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 211.344
+    },
+    {
+      "calls": 127,
+      "tokens": 1769381,
+      "input_tokens": 1668360,
+      "output_tokens": 101021,
+      "accounted_tokens_upper": 1769381,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.476055560624,
+      "coverage": 0.149883624,
+      "unexplored_mass": 0.850116376,
+      "unknown_bounds": [
+        0.050997372624000004,
+        0.901113748624
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.6825067039999999,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.1188,
+          "visits": 9,
+          "search_value": 0.7485270222222222,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.08316,
+          "visits": 7,
+          "search_value": 0.7362947428571428,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.05821199999999999,
+          "visits": 3,
+          "search_value": 0.7043400000000001,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.012550507199999998,
+          "visits": 1,
+          "search_value": 0.8064,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.012550507199999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.72,
+          "frontier": true,
+          "contribution": 0.009036365183999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.010268596799999998,
+          "visits": 1,
+          "search_value": 0.945,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.007188017759999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.003953409767999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.0030805790399999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.3,
+          "frontier": true,
+          "contribution": 0.0009241737119999998
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.03539289599999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.024947999999999998,
+          "visits": 3,
+          "search_value": 0.8161210666666667,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.008557163999999997,
+          "visits": 1,
+          "search_value": 0.99,
+          "conditional_p_yes": 0.62,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.005990014799999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.0032945081399999993
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            1,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.002567149199999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.45,
+          "frontier": true,
+          "contribution": 0.0011552171399999997
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.0036673559999999997,
+          "visits": 1,
+          "search_value": 0.994,
+          "conditional_p_yes": 0.6,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.0022004136,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.00121022748
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.0014669423999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.5,
+          "frontier": true,
+          "contribution": 0.0007334711999999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            2,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.012723480000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.03564,
+          "visits": 1,
+          "search_value": 0.99,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.03564,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.019602
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.0792,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.14,
+          "frontier": true,
+          "contribution": 0.011088000000000002
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.802,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "74acb351-9e05-4164-9960-8ee0c7e0c242",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T03:36:50.917784+00:00",
+      "contract_id": "0x377e7fe65cf198a7fc4fdae3f2136b74729279267858daaf96718b23bc2a5607",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b36c49492c29d6250d060fe853a7c9c3091afcefd25a3993b75f4bc36b504733",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 395.907
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x377e7fe65cf198a7fc4fdae3f2136b74729279267858daaf96718b23bc2a5607",
+  "group_id": "iran-leadership-change-by",
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "b36c49492c29d6250d060fe853a7c9c3091afcefd25a3993b75f4bc36b504733",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 735,
+    "input_tokens": 628,
+    "output_tokens": 107,
+    "accounted_tokens_upper": 735,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 4,
+      "needs_evidence": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_17f1c14e37ca64d1",
+          "name": "Assembly of Experts",
+          "role": "Constitutional body that elects and can remove the Supreme Leader; under Article 111 it must elect a new supreme leader after removal or death.",
+          "decision_ids": [
+            "elect_or_remove_supreme_leader"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        },
+        {
+          "seat_id": "seat_2b7602f942eba8c2",
+          "name": "Interim Leadership Council",
+          "role": "Temporary body (President, Judiciary Chief, Guardian Council fuqaha member) assuming leader duties pending election of a new supreme leader under Article 111.",
+          "decision_ids": [
+            "assume_interim_leadership"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        },
+        {
+          "seat_id": "seat_c109cdda5dc6f388",
+          "name": "Donald Trump",
+          "role": "U.S. President who authorized Operation Epic Fury and called for regime change/opposition takeover; his decisions affect whether the leadership is decapitated or pressured out.",
+          "decision_ids": [
+            "authorize_military_strikes"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        },
+        {
+          "seat_id": "seat_9030f26fb8fd9147",
+          "name": "Benjamin Netanyahu",
+          "role": "Israeli Prime Minister who lobbied for and adopted plans to strike Iran's leadership and encourage uprising.",
+          "decision_ids": [
+            "adopt_strike_plan"
+          ],
+          "required": true,
+          "readiness": "needs_evidence"
+        },
+        {
+          "seat_id": "seat_2eb63d655937aeda",
+          "name": "Reza Pahlavi",
+          "role": "Prominent opposition figure urging supporters to await his 'final call' before overthrowing the government.",
+          "decision_ids": [
+            "call_for_overthrow"
+          ],
+          "required": false,
+          "readiness": "restricted"
+        }
+      ],
+      "missing_required": [
+        "Benjamin Netanyahu"
+      ],
+      "unresolved_requirements": [
+        "Mojtaba Khamenei is removed, detained, resigns, or is otherwise prevented from acting as de facto leader of Iran."
+      ],
+      "gaps": [
+        "No source identifies Mojtaba Khamenei as the current Supreme Leader; E3 references Ali Khamenei's assassination and an interim council, leaving the incumbent's identity and status unresolved.",
+        "The Assembly of Experts' current composition and willingness to act are unknown.",
+        "Whether the Interim Leadership Council has actually assumed duties or displaced Mojtaba Khamenei is not established by the sources.",
+        "No frozen source identifies Mojtaba Khamenei; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "elect_or_remove_supreme_leader",
+          "choice": "Assembly of Experts elects a new Supreme Leader or formally removes the incumbent, determining whether Mojtaba Khamenei ceases to be de facto leader.",
+          "owner": "Assembly of Experts",
+          "support": "represented"
+        },
+        {
+          "id": "assume_interim_leadership",
+          "choice": "Interim Leadership Council assumes the duties of the Supreme Leader pending election of a new leader, displacing the incumbent.",
+          "owner": "Interim Leadership Council",
+          "support": "represented"
+        },
+        {
+          "id": "cease_de_facto_leadership",
+          "choice": "Mojtaba Khamenei is removed, detained, resigns, or is otherwise prevented from acting as de facto leader of Iran.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "authorize_military_strikes",
+          "choice": "U.S. President authorizes or continues military strikes targeting Iran's leadership, enabling decapitation or pressure for leadership change.",
+          "owner": "Donald Trump",
+          "support": "represented"
+        },
+        {
+          "id": "adopt_strike_plan",
+          "choice": "Israeli Prime Minister adopts and pursues plans to strike Iran's leadership and encourage internal uprising.",
+          "owner": "Benjamin Netanyahu",
+          "support": "unbound"
+        },
+        {
+          "id": "call_for_overthrow",
+          "choice": "Opposition figure issues the 'final call' for supporters to overthrow the government, potentially precipitating leadership change.",
+          "owner": "Reza Pahlavi",
+          "support": "represented"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 29,
+    "tokens": 100157,
+    "input_tokens": 85287,
+    "output_tokens": 14870,
+    "accounted_tokens_upper": 100157,
+    "unknown_usage_requests": 0
+  }
+}

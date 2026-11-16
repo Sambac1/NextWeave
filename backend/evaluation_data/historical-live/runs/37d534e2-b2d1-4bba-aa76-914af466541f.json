@@ -1,0 +1,3102 @@
+{
+  "run_id": "37d534e2-b2d1-4bba-aa76-914af466541f",
+  "case_id": "market_479c01d6abdd7cfc6ada0ea1",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2452,
+      "input_tokens": 2442,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2452,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.55,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.55,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2442,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:24:58.457476+00:00",
+      "contract_id": "0x7340d11f38c12e86886114cf7d3e0f1063758de8b7ac81db7e580b797aa9dd75",
+      "forecast_cutoff": "2025-04-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "15d0a3c9ae19301a8b241745bbb43cc7bd257034148071a62adae139da7e3376",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.814
+    },
+    {
+      "calls": 2,
+      "tokens": 4904,
+      "input_tokens": 4884,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 4904,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.55,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.55,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2442,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.55,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2442,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:25:00.354118+00:00",
+      "contract_id": "0x7340d11f38c12e86886114cf7d3e0f1063758de8b7ac81db7e580b797aa9dd75",
+      "forecast_cutoff": "2025-04-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "15d0a3c9ae19301a8b241745bbb43cc7bd257034148071a62adae139da7e3376",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.895
+    },
+    {
+      "calls": 8,
+      "tokens": 82951,
+      "input_tokens": 78936,
+      "output_tokens": 4015,
+      "accounted_tokens_upper": 82951,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-04-25",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 251,
+                "interval_days": 251,
+                "interval_start_utc": "2025-04-25T23:59:59+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "status": "executed",
+                  "summary": "Rockstar Games issued an official public statement reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025 on PlayStation 5 and Xbox Series X/S, without announcing a new date or delay."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Rockstar Games issued an official public statement reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025 on PlayStation 5 and Xbox Series X/S",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Rockstar Games issued an official public statement reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025 on PlayStation 5 and Xbox Series X/S, without announcing a new date or delay.",
+                  "date": "2026-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                  "action": "Rockstar Games issues an official public statement reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025 on PlayStation 5 and Xbox Series X/S, without announcing a new date or delay.\n承诺：Reaffirm the existing late-2025 release window; no change to the announced schedule.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Rockstar Games issues an official public statement reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025 on PlayStation 5 and Xbox Series X/S, without announcing a new date or delay.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Rockstar Games officially announces a specific US release date for Grand Theft Auto VI within 2025 and confirms it will be publicly available for purchase or download on PS5 and Xbox Series X/S.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue an official Take-Two statement reaffirming that Grand Theft Auto VI remains scheduled for release in Q3/Q4 2025 in the US, without announcing a new date or delay.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The only in-window simulated event is a reaffirmation of the late-2025 schedule with no new date, and it is timestamped January 2026, after the December 31, 2025 deadline. Earlier reporting of development falling behind and a 2026 fallback plan, plus no observed release, point toward No.",
+                "evidence_quote": "Rockstar Games issued an official public statement reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025 on PlayStation 5 and Xbox Series X/S, without announcing a new date or delay.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.22000000000000003
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "c75fe5c2-0281-43be-a131-9a7768e274a4",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:25:35.242804+00:00",
+      "contract_id": "0x7340d11f38c12e86886114cf7d3e0f1063758de8b7ac81db7e580b797aa9dd75",
+      "forecast_cutoff": "2025-04-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "15d0a3c9ae19301a8b241745bbb43cc7bd257034148071a62adae139da7e3376",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 34.887
+    },
+    {
+      "calls": 101,
+      "tokens": 1178358,
+      "input_tokens": 1119864,
+      "output_tokens": 58494,
+      "accounted_tokens_upper": 1178358,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-04-25",
+                "interval_end": "2025-05-26",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 31,
+                "interval_days": 31,
+                "interval_start_utc": "2025-04-25T23:59:59+00:00",
+                "interval_end_utc": "2025-05-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publish an official Rockstar Games communication reaffirming the late-2025 release window for GTA VI on PS5 and Xbox Series X/S, without asserting the game has already released.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in Q3/Q4 2025 for PlayStation 5 and Xbox Series X/S, without announcing a new date or acknowledging any 2026 fallback.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-05-26",
+                "interval_end": "2025-06-26",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 62,
+                "interval_days": 31,
+                "interval_start_utc": "2025-05-26T00:00:00+00:00",
+                "interval_end_utc": "2025-06-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-06-26",
+                "interval_end": "2025-07-28",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 94,
+                "interval_days": 32,
+                "interval_start_utc": "2025-06-26T00:00:00+00:00",
+                "interval_end_utc": "2025-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-07-28",
+                "interval_end": "2025-08-28",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 125,
+                "interval_days": 31,
+                "interval_start_utc": "2025-07-28T00:00:00+00:00",
+                "interval_end_utc": "2025-08-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "status": "executed",
+                  "summary": "Take-Two Interactive issued an official statement reaffirming that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 for PlayStation 5 and Xbox Series X/S, with no change to the release window."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Take-Two Interactive issued an official statement reaffirming that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Take-Two Interactive issued an official statement reaffirming that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 for PlayStation 5 and Xbox Series X/S, with no change to the release window.",
+                  "date": "2025-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue an official Rockstar Games statement reaffirming the late-2025 release window for PS5 and Xbox Series X/S, without announcing a firm date, to counter the reported 2026 fallback.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:1",
+                  "action": "Issue an official Take-Two statement reaffirming that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 for PS5 and Xbox Series X/S, with no change to the window.\n承诺：Publicly reaffirm the Q3/Q4 2025 release window with no announced delay.\n触发或复核条件：No new information indicates the window is unattainable.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Issue an official Take-Two statement reaffirming that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 for PS5 and Xbox Series X/S, with no change to the window.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-08-28",
+                "interval_end": "2025-09-28",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 156,
+                "interval_days": 31,
+                "interval_start_utc": "2025-08-28T00:00:00+00:00",
+                "interval_end_utc": "2025-09-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-09-28",
+                "interval_end": "2025-10-30",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 188,
+                "interval_days": 32,
+                "interval_start_utc": "2025-09-28T00:00:00+00:00",
+                "interval_end_utc": "2025-10-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-10-30",
+                "interval_end": "2025-11-30",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 219,
+                "interval_days": 31,
+                "interval_start_utc": "2025-10-30T00:00:00+00:00",
+                "interval_end_utc": "2025-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "status": "executed",
+                  "summary": "Rockstar Games publicly reaffirmed that Grand Theft Auto VI remains on track for its late-2025 release window on PlayStation 5 and Xbox Series X/S, stating no schedule change is planned and making no claim that the game is yet available."
+                },
+                {
+                  "action_id": "action_7_agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "status": "executed",
+                  "summary": "Take-Two Interactive issued an official statement confirming that Grand Theft Auto VI remains scheduled for release within the Q3/Q4 2025 window on PlayStation 5 and Xbox Series X/S, reaffirming the schedule with no announced delay."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_7_agent_d2cbb8c3652f5aff",
+                    "action_7_agent_3898a51e672658c9"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Take-Two Interactive issued an official statement confirming that Grand Theft Auto VI remains scheduled for release within the Q3/Q4 2025 window on PlayStation 5 and Xbox Series X/S, reaffirming the schedule with no announced delay"
+                },
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_4_agent_3898a51e672658c9",
+                    "action_7_agent_3898a51e672658c9"
+                  ],
+                  "outcome": "realized",
+                  "effect": "reaffirming the schedule with no announced delay"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Take-Two Interactive issued an official statement confirming that Grand Theft Auto VI remains scheduled for release within the Q3/Q4 2025 window on PlayStation 5 and Xbox Series X/S, reaffirming the schedule with no announced delay",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_007_001",
+                  "text": "Rockstar Games publicly reaffirmed that Grand Theft Auto VI remains on track for its late-2025 release window on PlayStation 5 and Xbox Series X/S, stating no schedule change is planned and making no claim that the game is yet available.",
+                  "date": "2025-11"
+                },
+                {
+                  "id": "sim_0001_007_002",
+                  "text": "Take-Two Interactive issued an official statement confirming that Grand Theft Auto VI remains scheduled for release within the Q3/Q4 2025 window on PlayStation 5 and Xbox Series X/S, reaffirming the schedule with no announced delay.",
+                  "date": "2025-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                  "action": "Rockstar Games publicly reaffirms the late-2025 release window for PS5 and Xbox Series X/S, stating development remains on track and no schedule change is planned, without claiming the game is yet available.\n承诺：Public reaffirmation of the late-2025 window with no change.\n触发或复核条件：Internal review finds the window still attainable.",
+                  "p_selected": 0.35,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                      "weight": 45.0,
+                      "probability": 0.45,
+                      "action": "Rockstar Games officially confirms via its channels that Grand Theft Auto VI is released and publicly available for purchase/download in the US on PlayStation 5 and Xbox Series X/S, satisfying the contract's release definition.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Rockstar Games publicly reaffirms the late-2025 release window for PS5 and Xbox Series X/S, stating development remains on track and no schedule change is planned, without claiming the game is yet available.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:1",
+                  "action": "Issue an official Take-Two statement confirming Grand Theft Auto VI's release date for PS5 and Xbox Series X/S within the Q3/Q4 2025 window, reaffirming the schedule with no delay.\n承诺：Publicly confirm a release date within Q3/Q4 2025 with no announced delay.\n触发或复核条件：No new information indicates the window is unattainable.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Issue an official Take-Two statement confirming Grand Theft Auto VI's release date for PS5 and Xbox Series X/S within the Q3/Q4 2025 window, reaffirming the schedule with no delay.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Hold current public position reaffirming the Q3/Q4 2025 window and take no new outward act this round, monitoring Rockstar's development progress.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-11-30",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 251,
+                "interval_days": 32,
+                "interval_start_utc": "2025-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Repeated official reaffirmations through November 2025 kept the Q3/Q4 2025 window intact, but no evidence shows the game became publicly available before the deadline. The target event is still pending, and the March 2025 reporting of a possible 2026 fallback plus the absence of any release announcement leave the outcome unverified.",
+                "evidence_quote": "Take-Two Interactive issued an official statement confirming that Grand Theft Auto VI remains scheduled for release within the Q3/Q4 2025 window on PlayStation 5 and Xbox Series X/S, reaffirming the schedule with no announced delay.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "sim_0001_007_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.015563625000000001
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-04-25",
+                "interval_end": "2025-05-26",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 31,
+                "interval_days": 31,
+                "interval_start_utc": "2025-04-25T23:59:59+00:00",
+                "interval_end_utc": "2025-05-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "status": "executed",
+                  "summary": "Rockstar Games published an official announcement confirming a specific 2025 release date for Grand Theft Auto VI on PlayStation 5 and Xbox Series X/S, publicly committing to that date within the late-2025 window."
+                },
+                {
+                  "action_id": "action_1_agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "status": "executed",
+                  "summary": "Take-Two Interactive publicly reaffirmed that Grand Theft Auto VI remains scheduled for the third or fourth quarter of 2025, without announcing a specific date, and stated it will update if timing changes."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_d2cbb8c3652f5aff",
+                    "action_1_agent_3898a51e672658c9"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Take-Two Interactive publicly reaffirmed that Grand Theft Auto VI remains scheduled for the third or fourth quarter of 2025"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Rockstar Games published an official announcement confirming a specific 2025 release date for Grand Theft Auto VI on PlayStation 5 and Xbox Series X/S",
+                  "pending_actor_ids": [
+                    "agent_3898a51e672658c9"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Rockstar Games published an official announcement confirming a specific 2025 release date for Grand Theft Auto VI on PlayStation 5 and Xbox Series X/S, publicly committing to that date within the late-2025 window.",
+                  "date": "2025-05"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Take-Two Interactive publicly reaffirmed that Grand Theft Auto VI remains scheduled for the third or fourth quarter of 2025, without announcing a specific date, and stated it will update if timing changes.",
+                  "date": "2025-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                  "action": "Publish an official Rockstar announcement confirming GTA VI's release date within the late-2025 window for PS5 and Xbox Series X/S, committing publicly to that date.\n承诺：Publicly commit to a specific 2025 release date for PS5 and Xbox Series X/S.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Take no new outward act this round: keep the existing late-2025 PS5/Xbox Series X/S window without issuing a new release-date confirmation, delay notice, or marketing beat.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publish an official Rockstar announcement confirming GTA VI's release date within the late-2025 window for PS5 and Xbox Series X/S, committing publicly to that date.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:3",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Officially announce that GTA VI will move from the late-2025 window to 2026, stating the revised target via Rockstar's official channels.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:2",
+                  "action": "Take-Two publicly reaffirms that GTA VI remains scheduled for the third or fourth quarter of 2025, without announcing a specific date, and states it will update if timing changes.\n承诺：Reaffirm Q3/Q4 2025 scheduling only; no specific release date is committed.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Take-Two publicly reaffirms that GTA VI remains scheduled for the third or fourth quarter of 2025, without announcing a specific date, and states it will update if timing changes.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-05-26",
+                "interval_end": "2025-06-26",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 62,
+                "interval_days": 31,
+                "interval_start_utc": "2025-05-26T00:00:00+00:00",
+                "interval_end_utc": "2025-06-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "status": "executed",
+                  "summary": "Take-Two Interactive publicly endorsed Rockstar's confirmed 2025 release date for Grand Theft Auto VI on PlayStation 5 and Xbox Series X/S as its official schedule, stating it will announce any timing change through official channels."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_2_agent_3898a51e672658c9",
+                    "action_1_agent_d2cbb8c3652f5aff"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Take-Two Interactive publicly endorsed Rockstar's confirmed 2025 release date for Grand Theft Auto VI on PlayStation 5 and Xbox Series X/S as its official schedule"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Take-Two Interactive publicly endorsed Rockstar's confirmed 2025 release date for Grand Theft Auto VI on PlayStation 5 and Xbox Series X/S as its official schedule",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "Take-Two Interactive publicly endorsed Rockstar's confirmed 2025 release date for Grand Theft Auto VI on PlayStation 5 and Xbox Series X/S as its official schedule, stating it will announce any timing change through official channels.",
+                  "date": "2025-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:1",
+                  "action": "Take-Two publicly states it has reviewed Rockstar's confirmed 2025 release date for GTA VI on PS5 and Xbox Series X/S and endorses that date as its official schedule, adding that it will announce any change through official channels if timing shifts.\n承诺：Endorse Rockstar's specific 2025 date as Take-Two's official schedule; no new date is set.\n触发或复核条件：If timing changes, Take-Two will update publicly.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Take-Two publicly states it has reviewed Rockstar's confirmed 2025 release date for GTA VI on PS5 and Xbox Series X/S and endorses that date as its official schedule, adding that it will announce any change through official channels if timing shifts.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Take-Two holds its Q3/Q4 2025 reaffirmation and monitors Rockstar's development progress and any schedule signals before making a further public statement.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-06-26",
+                "interval_end": "2025-07-28",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 94,
+                "interval_days": 32,
+                "interval_start_utc": "2025-06-26T00:00:00+00:00",
+                "interval_end_utc": "2025-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-07-28",
+                "interval_end": "2025-08-28",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 125,
+                "interval_days": 31,
+                "interval_start_utc": "2025-07-28T00:00:00+00:00",
+                "interval_end_utc": "2025-08-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "status": "executed",
+                  "summary": "Rockstar Games published an official announcement that Grand Theft Auto VI's release is moving out of 2025, giving a revised post-2025 release window and explaining that internal development status made a 2025 release infeasible."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_4_agent_d2cbb8c3652f5aff",
+                    "action_1_agent_d2cbb8c3652f5aff"
+                  ],
+                  "outcome": "realized",
+                  "effect": "published an official announcement that Grand Theft Auto VI's release is moving out of 2025"
+                },
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_4_agent_d2cbb8c3652f5aff",
+                    "action_2_agent_3898a51e672658c9"
+                  ],
+                  "outcome": "pending",
+                  "effect": "internal development status made a 2025 release infeasible"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "unmet",
+                  "summary": "published an official announcement that Grand Theft Auto VI's release is moving out of 2025",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "Rockstar Games published an official announcement that Grand Theft Auto VI's release is moving out of 2025, giving a revised post-2025 release window and explaining that internal development status made a 2025 release infeasible.",
+                  "date": "2025-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                  "action": "Publish an official Rockstar Games announcement that GTA VI's release is moving out of 2025, giving a revised window and explaining the change.\n承诺：Withdraw the 2025 commitment and set a post-2025 release window.\n触发或复核条件：Only if internal development status makes a 2025 release infeasible.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publish an official Rockstar Games announcement reaffirming that Grand Theft Auto VI will launch for PlayStation 5 and Xbox Series X/S in 2025, and state that any change to the schedule would be communicated through official channels. No new date is set beyond the already-announced 2025 commitment.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publish an official Rockstar Games announcement that GTA VI's release is moving out of 2025, giving a revised window and explaining the change.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly targeted late 2025 (Q3/Q4 2025) for PS5 and Xbox Series X/S, which supports a 2025 release. However, reporting notes development falling behind and a 2026 delay as a fallback, so substantial slippage risk remains before the Dec 31, 2025 deadline.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-08-28",
+                "interval_end": "2025-09-28",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 156,
+                "interval_days": 31,
+                "interval_start_utc": "2025-08-28T00:00:00+00:00",
+                "interval_end_utc": "2025-09-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "status": "executed",
+                  "summary": "Take-Two Interactive publicly confirmed it has aligned with Rockstar's official revised schedule, stating GTA VI will not be released in 2025 and will arrive in the post-2025 window Rockstar announced, with any further timing updates issued through official channels."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_5_agent_3898a51e672658c9",
+                    "action_4_agent_d2cbb8c3652f5aff"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Take-Two Interactive publicly confirmed it has aligned with Rockstar's official revised schedule, stating GTA VI will not be released in 2025"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unmet",
+                  "after": "unmet",
+                  "summary": "stating GTA VI will not be released in 2025",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_005_001",
+                  "text": "Take-Two Interactive publicly confirmed it has aligned with Rockstar's official revised schedule, stating GTA VI will not be released in 2025 and will arrive in the post-2025 window Rockstar announced, with any further timing updates issued through official channels.",
+                  "date": "2025-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:1",
+                  "action": "Take-Two publicly confirms it has aligned with Rockstar's official revised schedule, stating GTA VI will not be released in 2025 and will arrive in the post-2025 window Rockstar announced, with any further timing updates issued through official channels.\n承诺：No 2025 release; endorse Rockstar's post-2025 window as Take-Two's official schedule.\n触发或复核条件：If Rockstar revises timing again, Take-Two updates publicly.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take-Two publicly confirms it has aligned with Rockstar's official revised schedule, stating GTA VI will not be released in 2025 and will arrive in the post-2025 window Rockstar announced, with any further timing updates issued through official channels.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Take no new public statement this round; monitor for any further Rockstar scheduling announcements or Take-Two board-level timing decisions before issuing revised guidance.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "A current simulated report states Take-Two confirmed Rockstar's revised schedule, placing GTA VI after 2025. That directly contradicts the in-window release requirement, leaving only a small residual chance of an earlier unannounced release.",
+                "evidence_quote": "Take-Two Interactive publicly confirmed it has aligned with Rockstar's official revised schedule, stating GTA VI will not be released in 2025 and will arrive in the post-2025 window Rockstar announced, with any further timing updates issued through official channels.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_005_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-09-28",
+                "interval_end": "2025-10-30",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 188,
+                "interval_days": 32,
+                "interval_start_utc": "2025-09-28T00:00:00+00:00",
+                "interval_end_utc": "2025-10-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_6_agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unmet",
+                  "after": "unmet",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                  "action": "No new outward act this round. Rockstar's official position remains the post-2025 window already announced in August 2025 and aligned with by Take-Two; no release, date change or new statement is issued.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "No new outward act this round. Rockstar's official position remains the post-2025 window already announced in August 2025 and aligned with by Take-Two; no release, date change or new statement is issued.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publish an official Rockstar Games statement reaffirming that GTA VI will not be released in 2025 and restating the post-2025 window, with any further timing updates to come only through official Rockstar channels.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "A current simulated report states Take-Two confirmed Rockstar's revised schedule, placing GTA VI after 2025. That directly contradicts the in-window release requirement, leaving only a small residual chance of an earlier unannounced release.",
+                "evidence_quote": "Take-Two Interactive publicly confirmed it has aligned with Rockstar's official revised schedule, stating GTA VI will not be released in 2025 and will arrive in the post-2025 window Rockstar announced, with any further timing updates issued through official channels.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_005_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-10-30",
+                "interval_end": "2025-11-30",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 219,
+                "interval_days": 31,
+                "interval_start_utc": "2025-10-30T00:00:00+00:00",
+                "interval_end_utc": "2025-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unmet",
+                  "after": "unmet",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "A current simulated report states Take-Two confirmed Rockstar's revised schedule, placing GTA VI after 2025. That directly contradicts the in-window release requirement, leaving only a small residual chance of an earlier unannounced release.",
+                "evidence_quote": "Take-Two Interactive publicly confirmed it has aligned with Rockstar's official revised schedule, stating GTA VI will not be released in 2025 and will arrive in the post-2025 window Rockstar announced, with any further timing updates issued through official channels.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_005_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-11-30",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 251,
+                "interval_days": 32,
+                "interval_start_utc": "2025-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_8_agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unmet",
+                  "after": "unmet",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:1",
+                  "action": "Take no new outward act this round: Take-Two's official position already stands as no 2025 release, with GTA VI in Rockstar's post-2025 window and further timing updates issued through official channels.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward act this round: Take-Two's official position already stands as no 2025 release, with GTA VI in Rockstar's post-2025 window and further timing updates issued through official channels.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.02,
+                "basis": "Rockstar officially moved GTA VI out of 2025 in August 2025, and Take-Two confirmed in September 2025 that it will not release in 2025. No later official release occurred before the December 31, 2025 deadline, so the outcome is effectively settled as No.",
+                "evidence_quote": "Take-Two Interactive publicly confirmed it has aligned with Rockstar's official revised schedule, stating GTA VI will not be released in 2025 and will arrive in the post-2025 window Rockstar announced, with any further timing updates issued through official channels.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_005_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.02,
+          "error": null,
+          "action_path_probability": 0.0080325
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 16,
+        "active_rounds": 9,
+        "draw_rounds": 9,
+        "audited_silent_rounds": 7,
+        "sampled_decisions": 13,
+        "public_event_count": 8,
+        "substantive_public_event_count": 8,
+        "state_change_count": 8,
+        "condition_change_count": 3,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 6,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 8,
+            "active_rounds": 6,
+            "draw_rounds": 6,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 7,
+            "active_actor_count": 2,
+            "public_event_count": 5,
+            "substantive_public_event_count": 5,
+            "state_change_count": 6,
+            "condition_change_count": 2,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.06999999999999999,
+      "covered_p_yes": 0.06999999999999999,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.06999999999999999,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "0cb872ba-4584-411a-a723-e5ecc5a5b106",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:28:04.390040+00:00",
+      "contract_id": "0x7340d11f38c12e86886114cf7d3e0f1063758de8b7ac81db7e580b797aa9dd75",
+      "forecast_cutoff": "2025-04-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "15d0a3c9ae19301a8b241745bbb43cc7bd257034148071a62adae139da7e3376",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 149.142
+    },
+    {
+      "calls": 43,
+      "tokens": 493138,
+      "input_tokens": 469542,
+      "output_tokens": 23596,
+      "accounted_tokens_upper": 493138,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-04-25",
+                "interval_end": "2025-05-26",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 31,
+                "interval_days": 31,
+                "interval_start_utc": "2025-04-25T23:59:59+00:00",
+                "interval_end_utc": "2025-05-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Rockstar publicly reaffirms via its official channels that GTA VI remains on track for its late-2025 release window on PS5 and Xbox Series X/S, without committing to a specific date.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Take-Two Interactive publicly reaffirms that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 on PlayStation 5 and Xbox Series X/S, restating the late-2025 window as the official plan and declining to confirm any 2026 fallback.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly scheduled GTA VI for late 2025 (PS5/Xbox Series X/S), and Take-Two confirmed a Q3/Q4 2025 window. However, reporting notes development falling behind with a 2026 delay as a fallback, so release within the 2025 window is plausible but not assured.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-05-26",
+                "interval_end": "2025-06-26",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 62,
+                "interval_days": 31,
+                "interval_start_utc": "2025-05-26T00:00:00+00:00",
+                "interval_end_utc": "2025-06-26T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly scheduled GTA VI for late 2025 (PS5/Xbox Series X/S), and Take-Two confirmed a Q3/Q4 2025 window. However, reporting notes development falling behind with a 2026 delay as a fallback, so release within the 2025 window is plausible but not assured.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-06-26",
+                "interval_end": "2025-07-28",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 94,
+                "interval_days": 32,
+                "interval_start_utc": "2025-06-26T00:00:00+00:00",
+                "interval_end_utc": "2025-07-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly scheduled GTA VI for late 2025 (PS5/Xbox Series X/S), and Take-Two confirmed a Q3/Q4 2025 window. However, reporting notes development falling behind with a 2026 delay as a fallback, so release within the 2025 window is plausible but not assured.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-07-28",
+                "interval_end": "2025-08-28",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 125,
+                "interval_days": 31,
+                "interval_start_utc": "2025-07-28T00:00:00+00:00",
+                "interval_end_utc": "2025-08-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "status": "executed",
+                  "summary": "Rockstar Games publicly reaffirmed that Grand Theft Auto VI remains targeted for late 2025 on PlayStation 5 and Xbox Series X/S, stating there is no change to the release window and that further timing details will follow when ready."
+                },
+                {
+                  "action_id": "action_4_agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "status": "executed",
+                  "summary": "Take-Two Interactive issued a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 on PlayStation 5 and Xbox Series X/S, without announcing a new date or acknowledging any slippage."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_d2cbb8c3652f5aff",
+                    "action_4_agent_3898a51e672658c9"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Take-Two Interactive issued a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 on PlayStation 5 and Xbox Series X/S"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Rockstar Games publicly reaffirmed that Grand Theft Auto VI remains targeted for late 2025 on PlayStation 5 and Xbox Series X/S",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Rockstar Games publicly reaffirmed that Grand Theft Auto VI remains targeted for late 2025 on PlayStation 5 and Xbox Series X/S, stating there is no change to the release window and that further timing details will follow when ready.",
+                  "date": "2025-08"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "Take-Two Interactive issued a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 on PlayStation 5 and Xbox Series X/S, without announcing a new date or acknowledging any slippage.",
+                  "date": "2025-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                  "action": "Rockstar publicly reaffirms that GTA VI remains targeted for late 2025 on PS5 and Xbox Series X/S, stating no change to the release window and that further timing details will follow when ready.\n承诺：Reaffirm late-2025 target; no new dated release commitment.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Rockstar publicly reaffirms that GTA VI remains targeted for late 2025 on PS5 and Xbox Series X/S, stating no change to the release window and that further timing details will follow when ready.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:1",
+                  "action": "Issue a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 on PlayStation 5 and Xbox Series X/S, without announcing a new date or acknowledging any slippage.\n承诺：Reaffirm the Q3/Q4 2025 window as the current official schedule.\n触发或复核条件：Only if no credible new slippage signal has emerged since the last public confirmation.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Issue a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 on PlayStation 5 and Xbox Series X/S, without announcing a new date or acknowledging any slippage.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly announce that Grand Theft Auto VI's release window is being revised to 2026, citing development progress, and withdraw the prior Q3/Q4 2025 guidance.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly scheduled GTA VI for late 2025 (PS5/Xbox Series X/S), and Take-Two confirmed a Q3/Q4 2025 window. However, reporting notes development falling behind with a 2026 delay as a fallback, so release within the 2025 window is plausible but not assured.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-08-28",
+                "interval_end": "2025-09-28",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 156,
+                "interval_days": 31,
+                "interval_start_utc": "2025-08-28T00:00:00+00:00",
+                "interval_end_utc": "2025-09-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly scheduled GTA VI for late 2025 (PS5/Xbox Series X/S), and Take-Two confirmed a Q3/Q4 2025 window. However, reporting notes development falling behind with a 2026 delay as a fallback, so release within the 2025 window is plausible but not assured.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-09-28",
+                "interval_end": "2025-10-30",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 188,
+                "interval_days": 32,
+                "interval_start_utc": "2025-09-28T00:00:00+00:00",
+                "interval_end_utc": "2025-10-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly scheduled GTA VI for late 2025 (PS5/Xbox Series X/S), and Take-Two confirmed a Q3/Q4 2025 window. However, reporting notes development falling behind with a 2026 delay as a fallback, so release within the 2025 window is plausible but not assured.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-10-30",
+                "interval_end": "2025-11-30",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 219,
+                "interval_days": 31,
+                "interval_start_utc": "2025-10-30T00:00:00+00:00",
+                "interval_end_utc": "2025-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "status": "executed",
+                  "summary": "Rockstar Games publicly confirmed that Grand Theft Auto VI remains on track for its late-2025 window on PlayStation 5 and Xbox Series X/S, stating there is no change to the schedule and that a firm release date will be announced when ready."
+                },
+                {
+                  "action_id": "action_7_agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "status": "executed",
+                  "summary": "Take-Two Interactive issued a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in Q3/Q4 2025 on PlayStation 5 and Xbox Series X/S, with no new date and no acknowledgment of slippage, and further timing details to follow when ready."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_7_agent_d2cbb8c3652f5aff",
+                    "action_7_agent_3898a51e672658c9"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Take-Two Interactive issued a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in Q3/Q4 2025 on PlayStation 5 and Xbox Series X/S"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Rockstar Games publicly confirmed that Grand Theft Auto VI remains on track for its late-2025 window on PlayStation 5 and Xbox Series X/S",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_007_001",
+                  "text": "Rockstar Games publicly confirmed that Grand Theft Auto VI remains on track for its late-2025 window on PlayStation 5 and Xbox Series X/S, stating there is no change to the schedule and that a firm release date will be announced when ready.",
+                  "date": "2025-11"
+                },
+                {
+                  "id": "sim_0001_007_002",
+                  "text": "Take-Two Interactive issued a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in Q3/Q4 2025 on PlayStation 5 and Xbox Series X/S, with no new date and no acknowledgment of slippage, and further timing details to follow when ready.",
+                  "date": "2025-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                  "action": "Rockstar publicly confirms GTA VI is on track for its late-2025 window on PS5 and Xbox Series X/S, stating no change to the schedule and that a firm release date will be announced when ready.\n承诺：Reaffirm late-2025 target; no new dated release commitment.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Rockstar publicly confirms GTA VI is on track for its late-2025 window on PS5 and Xbox Series X/S, stating no change to the schedule and that a firm release date will be announced when ready.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:1",
+                  "action": "Issue a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in Q3/Q4 2025 on PlayStation 5 and Xbox Series X/S, with no new date and no acknowledgment of slippage; further timing details to follow when ready.\n承诺：Reaffirm the Q3/Q4 2025 window as the current official schedule.\n触发或复核条件：Only if no credible new slippage signal has emerged since the August reaffirmation.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement reaffirming that Grand Theft Auto VI remains scheduled for release in Q3/Q4 2025 on PlayStation 5 and Xbox Series X/S, with no new date and no acknowledgment of slippage; further timing details to follow when ready.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Rockstar/Take-Two have publicly scheduled GTA VI for late 2025 (PS5/Xbox Series X/S), and Take-Two confirmed a Q3/Q4 2025 window. However, reporting notes development falling behind with a 2026 delay as a fallback, so release within the 2025 window is plausible but not assured.",
+                "evidence_quote": "In May, Take-Two confirmed the game was scheduled for the third or fourth quarter of 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2025-11-30",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 251,
+                "interval_days": 32,
+                "interval_start_utc": "2025-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Repeated public reaffirmations through November 2025 kept the late-2025 window intact, but no firm date or actual release was announced, and earlier reporting flagged a 2026 fallback. Willingness statements are not execution; the outcome remains unverified at the horizon.",
+                "evidence_quote": "Rockstar Games publicly confirmed that Grand Theft Auto VI remains on track for its late-2025 window on PlayStation 5 and Xbox Series X/S, stating there is no change to the schedule and that a firm release date will be announced when ready.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "sim_0001_007_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.019008
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 5,
+        "sampled_decisions": 6,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 4,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 6,
+            "active_actor_count": 2,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 4,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "0cabc187-40b7-499a-bdc0-2d1dc0a7228b",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T00:53:20.755449+00:00",
+      "contract_id": "0x7340d11f38c12e86886114cf7d3e0f1063758de8b7ac81db7e580b797aa9dd75",
+      "forecast_cutoff": "2025-04-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "15d0a3c9ae19301a8b241745bbb43cc7bd257034148071a62adae139da7e3376",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 130.935
+    },
+    {
+      "calls": 17,
+      "tokens": 188483,
+      "input_tokens": 179650,
+      "output_tokens": 8833,
+      "accounted_tokens_upper": 188483,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-04-25",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 251,
+                "interval_days": 251,
+                "interval_start_utc": "2025-04-25T23:59:59+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "status": "unknown",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                  "action": "Officially release Grand Theft Auto VI for PlayStation 5 and Xbox Series X/S in the US, making it publicly available for purchase or download before December 31, 2025, and confirm the release through Rockstar's official channels.\n承诺：Ship GTA VI in the US by Dec 31, 2025, meeting the stated late-2025 window.\n触发或复核条件：Development reaches a shippable state within the late-2025 window; no binding blocker emerges.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Officially release Grand Theft Auto VI for PlayStation 5 and Xbox Series X/S in the US, making it publicly available for purchase or download before December 31, 2025, and confirm the release through Rockstar's official channels.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publish an official announcement reaffirming the late-2025 release window for GTA VI on PS5 and Xbox Series X/S, without committing to a specific date.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Officially reaffirm that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 for PlayStation 5 and Xbox Series X/S, stating Take-Two's current public position on the release window.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Frozen evidence shows only a scheduled late-2025 window for PS5/Xbox Series X/S, with no confirmed release date or observed launch by the cutoff. Kotaku reporting of development falling behind and a 2026 fallback plan raises delay risk; no official Rockstar/Take-Two release announcement appears in the evidence.",
+                "evidence_quote": "Kotakus Zack Zwiezen reported the decision was partly to avoid a delay from the internally scheduled early 2025 release window; development \"falling behind\" meant late 2025 seemed more practical, with a potential delay to 2026 as a \"fallback plan\".",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "hist_8a0c8b80fb465736.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.24
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-04-25",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 251,
+                "interval_days": 251,
+                "interval_start_utc": "2025-04-25T23:59:59+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "status": "executed",
+                  "summary": "Rockstar Games issued an official schedule update reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025 for PlayStation 5 and Xbox Series X/S, without announcing a revised date."
+                },
+                {
+                  "action_id": "action_1_agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "status": "blocked",
+                  "summary": "Rockstar Games issued an official schedule update reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025 for PlayStation 5 and Xbox Series X/S, without announcing a revised date."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d2cbb8c3652f5aff",
+                    "action_1_agent_3898a51e672658c9"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "Rockstar Games issued an official schedule update reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "GTA VI released in 2025?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Rockstar Games issued an official schedule update reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Rockstar Games issued an official schedule update reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025 for PlayStation 5 and Xbox Series X/S, without announcing a revised date.",
+                  "date": "2026-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d2cbb8c3652f5aff",
+                  "actor_name": "Rockstar Games",
+                  "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                  "action": "Rockstar Games issues an official schedule update on GTA VI, reaffirming the late-2025 window or disclosing a revised date, via its official channels.\n承诺：Provide an official, dated release status statement.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Rockstar Games officially announces that Grand Theft Auto VI is available for purchase/download in the US on PlayStation 5 and Xbox Series X/S, confirming actual availability before December 31, 2025.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_d2cbb8c3652f5aff:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Rockstar Games issues an official schedule update on GTA VI, reaffirming the late-2025 window or disclosing a revised date, via its official channels.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_3898a51e672658c9",
+                  "actor_name": "Take-Two Interactive",
+                  "candidate_id": "agent_3898a51e672658c9:initial:2",
+                  "action": "Take-Two publicly announces a revised release schedule for Grand Theft Auto VI, stating the game is now targeted for 2026 rather than 2025, citing development progress.\n承诺：Officially shift the target release window to 2026.\n触发或复核条件：Only if Rockstar's development progress makes a 2025 release infeasible.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Take-Two publicly reaffirms that Grand Theft Auto VI remains scheduled for release in the third or fourth quarter of 2025 for PS5 and Xbox Series X/S, restating the prior official window without announcing a new date.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_3898a51e672658c9:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Take-Two publicly announces a revised release schedule for Grand Theft Auto VI, stating the game is now targeted for 2026 rather than 2025, citing development progress.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The only in-window simulated event is a schedule reaffirmation, not a release; no official launch or purchase/download availability is shown before the deadline. Historical reporting of a possible 2026 fallback and the absence of any confirmed release keep the probability low, though a late unobserved launch cannot be fully excluded.",
+                "evidence_quote": "Rockstar Games issued an official schedule update reaffirming that Grand Theft Auto VI remains scheduled for release in late 2025 for PlayStation 5 and Xbox Series X/S, without announcing a revised date.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.16000000000000003
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "502a4c9b-b551-4dd3-90dc-57046418f335",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T00:53:45.999841+00:00",
+      "contract_id": "0x7340d11f38c12e86886114cf7d3e0f1063758de8b7ac81db7e580b797aa9dd75",
+      "forecast_cutoff": "2025-04-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "15d0a3c9ae19301a8b241745bbb43cc7bd257034148071a62adae139da7e3376",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 25.242
+    },
+    {
+      "calls": 130,
+      "tokens": 1393152,
+      "input_tokens": 1322467,
+      "output_tokens": 70685,
+      "accounted_tokens_upper": 1393152,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.41522539999999997,
+      "coverage": 0.2588652,
+      "unexplored_mass": 0.7411348,
+      "unknown_bounds": [
+        0.044657999999999996,
+        0.7857928
+      ],
+      "search_iterations": 16,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 16,
+          "search_value": 0.519576375,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.36,
+          "visits": 7,
+          "search_value": 0.4926902857142857,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.36,
+          "visits": 6,
+          "search_value": 0.4231386666666667,
+          "conditional_p_yes": 0.35,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.36,
+          "visits": 5,
+          "search_value": 0.3128864,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.1512,
+          "visits": 4,
+          "search_value": 0.286204,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.1512,
+          "visits": 3,
+          "search_value": 0.1848053333333333,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.1512,
+          "visits": 2,
+          "search_value": 0.13000799999999998,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.049896,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.049896,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0014968800000000001
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.033264,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.00399168
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 7,
+          "mass": 0.06803999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.0648,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.24,
+          "frontier": true,
+          "contribution": 0.015551999999999998
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.144,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.24,
+          "visits": 8,
+          "search_value": 0.53379875,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.24,
+          "visits": 7,
+          "search_value": 0.48005571428571436,
+          "conditional_p_yes": 0.35,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.24,
+          "visits": 6,
+          "search_value": 0.4083983333333334,
+          "conditional_p_yes": 0.35,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.11759999999999998,
+          "visits": 5,
+          "search_value": 0.3542668,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.11759999999999998,
+          "visits": 4,
+          "search_value": 0.2952335,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.11759999999999998,
+          "visits": 3,
+          "search_value": 0.25284466666666666,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.045276,
+          "visits": 1,
+          "search_value": 0.11886,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.022185239999999995,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0006655571999999998
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 8,
+          "mass": 0.00950796,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.0007606367999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 8,
+          "mass": 0.0135828,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.02881199999999999,
+          "visits": 1,
+          "search_value": 0.2541,
+          "conditional_p_yes": 0.35,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.015846599999999995,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.00047539799999999987
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 8,
+          "mass": 0.012965399999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0015558479999999996
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 7,
+          "mass": 0.043511999999999995,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.05039999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.4,
+          "frontier": true,
+          "contribution": 0.020159999999999997
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.07200000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.4,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "a65d0c3f-abc3-4b87-8e1c-b11f18c027b5",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T00:59:49.565759+00:00",
+      "contract_id": "0x7340d11f38c12e86886114cf7d3e0f1063758de8b7ac81db7e580b797aa9dd75",
+      "forecast_cutoff": "2025-04-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "15d0a3c9ae19301a8b241745bbb43cc7bd257034148071a62adae139da7e3376",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 363.56
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-04-25T23:59:59+00:00",
+  "forecast_key": "0x7340d11f38c12e86886114cf7d3e0f1063758de8b7ac81db7e580b797aa9dd75",
+  "group_id": "gta-vi-released-in-2025",
+  "evidence_sha256": "15d0a3c9ae19301a8b241745bbb43cc7bd257034148071a62adae139da7e3376",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 704,
+    "input_tokens": 605,
+    "output_tokens": 99,
+    "accounted_tokens_upper": 704,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-04-25",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2025-04-25",
+        "2025-05-26",
+        "2025-06-26",
+        "2025-07-28",
+        "2025-08-28",
+        "2025-09-28",
+        "2025-10-30",
+        "2025-11-30",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2025-04-25",
+        "2025-05-26",
+        "2025-06-26",
+        "2025-07-28",
+        "2025-08-28",
+        "2025-09-28",
+        "2025-10-30",
+        "2025-11-30",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-04-25",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2025-04-25",
+        "2025-05-26",
+        "2025-06-26",
+        "2025-07-28",
+        "2025-08-28",
+        "2025-09-28",
+        "2025-10-30",
+        "2025-11-30",
+        "2026-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-01-01T04:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-12-31T12:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_859ca91ba01d2244",
+          "name": "Rockstar Games",
+          "role": "Developer and publisher of Grand Theft Auto VI; its official information is a resolution source for release.",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_0fbd94fb7f29b857",
+          "name": "Take-Two Interactive",
+          "role": "Parent company of Rockstar Games; its official information is a resolution source for release.",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No named individual or specific office within Rockstar Games or Take-Two Interactive is identified as the decision-maker for the release; the companies are treated as collective entities."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Rockstar Games officially releases Grand Theft Auto VI in the US by December 31, 2025, 11:59 PM ET.",
+          "owner": "Rockstar Games",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "Take-Two Interactive officially releases Grand Theft Auto VI in the US by December 31, 2025, 11:59 PM ET.",
+          "owner": "Take-Two Interactive",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 11,
+    "tokens": 38979,
+    "input_tokens": 34834,
+    "output_tokens": 4145,
+    "accounted_tokens_upper": 38979,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

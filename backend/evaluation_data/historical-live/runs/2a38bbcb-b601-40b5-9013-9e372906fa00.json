@@ -1,0 +1,2330 @@
+{
+  "run_id": "2a38bbcb-b601-40b5-9013-9e372906fa00",
+  "case_id": "market_82bcdce72fef041dedc41af4",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2779,
+      "input_tokens": 2769,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2779,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2769,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:31:14.400464+00:00",
+      "contract_id": "0x0655a8cba573f1912fc4fb992c50b6062dc056802f933fa470cbbdfa56ae2de5",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c20c9af5c2e77f34a0cf9c1eacda64965f25a3fec1a87639aaa931b4c9bafea2",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.659
+    },
+    {
+      "calls": 2,
+      "tokens": 5558,
+      "input_tokens": 5538,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5558,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2769,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2769,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:31:16.380838+00:00",
+      "contract_id": "0x0655a8cba573f1912fc4fb992c50b6062dc056802f933fa470cbbdfa56ae2de5",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c20c9af5c2e77f34a0cf9c1eacda64965f25a3fec1a87639aaa931b4c9bafea2",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.98
+    },
+    {
+      "calls": 14,
+      "tokens": 151428,
+      "input_tokens": 143211,
+      "output_tokens": 8217,
+      "accounted_tokens_upper": 151428,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_62b70ed1ba2a5db6:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm Lebanon's support for the announced ceasefire talks with Israel, urging that negotiations proceed and that Lebanese sovereignty and airspace be respected; no closure or airspace order is issued by Lebanon.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                  "action": "Take no new public action on civil aviation or airspace closure this round; keep focus on the Lebanon ceasefire track.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no new public action on civil aviation or airspace closure this round; keep focus on the Lebanon ceasefire track.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm commitment to the announced Israel-Lebanon ceasefire talks focused on disarming Hezbollah, without announcing any change to civil aviation or airspace.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No evidence shows an Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation within the window. The 2026 Iran war and Lebanon strike raise regional risk, but that is escalation context, not a qualifying closure; the specific closure decision remains unobserved.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.21
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "68e8bcca-0e47-403f-afd8-ea355d7c192f",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:32:24.193911+00:00",
+      "contract_id": "0x0655a8cba573f1912fc4fb992c50b6062dc056802f933fa470cbbdfa56ae2de5",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c20c9af5c2e77f34a0cf9c1eacda64965f25a3fec1a87639aaa931b4c9bafea2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 67.81
+    },
+    {
+      "calls": 27,
+      "tokens": 300731,
+      "input_tokens": 284209,
+      "output_tokens": 16522,
+      "accounted_tokens_upper": 300731,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9e61aad26faa5bc0:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reaffirm the Lebanon ceasefire track: state that Israel's negotiations with Lebanon on disarming Hezbollah continue and that Israel seeks a peace agreement, without any new airspace measure.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_62b70ed1ba2a5db6:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm Lebanon's commitment to the announced ceasefire talks with Israel, urge that Lebanon be included in any regional ceasefire, and call for de-escalation that keeps civilian air corridors in the region open. No claim of authority over Israeli airspace is made.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                  "action": "Take no new outward action this round on airspace; monitor Israeli CAA/Israel Airports Authority NOTAMs and emergency measures for any general commercial closure of the Tel Aviv FIR/LLLL through December 31, 2026.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no new outward action this round on airspace; monitor Israeli CAA/Israel Airports Authority NOTAMs and emergency measures for any general commercial closure of the Tel Aviv FIR/LLLL through December 31, 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm the Lebanon ceasefire track focused on disarming Hezbollah, framing continued security operations as consistent with negotiations, without announcing any airspace closure.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No evidence shows a qualifying NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation within the window. The 2026 Iran war and Lebanon-related escalation raise regional risk, but the cited material describes a nationwide state of emergency and foreign airspace closures, not an Israeli FIR closure.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.16799999999999998
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "status": "executed",
+                  "summary": "Lebanon publicly reaffirmed Lebanon's support for the ceasefire talks with Israel announced on 10 April 2026 and called for the negotiations to proceed on the reported scope, without asserting any Lebanese role over Israeli or Lebanese airspace."
+                },
+                {
+                  "action_id": "action_1_agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "status": "executed",
+                  "summary": "Benjamin Netanyahu publicly reaffirmed the Lebanon ceasefire track focused on disarming Hezbollah and urged continued de-escalation, without announcing or ordering any closure of Israeli airspace."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_62b70ed1ba2a5db6",
+                    "action_1_agent_581e3fd0d5475a68"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Lebanon publicly reaffirmed Lebanon's support for the ceasefire talks with Israel announced on 10 April 2026"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Lebanon publicly reaffirmed Lebanon's support for the ceasefire talks with Israel announced on 10 April 2026 and called for the negotiations to proceed on the reported scope, without asserting any Lebanese role over Israeli or Lebanese airspace.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Benjamin Netanyahu publicly reaffirmed the Lebanon ceasefire track focused on disarming Hezbollah and urged continued de-escalation, without announcing or ordering any closure of Israeli airspace.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "candidate_id": "agent_62b70ed1ba2a5db6:initial:1",
+                  "action": "President Aoun publicly reaffirms Lebanon's support for the announced ceasefire talks with Israel and calls for the negotiations to proceed on the reported scope, without asserting any Lebanese role over Israeli or Lebanese airspace.\n承诺：Lebanon continues to back the ceasefire process announced on 10 April 2026.\n触发或复核条件：Talks proceed as announced.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_62b70ed1ba2a5db6:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "President Aoun publicly reaffirms Lebanon's support for the announced ceasefire talks with Israel and calls for the negotiations to proceed on the reported scope, without asserting any Lebanese role over Israeli or Lebanese airspace.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Take no new outward step on airspace; monitor whether Israel's aviation authority issues any NOTAM or order affecting the Tel Aviv FIR, and whether the ceasefire talks advance.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "candidate_id": "agent_581e3fd0d5475a68:initial:2",
+                  "action": "Publicly reaffirm the Lebanon ceasefire track focused on disarming Hezbollah and urge continued de-escalation, without announcing or ordering any closure of Israeli airspace.\n承诺：Continue ceasefire negotiations with Lebanon centered on Hezbollah disarmament.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no new outward step on Israeli airspace this round; monitor official Israeli Ministry of Transport, Civil Aviation Authority and Israel Airports Authority channels for any NOTAM or order closing the Tel Aviv FIR/LLLL to general commercial aviation.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm the Lebanon ceasefire track focused on disarming Hezbollah and urge continued de-escalation, without announcing or ordering any closure of Israeli airspace.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No evidence shows a qualifying closure of the Tel Aviv FIR/LLLL; the latest simulated round has Israeli and Lebanese officials reaffirming de-escalation and ceasefire talks without any airspace closure order. The 2026 Iran war context raises baseline risk, but no NOTAM or official general commercial-aviation closure is reported, and the outcome remains unverified.",
+                "evidence_quote": "Benjamin Netanyahu publicly reaffirmed the Lebanon ceasefire track focused on disarming Hezbollah and urged continued de-escalation, without announcing or ordering any closure of Israeli airspace.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 0.21
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.1,
+      "covered_p_yes": 0.1,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.1,
+        0.10000000000000009
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "09bfda42-1183-442d-be1a-1f198e5845a1",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:33:12.727626+00:00",
+      "contract_id": "0x0655a8cba573f1912fc4fb992c50b6062dc056802f933fa470cbbdfa56ae2de5",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c20c9af5c2e77f34a0cf9c1eacda64965f25a3fec1a87639aaa931b4c9bafea2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 48.531
+    },
+    {
+      "calls": 37,
+      "tokens": 375770,
+      "input_tokens": 355330,
+      "output_tokens": 20440,
+      "accounted_tokens_upper": 375770,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                  "action": "Continue the ongoing joint campaign and emergency posture without issuing any new airspace order this round; monitor for any NOTAM or official closure order affecting the Tel Aviv FIR/LLLL.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Continue the ongoing joint campaign and emergency posture without issuing any new airspace order this round; monitor for any NOTAM or official closure order affecting the Tel Aviv FIR/LLLL.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_62b70ed1ba2a5db6:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm Lebanon's support for the announced ceasefire talks with Israel and urge that negotiations proceed without preconditions; state that Lebanon seeks de-escalation and will not take steps affecting Israeli airspace, which is outside Lebanon's authority.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                  "action": "Take no new outward action on Israeli airspace this round. Monitor for any NOTAM or official order from the Civil Aviation Authority of Israel, Ministry of Transport or Israel Airports Authority concerning the Tel Aviv FIR/LLLL, and reassess if conflict conditions change.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no new outward action on Israeli airspace this round. Monitor for any NOTAM or official order from the Civil Aviation Authority of Israel, Ministry of Transport or Israel Airports Authority concerning the Tel Aviv FIR/LLLL, and reassess if conflict conditions change.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm support for the announced Israel-Lebanon ceasefire talks focused on disarming Hezbollah, framing continued de-escalation as serving Israeli security, without making any commitment about closing Israeli airspace.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No evidence shows an Israeli airspace closure in the outcome window; the cited material concerns the 2026 Iran war, Lebanon strikes, and Iranian protests. A general FIR closure would require an official Israeli NOTAM or order, and none is documented, so the chance is low but not negligible given regional conflict risk.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No evidence shows an Israeli airspace closure in the outcome window; the cited material concerns the 2026 Iran war, Lebanon strikes, and Iranian protests. A general FIR closure would require an official Israeli NOTAM or order, and none is documented, so the chance is low but not negligible given regional conflict risk.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No evidence shows an Israeli airspace closure in the outcome window; the cited material concerns the 2026 Iran war, Lebanon strikes, and Iranian protests. A general FIR closure would require an official Israeli NOTAM or order, and none is documented, so the chance is low but not negligible given regional conflict risk.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                  "action": "Maintain current military and diplomatic posture; issue no new airspace order this round. Monitor official Israeli aviation and government channels for any NOTAM or order closing the Tel Aviv FIR/LLLL to general commercial aviation through 2026-12-31.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Maintain current military and diplomatic posture; issue no new airspace order this round. Monitor official Israeli aviation and government channels for any NOTAM or order closing the Tel Aviv FIR/LLLL to general commercial aviation through 2026-12-31.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9e61aad26faa5bc0:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm that Israeli airspace remains open to general commercial aviation and that any future closure would be ordered only by the responsible aviation authority via NOTAM, without announcing any closure now.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Take no new outward action on Israeli airspace this round; continue monitoring CAA, Ministry of Transport and Israel Airports Authority channels for any NOTAM or order closing the Tel Aviv FIR/LLLL.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                  "action": "Hold Lebanon's current diplomatic posture without a new outward act and monitor public reports for any Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL, and for any reply from Netanyahu's office.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Hold Lebanon's current diplomatic posture without a new outward act and monitor public reports for any Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL, and for any reply from Netanyahu's office.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No evidence shows an Israeli airspace closure in the outcome window; the cited material concerns the 2026 Iran war, Lebanon strikes, and Iranian protests. A general FIR closure would require an official Israeli NOTAM or order, and none is documented, so the chance is low but not negligible given regional conflict risk.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No evidence shows a qualifying NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation within the window. The 2026 Iran war and Lebanon-related tensions raise regional risk, but the cited material describes a nationwide state of emergency and foreign airspace closures, not an Israeli FIR closure.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.04704
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 6,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "324ebe96-d29d-4595-98b3-51dee93a3314",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:34:55.299947+00:00",
+      "contract_id": "0x0655a8cba573f1912fc4fb992c50b6062dc056802f933fa470cbbdfa56ae2de5",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c20c9af5c2e77f34a0cf9c1eacda64965f25a3fec1a87639aaa931b4c9bafea2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 102.568
+    },
+    {
+      "calls": 72,
+      "tokens": 701387,
+      "input_tokens": 666451,
+      "output_tokens": 34936,
+      "accounted_tokens_upper": 701387,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9e61aad26faa5bc0:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement reaffirming that Israeli airspace remains open to commercial aviation under existing security arrangements, while noting the nationwide emergency and ongoing campaign, and pledging that any closure decision would come only through the responsible aviation authority.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_62b70ed1ba2a5db6:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "President Aoun publicly reaffirms Lebanon's support for the announced ceasefire talks with Israel and calls for de-escalation, while making no claim about Israeli airspace or any closure thereof.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                  "action": "Take no new outward action on airspace closure this round; keep the ceasefire-track posture and monitor for any official NOTAM or aviation-authority order affecting the Tel Aviv FIR/LLLL.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward action on airspace closure this round; keep the ceasefire-track posture and monitor for any official NOTAM or aviation-authority order affecting the Tel Aviv FIR/LLLL.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No evidence shows an Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation. The cited 2026 Iran-war material describes a regional conflict and Israeli domestic emergency measures, not an airspace closure order, so the qualifying event remains unconfirmed.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No evidence shows an Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation. The cited 2026 Iran-war material describes a regional conflict and Israeli domestic emergency measures, not an airspace closure order, so the qualifying event remains unconfirmed.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No evidence shows an Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation. The cited 2026 Iran-war material describes a regional conflict and Israeli domestic emergency measures, not an airspace closure order, so the qualifying event remains unconfirmed.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                  "action": "Take no new outward action on airspace closure this round; keep the ceasefire-track posture with Lebanon and monitor official Israeli aviation channels for any NOTAM or order affecting the Tel Aviv FIR/LLLL.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward action on airspace closure this round; keep the ceasefire-track posture with Lebanon and monitor official Israeli aviation channels for any NOTAM or order affecting the Tel Aviv FIR/LLLL.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "candidate_id": "agent_62b70ed1ba2a5db6:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm Lebanon's commitment to the announced ceasefire talks and call for continued de-escalation, without addressing Israeli airspace administration.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No evidence shows an Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation. The cited 2026 Iran-war material describes a regional conflict and Israeli domestic emergency measures, not an airspace closure order, so the qualifying event remains unconfirmed.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No evidence shows a qualifying NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation within the window. The 2026 Iran war and Lebanon-related tensions raise the possibility of such a closure, but the cited material describes a regional conflict and a nationwide emergency, not an aviation closure.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.147
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                  "action": "Hold no new airspace action this round. Monitor for any NOTAM or official order from the Israeli Civil Aviation Authority, Ministry of Transport, or Israel Airports Authority closing the Tel Aviv FIR/LLLL to general commercial aviation, and for conflict escalation that would trigger such an order.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Hold no new airspace action this round. Monitor for any NOTAM or official order from the Israeli Civil Aviation Authority, Ministry of Transport, or Israel Airports Authority closing the Tel Aviv FIR/LLLL to general commercial aviation, and for conflict escalation that would trigger such an order.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9e61aad26faa5bc0:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reaffirm that Israel's airspace remains open to commercial aviation, with any restrictions limited to specific sectors or operators rather than a general closure, while the campaign against Iran continues.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_62b70ed1ba2a5db6:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Lebanon publicly reaffirms its support for the announced ceasefire talks with Israel and calls for de-escalation, while making no claim about Israeli airspace, which Lebanon does not control.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                  "action": "Take no new public action on airspace this round; monitor for any NOTAM or official order from the Civil Aviation Authority of Israel, Israel Airports Authority, or Ministry of Transport affecting the Tel Aviv FIR/LLLL, and continue the Lebanon ceasefire track.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no new public action on airspace this round; monitor for any NOTAM or official order from the Civil Aviation Authority of Israel, Israel Airports Authority, or Ministry of Transport affecting the Tel Aviv FIR/LLLL, and continue the Lebanon ceasefire track.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No evidence shows an Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation. The cited 2026 Iran-war material describes a regional conflict and Israeli domestic emergency measures, not an airspace closure order, so the qualifying event remains unconfirmed.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No evidence shows an Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation. The cited 2026 Iran-war material describes a regional conflict and Israeli domestic emergency measures, not an airspace closure order, so the qualifying event remains unconfirmed.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No evidence shows an Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation. The cited 2026 Iran-war material describes a regional conflict and Israeli domestic emergency measures, not an airspace closure order, so the qualifying event remains unconfirmed.",
+                "evidence_quote": "Israel declared a nationwide state of emergency, saying that the strikes on Iran were the largest that it had ever launched. Israeli schools and workspaces were closed and public gatherings were canceled.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "status": "executed",
+                  "summary": "Lebanon publicly reaffirmed its commitment to the announced ceasefire talks with Israel and called for de-escalation, without asserting any role over Israeli airspace."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_62b70ed1ba2a5db6",
+                    "action_4_agent_9e61aad26faa5bc0"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Lebanon publicly reaffirmed its commitment to the announced ceasefire talks with Israel and called for de-escalation, without asserting any role over Israeli airspace."
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "Lebanon publicly reaffirmed its commitment to the announced ceasefire talks with Israel and called for de-escalation, without asserting any role over Israeli airspace.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9e61aad26faa5bc0",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                  "action": "Hold no new airspace action this round; continue monitoring for any NOTAM or official order from the Israeli Civil Aviation Authority, Ministry of Transport, or Israel Airports Authority closing the Tel Aviv FIR/LLLL to general commercial aviation, or for escalation in the ongoing Iran campaign that could prompt one.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9e61aad26faa5bc0:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Hold no new airspace action this round; continue monitoring for any NOTAM or official order from the Israeli Civil Aviation Authority, Ministry of Transport, or Israel Airports Authority closing the Tel Aviv FIR/LLLL to general commercial aviation, or for escalation in the ongoing Iran campaign that could prompt one.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_581e3fd0d5475a68",
+                  "actor_name": "Benjamin Netanyahu",
+                  "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                  "action": "Take no new public action on civil airspace this round; no NOTAM or official closure order appears in the public packet, and Netanyahu's evidenced track is the Lebanon ceasefire file. Monitor CAAI, Israel Airports Authority and Ministry of Transport notices for the Tel Aviv FIR/LLLL.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no new public action on civil airspace this round; no NOTAM or official closure order appears in the public packet, and Netanyahu's evidenced track is the Lebanon ceasefire file. Monitor CAAI, Israel Airports Authority and Ministry of Transport notices for the Tel Aviv FIR/LLLL.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_581e3fd0d5475a68:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reaffirm commitment to the Lebanon ceasefire talks and state that Israel's aviation authorities will keep assessing airspace safety; make no closure announcement and issue no order.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_62b70ed1ba2a5db6",
+                  "actor_name": "Lebanon",
+                  "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                  "action": "Publicly reaffirm Lebanon's commitment to the announced ceasefire talks with Israel and call for de-escalation, without asserting any role over Israeli airspace.\n承诺：Continue supporting the announced ceasefire talks; no commitment on airspace.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_62b70ed1ba2a5db6:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm Lebanon's commitment to the announced ceasefire talks with Israel and call for de-escalation, without asserting any role over Israeli airspace.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "No evidence shows an Israeli NOTAM or official order closing the Tel Aviv FIR/LLLL to general commercial aviation. The 2026 Iran war and Lebanon ceasefire items describe regional conflict and diplomacy, not an Israeli airspace closure; the simulated Lebanon statement explicitly disclaims any role over Israeli airspace.",
+                "evidence_quote": "Lebanon publicly reaffirmed its commitment to the announced ceasefire talks with Israel and called for de-escalation, without asserting any role over Israeli airspace.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israeli airspace closed by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No evidence shows a qualifying closure of the Tel Aviv FIR/LLLL to general commercial aviation. The 2026 Iran war excerpt mentions Saudi airspace closed to attackers and an Israeli state of emergency, but not an Israeli FIR closure; later rounds show only ceasefire diplomacy.",
+                "evidence_quote": "Saudi crown prince Mohammed bin Salman, with US backing, vowed to employ military force against Iranian incursions, calling Iranian strikes \"cowardly\" due to Saudi airspace being closed to US and Israeli attackers.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.07680000000000002
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 6,
+        "sampled_decisions": 12,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "3773ebed-ed63-4d20-9751-3340cda9f153",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:36:38.888599+00:00",
+      "contract_id": "0x0655a8cba573f1912fc4fb992c50b6062dc056802f933fa470cbbdfa56ae2de5",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c20c9af5c2e77f34a0cf9c1eacda64965f25a3fec1a87639aaa931b4c9bafea2",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 103.583
+    },
+    {
+      "calls": 112,
+      "tokens": 1111301,
+      "input_tokens": 1040302,
+      "output_tokens": 70999,
+      "accounted_tokens_upper": 1111301,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.23022,
+      "coverage": 0.574,
+      "unexplored_mass": 0.42600000000000005,
+      "unknown_bounds": [
+        0.017219999999999996,
+        0.44322000000000006
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.20107599999999998,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.42,
+          "visits": 4,
+          "search_value": 0.15507999999999997,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.42,
+          "visits": 3,
+          "search_value": 0.10864,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.42,
+          "visits": 2,
+          "search_value": 0.10475999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.23519999999999996,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.23519999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.007055999999999999
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.10079999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0030239999999999993
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.08400000000000002,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.27999999999999997,
+          "visits": 5,
+          "search_value": 0.241632,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.27999999999999997,
+          "visits": 4,
+          "search_value": 0.19643999999999998,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.27999999999999997,
+          "visits": 3,
+          "search_value": 0.12112,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.19039999999999999,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.19039999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.005711999999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.047599999999999996,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.047599999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0014279999999999998
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.04199999999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "24ad09ed-a997-47ff-8170-02540505c1e3",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:53:08.655751+00:00",
+      "contract_id": "0x0655a8cba573f1912fc4fb992c50b6062dc056802f933fa470cbbdfa56ae2de5",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "c20c9af5c2e77f34a0cf9c1eacda64965f25a3fec1a87639aaa931b4c9bafea2",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 302.273
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x0655a8cba573f1912fc4fb992c50b6062dc056802f933fa470cbbdfa56ae2de5",
+  "group_id": "israeli-airspace-closed-by",
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "c20c9af5c2e77f34a0cf9c1eacda64965f25a3fec1a87639aaa931b4c9bafea2",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 1105,
+    "input_tokens": 983,
+    "output_tokens": 122,
+    "accounted_tokens_upper": 1105,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 3,
+      "needs_evidence": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "unverified",
+      "seats": [],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Israeli governmental authority decides to close the Tel Aviv FIR/LLLL to general commercial aviation via NOTAM or official order.",
+        "Israel Airports Authority issues or implements an official closure order for Israeli airspace applying generally to commercial flights.",
+        "Civil Aviation Authority of Israel issues a NOTAM or official order closing the Tel Aviv FIR/LLLL to commercial aviation."
+      ],
+      "gaps": [
+        "No source identifies a specific named incumbent or officeholder empowered to order the closure; the responsible aviation/governmental authority is unresolved.",
+        "Sources do not establish whether any closure of Israeli airspace has occurred or is planned as of the cutoff.",
+        "No frozen source identifies Civil Aviation Authority of Israel; its decision remains unresolved.",
+        "No frozen source identifies Government of Israel; its decision remains unresolved.",
+        "No frozen source identifies Israel Airports Authority; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Israeli governmental authority decides to close the Tel Aviv FIR/LLLL to general commercial aviation via NOTAM or official order.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D2",
+          "choice": "Israel Airports Authority issues or implements an official closure order for Israeli airspace applying generally to commercial flights.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D3",
+          "choice": "Civil Aviation Authority of Israel issues a NOTAM or official order closing the Tel Aviv FIR/LLLL to commercial aviation.",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 31,
+    "tokens": 82358,
+    "input_tokens": 72407,
+    "output_tokens": 9951,
+    "accounted_tokens_upper": 82358,
+    "unknown_usage_requests": 0
+  }
+}

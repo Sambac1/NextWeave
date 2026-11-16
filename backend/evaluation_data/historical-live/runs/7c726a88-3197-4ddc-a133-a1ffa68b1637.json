@@ -1,0 +1,1393 @@
+{
+  "run_id": "7c726a88-3197-4ddc-a133-a1ffa68b1637",
+  "case_id": "market_b9860888884c4eb7e39650b4",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3079,
+      "input_tokens": 3069,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3079,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3069,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:32:29.053483+00:00",
+      "contract_id": "0x6c3d5fba5442f3e725eb89b7cffcc341ca3105cddaac09c1e4bc8e7010f0fe40",
+      "forecast_cutoff": "2025-09-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "cb0ce30e1b0e0b4b755ae4bcf20498d44fa469195f693529237fd46f5750a4e7",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.728
+    },
+    {
+      "calls": 2,
+      "tokens": 6158,
+      "input_tokens": 6138,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6158,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.1,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.12,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3069,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3069,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:32:30.558071+00:00",
+      "contract_id": "0x6c3d5fba5442f3e725eb89b7cffcc341ca3105cddaac09c1e4bc8e7010f0fe40",
+      "forecast_cutoff": "2025-09-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "cb0ce30e1b0e0b4b755ae4bcf20498d44fa469195f693529237fd46f5750a4e7",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.504
+    },
+    {
+      "calls": 6,
+      "tokens": 57573,
+      "input_tokens": 54965,
+      "output_tokens": 2608,
+      "accounted_tokens_upper": 57573,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-09-10",
+                "interval_end": "2025-09-18",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 8,
+                "interval_days": 8,
+                "interval_start_utc": "2025-09-10T23:59:59+00:00",
+                "interval_end_utc": "2025-09-18T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "status": "executed",
+                  "summary": "Federal Open Market Committee lowered the target federal funds rate at its September 16-17, 2025 meeting, decreasing the upper bound by 50 basis points versus its pre-meeting level and announcing the decision in the post-meeting statement."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "met",
+                  "summary": "decreasing the upper bound by 50 basis points versus its pre-meeting level",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Federal Open Market Committee lowered the target federal funds rate at its September 16-17, 2025 meeting, decreasing the upper bound by 50 basis points versus its pre-meeting level and announcing the decision in the post-meeting statement.",
+                  "date": "2025-09-17"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                  "action": "At the September 16-17, 2025 FOMC meeting, lower the target federal funds rate, with the upper bound decreased by 50 basis points versus its pre-meeting level, and announce the decision in the post-meeting statement.\n承诺：Decrease the upper bound of the target federal funds range by 50 bps at the September 2025 meeting.",
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                      "weight": 45.0,
+                      "probability": 0.45,
+                      "action": "At the September 16-17, 2025 FOMC meeting, lower the target federal funds rate, with the upper bound decreased by 50 basis points versus its pre-meeting level, and announce the decision in the post-meeting statement.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_a58c0ed2ffc259e4:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "At the September 16-17, 2025 FOMC meeting, lower the target federal funds rate by 25 basis points (upper bound) and announce it in the post-meeting statement, keeping further easing data-dependent.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.97,
+                "basis": "A simulated round-1 event states the FOMC cut the upper bound by 50 bps at the September 16-17, 2025 meeting, matching the contract threshold. No contrary post-meeting statement is present; the main residual uncertainty is whether this simulated record reflects the official resolution source.",
+                "evidence_quote": "Federal Open Market Committee lowered the target federal funds rate at its September 16-17, 2025 meeting, decreasing the upper bound by 50 basis points versus its pre-meeting level and announcing the decision in the post-meeting statement.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.97,
+          "error": null,
+          "action_path_probability": 0.45
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.97,
+      "covered_p_yes": 0.97,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.97,
+        0.97
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "617d8cec-a37f-49e9-b03c-bf59c0297807",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:33:07.426481+00:00",
+      "contract_id": "0x6c3d5fba5442f3e725eb89b7cffcc341ca3105cddaac09c1e4bc8e7010f0fe40",
+      "forecast_cutoff": "2025-09-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "cb0ce30e1b0e0b4b755ae4bcf20498d44fa469195f693529237fd46f5750a4e7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 36.866
+    },
+    {
+      "calls": 23,
+      "tokens": 239491,
+      "input_tokens": 230920,
+      "output_tokens": 8571,
+      "accounted_tokens_upper": 239491,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-10",
+                "interval_end": "2025-09-12",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-10T23:59:59+00:00",
+                "interval_end_utc": "2025-09-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                  "action": "Take no external action this round; the FOMC's next scheduled decision point is the September 16-17, 2025 meeting, outside this interval. Continue internal assessment of incoming data ahead of that meeting without issuing any public statement, signal, or rate change now.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no external action this round; the FOMC's next scheduled decision point is the September 16-17, 2025 meeting, outside this interval. Continue internal assessment of incoming data ahead of that meeting without issuing any public statement, signal, or rate change now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No current evidence addresses the September 2025 FOMC decision; all cited material is historical (2022 hikes, 2008 loan) or describes Fed operating tools, not the upcoming rate action. Historical precedent of 25/50 bps moves and past hikes does not establish a 50+ bps cut in this window.",
+                "evidence_quote": "The Federal Reserve System usually adjusts the federal funds rate target by 0.25% or 0.50% at a time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-12",
+                "interval_end": "2025-09-15",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 5,
+                "interval_days": 3,
+                "interval_start_utc": "2025-09-12T00:00:00+00:00",
+                "interval_end_utc": "2025-09-15T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No current evidence addresses the September 2025 FOMC decision; all cited material is historical (2022 hikes, 2008 loan) or describes Fed operating tools, not the upcoming rate action. Historical precedent of 25/50 bps moves and past hikes does not establish a 50+ bps cut in this window.",
+                "evidence_quote": "The Federal Reserve System usually adjusts the federal funds rate target by 0.25% or 0.50% at a time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-15",
+                "interval_end": "2025-09-18",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 8,
+                "interval_days": 3,
+                "interval_start_utc": "2025-09-15T00:00:00+00:00",
+                "interval_end_utc": "2025-09-18T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled evidence covers the September 2025 FOMC decision; the packet only contains historical rate moves and generic Fed tool descriptions. The 50+ bp cut requires an unusually large move versus the Fed's typical 25 bp steps, so the unobserved outcome is estimated low but not zero.",
+                "evidence_quote": "The Federal Reserve System usually adjusts the federal funds rate target by 0.25% or 0.50% at a time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-10",
+                "interval_end": "2025-09-12",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-10T23:59:59+00:00",
+                "interval_end_utc": "2025-09-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                  "action": "Take no public action before the September 16-17, 2025 FOMC meeting; the target range decision will be made and announced in the post-meeting statement per the official calendar.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Take no public action before the September 16-17, 2025 FOMC meeting; the target range decision will be made and announced in the post-meeting statement per the official calendar.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No current evidence addresses the September 2025 FOMC decision; all cited material is historical (2022 hikes, 2008 loan) or describes Fed operating tools, not the upcoming rate action. Historical precedent of 25/50 bps moves and past hikes does not establish a 50+ bps cut in this window.",
+                "evidence_quote": "The Federal Reserve System usually adjusts the federal funds rate target by 0.25% or 0.50% at a time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-12",
+                "interval_end": "2025-09-15",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 5,
+                "interval_days": 3,
+                "interval_start_utc": "2025-09-12T00:00:00+00:00",
+                "interval_end_utc": "2025-09-15T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No current evidence addresses the September 2025 FOMC decision; all cited material is historical (2022 hikes, 2008 loan) or describes Fed operating tools, not the upcoming rate action. Historical precedent of 25/50 bps moves and past hikes does not establish a 50+ bps cut in this window.",
+                "evidence_quote": "The Federal Reserve System usually adjusts the federal funds rate target by 0.25% or 0.50% at a time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-15",
+                "interval_end": "2025-09-18",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 8,
+                "interval_days": 3,
+                "interval_start_utc": "2025-09-15T00:00:00+00:00",
+                "interval_end_utc": "2025-09-18T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled evidence covers the September 2025 FOMC decision; the packet only contains historical rate moves and generic Fed tool descriptions. The 50+ bp cut requires an unusually large move versus the Fed's typical 25 bp steps, so the unobserved outcome is estimated low but not zero.",
+                "evidence_quote": "The Federal Reserve System usually adjusts the federal funds rate target by 0.25% or 0.50% at a time.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "17b519fb-9297-4e37-984c-0a0f3b364359",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:33:38.894017+00:00",
+      "contract_id": "0x6c3d5fba5442f3e725eb89b7cffcc341ca3105cddaac09c1e4bc8e7010f0fe40",
+      "forecast_cutoff": "2025-09-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "cb0ce30e1b0e0b4b755ae4bcf20498d44fa469195f693529237fd46f5750a4e7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 31.465
+    },
+    {
+      "calls": 13,
+      "tokens": 127442,
+      "input_tokens": 122986,
+      "output_tokens": 4456,
+      "accounted_tokens_upper": 127442,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-10",
+                "interval_end": "2025-09-12",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2025-09-10T23:59:59+00:00",
+                "interval_end_utc": "2025-09-12T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a58c0ed2ffc259e4:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Signal that the Committee will act as needed at the September 16-17 meeting, without committing to a 50+ bps cut or any specific size; any change will be decided on incoming data at that meeting.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No current evidence addresses the September 2025 FOMC decision; all supplied items are historical (2022 hikes, 2008 AIG loan) or generic Fed tool descriptions. Historical tightening cycles and tool mechanics do not establish a 50+ bps cut in September 2025, so the estimate stays low and speculative.",
+                "evidence_quote": "On September 22, 2022, the Fed increased the interest for a fifth time in the year reaching a 14-year high, delivering another 0.75 points to bring rates to 3.00–3.25%.",
+                "change_driver": null,
+                "evidence_ref": "hist_2184b0d99e955220.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-12",
+                "interval_end": "2025-09-15",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 5,
+                "interval_days": 3,
+                "interval_start_utc": "2025-09-12T00:00:00+00:00",
+                "interval_end_utc": "2025-09-15T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No current evidence addresses the September 2025 FOMC decision; all supplied items are historical (2022 hikes, 2008 AIG loan) or generic Fed tool descriptions. Historical tightening cycles and tool mechanics do not establish a 50+ bps cut in September 2025, so the estimate stays low and speculative.",
+                "evidence_quote": "On September 22, 2022, the Fed increased the interest for a fifth time in the year reaching a 14-year high, delivering another 0.75 points to bring rates to 3.00–3.25%.",
+                "change_driver": null,
+                "evidence_ref": "hist_2184b0d99e955220.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-09-15",
+                "interval_end": "2025-09-18",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 8,
+                "interval_days": 3,
+                "interval_start_utc": "2025-09-15T00:00:00+00:00",
+                "interval_end_utc": "2025-09-18T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled evidence covers the September 2025 FOMC decision; all cited material is historical (2022 hikes, 2008 loan) or describes Fed operating tools, not the outcome. The 50+ bp cut therefore remains unverified, and the estimate rests on weak historical analogy rather than observed in-window action.",
+                "evidence_quote": "On September 22, 2022, the Fed increased the interest for a fifth time in the year reaching a 14-year high, delivering another 0.75 points to bring rates to 3.00–3.25%.",
+                "change_driver": null,
+                "evidence_ref": "hist_2184b0d99e955220.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.8
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 1,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "23f21656-286d-44c6-9f3e-04c6e6d8d57a",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:12:52.755071+00:00",
+      "contract_id": "0x6c3d5fba5442f3e725eb89b7cffcc341ca3105cddaac09c1e4bc8e7010f0fe40",
+      "forecast_cutoff": "2025-09-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "cb0ce30e1b0e0b4b755ae4bcf20498d44fa469195f693529237fd46f5750a4e7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 36.452
+    },
+    {
+      "calls": 12,
+      "tokens": 113460,
+      "input_tokens": 109002,
+      "output_tokens": 4458,
+      "accounted_tokens_upper": 113460,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-09-10",
+                "interval_end": "2025-09-18",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 8,
+                "interval_days": 8,
+                "interval_start_utc": "2025-09-10T23:59:59+00:00",
+                "interval_end_utc": "2025-09-18T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "status": "executed",
+                  "summary": "The Federal Open Market Committee concluded its scheduled September 16-17, 2025 meeting and issued its post-meeting statement setting the target federal funds rate, without pre-announcing a 50+ basis point cut."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "without pre-announcing a 50+ basis point cut",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Federal Open Market Committee concluded its scheduled September 16-17, 2025 meeting and issued its post-meeting statement setting the target federal funds rate, without pre-announcing a 50+ basis point cut.",
+                  "date": "2025-09-17"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                  "action": "At the September 16-17, 2025 FOMC meeting, decide the target federal funds rate and issue the post-meeting statement. Given the packet contains no 2025 inflation, employment, or target-range data, I will not commit in advance to a 50+ bps cut; the decision is made on the data at the meeting and published per the official calendar.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "At the September 16-17, 2025 FOMC meeting, decide the target federal funds rate and issue the post-meeting statement. Given the packet contains no 2025 inflation, employment, or target-range data, I will not commit in advance to a 50+ bps cut; the decision is made on the data at the meeting and published per the official calendar.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "The only in-window evidence is the simulated post-meeting statement, which set the target range without pre-announcing a 50+ bp cut. That points toward no 50+ bp decrease, though the exact size of any change is not stated.",
+                "evidence_quote": "The Federal Open Market Committee concluded its scheduled September 16-17, 2025 meeting and issued its post-meeting statement setting the target federal funds rate, without pre-announcing a 50+ basis point cut.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.85
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-09-10",
+                "interval_end": "2025-09-18",
+                "horizon_end": "2025-09-18",
+                "elapsed_days": 8,
+                "interval_days": 8,
+                "interval_start_utc": "2025-09-10T23:59:59+00:00",
+                "interval_end_utc": "2025-09-18T03:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "status": "unknown",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_a58c0ed2ffc259e4",
+                  "actor_name": "Federal Open Market Committee",
+                  "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                  "action": "At the conclusion of the September 16-17, 2025 FOMC meeting, issue the FOMC statement setting the target federal funds range. This round's act is the committee's decision and public statement; the specific size of any cut is set by the Committee's vote at that meeting rather than pre-committed here.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_a58c0ed2ffc259e4:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "At the conclusion of the September 16-17, 2025 FOMC meeting, issue the FOMC statement setting the target federal funds range. This round's act is the committee's decision and public statement; the specific size of any cut is set by the Committee's vote at that meeting rather than pre-committed here.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled evidence covers the September 2025 FOMC decision; the packet only contains historical rate moves and generic Fed tool descriptions. The 50+ bp cut therefore remains unverified, and the estimate reflects only weak prior context rather than any observed in-window action.",
+                "evidence_quote": "On September 22, 2022, the Fed increased the interest for a fifth time in the year reaching a 14-year high, delivering another 0.75 points to bring rates to 3.00–3.25%.",
+                "change_driver": null,
+                "evidence_ref": "hist_2184b0d99e955220.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.075,
+      "covered_p_yes": 0.075,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.075,
+        0.07499999999999996
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "50c916b5-f0ba-485d-ba44-2dc89c3880ce",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:13:11.175060+00:00",
+      "contract_id": "0x6c3d5fba5442f3e725eb89b7cffcc341ca3105cddaac09c1e4bc8e7010f0fe40",
+      "forecast_cutoff": "2025-09-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "cb0ce30e1b0e0b4b755ae4bcf20498d44fa469195f693529237fd46f5750a4e7",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 18.419
+    },
+    {
+      "calls": 17,
+      "tokens": 171269,
+      "input_tokens": 164819,
+      "output_tokens": 6450,
+      "accounted_tokens_upper": 171269,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.12,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.12,
+        0.12
+      ],
+      "search_iterations": 3,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 3,
+          "search_value": 0.42239999999999994,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 1.0,
+          "visits": 2,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 1.0,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 1.0,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.12
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "3f329cee-a44f-4442-b7f5-d4060383bd4f",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:14:01.477310+00:00",
+      "contract_id": "0x6c3d5fba5442f3e725eb89b7cffcc341ca3105cddaac09c1e4bc8e7010f0fe40",
+      "forecast_cutoff": "2025-09-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "cb0ce30e1b0e0b4b755ae4bcf20498d44fa469195f693529237fd46f5750a4e7",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 50.302
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-09-10T23:59:59+00:00",
+  "forecast_key": "0x6c3d5fba5442f3e725eb89b7cffcc341ca3105cddaac09c1e4bc8e7010f0fe40",
+  "group_id": "fed-decision-in-september",
+  "evidence_sha256": "cb0ce30e1b0e0b4b755ae4bcf20498d44fa469195f693529237fd46f5750a4e7",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 862,
+    "input_tokens": 772,
+    "output_tokens": 90,
+    "accounted_tokens_upper": 862,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-09-10",
+        "2025-09-18"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-09-10",
+        "2025-09-12",
+        "2025-09-15",
+        "2025-09-18"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-09-10",
+        "2025-09-12",
+        "2025-09-15",
+        "2025-09-18"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-09-10",
+        "2025-09-18"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-09-10",
+        "2025-09-12",
+        "2025-09-15",
+        "2025-09-18"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-09-18T03:59:59+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-09-17T12:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_07884920d135dc38",
+          "name": "Federal Open Market Committee",
+          "role": "Committee within the Federal Reserve System that makes key decisions about interest rates, including the target federal funds rate.",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No named individual FOMC members or voters are identified in the sources; the committee is treated as a collective decision-maker.",
+        "The resolution source (FOMC statement) is an official report, not a decision seat."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "FOMC decision on the target federal funds rate at the September 16-17, 2025 meeting, determining whether the upper bound is decreased by 50+ bps.",
+          "owner": "Federal Open Market Committee",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 10,
+    "tokens": 32608,
+    "input_tokens": 30103,
+    "output_tokens": 2505,
+    "accounted_tokens_upper": 32608,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

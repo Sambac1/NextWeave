@@ -1,0 +1,1782 @@
+{
+  "run_id": "aae75985-df41-48a3-9c82-9351129ecb2a",
+  "case_id": "market_1bf93bb19ff78141ecf11ae6",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2743,
+      "input_tokens": 2733,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2743,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.03,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2733,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:27:28.070489+00:00",
+      "contract_id": "0x2552e3d2bf2a98a150f909265bf7bd8365373070c2853fed90545e5204854cc1",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d2bd4dd8aa4362bf321d21243f0853c87aee2829e5a92abfa19edbc920373248",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.87
+    },
+    {
+      "calls": 2,
+      "tokens": 5486,
+      "input_tokens": 5466,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5486,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.06,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.04,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2733,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2733,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:27:29.573948+00:00",
+      "contract_id": "0x2552e3d2bf2a98a150f909265bf7bd8365373070c2853fed90545e5204854cc1",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d2bd4dd8aa4362bf321d21243f0853c87aee2829e5a92abfa19edbc920373248",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.502
+    },
+    {
+      "calls": 7,
+      "tokens": 82554,
+      "input_tokens": 79337,
+      "output_tokens": 3217,
+      "accounted_tokens_upper": 82554,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "status": "executed",
+                  "summary": "Pete Hegseth publicly reaffirmed his commitment to remaining as Secretary of War/Defense and to the ongoing reform agenda, rejecting calls for his resignation as politically motivated."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Pete Hegseth publicly reaffirmed his commitment to remaining as Secretary of War/Defense",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Pete Hegseth publicly reaffirmed his commitment to remaining as Secretary of War/Defense and to the ongoing reform agenda, rejecting calls for his resignation as politically motivated.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_77239a39acbb52c2:initial:2",
+                  "action": "Publicly reaffirm commitment to remaining as Secretary of War/Defense and to the ongoing reform agenda, rejecting calls for resignation as politically motivated.",
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no outward action in this round: continue serving as Secretary of War/Defense and proceed with the announced 20% reduction of admirals and generals effective January 1, 2027, without announcing resignation or any change in status.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_77239a39acbb52c2:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publicly reaffirm commitment to remaining as Secretary of War/Defense and to the ongoing reform agenda, rejecting calls for resignation as politically motivated.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No public evidence shows a House impeachment vote; the record shows Hegseth remaining in office and defending his tenure. Criticism and staff resignations are not a House majority action, and the window closes Dec 31, 2026.",
+                "evidence_quote": "Pete Hegseth publicly reaffirmed his commitment to remaining as Secretary of War/Defense and to the ongoing reform agenda, rejecting calls for his resignation as politically motivated.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.15
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "256a55b1-1d81-4910-92c8-057106339a35",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:28:30.969097+00:00",
+      "contract_id": "0x2552e3d2bf2a98a150f909265bf7bd8365373070c2853fed90545e5204854cc1",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d2bd4dd8aa4362bf321d21243f0853c87aee2829e5a92abfa19edbc920373248",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 61.392
+    },
+    {
+      "calls": 12,
+      "tokens": 152028,
+      "input_tokens": 146505,
+      "output_tokens": 5523,
+      "accounted_tokens_upper": 152028,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No public evidence shows a House impeachment vote or even committee action against Hegseth; the record shows only criticism and Pentagon personnel turmoil. With the window closing at end-2026 and no qualifying vote reported, a Yes resolution is unlikely but not impossible.",
+                "evidence_quote": "Hegseth has drawn criticism during his tenure as secretary of defense for a variety of actions such as the fallout from a leaked government group chat on Signal; alleged war crimes related to U.S. military strikes on alleged drug traffickers in the Caribbean Sea",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No public evidence shows a House impeachment vote or even committee action against Hegseth; the record shows only criticism and Pentagon personnel turmoil. With the window closing at end-2026 and no qualifying vote reported, a Yes resolution is unlikely but not impossible.",
+                "evidence_quote": "Hegseth has drawn criticism during his tenure as secretary of defense for a variety of actions such as the fallout from a leaked government group chat on Signal; alleged war crimes related to U.S. military strikes on alleged drug traffickers in the Caribbean Sea",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "10bb5182-272f-4881-ae9e-3a5f1be88865",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:28:56.239268+00:00",
+      "contract_id": "0x2552e3d2bf2a98a150f909265bf7bd8365373070c2853fed90545e5204854cc1",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d2bd4dd8aa4362bf321d21243f0853c87aee2829e5a92abfa19edbc920373248",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 25.269
+    },
+    {
+      "calls": 20,
+      "tokens": 220089,
+      "input_tokens": 213001,
+      "output_tokens": 7088,
+      "accounted_tokens_upper": 220089,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                  "action": "Take no outward step this round: remain in office as Secretary of War/Defense and make no resignation announcement, no statement on impeachment, and no personnel change beyond the already-announced reduction effective January 1, 2027.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no outward step this round: remain in office as Secretary of War/Defense and make no resignation announcement, no statement on impeachment, and no personnel change beyond the already-announced reduction effective January 1, 2027.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a House impeachment vote or even a committee referral against Hegseth; the record shows only controversy and Pentagon personnel turmoil. With the window closing December 31, 2026 and no announced articles, a qualifying simple-majority vote is unlikely.",
+                "evidence_quote": "The announcement raised concerns over political interference in the Pentagon and sparked criticism of sidelining experience, discouraging dissent, and appointing political loyalists.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a House impeachment vote or even a committee referral against Hegseth; the record shows only controversy and Pentagon personnel turmoil. With the window closing December 31, 2026 and no announced articles, a qualifying simple-majority vote is unlikely.",
+                "evidence_quote": "The announcement raised concerns over political interference in the Pentagon and sparked criticism of sidelining experience, discouraging dissent, and appointing political loyalists.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a House impeachment vote or even a committee referral against Hegseth; the record shows only controversy and Pentagon personnel turmoil. With the window closing December 31, 2026 and no announced articles, a qualifying simple-majority vote is unlikely.",
+                "evidence_quote": "The announcement raised concerns over political interference in the Pentagon and sparked criticism of sidelining experience, discouraging dissent, and appointing political loyalists.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                  "action": "Take no outward step this round: remain in office as Secretary of War/Defense, make no resignation announcement and no statement on impeachment, and let the already-announced 20% reduction of admirals/generals proceed toward its January 1, 2027 effective date.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no outward step this round: remain in office as Secretary of War/Defense, make no resignation announcement and no statement on impeachment, and let the already-announced 20% reduction of admirals/generals proceed toward its January 1, 2027 effective date.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a House impeachment vote or even a committee referral against Hegseth; the record shows only controversy and Pentagon personnel turmoil. With the window closing December 31, 2026 and no announced articles, a qualifying simple-majority vote is unlikely.",
+                "evidence_quote": "The announcement raised concerns over political interference in the Pentagon and sparked criticism of sidelining experience, discouraging dissent, and appointing political loyalists.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No public evidence shows a House impeachment vote or even committee action against Hegseth; the record shows only criticism, staff resignations, and a general-reduction announcement. With the window closing at end-2026 and no reported movement toward articles of impeachment, a qualifying vote remains unlikely but not impossible.",
+                "evidence_quote": "The announcement raised concerns over political interference in the Pentagon and sparked criticism of sidelining experience, discouraging dissent, and appointing political loyalists.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "65f6ecff-a8ee-4747-9b7a-9b38123d5503",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:30:00.063696+00:00",
+      "contract_id": "0x2552e3d2bf2a98a150f909265bf7bd8365373070c2853fed90545e5204854cc1",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d2bd4dd8aa4362bf321d21243f0853c87aee2829e5a92abfa19edbc920373248",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 63.822
+    },
+    {
+      "calls": 44,
+      "tokens": 500792,
+      "input_tokens": 482614,
+      "output_tokens": 18178,
+      "accounted_tokens_upper": 500792,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "status": "executed",
+                  "summary": "Pete Hegseth publicly defended his record as Secretary of War, emphasizing operational goals and rebutting criticism of political interference in the Pentagon, in an effort to shore up support and dampen momentum for any House impeachment effort."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Pete Hegseth publicly defended his record as Secretary of War, emphasizing operational goals and rebutting criticism of political interference in the Pentagon",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Pete Hegseth publicly defended his record as Secretary of War, emphasizing operational goals and rebutting criticism of political interference in the Pentagon, in an effort to shore up support and dampen momentum for any House impeachment effort.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_77239a39acbb52c2:initial:2",
+                  "action": "Publicly defend his record and tenure, emphasizing operational goals and rebutting political-interference criticism, to shore up support and reduce momentum for any House impeachment effort.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Remain in office as Secretary of War/Defense and take no outward step this round; monitor for any House impeachment inquiry, articles, or scheduled vote before Dec 31, 2026.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_77239a39acbb52c2:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly defend his record and tenure, emphasizing operational goals and rebutting political-interference criticism, to shore up support and reduce momentum for any House impeachment effort.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No public evidence shows a House impeachment vote or even committee movement against Hegseth; the record shows controversy and staff friction but continued tenure. The simulated November 2026 defense of his record suggests he remains in office and actively resisting pressure, leaving little time for a qualifying vote by year-end.",
+                "evidence_quote": "Pete Hegseth publicly defended his record as Secretary of War, emphasizing operational goals and rebutting criticism of political interference in the Pentagon, in an effort to shore up support and dampen momentum for any House impeachment effort.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No public evidence shows a House impeachment vote or even committee movement against Hegseth; the record shows controversy and staff friction but continued tenure. The simulated November 2026 defense of his record suggests he remains in office and actively resisting pressure, leaving little time for a qualifying vote by year-end.",
+                "evidence_quote": "Pete Hegseth publicly defended his record as Secretary of War, emphasizing operational goals and rebutting criticism of political interference in the Pentagon, in an effort to shore up support and dampen momentum for any House impeachment effort.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No public evidence shows a House impeachment vote or even committee movement against Hegseth; the record shows controversy and staff friction but continued tenure. The simulated November 2026 defense of his record suggests he remains in office and actively resisting pressure, leaving little time for a qualifying vote by year-end.",
+                "evidence_quote": "Pete Hegseth publicly defended his record as Secretary of War, emphasizing operational goals and rebutting criticism of political interference in the Pentagon, in an effort to shore up support and dampen momentum for any House impeachment effort.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "status": "executed",
+                  "summary": "Pete Hegseth issued another public statement defending his record as Secretary of War, highlighting operational goals and rebutting criticism of political interference in the Pentagon, aimed at sustaining Republican support before year-end."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Pete Hegseth issued another public statement defending his record as Secretary of War",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Pete Hegseth issued another public statement defending his record as Secretary of War, highlighting operational goals and rebutting criticism of political interference in the Pentagon, aimed at sustaining Republican support before year-end.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                  "action": "Issue another public statement defending my record as Secretary of War, highlighting operational goals and rebutting political-interference criticism, to sustain Republican support and keep any House impeachment effort from gaining momentum before year-end.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue another public statement defending my record as Secretary of War, highlighting operational goals and rebutting political-interference criticism, to sustain Republican support and keep any House impeachment effort from gaining momentum before year-end.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a House impeachment vote or even committee movement against Hegseth; the record shows controversy and staff resignations but sustained Republican support. The simulated late-2026 statements defending his record point toward dampened impeachment momentum rather than a qualifying vote before the deadline.",
+                "evidence_quote": "Pete Hegseth issued another public statement defending his record as Secretary of War, highlighting operational goals and rebutting criticism of political interference in the Pentagon, aimed at sustaining Republican support before year-end.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "No public evidence shows a House impeachment vote or even committee action against Hegseth; the record shows only criticism, resignations of subordinates, and Hegseth's own defenses. With the window closing at end-2026 and no reported movement toward articles, a qualifying vote remains unlikely.",
+                "evidence_quote": "Pete Hegseth publicly defended his record as Secretary of War, emphasizing operational goals and rebutting criticism of political interference in the Pentagon, in an effort to shore up support and dampen momentum for any House impeachment effort.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.21
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                  "action": "Take no new outward step this round: continue serving as Secretary of War/Defense, proceed with the announced 20% reduction of admirals and generals effective January 1, 2027, and make no resignation statement or signal.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward step this round: continue serving as Secretary of War/Defense, proceed with the announced 20% reduction of admirals and generals effective January 1, 2027, and make no resignation statement or signal.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a House impeachment vote against Hegseth, and the cited record covers only his tenure controversies and Pentagon personnel actions. With the forecast cutoff in November 2026 and no in-window impeachment action, a qualifying House vote by December 31, 2026 remains unlikely.",
+                "evidence_quote": "On August 31, 2026, Secretary of the Army Dan Driscoll gave Hegseth his resignation after a face to face meeting Driscoll had with President Trump where he stated his concerns over the number of army generals fired under Hegseth.",
+                "change_driver": null,
+                "evidence_ref": "hist_08977448bb135e68.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a House impeachment vote against Hegseth, and the cited record covers only his tenure controversies and Pentagon personnel actions. With the forecast cutoff in November 2026 and no in-window impeachment action, a qualifying House vote by December 31, 2026 remains unlikely.",
+                "evidence_quote": "On August 31, 2026, Secretary of the Army Dan Driscoll gave Hegseth his resignation after a face to face meeting Driscoll had with President Trump where he stated his concerns over the number of army generals fired under Hegseth.",
+                "change_driver": null,
+                "evidence_ref": "hist_08977448bb135e68.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a House impeachment vote against Hegseth, and the cited record covers only his tenure controversies and Pentagon personnel actions. With the forecast cutoff in November 2026 and no in-window impeachment action, a qualifying House vote by December 31, 2026 remains unlikely.",
+                "evidence_quote": "On August 31, 2026, Secretary of the Army Dan Driscoll gave Hegseth his resignation after a face to face meeting Driscoll had with President Trump where he stated his concerns over the number of army generals fired under Hegseth.",
+                "change_driver": null,
+                "evidence_ref": "hist_08977448bb135e68.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_77239a39acbb52c2",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                  "action": "Take no new outward step this round: continue serving as Secretary of War/Defense, proceed with the announced 20% reduction of admirals and generals effective January 1, 2027, and make no resignation statement or signal.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_77239a39acbb52c2:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no new outward step this round: continue serving as Secretary of War/Defense, proceed with the announced 20% reduction of admirals and generals effective January 1, 2027, and make no resignation statement or signal.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_77239a39acbb52c2:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publicly reaffirm I am staying in office and that the January 1, 2027 force-reduction directive will proceed on schedule, framing it as restoring a warrior ethos; no resignation signal.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a House impeachment vote against Hegseth, and the cited record covers only his tenure controversies and Pentagon personnel actions. With the forecast cutoff in November 2026 and no in-window impeachment action, a qualifying House vote by December 31, 2026 remains unlikely.",
+                "evidence_quote": "On August 31, 2026, Secretary of the Army Dan Driscoll gave Hegseth his resignation after a face to face meeting Driscoll had with President Trump where he stated his concerns over the number of army generals fired under Hegseth.",
+                "change_driver": null,
+                "evidence_ref": "hist_08977448bb135e68.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth impeached by December 31, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No public evidence shows a House impeachment vote or even committee action against Hegseth; the record shows only controversy and Pentagon personnel turmoil. With the window closing at end-2026 and no reported movement toward articles, a qualifying vote is unlikely but not impossible.",
+                "evidence_quote": "The announcement raised concerns over political interference in the Pentagon and sparked criticism of sidelining experience, discouraging dissent, and appointing political loyalists.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.85
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 6,
+        "sampled_decisions": 4,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.05500000000000001,
+      "covered_p_yes": 0.05500000000000001,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.05500000000000001,
+        0.05499999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "f0073f46-dbfe-4456-b470-809807ad4116",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:31:32.206800+00:00",
+      "contract_id": "0x2552e3d2bf2a98a150f909265bf7bd8365373070c2853fed90545e5204854cc1",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d2bd4dd8aa4362bf321d21243f0853c87aee2829e5a92abfa19edbc920373248",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 92.139
+    },
+    {
+      "calls": 33,
+      "tokens": 369817,
+      "input_tokens": 355981,
+      "output_tokens": 13836,
+      "accounted_tokens_upper": 369817,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.02,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.02,
+        0.02
+      ],
+      "search_iterations": 6,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 6,
+          "search_value": 0.09834999999999999,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 1.0,
+          "visits": 5,
+          "search_value": 0.09474,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 1.0,
+          "visits": 4,
+          "search_value": 0.08932499999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 1.0,
+          "visits": 3,
+          "search_value": 0.0803,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.85,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.85,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.017
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.15,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.15,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.003
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "d754572d-ddbd-4e63-b4cb-ad9844570beb",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:33:22.933904+00:00",
+      "contract_id": "0x2552e3d2bf2a98a150f909265bf7bd8365373070c2853fed90545e5204854cc1",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "d2bd4dd8aa4362bf321d21243f0853c87aee2829e5a92abfa19edbc920373248",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 110.721
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x2552e3d2bf2a98a150f909265bf7bd8365373070c2853fed90545e5204854cc1",
+  "group_id": "pete-hegseth-impeached-by-june-30",
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "d2bd4dd8aa4362bf321d21243f0853c87aee2829e5a92abfa19edbc920373248",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 757,
+    "input_tokens": 638,
+    "output_tokens": 119,
+    "accounted_tokens_upper": 757,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_9ff6cd8098e59a77",
+          "name": "Pete Hegseth",
+          "role": "United States Secretary of War/Defense; subject of the impeachment question. His permanent vacating of office before a House impeachment vote would resolve the market No.",
+          "decision_ids": [
+            "hegseth_vacate_office"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "US House of Representatives approves or passes one or more articles of impeachment of Pete Hegseth by simple majority before Dec 31, 2026."
+      ],
+      "gaps": [
+        "No source evidence identifies a specific House member or committee that has initiated, drafted, or scheduled an impeachment vote against Hegseth as of 2026-11-09.",
+        "The sources do not establish whether any House impeachment resolution has been introduced or referred to committee.",
+        "No named Senate or executive actor is causally required for a Yes resolution because Senate trial/conviction is explicitly unnecessary.",
+        "No frozen source identifies US House of Representatives; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "house_impeach_vote",
+          "choice": "US House of Representatives approves or passes one or more articles of impeachment of Pete Hegseth by simple majority before Dec 31, 2026.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "hegseth_vacate_office",
+          "choice": "Pete Hegseth permanently vacates the office of Secretary of War/Defense before a qualifying House impeachment vote; if so, market resolves No.",
+          "owner": "Pete Hegseth",
+          "support": "represented"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 26,
+    "tokens": 58226,
+    "input_tokens": 48617,
+    "output_tokens": 9609,
+    "accounted_tokens_upper": 58226,
+    "unknown_usage_requests": 0
+  }
+}

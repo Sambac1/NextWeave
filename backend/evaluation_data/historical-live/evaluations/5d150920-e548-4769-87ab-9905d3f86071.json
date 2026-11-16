@@ -1,0 +1,3060 @@
+{
+  "run_id": "5d150920-e548-4769-87ab-9905d3f86071",
+  "mode": "historical",
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "single_step_simulation",
+    "multi_trajectory_simulation",
+    "single_trajectory_simulation",
+    "single_step_ensemble",
+    "mcts_simulation"
+  ],
+  "forecast_protocol": "sequential-action-outlook-v6",
+  "status": "Partial",
+  "error": null,
+  "quick_test": false,
+  "total": 30,
+  "active_run_id": null,
+  "created_at": "2026-11-09T01:20:09.852772+00:00",
+  "current": 30,
+  "settings": {
+    "question_count": 30,
+    "qa_samples": 2,
+    "single_step_samples": 2,
+    "steps": null,
+    "sample_count": 2,
+    "max_model_calls": 246,
+    "max_total_tokens": 4100000
+  },
+  "selection": {
+    "policy": "Same 30 resolved contracts, frozen evidence and original four forecasts. Three new simulation baselines use the same actor preparation and round schedule, with matched per-method resource ceilings.",
+    "target": 30,
+    "collected": 30,
+    "accepted": 30,
+    "not_screened": 0,
+    "excluded": []
+  },
+  "knowledge_cutoff": {
+    "status": "Knowledge Cutoff Unverified"
+  },
+  "questions": [
+    {
+      "case_id": "market_40bd1c908f30c7ff05ce418c",
+      "question": "Will LDP win a majority in the 2026 Japanese snap election?",
+      "as_of": "2026-02-05T23:59:59+00:00",
+      "run_id": "e6b9718a-5d3c-4bcd-bd33-d876a3ffd0fa",
+      "status": "partial",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-02-05",
+            "2026-02-08"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 2,
+          "boundaries": [
+            "2026-02-05",
+            "2026-02-06",
+            "2026-02-08"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 2,
+          "boundaries": [
+            "2026-02-05",
+            "2026-02-06",
+            "2026-02-08"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-02-05",
+            "2026-02-08"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 2,
+          "boundaries": [
+            "2026-02-05",
+            "2026-02-06",
+            "2026-02-08"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.62,
+        "qa_ensemble": 0.62,
+        "single_step_simulation": null,
+        "multi_trajectory_simulation": 0.42,
+        "single_trajectory_simulation": 0.42,
+        "single_step_ensemble": 0.42,
+        "mcts_simulation": 0.461535
+      },
+      "partial_forecasts": {
+        "single_step_simulation": {
+          "valid_samples": 0,
+          "planned_samples": 1,
+          "covered_p_yes": null,
+          "unknown_bounds": [
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "reason": null
+    },
+    {
+      "case_id": "market_38dfd90806fbf05f33b4eb71",
+      "question": "Will Friedrich Merz be the next Chancellor of Germany?",
+      "as_of": "2025-05-01T23:59:59+00:00",
+      "run_id": "b647125f-3f92-4885-8d80-682397c0d70d",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-05-01",
+            "2025-05-06"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-05-01",
+            "2025-05-02",
+            "2025-05-04",
+            "2025-05-06"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-05-01",
+            "2025-05-02",
+            "2025-05-04",
+            "2025-05-06"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-05-01",
+            "2025-05-06"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-05-01",
+            "2025-05-02",
+            "2025-05-04",
+            "2025-05-06"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.97,
+        "qa_ensemble": 0.97,
+        "single_step_simulation": 0.9,
+        "multi_trajectory_simulation": 0.9,
+        "single_trajectory_simulation": 0.9,
+        "single_step_ensemble": 0.9,
+        "mcts_simulation": 0.93
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_1109dc3a14d50254fdbf3934",
+      "question": "Will Rafał Trzaskowski be the next President of Poland?",
+      "as_of": "2025-05-25T23:59:59+00:00",
+      "run_id": "850462ed-7958-49ec-9a2d-7a7506814059",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-05-25",
+            "2025-06-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-05-25",
+            "2025-05-27",
+            "2025-05-29",
+            "2025-06-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-05-25",
+            "2025-05-27",
+            "2025-05-29",
+            "2025-06-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-05-25",
+            "2025-06-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-05-25",
+            "2025-05-27",
+            "2025-05-29",
+            "2025-06-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.55,
+        "qa_ensemble": 0.55,
+        "single_step_simulation": 0.35,
+        "multi_trajectory_simulation": 0.55,
+        "single_trajectory_simulation": 0.55,
+        "single_step_ensemble": 0.485,
+        "mcts_simulation": 0.5634399999999999
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_7ae71647fac451dbf83b9a26",
+      "question": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+      "as_of": "2026-06-14T23:59:59+00:00",
+      "run_id": "94e6c8ec-3b03-4612-aadc-49baf4c0fb47",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-06-14",
+            "2026-06-22"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-06-14",
+            "2026-06-16",
+            "2026-06-19",
+            "2026-06-22"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-06-14",
+            "2026-06-16",
+            "2026-06-19",
+            "2026-06-22"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-06-14",
+            "2026-06-22"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-06-14",
+            "2026-06-16",
+            "2026-06-19",
+            "2026-06-22"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.42,
+        "qa_ensemble": 0.42,
+        "single_step_simulation": 0.42,
+        "multi_trajectory_simulation": 0.42,
+        "single_trajectory_simulation": 0.42,
+        "single_step_ensemble": 0.42,
+        "mcts_simulation": 0.42000000000000004
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_f8ded290642104c725b4e974",
+      "question": "Russia x Ukraine ceasefire by May 31, 2026?",
+      "as_of": "2026-05-01T23:59:59+00:00",
+      "run_id": "226b05db-caa1-4db8-9365-f4f8822e8b1c",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-05-01",
+            "2026-06-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-05-01",
+            "2026-05-08",
+            "2026-05-16",
+            "2026-05-24",
+            "2026-06-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-05-01",
+            "2026-05-08",
+            "2026-05-16",
+            "2026-05-24",
+            "2026-06-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-05-01",
+            "2026-06-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-05-01",
+            "2026-05-08",
+            "2026-05-16",
+            "2026-05-24",
+            "2026-06-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.04,
+        "qa_ensemble": 0.05500000000000001,
+        "single_step_simulation": 0.12,
+        "multi_trajectory_simulation": 0.385,
+        "single_trajectory_simulation": 0.72,
+        "single_step_ensemble": 0.12,
+        "mcts_simulation": 0.33100274499999993
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_80c51ee9ae14d99b70bf8123",
+      "question": "Will Trump visit Israel by October 15?",
+      "as_of": "2025-10-09T23:59:59+00:00",
+      "run_id": "9ee8592c-9865-4fbe-bbe0-402ae2f4e0f9",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-10-09",
+            "2025-10-16"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-10-09",
+            "2025-10-11",
+            "2025-10-13",
+            "2025-10-16"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-10-09",
+            "2025-10-11",
+            "2025-10-13",
+            "2025-10-16"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-10-09",
+            "2025-10-16"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-10-09",
+            "2025-10-11",
+            "2025-10-13",
+            "2025-10-16"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.72,
+        "qa_ensemble": 0.7849999999999999,
+        "single_step_simulation": 0.35,
+        "multi_trajectory_simulation": 0.5449999999999999,
+        "single_trajectory_simulation": 0.55,
+        "single_step_ensemble": 0.32499999999999996,
+        "mcts_simulation": 0.43005999999999994
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_873efbe3bfcd66b13b6a9e28",
+      "question": "US x Iran peace deal before Trump visits China?",
+      "as_of": "2026-05-06T23:59:59+00:00",
+      "run_id": "f2722f62-492f-47a0-9420-680751e77163",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-05-06",
+            "2026-05-15"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-05-06",
+            "2026-05-09",
+            "2026-05-12",
+            "2026-05-15"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-05-06",
+            "2026-05-09",
+            "2026-05-12",
+            "2026-05-15"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-05-06",
+            "2026-05-15"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-05-06",
+            "2026-05-09",
+            "2026-05-12",
+            "2026-05-15"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.03,
+        "qa_ensemble": 0.03,
+        "single_step_simulation": 0.07,
+        "multi_trajectory_simulation": 0.04,
+        "single_trajectory_simulation": 0.04,
+        "single_step_ensemble": 0.04,
+        "mcts_simulation": 0.02
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_b800bd58c7857e6bb869045d",
+      "question": "Will Donald Trump visit North Korea in 2025?",
+      "as_of": "2025-10-23T23:59:59+00:00",
+      "run_id": "95005f21-895b-4768-b190-a10e08dbebce",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-10-23",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2025-10-23",
+            "2025-11-06",
+            "2025-11-20",
+            "2025-12-04",
+            "2025-12-18",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2025-10-23",
+            "2025-11-06",
+            "2025-11-20",
+            "2025-12-04",
+            "2025-12-18",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-10-23",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2025-10-23",
+            "2025-11-06",
+            "2025-11-20",
+            "2025-12-04",
+            "2025-12-18",
+            "2026-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.03,
+        "qa_ensemble": 0.03,
+        "single_step_simulation": 0.04,
+        "multi_trajectory_simulation": 0.05,
+        "single_trajectory_simulation": 0.03,
+        "single_step_ensemble": 0.035,
+        "mcts_simulation": 0.251549
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_0a52b73f64f2a2ebe29107ba",
+      "question": "Election certified on January 6?",
+      "as_of": "2025-01-02T23:59:59+00:00",
+      "run_id": "11efa89c-ecc2-4d5b-90bf-80154f14b065",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-01-02",
+            "2025-01-07"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-01-02",
+            "2025-01-03",
+            "2025-01-05",
+            "2025-01-07"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-01-02",
+            "2025-01-03",
+            "2025-01-05",
+            "2025-01-07"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-01-02",
+            "2025-01-07"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-01-02",
+            "2025-01-03",
+            "2025-01-05",
+            "2025-01-07"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.99,
+        "qa_ensemble": 0.985,
+        "single_step_simulation": 0.97,
+        "multi_trajectory_simulation": 0.93,
+        "single_trajectory_simulation": 0.93,
+        "single_step_ensemble": 0.97,
+        "mcts_simulation": 0.97
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_be8455d1ef04f7db63d93244",
+      "question": "South Korean President impeached in 2024?",
+      "as_of": "2024-12-08T23:59:59+00:00",
+      "run_id": "26d9824b-ee37-4a1d-a396-9d57924c09a6",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2024-12-08",
+            "2025-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2024-12-08",
+            "2024-12-14",
+            "2024-12-20",
+            "2024-12-26",
+            "2025-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2024-12-08",
+            "2024-12-14",
+            "2024-12-20",
+            "2024-12-26",
+            "2025-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2024-12-08",
+            "2025-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2024-12-08",
+            "2024-12-14",
+            "2024-12-20",
+            "2024-12-26",
+            "2025-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.85,
+        "qa_ensemble": 0.85,
+        "single_step_simulation": 0.62,
+        "multi_trajectory_simulation": 0.72,
+        "single_trajectory_simulation": 0.12,
+        "single_step_ensemble": 0.5349999999999999,
+        "mcts_simulation": 0.549707
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_49df55099fe4aa5cbf0f1cf1",
+      "question": "Supreme Court rules in favor of Trump's tariffs?",
+      "as_of": "2026-02-10T23:59:59+00:00",
+      "run_id": "0ee4d033-20fc-4eb1-96c9-ca202f5cb2f1",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-02-10",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-02-10",
+            "2026-03-22",
+            "2026-05-02",
+            "2026-06-11",
+            "2026-07-22",
+            "2026-09-01",
+            "2026-10-11",
+            "2026-11-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-02-10",
+            "2026-03-22",
+            "2026-05-02",
+            "2026-06-11",
+            "2026-07-22",
+            "2026-09-01",
+            "2026-10-11",
+            "2026-11-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-02-10",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-02-10",
+            "2026-03-22",
+            "2026-05-02",
+            "2026-06-11",
+            "2026-07-22",
+            "2026-09-01",
+            "2026-10-11",
+            "2026-11-21",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.42,
+        "qa_ensemble": 0.42,
+        "single_step_simulation": 0.55,
+        "multi_trajectory_simulation": 0.485,
+        "single_trajectory_simulation": 0.42,
+        "single_step_ensemble": 0.42,
+        "mcts_simulation": 0.30264
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_e4be8847397936f6dd9239f2",
+      "question": "Funding lapse without government shutdown?",
+      "as_of": "2025-09-26T23:59:59+00:00",
+      "run_id": "b4ade8f8-fb9b-4f7f-94ee-258c44360a2b",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-09-26",
+            "2025-10-02"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-09-26",
+            "2025-09-28",
+            "2025-09-30",
+            "2025-10-02"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-09-26",
+            "2025-09-28",
+            "2025-09-30",
+            "2025-10-02"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-09-26",
+            "2025-10-02"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-09-26",
+            "2025-09-28",
+            "2025-09-30",
+            "2025-10-02"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.03,
+        "qa_ensemble": 0.03,
+        "single_step_simulation": 0.08,
+        "multi_trajectory_simulation": 0.08499999999999999,
+        "single_trajectory_simulation": 0.3,
+        "single_step_ensemble": 0.1,
+        "mcts_simulation": 0.2465
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_b48e81bb258c9628ff876c28",
+      "question": "US-China trade deal in 2025?",
+      "as_of": "2025-05-08T23:59:59+00:00",
+      "run_id": "2472faf7-4a8a-4c28-be2a-92e46fd43e3d",
+      "status": "partial",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-05-08",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2025-05-08",
+            "2025-06-16",
+            "2025-07-26",
+            "2025-09-04",
+            "2025-10-13",
+            "2025-11-22",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2025-05-08",
+            "2025-06-16",
+            "2025-07-26",
+            "2025-09-04",
+            "2025-10-13",
+            "2025-11-22",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-05-08",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2025-05-08",
+            "2025-06-16",
+            "2025-07-26",
+            "2025-09-04",
+            "2025-10-13",
+            "2025-11-22",
+            "2026-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.42,
+        "qa_ensemble": 0.42,
+        "single_step_simulation": 0.3,
+        "multi_trajectory_simulation": null,
+        "single_trajectory_simulation": 0.12,
+        "single_step_ensemble": 0.2,
+        "mcts_simulation": 0.22440384615384612
+      },
+      "partial_forecasts": {
+        "multi_trajectory_simulation": {
+          "valid_samples": 1,
+          "planned_samples": 2,
+          "covered_p_yes": 0.18,
+          "unknown_bounds": [
+            0.09,
+            0.5900000000000001
+          ]
+        }
+      },
+      "reason": null
+    },
+    {
+      "case_id": "market_6e2430c9b77a8fd682ef7809",
+      "question": "Will the ECB announce a 25 bps increase at the June 2026 meeting?",
+      "as_of": "2026-06-04T23:59:59+00:00",
+      "run_id": "872d5c01-598e-4729-a21f-80d28a676ac0",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-06-04",
+            "2026-06-11"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-06-04",
+            "2026-06-06",
+            "2026-06-08",
+            "2026-06-11"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-06-04",
+            "2026-06-06",
+            "2026-06-08",
+            "2026-06-11"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-06-04",
+            "2026-06-11"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-06-04",
+            "2026-06-06",
+            "2026-06-08",
+            "2026-06-11"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.065,
+        "single_step_simulation": 0.35,
+        "multi_trajectory_simulation": 0.5,
+        "single_trajectory_simulation": 0.5,
+        "single_step_ensemble": 0.35,
+        "mcts_simulation": 0.088
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_b9860888884c4eb7e39650b4",
+      "question": "Fed decreases interest rates by 50+ bps after September 2025 meeting?",
+      "as_of": "2025-09-10T23:59:59+00:00",
+      "run_id": "7c726a88-3197-4ddc-a133-a1ffa68b1637",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-09-10",
+            "2025-09-18"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-09-10",
+            "2025-09-12",
+            "2025-09-15",
+            "2025-09-18"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-09-10",
+            "2025-09-12",
+            "2025-09-15",
+            "2025-09-18"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-09-10",
+            "2025-09-18"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-09-10",
+            "2025-09-12",
+            "2025-09-15",
+            "2025-09-18"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.1,
+        "single_step_simulation": 0.97,
+        "multi_trajectory_simulation": 0.12,
+        "single_trajectory_simulation": 0.12,
+        "single_step_ensemble": 0.075,
+        "mcts_simulation": 0.12
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_121a0e35174c20ca7544f75a",
+      "question": "Will Canada raise tariffs on the U.S. before June?",
+      "as_of": "2025-05-23T23:59:59+00:00",
+      "run_id": "9357ec08-b7ed-4607-b03b-53f0a61234fd",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-05-23",
+            "2025-06-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-05-23",
+            "2025-05-26",
+            "2025-05-29",
+            "2025-06-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-05-23",
+            "2025-05-26",
+            "2025-05-29",
+            "2025-06-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-05-23",
+            "2025-06-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-05-23",
+            "2025-05-26",
+            "2025-05-29",
+            "2025-06-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.02,
+        "qa_ensemble": 0.025,
+        "single_step_simulation": 0.97,
+        "multi_trajectory_simulation": 0.525,
+        "single_trajectory_simulation": 0.97,
+        "single_step_ensemble": 0.5449999999999999,
+        "mcts_simulation": 0.3242030769230769
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_39a1f3279bb97de5ae69967c",
+      "question": "Will SpaceX file for an IPO by April 3, 2026?",
+      "as_of": "2026-03-25T23:59:59+00:00",
+      "run_id": "0d9620d2-c6f0-461c-bd07-8a7601150c4f",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-03-25",
+            "2026-04-04"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-03-25",
+            "2026-03-28",
+            "2026-03-31",
+            "2026-04-04"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-03-25",
+            "2026-03-28",
+            "2026-03-31",
+            "2026-04-04"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-03-25",
+            "2026-04-04"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-03-25",
+            "2026-03-28",
+            "2026-03-31",
+            "2026-04-04"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.055,
+        "single_step_simulation": 0.03,
+        "multi_trajectory_simulation": 0.935,
+        "single_trajectory_simulation": 0.12,
+        "single_step_ensemble": 0.12,
+        "mcts_simulation": 0.04
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_01e3fa43c620efbd9d59dd8e",
+      "question": "FDA approves Regeneron’s Dupixent for bullous pemphigoid?",
+      "as_of": "2025-06-17T23:59:59+00:00",
+      "run_id": "92d97321-71b5-4daa-b0c2-fae6fcaf472c",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-06-17",
+            "2025-06-21"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-06-17",
+            "2025-06-18",
+            "2025-06-19",
+            "2025-06-21"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-06-17",
+            "2025-06-18",
+            "2025-06-19",
+            "2025-06-21"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-06-17",
+            "2025-06-21"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-06-17",
+            "2025-06-18",
+            "2025-06-19",
+            "2025-06-21"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.065,
+        "single_step_simulation": 0.08,
+        "multi_trajectory_simulation": 0.08,
+        "single_trajectory_simulation": 0.08,
+        "single_step_ensemble": 0.1,
+        "mcts_simulation": 0.11040000000000003
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_c0b08911c4bd06261140a280",
+      "question": "Will Netflix close Warner Bros. acquisition by end of 2026?",
+      "as_of": "2026-02-19T23:59:59+00:00",
+      "run_id": "9c7bd11e-960e-4c36-86c6-c6716a7961a7",
+      "status": "partial",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-02-19",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-02-19",
+            "2026-03-30",
+            "2026-05-09",
+            "2026-06-17",
+            "2026-07-27",
+            "2026-09-04",
+            "2026-10-14",
+            "2026-11-22",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-02-19",
+            "2026-03-30",
+            "2026-05-09",
+            "2026-06-17",
+            "2026-07-27",
+            "2026-09-04",
+            "2026-10-14",
+            "2026-11-22",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-02-19",
+            "2027-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-02-19",
+            "2026-03-30",
+            "2026-05-09",
+            "2026-06-17",
+            "2026-07-27",
+            "2026-09-04",
+            "2026-10-14",
+            "2026-11-22",
+            "2027-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.55,
+        "qa_ensemble": 0.55,
+        "single_step_simulation": 0.55,
+        "multi_trajectory_simulation": null,
+        "single_trajectory_simulation": 0.3,
+        "single_step_ensemble": 0.485,
+        "mcts_simulation": 0.46286114178531024
+      },
+      "partial_forecasts": {
+        "multi_trajectory_simulation": {
+          "valid_samples": 1,
+          "planned_samples": 2,
+          "covered_p_yes": 0.42,
+          "unknown_bounds": [
+            0.21,
+            0.71
+          ]
+        }
+      },
+      "reason": null
+    },
+    {
+      "case_id": "market_479c01d6abdd7cfc6ada0ea1",
+      "question": "GTA VI released in 2025?",
+      "as_of": "2025-04-25T23:59:59+00:00",
+      "run_id": "37d534e2-b2d1-4bba-aa76-914af466541f",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-04-25",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2025-04-25",
+            "2025-05-26",
+            "2025-06-26",
+            "2025-07-28",
+            "2025-08-28",
+            "2025-09-28",
+            "2025-10-30",
+            "2025-11-30",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2025-04-25",
+            "2025-05-26",
+            "2025-06-26",
+            "2025-07-28",
+            "2025-08-28",
+            "2025-09-28",
+            "2025-10-30",
+            "2025-11-30",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-04-25",
+            "2026-01-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2025-04-25",
+            "2025-05-26",
+            "2025-06-26",
+            "2025-07-28",
+            "2025-08-28",
+            "2025-09-28",
+            "2025-10-30",
+            "2025-11-30",
+            "2026-01-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.55,
+        "qa_ensemble": 0.55,
+        "single_step_simulation": 0.12,
+        "multi_trajectory_simulation": 0.06999999999999999,
+        "single_trajectory_simulation": 0.18,
+        "single_step_ensemble": 0.12,
+        "mcts_simulation": 0.41522539999999997
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_523028b80b9ccf72ec841050",
+      "question": "Will the Left Party (V) win the fourth most seats in the 2026 Swedish parliamentary election?",
+      "as_of": "2026-08-30T00:12:30+00:00",
+      "run_id": "3ca03c13-e56c-4585-a921-838c31da3264",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-08-30",
+            "2026-09-20"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-08-30",
+            "2026-09-06",
+            "2026-09-13",
+            "2026-09-14",
+            "2026-09-20"
+          ],
+          "milestones": [
+            "2026-09-13",
+            "2026-09-14"
+          ]
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-08-30",
+            "2026-09-06",
+            "2026-09-13",
+            "2026-09-14",
+            "2026-09-20"
+          ],
+          "milestones": [
+            "2026-09-13",
+            "2026-09-14"
+          ]
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-08-30",
+            "2026-09-20"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-08-30",
+            "2026-09-06",
+            "2026-09-13",
+            "2026-09-14",
+            "2026-09-20"
+          ],
+          "milestones": [
+            "2026-09-13",
+            "2026-09-14"
+          ]
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.18,
+        "qa_ensemble": 0.18,
+        "single_step_simulation": 0.18,
+        "multi_trajectory_simulation": 0.12,
+        "single_trajectory_simulation": 0.18,
+        "single_step_ensemble": 0.12,
+        "mcts_simulation": 0.18
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_2e6bdb08288f29fff2071fba",
+      "question": "Will John Cornyn win the Texas Republican Senate Primary runoff by 9% or more?",
+      "as_of": "2026-05-10T00:07:31+00:00",
+      "run_id": "b5b3c1e4-72d2-4e12-847c-6b9dc4985771",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-05-10",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2026-05-10",
+            "2026-05-26",
+            "2026-07-12",
+            "2026-08-28",
+            "2026-10-14",
+            "2026-11-07",
+            "2026-12-01"
+          ],
+          "milestones": [
+            "2026-05-26"
+          ]
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2026-05-10",
+            "2026-05-26",
+            "2026-07-12",
+            "2026-08-28",
+            "2026-10-14",
+            "2026-11-07",
+            "2026-12-01"
+          ],
+          "milestones": [
+            "2026-05-26"
+          ]
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-05-10",
+            "2026-12-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2026-05-10",
+            "2026-05-26",
+            "2026-07-12",
+            "2026-08-28",
+            "2026-10-14",
+            "2026-11-07",
+            "2026-12-01"
+          ],
+          "milestones": [
+            "2026-05-26"
+          ]
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.12,
+        "qa_ensemble": 0.08,
+        "single_step_simulation": 0.18,
+        "multi_trajectory_simulation": 0.18,
+        "single_trajectory_simulation": 0.18,
+        "single_step_ensemble": 0.18,
+        "mcts_simulation": 0.36072519999999997
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_1e710413dadfc79917cd02cf",
+      "question": "Will Paul St-Pierre Plamondon be the next Premier of Quebec following the 2026 Quebec general election?",
+      "as_of": "2026-09-27T00:08:59+00:00",
+      "run_id": "ba170551-003f-414a-9e52-f970d6722f4e",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-09-27",
+            "2027-07-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-09-27",
+            "2026-10-31",
+            "2026-12-05",
+            "2027-01-08",
+            "2027-02-12",
+            "2027-03-19",
+            "2027-04-22",
+            "2027-05-27",
+            "2027-07-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-09-27",
+            "2026-10-31",
+            "2026-12-05",
+            "2027-01-08",
+            "2027-02-12",
+            "2027-03-19",
+            "2027-04-22",
+            "2027-05-27",
+            "2027-07-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-09-27",
+            "2027-07-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 8,
+          "boundaries": [
+            "2026-09-27",
+            "2026-10-31",
+            "2026-12-05",
+            "2027-01-08",
+            "2027-02-12",
+            "2027-03-19",
+            "2027-04-22",
+            "2027-05-27",
+            "2027-07-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.18,
+        "qa_ensemble": 0.23,
+        "single_step_simulation": 0.3,
+        "multi_trajectory_simulation": 0.18,
+        "single_trajectory_simulation": 0.18,
+        "single_step_ensemble": 0.24,
+        "mcts_simulation": 0.3791880704
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_4b374fe23afe247b275b8f4a",
+      "question": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+      "as_of": "2026-06-07T00:07:21+00:00",
+      "run_id": "e37e0d80-9c7f-4594-b7a3-bb36894bdd99",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-06-07",
+            "2026-07-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-06-07",
+            "2026-06-13",
+            "2026-06-19",
+            "2026-06-25",
+            "2026-07-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-06-07",
+            "2026-06-13",
+            "2026-06-19",
+            "2026-06-25",
+            "2026-07-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-06-07",
+            "2026-07-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2026-06-07",
+            "2026-06-13",
+            "2026-06-19",
+            "2026-06-25",
+            "2026-07-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.18,
+        "qa_ensemble": 0.18,
+        "single_step_simulation": 0.3,
+        "multi_trajectory_simulation": 0.19,
+        "single_trajectory_simulation": 0.3,
+        "single_step_ensemble": 0.26,
+        "mcts_simulation": 0.4558802586538461
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_997bd3b3a030716124a31a26",
+      "question": "Romanian parliament dissolved by July 31?",
+      "as_of": "2026-07-19T00:05:55+00:00",
+      "run_id": "7f151495-385a-4291-9576-f284f371c6dd",
+      "status": "partial",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-07-19",
+            "2026-08-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-07-19",
+            "2026-07-23",
+            "2026-07-27",
+            "2026-08-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-07-19",
+            "2026-07-23",
+            "2026-07-27",
+            "2026-08-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-07-19",
+            "2026-08-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2026-07-19",
+            "2026-07-23",
+            "2026-07-27",
+            "2026-08-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.01,
+        "qa_ensemble": 0.01,
+        "single_step_simulation": 0.03,
+        "multi_trajectory_simulation": 0.03,
+        "single_trajectory_simulation": 0.03,
+        "single_step_ensemble": 0.02,
+        "mcts_simulation": null
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_108a3b564dec5b3dcc6d2b19",
+      "question": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+      "as_of": "2025-12-05T23:59:59+00:00",
+      "run_id": "37e58fcf-273c-409d-8496-8fd79e3e390a",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-12-05",
+            "2025-12-19"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-12-05",
+            "2025-12-09",
+            "2025-12-14",
+            "2025-12-19"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-12-05",
+            "2025-12-09",
+            "2025-12-14",
+            "2025-12-19"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-12-05",
+            "2025-12-19"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 3,
+          "boundaries": [
+            "2025-12-05",
+            "2025-12-09",
+            "2025-12-14",
+            "2025-12-19"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.42,
+        "qa_ensemble": 0.42,
+        "single_step_simulation": 0.45,
+        "multi_trajectory_simulation": 0.45,
+        "single_trajectory_simulation": 0.35,
+        "single_step_ensemble": 0.35,
+        "mcts_simulation": 0.406
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_9b4c824e185779aad95df888",
+      "question": "US-EU trade agreement by July 9?",
+      "as_of": "2025-06-25T23:59:59+00:00",
+      "run_id": "777054e1-ff4b-406f-bf85-c744cf3c74b3",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-06-25",
+            "2025-07-10"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2025-06-25",
+            "2025-06-28",
+            "2025-07-02",
+            "2025-07-06",
+            "2025-07-10"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2025-06-25",
+            "2025-06-28",
+            "2025-07-02",
+            "2025-07-06",
+            "2025-07-10"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-06-25",
+            "2025-07-10"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2025-06-25",
+            "2025-06-28",
+            "2025-07-02",
+            "2025-07-06",
+            "2025-07-10"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.18,
+        "qa_ensemble": 0.18,
+        "single_step_simulation": 0.22,
+        "multi_trajectory_simulation": 0.2,
+        "single_trajectory_simulation": 0.18,
+        "single_step_ensemble": 0.3,
+        "mcts_simulation": 0.11639999999999999
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_5cf69eb7abaad431d53ef3da",
+      "question": "Pete Hegseth confirmed as Secretary of Defense?",
+      "as_of": "2025-01-10T23:59:59+00:00",
+      "run_id": "6a0261a3-b46b-4b51-82f4-36ad245809f9",
+      "status": "partial",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-01-10",
+            "2025-07-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2025-01-10",
+            "2025-02-07",
+            "2025-03-08",
+            "2025-04-06",
+            "2025-05-04",
+            "2025-06-02",
+            "2025-07-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2025-01-10",
+            "2025-02-07",
+            "2025-03-08",
+            "2025-04-06",
+            "2025-05-04",
+            "2025-06-02",
+            "2025-07-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-01-10",
+            "2025-07-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 6,
+          "boundaries": [
+            "2025-01-10",
+            "2025-02-07",
+            "2025-03-08",
+            "2025-04-06",
+            "2025-05-04",
+            "2025-06-02",
+            "2025-07-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.72,
+        "qa_ensemble": 0.72,
+        "single_step_simulation": 0.72,
+        "multi_trajectory_simulation": null,
+        "single_trajectory_simulation": 0.72,
+        "single_step_ensemble": 0.72,
+        "mcts_simulation": 0.63328385
+      },
+      "partial_forecasts": {
+        "multi_trajectory_simulation": {
+          "valid_samples": 1,
+          "planned_samples": 2,
+          "covered_p_yes": 0.62,
+          "unknown_bounds": [
+            0.31,
+            0.81
+          ]
+        }
+      },
+      "reason": null
+    },
+    {
+      "case_id": "market_62fcf132edc89fe0c5924692",
+      "question": "Will Artemis II launch by April 30?",
+      "as_of": "2026-03-14T23:59:59+00:00",
+      "run_id": "f9ce4293-63df-4582-b9f5-ff26b47aa085",
+      "status": "completed",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-03-14",
+            "2026-05-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-03-14",
+            "2026-03-23",
+            "2026-04-02",
+            "2026-04-11",
+            "2026-04-21",
+            "2026-05-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-03-14",
+            "2026-03-23",
+            "2026-04-02",
+            "2026-04-11",
+            "2026-04-21",
+            "2026-05-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2026-03-14",
+            "2026-05-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 5,
+          "boundaries": [
+            "2026-03-14",
+            "2026-03-23",
+            "2026-04-02",
+            "2026-04-11",
+            "2026-04-21",
+            "2026-05-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": true,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.72,
+        "qa_ensemble": 0.635,
+        "single_step_simulation": 0.55,
+        "multi_trajectory_simulation": 0.365,
+        "single_trajectory_simulation": 0.97,
+        "single_step_ensemble": 0.585,
+        "mcts_simulation": 0.52946
+      },
+      "partial_forecasts": {},
+      "reason": null
+    },
+    {
+      "case_id": "market_bd2856faf30cd75964fbdfde",
+      "question": "Will TikTok be banned again before May?",
+      "as_of": "2025-03-24T23:59:59+00:00",
+      "run_id": "4e035d0f-0e2a-477c-8afe-9d3a0308c1e0",
+      "status": "partial",
+      "resolution": "Resolved",
+      "round_plans": {
+        "single_step_simulation": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-03-24",
+            "2025-05-01"
+          ],
+          "milestones": []
+        },
+        "multi_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2025-03-24",
+            "2025-04-02",
+            "2025-04-12",
+            "2025-04-21",
+            "2025-05-01"
+          ],
+          "milestones": []
+        },
+        "single_trajectory_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2025-03-24",
+            "2025-04-02",
+            "2025-04-12",
+            "2025-04-21",
+            "2025-05-01"
+          ],
+          "milestones": []
+        },
+        "single_step_ensemble": {
+          "mode": "single_step",
+          "steps": 1,
+          "boundaries": [
+            "2025-03-24",
+            "2025-05-01"
+          ],
+          "milestones": []
+        },
+        "mcts_simulation": {
+          "mode": "adaptive",
+          "steps": 4,
+          "boundaries": [
+            "2025-03-24",
+            "2025-04-02",
+            "2025-04-12",
+            "2025-04-21",
+            "2025-05-01"
+          ],
+          "milestones": []
+        }
+      },
+      "observed_yes": false,
+      "quote": null,
+      "quote_at": null,
+      "forecasts": {
+        "direct_qa": 0.08,
+        "qa_ensemble": 0.08,
+        "single_step_simulation": 0.08,
+        "multi_trajectory_simulation": null,
+        "single_trajectory_simulation": 0.35,
+        "single_step_ensemble": 0.12,
+        "mcts_simulation": 0.3496333
+      },
+      "partial_forecasts": {
+        "multi_trajectory_simulation": {
+          "valid_samples": 1,
+          "planned_samples": 2,
+          "covered_p_yes": 0.12,
+          "unknown_bounds": [
+            0.06,
+            0.56
+          ]
+        }
+      },
+      "reason": null
+    }
+  ],
+  "scores": {
+    "case_count": 30,
+    "event_count": 30,
+    "reference_method": "direct_qa",
+    "bootstrap_samples": 2000,
+    "bootstrap_seed": 0,
+    "score_version": "binary-brier-logloss-ece5-v1",
+    "log_loss_epsilon": 1e-15,
+    "metrics": {
+      "direct_qa": {
+        "brier": 0.26256666666666667,
+        "log_loss": 0.781389676181564,
+        "coverage": 1.0,
+        "fallback_count": 0,
+        "covered_only_brier": 0.26256666666666667,
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 16,
+            "mean_p_yes": 0.0875,
+            "observed_yes_rate": 0.4375
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 7,
+            "mean_p_yes": 0.4757142857142857,
+            "observed_yes_rate": 0.2857142857142857
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 4,
+            "mean_p_yes": 0.695,
+            "observed_yes_rate": 1
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 3,
+            "mean_p_yes": 0.9366666666666666,
+            "observed_yes_rate": 1
+          }
+        ],
+        "ece": 0.27799999999999997,
+        "failed_forecasts": 0,
+        "mean_calls": 1,
+        "calls_count": 30,
+        "mean_tokens": 3992.3333333333335,
+        "tokens_count": 30,
+        "mean_elapsed_seconds": 0.8036,
+        "elapsed_seconds_count": 30
+      },
+      "qa_ensemble": {
+        "brier": 0.26299333333333336,
+        "log_loss": 0.789832850980322,
+        "coverage": 1.0,
+        "fallback_count": 0,
+        "covered_only_brier": 0.26299333333333336,
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 15,
+            "mean_p_yes": 0.07766666666666666,
+            "observed_yes_rate": 0.4
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 1,
+            "mean_p_yes": 0.23,
+            "observed_yes_rate": 1
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 7,
+            "mean_p_yes": 0.4757142857142857,
+            "observed_yes_rate": 0.2857142857142857
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 4,
+            "mean_p_yes": 0.69,
+            "observed_yes_rate": 1
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 3,
+            "mean_p_yes": 0.9349999999999999,
+            "observed_yes_rate": 1
+          }
+        ],
+        "ece": 0.279,
+        "failed_forecasts": 0,
+        "mean_calls": 2,
+        "calls_count": 30,
+        "mean_tokens": 7984.666666666667,
+        "tokens_count": 30,
+        "mean_elapsed_seconds": 1.4030666666666667,
+        "elapsed_seconds_count": 30
+      },
+      "single_step_simulation": {
+        "brier": 0.31463,
+        "log_loss": 0.9693921565782028,
+        "coverage": 0.9666666666666667,
+        "fallback_count": 1,
+        "covered_only_brier": 0.31685862068965515,
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 11,
+            "mean_p_yes": 0.09181818181818181,
+            "observed_yes_rate": 0.36363636363636365
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 7,
+            "mean_p_yes": 0.31,
+            "observed_yes_rate": 0.7142857142857143
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 6,
+            "mean_p_yes": 0.5033333333333334,
+            "observed_yes_rate": 0.5
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 2,
+            "mean_p_yes": 0.6699999999999999,
+            "observed_yes_rate": 1
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 4,
+            "mean_p_yes": 0.9525,
+            "observed_yes_rate": 0.5
+          }
+        ],
+        "ece": 0.277,
+        "failed_forecasts": 1,
+        "mean_calls": 8.4,
+        "calls_count": 30,
+        "mean_tokens": 107306.93333333333,
+        "tokens_count": 30,
+        "mean_elapsed_seconds": 46.6297,
+        "elapsed_seconds_count": 30
+      },
+      "multi_trajectory_simulation": {
+        "brier": 0.2339291666666667,
+        "log_loss": 0.6626972450374141,
+        "coverage": 0.8666666666666667,
+        "fallback_count": 4,
+        "covered_only_brier": 0.2314567307692308,
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 11,
+            "mean_p_yes": 0.1040909090909091,
+            "observed_yes_rate": 0.36363636363636365
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 3,
+            "mean_p_yes": 0.31666666666666665,
+            "observed_yes_rate": 0.6666666666666666
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 12,
+            "mean_p_yes": 0.49125,
+            "observed_yes_rate": 0.5
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 1,
+            "mean_p_yes": 0.72,
+            "observed_yes_rate": 1
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 3,
+            "mean_p_yes": 0.9216666666666667,
+            "observed_yes_rate": 1
+          }
+        ],
+        "ece": 0.1508333333333333,
+        "failed_forecasts": 4,
+        "mean_calls": 51.7,
+        "calls_count": 30,
+        "mean_tokens": 634151.0333333333,
+        "tokens_count": 30,
+        "mean_elapsed_seconds": 79.281,
+        "elapsed_seconds_count": 30
+      },
+      "single_trajectory_simulation": {
+        "brier": 0.28007,
+        "log_loss": 0.8319124560806939,
+        "coverage": 1.0,
+        "fallback_count": 0,
+        "covered_only_brier": 0.28007,
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 13,
+            "mean_p_yes": 0.12,
+            "observed_yes_rate": 0.46153846153846156
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 5,
+            "mean_p_yes": 0.32,
+            "observed_yes_rate": 0.4
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 6,
+            "mean_p_yes": 0.4766666666666667,
+            "observed_yes_rate": 0.5
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 2,
+            "mean_p_yes": 0.72,
+            "observed_yes_rate": 1
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 4,
+            "mean_p_yes": 0.9425,
+            "observed_yes_rate": 0.75
+          }
+        ],
+        "ece": 0.21033333333333334,
+        "failed_forecasts": 0,
+        "mean_calls": 26.733333333333334,
+        "calls_count": 30,
+        "mean_tokens": 328066.43333333335,
+        "tokens_count": 30,
+        "mean_elapsed_seconds": 78.78356666666667,
+        "elapsed_seconds_count": 30
+      },
+      "single_step_ensemble": {
+        "brier": 0.2767833333333333,
+        "log_loss": 0.768629660492759,
+        "coverage": 1.0,
+        "fallback_count": 0,
+        "covered_only_brier": 0.2767833333333333,
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 12,
+            "mean_p_yes": 0.09583333333333333,
+            "observed_yes_rate": 0.3333333333333333
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 7,
+            "mean_p_yes": 0.28928571428571426,
+            "observed_yes_rate": 0.8571428571428571
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 8,
+            "mean_p_yes": 0.48687499999999995,
+            "observed_yes_rate": 0.375
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 1,
+            "mean_p_yes": 0.72,
+            "observed_yes_rate": 1
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 2,
+            "mean_p_yes": 0.935,
+            "observed_yes_rate": 1
+          }
+        ],
+        "ece": 0.27099999999999996,
+        "failed_forecasts": 0,
+        "mean_calls": 16.566666666666666,
+        "calls_count": 30,
+        "mean_tokens": 209012.03333333333,
+        "tokens_count": 30,
+        "mean_elapsed_seconds": 30.047833333333333,
+        "elapsed_seconds_count": 30
+      },
+      "mcts_simulation": {
+        "brier": 0.27372490764369556,
+        "log_loss": 0.7978245472140957,
+        "coverage": 0.9666666666666667,
+        "fallback_count": 1,
+        "covered_only_brier": 0.27454300790727126,
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 7,
+            "mean_p_yes": 0.0964,
+            "observed_yes_rate": 0.5714285714285714
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 9,
+            "mean_p_yes": 0.30776058205299145,
+            "observed_yes_rate": 0.3333333333333333
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 11,
+            "mean_p_yes": 0.47219716367628695,
+            "observed_yes_rate": 0.5454545454545454
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 1,
+            "mean_p_yes": 0.63328385,
+            "observed_yes_rate": 1
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 2,
+            "mean_p_yes": 0.95,
+            "observed_yes_rate": 1
+          }
+        ],
+        "ece": 0.160930070369464,
+        "failed_forecasts": 1,
+        "mean_calls": 62.96666666666667,
+        "calls_count": 30,
+        "mean_tokens": 762648.5333333333,
+        "tokens_count": 30,
+        "mean_elapsed_seconds": 203.987,
+        "elapsed_seconds_count": 30
+      }
+    },
+    "common_completed": {
+      "case_count": 24,
+      "metrics": {
+        "direct_qa": {
+          "brier": 0.29203333333333337,
+          "log_loss": 0.8698212587007015
+        },
+        "qa_ensemble": {
+          "brier": 0.2925666666666667,
+          "log_loss": 0.880375227199149
+        },
+        "single_step_simulation": {
+          "brier": 0.34627916666666664,
+          "log_loss": 1.0809913388686097
+        },
+        "multi_trajectory_simulation": {
+          "brier": 0.23669062500000002,
+          "log_loss": 0.6754320355705504
+        },
+        "single_trajectory_simulation": {
+          "brier": 0.2916458333333333,
+          "log_loss": 0.8676328518345029
+        },
+        "single_step_ensemble": {
+          "brier": 0.29161145833333335,
+          "log_loss": 0.8100759504385878
+        },
+        "mcts_simulation": {
+          "brier": 0.27497036097960026,
+          "log_loss": 0.8110637411208839
+        }
+      }
+    },
+    "paired": {
+      "qa_ensemble": {
+        "case_count": 30,
+        "event_count": 30,
+        "delta_brier": 0.0004266666666666657,
+        "confidence_interval_95": [
+          -0.007379333333333349,
+          0.008131833333333338
+        ]
+      },
+      "single_step_simulation": {
+        "case_count": 30,
+        "event_count": 30,
+        "delta_brier": 0.052063333333333316,
+        "confidence_interval_95": [
+          -0.037614416666666685,
+          0.15968524999999997
+        ]
+      },
+      "multi_trajectory_simulation": {
+        "case_count": 30,
+        "event_count": 30,
+        "delta_brier": -0.028637500000000007,
+        "confidence_interval_95": [
+          -0.12237235416666667,
+          0.05034589583333332
+        ]
+      },
+      "single_trajectory_simulation": {
+        "case_count": 30,
+        "event_count": 30,
+        "delta_brier": 0.017503333333333315,
+        "confidence_interval_95": [
+          -0.09419408333333334,
+          0.13000224999999996
+        ]
+      },
+      "single_step_ensemble": {
+        "case_count": 30,
+        "event_count": 30,
+        "delta_brier": 0.014216666666666652,
+        "confidence_interval_95": [
+          -0.043274458333333356,
+          0.07046741666666662
+        ]
+      },
+      "mcts_simulation": {
+        "case_count": 30,
+        "event_count": 30,
+        "delta_brier": 0.011158240977028864,
+        "confidence_interval_95": [
+          -0.05223264423250353,
+          0.0656613854101707
+        ]
+      }
+    },
+    "market_comparison": null
+  },
+  "method_usage": {
+    "direct_qa": {
+      "calls": {
+        "total": 30,
+        "count": 30
+      },
+      "tokens": {
+        "total": 119770,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 24.107999999999997,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    },
+    "qa_ensemble": {
+      "calls": {
+        "total": 60,
+        "count": 30
+      },
+      "tokens": {
+        "total": 239540,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 42.092,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    },
+    "single_step_simulation": {
+      "calls": {
+        "total": 252,
+        "count": 30
+      },
+      "tokens": {
+        "total": 3219208,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 1398.891,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    },
+    "multi_trajectory_simulation": {
+      "calls": {
+        "total": 1551,
+        "count": 30
+      },
+      "tokens": {
+        "total": 19024531,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 2378.4300000000003,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 8,
+        "count": 30
+      }
+    },
+    "single_trajectory_simulation": {
+      "calls": {
+        "total": 802,
+        "count": 30
+      },
+      "tokens": {
+        "total": 9841993,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 2363.5069999999996,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    },
+    "single_step_ensemble": {
+      "calls": {
+        "total": 497,
+        "count": 30
+      },
+      "tokens": {
+        "total": 6270361,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 901.435,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 0,
+        "count": 30
+      }
+    },
+    "mcts_simulation": {
+      "calls": {
+        "total": 1889,
+        "count": 30
+      },
+      "tokens": {
+        "total": 22879456,
+        "count": 30
+      },
+      "elapsed_seconds": {
+        "total": 6119.6100000000015,
+        "count": 30
+      },
+      "unknown_usage_requests": {
+        "total": 4,
+        "count": 30
+      }
+    }
+  },
+  "active_stage": null
+}

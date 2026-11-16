@@ -1,0 +1,2186 @@
+{
+  "run_id": "161b711c-a91b-4571-9640-f740972d6095",
+  "case_id": "market_bc6be0b3212ad77332a29642",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3167,
+      "input_tokens": 3157,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3167,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3157,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:27:28.061545+00:00",
+      "contract_id": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fe5b20aca1f2f1519c186bcaa09f46682eb8f8d14895601286f54db702519f8f",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.904
+    },
+    {
+      "calls": 2,
+      "tokens": 6334,
+      "input_tokens": 6314,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6334,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.07500000000000001,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3157,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.07,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3157,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:27:29.945849+00:00",
+      "contract_id": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fe5b20aca1f2f1519c186bcaa09f46682eb8f8d14895601286f54db702519f8f",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.883
+    },
+    {
+      "calls": 8,
+      "tokens": 90896,
+      "input_tokens": 87655,
+      "output_tokens": 3241,
+      "accounted_tokens_upper": 90896,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "candidate_id": "agent_ea35567d064e5594:initial:1",
+                  "action": "Take no new outward action this round. The Guardian Council continues exercising its existing constitutional vetting and approval functions under the clerical framework, with no public statement, dissolution, or replacement.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward action this round. The Guardian Council continues exercising its existing constitutional vetting and approval functions under the clerical framework, with no public statement, dissolution, or replacement.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                  "action": "Hold no new public action this round. The popular base has no convened referendum, no interim authority, and no evidence of organized capacity to establish a new governing system within the window; monitor for any uprising, defection, or referendum trigger.\n触发或复核条件：Review if a referendum is convened, an interim authority emerges, or sustained mass mobilization or military defections appear.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Hold no new public action this round. The popular base has no convened referendum, no interim authority, and no evidence of organized capacity to establish a new governing system within the window; monitor for any uprising, defection, or referendum trigger.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Evidence shows a 2026 war and leadership succession (Mojtaba designated Supreme Leader), but analysts found little evidence of significant military defections, a condition for regime change. No reporting indicates core Islamic Republic structures dissolved or replaced by the deadline; succession preserves continuity.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.07,
+      "covered_p_yes": 0.07,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.07,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "8e0cb92e-ff3e-4858-b442-344ae4d63e0e",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:28:26.168220+00:00",
+      "contract_id": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fe5b20aca1f2f1519c186bcaa09f46682eb8f8d14895601286f54db702519f8f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 56.22
+    },
+    {
+      "calls": 15,
+      "tokens": 184657,
+      "input_tokens": 177616,
+      "output_tokens": 7041,
+      "accounted_tokens_upper": 184657,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "candidate_id": "agent_ea35567d064e5594:initial:1",
+                  "action": "Take no new public action this round; the Guardian Council continues its constitutional role without issuing statements or new vetting decisions in the absence of any scheduled electoral or Assembly of Experts process.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Take no new public action this round; the Guardian Council continues its constitutional role without issuing statements or new vetting decisions in the absence of any scheduled electoral or Assembly of Experts process.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                  "action": "Take no organized public action this round; the popular base has no evidence of a convened referendum or an interim authority to vote under, and no coordinated uprising capacity is documented. Monitor for signals of military defection, Guardian Council dissolution, or a convened referendum before 2027.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no organized public action this round; the popular base has no evidence of a convened referendum or an interim authority to vote under, and no coordinated uprising capacity is documented. Monitor for signals of military defection, Guardian Council dissolution, or a convened referendum before 2027.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The 2026 war evidence shows strikes, a leadership succession to Mojtaba Khamenei, and continued IRGC activity, but analysts found little evidence of significant military defections, which the source calls a necessary condition for regime change. No settled event shows the Islamic Republic's core structures dissolved or replaced, so the contract's clear-break threshold remains unmet.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 53,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "candidate_id": "agent_ea35567d064e5594:initial:1",
+                  "action": "The Guardian Council takes no new outward step this round: it continues its ordinary constitutional role of vetting and approving candidates, with no public statement, dissolution, or change of position.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "The Guardian Council takes no new outward step this round: it continues its ordinary constitutional role of vetting and approving candidates, with no public statement, dissolution, or change of position.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a public statement affirming the Guardian Council continues to perform its constitutional vetting and Assembly of Experts candidate-approval duties under the new Supreme Leader, and calling for calm and legal-process adherence.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                  "action": "Take no new public action this round; monitor for signs of sustained mass mobilization, military defection or neutrality, or any authority convening a referendum or provisional government, which are the preconditions for the popular-base path to matter.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no new public action this round; monitor for signs of sustained mass mobilization, military defection or neutrality, or any authority convening a referendum or provisional government, which are the preconditions for the popular-base path to matter.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The 2026 war evidence shows strikes, a leadership succession to Mojtaba Khamenei, and continued IRGC activity, but analysts found little evidence of significant military defections, which the source calls a necessary condition for regime change. No settled event shows the Islamic Republic's core structures dissolved or replaced, so the contract's clear-break threshold remains unmet.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.8
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.07,
+      "covered_p_yes": 0.07,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.07,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "877ba226-20b2-41a3-a748-c27c55c085f2",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:28:50.364498+00:00",
+      "contract_id": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fe5b20aca1f2f1519c186bcaa09f46682eb8f8d14895601286f54db702519f8f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 24.195
+    },
+    {
+      "calls": 27,
+      "tokens": 333445,
+      "input_tokens": 317783,
+      "output_tokens": 15662,
+      "accounted_tokens_upper": 333445,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "status": "executed",
+                  "summary": "The Iranian voters / popular base publicly called for renewed street protests and general strikes against corruption and injustice, invoking the 1979 precedent of paralyzing strikes, while making no claim to convene a referendum or replace the government."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_96b6ea2bbecb5e00",
+                    "action_1_agent_ea35567d064e5594"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "publicly called for renewed street protests and general strikes against corruption and injustice"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "publicly called for renewed street protests and general strikes against corruption and injustice",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Iranian voters / popular base publicly called for renewed street protests and general strikes against corruption and injustice, invoking the 1979 precedent of paralyzing strikes, while making no claim to convene a referendum or replace the government.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "candidate_id": "agent_ea35567d064e5594:initial:1",
+                  "action": "Take no outward step this round. The Council has no scheduled decision, no open request and no public evidence of disruption; continue internal assessment of wartime conditions and succession arrangements before any public act.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no outward step this round. The Council has no scheduled decision, no open request and no public evidence of disruption; continue internal assessment of wartime conditions and succession arrangements before any public act.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a public statement affirming the Guardian Council continues to exercise its constitutional duties of candidate vetting and Assembly of Experts approval, and that the 8 March succession occurred within existing constitutional structures.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "candidate_id": "agent_96b6ea2bbecb5e00:initial:2",
+                  "action": "Publicly call for renewed street protests and general strikes against corruption and injustice, invoking the 1979 precedent of paralyzing strikes, while making no claim to convene a referendum or replace the government.",
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no new public action this round; monitor whether any uprising, strike wave, or referendum convening authority emerges before the 2027 deadline.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_96b6ea2bbecb5e00:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publicly call for renewed street protests and general strikes against corruption and injustice, invoking the 1979 precedent of paralyzing strikes, while making no claim to convene a referendum or replace the government.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The evidence shows a 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The evidence shows a 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The evidence shows a 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "status": "executed",
+                  "summary": "The Iranian voters / popular base publicly reiterated its call for renewed street protests and general strikes against corruption and injustice in the coming weeks, invoking the 1979 paralyzing-strikes precedent, while making no claim to convene a referendum or replace the government."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_4_agent_96b6ea2bbecb5e00",
+                    "action_4_agent_ea35567d064e5594"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "publicly reiterated its call for renewed street protests and general strikes against corruption and injustice"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "publicly reiterated its call for renewed street protests and general strikes against corruption and injustice",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "The Iranian voters / popular base publicly reiterated its call for renewed street protests and general strikes against corruption and injustice in the coming weeks, invoking the 1979 paralyzing-strikes precedent, while making no claim to convene a referendum or replace the government.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "candidate_id": "agent_ea35567d064e5594:initial:1",
+                  "action": "Take no outward step this round. No scheduled vetting or Assembly of Experts approval is pending, no open request exists, and there is no public evidence of Council disruption; continue internal monitoring of wartime conditions and succession arrangements.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no outward step this round. No scheduled vetting or Assembly of Experts approval is pending, no open request exists, and there is no public evidence of Council disruption; continue internal monitoring of wartime conditions and succession arrangements.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a public statement affirming the Council's constitutional continuity and its readiness to perform candidate vetting and Assembly of Experts approvals, rejecting any claim that the Islamic Republic's core structures have dissolved.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                  "action": "Publicly reiterate the call for renewed street protests and general strikes against corruption and injustice in the coming weeks, invoking the 1979 paralyzing-strikes precedent, while still making no claim to convene a referendum or replace the government.\n承诺：Sustained issue-focused mobilization through the December interval, not a bid for a new governing system.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reiterate the call for renewed street protests and general strikes against corruption and injustice in the coming weeks, invoking the 1979 paralyzing-strikes precedent, while still making no claim to convene a referendum or replace the government.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "The evidence shows a 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "No settled event shows the Islamic Republic's core structures dissolved or replaced; a wartime succession (Mojtaba designated Supreme Leader) and continued IRGC activity indicate continuity. The only in-window popular action is a call for protests/strikes explicitly disclaiming regime replacement, so the contract's clear-break threshold remains unmet.",
+                "evidence_quote": "On 8 March, Khamenei's second son, Mojtaba, was designated as Iran's new supreme leader.",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_914abb0394bb568c.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.0672
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 4,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.07,
+      "covered_p_yes": 0.07,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.07,
+        0.07000000000000006
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "ab818566-515f-46af-b427-61fc770c4155",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:30:21.447181+00:00",
+      "contract_id": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fe5b20aca1f2f1519c186bcaa09f46682eb8f8d14895601286f54db702519f8f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 91.079
+    },
+    {
+      "calls": 54,
+      "tokens": 653647,
+      "input_tokens": 624913,
+      "output_tokens": 28734,
+      "accounted_tokens_upper": 653647,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "status": "executed",
+                  "summary": "Iranian voters / popular base issued a public call for continued protests against corruption and injustice, urging citizens to keep demonstrating peacefully without convening any new government or referendum."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "urging citizens to keep demonstrating peacefully without convening any new government or referendum",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Iranian voters / popular base issued a public call for continued protests against corruption and injustice, urging citizens to keep demonstrating peacefully without convening any new government or referendum.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "candidate_id": "agent_ea35567d064e5594:initial:1",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Guardian Council issues a public statement affirming the constitutional continuity of the Islamic Republic and the legitimacy of the current Supreme Leader, calling on officials and security forces to uphold clerical authority and the existing constitutional order.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "candidate_id": "agent_96b6ea2bbecb5e00:initial:2",
+                  "action": "Issue a public call for continued protests against corruption and injustice, urging citizens to keep demonstrating peacefully without claiming to convene any new government or referendum.",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no public action this round; monitor for evidence of mobilization, military defections, or any convened referendum authority before deciding whether to escalate.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_96b6ea2bbecb5e00:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a public call for continued protests against corruption and injustice, urging citizens to keep demonstrating peacefully without claiming to convene any new government or referendum.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "The evidence shows an active 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, which the source calls a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "The evidence shows an active 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, which the source calls a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "The evidence shows an active 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, which the source calls a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "status": "executed",
+                  "summary": "The Iranian voters / popular base issued a renewed public call urging Iranians to continue sustained peaceful strikes and demonstrations against corruption and injustice through the winter, explicitly declining to convene any new government or referendum and framing demands as reformist grievances rather than regime replacement."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "explicitly declining to convene any new government or referendum and framing demands as reformist grievances rather than regime replacement",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "The Iranian voters / popular base issued a renewed public call urging Iranians to continue sustained peaceful strikes and demonstrations against corruption and injustice through the winter, explicitly declining to convene any new government or referendum and framing demands as reformist grievances rather than regime replacement.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                  "action": "Issue a public call urging Iranians to continue sustained peaceful strikes and demonstrations against corruption and injustice through the winter, explicitly declining to convene any new government or referendum and framing demands as reformist grievances rather than regime replacement.\n承诺：Sustained peaceful protest only; no claim to convene a new government or referendum.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public call urging Iranians to continue sustained peaceful strikes and demonstrations against corruption and injustice through the winter, explicitly declining to convene any new government or referendum and framing demands as reformist grievances rather than regime replacement.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "candidate_id": "agent_ea35567d064e5594:initial:1",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Guardian Council issues a public statement reaffirming the constitutional order under Supreme Leader Mojtaba Khamenei and its own vetting authority, calling for calm and warning that electoral or constitutional changes outside legal channels will not be approved.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "The latest simulated evidence shows the popular base explicitly declining to convene a new government or referendum and framing demands as reformist grievances, which undercuts the D5 pathway. Historical 1979 precedent and 2026 war reporting show pressure but no core-structure break; the window ends December 31, 2026.",
+                "evidence_quote": "The Iranian voters / popular base issued a renewed public call urging Iranians to continue sustained peaceful strikes and demonstrations against corruption and injustice through the winter, explicitly declining to convene any new government or referendum and framing demands as reformist grievances rather than regime replacement.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No settled event shows the Islamic Republic's core structures dissolved or replaced; the 2026 war evidence notes little sign of military defections, and the popular base explicitly declined to convene a new government or referendum. Succession of Mojtaba Khamenei preserves continuity rather than breaking it.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.08960000000000001
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "candidate_id": "agent_ea35567d064e5594:initial:1",
+                  "action": "Take no new public action this round. The Guardian Council continues its constitutional candidate-vetting role; no dissolution, replacement, or break in continuity is indicated in the public packet.\n触发或复核条件：Review if credible reporting shows the Guardian Council dissolved, replaced, or unable to function, or if a provisional government/referendum emerges.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no new public action this round. The Guardian Council continues its constitutional candidate-vetting role; no dissolution, replacement, or break in continuity is indicated in the public packet.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement reaffirming the Guardian Council's constitutional role in vetting electoral and Assembly of Experts candidates and urging calm and institutional continuity during the war.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "The evidence shows an active 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, which the source calls a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-30",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 21,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-30T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "The evidence shows an active 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, which the source calls a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-30",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 31,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-30T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "The evidence shows an active 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, which the source calls a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 42,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "status": "executed",
+                  "summary": "The Guardian Council issued a public statement reaffirming its constitutional role in vetting electoral and Assembly of Experts candidates and affirming that the Islamic Republic's core structures remain intact under the designated Supreme Leader."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "affirming that the Islamic Republic's core structures remain intact under the designated Supreme Leader",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "The Guardian Council issued a public statement reaffirming its constitutional role in vetting electoral and Assembly of Experts candidates and affirming that the Islamic Republic's core structures remain intact under the designated Supreme Leader.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ea35567d064e5594",
+                  "actor_name": "Guardian Council",
+                  "candidate_id": "agent_ea35567d064e5594:initial:2",
+                  "action": "Issue a public statement reaffirming the Guardian Council's constitutional role in vetting candidates and Assembly of Experts candidates, and affirming that the Islamic Republic's core structures remain intact under the designated Supreme Leader.",
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no new public action this round. The Guardian Council continues its constitutional candidate-vetting role; no dissolution, replacement, or break in continuity is indicated in the public packet.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ea35567d064e5594:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Issue a public statement reaffirming the Guardian Council's constitutional role in vetting candidates and Assembly of Experts candidates, and affirming that the Islamic Republic's core structures remain intact under the designated Supreme Leader.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_96b6ea2bbecb5e00",
+                  "actor_name": "Iranian voters / popular base",
+                  "candidate_id": "agent_96b6ea2bbecb5e00:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "The evidence shows an active 2026 war and leadership succession (Mojtaba Khamenei designated Supreme Leader), but analysts found little evidence of significant military defections, which the source calls a necessary condition for regime change. Succession preserves core structures, so it does not satisfy the contract's clear-break requirement.",
+                "evidence_quote": "During the third week, analysts found little evidence of significant defections in the Iranian military, which have been considered a necessary condition for regime change.",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 53,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will the Iranian regime fall before 2027?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "The latest settled evidence is a December 2026 Guardian Council statement reaffirming its constitutional role and that core structures remain intact under the designated Supreme Leader. Wartime strikes and leadership succession (Mojtaba designated) show continuity, not dissolution; no evidence shows the Islamic Republic losing de facto power over most Iranians before the deadline.",
+                "evidence_quote": "The Guardian Council issued a public statement reaffirming its constitutional role in vetting electoral and Assembly of Experts candidates and affirming that the Islamic Republic's core structures remain intact under the designated Supreme Leader.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.105
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 6,
+        "sampled_decisions": 8,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.035,
+      "covered_p_yes": 0.035,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.035,
+        0.03499999999999992
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "8a42a9ce-60f2-4307-81e0-a1efab395c85",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:32:03.211774+00:00",
+      "contract_id": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fe5b20aca1f2f1519c186bcaa09f46682eb8f8d14895601286f54db702519f8f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 101.76
+    },
+    {
+      "calls": 76,
+      "tokens": 911732,
+      "input_tokens": 867185,
+      "output_tokens": 44547,
+      "accounted_tokens_upper": 911732,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.034600000000000006,
+      "coverage": 0.955,
+      "unexplored_mass": 0.045000000000000005,
+      "unknown_bounds": [
+        0.0121,
+        0.057100000000000005
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.082004,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.7,
+          "visits": 5,
+          "search_value": 0.07276,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.7,
+          "visits": 4,
+          "search_value": 0.061849999999999995,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.7,
+          "visits": 3,
+          "search_value": 0.056333333333333326,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.48999999999999994,
+          "visits": 1,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.48999999999999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.01,
+          "frontier": true,
+          "contribution": 0.0049
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.21,
+          "visits": 1,
+          "search_value": 0.0396,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.21,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.01,
+          "frontier": true,
+          "contribution": 0.0021
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.3,
+          "visits": 4,
+          "search_value": 0.08495999999999998,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.3,
+          "visits": 3,
+          "search_value": 0.07448,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.3,
+          "visits": 2,
+          "search_value": 0.07252,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.1785,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.1785,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.00357
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.0765,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0015300000000000001
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.045000000000000005,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "9fafcddf-1df2-4788-bc64-6016773fd1a7",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:35:59.410301+00:00",
+      "contract_id": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "fe5b20aca1f2f1519c186bcaa09f46682eb8f8d14895601286f54db702519f8f",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 236.19
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+  "group_id": "will-the-iranian-regime-fall-by-the-end-of-2026",
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "explicit_contract_deadline",
+  "nominal_market_end": "2027-01-01T04:59:00+00:00",
+  "evidence_sha256": "fe5b20aca1f2f1519c186bcaa09f46682eb8f8d14895601286f54db702519f8f",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 836,
+    "input_tokens": 732,
+    "output_tokens": 104,
+    "accounted_tokens_upper": 836,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-30",
+        "2026-12-10",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "needs_evidence": 1,
+      "ready": 1,
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_09380a683935b678",
+          "name": "Iranian military",
+          "role": "Armed forces whose neutrality/defection was decisive in the 1979 collapse; a comparable break is a causal path to regime fall.",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": true,
+          "readiness": "needs_evidence"
+        },
+        {
+          "seat_id": "seat_520c4fd259cb7709",
+          "name": "Guardian Council",
+          "role": "Core constitutional structure overseeing elections and vetting candidates; its dissolution or replacement would indicate a break in continuity.",
+          "decision_ids": [
+            "D4"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_eb2d05d8a3d1dac3",
+          "name": "Iranian voters / popular base",
+          "role": "A broad popular uprising or referendum establishing a new governing system is a path to regime change; the 1979 Islamic Republic was founded by referendum.",
+          "decision_ids": [
+            "D5"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        }
+      ],
+      "missing_required": [
+        "Iranian military"
+      ],
+      "unresolved_requirements": [
+        "Supreme Leader's choice to abdicate, dissolve the office, or be replaced by a fundamentally different system.",
+        "IRGC command's choice to defect from or cease upholding clerical authority."
+      ],
+      "gaps": [
+        "No frozen source identifies IRGC command; its decision remains unresolved.",
+        "No frozen source identifies Supreme Leader of Iran; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Supreme Leader's choice to abdicate, dissolve the office, or be replaced by a fundamentally different system.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D2",
+          "choice": "IRGC command's choice to defect from or cease upholding clerical authority.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "D3",
+          "choice": "Iranian military's choice to declare neutrality or defect from the regime.",
+          "owner": "Iranian military",
+          "support": "unbound"
+        },
+        {
+          "id": "D4",
+          "choice": "Guardian Council's dissolution, incapacitation, or replacement as a core structure.",
+          "owner": "Guardian Council",
+          "support": "represented"
+        },
+        {
+          "id": "D5",
+          "choice": "Popular uprising or referendum establishing a new provisional government or constitution.",
+          "owner": "Iranian voters / popular base",
+          "support": "represented"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 28,
+    "tokens": 77700,
+    "input_tokens": 65444,
+    "output_tokens": 12256,
+    "accounted_tokens_upper": 77700,
+    "unknown_usage_requests": 0
+  }
+}

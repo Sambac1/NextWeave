@@ -1,0 +1,1724 @@
+{
+  "run_id": "0d4fdd5e-bbe3-4616-be41-9491aecca740",
+  "case_id": "market_1b48926a7c62ef8cd1d77580",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3677,
+      "input_tokens": 3667,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3677,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.35,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.35,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3667,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:38:25.033336+00:00",
+      "contract_id": "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "24ea9064e3292a4342fcd7e805918b9395331d343c47dd7986c5269edbf3aa2f",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.999
+    },
+    {
+      "calls": 2,
+      "tokens": 7354,
+      "input_tokens": 7334,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 7354,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.35,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.35,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3667,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.35,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3667,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:38:26.706007+00:00",
+      "contract_id": "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "24ea9064e3292a4342fcd7e805918b9395331d343c47dd7986c5269edbf3aa2f",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.671
+    },
+    {
+      "calls": 7,
+      "tokens": 91001,
+      "input_tokens": 86311,
+      "output_tokens": 4690,
+      "accounted_tokens_upper": 91001,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-15",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-15T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly stated it will not initiate a qualifying strike on Israeli territory while the ceasefire holds, but will respond with a qualifying missile strike on Israeli terrestrial territory if Israel first conducts a qualifying air or surface-to-surface strike on Iran."
+                },
+                {
+                  "action_id": "action_1_agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "status": "executed",
+                  "summary": "Israel stated publicly that it will not initiate a qualifying strike before 15 November, but reserves the right to respond with an air strike on Iranian territory if Iran executes a qualifying strike on Israeli territory."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_d4dbfdab28a15f18",
+                    "action_1_agent_5a34a6f43efe50a5"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Israel stated publicly that it will not initiate a qualifying strike before 15 November"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Iran publicly stated it will not initiate a qualifying strike on Israeli territory while the ceasefire holds",
+                  "pending_actor_ids": [
+                    "agent_d4dbfdab28a15f18",
+                    "agent_5a34a6f43efe50a5"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Iran publicly stated it will not initiate a qualifying strike on Israeli territory while the ceasefire holds, but will respond with a qualifying missile strike on Israeli terrestrial territory if Israel first conducts a qualifying air or surface-to-surface strike on Iran.",
+                  "date": "2026-11-09"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Israel stated publicly that it will not initiate a qualifying strike before 15 November, but reserves the right to respond with an air strike on Iranian territory if Iran executes a qualifying strike on Israeli territory.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                  "action": "Iran publicly states it will not initiate a qualifying strike on Israeli territory while the ceasefire holds, but will respond with a qualifying missile strike on Israeli terrestrial territory if Israel first conducts a qualifying air or surface-to-surface strike on Iran.\n承诺：No first qualifying strike; retaliation only if Israel strikes Iranian terrestrial territory first.\n触发或复核条件：Only if Israel executes a qualifying strike on Iranian territory.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran publicly states it will not initiate a qualifying strike on Israeli territory while the ceasefire holds, but will respond with a qualifying missile strike on Israeli terrestrial territory if Israel first conducts a qualifying air or surface-to-surface strike on Iran.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_5a34a6f43efe50a5:initial:2",
+                  "action": "Israel states publicly that it will not initiate a qualifying strike before 15 November, but reserves the right to respond with an air strike on Iranian territory if Iran executes a qualifying strike on Israeli territory.\n承诺：No Israeli-initiated qualifying strike before 15 Nov 2026 11:59 PM IRST; retaliation only if Iran strikes first.\n触发或复核条件：Iran executes a qualifying air or surface-to-surface missile strike impacting Israeli terrestrial territory.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a34a6f43efe50a5:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Israel states publicly that it will not initiate a qualifying strike before 15 November, but reserves the right to respond with an air strike on Iranian territory if Iran executes a qualifying strike on Israeli territory.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Both parties' only current-round statements are conditional: each says it will not strike first but will respond if the other does. No settled qualifying strike appears in the evidence, so the ceasefire most likely holds through the deadline, though mutual retaliation risk remains.",
+                "evidence_quote": "Iran publicly stated it will not initiate a qualifying strike on Israeli territory while the ceasefire holds, but will respond with a qualifying missile strike on Israeli terrestrial territory if Israel first conducts a qualifying air or surface-to-surface strike on Iran.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.82,
+          "error": null,
+          "action_path_probability": 0.09
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.82,
+      "covered_p_yes": 0.82,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.82,
+        0.8199999999999998
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "d247e1ca-f804-42e3-b10a-bef8e3b8216f",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:39:24.783027+00:00",
+      "contract_id": "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "24ea9064e3292a4342fcd7e805918b9395331d343c47dd7986c5269edbf3aa2f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 58.075
+    },
+    {
+      "calls": 21,
+      "tokens": 297668,
+      "input_tokens": 282724,
+      "output_tokens": 14944,
+      "accounted_tokens_upper": 297668,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-15",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-15T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly signaled that it would launch a surface-to-surface missile strike on Israeli terrestrial territory only if Israel first conducts a qualifying strike on Iran, and stated it is seeking internal authorization for that retaliatory response; no strike was executed."
+                },
+                {
+                  "action_id": "action_1_agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "status": "executed",
+                  "summary": "Israel publicly signaled that it is prepared to conduct a qualifying air strike on Iranian territory only if Iran first executes or is confirmed to have executed a qualifying strike on Israeli territory before 15 Nov; this was a conditional posture, not an executed strike."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d4dbfdab28a15f18",
+                    "action_1_agent_5a34a6f43efe50a5"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "only if Israel first conducts a qualifying strike on Iran"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "this was a conditional posture, not an executed strike",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Iran publicly signaled that it would launch a surface-to-surface missile strike on Israeli terrestrial territory only if Israel first conducts a qualifying strike on Iran, and stated it is seeking internal authorization for that retaliatory response; no strike was executed.",
+                  "date": "2026-11-09"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Israel publicly signaled that it is prepared to conduct a qualifying air strike on Iranian territory only if Iran first executes or is confirmed to have executed a qualifying strike on Israeli territory before 15 Nov; this was a conditional posture, not an executed strike.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                  "action": "Iran signals it will launch a surface-to-surface missile strike on Israeli terrestrial territory if Israel conducts a qualifying strike on Iran, and seeks internal authorization for that response. No strike is executed this round.\n承诺：Retaliatory strike only if Israel strikes Iranian territory first.\n触发或复核条件：Triggered by an Israeli qualifying strike on Iranian terrestrial territory.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran signals it will launch a surface-to-surface missile strike on Israeli terrestrial territory if Israel conducts a qualifying strike on Iran, and seeks internal authorization for that response. No strike is executed this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_5a34a6f43efe50a5:initial:2",
+                  "action": "Israel publicly signals that it is prepared to conduct a qualifying air strike on Iranian territory if Iran conducts or is confirmed to have conducted a qualifying strike on Israeli territory before 15 Nov; this is a conditional posture, not an executed strike.\n承诺：No strike unless Iran first executes a qualifying strike on Israeli terrestrial territory.\n触发或复核条件：Triggered only by a confirmed Iranian qualifying strike on Israeli territory.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a34a6f43efe50a5:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Israel publicly signals that it is prepared to conduct a qualifying air strike on Iranian territory if Iran conducts or is confirmed to have conducted a qualifying strike on Israeli territory before 15 Nov; this is a conditional posture, not an executed strike.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Only round-1 simulated events are current: both sides issued conditional postures, with no executed qualifying strike reported. Historical 2026 ceasefire collapses show fragility, but the contract deadline is near and no in-window strike is evidenced.",
+                "evidence_quote": "Iran publicly signaled that it would launch a surface-to-surface missile strike on Israeli terrestrial territory only if Israel first conducts a qualifying strike on Iran, and stated it is seeking internal authorization for that retaliatory response; no strike was executed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.82,
+          "error": null,
+          "action_path_probability": 0.09
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-15",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-15T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly stated that any new Israeli air or surface-to-surface strike directly impacting Iranian territory would be met with retaliatory missile fire on Israeli territory, while affirming it would not initiate a qualifying strike first."
+                },
+                {
+                  "action_id": "action_1_agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d4dbfdab28a15f18",
+                    "action_1_agent_5a34a6f43efe50a5"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Iran publicly stated that any new Israeli air or surface-to-surface strike directly impacting Iranian territory would be met with retaliatory missile fire on Israeli territory"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "while affirming it would not initiate a qualifying strike first",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Iran publicly stated that any new Israeli air or surface-to-surface strike directly impacting Iranian territory would be met with retaliatory missile fire on Israeli territory, while affirming it would not initiate a qualifying strike first.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                  "action": "Iran publicly states that any new Israeli air or surface-to-surface strike directly impacting Iranian territory will be met with retaliatory missile fire on Israeli territory, while affirming it will not initiate a qualifying strike first.\n承诺：Retaliation only in response to a qualifying Israeli strike impacting Iranian territory; no first strike.\n触发或复核条件：Only if Israel initiates a qualifying strike on Iranian terrestrial territory.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran publicly states that any new Israeli air or surface-to-surface strike directly impacting Iranian territory will be met with retaliatory missile fire on Israeli territory, while affirming it will not initiate a qualifying strike first.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_5a34a6f43efe50a5:initial:1",
+                  "action": "Hold current posture and monitor through 15 November; no qualifying strike on Iranian territory is ordered or executed this round.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a34a6f43efe50a5:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Hold current posture and monitor through 15 November; no qualifying strike on Iranian territory is ordered or executed this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Only round-1 simulated evidence is current: Iran said it would retaliate only if Israel struck first and would not initiate a qualifying strike. No settled qualifying strike by either side appears in the record, so the ceasefire most likely holds to the deadline, though Israeli action remains unknown.",
+                "evidence_quote": "Iran publicly stated that any new Israeli air or surface-to-surface strike directly impacting Iranian territory would be met with retaliatory missile fire on Israeli territory, while affirming it would not initiate a qualifying strike first.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.24
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.77,
+      "covered_p_yes": 0.77,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.77,
+        0.77
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "5fdcfaa9-012e-44c9-b283-02439030c333",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:48:59.668512+00:00",
+      "contract_id": "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "24ea9064e3292a4342fcd7e805918b9395331d343c47dd7986c5269edbf3aa2f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 54.916
+    },
+    {
+      "calls": 21,
+      "tokens": 251314,
+      "input_tokens": 239860,
+      "output_tokens": 11454,
+      "accounted_tokens_upper": 251314,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-11",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly stated it will not initiate a qualifying strike on Israeli territory so long as no qualifying Israeli strike impacts Iranian territory before 15 Nov 2026, while reserving the right to retaliate if Israel strikes first."
+                },
+                {
+                  "action_id": "action_1_agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "status": "executed",
+                  "summary": "Israel publicly stated it will conduct a qualifying air strike on Iranian military targets if Iran executes a qualifying strike on Israeli territory before 15 November, and that no strike is launched this round absent that trigger."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d4dbfdab28a15f18",
+                    "action_1_agent_5a34a6f43efe50a5"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Israel publicly stated it will conduct a qualifying air strike on Iranian military targets if Iran executes a qualifying strike on Israeli territory before 15 November"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Iran publicly stated it will not initiate a qualifying strike on Israeli territory so long as no qualifying Israeli strike impacts Iranian territory before 15 Nov 2026",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Iran publicly stated it will not initiate a qualifying strike on Israeli territory so long as no qualifying Israeli strike impacts Iranian territory before 15 Nov 2026, while reserving the right to retaliate if Israel strikes first.",
+                  "date": "2026-11-10"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Israel publicly stated it will conduct a qualifying air strike on Iranian military targets if Iran executes a qualifying strike on Israeli territory before 15 November, and that no strike is launched this round absent that trigger.",
+                  "date": "2026-11-10"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                  "action": "Iran publicly states it will not initiate a qualifying strike on Israeli territory so long as no qualifying Israeli strike impacts Iranian territory before 15 Nov 2026, while reserving retaliation if Israel strikes first.\n承诺：No first qualifying strike on Israeli territory through 15 Nov 2026 absent an Israeli qualifying strike on Iranian territory.\n触发或复核条件：Conditional on Israel refraining from qualifying strikes on Iranian terrestrial territory.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Iran publicly states it will not initiate a qualifying strike on Israeli territory so long as no qualifying Israeli strike impacts Iranian territory before 15 Nov 2026, while reserving retaliation if Israel strikes first.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_5a34a6f43efe50a5:initial:2",
+                  "action": "Israel publicly states that it will conduct a qualifying air strike on Iranian military targets if Iran executes a qualifying strike on Israeli territory before 15 November; no strike is launched this round absent that trigger.\n承诺：A qualifying Israeli strike follows only if Iran first executes a qualifying strike on Israeli terrestrial territory.\n触发或复核条件：Iranian qualifying strike on Israeli territory before 15 Nov 2026 11:59 PM IRST.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a34a6f43efe50a5:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Israel publicly states that it will conduct a qualifying air strike on Iranian military targets if Iran executes a qualifying strike on Israeli territory before 15 November; no strike is launched this round absent that trigger.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Both sides' current public statements are mutually conditional: each says it will not strike first and will only retaliate if the other does. With no reported qualifying strike and the deadline near, the ceasefire likely holds, though a single executed strike would break it.",
+                "evidence_quote": "Iran publicly stated it will not initiate a qualifying strike on Israeli territory so long as no qualifying Israeli strike impacts Iranian territory before 15 Nov 2026, while reserving the right to retaliate if Israel strikes first.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-11",
+                "interval_end": "2026-11-13",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2026-11-11T00:00:00+00:00",
+                "interval_end_utc": "2026-11-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Both sides' current public statements are mutually conditional: each says it will not strike first and will only retaliate if the other does. With no reported qualifying strike and the deadline near, the ceasefire likely holds, though a single executed strike would break it.",
+                "evidence_quote": "Iran publicly stated it will not initiate a qualifying strike on Israeli territory so long as no qualifying Israeli strike impacts Iranian territory before 15 Nov 2026, while reserving the right to retaliate if Israel strikes first.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-13",
+                "interval_end": "2026-11-15",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 6,
+                "interval_days": 2,
+                "interval_start_utc": "2026-11-13T00:00:00+00:00",
+                "interval_end_utc": "2026-11-15T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.82,
+                "basis": "Both sides' round-1 statements are conditional and mutually contingent: each says it will strike only if the other strikes first, and Israel says no strike is launched this round absent that trigger. No settled qualifying strike is reported, so the ceasefire appears intact near the deadline; residual risk is an unreported or imminent strike.",
+                "evidence_quote": "Iran publicly stated it will not initiate a qualifying strike on Israeli territory so long as no qualifying Israeli strike impacts Iranian territory before 15 Nov 2026, while reserving the right to retaliate if Israel strikes first.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.82,
+          "error": null,
+          "action_path_probability": 0.12
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.82,
+      "covered_p_yes": 0.82,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.82,
+        0.8199999999999998
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "fdf2c69a-52b8-43f6-b813-0b6177344d0a",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:41:22.800727+00:00",
+      "contract_id": "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "24ea9064e3292a4342fcd7e805918b9395331d343c47dd7986c5269edbf3aa2f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 72.924
+    },
+    {
+      "calls": 41,
+      "tokens": 494902,
+      "input_tokens": 470931,
+      "output_tokens": 23971,
+      "accounted_tokens_upper": 494902,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-11",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly stated that any Israeli air or surface-to-surface strike impacting Iranian territory will be answered in kind, while affirming it will not initiate a qualifying strike first and remains open to US-brokered de-escalation."
+                },
+                {
+                  "action_id": "action_1_agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "status": "executed",
+                  "summary": "Israel publicly stated that it will maintain the current understanding and will respond only if Iran conducts a qualifying strike on Israeli territory; no strike was ordered."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_d4dbfdab28a15f18",
+                    "action_1_agent_5a34a6f43efe50a5"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Israel publicly stated that it will maintain the current understanding and will respond only if Iran conducts a qualifying strike on Israeli territory; no strike was ordered."
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "affirming it will not initiate a qualifying strike first and remains open to US-brokered de-escalation",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Iran publicly stated that any Israeli air or surface-to-surface strike impacting Iranian territory will be answered in kind, while affirming it will not initiate a qualifying strike first and remains open to US-brokered de-escalation.",
+                  "date": "2026-11-09"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Israel publicly stated that it will maintain the current understanding and will respond only if Iran conducts a qualifying strike on Israeli territory; no strike was ordered.",
+                  "date": "2026-11-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                  "action": "Iran publicly states that any Israeli air or surface-to-surface strike impacting Iranian territory will be answered in kind, while affirming it will not initiate a qualifying strike first and remains open to US-brokered de-escalation.\n承诺：No first qualifying strike by Iran while Israel refrains; reciprocal response only if Israel strikes Iranian territory.\n触发或复核条件：Only if Israel initiates a qualifying strike on Iranian terrestrial territory.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran publicly states that any Israeli air or surface-to-surface strike impacting Iranian territory will be answered in kind, while affirming it will not initiate a qualifying strike first and remains open to US-brokered de-escalation.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_5a34a6f43efe50a5:initial:2",
+                  "action": "Publicly state that Israel will maintain the current understanding and will respond only if Iran conducts a qualifying strike on Israeli territory; no strike is ordered now.\n承诺：Israel will not initiate a qualifying strike on Iran absent an Iranian qualifying strike.\n触发或复核条件：Only if Iran refrains from qualifying strikes on Israeli territory.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a34a6f43efe50a5:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that Israel will maintain the current understanding and will respond only if Iran conducts a qualifying strike on Israeli territory; no strike is ordered now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "A simulated 9 Nov 2026 statement has Israel holding the current understanding and responding only to a qualifying Iranian strike, with no strike ordered. That lowers near-term breach risk, but the ceasefire's July 2026 collapse and prior cycles show fragility, so a short window still carries meaningful risk.",
+                "evidence_quote": "Israel publicly stated that it will maintain the current understanding and will respond only if Iran conducts a qualifying strike on Israeli territory; no strike was ordered.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-11",
+                "interval_end": "2026-11-13",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2026-11-11T00:00:00+00:00",
+                "interval_end_utc": "2026-11-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "A simulated 9 Nov 2026 statement has Israel holding the current understanding and responding only to a qualifying Iranian strike, with no strike ordered. That lowers near-term breach risk, but the ceasefire's July 2026 collapse and prior cycles show fragility, so a short window still carries meaningful risk.",
+                "evidence_quote": "Israel publicly stated that it will maintain the current understanding and will respond only if Iran conducts a qualifying strike on Israeli territory; no strike was ordered.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-13",
+                "interval_end": "2026-11-15",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 6,
+                "interval_days": 2,
+                "interval_start_utc": "2026-11-13T00:00:00+00:00",
+                "interval_end_utc": "2026-11-15T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Round 1 public statements show both sides framing strikes as retaliatory only, with Israel saying no strike was ordered and Iran disclaiming first initiation. No qualifying strike is reported in the settled evidence, so the ceasefire appears intact near the deadline, though execution remains unverified.",
+                "evidence_quote": "Israel publicly stated that it will maintain the current understanding and will respond only if Iran conducts a qualifying strike on Israeli territory; no strike was ordered.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.09
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-11",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 2,
+                "interval_days": 2,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "status": "executed",
+                  "summary": "Iran publicly stated it would not initiate a qualifying strike on Israeli territory before 15 November provided Israel refrains from air or surface-to-surface strikes impacting Iranian territory, and called on the US to enforce that restraint."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Iran publicly stated it would not initiate a qualifying strike on Israeli territory before 15 November provided Israel refrains from air or surface-to-surface strikes impacting Iranian territory",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Iran publicly stated it would not initiate a qualifying strike on Israeli territory before 15 November provided Israel refrains from air or surface-to-surface strikes impacting Iranian territory, and called on the US to enforce that restraint.",
+                  "date": "2026-11-10"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d4dbfdab28a15f18",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                  "action": "Iran publicly states it will not initiate a qualifying strike on Israeli territory before 15 November provided Israel refrains from air or surface-to-surface strikes impacting Iranian territory, and calls on the US to enforce that restraint.\n承诺：No qualifying strike by Iran before 15 Nov 2026 11:59 PM IRST if Israel likewise refrains.\n触发或复核条件：Israel refrains from qualifying strikes on Iranian territory.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4dbfdab28a15f18:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran publicly states it will not initiate a qualifying strike on Israeli territory before 15 November provided Israel refrains from air or surface-to-surface strikes impacting Iranian territory, and calls on the US to enforce that restraint.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_5a34a6f43efe50a5",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_5a34a6f43efe50a5:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Iran's public statement of restraint through 15 November is the only current, in-window signal, and it is conditional on Israeli restraint. Historical evidence shows repeated ceasefire collapses and Israeli-initiated strikes, so residual risk of a qualifying strike remains material.",
+                "evidence_quote": "Iran publicly stated it would not initiate a qualifying strike on Israeli territory before 15 November provided Israel refrains from air or surface-to-surface strikes impacting Iranian territory, and called on the US to enforce that restraint.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-11",
+                "interval_end": "2026-11-13",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 4,
+                "interval_days": 2,
+                "interval_start_utc": "2026-11-11T00:00:00+00:00",
+                "interval_end_utc": "2026-11-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Iran's public statement of restraint through 15 November is the only current, in-window signal, and it is conditional on Israeli restraint. Historical evidence shows repeated ceasefire collapses and Israeli-initiated strikes, so residual risk of a qualifying strike remains material.",
+                "evidence_quote": "Iran publicly stated it would not initiate a qualifying strike on Israeli territory before 15 November provided Israel refrains from air or surface-to-surface strikes impacting Iranian territory, and called on the US to enforce that restraint.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-13",
+                "interval_end": "2026-11-15",
+                "horizon_end": "2026-11-15",
+                "elapsed_days": 6,
+                "interval_days": 2,
+                "interval_start_utc": "2026-11-13T00:00:00+00:00",
+                "interval_end_utc": "2026-11-15T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 15?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.72,
+                "basis": "Iran's 10 Nov public statement conditions restraint on Israeli restraint, and no qualifying strike is reported in the settled evidence. The main unknown is whether Israel executes a strike before the 15 Nov deadline; historical hostility and past ceasefire collapses keep risk material.",
+                "evidence_quote": "Iran publicly stated it would not initiate a qualifying strike on Israeli territory before 15 November provided Israel refrains from air or surface-to-surface strikes impacting Iranian territory, and called on the US to enforce that restraint.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.72,
+          "error": null,
+          "action_path_probability": 0.21
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 4,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 1,
+        "condition_change_count": 2,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.72,
+      "covered_p_yes": 0.72,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.72,
+        0.72
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "f9edce96-8e40-40e9-ab4b-5d68e607047e",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:42:43.706838+00:00",
+      "contract_id": "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "24ea9064e3292a4342fcd7e805918b9395331d343c47dd7986c5269edbf3aa2f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 80.901
+    },
+    {
+      "calls": 47,
+      "tokens": 545941,
+      "input_tokens": 514785,
+      "output_tokens": 31156,
+      "accounted_tokens_upper": 545941,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.450216,
+      "coverage": 0.7,
+      "unexplored_mass": 0.30000000000000004,
+      "unknown_bounds": [
+        0.300216,
+        0.6002160000000001
+      ],
+      "search_iterations": 6,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 6,
+          "search_value": 0.4772146666666666,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.42,
+          "visits": 2,
+          "search_value": 0.6661999999999999,
+          "conditional_p_yes": 0.82,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.42,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.35,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.42,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.05039999999999999
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.27999999999999997,
+          "visits": 3,
+          "search_value": 0.38003999999999993,
+          "conditional_p_yes": 0.85,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.19599999999999998,
+          "visits": 1,
+          "search_value": 0.405,
+          "conditional_p_yes": 0.9,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.1372,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.9,
+          "frontier": true,
+          "contribution": 0.12347999999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.05879999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.85,
+          "frontier": true,
+          "contribution": 0.04997999999999999
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.08399999999999999,
+          "visits": 1,
+          "search_value": 0.3301199999999999,
+          "conditional_p_yes": 0.85,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.05879999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.9,
+          "frontier": true,
+          "contribution": 0.052919999999999995
+        },
+        {
+          "path": [
+            2,
+            2,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.025199999999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.93,
+          "frontier": true,
+          "contribution": 0.023436
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "5fae6453-0941-4ca0-b1d2-9c325e76a642",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:46:01.585283+00:00",
+      "contract_id": "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "24ea9064e3292a4342fcd7e805918b9395331d343c47dd7986c5269edbf3aa2f",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 197.87
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0xca394e0db041f91ac2d69f3ea06efdfc8643acb0d2751283bd594e7b8bd581f9",
+  "group_id": "israel-x-iran-ceasefire-continues-throughptptpt-20260716224448963",
+  "stage": "finished",
+  "outcome_deadline": "2026-11-15T20:29:00+00:00",
+  "deadline_basis": "explicit_contract_deadline",
+  "nominal_market_end": "2026-11-16T04:59:00+00:00",
+  "evidence_sha256": "24ea9064e3292a4342fcd7e805918b9395331d343c47dd7986c5269edbf3aa2f",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 1235,
+    "input_tokens": 1096,
+    "output_tokens": 139,
+    "accounted_tokens_upper": 1235,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-15"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-15"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-11",
+        "2026-11-13",
+        "2026-11-15"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-11",
+        "2026-11-13",
+        "2026-11-15"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-11",
+        "2026-11-13",
+        "2026-11-15"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_6a053b662ae651e8",
+          "name": "Israel",
+          "role": "Can choose to launch a qualifying strike on Iranian territory, breaking the ceasefire.",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        },
+        {
+          "seat_id": "seat_1f48db9f0d552842",
+          "name": "Iran",
+          "role": "Can choose to launch a qualifying strike on Israeli territory, breaking the ceasefire.",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Current authority for Israel decides whether to initiate a qualifying air strike or surface-to-surface missile strike that directly impacts Iranian terrestrial territory before 15 Nov 2026 11:59 PM IRST. requires independent evidence; Israel can participate conditionally.",
+        "Current authority for Iran decides whether to initiate a qualifying air strike or surface-to-surface missile strike that directly impacts Israeli terrestrial territory before 15 Nov 2026 11:59 PM IRST. requires independent evidence; Iran can participate conditionally."
+      ],
+      "gaps": [],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Israel decides whether to initiate a qualifying air strike or surface-to-surface missile strike that directly impacts Iranian terrestrial territory before 15 Nov 2026 11:59 PM IRST.",
+          "owner": "Israel",
+          "support": "conditional"
+        },
+        {
+          "id": "D2",
+          "choice": "Iran decides whether to initiate a qualifying air strike or surface-to-surface missile strike that directly impacts Israeli terrestrial territory before 15 Nov 2026 11:59 PM IRST.",
+          "owner": "Iran",
+          "support": "conditional"
+        }
+      ],
+      "gap_repair": {
+        "status": "participants_added",
+        "added": 2
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 26,
+    "tokens": 80356,
+    "input_tokens": 66503,
+    "output_tokens": 13853,
+    "accounted_tokens_upper": 80356,
+    "unknown_usage_requests": 0
+  }
+}

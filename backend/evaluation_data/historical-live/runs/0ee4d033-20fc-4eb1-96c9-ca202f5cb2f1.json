@@ -1,0 +1,2488 @@
+{
+  "run_id": "0ee4d033-20fc-4eb1-96c9-ca202f5cb2f1",
+  "case_id": "market_49df55099fe4aa5cbf0f1cf1",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2932,
+      "input_tokens": 2922,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2932,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2922,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:24:58.451754+00:00",
+      "contract_id": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
+      "forecast_cutoff": "2026-02-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f959e6c76f456c74ee65f7739d2875fe49435553e895492dac3c57dffdd1c0b5",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.886
+    },
+    {
+      "calls": 2,
+      "tokens": 5864,
+      "input_tokens": 5844,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5864,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2922,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2922,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:25:00.095265+00:00",
+      "contract_id": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
+      "forecast_cutoff": "2026-02-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f959e6c76f456c74ee65f7739d2875fe49435553e895492dac3c57dffdd1c0b5",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.642
+    },
+    {
+      "calls": 7,
+      "tokens": 76564,
+      "input_tokens": 73767,
+      "output_tokens": 2797,
+      "accounted_tokens_upper": 76564,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-02-10",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 325,
+                "interval_days": 325,
+                "interval_start_utc": "2026-02-10T23:59:59+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm that the administration will not settle V.O.S. Selections/Learning Resources and will press for a Supreme Court merits ruling reversing the Federal Circuit's IEEPA holding; state that if IEEPA is struck down, tariffs will continue via Section 232/301 after Commerce assessments.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "The Court accepted the consolidated IEEPA tariff case on September 9, 2025 and scheduled argument for November 5, 2025, so a merits ruling is on track within the window. No post-argument decision or vote count is in evidence, leaving the merits outcome genuinely uncertain; the Federal Circuit's major-questions reasoning cuts against the government.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.3
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.55,
+      "covered_p_yes": 0.55,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.55,
+        0.55
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "7b28b1f5-08e5-4fcf-8c5f-073d24acd061",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:25:41.632893+00:00",
+      "contract_id": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
+      "forecast_cutoff": "2026-02-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f959e6c76f456c74ee65f7739d2875fe49435553e895492dac3c57dffdd1c0b5",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 41.535
+    },
+    {
+      "calls": 57,
+      "tokens": 575626,
+      "input_tokens": 551957,
+      "output_tokens": 23669,
+      "accounted_tokens_upper": 575626,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-02-10",
+                "interval_end": "2026-03-22",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 40,
+                "interval_days": 40,
+                "interval_start_utc": "2026-02-10T23:59:59+00:00",
+                "interval_end_utc": "2026-03-22T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Trump administration directed the Commerce Department to begin preparatory assessments under Section 232 and Section 301 so alternative statutory tariff measures could be applied promptly if the Supreme Court affirms the Federal Circuit, with implementation only after an adverse ruling.",
+                  "date": "2026-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm that the administration will not settle or withdraw Trump v. V.O.S. Selections, is pressing for a prompt Supreme Court merits ruling reversing the Federal Circuit, and, if IEEPA is struck down, will pursue Section 232/301 alternatives through Commerce assessments.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted review and heard argument on the IEEPA tariff question, so a merits ruling is likely within the window. Lower courts uniformly found the tariffs unauthorized, but the conservative majority's non-delegation and major-questions leanings make reversal plausible; no settled ruling yet.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-03-22",
+                "interval_end": "2026-05-02",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 81,
+                "interval_days": 41,
+                "interval_start_utc": "2026-03-22T00:00:00+00:00",
+                "interval_end_utc": "2026-05-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted review and heard argument on the IEEPA tariff question, so a merits ruling is likely within the window. Lower courts uniformly found the tariffs unauthorized, but the conservative majority's non-delegation and major-questions leanings make reversal plausible; no settled ruling yet.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-05-02",
+                "interval_end": "2026-06-11",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 121,
+                "interval_days": 40,
+                "interval_start_utc": "2026-05-02T00:00:00+00:00",
+                "interval_end_utc": "2026-06-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted review and heard argument on the IEEPA tariff question, so a merits ruling is likely within the window. Lower courts uniformly found the tariffs unauthorized, but the conservative majority's non-delegation and major-questions leanings make reversal plausible; no settled ruling yet.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-06-11",
+                "interval_end": "2026-07-22",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 162,
+                "interval_days": 41,
+                "interval_start_utc": "2026-06-11T00:00:00+00:00",
+                "interval_end_utc": "2026-07-22T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm that the administration will not settle the IEEPA case and is pressing for a Supreme Court merits ruling, while noting Section 232/301 alternatives are prepared only if the Court rules against the tariffs.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted review and heard argument on the IEEPA tariff question, so a merits ruling is likely within the window. Lower courts uniformly found the tariffs unauthorized, but the conservative majority's non-delegation and major-questions leanings make reversal plausible; no settled ruling yet.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-07-22",
+                "interval_end": "2026-09-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 203,
+                "interval_days": 41,
+                "interval_start_utc": "2026-07-22T00:00:00+00:00",
+                "interval_end_utc": "2026-09-01T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted review and heard argument on the IEEPA tariff question, so a merits ruling is likely within the window. Lower courts uniformly found the tariffs unauthorized, but the conservative majority's non-delegation and major-questions leanings make reversal plausible; no settled ruling yet.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-09-01",
+                "interval_end": "2026-10-11",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 243,
+                "interval_days": 40,
+                "interval_start_utc": "2026-09-01T00:00:00+00:00",
+                "interval_end_utc": "2026-10-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted review and heard argument on the IEEPA tariff question, so a merits ruling is likely within the window. Lower courts uniformly found the tariffs unauthorized, but the conservative majority's non-delegation and major-questions leanings make reversal plausible; no settled ruling yet.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-10-11",
+                "interval_end": "2026-11-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 284,
+                "interval_days": 41,
+                "interval_start_utc": "2026-10-11T00:00:00+00:00",
+                "interval_end_utc": "2026-11-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm that the administration will not settle the IEEPA case and will pursue Section 232/301 tariffs if the Supreme Court rules against it, contingent on an adverse ruling.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted review and heard argument on the IEEPA tariff question, so a merits ruling is likely within the window. Lower courts uniformly found the tariffs unauthorized, but the conservative majority's non-delegation and major-questions leanings make reversal plausible; no settled ruling yet.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 325,
+                "interval_days": 41,
+                "interval_start_utc": "2026-11-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court accepted the consolidated IEEPA tariff case and scheduled argument for November 5, 2025, so a merits ruling is likely within the window. The only simulated development is contingency planning for alternative tariffs if the government loses, which signals risk awareness rather than a ruling; no decision or vote count is observed.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.147
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-02-10",
+                "interval_end": "2026-03-22",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 40,
+                "interval_days": 40,
+                "interval_start_utc": "2026-02-10T23:59:59+00:00",
+                "interval_end_utc": "2026-03-22T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                  "action": "Take no new outward step this round: keep pressing the pending consolidated Supreme Court case for a merits reversal of the Federal Circuit's IEEPA holding, and decline to settle or withdraw. No new filing, statement or concession is issued in this round.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no new outward step this round: keep pressing the pending consolidated Supreme Court case for a merits reversal of the Federal Circuit's IEEPA holding, and decline to settle or withdraw. No new filing, statement or concession is issued in this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement reaffirming that the administration will not settle the IEEPA tariff case and expects the Supreme Court to uphold the tariffs, while announcing that Section 232/301 contingency work is underway at Commerce in case IEEPA is struck down.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted expedited review and heard oral argument on November 5, 2025, so a merits ruling is likely within the window. However, the en banc Federal Circuit's major-questions reasoning and the conservative justices' prior skepticism of broad delegations make reversal uncertain; no post-argument ruling is in evidence.",
+                "evidence_quote": "The case was later scheduled to be heard November 5, 2025. Ahead of the oral hearings, analysts said this case was one of the first major tests at the Supreme Court on the limits of Trump's claims of executive power during his second term",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-03-22",
+                "interval_end": "2026-05-02",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 81,
+                "interval_days": 41,
+                "interval_start_utc": "2026-03-22T00:00:00+00:00",
+                "interval_end_utc": "2026-05-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted expedited review and heard oral argument on November 5, 2025, so a merits ruling is likely within the window. However, the en banc Federal Circuit's major-questions reasoning and the conservative justices' prior skepticism of broad delegations make reversal uncertain; no post-argument ruling is in evidence.",
+                "evidence_quote": "The case was later scheduled to be heard November 5, 2025. Ahead of the oral hearings, analysts said this case was one of the first major tests at the Supreme Court on the limits of Trump's claims of executive power during his second term",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-05-02",
+                "interval_end": "2026-06-11",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 121,
+                "interval_days": 40,
+                "interval_start_utc": "2026-05-02T00:00:00+00:00",
+                "interval_end_utc": "2026-06-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted expedited review and heard oral argument on November 5, 2025, so a merits ruling is likely within the window. However, the en banc Federal Circuit's major-questions reasoning and the conservative justices' prior skepticism of broad delegations make reversal uncertain; no post-argument ruling is in evidence.",
+                "evidence_quote": "The case was later scheduled to be heard November 5, 2025. Ahead of the oral hearings, analysts said this case was one of the first major tests at the Supreme Court on the limits of Trump's claims of executive power during his second term",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-06-11",
+                "interval_end": "2026-07-22",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 162,
+                "interval_days": 41,
+                "interval_start_utc": "2026-06-11T00:00:00+00:00",
+                "interval_end_utc": "2026-07-22T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                  "action": "Take no new outward step this round: continue pressing the pending consolidated Supreme Court case for a merits reversal of the Federal Circuit's IEEPA holding, and decline to settle or withdraw. No new filing, statement or concession is issued in this round.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no new outward step this round: continue pressing the pending consolidated Supreme Court case for a merits reversal of the Federal Circuit's IEEPA holding, and decline to settle or withdraw. No new filing, statement or concession is issued in this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement reaffirming the IEEPA tariffs are lawful and that the administration will not settle the consolidated case, while preparing Section 232/301 fallback tariffs contingent on a Supreme Court loss.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted expedited review and heard oral argument on November 5, 2025, so a merits ruling is likely within the window. However, the en banc Federal Circuit's major-questions reasoning and the conservative justices' prior skepticism of broad delegations make reversal uncertain; no post-argument ruling is in evidence.",
+                "evidence_quote": "The case was later scheduled to be heard November 5, 2025. Ahead of the oral hearings, analysts said this case was one of the first major tests at the Supreme Court on the limits of Trump's claims of executive power during his second term",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-07-22",
+                "interval_end": "2026-09-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 203,
+                "interval_days": 41,
+                "interval_start_utc": "2026-07-22T00:00:00+00:00",
+                "interval_end_utc": "2026-09-01T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted expedited review and heard oral argument on November 5, 2025, so a merits ruling is likely within the window. However, the en banc Federal Circuit's major-questions reasoning and the conservative justices' prior skepticism of broad delegations make reversal uncertain; no post-argument ruling is in evidence.",
+                "evidence_quote": "The case was later scheduled to be heard November 5, 2025. Ahead of the oral hearings, analysts said this case was one of the first major tests at the Supreme Court on the limits of Trump's claims of executive power during his second term",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-09-01",
+                "interval_end": "2026-10-11",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 243,
+                "interval_days": 40,
+                "interval_start_utc": "2026-09-01T00:00:00+00:00",
+                "interval_end_utc": "2026-10-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted expedited review and heard oral argument on November 5, 2025, so a merits ruling is likely within the window. However, the en banc Federal Circuit's major-questions reasoning and the conservative justices' prior skepticism of broad delegations make reversal uncertain; no post-argument ruling is in evidence.",
+                "evidence_quote": "The case was later scheduled to be heard November 5, 2025. Ahead of the oral hearings, analysts said this case was one of the first major tests at the Supreme Court on the limits of Trump's claims of executive power during his second term",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-10-11",
+                "interval_end": "2026-11-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 284,
+                "interval_days": 41,
+                "interval_start_utc": "2026-10-11T00:00:00+00:00",
+                "interval_end_utc": "2026-11-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "status": "executed",
+                  "summary": "The Trump administration publicly reaffirmed that it will not settle or withdraw the consolidated IEEPA tariff case and that it expects the Supreme Court to issue a merits ruling, while restating that Section 232 and Section 301 authorities would be used only after a Commerce Department assessment if IEEPA is struck down."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "publicly reaffirmed that it will not settle or withdraw the consolidated IEEPA tariff case and that it expects the Supreme Court to issue a merits ruling",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_007_001",
+                  "text": "The Trump administration publicly reaffirmed that it will not settle or withdraw the consolidated IEEPA tariff case and that it expects the Supreme Court to issue a merits ruling, while restating that Section 232 and Section 301 authorities would be used only after a Commerce Department assessment if IEEPA is struck down.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                  "action": "Publicly reaffirm that the administration will not settle or withdraw the IEEPA case and expects a merits ruling, while restating the contingency of using Section 232/301 authorities after Commerce assessment if IEEPA is struck down.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no new outward step this round: keep pressing the pending consolidated Supreme Court case for a merits reversal of the Federal Circuit's IEEPA holding and decline to settle or withdraw. No new filing, statement or concession is issued this round.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm that the administration will not settle or withdraw the IEEPA case and expects a merits ruling, while restating the contingency of using Section 232/301 authorities after Commerce assessment if IEEPA is struck down.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court accepted the consolidated IEEPA tariff case and scheduled argument, but no merits ruling appears in the evidence. The administration's stated intent not to settle keeps the case live, yet it does not establish that the Court will reverse the Federal Circuit.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 325,
+                "interval_days": 41,
+                "interval_start_utc": "2026-11-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "The Court accepted the consolidated IEEPA tariff case and scheduled argument for November 5, 2025, so a merits ruling is on track within the window. The administration's stated refusal to settle removes the main No path, but no decision has been observed, leaving the merits outcome genuinely uncertain.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.14699999999999996
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 16,
+        "active_rounds": 6,
+        "draw_rounds": 6,
+        "audited_silent_rounds": 10,
+        "sampled_decisions": 6,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 3,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 3,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.485,
+      "covered_p_yes": 0.485,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.485,
+        0.4849999999999999
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "5077b372-47ae-4309-8a4f-332c59f0bc1b",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:27:09.153794+00:00",
+      "contract_id": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
+      "forecast_cutoff": "2026-02-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f959e6c76f456c74ee65f7739d2875fe49435553e895492dac3c57dffdd1c0b5",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 87.517
+    },
+    {
+      "calls": 31,
+      "tokens": 317446,
+      "input_tokens": 303941,
+      "output_tokens": 13505,
+      "accounted_tokens_upper": 317446,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-02-10",
+                "interval_end": "2026-03-22",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 40,
+                "interval_days": 40,
+                "interval_start_utc": "2026-02-10T23:59:59+00:00",
+                "interval_end_utc": "2026-03-22T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "directed the Commerce Department to begin preparatory assessments for Section 232 and Section 301 tariff actions",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Trump administration directed the Commerce Department to begin preparatory assessments for Section 232 and Section 301 tariff actions covering imports currently subject to IEEPA tariffs, so replacement measures could be applied promptly if the Supreme Court rejects IEEPA authority.",
+                  "date": "2026-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm that the administration will not settle the consolidated IEEPA tariff case and will press for a Supreme Court merits ruling reversing the Federal Circuit, while stating that if IEEPA is struck down the administration will pursue Section 232 and Section 301 tariff authorities after required Commerce Department assessments.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted review and heard argument on November 5, 2025, so a merits ruling is likely within the window. The Federal Circuit's en banc IEEPA holding and major-questions reasoning cut against reversal, though the conservative majority's non-delegation leanings and the administration's contingency planning keep reversal plausible.",
+                "evidence_quote": "The case was later scheduled to be heard November 5, 2025. Ahead of the oral hearings, analysts said this case was one of the first major tests at the Supreme Court on the limits of Trump's claims of executive power during his second term",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-03-22",
+                "interval_end": "2026-05-02",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 81,
+                "interval_days": 41,
+                "interval_start_utc": "2026-03-22T00:00:00+00:00",
+                "interval_end_utc": "2026-05-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted review and heard argument on November 5, 2025, so a merits ruling is likely within the window. The Federal Circuit's en banc IEEPA holding and major-questions reasoning cut against reversal, though the conservative majority's non-delegation leanings and the administration's contingency planning keep reversal plausible.",
+                "evidence_quote": "The case was later scheduled to be heard November 5, 2025. Ahead of the oral hearings, analysts said this case was one of the first major tests at the Supreme Court on the limits of Trump's claims of executive power during his second term",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-05-02",
+                "interval_end": "2026-06-11",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 121,
+                "interval_days": 40,
+                "interval_start_utc": "2026-05-02T00:00:00+00:00",
+                "interval_end_utc": "2026-06-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court granted review and heard argument on November 5, 2025, so a merits ruling is likely within the window. The Federal Circuit's en banc IEEPA holding and major-questions reasoning cut against reversal, though the conservative majority's non-delegation leanings and the administration's contingency planning keep reversal plausible.",
+                "evidence_quote": "The case was later scheduled to be heard November 5, 2025. Ahead of the oral hearings, analysts said this case was one of the first major tests at the Supreme Court on the limits of Trump's claims of executive power during his second term",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-06-11",
+                "interval_end": "2026-07-22",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 162,
+                "interval_days": 41,
+                "interval_start_utc": "2026-06-11T00:00:00+00:00",
+                "interval_end_utc": "2026-07-22T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "status": "executed",
+                  "summary": "The Trump administration publicly reaffirmed that it will not settle the IEEPA tariff case and is pressing the Supreme Court for a merits ruling that the tariffs are authorized, while noting that Section 232 and Section 301 contingency preparations continue."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "pressing the Supreme Court for a merits ruling that the tariffs are authorized",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "The Trump administration publicly reaffirmed that it will not settle the IEEPA tariff case and is pressing the Supreme Court for a merits ruling that the tariffs are authorized, while noting that Section 232 and Section 301 contingency preparations continue.",
+                  "date": "2026-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                  "action": "Publicly reaffirm the administration will not settle the IEEPA tariff case and is pressing the Supreme Court for a merits ruling that the tariffs are authorized, while noting Section 232/301 contingency preparations continue.\n承诺：No settlement; pursue merits reversal of the Federal Circuit's IEEPA holding.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm the administration will not settle the IEEPA tariff case and is pressing the Supreme Court for a merits ruling that the tariffs are authorized, while noting Section 232/301 contingency preparations continue.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court accepted the consolidated IEEPA tariff case and heard argument in November 2025, so a merits ruling is likely within the window. Lower courts uniformly held the tariffs unauthorized, and the major-questions framing makes reversal uncertain; the administration's stated refusal to settle keeps a merits path open but does not establish the outcome.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-07-22",
+                "interval_end": "2026-09-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 203,
+                "interval_days": 41,
+                "interval_start_utc": "2026-07-22T00:00:00+00:00",
+                "interval_end_utc": "2026-09-01T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court accepted the consolidated IEEPA tariff case and heard argument in November 2025, so a merits ruling is likely within the window. Lower courts uniformly held the tariffs unauthorized, and the major-questions framing makes reversal uncertain; the administration's stated refusal to settle keeps a merits path open but does not establish the outcome.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-09-01",
+                "interval_end": "2026-10-11",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 243,
+                "interval_days": 40,
+                "interval_start_utc": "2026-09-01T00:00:00+00:00",
+                "interval_end_utc": "2026-10-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court accepted the consolidated IEEPA tariff case and heard argument in November 2025, so a merits ruling is likely within the window. Lower courts uniformly held the tariffs unauthorized, and the major-questions framing makes reversal uncertain; the administration's stated refusal to settle keeps a merits path open but does not establish the outcome.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-10-11",
+                "interval_end": "2026-11-21",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 284,
+                "interval_days": 41,
+                "interval_start_utc": "2026-10-11T00:00:00+00:00",
+                "interval_end_utc": "2026-11-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reiterate that the administration will not settle the IEEPA case and expects the Supreme Court to uphold the tariffs on the merits, and state that Section 232/301 replacement measures will be ready if the Court rules otherwise.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court accepted the consolidated IEEPA tariff case and heard argument in November 2025, so a merits ruling is likely within the window. Lower courts uniformly held the tariffs unauthorized, and the major-questions framing makes reversal uncertain; the administration's stated refusal to settle keeps a merits path open but does not establish the outcome.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-21",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 325,
+                "interval_days": 41,
+                "interval_start_utc": "2026-11-21T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court took the case and heard argument November 5, 2025, but no merits ruling appears in the settled record by the horizon. The administration's reaffirmed refusal to settle and contingency planning show intent, not a decision; the merits outcome remains unobserved.",
+                "evidence_quote": "The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.126
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 5,
+        "sampled_decisions": 3,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 1,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 5,
+            "sampled_decisions": 3,
+            "active_actor_count": 1,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.42,
+      "covered_p_yes": 0.42,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.42,
+        0.41999999999999993
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "ff2de1be-3a18-4f7f-85e2-f5aef2dd76ac",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T00:52:55.081963+00:00",
+      "contract_id": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
+      "forecast_cutoff": "2026-02-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f959e6c76f456c74ee65f7739d2875fe49435553e895492dac3c57dffdd1c0b5",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 105.364
+    },
+    {
+      "calls": 11,
+      "tokens": 111473,
+      "input_tokens": 106371,
+      "output_tokens": 5102,
+      "accounted_tokens_upper": 111473,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-02-10",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 325,
+                "interval_days": 325,
+                "interval_start_utc": "2026-02-10T23:59:59+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "status": "executed",
+                  "summary": "The Trump administration directed the Commerce Department to complete the assessments needed to reimpose tariffs under Section 232 and Section 301, so replacement measures could issue promptly if the Supreme Court strikes down the IEEPA tariffs."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "so replacement measures could issue promptly if the Supreme Court strikes down the IEEPA tariffs",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Trump administration directed the Commerce Department to complete the assessments needed to reimpose tariffs under Section 232 and Section 301, so replacement measures could issue promptly if the Supreme Court strikes down the IEEPA tariffs.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                  "action": "Direct the Commerce Department to complete assessments needed to reimpose tariffs under Section 232 and Section 301 so replacement measures can issue promptly if the Supreme Court strikes down the IEEPA tariffs.\n承诺：Alternative statutory tariffs ready to apply upon an adverse IEEPA ruling.\n触发或复核条件：Only after Commerce Department assessments are completed.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm that the administration will not settle the consolidated IEEPA tariff case and will press for a Supreme Court merits ruling reversing the Federal Circuit, while continuing to prepare Section 232/301 contingency measures pending Commerce assessments.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Direct the Commerce Department to complete assessments needed to reimpose tariffs under Section 232 and Section 301 so replacement measures can issue promptly if the Supreme Court strikes down the IEEPA tariffs.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The Court accepted the consolidated IEEPA tariff case and scheduled argument for November 5, 2025, so a merits ruling is likely within the window. The only simulated development is contingency planning for replacement tariffs, which signals expectation of possible loss rather than a decision; no ruling or vote count is observed.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.3
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-02-10",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 325,
+                "interval_days": 325,
+                "interval_start_utc": "2026-02-10T23:59:59+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "status": "executed",
+                  "summary": "Trump administration publicly reaffirmed that it is pressing the consolidated IEEPA case to a Supreme Court merits ruling and will not settle or withdraw it, and stated that if the Court strikes down the IEEPA tariffs it will pursue Section 232 and Section 301 alternatives after required Commerce assessments."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Supreme Court rules in favor of Trump's tariffs?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Trump administration publicly reaffirmed that it is pressing the consolidated IEEPA case to a Supreme Court merits ruling and will not settle or withdraw it",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Trump administration publicly reaffirmed that it is pressing the consolidated IEEPA case to a Supreme Court merits ruling and will not settle or withdraw it, and stated that if the Court strikes down the IEEPA tariffs it will pursue Section 232 and Section 301 alternatives after required Commerce assessments.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_9035d2c64d4b5d6a",
+                  "actor_name": "Trump administration",
+                  "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                  "action": "Publicly reaffirm that the administration is pressing the consolidated IEEPA case to a Supreme Court merits ruling and will not settle or withdraw it; state that if the Court strikes down the IEEPA tariffs, the administration will pursue Section 232 and Section 301 alternatives after required Commerce assessments.\n承诺：No settlement; pursue merits reversal and, if unsuccessful, alternative statutory tariff authorities.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm that the administration is pressing the consolidated IEEPA case to a Supreme Court merits ruling and will not settle or withdraw it; state that if the Court strikes down the IEEPA tariffs, the administration will pursue Section 232 and Section 301 alternatives after required Commerce assessments.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_9035d2c64d4b5d6a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Direct the Commerce Department to begin assessments needed for Section 232 and Section 301 tariff actions so alternatives are ready if the Supreme Court affirms the Federal Circuit, while continuing to litigate the IEEPA case.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "The case is fully briefed and argued, with the administration committed to a merits ruling and no settlement. The Federal Circuit's en banc IEEPA holding and major-questions reasoning cut against reversal, but the Court's conservative majority and emergency-docket deference leave genuine uncertainty; no merits outcome is yet observed.",
+                "evidence_quote": "The Court accepted the case on September 9, 2025, consolidating it with the pending petition from Learning Resources. The case was later scheduled to be heard November 5, 2025.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.7
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 1,
+        "condition_change_count": 2,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.42,
+      "covered_p_yes": 0.42,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.42,
+        0.41999999999999993
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "b975295c-ed48-433d-99a2-26c2705a7690",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T00:53:15.987098+00:00",
+      "contract_id": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
+      "forecast_cutoff": "2026-02-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f959e6c76f456c74ee65f7739d2875fe49435553e895492dac3c57dffdd1c0b5",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 20.903
+    },
+    {
+      "calls": 89,
+      "tokens": 895316,
+      "input_tokens": 851805,
+      "output_tokens": 43511,
+      "accounted_tokens_upper": 895316,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.30264,
+      "coverage": 0.964,
+      "unexplored_mass": 0.03600000000000003,
+      "unknown_bounds": [
+        0.28464,
+        0.32064000000000004
+      ],
+      "search_iterations": 16,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 16,
+          "search_value": 0.8740299999999999,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.6,
+          "visits": 7,
+          "search_value": 0.81288,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.6,
+          "visits": 6,
+          "search_value": 0.7859600000000001,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.6,
+          "visits": 5,
+          "search_value": 0.8058720000000001,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.36,
+          "visits": 4,
+          "search_value": 0.83574,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.36,
+          "visits": 3,
+          "search_value": 0.8343200000000001,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.36,
+          "visits": 2,
+          "search_value": 0.7642800000000001,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.252,
+          "visits": 1,
+          "search_value": 0.8064,
+          "conditional_p_yes": 0.28,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.252,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.28,
+          "frontier": true,
+          "contribution": 0.07056000000000001
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.072,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.27,
+          "frontier": true,
+          "contribution": 0.01944
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 7,
+          "mass": 0.03600000000000003,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.24,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.22,
+          "frontier": true,
+          "contribution": 0.0528
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.4,
+          "visits": 8,
+          "search_value": 0.9488300000000001,
+          "conditional_p_yes": 0.24,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.4,
+          "visits": 7,
+          "search_value": 0.9451771428571429,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.4,
+          "visits": 6,
+          "search_value": 0.9403066666666667,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.27999999999999997,
+          "visits": 5,
+          "search_value": 0.9603680000000001,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.27999999999999997,
+          "visits": 4,
+          "search_value": 0.95686,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.27999999999999997,
+          "visits": 3,
+          "search_value": 0.9510133333333334,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.16799999999999998,
+          "visits": 1,
+          "search_value": 0.9099999999999999,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.16799999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.35,
+          "frontier": true,
+          "contribution": 0.05879999999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.11199999999999999,
+          "visits": 1,
+          "search_value": 0.9744,
+          "conditional_p_yes": 0.4,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.11199999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.42,
+          "frontier": true,
+          "contribution": 0.04703999999999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.12,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.3,
+          "frontier": true,
+          "contribution": 0.036
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "422554bd-0d27-4f0a-be5c-096dee73ddc4",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T00:58:36.838698+00:00",
+      "contract_id": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
+      "forecast_cutoff": "2026-02-10T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "f959e6c76f456c74ee65f7739d2875fe49435553e895492dac3c57dffdd1c0b5",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 320.846
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-02-10T23:59:59+00:00",
+  "forecast_key": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
+  "group_id": "will-the-supreme-court-rule-in-favor-of-trumps-tariffs",
+  "evidence_sha256": "f959e6c76f456c74ee65f7739d2875fe49435553e895492dac3c57dffdd1c0b5",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 991,
+    "input_tokens": 806,
+    "output_tokens": 185,
+    "accounted_tokens_upper": 991,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-02-10",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-02-10",
+        "2026-03-22",
+        "2026-05-02",
+        "2026-06-11",
+        "2026-07-22",
+        "2026-09-01",
+        "2026-10-11",
+        "2026-11-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-02-10",
+        "2026-03-22",
+        "2026-05-02",
+        "2026-06-11",
+        "2026-07-22",
+        "2026-09-01",
+        "2026-10-11",
+        "2026-11-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-02-10",
+        "2027-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-02-10",
+        "2026-03-22",
+        "2026-05-02",
+        "2026-06-11",
+        "2026-07-22",
+        "2026-09-01",
+        "2026-10-11",
+        "2026-11-21",
+        "2027-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2026-12-31T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_edd60b42dbcd85f1",
+          "name": "Trump administration",
+          "role": "Executive branch that imposed the IEEPA tariffs and petitioned for Supreme Court review; may settle or pursue alternative tariff authorities.",
+          "decision_ids": [
+            "admin_petition_review",
+            "admin_settlement_choice"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Supreme Court issues a merits decision reversing, vacating, or overturning the Federal Circuit's holding that the IEEPA tariffs are unauthorized."
+      ],
+      "gaps": [
+        "No named individual justices or administration officials are identified in the sources; seats are assigned to institutional actors.",
+        "The Supreme Court's actual vote and opinion are unknown as of the cutoff.",
+        "No frozen source identifies Supreme Court of the United States; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "scotus_merits_decision",
+          "choice": "Supreme Court issues a merits decision reversing, vacating, or overturning the Federal Circuit's holding that the IEEPA tariffs are unauthorized.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "admin_petition_review",
+          "choice": "Trump administration requests and maintains Supreme Court review rather than withdrawing or settling the case.",
+          "owner": "Trump administration",
+          "support": "represented"
+        },
+        {
+          "id": "admin_settlement_choice",
+          "choice": "Trump administration chooses not to settle the case, which would resolve the market to No.",
+          "owner": "Trump administration",
+          "support": "represented"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 11,
+    "tokens": 33310,
+    "input_tokens": 28285,
+    "output_tokens": 5025,
+    "accounted_tokens_upper": 33310,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

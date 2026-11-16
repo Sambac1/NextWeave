@@ -1,0 +1,1918 @@
+{
+  "run_id": "b647125f-3f92-4885-8d80-682397c0d70d",
+  "case_id": "market_38dfd90806fbf05f33b4eb71",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2809,
+      "input_tokens": 2799,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2809,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.97,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.97,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2799,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:30:31.490349+00:00",
+      "contract_id": "0x37e6c1227c1ee562cbd906099dadbd658ddca8cdb9730736857b4d82701c6393",
+      "forecast_cutoff": "2025-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "57dbbe0bd7b4703ae4a591d4245025a2b76758e0fc2bb9ac7c8b5ce7b753000e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.898
+    },
+    {
+      "calls": 2,
+      "tokens": 5618,
+      "input_tokens": 5598,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5618,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.97,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.97,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2799,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.97,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2799,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:30:32.520031+00:00",
+      "contract_id": "0x37e6c1227c1ee562cbd906099dadbd658ddca8cdb9730736857b4d82701c6393",
+      "forecast_cutoff": "2025-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "57dbbe0bd7b4703ae4a591d4245025a2b76758e0fc2bb9ac7c8b5ce7b753000e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.029
+    },
+    {
+      "calls": 11,
+      "tokens": 127530,
+      "input_tokens": 121828,
+      "output_tokens": 5702,
+      "accounted_tokens_upper": 127530,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-05-01",
+                "interval_end": "2025-05-06",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2025-05-01T23:59:59+00:00",
+                "interval_end_utc": "2025-05-06T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "status": "executed",
+                  "summary": "Friedrich Merz publicly reaffirmed that he will stand for election as Chancellor in the Bundestag on 6 May 2025 as agreed, stating that the CDU/CSU-SPD grand coalition stands ready to govern and calling on all Bundestag members to support the agreed program in the vote."
+                },
+                {
+                  "action_id": "action_1_agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "status": "partial",
+                  "summary": "Bundestag proceeded with the confirmed 6 May 2025 session to hold the chancellor election, conducting the vote as scheduled under its parliamentary procedure; no vote result was yet announced through official channels."
+                },
+                {
+                  "action_id": "action_1_agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_fa0516bfad065e68",
+                    "action_1_agent_47e2bebf0fcd5506"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Bundestag proceeded with the confirmed 6 May 2025 session to hold the chancellor election"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_f1ab81f7abfc55cf",
+                    "action_1_agent_47e2bebf0fcd5506"
+                  ],
+                  "outcome": "pending",
+                  "effect": "conducting the vote as scheduled under its parliamentary procedure"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Bundestag proceeded with the confirmed 6 May 2025 session to hold the chancellor election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Friedrich Merz publicly reaffirmed that he will stand for election as Chancellor in the Bundestag on 6 May 2025 as agreed, stating that the CDU/CSU-SPD grand coalition stands ready to govern and calling on all Bundestag members to support the agreed program in the vote.",
+                  "date": "2025-05-02"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Bundestag proceeded with the confirmed 6 May 2025 session to hold the chancellor election, conducting the vote as scheduled under its parliamentary procedure; no vote result was yet announced through official channels.",
+                  "date": "2025-05-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                  "action": "As chancellor-designate, publicly reaffirm the agreed 6 May Bundestag election date and state that the CDU/CSU-SPD grand coalition stands ready to govern, calling on all Bundestag members to support the agreed program in the vote.\n承诺：I will stand for election as Chancellor in the Bundestag on 6 May 2025 as agreed.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As chancellor-designate, publicly reaffirm the agreed 6 May Bundestag election date and state that the CDU/CSU-SPD grand coalition stands ready to govern, calling on all Bundestag members to support the agreed program in the vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                  "action": "Bundestag proceeds with the confirmed 6 May 2025 session to hold the chancellor election, conducting the vote as scheduled under its parliamentary procedure and announcing the result through official channels.\n承诺：Hold the chancellor election vote on 6 May 2025 as confirmed on 14 April.\n触发或复核条件：The scheduled session and confirmed vote date stand.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Bundestag proceeds with the confirmed 6 May 2025 session to hold the chancellor election, conducting the vote as scheduled under its parliamentary procedure and announcing the result through official channels.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "candidate_id": "agent_f1ab81f7abfc55cf:initial:1",
+                  "action": "Take no new outward step: the coalition agreement is already announced and the 6 May Bundestag vote date confirmed; hold the negotiated agreement and monitor the scheduled vote for the chancellor election.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f1ab81f7abfc55cf:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no new outward step: the coalition agreement is already announced and the 6 May Bundestag vote date confirmed; hold the negotiated agreement and monitor the scheduled vote for the chancellor election.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_f1ab81f7abfc55cf:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a joint public statement reaffirming the CDU/CSU-SPD grand coalition agreement and urging all negotiators' parties to back Merz in the confirmed 6 May Bundestag vote.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.9,
+                "basis": "Merz is chancellor-designate: the CDU/CSU-SPD grand coalition agreement was reached, and the Bundestag held the confirmed 6 May 2025 chancellor election. No official vote result is yet reported, so the remaining uncertainty is the formal election outcome, not coalition formation.",
+                "evidence_quote": "With the CDU winning the most seats in the election, and the CDU/CSU having subsequently reached an agreement to form a coalition with the SPD, Merz is projected to become the next chancellor on 6 May 2025.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.9,
+          "error": null,
+          "action_path_probability": 0.5599999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.9,
+      "covered_p_yes": 0.9,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.9,
+        0.8999999999999999
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "6d9d2dff-8dc0-4fd2-b09d-eafb0c67b7e1",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:31:19.054180+00:00",
+      "contract_id": "0x37e6c1227c1ee562cbd906099dadbd658ddca8cdb9730736857b4d82701c6393",
+      "forecast_cutoff": "2025-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "57dbbe0bd7b4703ae4a591d4245025a2b76758e0fc2bb9ac7c8b5ce7b753000e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 46.532
+    },
+    {
+      "calls": 51,
+      "tokens": 585049,
+      "input_tokens": 561515,
+      "output_tokens": 23534,
+      "accounted_tokens_upper": 585049,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-01",
+                "interval_end": "2025-05-02",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2025-05-01T23:59:59+00:00",
+                "interval_end_utc": "2025-05-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "status": "executed",
+                  "summary": "Friedrich Merz publicly confirmed acceptance of the CDU-SPD grand coalition agreement and stated his readiness to stand for election as Chancellor in the Bundestag on 6 May 2025, urging all coalition members to support the vote."
+                },
+                {
+                  "action_id": "action_1_agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_fa0516bfad065e68",
+                    "action_1_agent_47e2bebf0fcd5506"
+                  ],
+                  "outcome": "pending",
+                  "effect": "stated his readiness to stand for election as Chancellor in the Bundestag on 6 May 2025"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "stated his readiness to stand for election as Chancellor in the Bundestag on 6 May 2025",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Friedrich Merz publicly confirmed acceptance of the CDU-SPD grand coalition agreement and stated his readiness to stand for election as Chancellor in the Bundestag on 6 May 2025, urging all coalition members to support the vote.",
+                  "date": "2025-05-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                  "action": "As CDU leader and chancellor-designate, publicly confirm acceptance of the CDU-SPD grand coalition agreement and state readiness to stand for election as Chancellor in the Bundestag on 6 May, urging all coalition members to support the vote.\n承诺：Stand for election as Chancellor on 6 May 2025 under the agreed grand coalition.\n触发或复核条件：Coalition parties maintain the agreed 6 May vote schedule.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As CDU leader and chancellor-designate, publicly confirm acceptance of the CDU-SPD grand coalition agreement and state readiness to stand for election as Chancellor in the Bundestag on 6 May, urging all coalition members to support the vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                  "action": "Take no new public action this round; the Bundestag's role is to hold the already-confirmed chancellor election vote on 6 May 2025, which falls outside this one-day interval.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no new public action this round; the Bundestag's role is to hold the already-confirmed chancellor election vote on 6 May 2025, which falls outside this one-day interval.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "candidate_id": "agent_f1ab81f7abfc55cf:initial:1",
+                  "action": "Hold the completed coalition agreement; no new negotiating act this round. Review after the confirmed 6 May 2025 Bundestag chancellor vote, which lies outside this role group's scope.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f1ab81f7abfc55cf:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Hold the completed coalition agreement; no new negotiating act this round. Review after the confirmed 6 May 2025 Bundestag chancellor vote, which lies outside this role group's scope.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_f1ab81f7abfc55cf:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a joint CDU/CSU-SPD negotiators' statement reaffirming the agreed grand coalition and the 6 May 2025 chancellor election date, committing both delegations to support the agreed timetable.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Merz is chancellor-designate with a signed CDU-SPD coalition agreement and a confirmed Bundestag vote set for 6 May 2025, before the 30 June deadline. He has publicly accepted the agreement and urged support, leaving only the formal parliamentary election as the remaining step.",
+                "evidence_quote": "On 11 April, it was agreed that Merz would be elected chancellor on 6 May. The 6 May date for the German parliament vote would then be confirmed on 14 April.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-02",
+                "interval_end": "2025-05-04",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 3,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-02T00:00:00+00:00",
+                "interval_end_utc": "2025-05-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                  "action": "Hold the 1 May public confirmation and readiness to stand on 6 May; make no new outward statement this round while the agreed vote schedule stands.\n触发或复核条件：Review if the 6 May vote schedule changes or coalition support wavers.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Hold the 1 May public confirmation and readiness to stand on 6 May; make no new outward statement this round while the agreed vote schedule stands.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_fa0516bfad065e68:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm that the grand coalition agreement stands and that I will stand for election as Chancellor on 6 May, calling on CDU/CSU and SPD members of the Bundestag to back the vote.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Merz is chancellor-designate with a signed CDU-SPD coalition agreement and a confirmed Bundestag vote set for 6 May 2025, before the 30 June deadline. He has publicly accepted the agreement and urged support, leaving only the formal parliamentary election as the remaining step.",
+                "evidence_quote": "On 11 April, it was agreed that Merz would be elected chancellor on 6 May. The 6 May date for the German parliament vote would then be confirmed on 14 April.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-04",
+                "interval_end": "2025-05-06",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 5,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-04T00:00:00+00:00",
+                "interval_end_utc": "2025-05-06T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.9,
+                "basis": "Merz confirmed readiness to stand for the 6 May 2025 Bundestag vote, and the CDU-SPD coalition agreement plus the confirmed 6 May date make election highly likely. The Bundestag vote itself is not yet observed, so residual uncertainty remains.",
+                "evidence_quote": "Friedrich Merz publicly confirmed acceptance of the CDU-SPD grand coalition agreement and stated his readiness to stand for election as Chancellor in the Bundestag on 6 May 2025, urging all coalition members to support the vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.9,
+          "error": null,
+          "action_path_probability": 0.39199999999999996
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-01",
+                "interval_end": "2025-05-02",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2025-05-01T23:59:59+00:00",
+                "interval_end_utc": "2025-05-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "status": "executed",
+                  "summary": "Friedrich Merz publicly confirmed his acceptance of the CDU/CSU–SPD grand coalition agreement and his readiness to stand for election as Chancellor in the Bundestag on 6 May, urging CDU/CSU and SPD members to support the grand coalition."
+                },
+                {
+                  "action_id": "action_1_agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "status": "unknown",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_fa0516bfad065e68",
+                    "action_1_agent_47e2bebf0fcd5506"
+                  ],
+                  "outcome": "pending",
+                  "effect": "his readiness to stand for election as Chancellor in the Bundestag on 6 May"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "his readiness to stand for election as Chancellor in the Bundestag on 6 May",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Friedrich Merz publicly confirmed his acceptance of the CDU/CSU–SPD grand coalition agreement and his readiness to stand for election as Chancellor in the Bundestag on 6 May, urging CDU/CSU and SPD members to support the grand coalition.",
+                  "date": "2025-05-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                  "action": "As CDU leader and chancellor-designate, publicly confirm acceptance of the coalition agreement and readiness to stand for election as Chancellor in the Bundestag on 6 May, urging CDU/CSU and SPD members to support the grand coalition.\n承诺：Stand for election as Chancellor on 6 May 2025 under the agreed grand coalition.\n触发或复核条件：Coalition parties proceed with the confirmed 6 May vote.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As CDU leader and chancellor-designate, publicly confirm acceptance of the coalition agreement and readiness to stand for election as Chancellor in the Bundestag on 6 May, urging CDU/CSU and SPD members to support the grand coalition.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                  "action": "Take no new public step this round; the Bundestag's only pending act is the already-confirmed 6 May Chancellor vote, which falls outside this round's interval.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no new public step this round; the Bundestag's only pending act is the already-confirmed 6 May Chancellor vote, which falls outside this round's interval.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "candidate_id": "agent_f1ab81f7abfc55cf:initial:2",
+                  "action": "Issue a joint CDU/CSU-SPD negotiators' statement reaffirming the agreed grand coalition and the confirmed 6 May Bundestag vote, urging all members to support Friedrich Merz's election as Chancellor.\n承诺：Reaffirm support for electing Friedrich Merz as Chancellor at the 6 May Bundestag vote.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f1ab81f7abfc55cf:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a joint CDU/CSU-SPD negotiators' statement reaffirming the agreed grand coalition and the confirmed 6 May Bundestag vote, urging all members to support Friedrich Merz's election as Chancellor.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Merz is chancellor-designate: the CDU/CSU–SPD grand coalition agreement was reached, and the Bundestag vote is set for 6 May 2025, within the market's 30 June deadline. The remaining risk is that the scheduled parliamentary election does not occur or fails, but no evidence indicates such a break.",
+                "evidence_quote": "On 11 April, it was agreed that Merz would be elected chancellor on 6 May.",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_545e22679551586b.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-02",
+                "interval_end": "2025-05-04",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 3,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-02T00:00:00+00:00",
+                "interval_end_utc": "2025-05-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Merz is chancellor-designate: the CDU/CSU–SPD grand coalition agreement was reached, and the Bundestag vote is set for 6 May 2025, within the market's 30 June deadline. The remaining risk is that the scheduled parliamentary election does not occur or fails, but no evidence indicates such a break.",
+                "evidence_quote": "On 11 April, it was agreed that Merz would be elected chancellor on 6 May.",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_545e22679551586b.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-04",
+                "interval_end": "2025-05-06",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 5,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-04T00:00:00+00:00",
+                "interval_end_utc": "2025-05-06T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.9,
+                "basis": "Coalition agreement reached 9 April and Merz's election set for 6 May, confirmed 14 April; Merz publicly accepted the deal and urged members to back it. The Bundestag vote itself is not yet observed, so approval and execution remain unverified.",
+                "evidence_quote": "On 9 April, Friedrich Merz announced that an agreement had been reached between the CDU and the SPD to form a grand coalition government. On 11 April, it was agreed that Merz would be elected chancellor on 6 May. The 6 May date for the German parliament vote would then be confirmed on 14 April.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.9,
+          "error": null,
+          "action_path_probability": 0.21
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 3,
+        "draw_rounds": 3,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 7,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 1,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 4,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.9,
+      "covered_p_yes": 0.9,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.9,
+        0.8999999999999999
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "c97ed003-e45c-4b8e-9828-a2d2e1bc3afc",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:32:14.609275+00:00",
+      "contract_id": "0x37e6c1227c1ee562cbd906099dadbd658ddca8cdb9730736857b4d82701c6393",
+      "forecast_cutoff": "2025-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "57dbbe0bd7b4703ae4a591d4245025a2b76758e0fc2bb9ac7c8b5ce7b753000e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 55.553
+    },
+    {
+      "calls": 23,
+      "tokens": 266972,
+      "input_tokens": 255624,
+      "output_tokens": 11348,
+      "accounted_tokens_upper": 266972,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-01",
+                "interval_end": "2025-05-02",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2025-05-01T23:59:59+00:00",
+                "interval_end_utc": "2025-05-02T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "status": "executed",
+                  "summary": "Friedrich Merz publicly confirmed his acceptance of the CDU/CSU–SPD coalition agreement and stated he will stand for election as Chancellor in the Bundestag on 6 May 2025 under the agreed grand coalition program, urging the coalition parties to back it."
+                },
+                {
+                  "action_id": "action_1_agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_fa0516bfad065e68",
+                    "action_1_agent_47e2bebf0fcd5506"
+                  ],
+                  "outcome": "pending",
+                  "effect": "stated he will stand for election as Chancellor in the Bundestag on 6 May 2025"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "stated he will stand for election as Chancellor in the Bundestag on 6 May 2025 under the agreed grand coalition program",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Friedrich Merz publicly confirmed his acceptance of the CDU/CSU–SPD coalition agreement and stated he will stand for election as Chancellor in the Bundestag on 6 May 2025 under the agreed grand coalition program, urging the coalition parties to back it.",
+                  "date": "2025-05-02"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                  "action": "Publicly confirm acceptance of the CDU/CSU–SPD coalition agreement and state readiness to stand for election as Chancellor in the Bundestag on 6 May, urging the coalition parties to back the agreed program.\n承诺：I will stand for election as Chancellor on 6 May 2025 under the agreed grand coalition program.\n触发或复核条件：Coalition parties maintain the agreed timetable and program.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly confirm acceptance of the CDU/CSU–SPD coalition agreement and state readiness to stand for election as Chancellor in the Bundestag on 6 May, urging the coalition parties to back the agreed program.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                  "action": "Hold the confirmed 6 May 2025 Chancellor election as scheduled; no new parliamentary act in this round.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Hold the confirmed 6 May 2025 Chancellor election as scheduled; no new parliamentary act in this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_47e2bebf0fcd5506:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publicly reaffirm that the Bundestag will proceed with the confirmed 6 May 2025 Chancellor election, without pre-committing the ballot outcome.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "candidate_id": "agent_f1ab81f7abfc55cf:initial:1",
+                  "action": "Take no new outward act this round; the coalition agreement is already concluded and announced, and the remaining step is the Bundestag's scheduled 6 May vote, which lies outside this group's scope.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f1ab81f7abfc55cf:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward act this round; the coalition agreement is already concluded and announced, and the remaining step is the Bundestag's scheduled 6 May vote, which lies outside this group's scope.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Merz publicly confirmed he will stand for election as Chancellor on 6 May 2025 under the agreed grand coalition program, and the coalition agreement and vote date were settled. The remaining step is the Bundestag vote, which is scheduled within the outcome window.",
+                "evidence_quote": "Friedrich Merz publicly confirmed his acceptance of the CDU/CSU–SPD coalition agreement and stated he will stand for election as Chancellor in the Bundestag on 6 May 2025 under the agreed grand coalition program, urging the coalition parties to back it.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-02",
+                "interval_end": "2025-05-04",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 3,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-02T00:00:00+00:00",
+                "interval_end_utc": "2025-05-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "Merz publicly confirmed he will stand for election as Chancellor on 6 May 2025 under the agreed grand coalition program, and the coalition agreement and vote date were settled. The remaining step is the Bundestag vote, which is scheduled within the outcome window.",
+                "evidence_quote": "Friedrich Merz publicly confirmed his acceptance of the CDU/CSU–SPD coalition agreement and stated he will stand for election as Chancellor in the Bundestag on 6 May 2025 under the agreed grand coalition program, urging the coalition parties to back it.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-05-04",
+                "interval_end": "2025-05-06",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 5,
+                "interval_days": 2,
+                "interval_start_utc": "2025-05-04T00:00:00+00:00",
+                "interval_end_utc": "2025-05-06T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.9,
+                "basis": "Coalition agreement reached and 6 May Bundestag vote confirmed; Merz publicly committed to standing for election. The remaining uncertainty is the Bundestag vote itself, which has not yet occurred by the horizon.",
+                "evidence_quote": "On 11 April, it was agreed that Merz would be elected chancellor on 6 May. The 6 May date for the German parliament vote would then be confirmed on 14 April.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.9,
+          "error": null,
+          "action_path_probability": 0.595
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 3,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.9,
+      "covered_p_yes": 0.9,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.9,
+        0.8999999999999999
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "fbe918db-4642-47a2-8d97-a4b798794255",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:07:46.279675+00:00",
+      "contract_id": "0x37e6c1227c1ee562cbd906099dadbd658ddca8cdb9730736857b4d82701c6393",
+      "forecast_cutoff": "2025-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "57dbbe0bd7b4703ae4a591d4245025a2b76758e0fc2bb9ac7c8b5ce7b753000e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 54.404
+    },
+    {
+      "calls": 25,
+      "tokens": 336828,
+      "input_tokens": 317056,
+      "output_tokens": 19772,
+      "accounted_tokens_upper": 336828,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-05-01",
+                "interval_end": "2025-05-06",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2025-05-01T23:59:59+00:00",
+                "interval_end_utc": "2025-05-06T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "status": "executed",
+                  "summary": "Friedrich Merz publicly reaffirmed that the CDU/CSU–SPD grand coalition agreement stands and that he will stand for election as Chancellor in the Bundestag on 6 May 2025, calling on coalition members to support the agreed timetable."
+                },
+                {
+                  "action_id": "action_1_agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "status": "partial",
+                  "summary": "The Bundestag proceeded with the confirmed 6 May 2025 session to elect Friedrich Merz as Chancellor under the agreed CDU/CSU–SPD grand coalition arrangement; no vote tally or election result was observed within the round window."
+                },
+                {
+                  "action_id": "action_1_agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_fa0516bfad065e68",
+                    "action_1_agent_47e2bebf0fcd5506"
+                  ],
+                  "outcome": "pending",
+                  "effect": "The Bundestag proceeded with the confirmed 6 May 2025 session to elect Friedrich Merz as Chancellor"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "The Bundestag proceeded with the confirmed 6 May 2025 session to elect Friedrich Merz as Chancellor",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Friedrich Merz publicly reaffirmed that the CDU/CSU–SPD grand coalition agreement stands and that he will stand for election as Chancellor in the Bundestag on 6 May 2025, calling on coalition members to support the agreed timetable.",
+                  "date": "2025-05-02"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "The Bundestag proceeded with the confirmed 6 May 2025 session to elect Friedrich Merz as Chancellor under the agreed CDU/CSU–SPD grand coalition arrangement; no vote tally or election result was observed within the round window.",
+                  "date": "2025-05-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                  "action": "As CDU leader and chancellor-designate, publicly reaffirm that the CDU/CSU–SPD grand coalition agreement stands, that I will stand for election as Chancellor in the Bundestag on 6 May 2025, and call on all coalition members to support the agreed timetable.\n承诺：I will stand for election as Chancellor in the Bundestag on 6 May 2025 under the agreed coalition terms.\n触发或复核条件：Coalition agreement and 6 May vote date remain in place.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "As CDU leader and chancellor-designate, publicly reaffirm that the CDU/CSU–SPD grand coalition agreement stands, that I will stand for election as Chancellor in the Bundestag on 6 May 2025, and call on all coalition members to support the agreed timetable.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                  "action": "Bundestag proceeds with the confirmed 6 May 2025 session to elect Friedrich Merz as Chancellor, per the agreed CDU/CSU-SPD grand coalition arrangement and the confirmed vote date.\n承诺：Hold the scheduled chancellor election vote on 6 May 2025 as confirmed.\n触发或复核条件：The 6 May date remains confirmed and the coalition arrangement stands.",
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                      "weight": 90.0,
+                      "probability": 0.9,
+                      "action": "Bundestag proceeds with the confirmed 6 May 2025 session to elect Friedrich Merz as Chancellor, per the agreed CDU/CSU-SPD grand coalition arrangement and the confirmed vote date.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_47e2bebf0fcd5506:initial:2",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "No outward Bundestag act this round; the scheduled 6 May vote remains the operative step and is monitored for any change in date or coalition support.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "candidate_id": "agent_f1ab81f7abfc55cf:initial:1",
+                  "action": "Take no new outward step this round: the coalition agreement is already announced and the 6 May Bundestag vote date confirmed; the negotiators' formation mandate is fulfilled and the remaining election step lies with the Bundestag.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f1ab81f7abfc55cf:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no new outward step this round: the coalition agreement is already announced and the 6 May Bundestag vote date confirmed; the negotiators' formation mandate is fulfilled and the remaining election step lies with the Bundestag.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_f1ab81f7abfc55cf:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a joint public statement reaffirming the CDU/CSU-SPD coalition agreement and urging all Bundestag members to support Friedrich Merz's election as Chancellor on 6 May 2025.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.9,
+                "basis": "The coalition agreement and confirmed 6 May Bundestag vote make Merz the expected next chancellor; the simulated round shows the session proceeded to elect him, though no tally was observed. Remaining uncertainty is the unobserved formal vote result.",
+                "evidence_quote": "The Bundestag proceeded with the confirmed 6 May 2025 session to elect Friedrich Merz as Chancellor under the agreed CDU/CSU–SPD grand coalition arrangement; no vote tally or election result was observed within the round window.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.9,
+          "error": null,
+          "action_path_probability": 0.43200000000000005
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-05-01",
+                "interval_end": "2025-05-06",
+                "horizon_end": "2025-05-06",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2025-05-01T23:59:59+00:00",
+                "interval_end_utc": "2025-05-06T21:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "status": "executed",
+                  "summary": "Friedrich Merz reaffirmed publicly that he will stand for election as Chancellor in the Bundestag on 6 May 2025 and called on the coalition parties to support the agreed grand-coalition program and vote."
+                },
+                {
+                  "action_id": "action_1_agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "status": "executed",
+                  "summary": "In a joint statement, the CDU/CSU and SPD coalition negotiators declared the 9 April grand coalition agreement final and backed Friedrich Merz's election as Chancellor on 6 May, urging their Bundestag members to vote accordingly."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_fa0516bfad065e68",
+                    "action_1_agent_f1ab81f7abfc55cf"
+                  ],
+                  "outcome": "realized",
+                  "effect": "the CDU/CSU and SPD coalition negotiators declared the 9 April grand coalition agreement final and backed Friedrich Merz's election as Chancellor on 6 May"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_47e2bebf0fcd5506",
+                    "action_1_agent_fa0516bfad065e68"
+                  ],
+                  "outcome": "pending",
+                  "effect": "reaffirmed publicly that he will stand for election as Chancellor in the Bundestag on 6 May 2025"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Friedrich Merz be the next Chancellor of Germany?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "reaffirmed publicly that he will stand for election as Chancellor in the Bundestag on 6 May 2025",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Friedrich Merz reaffirmed publicly that he will stand for election as Chancellor in the Bundestag on 6 May 2025 and called on the coalition parties to support the agreed grand-coalition program and vote.",
+                  "date": "2025-05-02"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "In a joint statement, the CDU/CSU and SPD coalition negotiators declared the 9 April grand coalition agreement final and backed Friedrich Merz's election as Chancellor on 6 May, urging their Bundestag members to vote accordingly.",
+                  "date": "2025-05-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fa0516bfad065e68",
+                  "actor_name": "Friedrich Merz",
+                  "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                  "action": "As CDU leader and chancellor-designate, publicly reaffirm that I will stand for election as Chancellor in the Bundestag on 6 May 2025 and call on the coalition parties to support the agreed grand-coalition program and vote.\n承诺：I will stand for election as Chancellor in the Bundestag on 6 May 2025.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fa0516bfad065e68:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As CDU leader and chancellor-designate, publicly reaffirm that I will stand for election as Chancellor in the Bundestag on 6 May 2025 and call on the coalition parties to support the agreed grand-coalition program and vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_47e2bebf0fcd5506",
+                  "actor_name": "Bundestag",
+                  "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                  "action": "Take no new outward act before the scheduled 6 May 2025 chancellor election; the Bundestag's role is to hold that vote as confirmed, and the result is not yet evidenced.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_47e2bebf0fcd5506:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward act before the scheduled 6 May 2025 chancellor election; the Bundestag's role is to hold that vote as confirmed, and the result is not yet evidenced.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_f1ab81f7abfc55cf",
+                  "actor_name": "CDU/CSU and SPD coalition negotiators",
+                  "candidate_id": "agent_f1ab81f7abfc55cf:initial:2",
+                  "action": "Issue a joint CDU/CSU-SPD negotiators' statement reaffirming the 9 April grand coalition agreement is final and that both delegations support Friedrich Merz's election as Chancellor on 6 May, urging their Bundestag members to vote accordingly.\n承诺：Both delegations back Merz's 6 May election and treat the coalition agreement as concluded.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_f1ab81f7abfc55cf:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a joint CDU/CSU-SPD negotiators' statement reaffirming the 9 April grand coalition agreement is final and that both delegations support Friedrich Merz's election as Chancellor on 6 May, urging their Bundestag members to vote accordingly.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.9,
+                "basis": "Coalition negotiators declared the grand-coalition agreement final and urged Bundestag members to back Merz's election on 6 May; Merz reaffirmed he will stand. The remaining uncertainty is the Bundestag vote itself, which is scheduled but not yet observed within the horizon.",
+                "evidence_quote": "In a joint statement, the CDU/CSU and SPD coalition negotiators declared the 9 April grand coalition agreement final and backed Friedrich Merz's election as Chancellor on 6 May, urging their Bundestag members to vote accordingly.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.9,
+          "error": null,
+          "action_path_probability": 0.21
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 2,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.9,
+      "covered_p_yes": 0.9,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.9,
+        0.8999999999999999
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "3c10b11c-a0fa-463e-a890-aa8bfeae3cc5",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:17:11.454700+00:00",
+      "contract_id": "0x37e6c1227c1ee562cbd906099dadbd658ddca8cdb9730736857b4d82701c6393",
+      "forecast_cutoff": "2025-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "57dbbe0bd7b4703ae4a591d4245025a2b76758e0fc2bb9ac7c8b5ce7b753000e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 53.607
+    },
+    {
+      "calls": 51,
+      "tokens": 582190,
+      "input_tokens": 556778,
+      "output_tokens": 25412,
+      "accounted_tokens_upper": 582190,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.93,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.93,
+        0.93
+      ],
+      "search_iterations": 5,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 5,
+          "search_value": 0.2315999999999999,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.7,
+          "visits": 2,
+          "search_value": 0.26039999999999985,
+          "conditional_p_yes": 0.97,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.7,
+          "visits": 1,
+          "search_value": 0.26039999999999985,
+          "conditional_p_yes": 0.93,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.7,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.93,
+          "frontier": true,
+          "contribution": 0.651
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.3,
+          "visits": 2,
+          "search_value": 0.26039999999999985,
+          "conditional_p_yes": 0.97,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.3,
+          "visits": 1,
+          "search_value": 0.26039999999999985,
+          "conditional_p_yes": 0.93,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.3,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.93,
+          "frontier": true,
+          "contribution": 0.279
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "a113dd68-f94b-4e49-92dd-2c337c82f619",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:10:11.290187+00:00",
+      "contract_id": "0x37e6c1227c1ee562cbd906099dadbd658ddca8cdb9730736857b4d82701c6393",
+      "forecast_cutoff": "2025-05-01T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "57dbbe0bd7b4703ae4a591d4245025a2b76758e0fc2bb9ac7c8b5ce7b753000e",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 103.22
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-05-01T23:59:59+00:00",
+  "forecast_key": "0x37e6c1227c1ee562cbd906099dadbd658ddca8cdb9730736857b4d82701c6393",
+  "group_id": "next-chancellor-of-germany",
+  "evidence_sha256": "57dbbe0bd7b4703ae4a591d4245025a2b76758e0fc2bb9ac7c8b5ce7b753000e",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 733,
+    "input_tokens": 606,
+    "output_tokens": 127,
+    "accounted_tokens_upper": 733,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-05-01",
+        "2025-05-06"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-05-01",
+        "2025-05-02",
+        "2025-05-04",
+        "2025-05-06"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-05-01",
+        "2025-05-02",
+        "2025-05-04",
+        "2025-05-06"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-05-01",
+        "2025-05-06"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-05-01",
+        "2025-05-02",
+        "2025-05-04",
+        "2025-05-06"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-05-06T21:59:59+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-02-23T12:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 3
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_50b558f6f66313eb",
+          "name": "Friedrich Merz",
+          "role": "CDU leader and Union candidate for Chancellor; announced coalition agreement and is projected to become Chancellor",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_df901452866e8482",
+          "name": "CDU/CSU and SPD coalition negotiators",
+          "role": "Representatives of CDU/CSU and SPD who negotiated and agreed to form a grand coalition government",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_87e7524e8126c062",
+          "name": "Bundestag",
+          "role": "German federal parliament that elects the Chancellor",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No named incumbent or formal officeholder for the Bundestag election act; the Bundestag as a collective is used.",
+        "The exact date of the Bundestag vote (6 May 2025) is after the as_of date, so the election outcome is not yet observed."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Friedrich Merz agrees to serve as Chancellor and leads coalition negotiations",
+          "owner": "Friedrich Merz",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "CDU/CSU and SPD negotiators reach an agreement to form a grand coalition government",
+          "owner": "CDU/CSU and SPD coalition negotiators",
+          "support": "represented"
+        },
+        {
+          "id": "D3",
+          "choice": "Bundestag elects Friedrich Merz as Chancellor",
+          "owner": "Bundestag",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 14,
+    "tokens": 48011,
+    "input_tokens": 42637,
+    "output_tokens": 5374,
+    "accounted_tokens_upper": 48011,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

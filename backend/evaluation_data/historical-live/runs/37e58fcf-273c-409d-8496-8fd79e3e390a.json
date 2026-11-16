@@ -1,0 +1,1454 @@
+{
+  "run_id": "37e58fcf-273c-409d-8496-8fd79e3e390a",
+  "case_id": "market_108a3b564dec5b3dcc6d2b19",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2937,
+      "input_tokens": 2927,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2937,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2927,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:33:24.022177+00:00",
+      "contract_id": "0x8c204cf57406ba2f01099643569c6d3c7e934972148b86c6e2f19078937d9e71",
+      "forecast_cutoff": "2025-12-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a474bc1dce3636ff04b4b4a9bc21e2cd32cf6a58e8ed7171bc448d90f7de1b1e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.782
+    },
+    {
+      "calls": 2,
+      "tokens": 5874,
+      "input_tokens": 5854,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 5874,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2927,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2927,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:33:25.634448+00:00",
+      "contract_id": "0x8c204cf57406ba2f01099643569c6d3c7e934972148b86c6e2f19078937d9e71",
+      "forecast_cutoff": "2025-12-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a474bc1dce3636ff04b4b4a9bc21e2cd32cf6a58e8ed7171bc448d90f7de1b1e",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.611
+    },
+    {
+      "calls": 6,
+      "tokens": 49547,
+      "input_tokens": 47979,
+      "output_tokens": 1568,
+      "accounted_tokens_upper": 49547,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-12-05",
+                "interval_end": "2025-12-19",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 14,
+                "interval_days": 14,
+                "interval_start_utc": "2025-12-05T23:59:59+00:00",
+                "interval_end_utc": "2025-12-19T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "candidate_id": "agent_670fd30971a9596f:initial:1",
+                  "action": "Take no public action before the December 2025 Monetary Policy Meeting; the rate decision will be made through the scheduled MPM process and announced in the Statement on Monetary Policy on 2025-12-19.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_670fd30971a9596f:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Take no public action before the December 2025 Monetary Policy Meeting; the rate decision will be made through the scheduled MPM process and announced in the Statement on Monetary Policy on 2025-12-19.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.45,
+                "basis": "No settled December 2025 BOJ decision appears in the evidence; only historical rate episodes and general monetary-policy background are provided. The 2024 exit from negative rates shows tightening capacity, but it does not establish a 25 bp increase at the December 2025 meeting.",
+                "evidence_quote": "In 2024, following announcements of about 5% wage growth by Japan's largest companies, the BOJ ended eight year of negative interest rates by setting new short term targets of 0 to 0.1%.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.45,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.45,
+      "covered_p_yes": 0.45,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.45,
+        0.44999999999999996
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "2ed4eb94-7a87-4ff3-9888-aaa6e7f8a9b9",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:34:01.115366+00:00",
+      "contract_id": "0x8c204cf57406ba2f01099643569c6d3c7e934972148b86c6e2f19078937d9e71",
+      "forecast_cutoff": "2025-12-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a474bc1dce3636ff04b4b4a9bc21e2cd32cf6a58e8ed7171bc448d90f7de1b1e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 35.478
+    },
+    {
+      "calls": 23,
+      "tokens": 202016,
+      "input_tokens": 194130,
+      "output_tokens": 7886,
+      "accounted_tokens_upper": 202016,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-12-05",
+                "interval_end": "2025-12-09",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2025-12-05T23:59:59+00:00",
+                "interval_end_utc": "2025-12-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "candidate_id": "agent_670fd30971a9596f:initial:1",
+                  "action": "Take no public action this round; the Bank of Japan's rate decision is reserved for the scheduled December 2025 Monetary Policy Meeting, and no statement is due before the December 19 release. Monitor incoming inflation, wage and market data internally until the meeting.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_670fd30971a9596f:initial:1",
+                      "weight": 75.0,
+                      "probability": 1.0,
+                      "action": "Take no public action this round; the Bank of Japan's rate decision is reserved for the scheduled December 2025 Monetary Policy Meeting, and no statement is due before the December 19 release. Monitor incoming inflation, wage and market data internally until the meeting.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "No current evidence addresses the December 2025 BOJ decision; all cited material is historical (1980s rate cuts, 2006 zero-rate exit, 2013 QE). Historical easing and tightening precedents do not establish an in-window 25 bps hike, so the estimate rests on base-rate uncertainty rather than observed signals.",
+                "evidence_quote": "In 2024, following announcements of about 5% wage growth by Japan's largest companies, the BOJ ended eight year of negative interest rates by setting new short term targets of 0 to 0.1%.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-12-09",
+                "interval_end": "2025-12-14",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 9,
+                "interval_days": 5,
+                "interval_start_utc": "2025-12-09T00:00:00+00:00",
+                "interval_end_utc": "2025-12-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "No current evidence addresses the December 2025 BOJ decision; all cited material is historical (1980s rate cuts, 2006 zero-rate exit, 2013 QE). Historical easing and tightening precedents do not establish an in-window 25 bps hike, so the estimate rests on base-rate uncertainty rather than observed signals.",
+                "evidence_quote": "In 2024, following announcements of about 5% wage growth by Japan's largest companies, the BOJ ended eight year of negative interest rates by setting new short term targets of 0 to 0.1%.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-12-14",
+                "interval_end": "2025-12-19",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 14,
+                "interval_days": 5,
+                "interval_start_utc": "2025-12-14T00:00:00+00:00",
+                "interval_end_utc": "2025-12-19T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.45,
+                "basis": "No settled December 2025 BOJ decision appears in the evidence; only historical rate episodes and general monetary-policy background are provided. The estimate reflects uncertainty around a live policy choice, not an observed outcome, and the December 19 statement remains unknown.",
+                "evidence_quote": "In 2024, following announcements of about 5% wage growth by Japan's largest companies, the BOJ ended eight year of negative interest rates by setting new short term targets of 0 to 0.1%.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.45,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-12-05",
+                "interval_end": "2025-12-09",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2025-12-05T23:59:59+00:00",
+                "interval_end_utc": "2025-12-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "candidate_id": "agent_670fd30971a9596f:initial:1",
+                  "action": "Take no public action this round. The Bank of Japan's policy decision belongs to the scheduled December 2025 Monetary Policy Meeting; with no data in the packet on the current policy rate, inflation, wages or the meeting agenda, hold the decision until the meeting and its statement.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_670fd30971a9596f:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Take no public action this round. The Bank of Japan's policy decision belongs to the scheduled December 2025 Monetary Policy Meeting; with no data in the packet on the current policy rate, inflation, wages or the meeting agenda, hold the decision until the meeting and its statement.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "No current evidence addresses the December 2025 BOJ decision; all cited material is historical (1980s rate cuts, 2006 zero-rate exit, 2013 QE). Historical easing and tightening precedents do not establish an in-window 25 bps hike, so the estimate rests on base-rate uncertainty rather than observed signals.",
+                "evidence_quote": "In 2024, following announcements of about 5% wage growth by Japan's largest companies, the BOJ ended eight year of negative interest rates by setting new short term targets of 0 to 0.1%.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-12-09",
+                "interval_end": "2025-12-14",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 9,
+                "interval_days": 5,
+                "interval_start_utc": "2025-12-09T00:00:00+00:00",
+                "interval_end_utc": "2025-12-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "No current evidence addresses the December 2025 BOJ decision; all cited material is historical (1980s rate cuts, 2006 zero-rate exit, 2013 QE). Historical easing and tightening precedents do not establish an in-window 25 bps hike, so the estimate rests on base-rate uncertainty rather than observed signals.",
+                "evidence_quote": "In 2024, following announcements of about 5% wage growth by Japan's largest companies, the BOJ ended eight year of negative interest rates by setting new short term targets of 0 to 0.1%.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-12-14",
+                "interval_end": "2025-12-19",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 14,
+                "interval_days": 5,
+                "interval_start_utc": "2025-12-14T00:00:00+00:00",
+                "interval_end_utc": "2025-12-19T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.45,
+                "basis": "No settled December 2025 BOJ decision appears in the evidence; only historical rate episodes and general monetary-policy background are provided. The estimate reflects uncertainty around a live policy choice, not an observed outcome, and the December 19 statement remains unknown.",
+                "evidence_quote": "In 2024, following announcements of about 5% wage growth by Japan's largest companies, the BOJ ended eight year of negative interest rates by setting new short term targets of 0 to 0.1%.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.45,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.45,
+      "covered_p_yes": 0.45,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.45,
+        0.44999999999999996
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "9869df1f-6e5c-4078-b7ef-21bff907be5d",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:34:31.132796+00:00",
+      "contract_id": "0x8c204cf57406ba2f01099643569c6d3c7e934972148b86c6e2f19078937d9e71",
+      "forecast_cutoff": "2025-12-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a474bc1dce3636ff04b4b4a9bc21e2cd32cf6a58e8ed7171bc448d90f7de1b1e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 30.015
+    },
+    {
+      "calls": 15,
+      "tokens": 141134,
+      "input_tokens": 134023,
+      "output_tokens": 7111,
+      "accounted_tokens_upper": 141134,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-12-05",
+                "interval_end": "2025-12-09",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2025-12-05T23:59:59+00:00",
+                "interval_end_utc": "2025-12-09T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "status": "executed",
+                  "summary": "Bank of Japan issued a public communication reaffirming that the policy rate will be set at the December 2025 Monetary Policy Meeting based on inflation, wage and financial conditions, without pre-committing to a 25 bps increase or hold."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "without pre-committing to a 25 bps increase or hold",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Bank of Japan issued a public communication reaffirming that the policy rate will be set at the December 2025 Monetary Policy Meeting based on inflation, wage and financial conditions, without pre-committing to a 25 bps increase or hold.",
+                  "date": "2025-12-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "candidate_id": "agent_670fd30971a9596f:initial:2",
+                  "action": "Issue a public communication reaffirming that the policy rate will be set at the December 2025 Monetary Policy Meeting based on inflation, wage and financial conditions, without pre-committing to a 25 bps increase or hold.\n承诺：No rate change is pre-committed; the decision is reserved for the December meeting.",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_670fd30971a9596f:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no public action before the December 2025 Monetary Policy Meeting. Internally review incoming inflation, wage and financial-market data, and reserve any rate decision for the scheduled meeting process rather than signaling a change now.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_670fd30971a9596f:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a public communication reaffirming that the policy rate will be set at the December 2025 Monetary Policy Meeting based on inflation, wage and financial conditions, without pre-committing to a 25 bps increase or hold.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The only current evidence is a simulated BOJ communication reaffirming data-dependent rate setting without pre-committing to a 25 bps increase or hold. Historical excerpts show past easing and rate cuts, not a December 2025 hike, so the in-window outcome remains uncertain.",
+                "evidence_quote": "Bank of Japan issued a public communication reaffirming that the policy rate will be set at the December 2025 Monetary Policy Meeting based on inflation, wage and financial conditions, without pre-committing to a 25 bps increase or hold.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-12-09",
+                "interval_end": "2025-12-14",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 9,
+                "interval_days": 5,
+                "interval_start_utc": "2025-12-09T00:00:00+00:00",
+                "interval_end_utc": "2025-12-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The only current evidence is a simulated BOJ communication reaffirming data-dependent rate setting without pre-committing to a 25 bps increase or hold. Historical excerpts show past easing and rate cuts, not a December 2025 hike, so the in-window outcome remains uncertain.",
+                "evidence_quote": "Bank of Japan issued a public communication reaffirming that the policy rate will be set at the December 2025 Monetary Policy Meeting based on inflation, wage and financial conditions, without pre-committing to a 25 bps increase or hold.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2025-12-14",
+                "interval_end": "2025-12-19",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 14,
+                "interval_days": 5,
+                "interval_start_utc": "2025-12-14T00:00:00+00:00",
+                "interval_end_utc": "2025-12-19T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The only in-window evidence is a BOJ communication that explicitly declines to pre-commit to a 25 bps increase or a hold, leaving the December decision open. Historical easing/rate-cut precedents and the 2024 exit from negative rates are context only and do not establish a December 2025 hike.",
+                "evidence_quote": "Bank of Japan issued a public communication reaffirming that the policy rate will be set at the December 2025 Monetary Policy Meeting based on inflation, wage and financial conditions, without pre-committing to a 25 bps increase or hold.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.2
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "1fbaa35c-9392-4f98-ac99-5028675884ad",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:14:54.001517+00:00",
+      "contract_id": "0x8c204cf57406ba2f01099643569c6d3c7e934972148b86c6e2f19078937d9e71",
+      "forecast_cutoff": "2025-12-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a474bc1dce3636ff04b4b4a9bc21e2cd32cf6a58e8ed7171bc448d90f7de1b1e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 51.457
+    },
+    {
+      "calls": 13,
+      "tokens": 118771,
+      "input_tokens": 113623,
+      "output_tokens": 5148,
+      "accounted_tokens_upper": 118771,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-12-05",
+                "interval_end": "2025-12-19",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 14,
+                "interval_days": 14,
+                "interval_start_utc": "2025-12-05T23:59:59+00:00",
+                "interval_end_utc": "2025-12-19T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "candidate_id": "agent_670fd30971a9596f:initial:1",
+                  "action": "Hold the policy rate decision for the scheduled December 2025 Monetary Policy Meeting, where the Policy Board reviews inflation, wages and financial conditions and issues the Statement on Monetary Policy on December 19, 2025. No pre-commitment to a 25 bps increase or hold is made before that meeting.\n触发或复核条件：Scheduled December 2025 MPM convenes and issues its statement.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_670fd30971a9596f:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Hold the policy rate decision for the scheduled December 2025 Monetary Policy Meeting, where the Policy Board reviews inflation, wages and financial conditions and issues the Statement on Monetary Policy on December 19, 2025. No pre-commitment to a 25 bps increase or hold is made before that meeting.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "No settled December 2025 BOJ decision appears in the evidence; only historical rate episodes and general monetary-policy background are provided. The estimate reflects uncertainty around a live policy decision, not any observed in-window announcement.",
+                "evidence_quote": "In 2024, following announcements of about 5% wage growth by Japan's largest companies, the BOJ ended eight year of negative interest rates by setting new short term targets of 0 to 0.1%.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-12-05",
+                "interval_end": "2025-12-19",
+                "horizon_end": "2025-12-19",
+                "elapsed_days": 14,
+                "interval_days": 14,
+                "interval_start_utc": "2025-12-05T23:59:59+00:00",
+                "interval_end_utc": "2025-12-19T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "status": "executed",
+                  "summary": "The Bank of Japan issued a forward-guidance statement that it will decide the short-term policy rate at the December 2025 Monetary Policy Meeting based on inflation and wage developments, without pre-committing to a 25 bps increase."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Bank of Japan increases interest rates by 25 bps after December 2025 meeting?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "without pre-committing to a 25 bps increase",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The Bank of Japan issued a forward-guidance statement that it will decide the short-term policy rate at the December 2025 Monetary Policy Meeting based on inflation and wage developments, without pre-committing to a 25 bps increase.",
+                  "date": "2025-12-05"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_670fd30971a9596f",
+                  "actor_name": "Bank of Japan",
+                  "candidate_id": "agent_670fd30971a9596f:initial:2",
+                  "action": "Issue a forward-guidance statement that the Bank of Japan will decide the short-term policy rate at the December 2025 Monetary Policy Meeting based on inflation and wage developments, without pre-committing to a 25 bps increase.\n承诺：No pre-commitment to a specific rate change before the December meeting.",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_670fd30971a9596f:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no public action before the December 2025 Monetary Policy Meeting; the rate decision will be made and announced through the scheduled meeting process on December 19, 2025.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_670fd30971a9596f:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a forward-guidance statement that the Bank of Japan will decide the short-term policy rate at the December 2025 Monetary Policy Meeting based on inflation and wage developments, without pre-committing to a 25 bps increase.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The only current evidence is a Dec 5 forward-guidance statement saying the BOJ will decide the December 2025 rate based on inflation and wage developments without pre-committing to a 25 bps increase. No December statement or decision is in evidence, so a 25 bps hike is possible but unconfirmed; historical easing/rate-cut precedents do not establish an in-window increase.",
+                "evidence_quote": "The Bank of Japan issued a forward-guidance statement that it will decide the short-term policy rate at the December 2025 Monetary Policy Meeting based on inflation and wage developments, without pre-committing to a 25 bps increase.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.2
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "c0b996ad-3070-4618-a1d4-ac0c01eff236",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:15:15.114619+00:00",
+      "contract_id": "0x8c204cf57406ba2f01099643569c6d3c7e934972148b86c6e2f19078937d9e71",
+      "forecast_cutoff": "2025-12-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a474bc1dce3636ff04b4b4a9bc21e2cd32cf6a58e8ed7171bc448d90f7de1b1e",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 21.112
+    },
+    {
+      "calls": 28,
+      "tokens": 239359,
+      "input_tokens": 228115,
+      "output_tokens": 11244,
+      "accounted_tokens_upper": 239359,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.406,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.406,
+        0.406
+      ],
+      "search_iterations": 5,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 5,
+          "search_value": 0.9486400000000001,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.8,
+          "visits": 2,
+          "search_value": 0.9744,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.8,
+          "visits": 1,
+          "search_value": 0.9744,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.8,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.42,
+          "frontier": true,
+          "contribution": 0.336
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.2,
+          "visits": 2,
+          "search_value": 0.9099999999999999,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.2,
+          "visits": 1,
+          "search_value": 0.9099999999999999,
+          "conditional_p_yes": 0.35,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.2,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.35,
+          "frontier": true,
+          "contribution": 0.06999999999999999
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "3ae2bdd3-3c7d-4aec-8c57-cc2ef60f9693",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:16:40.196462+00:00",
+      "contract_id": "0x8c204cf57406ba2f01099643569c6d3c7e934972148b86c6e2f19078937d9e71",
+      "forecast_cutoff": "2025-12-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "a474bc1dce3636ff04b4b4a9bc21e2cd32cf6a58e8ed7171bc448d90f7de1b1e",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 85.082
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-12-05T23:59:59+00:00",
+  "forecast_key": "0x8c204cf57406ba2f01099643569c6d3c7e934972148b86c6e2f19078937d9e71",
+  "group_id": "bank-of-japan-decision-in-december",
+  "evidence_sha256": "a474bc1dce3636ff04b4b4a9bc21e2cd32cf6a58e8ed7171bc448d90f7de1b1e",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 834,
+    "input_tokens": 747,
+    "output_tokens": 87,
+    "accounted_tokens_upper": 834,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-12-05",
+        "2025-12-19"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-12-05",
+        "2025-12-09",
+        "2025-12-14",
+        "2025-12-19"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-12-05",
+        "2025-12-09",
+        "2025-12-14",
+        "2025-12-19"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-12-05",
+        "2025-12-19"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2025-12-05",
+        "2025-12-09",
+        "2025-12-14",
+        "2025-12-19"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2025-12-19T14:59:59+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-12-19T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_5a39fc7f26dba90b",
+          "name": "Bank of Japan",
+          "role": "Sets the short-term policy interest rate through its Monetary Policy Meeting.",
+          "decision_ids": [
+            "boj_dec_2025_rate_decision"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Current authority for Bank of Japan decides at its December 2025 Monetary Policy Meeting whether to raise the upper bound of the short-term policy interest rate by 25 bps versus the prior level. requires independent evidence; Bank of Japan can participate conditionally."
+      ],
+      "gaps": [
+        "No named current Bank of Japan Governor or individual board members are identified in the sources; the decision is attributed to the Bank of Japan as an institution.",
+        "The prior short-term policy rate level before the December 2025 meeting is not specified in the provided sources."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "boj_dec_2025_rate_decision",
+          "choice": "Bank of Japan decides at its December 2025 Monetary Policy Meeting whether to raise the upper bound of the short-term policy interest rate by 25 bps versus the prior level.",
+          "owner": "Bank of Japan",
+          "support": "conditional"
+        }
+      ],
+      "gap_repair": {
+        "status": "participants_added",
+        "added": 1
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 18,
+    "tokens": 40007,
+    "input_tokens": 34750,
+    "output_tokens": 5257,
+    "accounted_tokens_upper": 40007,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

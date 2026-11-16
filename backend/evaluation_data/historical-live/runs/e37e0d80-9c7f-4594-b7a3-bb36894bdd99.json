@@ -1,0 +1,2598 @@
+{
+  "run_id": "e37e0d80-9c7f-4594-b7a3-bb36894bdd99",
+  "case_id": "market_4b374fe23afe247b275b8f4a",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 5142,
+      "input_tokens": 5132,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 5142,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 5132,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T16:51:14.371910+00:00",
+      "contract_id": "0x7e5228c4aa228752fb75ec1ffcb315a5f2fef812d746ceb6601cee285366d1a8",
+      "forecast_cutoff": "2026-06-07T00:07:21+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "91f4815aa95a9543acea7c61135aaccd10ab99e225ae356a327e4d6119bca32a",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.136
+    },
+    {
+      "calls": 2,
+      "tokens": 10284,
+      "input_tokens": 10264,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 10284,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 5132,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 5132,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T16:51:15.418779+00:00",
+      "contract_id": "0x7e5228c4aa228752fb75ec1ffcb315a5f2fef812d746ceb6601cee285366d1a8",
+      "forecast_cutoff": "2026-06-07T00:07:21+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "91f4815aa95a9543acea7c61135aaccd10ab99e225ae356a327e4d6119bca32a",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.045
+    },
+    {
+      "calls": 11,
+      "tokens": 169685,
+      "input_tokens": 162181,
+      "output_tokens": 7504,
+      "accounted_tokens_upper": 169685,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-06-07",
+                "interval_end": "2026-07-01",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 24,
+                "interval_days": 24,
+                "interval_start_utc": "2026-06-07T00:07:21+00:00",
+                "interval_end_utc": "2026-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "status": "executed",
+                  "summary": "Abbas Araghchi publicly stated that Iran is prepared to send an authorized delegation, led by Foreign Minister Araghchi, to a new in-person diplomatic meeting with the United States and proposed a venue and date before June 30, 2026, contingent on Iran's leadership authorization and US agreement."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "contingent on Iran's leadership authorization and US agreement",
+                  "pending_actor_ids": [
+                    "agent_7c717a9a0d7b5ee9"
+                  ]
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Abbas Araghchi publicly stated that Iran is prepared to send an authorized delegation, led by Foreign Minister Araghchi, to a new in-person diplomatic meeting with the United States and proposed a venue and date before June 30, 2026, contingent on Iran's leadership authorization and US agreement.",
+                  "date": "2026-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "candidate_id": "agent_7c717a9a0d7b5ee9:initial:1",
+                  "action": "Publicly state that Iran is prepared to send an authorized delegation, led by Foreign Minister Araghchi, to a new in-person diplomatic meeting with the United States, and propose a venue and date before June 30, 2026, contingent on Iran's leadership authorization and US agreement.\n承诺：Iran offers to send an authorized delegation to a qualifying in-person US-Iran meeting before June 30, 2026, subject to leadership approval.\n触发或复核条件：Iran's leadership authorizes participation and the United States agrees to a meeting.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_7c717a9a0d7b5ee9:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that Iran is prepared to send an authorized delegation, led by Foreign Minister Araghchi, to a new in-person diplomatic meeting with the United States, and propose a venue and date before June 30, 2026, contingent on Iran's leadership authorization and US agreement.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_42468199025e50f2",
+                  "actor_name": "Steve Witkoff",
+                  "candidate_id": "agent_42468199025e50f2:initial:2",
+                  "action": null,
+                  "p_selected": 0.35,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Vance led the April 2026 Islamabad talks with Iran, showing he is the US point person and willing to attend. But those talks ended without agreement, and the only new signal is Iran's foreign minister proposing a contingent meeting dated July 2026—after the June 30 deadline—with no confirmed US acceptance or Vance attendance.",
+                "evidence_quote": "Abbas Araghchi publicly stated that Iran is prepared to send an authorized delegation, led by Foreign Minister Araghchi, to a new in-person diplomatic meeting with the United States and proposed a venue and date before June 30, 2026, contingent on Iran's leadership authorization and US agreement.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.126
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.3,
+      "covered_p_yes": 0.3,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.3,
+        0.30000000000000004
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "1e530267-99ea-4f14-89a6-bb1f6f26be22",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "J.D. Vance",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Public observation of attend",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Participant authorization must be observed in the trajectory",
+          "ready": false
+        }
+      ],
+      "simulation_route": "actor",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T16:56:17.069978+00:00",
+      "contract_id": "0x7e5228c4aa228752fb75ec1ffcb315a5f2fef812d746ceb6601cee285366d1a8",
+      "forecast_cutoff": "2026-06-07T00:07:21+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "91f4815aa95a9543acea7c61135aaccd10ab99e225ae356a327e4d6119bca32a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 81.116
+    },
+    {
+      "calls": 79,
+      "tokens": 1024084,
+      "input_tokens": 983095,
+      "output_tokens": 40989,
+      "accounted_tokens_upper": 1329716,
+      "unknown_usage_requests": 8,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-07",
+                "interval_end": "2026-06-13",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-07T00:07:21+00:00",
+                "interval_end_utc": "2026-06-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "status": "executed",
+                  "summary": "J.D. Vance publicly stated that, consistent with his April 2026 role leading the U.S. delegation in Islamabad, he is prepared to lead or join the next in-person US–Iran diplomatic meeting before June 30, 2026, if the U.S. government authorizes it and Iran agrees to send authorized representatives."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "he is prepared to lead or join the next in-person US–Iran diplomatic meeting before June 30, 2026, if the U.S. government authorizes it and Iran agrees to send authorized representatives",
+                  "pending_actor_ids": [
+                    "agent_440ff46ef0bf5e29"
+                  ]
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "he is prepared to lead or join the next in-person US–Iran diplomatic meeting before June 30, 2026",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "if the U.S. government authorizes it and Iran agrees to send authorized representatives",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "J.D. Vance publicly stated that, consistent with his April 2026 role leading the U.S. delegation in Islamabad",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "J.D. Vance publicly stated that, consistent with his April 2026 role leading the U.S. delegation in Islamabad, he is prepared to lead or join the next in-person US–Iran diplomatic meeting before June 30, 2026, if the U.S. government authorizes it and Iran agrees to send authorized representatives.",
+                  "date": "2026-06-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": "Publicly state that, consistent with his April 2026 role leading the U.S. delegation in Islamabad, Vance is prepared to lead or join the next in-person US–Iran diplomatic meeting before June 30, 2026, if the U.S. government authorizes it and Iran agrees to send authorized representatives.\n承诺：Conditional readiness to attend a qualifying in-person meeting, contingent on U.S. authorization and Iranian participation.\n触发或复核条件：U.S. government authorization and Iran's agreement to send authorized representatives.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that, consistent with his April 2026 role leading the U.S. delegation in Islamabad, Vance is prepared to lead or join the next in-person US–Iran diplomatic meeting before June 30, 2026, if the U.S. government authorizes it and Iran agrees to send authorized representatives.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "candidate_id": "agent_7c717a9a0d7b5ee9:supplement:2",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_7c717a9a0d7b5ee9:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "No outward move this round; monitor for US signals (Witkoff channel or public statements) on willingness to reconvene before deciding whether to press leadership for authorization.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_42468199025e50f2",
+                  "actor_name": "Steve Witkoff",
+                  "candidate_id": "agent_42468199025e50f2:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Vance led the April 2026 Islamabad talks and has signaled willingness to join the next in-person US–Iran meeting, but that is conditional on US authorization and Iranian participation. No new meeting is confirmed before the June 30 deadline, and prior talks ended without agreement, so attendance remains uncertain.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": null,
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-13",
+                "interval_end": "2026-06-19",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 12,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-13T00:00:00+00:00",
+                "interval_end_utc": "2026-06-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_440ff46ef0bf5e29"
+                  ]
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_440ff46ef0bf5e29:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly reiterate that he stands ready to lead or join the next in-person US–Iran diplomatic meeting before June 30, 2026, provided the U.S. government authorizes it and Iran sends authorized representatives, and urge both governments to convene such a meeting.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Vance led the April 2026 Islamabad talks and has signaled willingness to join the next in-person US–Iran meeting, but that is conditional on US authorization and Iranian participation. No new meeting is confirmed before the June 30 deadline, and prior talks ended without agreement, so attendance remains uncertain.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": null,
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-19",
+                "interval_end": "2026-06-25",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 18,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-19T00:00:00+00:00",
+                "interval_end_utc": "2026-06-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_440ff46ef0bf5e29"
+                  ]
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_42468199025e50f2",
+                  "actor_name": "Steve Witkoff",
+                  "candidate_id": "agent_42468199025e50f2:initial:2",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Vance led the April 2026 Islamabad talks and has signaled willingness to join the next in-person US–Iran meeting, but that is conditional on US authorization and Iranian participation. No new meeting is confirmed before the June 30 deadline, and prior talks ended without agreement, so attendance remains uncertain.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": null,
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-25",
+                "interval_end": "2026-07-01",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 24,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-25T00:00:00+00:00",
+                "interval_end_utc": "2026-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_440ff46ef0bf5e29"
+                  ]
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "candidate_id": "agent_7c717a9a0d7b5ee9:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Vance led the April 2026 Islamabad talks and reportedly is willing to join the next in-person US–Iran meeting, but that is conditional on US authorization and Iranian participation. No qualifying meeting is confirmed before the June 30 deadline, and the April round ended without agreement, so execution remains uncertain.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.0254016
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-07",
+                "interval_end": "2026-06-13",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-07T00:07:21+00:00",
+                "interval_end_utc": "2026-06-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "status": "executed",
+                  "summary": "J.D. Vance publicly stated that if the U.S. and Iran schedule a further in-person diplomatic meeting before June 30, 2026, he is prepared to attend and lead or join the U.S. delegation, consistent with the President's direction and with Iran never getting a nuclear weapon."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Vance publicly stated that if the U.S. and Iran schedule a further in-person diplomatic meeting before June 30, 2026, he is prepared to attend",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "J.D. Vance publicly stated that if the U.S. and Iran schedule a further in-person diplomatic meeting before June 30, 2026, he is prepared to attend and lead or join the U.S. delegation, consistent with the President's direction and with Iran never getting a nuclear weapon.",
+                  "date": "2026-06-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": "Publicly state that, if the U.S. and Iran schedule a further in-person diplomatic meeting before June 30, 2026, Vance is prepared to attend and lead or join the U.S. delegation, consistent with the President's direction and with Iran 'never' getting a nuclear weapon.\n承诺：Conditional willingness to attend a scheduled qualifying meeting; no meeting is announced or committed here.\n触发或复核条件：A qualifying in-person US–Iran meeting is scheduled and Vance is approved to participate.",
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                      "weight": 45.0,
+                      "probability": 0.45,
+                      "action": "Publicly state that, if the U.S. and Iran schedule a further in-person diplomatic meeting before June 30, 2026, Vance is prepared to attend and lead or join the U.S. delegation, consistent with the President's direction and with Iran 'never' getting a nuclear weapon.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "candidate_id": "agent_7c717a9a0d7b5ee9:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_42468199025e50f2",
+                  "actor_name": "Steve Witkoff",
+                  "candidate_id": "agent_42468199025e50f2:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Vance led the April 2026 Islamabad talks and has publicly said he is prepared to attend a further in-person US-Iran meeting before June 30, 2026. However, that April round ended without agreement and no subsequent qualifying meeting is evidenced, so attendance depends on both governments scheduling and Vance physically participating.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-13",
+                "interval_end": "2026-06-19",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 12,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-13T00:00:00+00:00",
+                "interval_end_utc": "2026-06-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Vance led the April 2026 Islamabad talks and has publicly said he is prepared to attend a further in-person US-Iran meeting before June 30, 2026. However, that April round ended without agreement and no subsequent qualifying meeting is evidenced, so attendance depends on both governments scheduling and Vance physically participating.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-19",
+                "interval_end": "2026-06-25",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 18,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-19T00:00:00+00:00",
+                "interval_end_utc": "2026-06-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Vance led the April 2026 Islamabad talks and has publicly said he is prepared to attend a further in-person US-Iran meeting before June 30, 2026. However, that April round ended without agreement and no subsequent qualifying meeting is evidenced, so attendance depends on both governments scheduling and Vance physically participating.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-25",
+                "interval_end": "2026-07-01",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 24,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-25T00:00:00+00:00",
+                "interval_end_utc": "2026-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "status": "executed",
+                  "summary": "J.D. Vance publicly reiterated that if a qualifying in-person US–Iran diplomatic meeting is scheduled before June 30, 2026, he stands ready to lead or join the U.S. delegation, consistent with the President's direction and with Iran never getting a nuclear weapon; no meeting was announced."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "pending",
+                  "after": "unmet",
+                  "summary": "no meeting was announced",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "J.D. Vance publicly reiterated that if a qualifying in-person US–Iran diplomatic meeting is scheduled before June 30, 2026, he stands ready to lead or join the U.S. delegation, consistent with the President's direction and with Iran never getting a nuclear weapon; no meeting was announced.",
+                  "date": "2026-06-27"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": "Publicly reiterate that if a qualifying in-person US–Iran diplomatic meeting is scheduled before June 30, 2026, Vance stands ready to lead or join the U.S. delegation, consistent with the President's direction and Iran never getting a nuclear weapon. No meeting is announced here.\n承诺：Conditional readiness to attend a scheduled qualifying meeting; no meeting committed.\n触发或复核条件：A qualifying in-person US–Iran meeting is scheduled and Vance is approved to participate.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reiterate that if a qualifying in-person US–Iran diplomatic meeting is scheduled before June 30, 2026, Vance stands ready to lead or join the U.S. delegation, consistent with the President's direction and Iran never getting a nuclear weapon. No meeting is announced here.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "candidate_id": "agent_7c717a9a0d7b5ee9:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_42468199025e50f2",
+                  "actor_name": "Steve Witkoff",
+                  "candidate_id": "agent_42468199025e50f2:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "The last settled round states no qualifying US–Iran meeting was announced by the June 30 deadline, and Vance's stated willingness to attend is not an actual meeting. The April Islamabad talks predate the window and ended without agreement, so they cannot satisfy the outcome rule.",
+                "evidence_quote": "target_event: unmet. no meeting was announced",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.08,
+          "error": null,
+          "action_path_probability": 0.034991999999999995
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 6,
+        "draw_rounds": 6,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 13,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 6,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 7,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 4,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 2,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.19,
+      "covered_p_yes": 0.19,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.19,
+        0.18999999999999995
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "f83451d7-dfa5-49cb-850d-869fff0e5e9d",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "J.D. Vance",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Public observation of attend",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Participant authorization must be observed in the trajectory",
+          "ready": false
+        }
+      ],
+      "simulation_route": "actor",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:17:34.307823+00:00",
+      "contract_id": "0x7e5228c4aa228752fb75ec1ffcb315a5f2fef812d746ceb6601cee285366d1a8",
+      "forecast_cutoff": "2026-06-07T00:07:21+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "91f4815aa95a9543acea7c61135aaccd10ab99e225ae356a327e4d6119bca32a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 129.631
+    },
+    {
+      "calls": 48,
+      "tokens": 695591,
+      "input_tokens": 669429,
+      "output_tokens": 26162,
+      "accounted_tokens_upper": 695591,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-07",
+                "interval_end": "2026-06-13",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 6,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-07T00:07:21+00:00",
+                "interval_end_utc": "2026-06-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "status": "executed",
+                  "summary": "J.D. Vance publicly stated that, consistent with his April 2026 Islamabad role, he is ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives; he reiterated that Iran cannot have a nuclear weapon."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "he is ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "a next in-person US–Iran diplomatic meeting before June 30, 2026",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "provided the administration authorizes it",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "J.D. Vance publicly stated that, consistent with his April 2026 Islamabad role, he is ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives; he reiterated that Iran cannot have a nuclear weapon.",
+                  "date": "2026-06-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": "Publicly state that, consistent with my April 2026 Islamabad role, I am ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives; reiterate that Iran cannot have a nuclear weapon.\n承诺：Willing to physically attend and actively participate if the meeting is authorized and convened before the deadline.\n触发或复核条件：Requires administration authorization and Iranian participation.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that, consistent with my April 2026 Islamabad role, I am ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives; reiterate that Iran cannot have a nuclear weapon.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "candidate_id": "agent_7c717a9a0d7b5ee9:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_42468199025e50f2",
+                  "actor_name": "Steve Witkoff",
+                  "candidate_id": "agent_42468199025e50f2:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Vance led the April 2026 Islamabad talks and a simulated June 9 statement says he is ready to join a next in-person US–Iran meeting if authorized. But no qualifying meeting is confirmed before June 30, and the April round ended without agreement, so attendance depends on both governments reconvening.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": null,
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-13",
+                "interval_end": "2026-06-19",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 12,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-13T00:00:00+00:00",
+                "interval_end_utc": "2026-06-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "status": "executed",
+                  "summary": "J.D. Vance publicly reaffirmed that, consistent with his April 2026 Islamabad role, he is ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives; he reiterated that Iran cannot have a nuclear weapon."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "he is ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "J.D. Vance publicly reaffirmed that, consistent with his April 2026 Islamabad role, he is ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives; he reiterated that Iran cannot have a nuclear weapon.",
+                  "date": "2026-06-15"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": "Publicly reaffirm that, consistent with my April 2026 Islamabad role, I am ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives; reiterate Iran cannot have a nuclear weapon.\n承诺：Willing to physically attend and actively participate if the meeting is authorized and convened before the deadline.\n触发或复核条件：Requires administration authorization and Iranian participation.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm that, consistent with my April 2026 Islamabad role, I am ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives; reiterate Iran cannot have a nuclear weapon.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "missing_change_driver",
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-19",
+                "interval_end": "2026-06-25",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 18,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-19T00:00:00+00:00",
+                "interval_end_utc": "2026-06-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "status": "executed",
+                  "summary": "J.D. Vance publicly restated that, consistent with his April 2026 Islamabad role, he remains ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives, and he reiterated that Iran cannot have a nuclear weapon."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_3_agent_440ff46ef0bf5e29",
+                    "action_2_agent_440ff46ef0bf5e29"
+                  ],
+                  "outcome": "pending",
+                  "effect": "provided the administration authorizes it and Iran sends authorized representatives"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "he remains ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "provided the administration authorizes it",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "J.D. Vance publicly restated that, consistent with his April 2026 Islamabad role, he remains ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives, and he reiterated that Iran cannot have a nuclear weapon.",
+                  "date": "2026-06-22"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": "Publicly state that, consistent with my April 2026 Islamabad role, I remain ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives; reiterate that Iran cannot have a nuclear weapon.\n承诺：Willing to physically attend and actively participate if the meeting is authorized and convened before the deadline.\n触发或复核条件：Requires administration authorization and Iranian participation.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state that, consistent with my April 2026 Islamabad role, I remain ready to lead or join a U.S. delegation to a next in-person US–Iran diplomatic meeting before June 30, 2026, provided the administration authorizes it and Iran sends authorized representatives; reiterate that Iran cannot have a nuclear weapon.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "missing_change_driver",
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-06-25",
+                "interval_end": "2026-07-01",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 24,
+                "interval_days": 6,
+                "interval_start_utc": "2026-06-25T00:00:00+00:00",
+                "interval_end_utc": "2026-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "candidate_id": "agent_7c717a9a0d7b5ee9:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_7c717a9a0d7b5ee9:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state Iran is prepared to send an authorized delegation, led by Araghchi, to an in-person diplomatic meeting with US representatives before June 30, 2026, contingent on Iran leadership's final approval and US confirmation of venue and format.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_42468199025e50f2",
+                  "actor_name": "Steve Witkoff",
+                  "candidate_id": "agent_42468199025e50f2:initial:2",
+                  "action": null,
+                  "p_selected": 0.45,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Vance repeatedly signaled readiness to lead or join a next in-person US–Iran meeting before June 30, and he headed the April Islamabad talks. But no qualifying meeting is confirmed in the window; the April talks ended without agreement, and authorization plus Iranian participation remain unverified.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.013097700000000002
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 4,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 7,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 3,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 7,
+            "active_actor_count": 3,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 3,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.3,
+      "covered_p_yes": 0.3,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.3,
+        0.30000000000000004
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "72a412c8-bcb6-4b6c-8431-645e4e68cfb1",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "J.D. Vance",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Public observation of attend",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Participant authorization must be observed in the trajectory",
+          "ready": false
+        }
+      ],
+      "simulation_route": "actor",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:07:45.503020+00:00",
+      "contract_id": "0x7e5228c4aa228752fb75ec1ffcb315a5f2fef812d746ceb6601cee285366d1a8",
+      "forecast_cutoff": "2026-06-07T00:07:21+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "91f4815aa95a9543acea7c61135aaccd10ab99e225ae356a327e4d6119bca32a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 124.937
+    },
+    {
+      "calls": 22,
+      "tokens": 337461,
+      "input_tokens": 323538,
+      "output_tokens": 13923,
+      "accounted_tokens_upper": 337461,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-06-07",
+                "interval_end": "2026-07-01",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 24,
+                "interval_days": 24,
+                "interval_start_utc": "2026-06-07T00:07:21+00:00",
+                "interval_end_utc": "2026-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "status": "executed",
+                  "summary": "J.D. Vance publicly stated that he is ready to lead or join the U.S. delegation at any next US–Iran diplomatic meeting before June 30, 2026, provided a meeting is scheduled and he is designated to attend, and restated that Iran 'cannot have a nuclear weapon' remains his bottom line."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "J.D. Vance publicly stated that he is ready to lead or join the U.S. delegation at any next US–Iran diplomatic meeting before June 30, 2026, provided a meeting is scheduled and he is designated to attend, and restated that Iran 'cannot have a nuclear weapon' remains his bottom line.",
+                  "date": "2026-06-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": "Publicly state that I am ready to lead or join the U.S. delegation at any next US–Iran diplomatic meeting before June 30, 2026, provided a meeting is scheduled and I am designated to attend, and that Iran 'cannot have a nuclear weapon' remains my bottom line.\n承诺：Conditional willingness to attend a next qualifying meeting if scheduled and if designated; no unilateral scheduling.\n触发或复核条件：A meeting is scheduled and I am selected/approved to attend.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state that I am ready to lead or join the U.S. delegation at any next US–Iran diplomatic meeting before June 30, 2026, provided a meeting is scheduled and I am designated to attend, and that Iran 'cannot have a nuclear weapon' remains my bottom line.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "candidate_id": "agent_7c717a9a0d7b5ee9:initial:1",
+                  "action": null,
+                  "p_selected": 0.6,
+                  "public_options": [],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_42468199025e50f2",
+                  "actor_name": "Steve Witkoff",
+                  "candidate_id": "agent_42468199025e50f2:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Vance has signaled willingness to lead a future US–Iran delegation, and he headed the April Islamabad talks, showing he is a plausible attendee. But no qualifying next meeting is evidenced before the June 30 deadline, and the April round ended without agreement amid continued hostilities, so attendance remains contingent on an unobserved new meeting.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.22,
+          "error": null,
+          "action_path_probability": 0.132
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-06-07",
+                "interval_end": "2026-07-01",
+                "horizon_end": "2026-07-01",
+                "elapsed_days": 24,
+                "interval_days": 24,
+                "interval_start_utc": "2026-06-07T00:07:21+00:00",
+                "interval_end_utc": "2026-07-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "status": "executed",
+                  "summary": "J.D. Vance publicly stated he is prepared to lead a U.S. delegation to a further round of US–Iran talks if one is scheduled and he is designated, reiterating that Iran cannot have a nuclear weapon; he framed this as conditional readiness, not a commitment to attend a specific event."
+                },
+                {
+                  "action_id": "action_1_agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "status": "executed",
+                  "summary": "Abbas Araghchi publicly stated that Iran is prepared to send an authorized delegation to a further in-person diplomatic meeting with the United States, contingent on Iran's leadership authorization and US agreement on format, venue and timing."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_440ff46ef0bf5e29",
+                    "action_1_agent_7c717a9a0d7b5ee9"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Abbas Araghchi publicly stated that Iran is prepared to send an authorized delegation to a further in-person diplomatic meeting with the United States"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will J.D. Vance attend the next US x Iran diplomatic meeting?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "prepared to lead a U.S. delegation to a further round of US–Iran talks if one is scheduled and he is designated",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "in_person",
+                  "label": "Required observation: in person",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "contingent on Iran's leadership authorization and US agreement on format, venue and timing",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "authorized",
+                  "label": "Required observation: authorized",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "contingent on Iran's leadership authorization",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "public_confirmation",
+                  "label": "Required observation: public confirmation",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "first_in_scope",
+                  "label": "Required observation: first in scope",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "J.D. Vance publicly stated he is prepared to lead a U.S. delegation to a further round of US–Iran talks if one is scheduled and he is designated, reiterating that Iran cannot have a nuclear weapon; he framed this as conditional readiness, not a commitment to attend a specific event.",
+                  "date": "2026-07"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Abbas Araghchi publicly stated that Iran is prepared to send an authorized delegation to a further in-person diplomatic meeting with the United States, contingent on Iran's leadership authorization and US agreement on format, venue and timing.",
+                  "date": "2026-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_440ff46ef0bf5e29",
+                  "actor_name": "J.D. Vance",
+                  "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                  "action": "Publicly state that I am prepared to lead a U.S. delegation to a further round of US–Iran talks if one is scheduled and I am designated, reiterating that Iran cannot have a nuclear weapon. This is a statement of conditional readiness, not a scheduled meeting or commitment to attend a specific event.\n承诺：Conditional readiness only; attendance depends on a scheduled meeting and my designation as delegation head.\n触发或复核条件：A next US–Iran diplomatic meeting is scheduled and I am selected to attend.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_440ff46ef0bf5e29:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that I am prepared to lead a U.S. delegation to a further round of US–Iran talks if one is scheduled and I am designated, reiterating that Iran cannot have a nuclear weapon. This is a statement of conditional readiness, not a scheduled meeting or commitment to attend a specific event.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_7c717a9a0d7b5ee9",
+                  "actor_name": "Abbas Araghchi",
+                  "candidate_id": "agent_7c717a9a0d7b5ee9:initial:1",
+                  "action": "As Iranian Foreign Minister, publicly state that Iran is prepared to send an authorized delegation to a further in-person diplomatic meeting with the United States, and that I would lead or designate the delegation, contingent on Iran's leadership authorization and US agreement on format, venue and timing.\n承诺：Conditional willingness to send an authorized delegation to a qualifying in-person meeting before June 30, 2026, subject to leadership authorization and US agreement.\n触发或复核条件：Iran leadership authorization and US agreement on format, venue and timing.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_7c717a9a0d7b5ee9:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "As Iranian Foreign Minister, publicly state that Iran is prepared to send an authorized delegation to a further in-person diplomatic meeting with the United States, and that I would lead or designate the delegation, contingent on Iran's leadership authorization and US agreement on format, venue and timing.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_42468199025e50f2",
+                  "actor_name": "Steve Witkoff",
+                  "candidate_id": "agent_42468199025e50f2:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Vance led the April Islamabad talks and now signals conditional readiness to lead a further round, while Iran's Araghchi also offers a contingent delegation. But no new qualifying in-person meeting is confirmed before the June 30 deadline, and both sides' statements remain conditional on authorization, format, venue and timing.",
+                "evidence_quote": "Vice President Vance led US delegation, including Jared Kushner and Steve Witkoff, to negotiate with Iran in the Islamabad Talks.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_3.table_0.row_1",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.23099999999999998
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 3,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 3,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.26,
+      "covered_p_yes": 0.26,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.26,
+        0.26
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "05c26379-9dfc-4458-979e-5601e1b99b3f",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "J.D. Vance",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Public observation of attend",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Participant authorization must be observed in the trajectory",
+          "ready": false
+        }
+      ],
+      "simulation_route": "actor",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:08:22.357299+00:00",
+      "contract_id": "0x7e5228c4aa228752fb75ec1ffcb315a5f2fef812d746ceb6601cee285366d1a8",
+      "forecast_cutoff": "2026-06-07T00:07:21+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "91f4815aa95a9543acea7c61135aaccd10ab99e225ae356a327e4d6119bca32a",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 36.854
+    },
+    {
+      "calls": 77,
+      "tokens": 1031257,
+      "input_tokens": 986646,
+      "output_tokens": 44611,
+      "accounted_tokens_upper": 1031257,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.4558802586538461,
+      "coverage": 0.10356746794871796,
+      "unexplored_mass": 0.896432532051282,
+      "unknown_bounds": [
+        0.007663992628205129,
+        0.9040965246794872
+      ],
+      "search_iterations": 7,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 7,
+          "search_value": 0.29495800915750914,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.12798076923076926,
+          "visits": 3,
+          "search_value": 0.3188944444444444,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.12798076923076926,
+          "visits": 2,
+          "search_value": 0.26714166666666667,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.12798076923076926,
+          "visits": 1,
+          "search_value": 0.1118833333333333,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.03135528846153846,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.0021948701923076926
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.02090352564102564,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.0016722820512820513
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.07572195512820516,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.10471153846153848,
+          "visits": 3,
+          "search_value": 0.32635333333333333,
+          "conditional_p_yes": 0.15,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.10471153846153848,
+          "visits": 2,
+          "search_value": 0.27832999999999997,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.10471153846153848,
+          "visits": 1,
+          "search_value": 0.13426,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.030785192307692312,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.002154963461538462
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.02052346153846154,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.001641876923076923
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.05340288461538462,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.7673076923076922,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "ab986b6c-0996-45a7-a8ba-6f7dcee9abeb",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:11:08.932829+00:00",
+      "contract_id": "0x7e5228c4aa228752fb75ec1ffcb315a5f2fef812d746ceb6601cee285366d1a8",
+      "forecast_cutoff": "2026-06-07T00:07:21+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "91f4815aa95a9543acea7c61135aaccd10ab99e225ae356a327e4d6119bca32a",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 166.578
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-06-07T00:07:21+00:00",
+  "forecast_key": "0x7e5228c4aa228752fb75ec1ffcb315a5f2fef812d746ceb6601cee285366d1a8",
+  "group_id": "who-will-attend-the-next-us-x-iran-diplomatic-meeting",
+  "evidence_sha256": "91f4815aa95a9543acea7c61135aaccd10ab99e225ae356a327e4d6119bca32a",
+  "contract_compiler_usage": {
+    "calls": 0,
+    "tokens": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "accounted_tokens_upper": 0,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-06-07",
+        "2026-07-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-06-07",
+        "2026-06-13",
+        "2026-06-19",
+        "2026-06-25",
+        "2026-07-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-06-07",
+        "2026-06-13",
+        "2026-06-19",
+        "2026-06-25",
+        "2026-07-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-06-07",
+        "2026-07-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-06-07",
+        "2026-06-13",
+        "2026-06-19",
+        "2026-06-25",
+        "2026-07-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-07-01T03:59:00+00:00",
+  "deadline_basis": "explicit_contract_deadline",
+  "nominal_market_end": "2026-06-30T00:00:00+00:00",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 3
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_a744e3e5a45b4469",
+          "name": "J.D. Vance",
+          "role": "U.S. Vice President; led U.S. delegation at April 2026 Islamabad talks with Iran and would personally decide whether to attend and participate in the next diplomatic meeting.",
+          "decision_ids": [
+            "vance_attend"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        },
+        {
+          "seat_id": "seat_0ed23e5d28f0130c",
+          "name": "Abbas Araghchi",
+          "role": "Iranian Foreign Minister who led Iran's delegation in prior US-Iran talks and could seek instructions or propose a meeting.",
+          "decision_ids": [
+            "iran_participate"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        },
+        {
+          "seat_id": "seat_6f762c581a8fdcd3",
+          "name": "Steve Witkoff",
+          "role": "U.S. representative in prior US-Iran talks who could consult and propose a meeting with Iranian counterparts.",
+          "decision_ids": [
+            "us_participate"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Current authority for Iran must agree to and send authorized representatives to a qualifying in-person diplomatic meeting with the United States. requires independent evidence; Abbas Araghchi can participate conditionally.",
+        "Current authority for The United States must agree to and send authorized representatives to a qualifying in-person diplomatic meeting with Iran. requires independent evidence; Steve Witkoff can participate conditionally."
+      ],
+      "gaps": [
+        "No source establishes that a next US-Iran diplomatic meeting is scheduled or that either government has committed to one after the April 2026 Islamabad talks.",
+        "Vance's current intention to attend any future meeting is unknown; his prior role as delegation head does not guarantee attendance."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "vance_attend",
+          "choice": "J.D. Vance must be physically present and actively participating in the next qualifying US-Iran diplomatic meeting by June 30, 2026.",
+          "owner": "J.D. Vance",
+          "support": "represented"
+        },
+        {
+          "id": "iran_participate",
+          "choice": "Iran must agree to and send authorized representatives to a qualifying in-person diplomatic meeting with the United States.",
+          "owner": "Abbas Araghchi",
+          "support": "conditional"
+        },
+        {
+          "id": "us_participate",
+          "choice": "The United States must agree to and send authorized representatives to a qualifying in-person diplomatic meeting with Iran.",
+          "owner": "Steve Witkoff",
+          "support": "conditional"
+        }
+      ],
+      "gap_repair": {
+        "status": "participants_added",
+        "added": 2
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 45,
+    "tokens": 172168,
+    "input_tokens": 152540,
+    "output_tokens": 19628,
+    "accounted_tokens_upper": 172168,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

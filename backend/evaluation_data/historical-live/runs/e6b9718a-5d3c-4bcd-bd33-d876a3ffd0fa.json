@@ -1,0 +1,1552 @@
+{
+  "run_id": "e6b9718a-5d3c-4bcd-bd33-d876a3ffd0fa",
+  "case_id": "market_40bd1c908f30c7ff05ce418c",
+  "status": "partial",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 8945,
+      "input_tokens": 8935,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 8945,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.62,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.62,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 8935,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:33:38.302979+00:00",
+      "contract_id": "0xde52badd52a816ddd596afd002b63920df38788e2223817c84e63f13099918de",
+      "forecast_cutoff": "2026-02-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "40d6d442361ac14df7db5c06aabbb026383166bb125f54a8c60bfeb576f72050",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.728
+    },
+    {
+      "calls": 2,
+      "tokens": 17890,
+      "input_tokens": 17870,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 17890,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.62,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.62,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 8935,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.62,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 8935,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:33:39.863020+00:00",
+      "contract_id": "0xde52badd52a816ddd596afd002b63920df38788e2223817c84e63f13099918de",
+      "forecast_cutoff": "2026-02-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "40d6d442361ac14df7db5c06aabbb026383166bb125f54a8c60bfeb576f72050",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.559
+    },
+    {
+      "calls": 12,
+      "tokens": 244007,
+      "input_tokens": 230414,
+      "output_tokens": 13593,
+      "accounted_tokens_upper": 244007,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [],
+          "branches": [],
+          "status": "failed",
+          "p_yes": null,
+          "error": "ValueError: Execution quote must identify its registered subject at the start of the quoted action",
+          "action_path_probability": null
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 0,
+        "active_rounds": 0,
+        "draw_rounds": 0,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 0,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 0,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 0,
+        "valid_estimate_coverage": 0.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 0,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 0,
+        "public_trajectory_samples": 0,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 0,
+            "active_rounds": 0,
+            "draw_rounds": 0,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 0,
+            "active_actor_count": 0,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": false,
+            "outcome_observed": false,
+            "conditional_only": false
+          }
+        ],
+        "warnings": [
+          {
+            "code": "limited_actor_coverage",
+            "message": "Fewer than two of the supplied actors participated in recorded decisions. This does not require every actor to act."
+          }
+        ]
+      },
+      "p_yes": null,
+      "covered_p_yes": null,
+      "coverage": 0.0,
+      "unknown_bounds": [
+        0.0,
+        1.0
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 1,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": true,
+      "status": "failed",
+      "error": "ValueError: Execution quote must identify its registered subject at the start of the quoted action",
+      "planned_samples": 1,
+      "simulation_run_id": "51282548-ad9b-48bf-94f1-60067d770241",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:35:47.158667+00:00",
+      "contract_id": "0xde52badd52a816ddd596afd002b63920df38788e2223817c84e63f13099918de",
+      "forecast_cutoff": "2026-02-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "40d6d442361ac14df7db5c06aabbb026383166bb125f54a8c60bfeb576f72050",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 72.34
+    },
+    {
+      "calls": 40,
+      "tokens": 687961,
+      "input_tokens": 665725,
+      "output_tokens": 22236,
+      "accounted_tokens_upper": 687961,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 2,
+                "interval_start": "2026-02-05",
+                "interval_end": "2026-02-06",
+                "horizon_end": "2026-02-08",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2026-02-05T23:59:59+00:00",
+                "interval_end_utc": "2026-02-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_65f441451c8a5e75",
+                  "actor_name": "Liberal Democratic Party (LDP)",
+                  "status": "executed",
+                  "summary": "The Liberal Democratic Party (LDP) intensified final-week campaigning on its fiscal, security and foreign land-acquisition platform, concentrating party resources and endorsements on marginal single-member districts to convert undecided and no-party voters, aiming to secure at least 233 single-party seats on 8 February."
+                },
+                {
+                  "action_id": "action_1_agent_630363c450ed5239",
+                  "actor_name": "Japanese voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will LDP win a majority in the 2026 Japanese snap election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "aiming to secure at least 233 single-party seats on 8 February",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Liberal Democratic Party (LDP) intensified final-week campaigning on its fiscal, security and foreign land-acquisition platform, concentrating party resources and endorsements on marginal single-member districts to convert undecided and no-party voters, aiming to secure at least 233 single-party seats on 8 February.",
+                  "date": "2026-02-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_65f441451c8a5e75",
+                  "actor_name": "Liberal Democratic Party (LDP)",
+                  "candidate_id": "agent_65f441451c8a5e75:initial:1",
+                  "action": "LDP intensifies final-week campaigning on its fiscal, security and foreign land-acquisition platform, concentrating party resources and endorsements on marginal single-member districts to convert undecided and no-party voters, aiming to secure at least 233 single-party seats on 8 February.\n承诺：Commit to a final get-out-the-vote push through election day, 8 February 2026.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_65f441451c8a5e75:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "LDP intensifies final-week campaigning on its fiscal, security and foreign land-acquisition platform, concentrating party resources and endorsements on marginal single-member districts to convert undecided and no-party voters, aiming to secure at least 233 single-party seats on 8 February.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_65f441451c8a5e75:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "LDP officials publicly restate that the party is contesting to win a single-party majority of at least 233 seats while declining to endorse the leaked 260-seat projection, framing the race as competitive and urging supporters to turn out.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b09f8ab1fcd954c8",
+                  "actor_name": "Sanae Takaichi",
+                  "candidate_id": "agent_b09f8ab1fcd954c8:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b09f8ab1fcd954c8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a final public campaign appeal to voters ahead of the 8 February vote, framing the election as a mandate on my leadership and the LDP's fiscal and security agenda, and urging undecided voters to back the LDP so the ruling bloc secures a lower-house majority.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_630363c450ed5239",
+                  "actor_name": "Japanese voters",
+                  "candidate_id": "agent_630363c450ed5239:initial:1",
+                  "action": "Japanese voters await the 8 February 2026 general election and cast ballots then; no collective electoral act occurs in this round before polling day.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_630363c450ed5239:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Japanese voters await the 8 February 2026 general election and cast ballots then; no collective electoral act occurs in this round before polling day.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Polling shows LDP vote share around 27-42% with leads of 4-27 points over the new CRA, and party officials reportedly assume at least a single majority of 233 seats. But the CRA merger consolidates opposition and historical precedent shows LDP lost its majority in 2024 amid scandal, so a majority is plausible but not assured.",
+                "evidence_quote": "Kyodo News\n|1,062\n|  |38.7\n| colspan=\"2\" |12.9\n|5.4\n|9.9\n|1.8\n|2.7\n|4.7\n|1\n|0.7\n|2.1\n|0.6\n|15.3\n|4.2\n| style=\"background:; color:white\" |23.4",
+                "change_driver": null,
+                "evidence_ref": "history_2.table_1.row_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 2,
+                "interval_start": "2026-02-06",
+                "interval_end": "2026-02-08",
+                "horizon_end": "2026-02-08",
+                "elapsed_days": 3,
+                "interval_days": 2,
+                "interval_start_utc": "2026-02-06T00:00:00+00:00",
+                "interval_end_utc": "2026-02-08T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will LDP win a majority in the 2026 Japanese snap election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Final polls show LDP vote share around 29-42% with large no-party blocs; the party itself reportedly assumes at least 233 seats, but the CRA merger and 2024 precedent of only 191 seats make a single-party majority uncertain. No election result is yet observed.",
+                "evidence_quote": "|Kyodo News\n|1,062\n| |29.2\n|11.9\n|5.5\n|8.4\n|1.8\n|2\n|4.3\n|1\n|0.9\n|2.5\n|0.3\n| style=\"background:#EEEEEE;\" |30.5\n|1.7\n| style=\"background: |1.3",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_2.table_0.row_5",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.21
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 2,
+                "interval_start": "2026-02-05",
+                "interval_end": "2026-02-06",
+                "horizon_end": "2026-02-08",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2026-02-05T23:59:59+00:00",
+                "interval_end_utc": "2026-02-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_65f441451c8a5e75",
+                  "actor_name": "Liberal Democratic Party (LDP)",
+                  "status": "executed",
+                  "summary": "The Liberal Democratic Party issued a final-stretch campaign appeal to voters, emphasizing increased spending and tax cuts under 'responsible yet aggressive fiscal policy', a new security strategy, and tighter rules on foreign acquisition of housing and land, and urging voters to deliver a single-party LDP majority of at least 233 seats."
+                },
+                {
+                  "action_id": "action_1_agent_b09f8ab1fcd954c8",
+                  "actor_name": "Sanae Takaichi",
+                  "status": "executed",
+                  "summary": "Sanae Takaichi issued a final-stretch public appeal urging voters to back the LDP on 8 February as a mandate for the cabinet's fiscal and security agenda, and reiterated that she will resign as prime minister if the ruling bloc does not win a majority."
+                },
+                {
+                  "action_id": "action_1_agent_630363c450ed5239",
+                  "actor_name": "Japanese voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_65f441451c8a5e75",
+                    "action_1_agent_b09f8ab1fcd954c8"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Sanae Takaichi issued a final-stretch public appeal urging voters to back the LDP on 8 February"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_65f441451c8a5e75",
+                    "action_1_agent_630363c450ed5239"
+                  ],
+                  "outcome": "pending",
+                  "effect": "urging voters to deliver a single-party LDP majority of at least 233 seats"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will LDP win a majority in the 2026 Japanese snap election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The Liberal Democratic Party issued a final-stretch campaign appeal to voters, emphasizing increased spending and tax cuts under 'responsible yet aggressive fiscal policy', a new security strategy, and tighter rules on foreign acquisition of housing and land, and urging voters to deliver a single-party LDP majority of at least 233 seats.",
+                  "date": "2026-02-06"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Sanae Takaichi issued a final-stretch public appeal urging voters to back the LDP on 8 February as a mandate for the cabinet's fiscal and security agenda, and reiterated that she will resign as prime minister if the ruling bloc does not win a majority.",
+                  "date": "2026-02-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_65f441451c8a5e75",
+                  "actor_name": "Liberal Democratic Party (LDP)",
+                  "candidate_id": "agent_65f441451c8a5e75:initial:1",
+                  "action": "Issue a final-stretch campaign appeal to Japanese voters emphasizing the LDP platform: increased spending and tax cuts under 'responsible yet aggressive fiscal policy', a new security strategy, and tighter rules on foreign acquisition of housing and land. Urge voters to deliver a single-party LDP majority of at least 233 seats.\n承诺：Publicly commits to the stated platform priorities through election day on 8 February 2026.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_65f441451c8a5e75:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a final-stretch campaign appeal to Japanese voters emphasizing the LDP platform: increased spending and tax cuts under 'responsible yet aggressive fiscal policy', a new security strategy, and tighter rules on foreign acquisition of housing and land. Urge voters to deliver a single-party LDP majority of at least 233 seats.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_65f441451c8a5e75:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Direct LDP prefectural chapters to mobilize candidate networks and supporters for turnout through election day, prioritizing close single-member districts where the merged Centrist Reform Alliance consolidates opposition votes.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b09f8ab1fcd954c8",
+                  "actor_name": "Sanae Takaichi",
+                  "candidate_id": "agent_b09f8ab1fcd954c8:initial:1",
+                  "action": "Issue a final-stretch public appeal to voters to back the LDP on 8 February, framing the vote as a mandate for the cabinet's fiscal and security agenda and reiterating that she will resign as prime minister if the ruling bloc does not win a majority.\n承诺：Reiterates the conditional resignation pledge tied to the ruling bloc failing to win a majority.\n触发或复核条件：Before polls close on 8 February 2026.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b09f8ab1fcd954c8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a final-stretch public appeal to voters to back the LDP on 8 February, framing the vote as a mandate for the cabinet's fiscal and security agenda and reiterating that she will resign as prime minister if the ruling bloc does not win a majority.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_630363c450ed5239",
+                  "actor_name": "Japanese voters",
+                  "candidate_id": "agent_630363c450ed5239:initial:1",
+                  "action": "Cast no public act this round; the electorate's only decisive move is balloting on 8 February 2026, which is outside this round's window.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_630363c450ed5239:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Cast no public act this round; the electorate's only decisive move is balloting on 8 February 2026, which is outside this round's window.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Final polls show LDP vote share around 29-42%, with a new CRA merger consolidating opposition. LDP's own officials reportedly assume at least a single majority of 233 seats, but the CRA merger and prior 2024 losses make a single-party majority uncertain.",
+                "evidence_quote": "LDP officials said that \"260 seats seems like too much in reality\", and that \"within the party, it's assumed that at least a single majority of 233 seats will be won\".",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 2,
+                "interval_start": "2026-02-06",
+                "interval_end": "2026-02-08",
+                "horizon_end": "2026-02-08",
+                "elapsed_days": 3,
+                "interval_days": 2,
+                "interval_start_utc": "2026-02-06T00:00:00+00:00",
+                "interval_end_utc": "2026-02-08T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will LDP win a majority in the 2026 Japanese snap election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Final polls show LDP support around 29–42%, with the new CRA merger consolidating opposition and LDP's own officials assuming only a bare 233-seat single majority. The election result is unobserved at the horizon, so seat conversion from vote share remains the key unknown.",
+                "evidence_quote": "|Kyodo News\n|1,062\n| |29.2\n|11.9\n|5.5\n|8.4\n|1.8\n|2\n|4.3\n|1\n|0.9\n|2.5\n|0.3\n| style=\"background:#EEEEEE;\" |30.5\n|1.7\n| style=\"background: |1.3",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2.table_0.row_5",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.42
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 4,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 6,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 2,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 2,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.42,
+      "covered_p_yes": 0.42,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.42,
+        0.41999999999999993
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "bcaa1ef3-aa6c-4918-a052-af6017702bc9",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:35:25.511436+00:00",
+      "contract_id": "0xde52badd52a816ddd596afd002b63920df38788e2223817c84e63f13099918de",
+      "forecast_cutoff": "2026-02-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "40d6d442361ac14df7db5c06aabbb026383166bb125f54a8c60bfeb576f72050",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 52.078
+    },
+    {
+      "calls": 19,
+      "tokens": 317823,
+      "input_tokens": 308673,
+      "output_tokens": 9150,
+      "accounted_tokens_upper": 317823,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 2,
+                "interval_start": "2026-02-05",
+                "interval_end": "2026-02-06",
+                "horizon_end": "2026-02-08",
+                "elapsed_days": 1,
+                "interval_days": 1,
+                "interval_start_utc": "2026-02-05T23:59:59+00:00",
+                "interval_end_utc": "2026-02-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_65f441451c8a5e75",
+                  "actor_name": "Liberal Democratic Party (LDP)",
+                  "status": "executed",
+                  "summary": "The Liberal Democratic Party issued a final-stretch public campaign appeal urging turnout and emphasizing its fiscal, security and foreign land-acquisition platform, framing the contest as a choice for stable single-party LDP governance and reiterating that it seeks at least 233 seats."
+                },
+                {
+                  "action_id": "action_1_agent_630363c450ed5239",
+                  "actor_name": "Japanese voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will LDP win a majority in the 2026 Japanese snap election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "reiterating that it seeks at least 233 seats",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The Liberal Democratic Party issued a final-stretch public campaign appeal urging turnout and emphasizing its fiscal, security and foreign land-acquisition platform, framing the contest as a choice for stable single-party LDP governance and reiterating that it seeks at least 233 seats.",
+                  "date": "2026-02-06"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_65f441451c8a5e75",
+                  "actor_name": "Liberal Democratic Party (LDP)",
+                  "candidate_id": "agent_65f441451c8a5e75:initial:1",
+                  "action": "Issue a final-stretch public campaign appeal to voters, urging turnout and emphasizing the LDP's fiscal, security and land-acquisition platform; frame the contest as a choice for stable single-party LDP governance and reiterate that the party seeks at least 233 seats.\n承诺：LDP commits to campaigning through the 8 February 2026 election on its published platform and to seeking a single-party majority of at least 233 seats.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_65f441451c8a5e75:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a final-stretch public campaign appeal to voters, urging turnout and emphasizing the LDP's fiscal, security and land-acquisition platform; frame the contest as a choice for stable single-party LDP governance and reiterate that the party seeks at least 233 seats.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b09f8ab1fcd954c8",
+                  "actor_name": "Sanae Takaichi",
+                  "candidate_id": "agent_b09f8ab1fcd954c8:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b09f8ab1fcd954c8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a final-stretch public campaign appeal to voters: ask for a clear LDP majority on 8 February, framing the vote as a mandate for the cabinet's spending, tax-cut and security agenda, and restate that she will resign as prime minister if the ruling bloc does not win a majority.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_630363c450ed5239",
+                  "actor_name": "Japanese voters",
+                  "candidate_id": "agent_630363c450ed5239:initial:1",
+                  "action": "Cast no collective public statement this round; the electorate's decision mechanism is the 8 February ballot, already scheduled, and no new outward act is feasible before voting.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_630363c450ed5239:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Cast no collective public statement this round; the electorate's decision mechanism is the 8 February ballot, already scheduled, and no new outward act is feasible before voting.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "Polling shows LDP vote share around 27-42% with leads over the new CRA, and party officials reportedly assume at least a single majority of 233 seats. However, the CDP-Komeito merger creates a substantial rival bloc, and the 2024 precedent of losing the majority plus the slush-fund legacy keep the outcome genuinely uncertain.",
+                "evidence_quote": "In response to an apparently leaked LDP projection of the results of an election, LDP officials said that \"260 seats seems like too much in reality\", and that \"within the party, it's assumed that at least a single majority of 233 seats will be won\".",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 2,
+                "interval_start": "2026-02-06",
+                "interval_end": "2026-02-08",
+                "horizon_end": "2026-02-08",
+                "elapsed_days": 3,
+                "interval_days": 2,
+                "interval_start_utc": "2026-02-06T00:00:00+00:00",
+                "interval_end_utc": "2026-02-08T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will LDP win a majority in the 2026 Japanese snap election?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Polling before the vote shows LDP party-list support mostly in the high 20s to low 40s, with several firms near 30-36%, while the new CRA bloc consolidates opposition. LDP officials themselves reportedly assume at least 233 seats, but that is an internal expectation, not a result; no election outcome is yet measured.",
+                "evidence_quote": "|Kyodo News\n|1,062\n| |29.2\n|11.9\n|5.5\n|8.4\n|1.8\n|2\n|4.3\n|1\n|0.9\n|2.5\n|0.3\n| style=\"background:#EEEEEE;\" |30.5\n|1.7\n| style=\"background: |1.3",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_2.table_0.row_5",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.21
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 1,
+        "sampled_decisions": 3,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 2,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.42,
+      "covered_p_yes": 0.42,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.42,
+        0.41999999999999993
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "da4c82c7-0480-4798-9ba6-45e5b51314fb",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:15:00.469216+00:00",
+      "contract_id": "0xde52badd52a816ddd596afd002b63920df38788e2223817c84e63f13099918de",
+      "forecast_cutoff": "2026-02-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "40d6d442361ac14df7db5c06aabbb026383166bb125f54a8c60bfeb576f72050",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 43.644
+    },
+    {
+      "calls": 23,
+      "tokens": 399653,
+      "input_tokens": 385731,
+      "output_tokens": 13922,
+      "accounted_tokens_upper": 399653,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-02-05",
+                "interval_end": "2026-02-08",
+                "horizon_end": "2026-02-08",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2026-02-05T23:59:59+00:00",
+                "interval_end_utc": "2026-02-08T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_630363c450ed5239",
+                  "actor_name": "Japanese voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will LDP win a majority in the 2026 Japanese snap election?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_65f441451c8a5e75",
+                  "actor_name": "Liberal Democratic Party (LDP)",
+                  "candidate_id": "agent_65f441451c8a5e75:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_65f441451c8a5e75:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a final-stretch public statement reaffirming the LDP's closing campaign message—'responsible yet aggressive fiscal policy,' tax cuts, a new security strategy, and tighter rules on foreign land acquisition—and urging supporters to turn out on 8 February, while declining to endorse any specific seat projection.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b09f8ab1fcd954c8",
+                  "actor_name": "Sanae Takaichi",
+                  "candidate_id": "agent_b09f8ab1fcd954c8:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b09f8ab1fcd954c8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a final-days public appeal to voters framing the 8 February snap election as a referendum on her leadership and the ruling bloc's majority, urging turnout and support for LDP candidates on the party's platform of increased spending, tax cuts and a tougher security posture.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_630363c450ed5239",
+                  "actor_name": "Japanese voters",
+                  "candidate_id": "agent_630363c450ed5239:initial:1",
+                  "action": "Take no collective outward act before the 8 February 2026 vote; the electorate's only decisive move is casting ballots, which occurs at the election itself rather than in this pre-election round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_630363c450ed5239:initial:1",
+                      "weight": 85.0,
+                      "probability": 1.0,
+                      "action": "Take no collective outward act before the 8 February 2026 vote; the electorate's only decisive move is casting ballots, which occurs at the election itself rather than in this pre-election round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Polling averages put LDP support in the low-to-mid 30s, with the new CRA merger consolidating opposition and several polls showing large 'no party' shares. LDP officials reportedly assume at least a single majority of 233 seats, but no election result exists at the horizon, so seat conversion remains uncertain.",
+                "evidence_quote": "|Kyodo News\n|1,062\n| |29.2\n|11.9\n|5.5\n|8.4\n|1.8\n|2\n|4.3\n|1\n|0.9\n|2.5\n|0.3\n| style=\"background:#EEEEEE;\" |30.5\n|1.7\n| style=\"background: |1.3",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_2.table_0.row_5",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.12
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-02-05",
+                "interval_end": "2026-02-08",
+                "horizon_end": "2026-02-08",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2026-02-05T23:59:59+00:00",
+                "interval_end_utc": "2026-02-08T14:59:59+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_65f441451c8a5e75",
+                  "actor_name": "Liberal Democratic Party (LDP)",
+                  "status": "executed",
+                  "summary": "The Liberal Democratic Party issued a final-stretch public appeal urging voters to back the LDP on 8 February, emphasizing its 'responsible yet aggressive fiscal policy' of increased spending and tax cuts, a new security strategy, and tighter rules on foreign land acquisition, and urging supporters to turn out."
+                },
+                {
+                  "action_id": "action_1_agent_b09f8ab1fcd954c8",
+                  "actor_name": "Sanae Takaichi",
+                  "status": "executed",
+                  "summary": "Sanae Takaichi issued a final campaign-day statement to LDP candidates and supporters urging maximum turnout and framing the snap election as a referendum on her leadership, restating that she will resign as prime minister if the ruling bloc does not win a majority."
+                },
+                {
+                  "action_id": "action_1_agent_630363c450ed5239",
+                  "actor_name": "Japanese voters",
+                  "status": "executed",
+                  "summary": "Japanese voters cast ballots in the 8 February 2026 general election, allocating House of Representatives seats among the LDP, the Centrist Reform Alliance and other parties under existing election law and schedule."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_65f441451c8a5e75",
+                    "action_1_agent_b09f8ab1fcd954c8"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Sanae Takaichi issued a final campaign-day statement to LDP candidates and supporters urging maximum turnout"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_65f441451c8a5e75",
+                    "action_1_agent_630363c450ed5239"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Japanese voters cast ballots in the 8 February 2026 general election"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will LDP win a majority in the 2026 Japanese snap election?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Japanese voters cast ballots in the 8 February 2026 general election",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The Liberal Democratic Party issued a final-stretch public appeal urging voters to back the LDP on 8 February, emphasizing its 'responsible yet aggressive fiscal policy' of increased spending and tax cuts, a new security strategy, and tighter rules on foreign land acquisition, and urging supporters to turn out.",
+                  "date": "2026-02-06"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Sanae Takaichi issued a final campaign-day statement to LDP candidates and supporters urging maximum turnout and framing the snap election as a referendum on her leadership, restating that she will resign as prime minister if the ruling bloc does not win a majority.",
+                  "date": "2026-02-07"
+                },
+                {
+                  "id": "sim_0002_001_003",
+                  "text": "Japanese voters cast ballots in the 8 February 2026 general election, allocating House of Representatives seats among the LDP, the Centrist Reform Alliance and other parties under existing election law and schedule.",
+                  "date": "2026-02-08"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_65f441451c8a5e75",
+                  "actor_name": "Liberal Democratic Party (LDP)",
+                  "candidate_id": "agent_65f441451c8a5e75:initial:1",
+                  "action": "Issue a final-stretch public appeal to voters to back the LDP on 8 February, emphasizing the 'responsible yet aggressive fiscal policy' platform of increased spending and tax cuts, the new security strategy, and tighter rules on foreign land acquisition, and urging supporters to turn out.\n承诺：LDP contests the 8 February election on its published platform and seeks a single-party majority of at least 233 seats.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_65f441451c8a5e75:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a final-stretch public appeal to voters to back the LDP on 8 February, emphasizing the 'responsible yet aggressive fiscal policy' platform of increased spending and tax cuts, the new security strategy, and tighter rules on foreign land acquisition, and urging supporters to turn out.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_b09f8ab1fcd954c8",
+                  "actor_name": "Sanae Takaichi",
+                  "candidate_id": "agent_b09f8ab1fcd954c8:initial:1",
+                  "action": "Issue a final campaign-day statement to LDP candidates and supporters urging maximum turnout and reiterating that the snap election is a referendum on her leadership; restate that she will resign as prime minister if the ruling bloc does not win a majority.\n承诺：Resign as prime minister if the ruling bloc fails to win a majority.\n触发或复核条件：Before polls open on 8 February 2026.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_b09f8ab1fcd954c8:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a final campaign-day statement to LDP candidates and supporters urging maximum turnout and reiterating that the snap election is a referendum on her leadership; restate that she will resign as prime minister if the ruling bloc does not win a majority.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_b09f8ab1fcd954c8:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "No new outward move this round; let the campaign conclude and await the 8 February vote count.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_630363c450ed5239",
+                  "actor_name": "Japanese voters",
+                  "candidate_id": "agent_630363c450ed5239:initial:1",
+                  "action": "The Japanese electorate casts ballots in the 8 February 2026 general election, allocating House of Representatives seats among the LDP, the Centrist Reform Alliance and other parties. Voting proceeds under existing election law with no change to eligibility or schedule.\n承诺：Ballots are cast and counted as scheduled on 8 February 2026; seat totals follow official results.\n触发或复核条件：Election held as called for 8 February 2026.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_630363c450ed5239:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "The Japanese electorate casts ballots in the 8 February 2026 general election, allocating House of Representatives seats among the LDP, the Centrist Reform Alliance and other parties. Voting proceeds under existing election law with no change to eligibility or schedule.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.42,
+                "basis": "Final pre-election polls show LDP vote share around 27–42% with leads of 4–27 points, but seat projections are uncertain and the CRA merger threatens single-member districts. No election result is reported; the outcome remains unverified at the horizon.",
+                "evidence_quote": "|\n|Nikkei/TV Tokyo\n|977\n| |40\n|13\n|7\n|9\n|2\n|2\n|7\n|1\n|0\n|2\n|–\n|10\n|5\n|style=\"background:; color:white\" |27",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_2.table_0.row_6",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.42,
+          "error": null,
+          "action_path_probability": 0.48999999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.42,
+      "covered_p_yes": 0.42,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.42,
+        0.41999999999999993
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "39b19093-1bb1-46d2-bd09-07c486c280c7",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:15:44.520352+00:00",
+      "contract_id": "0xde52badd52a816ddd596afd002b63920df38788e2223817c84e63f13099918de",
+      "forecast_cutoff": "2026-02-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "40d6d442361ac14df7db5c06aabbb026383166bb125f54a8c60bfeb576f72050",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 44.051
+    },
+    {
+      "calls": 28,
+      "tokens": 439169,
+      "input_tokens": 423264,
+      "output_tokens": 15905,
+      "accounted_tokens_upper": 439169,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.461535,
+      "coverage": 0.7,
+      "unexplored_mass": 0.30000000000000004,
+      "unknown_bounds": [
+        0.31153499999999995,
+        0.6115349999999999
+      ],
+      "search_iterations": 3,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 3,
+          "search_value": 0.885592,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.48999999999999994,
+          "visits": 1,
+          "search_value": 0.9900000000000001,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.48999999999999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.45,
+          "frontier": true,
+          "contribution": 0.22049999999999997
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.21,
+          "visits": 1,
+          "search_value": 0.9814200000000002,
+          "conditional_p_yes": 0.45,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.1155,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.42,
+          "frontier": true,
+          "contribution": 0.04851
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.0945,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.45,
+          "frontier": true,
+          "contribution": 0.042525
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "922ca90a-8379-4034-8b80-33625206cf8d",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:16:59.582794+00:00",
+      "contract_id": "0xde52badd52a816ddd596afd002b63920df38788e2223817c84e63f13099918de",
+      "forecast_cutoff": "2026-02-05T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "40d6d442361ac14df7db5c06aabbb026383166bb125f54a8c60bfeb576f72050",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 75.062
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-02-05T23:59:59+00:00",
+  "forecast_key": "0xde52badd52a816ddd596afd002b63920df38788e2223817c84e63f13099918de",
+  "group_id": "will-ldp-win-a-majority-in-the-2026-japanese-snap-election",
+  "evidence_sha256": "40d6d442361ac14df7db5c06aabbb026383166bb125f54a8c60bfeb576f72050",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 824,
+    "input_tokens": 708,
+    "output_tokens": 116,
+    "accounted_tokens_upper": 824,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-02-05",
+        "2026-02-08"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 2,
+      "boundaries": [
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-08"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 2,
+      "boundaries": [
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-08"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-02-05",
+        "2026-02-08"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 2,
+      "boundaries": [
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-08"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-02-08T14:59:59+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2026-02-08T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 3
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_ff2834b3306799b2",
+          "name": "Sanae Takaichi",
+          "role": "Prime Minister who decided to dissolve the House of Representatives and call the snap election; announced resignation if ruling bloc fails to win majority.",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_a659a25c644e69b4",
+          "name": "Liberal Democratic Party (LDP)",
+          "role": "Party contesting the election; instructed prefectural chapters to register candidates and campaigned on policy platform.",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_2b5077b89c2eb2a5",
+          "name": "Japanese voters",
+          "role": "Voters who cast ballots in the general election, determining seat allocation.",
+          "decision_ids": [
+            "D3"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No named incumbent identified for the Ministry of Internal Affairs and Communications role; treated as government office.",
+        "The market resolution depends on official results, but the specific reporting entity is not a decision seat."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Prime Minister decides to dissolve the House of Representatives and call the snap election.",
+          "owner": "Sanae Takaichi",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "LDP decides to contest the election and registers candidates.",
+          "owner": "Liberal Democratic Party (LDP)",
+          "support": "represented"
+        },
+        {
+          "id": "D3",
+          "choice": "Voters cast ballots determining the number of seats won by each party.",
+          "owner": "Japanese voters",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 9,
+    "tokens": 77396,
+    "input_tokens": 72676,
+    "output_tokens": 4720,
+    "accounted_tokens_upper": 77396,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

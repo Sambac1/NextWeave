@@ -1,0 +1,3470 @@
+{
+  "run_id": "8b490549-33ca-410c-9de9-16a5faaa4adb",
+  "case_id": "market_c8367c94cb3602e7044a9511",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3850,
+      "input_tokens": 3840,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3850,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3840,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:11:02.753488+00:00",
+      "contract_id": "0x97c0b1316b8d9ba677414e8a682948e7560c1af60fc239b085a68cc467c21f23",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ff90bde8c56b692145476a1550e12861499435d239fdc6c2c5152e6571179b40",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.395
+    },
+    {
+      "calls": 2,
+      "tokens": 7700,
+      "input_tokens": 7680,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 7700,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.42,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3840,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.42,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3840,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:11:05.597803+00:00",
+      "contract_id": "0x97c0b1316b8d9ba677414e8a682948e7560c1af60fc239b085a68cc467c21f23",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ff90bde8c56b692145476a1550e12861499435d239fdc6c2c5152e6571179b40",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 2.843
+    },
+    {
+      "calls": 15,
+      "tokens": 180626,
+      "input_tokens": 173510,
+      "output_tokens": 7116,
+      "accounted_tokens_upper": 180626,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-04-01",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 509,
+                "interval_days": 509,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-04-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "status": "executed",
+                  "summary": "Alberto Núñez Feijóo publicly stated he is ready to be the PP's candidate for Prime Minister and to accept nomination as formateur if the King proposes him after the 29 November 2026 election, conditional on PP being in a position to command a congressional majority, and called on Vox and other parties to respect the result and allow a stable right-wing government."
+                },
+                {
+                  "action_id": "action_1_agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "status": "executed",
+                  "summary": "Felipe VI publicly stated that after the 29 November election he will hold consultations and formally propose whichever candidate can command the Congress of Deputies' confidence, applying the same neutral standard as in 2023, without prejudging any name."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_5beb81ac451257ad",
+                    "action_1_agent_e3f886b858f4513e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "after the 29 November election he will hold consultations and formally propose whichever candidate can command the Congress of Deputies' confidence"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_d4eda8871abf552e",
+                    "action_1_agent_e3f886b858f4513e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "formally propose whichever candidate can command the Congress of Deputies' confidence"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "ready to be the PP's candidate for Prime Minister and to accept nomination as formateur if the King proposes him after the 29 November 2026 election",
+                  "pending_actor_ids": [
+                    "agent_5beb81ac451257ad"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Alberto Núñez Feijóo publicly stated he is ready to be the PP's candidate for Prime Minister and to accept nomination as formateur if the King proposes him after the 29 November 2026 election, conditional on PP being in a position to command a congressional majority, and called on Vox and other parties to respect the result and allow a stable right-wing government.",
+                  "date": "2028-04"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Felipe VI publicly stated that after the 29 November election he will hold consultations and formally propose whichever candidate can command the Congress of Deputies' confidence, applying the same neutral standard as in 2023, without prejudging any name.",
+                  "date": "2028-04"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                  "action": "Publicly state that I am ready to be the PP's candidate for Prime Minister and to accept nomination as formateur if the King proposes me after the 29 November election, while calling on Vox and other parties to respect the result and allow a stable right-wing government.\n承诺：I will accept the King's nomination and seek investiture if PP is in a position to command a congressional majority.\n触发或复核条件：After the 29 November 2026 election result is known.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state that I am ready to be the PP's candidate for Prime Minister and to accept nomination as formateur if the King proposes me after the 29 November election, while calling on Vox and other parties to respect the result and allow a stable right-wing government.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:supplement:1",
+                      "action": "Publicly state that I am ready to be the PP's candidate for Prime Minister and to accept nomination as formateur if the King proposes me after the 29 November election, while calling on Vox and other parties to respect the result and allow a stable right-wing government.",
+                      "code": "duplicate"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                  "action": "Take no procedural step this round: the Congress cannot schedule an investiture vote until the King formally proposes a candidate after the 29 November 2026 election, and no such proposal is in evidence.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no procedural step this round: the Congress cannot schedule an investiture vote until the King formally proposes a candidate after the 29 November 2026 election, and no such proposal is in evidence.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement that the Congress will process any investiture nomination strictly per standing procedure and will not prejudge the vote before the King's formal proposal and the debate.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:supplement:1",
+                  "action": "Publicly state that after the 29 November election I will hold consultations and formally propose whichever candidate can command the Congress of Deputies' confidence, applying the same neutral standard as in 2023, without prejudging any name.\n承诺：I will propose only a candidate who can plausibly command Congress's confidence, after consultations.\n触发或复核条件：After the 29 November 2026 election and constitution of the new Congress.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:2",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state that after the 29 November election I will conduct consultations and propose whichever candidate can command the Congress of Deputies' confidence, applying the same neutral standard used in 2023, without prejudging any name.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:supplement:1",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that after the 29 November election I will hold consultations and formally propose whichever candidate can command the Congress of Deputies' confidence, applying the same neutral standard as in 2023, without prejudging any name.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                      "action": "Take no nomination step now. The 2026 election is set for 29 November 2026; the King's constitutional duty to propose a candidate arises only after the new Congress is constituted and parliamentary consultations occur, and no result or consultation request is documented yet.",
+                      "code": "program_rejected"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Feijóo's willingness to be candidate and the King's neutral nomination standard are only prerequisites; the decisive step is a Congress confidence vote, which failed in 2023 and requires a majority not shown in evidence. No election result or investiture vote is settled, so the outcome remains unverified.",
+                "evidence_quote": "Feijóo was appointed government formateur following the 2023 election; however, his investiture ultimately failed.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.11549999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "c4e07c14-cc8c-4ea0-a79c-b7425fb3d003",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:12:19.533591+00:00",
+      "contract_id": "0x97c0b1316b8d9ba677414e8a682948e7560c1af60fc239b085a68cc467c21f23",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ff90bde8c56b692145476a1550e12861499435d239fdc6c2c5152e6571179b40",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 73.934
+    },
+    {
+      "calls": 27,
+      "tokens": 359924,
+      "input_tokens": 341986,
+      "output_tokens": 17938,
+      "accounted_tokens_upper": 359924,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-04-01",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 509,
+                "interval_days": 509,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-04-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "status": "executed",
+                  "summary": "Alberto Núñez Feijóo publicly declared himself available to be nominated as candidate for Prime Minister and said he would seek the Congress's confidence if the King proposes him after the 29 November election, calling on Vox and other groups to state their post-election position on supporting a PP-led government."
+                },
+                {
+                  "action_id": "action_1_agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "status": "executed",
+                  "summary": "Felipe VI publicly stated that, following parliamentary consultations after the 29 November election, he will propose the candidate with the clearest demonstrated support in the Congress of Deputies, and that Feijóo will be proposed if the PP bloc can show a viable path to a confidence majority."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_5beb81ac451257ad",
+                    "action_1_agent_e3f886b858f4513e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Feijóo will be proposed if the PP bloc can show a viable path to a confidence majority"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_e3f886b858f4513e",
+                    "action_1_agent_d4eda8871abf552e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "he will propose the candidate with the clearest demonstrated support in the Congress of Deputies"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Feijóo will be proposed if the PP bloc can show a viable path to a confidence majority",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Alberto Núñez Feijóo publicly declared himself available to be nominated as candidate for Prime Minister and said he would seek the Congress's confidence if the King proposes him after the 29 November election, calling on Vox and other groups to state their post-election position on supporting a PP-led government.",
+                  "date": "2028-04"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Felipe VI publicly stated that, following parliamentary consultations after the 29 November election, he will propose the candidate with the clearest demonstrated support in the Congress of Deputies, and that Feijóo will be proposed if the PP bloc can show a viable path to a confidence majority.",
+                  "date": "2028-04"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                  "action": "Publicly declare that I am available to be nominated as candidate for Prime Minister and will seek the Congress's confidence if the King proposes me after the 29 November election, while calling on Vox and other groups to state their post-election position on supporting a PP-led government.\n承诺：I will accept nomination and seek investiture if formally proposed by the King.\n触发或复核条件：After the 29 November 2026 election and the King's consultations.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Publicly declare that I am available to be nominated as candidate for Prime Minister and will seek the Congress's confidence if the King proposes me after the 29 November election, while calling on Vox and other groups to state their post-election position on supporting a PP-led government.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:supplement:1",
+                      "action": "Publicly declare that I am available to be nominated as candidate for Prime Minister and will seek the Congress's confidence if the King proposes me after the 29 November election, while calling on Vox and other groups to state their post-election position on supporting a PP-led government.",
+                      "code": "duplicate"
+                    }
+                  ]
+                },
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                  "action": "Hold no investiture action this round. Monitor the certified 29 November 2026 election results and any formal royal nomination; the chamber acts only after the King proposes a candidate and the speaker schedules the debate.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Hold no investiture action this round. Monitor the certified 29 November 2026 election results and any formal royal nomination; the chamber acts only after the King proposes a candidate and the speaker schedules the debate.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a public statement that the Congress will follow constitutional procedure: it will debate and vote on whichever candidate the King formally proposes, and will grant confidence only on the required majority. No candidate is endorsed at this stage.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:initial:2",
+                  "action": "Publicly state that, following parliamentary consultations after the 29 November election, I will propose the candidate with the clearest demonstrated support in the Congress of Deputies, and that Feijóo will be proposed if the PP bloc can show a viable path to a confidence majority.\n触发或复核条件：Only if consultations occur and bloc support is ascertainable.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no nomination step now: the 29 November 2026 election result and post-election parliamentary consultations are not yet documented, so no candidate can be formally proposed. Hold the nomination decision until the Congress is constituted and party leaders have been consulted.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that, following parliamentary consultations after the 29 November election, I will propose the candidate with the clearest demonstrated support in the Congress of Deputies, and that Feijóo will be proposed if the PP bloc can show a viable path to a confidence majority.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Feijóo's public willingness to be nominated and the King's conditional statement that he would propose Feijóo only if the PP bloc shows a viable confidence majority are the only in-window signals. No vote of confidence or swearing-in is observed, and the 2023 precedent shows Feijóo failed investiture despite being formateur, so the decisive Congress hurdle remains unknown.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly declared himself available to be nominated as candidate for Prime Minister and said he would seek the Congress's confidence if the King proposes him after the 29 November election, calling on Vox and other groups to state their post-election position on supporting a PP-led government.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.24
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2028-04-01",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 509,
+                "interval_days": 509,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2028-04-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "status": "executed",
+                  "summary": "Felipe VI publicly reaffirmed that consultations with all party leaders will open only after the 29 November election is certified and the new Congress is constituted, and that he will propose a candidate able to command a Congress majority, without pre-committing to any individual now."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_e3f886b858f4513e",
+                    "action_1_agent_d4eda8871abf552e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "Felipe VI publicly reaffirmed that consultations with all party leaders will open only after the 29 November election is certified and the new Congress is constituted"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Felipe VI publicly reaffirmed that consultations with all party leaders will open only after the 29 November election is certified and the new Congress is constituted",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Felipe VI publicly reaffirmed that consultations with all party leaders will open only after the 29 November election is certified and the new Congress is constituted, and that he will propose a candidate able to command a Congress majority, without pre-committing to any individual now.",
+                  "date": "2028-04"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly declare that I am ready to be the PP's candidate for Prime Minister and will accept nomination as formateur if the King proposes me after the 29 November election, calling on PP, Vox and other groups to support a stable right-wing government.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                  "action": "Take no procedural step until the King formally proposes a candidate for investiture after the 29 November 2026 election; the chamber cannot schedule an investiture vote without a nomination.\n触发或复核条件：A candidate is formally proposed by Felipe VI.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no procedural step until the King formally proposes a candidate for investiture after the 29 November 2026 election; the chamber cannot schedule an investiture vote without a nomination.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:supplement:2",
+                  "action": "Publicly reaffirm that after the 29 November election is certified and the new Congress constituted, I will open consultations with all party leaders and propose a candidate able to command a Congress majority, without pre-committing to any individual now.\n承诺：Consultations begin only after certified results and a constituted Congress; the proposal goes to whichever candidate can plausibly win a confidence vote.\n触发或复核条件：Certified election results and a constituted Congress.",
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:2",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state that, once the 29 November election results are certified and the new Congress constituted, I will open consultations with all party leaders and propose a candidate for investiture who can command a Congress majority, without pre-committing to any individual.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:supplement:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publicly reaffirm that after the 29 November election is certified and the new Congress constituted, I will open consultations with all party leaders and propose a candidate able to command a Congress majority, without pre-committing to any individual now.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                      "action": "Take no nomination step now: the 29 November 2026 election has not yet been held and no parliamentary consultations are pending, so there is no candidate to propose this round.",
+                      "code": "program_rejected"
+                    }
+                  ]
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The only in-window evidence is that the King will open consultations only after the 29 November election is certified and the new Congress constituted, without pre-committing to any candidate. Feijóo's 2023 investiture failed (172-178), and no post-election seat count, nomination, or confidence vote is observed, so his path to a Congress majority remains unverified.",
+                "evidence_quote": "Felipe VI publicly reaffirmed that consultations with all party leaders will open only after the 29 November election is certified and the new Congress is constituted, and that he will propose a candidate able to command a Congress majority, without pre-committing to any individual now.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.0315
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 3,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 2,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "3ad70046-69df-4051-8e72-74f56f907eda",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:13:09.874265+00:00",
+      "contract_id": "0x97c0b1316b8d9ba677414e8a682948e7560c1af60fc239b085a68cc467c21f23",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ff90bde8c56b692145476a1550e12861499435d239fdc6c2c5152e6571179b40",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 50.339
+    },
+    {
+      "calls": 62,
+      "tokens": 785831,
+      "input_tokens": 751992,
+      "output_tokens": 33839,
+      "accounted_tokens_upper": 785831,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-11",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 63,
+                "interval_days": 63,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "status": "executed",
+                  "summary": "Alberto Núñez Feijóo publicly claimed the PP's mandate from the 29 November election and stated he is ready to be nominated as candidate for Prime Minister, urging the King to open consultations and Congress to respect the plurality; he committed to accept nomination as formateur and seek investiture if the King proposes him, conditional on the result giving PP the largest bloc."
+                },
+                {
+                  "action_id": "action_1_agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "conditional on the result giving PP the largest bloc",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Alberto Núñez Feijóo publicly claimed the PP's mandate from the 29 November election and stated he is ready to be nominated as candidate for Prime Minister, urging the King to open consultations and Congress to respect the plurality; he committed to accept nomination as formateur and seek investiture if the King proposes him, conditional on the result giving PP the largest bloc.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                  "action": "Publicly claim the PP's mandate from the 29 November election and state I am ready to be nominated as candidate for Prime Minister, urging the King to open consultations and Congress to respect the plurality.\n承诺：I will accept nomination as formateur and seek investiture if the King proposes me.\n触发或复核条件：Only if the election result gives PP the largest bloc; no result is yet in the packet.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly claim the PP's mandate from the 29 November election and state I am ready to be nominated as candidate for Prime Minister, urging the King to open consultations and Congress to respect the plurality.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly signal openness to a PP-Vox governing arrangement on the pledged right-wing reform agenda, while leaving the door open to Junts, to build a working majority before any investiture vote.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                  "action": "Take no vote this round: the Congress cannot schedule or hold an investiture vote until the King formally proposes a candidate after the 29 November 2026 election and the chamber's composition is known.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no vote this round: the Congress cannot schedule or hold an investiture vote until the King formally proposes a candidate after the 29 November 2026 election and the chamber's composition is known.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly state that the Congress will, upon receiving the King's formal proposal, schedule an investiture debate and vote on that candidate, applying the constitutional majority requirement, without prejudging the outcome.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:supplement:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly announce that, once the 29 November 2026 election results are certified, the King will open consultations with the leaders of the parties represented in the new Congress to identify a candidate able to command a majority, without naming any candidate in advance.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                      "action": "Hold the formal nomination decision until the 29 November 2026 election results are certified and the new Congress is constituted, then conduct the customary round of consultations with party leaders before proposing any candidate for investiture.",
+                      "code": "program_rejected"
+                    },
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:supplement:2",
+                      "action": "Publicly announce that, once the 29 November 2026 election results are certified, the King will open consultations with the leaders of the parties represented in the new Congress to identify a candidate able to command a majority, without naming any candidate in advance.",
+                      "code": "duplicate"
+                    }
+                  ],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Feijóo remains PP leader and has signaled willingness to seek investiture after the 29 November election, but the contract requires a Congress confidence vote and formal swearing-in by March 2028. His 2023 investiture failed for lack of a majority, and no evidence shows a secured parliamentary majority or completed investiture.",
+                "evidence_quote": "Feijóo was appointed government formateur following the 2023 election; however, his investiture ultimately failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-01-11",
+                "interval_end": "2027-03-16",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 127,
+                "interval_days": 64,
+                "interval_start_utc": "2027-01-11T00:00:00+00:00",
+                "interval_end_utc": "2027-03-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Feijóo remains PP leader and has signaled willingness to seek investiture after the 29 November election, but the contract requires a Congress confidence vote and formal swearing-in by March 2028. His 2023 investiture failed for lack of a majority, and no evidence shows a secured parliamentary majority or completed investiture.",
+                "evidence_quote": "Feijóo was appointed government formateur following the 2023 election; however, his investiture ultimately failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-03-16",
+                "interval_end": "2027-05-18",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 190,
+                "interval_days": 63,
+                "interval_start_utc": "2027-03-16T00:00:00+00:00",
+                "interval_end_utc": "2027-05-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Feijóo remains PP leader and has signaled willingness to seek investiture after the 29 November election, but the contract requires a Congress confidence vote and formal swearing-in by March 2028. His 2023 investiture failed for lack of a majority, and no evidence shows a secured parliamentary majority or completed investiture.",
+                "evidence_quote": "Feijóo was appointed government formateur following the 2023 election; however, his investiture ultimately failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-05-18",
+                "interval_end": "2027-07-21",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 254,
+                "interval_days": 64,
+                "interval_start_utc": "2027-05-18T00:00:00+00:00",
+                "interval_end_utc": "2027-07-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_4_agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "status": "partial",
+                  "summary": "Felipe VI moved to formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, conditional on certified results giving the PP the largest parliamentary bloc and consultations having concluded; the formal proposal was not executed because the stated condition was not established as met."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_e3f886b858f4513e",
+                    "action_4_agent_d4eda8871abf552e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "the formal proposal was not executed because the stated condition was not established as met"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "conditional on certified results giving the PP the largest parliamentary bloc and consultations having concluded",
+                  "pending_actor_ids": [
+                    "agent_e3f886b858f4513e"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Felipe VI moved to formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, conditional on certified results giving the PP the largest parliamentary bloc and consultations having concluded; the formal proposal was not executed because the stated condition was not established as met.",
+                  "date": "2027-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:3",
+                  "action": null,
+                  "p_selected": 0.1,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reiterate that PP holds the plurality mandate and that I am ready to be nominated and to seek investiture, calling on Congress to respect the plurality and on other parties to allow a government to form rather than force deadlock.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                  "action": "Take no procedural step this round: the Congress cannot schedule or hold an investiture vote until the King formally proposes a candidate and the chamber's post-election composition is known.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no procedural step this round: the Congress cannot schedule or hold an investiture vote until the King formally proposes a candidate and the chamber's post-election composition is known.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Speaker issues a public statement that the Congress stands ready to convene an investiture debate promptly once the King formally proposes a candidate, and calls on the King to open consultations without further delay.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                  "action": "After concluding the customary round of consultations with party leaders, formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, triggering the investiture debate and vote.\n承诺：Propose Feijóo as formateur once consultations are complete, provided the certified results give PP the largest parliamentary bloc.\n触发或复核条件：Certified election results give PP the largest bloc and consultations have concluded.",
+                  "p_selected": 0.65,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                      "weight": 65.0,
+                      "probability": 0.65,
+                      "action": "After concluding the customary round of consultations with party leaders, formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, triggering the investiture debate and vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Feijóo's 2023 investiture failed and the simulated 2027 royal proposal was not executed because the PP-largest-bloc condition was not established as met. His public claim of a mandate is willingness, not a confidence vote or swearing-in, so the path to office remains blocked at the nomination stage.",
+                "evidence_quote": "Felipe VI moved to formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, conditional on certified results giving the PP the largest parliamentary bloc and consultations having concluded; the formal proposal was not executed because the stated condition was not established as met.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-21",
+                "interval_end": "2027-09-23",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 318,
+                "interval_days": 64,
+                "interval_start_utc": "2027-07-21T00:00:00+00:00",
+                "interval_end_utc": "2027-09-23T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_e3f886b858f4513e"
+                  ]
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, concluding the consultation round and triggering the investiture debate and vote.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Feijóo's 2023 investiture failed and the simulated 2027 royal proposal was not executed because the PP-largest-bloc condition was not established as met. His public claim of a mandate is willingness, not a confidence vote or swearing-in, so the path to office remains blocked at the nomination stage.",
+                "evidence_quote": "Felipe VI moved to formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, conditional on certified results giving the PP the largest parliamentary bloc and consultations having concluded; the formal proposal was not executed because the stated condition was not established as met.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-23",
+                "interval_end": "2027-11-25",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 381,
+                "interval_days": 63,
+                "interval_start_utc": "2027-09-23T00:00:00+00:00",
+                "interval_end_utc": "2027-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_e3f886b858f4513e"
+                  ]
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Feijóo's 2023 investiture failed and the simulated 2027 royal proposal was not executed because the PP-largest-bloc condition was not established as met. His public claim of a mandate is willingness, not a confidence vote or swearing-in, so the path to office remains blocked at the nomination stage.",
+                "evidence_quote": "Felipe VI moved to formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, conditional on certified results giving the PP the largest parliamentary bloc and consultations having concluded; the formal proposal was not executed because the stated condition was not established as met.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-25",
+                "interval_end": "2028-01-28",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 445,
+                "interval_days": 64,
+                "interval_start_utc": "2027-11-25T00:00:00+00:00",
+                "interval_end_utc": "2028-01-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": [
+                    "agent_e3f886b858f4513e"
+                  ]
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly reiterate that PP holds the largest bloc and that I remain ready to be nominated as formateur, and call on the King to conclude consultations and formally propose me so Congress can vote on investiture without further delay.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                  "action": "Take no procedural step this round: no candidate has been formally proposed by the King, so the Congress has nothing to schedule or vote on; the chamber remains ready to convene an investiture debate and apply the required majority once a proposal is executed.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no procedural step this round: no candidate has been formally proposed by the King, so the Congress has nothing to schedule or vote on; the chamber remains ready to convene an investiture debate and apply the required majority once a proposal is executed.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Feijóo's 2023 investiture failed and the simulated 2027 royal proposal was not executed because the PP-largest-bloc condition was not established as met. His public claim of a mandate is willingness, not a confidence vote or swearing-in, so the path to office remains blocked at the nomination stage.",
+                "evidence_quote": "Felipe VI moved to formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, conditional on certified results giving the PP the largest parliamentary bloc and consultations having concluded; the formal proposal was not executed because the stated condition was not established as met.",
+                "change_driver": "validated_state",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-01-28",
+                "interval_end": "2028-04-01",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 509,
+                "interval_days": 64,
+                "interval_start_utc": "2028-01-28T00:00:00+00:00",
+                "interval_end_utc": "2028-04-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_8_agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "status": "executed",
+                  "summary": "Felipe VI formally proposed Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, triggering the investiture debate, stating that consultations had concluded and that certified results give the PP the largest parliamentary bloc."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_8_agent_e3f886b858f4513e",
+                    "action_4_agent_e3f886b858f4513e"
+                  ],
+                  "outcome": "realized",
+                  "effect": "stating that consultations had concluded and that certified results give the PP the largest parliamentary bloc"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Felipe VI formally proposed Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, triggering the investiture debate",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_008_001",
+                  "text": "Felipe VI formally proposed Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, triggering the investiture debate, stating that consultations had concluded and that certified results give the PP the largest parliamentary bloc.",
+                  "date": "2028-04"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                  "action": "Formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, triggering the investiture debate, now that consultations have concluded and the certified results give the PP the largest parliamentary bloc.\n承诺：Propose Feijóo as formateur on the basis of certified PP plurality and concluded consultations.\n触发或复核条件：Certified results give PP the largest bloc and consultations have concluded.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Formally propose Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, triggering the investiture debate, now that consultations have concluded and the certified results give the PP the largest parliamentary bloc.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "Feijóo's willingness and the King's formal proposal in April 2028 are documented, but the proposal came at the very end of the contract window, leaving no evidence of a Congress confidence vote or swearing-in. His 2023 investiture failed, and no in-window vote of confidence is recorded.",
+                "evidence_quote": "Felipe VI formally proposed Alberto Núñez Feijóo to the Congress of Deputies as candidate for Prime Minister, triggering the investiture debate, stating that consultations had concluded and that certified results give the PP the largest parliamentary bloc.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_008_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.0008828819999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 5,
+        "draw_rounds": 5,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 10,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 3,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 5,
+            "draw_rounds": 5,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 10,
+            "active_actor_count": 3,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 3,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "fb940ad1-5242-46b7-b50c-854c06835474",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:16:16.463680+00:00",
+      "contract_id": "0x97c0b1316b8d9ba677414e8a682948e7560c1af60fc239b085a68cc467c21f23",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ff90bde8c56b692145476a1550e12861499435d239fdc6c2c5152e6571179b40",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 186.585
+    },
+    {
+      "calls": 147,
+      "tokens": 1834722,
+      "input_tokens": 1758193,
+      "output_tokens": 76529,
+      "accounted_tokens_upper": 1834722,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-11",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 63,
+                "interval_days": 63,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "status": "executed",
+                  "summary": "Alberto Núñez Feijóo publicly stated that he is ready to be nominated as candidate for Prime Minister and will seek Congress's confidence, calling on PP's parliamentary group and potential allies to support an investiture once the 29 November 2026 election result is known."
+                },
+                {
+                  "action_id": "action_1_agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "Alberto Núñez Feijóo publicly stated that he is ready to be nominated as candidate for Prime Minister and will seek Congress's confidence",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Alberto Núñez Feijóo publicly stated that he is ready to be nominated as candidate for Prime Minister and will seek Congress's confidence, calling on PP's parliamentary group and potential allies to support an investiture once the 29 November 2026 election result is known.",
+                  "date": "2027-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                  "action": "Publicly state that I am ready to be nominated as candidate for Prime Minister and will seek Congress's confidence, calling on PP's parliamentary group and potential allies to support an investiture once the 29 November result is known.\n承诺：I will accept the King's nomination as formateur and seek a vote of confidence in Congress.\n触发或复核条件：After the 29 November 2026 election result is known.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly state that I am ready to be nominated as candidate for Prime Minister and will seek Congress's confidence, calling on PP's parliamentary group and potential allies to support an investiture once the 29 November result is known.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                  "action": "Take no procedural step this round: the Congress cannot schedule an investiture debate or vote until the King formally proposes a candidate after post-election consultations. Hold the chamber ready to convene once a nomination is transmitted.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no procedural step this round: the Congress cannot schedule an investiture debate or vote until the King formally proposes a candidate after post-election consultations. Hold the chamber ready to convene once a nomination is transmitted.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement that the Congress will process any King-proposed candidate strictly per the investiture procedure, will not prejudge the vote, and calls on all groups to refrain from casting doubt on the electoral process or the chamber's impartiality ahead of the new legislature.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:supplement:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "After consultations, formally propose Alberto Núñez Feijóo as candidate for Prime Minister to the Congress of Deputies, on the condition that the certified 2026 results show PP as the largest party able to command a plausible majority.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:supplement:2",
+                      "action": "After consultations, formally propose Alberto Núñez Feijóo as candidate for Prime Minister to the Congress of Deputies, on the condition that certified 2026 results show PP as the largest party able to command a plausible majority.",
+                      "code": "duplicate"
+                    }
+                  ],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Feijóo's stated readiness to seek Congress's confidence is only a candidacy signal; the contract requires an actual confidence vote and swearing-in by March 2028. His 2023 investiture failed, and no evidence shows a parliamentary majority or King's nomination secured.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly stated that he is ready to be nominated as candidate for Prime Minister and will seek Congress's confidence, calling on PP's parliamentary group and potential allies to support an investiture once the 29 November 2026 election result is known.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-01-11",
+                "interval_end": "2027-03-16",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 127,
+                "interval_days": 64,
+                "interval_start_utc": "2027-01-11T00:00:00+00:00",
+                "interval_end_utc": "2027-03-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "status": "executed",
+                  "summary": "Alberto Núñez Feijóo publicly reaffirmed his readiness to accept the King's nomination as formateur and to seek Congress's confidence, and called on PP's parliamentary group and Vox to reach the understanding needed for a majority once results are certified."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_5beb81ac451257ad",
+                    "action_2_agent_5beb81ac451257ad"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Alberto Núñez Feijóo publicly reaffirmed his readiness to accept the King's nomination as formateur and to seek Congress's confidence"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Alberto Núñez Feijóo publicly reaffirmed his readiness to accept the King's nomination as formateur and to seek Congress's confidence",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Alberto Núñez Feijóo publicly reaffirmed his readiness to accept the King's nomination as formateur and to seek Congress's confidence, and called on PP's parliamentary group and Vox to reach the understanding needed for a majority once results are certified.",
+                  "date": "2027-03"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                  "action": "Publicly reaffirm my readiness to accept the King's nomination as formateur and seek Congress's confidence, and call on PP's parliamentary group and Vox to reach the understanding needed for a majority once results are certified.\n承诺：I will accept nomination as formateur and seek a vote of confidence in Congress.\n触发或复核条件：Once the election result is certified and the King opens consultations.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly reaffirm my readiness to accept the King's nomination as formateur and seek Congress's confidence, and call on PP's parliamentary group and Vox to reach the understanding needed for a majority once results are certified.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.2,
+                "basis": "Feijóo's public readiness to seek investiture is only a candidacy signal; the contract requires a Congress confidence vote and swearing-in by March 2028. His 2023 investiture failed, and no evidence shows a secured majority or completed vote, so the estimate stays modestly above the prior.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly reaffirmed his readiness to accept the King's nomination as formateur and to seek Congress's confidence, and called on PP's parliamentary group and Vox to reach the understanding needed for a majority once results are certified.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-03-16",
+                "interval_end": "2027-05-18",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 190,
+                "interval_days": 63,
+                "interval_start_utc": "2027-03-16T00:00:00+00:00",
+                "interval_end_utc": "2027-05-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                  "action": null,
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Publicly call on PP's parliamentary group and Vox to conclude a concrete understanding sufficient for a second-round simple majority, and state I will present that pact to Congress when nominated.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.2,
+                "basis": "Feijóo's public readiness to seek investiture is only a candidacy signal; the contract requires a Congress confidence vote and swearing-in by March 2028. His 2023 investiture failed, and no evidence shows a secured majority or completed vote, so the estimate stays modestly above the prior.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly reaffirmed his readiness to accept the King's nomination as formateur and to seek Congress's confidence, and called on PP's parliamentary group and Vox to reach the understanding needed for a majority once results are certified.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-05-18",
+                "interval_end": "2027-07-21",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 254,
+                "interval_days": 64,
+                "interval_start_utc": "2027-05-18T00:00:00+00:00",
+                "interval_end_utc": "2027-07-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Issue a public statement that the Congress stands ready to convene an investiture debate and vote as soon as the King formally proposes a candidate, and that any candidate must secure the required majority.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.2,
+                "basis": "Feijóo's public readiness to seek investiture is only a candidacy signal; the contract requires a Congress confidence vote and swearing-in by March 2028. His 2023 investiture failed, and no evidence shows a secured majority or completed vote, so the estimate stays modestly above the prior.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly reaffirmed his readiness to accept the King's nomination as formateur and to seek Congress's confidence, and called on PP's parliamentary group and Vox to reach the understanding needed for a majority once results are certified.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-21",
+                "interval_end": "2027-09-23",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 318,
+                "interval_days": 64,
+                "interval_start_utc": "2027-07-21T00:00:00+00:00",
+                "interval_end_utc": "2027-09-23T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.2,
+                "basis": "Feijóo's public readiness to seek investiture is only a candidacy signal; the contract requires a Congress confidence vote and swearing-in by March 2028. His 2023 investiture failed, and no evidence shows a secured majority or completed vote, so the estimate stays modestly above the prior.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly reaffirmed his readiness to accept the King's nomination as formateur and to seek Congress's confidence, and called on PP's parliamentary group and Vox to reach the understanding needed for a majority once results are certified.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-23",
+                "interval_end": "2027-11-25",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 381,
+                "interval_days": 63,
+                "interval_start_utc": "2027-09-23T00:00:00+00:00",
+                "interval_end_utc": "2027-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_6_agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "status": "executed",
+                  "summary": "Alberto Núñez Feijóo publicly pressed PP's parliamentary group and Vox to conclude a governing understanding sufficient for a second-round simple majority, restating his conditional readiness to be nominated as formateur and to seek Congress's confidence once results are certified and the King opens consultations."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_6_agent_5beb81ac451257ad",
+                    "action_2_agent_5beb81ac451257ad"
+                  ],
+                  "outcome": "pending",
+                  "effect": "restating his conditional readiness to be nominated as formateur and to seek Congress's confidence once results are certified and the King opens consultations"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "restating his conditional readiness to be nominated as formateur and to seek Congress's confidence once results are certified and the King opens consultations",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_006_001",
+                  "text": "Alberto Núñez Feijóo publicly pressed PP's parliamentary group and Vox to conclude a governing understanding sufficient for a second-round simple majority, restating his conditional readiness to be nominated as formateur and to seek Congress's confidence once results are certified and the King opens consultations.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                  "action": "Publicly press PP's parliamentary group and Vox to conclude a governing understanding sufficient for a second-round simple majority, restating my conditional readiness to be nominated and to seek Congress's confidence.\n承诺：I will accept nomination as formateur and seek a vote of confidence in Congress.\n触发或复核条件：Once results are certified and the King opens consultations.",
+                  "p_selected": 0.35,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                      "weight": 35.0,
+                      "probability": 0.35,
+                      "action": "Publicly press PP's parliamentary group and Vox to conclude a governing understanding sufficient for a second-round simple majority, restating my conditional readiness to be nominated and to seek Congress's confidence.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.17,
+                "basis": "Feijóo's repeated public readiness to be nominated and seek confidence is only willingness, not parliamentary approval; his 2023 investiture failed. No settled event shows a certified result, King's nomination, or Congress confidence vote, so the chance he is sworn in by the deadline remains modest.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly pressed PP's parliamentary group and Vox to conclude a governing understanding sufficient for a second-round simple majority, restating his conditional readiness to be nominated as formateur and to seek Congress's confidence once results are certified and the King opens consultations.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_006_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-25",
+                "interval_end": "2028-01-28",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 445,
+                "interval_days": 64,
+                "interval_start_utc": "2027-11-25T00:00:00+00:00",
+                "interval_end_utc": "2028-01-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                  "action": null,
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Speaker issues a public statement that the Congress stands ready to schedule an investiture debate promptly upon receiving the King's formal nomination, and calls on parties to clarify their voting positions so the chamber can act without delay.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly announce that, having completed parliamentary consultations, I formally propose Alberto Núñez Feijóo as candidate for Prime Minister to the Congress of Deputies so he may seek its confidence.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.17,
+                "basis": "Feijóo's repeated public readiness to be nominated and seek confidence is only willingness, not parliamentary approval; his 2023 investiture failed. No settled event shows a certified result, King's nomination, or Congress confidence vote, so the chance he is sworn in by the deadline remains modest.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly pressed PP's parliamentary group and Vox to conclude a governing understanding sufficient for a second-round simple majority, restating his conditional readiness to be nominated as formateur and to seek Congress's confidence once results are certified and the King opens consultations.",
+                "change_driver": null,
+                "evidence_ref": "sim_0001_006_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-01-28",
+                "interval_end": "2028-04-01",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 509,
+                "interval_days": 64,
+                "interval_start_utc": "2028-01-28T00:00:00+00:00",
+                "interval_end_utc": "2028-04-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Feijóo's repeated public readiness to be nominated and seek Congress's confidence is only willingness, not an executed investiture; no vote of confidence or swearing-in is recorded. The 2023 precedent shows his investiture failed (172-178), and the 2027 evidence still describes a pending, conditional path requiring PP-Vox agreement and the King's nomination.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly pressed PP's parliamentary group and Vox to conclude a governing understanding sufficient for a second-round simple majority, restating his conditional readiness to be nominated as formateur and to seek Congress's confidence once results are certified and the King opens consultations.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_006_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.22,
+          "error": null,
+          "action_path_probability": 0.015400254099999995
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2026-11-09",
+                "interval_end": "2027-01-11",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 63,
+                "interval_days": 63,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2027-01-11T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                  "action": "Hold off on any new public candidacy statement until the 29 November 2026 election results and seat arithmetic are known, then reassess nomination and investiture strategy.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly declare that I am ready to be the PP's candidate for Prime Minister and will accept the King's nomination as formateur if the 29 November 2026 results give the right bloc the seats to sustain an investiture, while calling on PP and Vox to coordinate on a single candidacy.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Hold off on any new public candidacy statement until the 29 November 2026 election results and seat arithmetic are known, then reassess nomination and investiture strategy.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:2",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                      "action": "Congress takes no investiture step this round; the chamber waits for Felipe VI to conclude consultations and formally propose a candidate, after which the speaker would schedule the investiture debate and vote.",
+                      "code": "program_rejected"
+                    }
+                  ],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Feijóo remains PP leader and the 2026 election gives him a plausible path, but the contract requires a Congress confidence vote and formal swearing-in by March 2028. His 2023 investiture failed for lack of a majority, and no evidence shows a secured coalition or scheduled investiture.",
+                "evidence_quote": "Feijóo was appointed government formateur following the 2023 election; however, his investiture ultimately failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-01-11",
+                "interval_end": "2027-03-16",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 127,
+                "interval_days": 64,
+                "interval_start_utc": "2027-01-11T00:00:00+00:00",
+                "interval_end_utc": "2027-03-16T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Feijóo remains PP leader and the 2026 election gives him a plausible path, but the contract requires a Congress confidence vote and formal swearing-in by March 2028. His 2023 investiture failed for lack of a majority, and no evidence shows a secured coalition or scheduled investiture.",
+                "evidence_quote": "Feijóo was appointed government formateur following the 2023 election; however, his investiture ultimately failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-03-16",
+                "interval_end": "2027-05-18",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 190,
+                "interval_days": 63,
+                "interval_start_utc": "2027-03-16T00:00:00+00:00",
+                "interval_end_utc": "2027-05-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Feijóo remains PP leader and the 2026 election gives him a plausible path, but the contract requires a Congress confidence vote and formal swearing-in by March 2028. His 2023 investiture failed for lack of a majority, and no evidence shows a secured coalition or scheduled investiture.",
+                "evidence_quote": "Feijóo was appointed government formateur following the 2023 election; however, his investiture ultimately failed.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-05-18",
+                "interval_end": "2027-07-21",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 254,
+                "interval_days": 64,
+                "interval_start_utc": "2027-05-18T00:00:00+00:00",
+                "interval_end_utc": "2027-07-21T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "status": "executed",
+                  "summary": "Alberto Núñez Feijóo publicly declared that he is willing to be the PP's candidate for Prime Minister and to seek the King's nomination and Congress's confidence, calling on Vox and other groups to open investiture talks with the PP now that the election result is known."
+                },
+                {
+                  "action_id": "action_4_agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "status": "unknown",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "publicly declared that he is willing to be the PP's candidate for Prime Minister",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "Alberto Núñez Feijóo publicly declared that he is willing to be the PP's candidate for Prime Minister and to seek the King's nomination and Congress's confidence, calling on Vox and other groups to open investiture talks with the PP now that the election result is known.",
+                  "date": "2027-07"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                  "action": "Publicly declare that I am willing to be the PP's candidate for Prime Minister and to seek the King's nomination and Congress's confidence, calling on Vox and other groups to open investiture talks with PP now that the election result is known.\n承诺：If formally nominated by the King, I will present myself for investiture before the Congress of Deputies.\n触发或复核条件：Once post-election seat arithmetic is public and the King opens consultations.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly declare that I am willing to be the PP's candidate for Prime Minister and to seek the King's nomination and Congress's confidence, calling on Vox and other groups to open investiture talks with PP now that the election result is known.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:2",
+                  "action": null,
+                  "p_selected": 0.15,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Congress of Deputies takes no investiture action this round: no debate is scheduled and no vote is held, because no candidate has been formally proposed by the King in the current evidence.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:initial:2",
+                  "action": "If the new Congress has been constituted and consultations held, formally announce Alberto Núñez Feijóo as the proposed candidate for investiture, contingent on his acceptance and on the PP-led bloc having the strongest arithmetic. No such announcement is made unless those conditions are met this round.\n承诺：Propose Feijóo only if he accepts nomination and the PP-led bloc has the clearest path to a confidence vote.\n触发或复核条件：New Congress constituted and consultations completed",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "If the new Congress has been constituted and consultations held, formally announce Alberto Núñez Feijóo as the proposed candidate for investiture, contingent on his acceptance and on the PP-led bloc having the strongest arithmetic. No such announcement is made unless those conditions are met this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Feijóo's public willingness to seek the King's nomination and Congress's confidence is a necessary but not sufficient step; the 2023 precedent shows he can be nominated yet fail the investiture vote. The evidence packet contains no parliamentary arithmetic or vote outcome, so the estimate remains modest.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly declared that he is willing to be the PP's candidate for Prime Minister and to seek the King's nomination and Congress's confidence, calling on Vox and other groups to open investiture talks with the PP now that the election result is known.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-07-21",
+                "interval_end": "2027-09-23",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 318,
+                "interval_days": 64,
+                "interval_start_utc": "2027-07-21T00:00:00+00:00",
+                "interval_end_utc": "2027-09-23T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_5_agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "status": "executed",
+                  "summary": "Alberto Núñez Feijóo publicly called on Vox and other parliamentary groups to begin concrete investiture negotiations with the PP, offering to discuss a shared programme while restating that he seeks the King's nomination and Congress's confidence."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_5beb81ac451257ad",
+                    "action_5_agent_5beb81ac451257ad"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Alberto Núñez Feijóo publicly called on Vox and other parliamentary groups to begin concrete investiture negotiations with the PP"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_4_agent_e3f886b858f4513e",
+                    "action_5_agent_5beb81ac451257ad"
+                  ],
+                  "outcome": "pending",
+                  "effect": "restating that he seeks the King's nomination and Congress's confidence"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "restating that he seeks the King's nomination and Congress's confidence",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_005_001",
+                  "text": "Alberto Núñez Feijóo publicly called on Vox and other parliamentary groups to begin concrete investiture negotiations with the PP, offering to discuss a shared programme while restating that he seeks the King's nomination and Congress's confidence.",
+                  "date": "2027-09"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                  "action": "Publicly call on Vox and other parliamentary groups to begin concrete investiture negotiations with PP, setting out willingness to discuss a shared programme, while restating that I seek the King's nomination and Congress's confidence.\n承诺：I will seek Congress's confidence once nominated and will negotiate in good faith with groups willing to support an investiture.",
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Formally request that Felipe VI open consultations and propose me as candidate for Prime Minister, citing my July declaration and readiness to present an investiture programme to the Congress of Deputies.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:2",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Publicly call on Vox and other parliamentary groups to begin concrete investiture negotiations with PP, setting out willingness to discuss a shared programme, while restating that I seek the King's nomination and Congress's confidence.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.24,
+                "basis": "Feijóo's public call for investiture talks (round 5) shows willingness, but no King's nomination or Congress confidence vote is evidenced. His 2023 investiture failed, and the contract requires both formal steps before the 2028 deadline.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly called on Vox and other parliamentary groups to begin concrete investiture negotiations with the PP, offering to discuss a shared programme while restating that he seeks the King's nomination and Congress's confidence.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_005_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 6,
+              "interval": {
+                "step": 6,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-09-23",
+                "interval_end": "2027-11-25",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 381,
+                "interval_days": 63,
+                "interval_start_utc": "2027-09-23T00:00:00+00:00",
+                "interval_end_utc": "2027-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_6_agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "status": "executed",
+                  "summary": "Alberto Núñez Feijóo publicly pressed Vox and other parliamentary groups to conclude concrete investiture talks with the PP before the King's consultations close, offering a shared programme and again naming his readiness to be nominated and face Congress's confidence vote."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_6_agent_5beb81ac451257ad",
+                    "action_5_agent_5beb81ac451257ad"
+                  ],
+                  "outcome": "realized",
+                  "effect": "Alberto Núñez Feijóo publicly pressed Vox and other parliamentary groups to conclude concrete investiture talks with the PP"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_6_agent_5beb81ac451257ad",
+                    "action_4_agent_e3f886b858f4513e"
+                  ],
+                  "outcome": "pending",
+                  "effect": "again naming his readiness to be nominated and face Congress's confidence vote"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "again naming his readiness to be nominated and face Congress's confidence vote",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_006_001",
+                  "text": "Alberto Núñez Feijóo publicly pressed Vox and other parliamentary groups to conclude concrete investiture talks with the PP before the King's consultations close, offering a shared programme and again naming his readiness to be nominated and face Congress's confidence vote.",
+                  "date": "2027-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5beb81ac451257ad",
+                  "actor_name": "Alberto Núñez Feijóo",
+                  "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                  "action": "Publicly press Vox and other parliamentary groups to conclude concrete investiture talks with PP before the King's consultations close, offering a shared programme and naming my own readiness to be nominated and face Congress's confidence vote.\n承诺：If nominated by the King, I will present myself for investiture and negotiate in good faith with any group willing to support a PP-led government.\n触发或复核条件：Before the King formally proposes a candidate to Congress.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5beb81ac451257ad:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly press Vox and other parliamentary groups to conclude concrete investiture talks with PP before the King's consultations close, offering a shared programme and naming my own readiness to be nominated and face Congress's confidence vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.27,
+                "basis": "Feijóo's repeated public readiness to seek nomination and Congress's confidence (rounds 4-6) shows candidacy willingness, but no investiture vote or swearing-in is evidenced. His 2023 investiture failed, and the contract requires a successful confidence vote plus formal formation of government by the deadline.",
+                "evidence_quote": "Alberto Núñez Feijóo publicly pressed Vox and other parliamentary groups to conclude concrete investiture talks with the PP before the King's consultations close, offering a shared programme and again naming his readiness to be nominated and face Congress's confidence vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_006_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 7,
+              "interval": {
+                "step": 7,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2027-11-25",
+                "interval_end": "2028-01-28",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 445,
+                "interval_days": 64,
+                "interval_start_utc": "2027-11-25T00:00:00+00:00",
+                "interval_end_utc": "2028-01-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_7_agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "status": "executed",
+                  "summary": "Felipe VI formally proposed Alberto Núñez Feijóo as candidate for Prime Minister to the Congress of Deputies, contingent on Feijóo's acceptance and on the PP-led bloc having the clearest path to a confidence vote."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "Felipe VI formally proposed Alberto Núñez Feijóo as candidate for Prime Minister to the Congress of Deputies",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_007_001",
+                  "text": "Felipe VI formally proposed Alberto Núñez Feijóo as candidate for Prime Minister to the Congress of Deputies, contingent on Feijóo's acceptance and on the PP-led bloc having the clearest path to a confidence vote.",
+                  "date": "2028-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_e3f886b858f4513e",
+                  "actor_name": "Felipe VI",
+                  "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                  "action": "Formally propose Alberto Núñez Feijóo as candidate for Prime Minister to the Congress of Deputies, following consultations, contingent on his acceptance and on the PP-led bloc having the clearest path to a confidence vote.\n承诺：Propose Feijóo only if he accepts nomination and the PP-led bloc has the clearest path to a confidence vote.\n触发或复核条件：Congress constituted and consultations completed",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_e3f886b858f4513e:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Formally propose Alberto Núñez Feijóo as candidate for Prime Minister to the Congress of Deputies, following consultations, contingent on his acceptance and on the PP-led bloc having the clearest path to a confidence vote.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_d4eda8871abf552e",
+                  "actor_name": "Congress of Deputies",
+                  "candidate_id": "agent_d4eda8871abf552e:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.31,
+                "basis": "Feijóo's public willingness and the simulated January 2028 royal nomination raise the path, but the contract requires a Congress confidence vote and swearing-in, which his 2023 investiture failed. The nomination is contingent and not an executed investiture, so the estimate stays modest.",
+                "evidence_quote": "Felipe VI formally proposed Alberto Núñez Feijóo as candidate for Prime Minister to the Congress of Deputies, contingent on Feijóo's acceptance and on the PP-led bloc having the clearest path to a confidence vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_007_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 8,
+              "interval": {
+                "step": 8,
+                "unit": "day",
+                "horizon_steps": 8,
+                "interval_start": "2028-01-28",
+                "interval_end": "2028-04-01",
+                "horizon_end": "2028-04-01",
+                "elapsed_days": 509,
+                "interval_days": 64,
+                "interval_start_utc": "2028-01-28T00:00:00+00:00",
+                "interval_end_utc": "2028-04-01T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Alberto Núñez Feijóo be the next Prime Minister of Spain?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "Feijóo's public willingness and the King's formal proposal (round 7) advance his path, but the decisive Congress confidence vote and swearing-in are unrecorded. His 2023 investiture failed, and no settled evidence shows a majority now.",
+                "evidence_quote": "Felipe VI formally proposed Alberto Núñez Feijóo as candidate for Prime Minister to the Congress of Deputies, contingent on Feijóo's acceptance and on the PP-led bloc having the clearest path to a confidence vote.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_007_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.0012096
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 16,
+        "active_rounds": 11,
+        "draw_rounds": 11,
+        "audited_silent_rounds": 5,
+        "sampled_decisions": 20,
+        "public_event_count": 7,
+        "substantive_public_event_count": 7,
+        "state_change_count": 3,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 8,
+            "active_rounds": 6,
+            "draw_rounds": 6,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 10,
+            "active_actor_count": 3,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 8,
+            "active_rounds": 5,
+            "draw_rounds": 5,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 10,
+            "active_actor_count": 3,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.26,
+      "covered_p_yes": 0.26,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.26,
+        0.26
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "5b1504f6-fc4e-4fd4-babb-2b84e9369942",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T03:37:33.935396+00:00",
+      "contract_id": "0x97c0b1316b8d9ba677414e8a682948e7560c1af60fc239b085a68cc467c21f23",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ff90bde8c56b692145476a1550e12861499435d239fdc6c2c5152e6571179b40",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 390.585
+    },
+    {
+      "calls": 169,
+      "tokens": 2075421,
+      "input_tokens": 1973594,
+      "output_tokens": 101827,
+      "accounted_tokens_upper": 2075421,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.37725404015999997,
+      "coverage": 0.40065760000000006,
+      "unexplored_mass": 0.5993423999999999,
+      "unknown_bounds": [
+        0.07758284016,
+        0.6769252401599999
+      ],
+      "search_iterations": 16,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 16,
+          "search_value": 0.5216021750000001,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.42,
+          "visits": 8,
+          "search_value": 0.5015471,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.42,
+          "visits": 7,
+          "search_value": 0.45799668571428576,
+          "conditional_p_yes": 0.28,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.42,
+          "visits": 6,
+          "search_value": 0.43592946666666665,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.14111999999999997,
+          "visits": 5,
+          "search_value": 0.44623856,
+          "conditional_p_yes": 0.22,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.14111999999999997,
+          "visits": 4,
+          "search_value": 0.41019820000000007,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.14111999999999997,
+          "visits": 3,
+          "search_value": 0.4061309333333334,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.05037983999999999,
+          "visits": 1,
+          "search_value": 0.54,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.03526588799999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 0.0063478598399999975
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 8,
+          "mass": 0.015113951999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0018136742399999994
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.03358655999999999,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.05,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.03358655999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.004030387199999998
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 7,
+          "mass": 0.05715359999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.09408000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.22,
+          "frontier": true,
+          "contribution": 0.020697600000000003
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.18479999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.27999999999999997,
+          "visits": 7,
+          "search_value": 0.5486688571428572,
+          "conditional_p_yes": 0.24,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.19599999999999998,
+          "visits": 6,
+          "search_value": 0.5085336666666668,
+          "conditional_p_yes": 0.28,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.19599999999999998,
+          "visits": 5,
+          "search_value": 0.49216040000000005,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.13328,
+          "visits": 4,
+          "search_value": 0.4424125,
+          "conditional_p_yes": 0.28,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.093296,
+          "visits": 3,
+          "search_value": 0.42651,
+          "conditional_p_yes": 0.14,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 6,
+          "mass": 0.093296,
+          "visits": 2,
+          "search_value": 0.344565,
+          "conditional_p_yes": 0.18,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 7,
+          "mass": 0.03591896,
+          "visits": 1,
+          "search_value": 0.384,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 8,
+          "mass": 0.025143271999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.0030171926399999997
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 8,
+          "mass": 0.010775688,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.08,
+          "frontier": true,
+          "contribution": 0.0008620550400000001
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 7,
+          "mass": 0.029388240000000003,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.13,
+          "frontier": true,
+          "contribution": 0.0038204712000000007
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 7,
+          "mass": 0.027988800000000005,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.039984,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.15,
+          "frontier": true,
+          "contribution": 0.0059976
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.03332,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.3,
+          "frontier": true,
+          "contribution": 0.009996
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.029399999999999978,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.08399999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.25,
+          "frontier": true,
+          "contribution": 0.020999999999999998
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "bb292682-665b-4608-81f0-49df38cfe9fa",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:27:26.389175+00:00",
+      "contract_id": "0x97c0b1316b8d9ba677414e8a682948e7560c1af60fc239b085a68cc467c21f23",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ff90bde8c56b692145476a1550e12861499435d239fdc6c2c5152e6571179b40",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 483.198
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x97c0b1316b8d9ba677414e8a682948e7560c1af60fc239b085a68cc467c21f23",
+  "group_id": "next-prime-minister-of-spain-20260625005215443",
+  "stage": "finished",
+  "outcome_deadline": "2028-04-01T03:59:00+00:00",
+  "deadline_basis": "explicit_contract_deadline",
+  "nominal_market_end": "2026-11-30T04:59:00+00:00",
+  "evidence_sha256": "ff90bde8c56b692145476a1550e12861499435d239fdc6c2c5152e6571179b40",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 779,
+    "input_tokens": 633,
+    "output_tokens": 146,
+    "accounted_tokens_upper": 779,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-04-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2028-04-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-11",
+        "2027-03-16",
+        "2027-05-18",
+        "2027-07-21",
+        "2027-09-23",
+        "2027-11-25",
+        "2028-01-28",
+        "2028-04-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-11",
+        "2027-03-16",
+        "2027-05-18",
+        "2027-07-21",
+        "2027-09-23",
+        "2027-11-25",
+        "2028-01-28",
+        "2028-04-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 8,
+      "boundaries": [
+        "2026-11-09",
+        "2027-01-11",
+        "2027-03-16",
+        "2027-05-18",
+        "2027-07-21",
+        "2027-09-23",
+        "2027-11-25",
+        "2028-01-28",
+        "2028-04-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 3
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_75939654b732c02f",
+          "name": "Alberto Núñez Feijóo",
+          "role": "Leader of the People's Party and opposition; prospective candidate for Prime Minister who must be nominated and seek investiture",
+          "decision_ids": [
+            "feijoo_candidacy"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_f609c9898f3ed548",
+          "name": "Felipe VI",
+          "role": "King of Spain; formally proposes the candidate for Prime Minister to the Congress of Deputies after consultations",
+          "decision_ids": [
+            "king_nomination"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_0dfae9f2dd119ceb",
+          "name": "Congress of Deputies",
+          "role": "Lower house whose vote of confidence is required for the candidate to become Prime Minister",
+          "decision_ids": [
+            "congress_confidence_vote"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No source confirms Feijóo's current intention to stand for investiture after the 2026 election; his candidacy is conditional on party and parliamentary dynamics.",
+        "The 2026 election result and subsequent coalition/confidence arithmetic are unknown as of the cutoff."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "feijoo_candidacy",
+          "choice": "Feijóo must be a candidate for Prime Minister and accept nomination to seek investiture",
+          "owner": "Alberto Núñez Feijóo",
+          "support": "represented"
+        },
+        {
+          "id": "king_nomination",
+          "choice": "The King must formally propose Feijóo (or another candidate) for investiture before Congress",
+          "owner": "Felipe VI",
+          "support": "represented"
+        },
+        {
+          "id": "congress_confidence_vote",
+          "choice": "The Congress of Deputies must grant a vote of confidence to Feijóo for him to be sworn in as Prime Minister",
+          "owner": "Congress of Deputies",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 25,
+    "tokens": 80597,
+    "input_tokens": 69711,
+    "output_tokens": 10886,
+    "accounted_tokens_upper": 80597,
+    "unknown_usage_requests": 0
+  }
+}

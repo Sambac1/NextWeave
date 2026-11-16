@@ -1,0 +1,1545 @@
+{
+  "run_id": "d9e1f4a1-abc8-4ff9-a35c-08e6361096b2",
+  "case_id": "market_287b14fa6e5388b75b602364",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3711,
+      "input_tokens": 3701,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3711,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.12,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.12,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3701,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:41:25.917202+00:00",
+      "contract_id": "0xe66f6bc1b92d873779c2ffd142511c29492602a732a49e4b1c2bef1653149f24",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "330aa7585707d0e450f4b56ca3aaf5433fbec1f6f83a9da241d421f05cbd2e5f",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.809
+    },
+    {
+      "calls": 2,
+      "tokens": 7422,
+      "input_tokens": 7402,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 7422,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.12,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.12,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3701,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.12,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3701,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:41:27.062958+00:00",
+      "contract_id": "0xe66f6bc1b92d873779c2ffd142511c29492602a732a49e4b1c2bef1653149f24",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "330aa7585707d0e450f4b56ca3aaf5433fbec1f6f83a9da241d421f05cbd2e5f",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.145
+    },
+    {
+      "calls": 15,
+      "tokens": 164738,
+      "input_tokens": 158907,
+      "output_tokens": 5831,
+      "accounted_tokens_upper": 164738,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-22",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 13,
+                "interval_days": 13,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-22T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_60cf50ef3ef35a20",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_60cf50ef3ef35a20:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60cf50ef3ef35a20:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran publicly states it will not initiate a qualifying strike on Israeli territory before the deadline and will respond only to a qualifying Israeli strike, calling on Israel to reciprocate.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_c094966d41f358f3",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_c094966d41f358f3:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c094966d41f358f3:supplement:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Israel's leadership publicly states that any Iranian qualifying strike on Israeli territory before 22 Nov will be answered by an Israeli air strike on Iranian military targets, and seeks cabinet authorization for that contingency; no strike is executed this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The last settled state is a collapsed ceasefire: Iran's July 2026 attacks on commercial vessels ended the truce, and no later evidence shows a restored Israel–Iran ceasefire. With the deadline near and no qualifying strike reported in the window, the outcome hinges on unobserved post-July developments.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.48999999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "4fe197c9-4ea4-41a2-b215-2ac926a90e2e",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:49:03.234386+00:00",
+      "contract_id": "0xe66f6bc1b92d873779c2ffd142511c29492602a732a49e4b1c2bef1653149f24",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "330aa7585707d0e450f4b56ca3aaf5433fbec1f6f83a9da241d421f05cbd2e5f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 82.711
+    },
+    {
+      "calls": 18,
+      "tokens": 208919,
+      "input_tokens": 200044,
+      "output_tokens": 8875,
+      "accounted_tokens_upper": 208919,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-22",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 13,
+                "interval_days": 13,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-22T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_60cf50ef3ef35a20",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_60cf50ef3ef35a20:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60cf50ef3ef35a20:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran publicly states that it will conduct a qualifying missile or drone strike on Israeli terrestrial territory only if Israel first strikes Iranian territory, and otherwise will not initiate such a strike before 22 Nov 2026 11:59 PM IRST.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_c094966d41f358f3",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_c094966d41f358f3:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The last settled evidence shows the ceasefire collapsed in July 2026 after Iran attacked commercial vessels, and no later event restores a state of ceasefire. With the contract deadline near and no reported qualifying strike since, the outcome is unverified; continued absence of a qualifying strike is the main path to Yes.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.48999999999999994
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-22",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 13,
+                "interval_days": 13,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-22T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_60cf50ef3ef35a20",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_60cf50ef3ef35a20:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60cf50ef3ef35a20:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran issues a public statement that it will retaliate with missile and drone strikes on Israeli territory if Israel conducts any air strike on Iranian soil, while affirming it is not initiating strikes now.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_c094966d41f358f3",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_c094966d41f358f3:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c094966d41f358f3:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Israel issues a public statement affirming it will not initiate a qualifying strike on Iranian territory before 22 Nov 2026 provided Iran refrains from any qualifying strike on Israeli territory; the statement is a signal only and does not authorize or execute any strike.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The last settled evidence shows the ceasefire collapsed in July 2026 after Iran attacked commercial vessels, and no later event restores a state of ceasefire. With the contract deadline near and no reported qualifying strike since, the outcome is unverified; continued absence of a qualifying strike is the main path to Yes.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.48999999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "fceecb61-9cfd-4855-94e7-8b661a34c117",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:49:05.778688+00:00",
+      "contract_id": "0xe66f6bc1b92d873779c2ffd142511c29492602a732a49e4b1c2bef1653149f24",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "330aa7585707d0e450f4b56ca3aaf5433fbec1f6f83a9da241d421f05cbd2e5f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 34.685
+    },
+    {
+      "calls": 20,
+      "tokens": 226394,
+      "input_tokens": 217609,
+      "output_tokens": 8785,
+      "accounted_tokens_upper": 226394,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-13",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_60cf50ef3ef35a20",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_60cf50ef3ef35a20:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60cf50ef3ef35a20:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran publicly states that it will refrain from any qualifying strike on Israeli territory so long as Israel refrains from striking Iranian territory, and that any Israeli air or surface-to-surface strike impacting Iran will be met with retaliatory missile strikes on Israeli territory.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_c094966d41f358f3",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_c094966d41f358f3:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c094966d41f358f3:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Israel publicly reaffirms it is prepared to act against Iranian nuclear and military threats if provoked, while stating it is not initiating a strike now and will coordinate with the United States.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "No current evidence shows a ceasefire in effect or a qualifying strike after the July 2026 collapse. The contract requires no qualifying strike through 22 Nov; recent history shows repeated ceasefire breakdowns, so continuation is uncertain but plausible.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": null,
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-13",
+                "interval_end": "2026-11-17",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 8,
+                "interval_days": 4,
+                "interval_start_utc": "2026-11-13T00:00:00+00:00",
+                "interval_end_utc": "2026-11-17T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "No current evidence shows a ceasefire in effect or a qualifying strike after the July 2026 collapse. The contract requires no qualifying strike through 22 Nov; recent history shows repeated ceasefire breakdowns, so continuation is uncertain but plausible.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": null,
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-17",
+                "interval_end": "2026-11-22",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 13,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-17T00:00:00+00:00",
+                "interval_end_utc": "2026-11-22T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "The last settled evidence shows the ceasefire collapsed in July 2026 after Iranian attacks on commercial vessels, and no later event restores a state of ceasefire. With the contract deadline near and no reported qualifying strike since, the outcome is genuinely uncertain; willingness to resume talks is not execution of a qualifying strike.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.48999999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.55,
+      "covered_p_yes": 0.55,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.55,
+        0.55
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "c1993da1-2f70-4401-a773-4d19cc3d84df",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:44:27.992569+00:00",
+      "contract_id": "0xe66f6bc1b92d873779c2ffd142511c29492602a732a49e4b1c2bef1653149f24",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "330aa7585707d0e450f4b56ca3aaf5433fbec1f6f83a9da241d421f05cbd2e5f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 68.789
+    },
+    {
+      "calls": 37,
+      "tokens": 406521,
+      "input_tokens": 390280,
+      "output_tokens": 16241,
+      "accounted_tokens_upper": 406521,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-13",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_60cf50ef3ef35a20",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_60cf50ef3ef35a20:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60cf50ef3ef35a20:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran states publicly that it will conduct a surface-to-surface missile strike on Israeli territory if Israel executes a qualifying strike on Iranian territory, and that it will otherwise refrain through 22 November 2026; no strike is executed this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_c094966d41f358f3",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_c094966d41f358f3:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "outlook_issue": "unsupported_quote"
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-13",
+                "interval_end": "2026-11-17",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 8,
+                "interval_days": 4,
+                "interval_start_utc": "2026-11-13T00:00:00+00:00",
+                "interval_end_utc": "2026-11-17T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "The last documented ceasefire collapsed in July 2026 when Iran attacked commercial vessels, and no later restoration is shown. With no current evidence of a qualifying strike or renewed ceasefire, the chance of a ceasefire holding through 22 Nov is uncertain and modestly below even.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": null,
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-17",
+                "interval_end": "2026-11-22",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 13,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-17T00:00:00+00:00",
+                "interval_end_utc": "2026-11-22T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The last settled evidence shows the ceasefire collapsed in July 2026 after Iran attacked commercial vessels, and no later event restores a state of ceasefire. With the contract deadline near and no reported qualifying strike since, the outcome hinges on unobserved post-July developments.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.7
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-13",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 4,
+                "interval_days": 4,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-13T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_60cf50ef3ef35a20",
+                  "actor_name": "Iran",
+                  "candidate_id": "agent_60cf50ef3ef35a20:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_60cf50ef3ef35a20:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Iran issues a public statement that it will retaliate with missile and drone strikes on Israeli territory if Israel conducts a qualifying strike on Iran, while affirming it will not initiate one first.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_c094966d41f358f3",
+                  "actor_name": "Israel",
+                  "candidate_id": "agent_c094966d41f358f3:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_c094966d41f358f3:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Israel publicly signals that it will not initiate a qualifying air or surface-to-surface missile strike on Iranian territory before 22 November 2026 absent a new Iranian attack, conditioning any strike on an Iranian qualifying strike or a direct threat to Israeli territory.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "No current evidence establishes a ceasefire in effect as of the forecast cutoff; the last documented state is the July 2026 collapse after Iranian attacks on commercial vessels. Whether a ceasefire is restored and survives through 22 Nov is uncertain, with both sides retaining strike options.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": null,
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-13",
+                "interval_end": "2026-11-17",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 8,
+                "interval_days": 4,
+                "interval_start_utc": "2026-11-13T00:00:00+00:00",
+                "interval_end_utc": "2026-11-17T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "No current evidence establishes a ceasefire in effect as of the forecast cutoff; the last documented state is the July 2026 collapse after Iranian attacks on commercial vessels. Whether a ceasefire is restored and survives through 22 Nov is uncertain, with both sides retaining strike options.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": null,
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-11-17",
+                "interval_end": "2026-11-22",
+                "horizon_end": "2026-11-22",
+                "elapsed_days": 13,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-17T00:00:00+00:00",
+                "interval_end_utc": "2026-11-22T20:29:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Israel x Iran ceasefire continues through November 22?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The last settled evidence shows the ceasefire collapsed in July 2026 after Iran attacked commercial vessels, and no later event restores a state of ceasefire. With the contract deadline near and no reported qualifying strike since, the outcome hinges on unobserved post-July developments.",
+                "evidence_quote": "On 8 July, the ceasefire collapsed after Iran initiated attacks on commercial vessels in the Strait of Hormuz",
+                "change_driver": "settled_event",
+                "evidence_ref": "hist_e805a548e3ae59f0.source",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.48999999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "a12253b9-1731-4116-b0e9-ef368f2e7a4a",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:45:32.591368+00:00",
+      "contract_id": "0xe66f6bc1b92d873779c2ffd142511c29492602a732a49e4b1c2bef1653149f24",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "330aa7585707d0e450f4b56ca3aaf5433fbec1f6f83a9da241d421f05cbd2e5f",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 64.595
+    },
+    {
+      "calls": 50,
+      "tokens": 583822,
+      "input_tokens": 553442,
+      "output_tokens": 30380,
+      "accounted_tokens_upper": 583822,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.402945,
+      "coverage": 0.7,
+      "unexplored_mass": 0.30000000000000004,
+      "unknown_bounds": [
+        0.252945,
+        0.552945
+      ],
+      "search_iterations": 6,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 6,
+          "search_value": 0.4807666666666666,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.48999999999999994,
+          "visits": 2,
+          "search_value": 0.7061999999999999,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.48999999999999994,
+          "visits": 1,
+          "search_value": 0.4224,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.48999999999999994,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.12,
+          "frontier": true,
+          "contribution": 0.05879999999999999
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.21,
+          "visits": 3,
+          "search_value": 0.31097333333333327,
+          "conditional_p_yes": 0.78,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.147,
+          "visits": 1,
+          "search_value": 0.24279999999999993,
+          "conditional_p_yes": 0.9,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.11024999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.93,
+          "frontier": true,
+          "contribution": 0.1025325
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.03675,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.95,
+          "frontier": true,
+          "contribution": 0.0349125
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.063,
+          "visits": 1,
+          "search_value": 0.35999999999999993,
+          "conditional_p_yes": 0.93,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.063,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.9,
+          "frontier": true,
+          "contribution": 0.0567
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "7023699e-8210-4633-9724-630db6728acd",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:48:30.152485+00:00",
+      "contract_id": "0xe66f6bc1b92d873779c2ffd142511c29492602a732a49e4b1c2bef1653149f24",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "330aa7585707d0e450f4b56ca3aaf5433fbec1f6f83a9da241d421f05cbd2e5f",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 177.554
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0xe66f6bc1b92d873779c2ffd142511c29492602a732a49e4b1c2bef1653149f24",
+  "group_id": "israel-x-iran-ceasefire-continues-throughptptpt-20260716224448963",
+  "stage": "finished",
+  "outcome_deadline": "2026-11-22T20:29:00+00:00",
+  "deadline_basis": "explicit_contract_deadline",
+  "nominal_market_end": "2026-11-23T04:59:00+00:00",
+  "evidence_sha256": "330aa7585707d0e450f4b56ca3aaf5433fbec1f6f83a9da241d421f05cbd2e5f",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 1235,
+    "input_tokens": 1096,
+    "output_tokens": 139,
+    "accounted_tokens_upper": 1235,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-22"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-22"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-13",
+        "2026-11-17",
+        "2026-11-22"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-13",
+        "2026-11-17",
+        "2026-11-22"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-13",
+        "2026-11-17",
+        "2026-11-22"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_6a053b662ae651e8",
+          "name": "Israel",
+          "role": "May choose to conduct or refrain from a qualifying strike on Iranian territory before the deadline.",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        },
+        {
+          "seat_id": "seat_1f48db9f0d552842",
+          "name": "Iran",
+          "role": "May choose to conduct or refrain from a qualifying strike on Israeli territory before the deadline.",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "restricted",
+          "conditional_participation": true
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Current authority for Israeli decision to conduct or refrain from a qualifying air strike or surface-to-surface missile strike directly impacting Iranian terrestrial territory before 22 Nov 2026 11:59 PM IRST. requires independent evidence; Israel can participate conditionally.",
+        "Current authority for Iranian decision to conduct or refrain from a qualifying air strike or surface-to-surface missile strike directly impacting Israeli terrestrial territory before 22 Nov 2026 11:59 PM IRST. requires independent evidence; Iran can participate conditionally."
+      ],
+      "gaps": [],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "Israeli decision to conduct or refrain from a qualifying air strike or surface-to-surface missile strike directly impacting Iranian terrestrial territory before 22 Nov 2026 11:59 PM IRST.",
+          "owner": "Israel",
+          "support": "conditional"
+        },
+        {
+          "id": "D2",
+          "choice": "Iranian decision to conduct or refrain from a qualifying air strike or surface-to-surface missile strike directly impacting Israeli terrestrial territory before 22 Nov 2026 11:59 PM IRST.",
+          "owner": "Iran",
+          "support": "conditional"
+        }
+      ],
+      "gap_repair": {
+        "status": "participants_added",
+        "added": 2
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 29,
+    "tokens": 83643,
+    "input_tokens": 70317,
+    "output_tokens": 13326,
+    "accounted_tokens_upper": 83643,
+    "unknown_usage_requests": 0
+  }
+}

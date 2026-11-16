@@ -1,0 +1,466 @@
+{
+  "run_id": "506bdcaa-8ffd-5a94-9970-385edb8b148d",
+  "source_run_id": "fb6f2e33-89f4-4f1f-81de-c1a7a3171b70",
+  "case_id": "market_2d496a888d6246970414c6c9",
+  "forecast_key": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+  "status": "completed",
+  "resume_available": false,
+  "model": "deepseek-flash",
+  "as_of": "2026-11-03T16:43:17.828838+00:00",
+  "confirmed_outcome_deadline": "2027-01-01T04:59:00+00:00",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 4694,
+      "accounted_tokens_upper": 4694,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "method": "direct_qa",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.488,
+      "provenance": "Original forecast"
+    },
+    {
+      "calls": 2,
+      "tokens": 9388,
+      "accounted_tokens_upper": 9388,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.065,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "method": "qa_ensemble",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.02,
+      "provenance": "Original forecast"
+    },
+    {
+      "probability_method": "conditional_terminal_v2",
+      "p_yes": 0.10090750000000001,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.10090750000000001,
+        0.10090750000000001
+      ],
+      "yes_mass": 0.10090750000000001,
+      "no_mass": 0.8990925000000001,
+      "unknown_mass": 0.0,
+      "sampling_standard_error": null,
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "status": "completed",
+          "error": null,
+          "branches": [
+            {
+              "branch_id": 1,
+              "mass": 0.13612500000000002,
+              "kind": "enumerated",
+              "joint_action_probability": 0.13612500000000002,
+              "replay_answer": "no",
+              "conditional_p_yes": 0.12,
+              "answer": "no",
+              "evidence": [
+                {
+                  "ref": "sim_0001_001_001",
+                  "text": "The United States directed its negotiating team to resume technical talks with Iran through Omani mediation, stating the objective of converting the June 14/17 memorandum framework into a signed final nuclear deal containing a concrete, measurable enrichment limit before December 31, 2026."
+                },
+                {
+                  "ref": "sim_0001_001_002",
+                  "text": "Oman publicly offered to host and mediate a further round of US-Iran talks before December 31, 2026, aimed at converting the June 14 memorandum into a signed final deal with a concrete enrichment cap, conditional on both the United States and Iran accepting the invitation and agreeing a date."
+                },
+                {
+                  "ref": "state_note_2",
+                  "text": "No qualifying written instrument has been signed or formally adopted by both the United States and Iran; the contract condition remains unmet."
+                }
+              ],
+              "reason": "Only resumed talks and a mediation offer are evidenced; no signed or adopted final deal by the deadline."
+            },
+            {
+              "branch_id": 2,
+              "mass": 0.09075000000000001,
+              "kind": "enumerated",
+              "joint_action_probability": 0.09075000000000001,
+              "replay_answer": "no",
+              "conditional_p_yes": 0.08,
+              "answer": "no",
+              "evidence": [
+                {
+                  "ref": "sim_0001_001_001",
+                  "text": "The United States directed its negotiating team to resume technical talks with Iran through Omani mediation, aiming to convert the June 14/17 memorandum framework into a signed final nuclear deal containing a concrete, measurable enrichment limit before December 31, 2026."
+                },
+                {
+                  "ref": "sim_0001_001_002",
+                  "text": "Oman publicly offered to host and mediate a further round of US-Iran talks before December 31, 2026, aimed at converting the June 14 memorandum into a signed final deal with a concrete enrichment cap, conditional on both parties accepting the invitation and agreeing a date."
+                },
+                {
+                  "ref": "state_note_2",
+                  "text": "No qualifying written instrument has been signed or formally adopted by both the United States and Iran; the contract condition remains unmet."
+                }
+              ],
+              "reason": "Talks aimed at a future deal do not satisfy the requirement; no instrument signed or adopted by the deadline."
+            },
+            {
+              "branch_id": 3,
+              "mass": 0.7731250000000001,
+              "kind": "tail_draw",
+              "joint_action_probability": 0.027,
+              "replay_answer": "no",
+              "conditional_p_yes": 0.1,
+              "answer": "no",
+              "evidence": [
+                {
+                  "ref": "state_note_2",
+                  "text": "No qualifying written diplomatic instrument identified as the final deal contemplated by the June 14, 2026 MoU has been signed or formally adopted by both the United States and Iran."
+                },
+                {
+                  "ref": "state_note_3",
+                  "text": "No publicly released text establishing a concrete, measurable limit on Iran's nuclear program has been issued this round."
+                }
+              ],
+              "reason": "No qualifying instrument or concrete nuclear limit was signed or adopted by the deadline."
+            }
+          ],
+          "yes_mass": 0.10090750000000001,
+          "no_mass": 0.8990925000000001,
+          "unknown_mass": 0.0,
+          "coverage": 1.0,
+          "p_yes": 0.10090750000000001,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-03",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 59,
+                "interval_days": 59,
+                "interval_start_utc": "2026-11-03T16:43:17.828838+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00"
+              },
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The United States directed its negotiating team to resume technical talks with Iran through Omani mediation, stating the objective of converting the June 14/17 memorandum framework into a signed final nuclear deal containing a concrete, measurable enrichment limit before December 31, 2026.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Oman publicly offered to host and mediate a further round of US-Iran talks before December 31, 2026, aimed at converting the June 14 memorandum into a signed final deal with a concrete enrichment cap, conditional on both the United States and Iran accepting the invitation and agreeing a date.",
+                  "date": "2027-01"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "completed",
+      "method": "one_step",
+      "planned_samples": 1,
+      "provenance": "Rescored from saved trajectories"
+    },
+    {
+      "probability_method": "conditional_terminal_v2",
+      "p_yes": 0.06536250000000002,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.06536250000000002,
+        0.06536250000000002
+      ],
+      "yes_mass": 0.06536250000000002,
+      "no_mass": 0.9346375,
+      "unknown_mass": 0.0,
+      "sampling_standard_error": 0.014637500000000005,
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "status": "completed",
+          "error": null,
+          "branches": [
+            {
+              "branch_id": 1,
+              "mass": 0.30250000000000005,
+              "kind": "enumerated",
+              "joint_action_probability": 0.30250000000000005,
+              "replay_answer": "no",
+              "conditional_p_yes": 0.07,
+              "yes_path": "Both sides accept Oman's venue and meet in Muscat before end-2026; the US conditional easing offer plus Iran's attendance yields a narrow technical agenda, and negotiators convert it into a signed instrument with an IAEA-verified enrichment cap or stockpile dilution before the deadline.",
+              "no_path": "Iran's unchanged preconditions (blockade lift, halt of hostile operations) collide with the US conditioning easing on prior Iranian nuclear commitments; talks stall or produce only a framework/agenda, leaving no signed or formally adopted instrument with a concrete measurable obligation by 2027-01-01.",
+              "answer": "no",
+              "evidence": [
+                {
+                  "ref": "sim_0001_002_002",
+                  "text": "The United States publicly accepted Oman's Muscat invitation and directed envoy Steve Witkoff to attend before 2026-12-31, offering Iran a time-limited, verifiable easing of the shipping blockade and a pause in offensive operations conditioned on Iran attending Muscat and accepting at least one concrete measurable nuclear limit (enrichment cap or stockpile dilution with IAEA verification)."
+                },
+                {
+                  "ref": "state_note_1",
+                  "text": "No qualifying final US-Iran nuclear deal has been signed or adopted; the contract question remains open."
+                }
+              ],
+              "reason": "Through the deadline only talks were proposed/accepted; no signed or formally adopted qualifying instrument exists."
+            },
+            {
+              "branch_id": 2,
+              "mass": 0.165,
+              "kind": "enumerated",
+              "joint_action_probability": 0.165,
+              "replay_answer": "no",
+              "conditional_p_yes": 0.05,
+              "answer": "no",
+              "evidence": [
+                {
+                  "ref": "sim_0001_002_001",
+                  "text": "Iran publicly accepted Oman's invitation to host a further US-Iran round in Muscat before the end of 2026, naming Foreign Minister Abbas Araghchi as Iran's representative, while restating that lifting the shipping blockade and halting hostile operations remain prerequisites for substantive technical work; no new Iranian concessions were offered."
+                },
+                {
+                  "ref": "state_note_1",
+                  "text": "No qualifying final US-Iran nuclear instrument has been signed or formally adopted; the June 14/17, 2026 MoU framework remains unconverted."
+                }
+              ],
+              "reason": "No qualifying instrument signed or adopted by the deadline; only conditional talk readiness."
+            },
+            {
+              "branch_id": 3,
+              "mass": 0.5325,
+              "kind": "tail_draw",
+              "joint_action_probability": 0.09,
+              "replay_answer": "no",
+              "conditional_p_yes": 0.04,
+              "answer": "no",
+              "evidence": [
+                {
+                  "ref": "sim_0001_001_002",
+                  "text": "Oman publicly offered to host a further round of US-Iran talks in Muscat before the end of 2026, inviting Steve Witkoff and Abbas Araghchi, contingent on both the United States and Iran accepting the invitation."
+                },
+                {
+                  "ref": "state_note_1",
+                  "text": "No qualifying US-Iran final nuclear instrument has been signed or adopted; the June 14/17, 2026 MoU framework remains unconverted."
+                }
+              ],
+              "reason": "Only a contingent venue offer; no signed or adopted qualifying instrument by deadline."
+            }
+          ],
+          "yes_mass": 0.050725000000000006,
+          "no_mass": 0.9492750000000001,
+          "unknown_mass": 0.0,
+          "coverage": 1.0,
+          "p_yes": 0.050725000000000006,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 2,
+                "interval_start": "2026-11-03",
+                "interval_end": "2026-12-02",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 29,
+                "interval_days": 29,
+                "interval_start_utc": "2026-11-03T16:43:17.828838+00:00",
+                "interval_end_utc": "2026-12-02T00:00:00+00:00"
+              },
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Iran publicly stated its readiness to resume technical talks toward the final deal contemplated by the June 14, 2026 MoU, conditional on the United States lifting the shipping blockade and halting hostile operations; the statement named no new Iranian concessions.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Oman publicly offered to host a further round of US-Iran talks in Muscat before the end of 2026, inviting Steve Witkoff and Abbas Araghchi, contingent on both the United States and Iran accepting the invitation.",
+                  "date": "2026-12"
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 2,
+                "interval_start": "2026-12-02",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 59,
+                "interval_days": 30,
+                "interval_start_utc": "2026-12-02T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00"
+              },
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "Iran publicly accepted Oman's invitation to a further round in Muscat before the end of 2026, naming Foreign Minister Abbas Araghchi as its representative, while restating that lifting the shipping blockade and halting hostile operations remain prerequisites for substantive technical work; no new Iranian concessions were offered.",
+                  "date": "2027-01"
+                },
+                {
+                  "id": "sim_0001_002_002",
+                  "text": "The United States publicly accepted Oman's Muscat invitation and directed envoy Steve Witkoff to attend before 2026-12-31, offering Iran a time-limited, verifiable easing of the shipping blockade and a pause in offensive operations conditioned on Iran attending Muscat and accepting at least one concrete measurable nuclear limit (enrichment cap or stockpile dilution with IAEA verification).",
+                  "date": "2027-01"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sample_id": 2,
+          "status": "completed",
+          "error": null,
+          "branches": [
+            {
+              "branch_id": 1,
+              "mass": 0.8,
+              "kind": "enumerated",
+              "joint_action_probability": 0.8,
+              "replay_answer": "no",
+              "conditional_p_yes": 0.07,
+              "answer": "no",
+              "evidence": [
+                {
+                  "ref": "sim_0002_001_001",
+                  "text": "The United States directed its envoy Steve Witkoff to resume technical talks with Iran through Omani mediation before the 60-day MoU window lapses, aiming to convert the 14-point MoU into a signed final instrument with a concrete enrichment cap and stockpile benchmark by December 31, 2026. The US stated it will not accept binding nuclear terms until a signed instrument exists, and conditioned progress on Iran engaging through the Omani channel and accepting a measurable enrichment/stockpile benc"
+                },
+                {
+                  "ref": "sim_0002_001_002",
+                  "text": "Oman offered to host a further round of US-Iran talks in Muscat before December 31, 2026, and proposed technical-level sessions on nuclear enrichment benchmarks to help the parties convert the June 14 MoU into a signed final instrument. Oman stated it will provide venue and facilitation if both the United States and Iran agree to attend."
+                },
+                {
+                  "ref": "state_note_3",
+                  "text": "No qualifying final nuclear instrument has been signed; the deal remains unachieved."
+                }
+              ],
+              "reason": "Evidence shows only talks/offers toward a final instrument; no signed or formally adopted qualifying instrument by deadline."
+            },
+            {
+              "branch_id": 2,
+              "mass": 0.2,
+              "kind": "enumerated",
+              "joint_action_probability": 0.2,
+              "replay_answer": "no",
+              "conditional_p_yes": 0.12,
+              "answer": "no",
+              "evidence": [
+                {
+                  "ref": "sim_0002_001_001",
+                  "text": "The United States directed its envoy Steve Witkoff to resume technical talks with Iran through Omani mediation before the 60-day MoU window lapses, aiming to convert the 14-point MoU into a signed final instrument with a concrete enrichment cap and stockpile benchmark by December 31, 2026. The US stated it will not accept binding nuclear terms until a signed instrument exists, and conditioned progress on Iran engaging through the Omani channel and accepting a measurable enrichment/stockpile benc"
+                },
+                {
+                  "ref": "sim_0002_001_002",
+                  "text": "Oman offered to host a further round of US-Iran talks in Muscat before December 31, 2026, and proposed technical-level sessions on nuclear enrichment benchmarks to help the parties convert the June 14 MoU into a signed final instrument. Oman stated it will provide venue and facilitation if both the United States and Iran agree to attend."
+                },
+                {
+                  "ref": "state_note_3",
+                  "text": "No qualifying final nuclear instrument has been signed or adopted; the contract question remains unachieved."
+                },
+                {
+                  "ref": "state_note_4",
+                  "text": "Iran's internal approving authority has not yet signed off on any final instrument."
+                }
+              ],
+              "reason": "No qualifying instrument signed/adopted by both parties by deadline; Iran's authority had not signed off."
+            }
+          ],
+          "yes_mass": 0.08000000000000002,
+          "no_mass": 0.92,
+          "unknown_mass": 0.0,
+          "coverage": 1.0,
+          "p_yes": 0.08000000000000002,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 2,
+                "interval_start": "2026-11-03",
+                "interval_end": "2026-12-02",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 29,
+                "interval_days": 29,
+                "interval_start_utc": "2026-11-03T16:43:17.828838+00:00",
+                "interval_end_utc": "2026-12-02T00:00:00+00:00"
+              },
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The United States directed its envoy Steve Witkoff to resume technical talks with Iran through Omani mediation before the 60-day MoU window lapses, aiming to convert the 14-point MoU into a signed final instrument with a concrete enrichment cap and stockpile benchmark by December 31, 2026. The US stated it will not accept binding nuclear terms until a signed instrument exists, and conditioned progress on Iran engaging through the Omani channel and accepting a measurable enrichment/stockpile benchmark.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Oman offered to host a further round of US-Iran talks in Muscat before December 31, 2026, and proposed technical-level sessions on nuclear enrichment benchmarks to help the parties convert the June 14 MoU into a signed final instrument. Oman stated it will provide venue and facilitation if both the United States and Iran agree to attend.",
+                  "date": "2026-12"
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 2,
+                "interval_start": "2026-12-02",
+                "interval_end": "2027-01-01",
+                "horizon_end": "2027-01-01",
+                "elapsed_days": 59,
+                "interval_days": 30,
+                "interval_start_utc": "2026-12-02T00:00:00+00:00",
+                "interval_end_utc": "2027-01-01T04:59:00+00:00"
+              },
+              "events": []
+            }
+          ]
+        }
+      ],
+      "status": "completed",
+      "method": "trajectory_sampling",
+      "planned_samples": 2,
+      "provenance": "Rescored from saved trajectories"
+    }
+  ],
+  "resolution_status": "awaiting_resolution",
+  "case_snapshot": {
+    "case_id": "market_2d496a888d6246970414c6c9",
+    "question": "US-Iran Final Nuclear Deal by December 31, 2026?",
+    "rules": "On June 14, 2026, the United States and Iran announced a written diplomatic agreement, including a 60-day extendable period in which both countries committed to negotiate toward a “final deal” regarding Iran’s nuclear program and other topics.\n\nThis market resolves to “Yes” if a qualifying written diplomatic instrument between the United States and Iran has been mutually signed or adopted by the specified date, 11:59 PM ET. Otherwise, this market resolves to “No.”\n\nUnless the written instrument is formally adopted without signature as described below, the instrument must be signed by both the United States and Iran. Both parties must either sign the same document or sign individual documents that substantively and directly indicate acceptance of the same underlying instrument, regardless of minor formatting, wording, or translation differences between the signed versions. Both physical signatures and officially-issued electronic signatures will qualify as signatures.\n\nIf the written instrument is recognized by the United States and Iran as not requiring signature for execution, formal adoption of the instrument by both countries without signature will qualify. Formal adoption may be established by official actions, including:\n\n(i) an official joint statement announcing that the United States and Iran have adopted, approved, executed, concluded, or otherwise finalized the instrument;\n(ii) mutual official confirmation that the same published instrument has been agreed to, adopted, approved, executed, or concluded by both countries;\n(iii) adoption, approval, or endorsement through an official resolution, ministerial decision, executive decision, or equivalent institutional act, where that act is the mechanism by which the relevant country adopts the instrument; or\n(iv) an exchange of official diplomatic notes or letters confirming acceptance of the same instrument.\n\nA qualifying written diplomatic instrument must:\n\n(i) Be identified as the final deal contemplated by the June 14, 2026, memorandum of understanding, either in official United States or Iranian communications, or by a consensus of credible reporting;\n(ii) Establish at least one specific obligation limiting Iran's nuclear program through a concrete, measurable benchmark against which compliance could be tested, which may take the form of a defined limit, prohibition, or quantity (e.g., a specific cap on the purity level to which Iran may enrich uranium, or an explicit commitment for Iran to surrender, destroy, or dilute its enriched uranium stockpile). Non-specific or vague restrictions, with no defined metric (e.g., a pledge not to pursue nuclear weapons, a commitment to maintain the status quo, or an agreement to abide IAEA monitoring or inspections requirements that do not specifically restrict Iran’s nuclear program) will not qualify.\n\nThe content of the qualifying instrument must be expressed as an agreed obligation to be implemented. The following do not qualify: \n\n(i) a provision the substantive obligation of which remains explicitly subject to a future agreement, negotiation process, or mutually agreed follow-on instrument; \n(ii) a provision explicitly framed as a minimum requirement for a future negotiation, rather than a present obligation; \n(iii) a floor, placeholder, or minimum standard established explicitly for the purpose of structuring ongoing or future talks. \n\nA definite and unconditional obligation may qualify, even if technical or procedural details, including the exact implementation date, timeframe, or sequencing, remain subject to future arrangements, provided that the obligation still establishes a concrete, measurable benchmark against which compliance could be tested. Conditional obligations do not qualify.\n\nWhether an instrument qualifies will be primarily determined by its officially released text. A qualifying instrument must be signed or formally adopted by both the United States and Iran by the specified date, 11:59 PM ET. If such an instrument is signed or formally adopted by that time, but the complete text has not been released, and genuine material ambiguity remains as to whether it satisfies this market’s requirements, this market may remain open for up to 28 calendar days after the specified date pending release of the text. If the text has still not been released after 28 calendar days, official and definitive announcements from the United States or Iran, and a consensus of credible reporting, will be used to determine whether the instrument qualifies.\n\nAn instrument to which parties other than the United States and Iran are also party will qualify, provided that both the United States and Iran are parties to the instrument and all other requirements are satisfied. \n\nOnce a diplomatic instrument has been signed or formally adopted without signature by both the United States and Iran and confirmed to satisfy the requirements of a qualifying written diplomatic instrument, this market’s condition is met, regardless of whether the instrument later enters into force, is ratified, receives legislative or treaty consent, or is subsequently repudiated, withdrawn from, or not implemented by the United States or Iran.\n\nThe primary resolution sources for this market will be official communications from the governments of the United States and Iran, or their authorized representatives. A consensus of credible reporting from major news agencies of record may also be used.",
+    "as_of": "2026-11-03T16:43:17.828838+00:00",
+    "outcome_deadline": "2027-01-01T04:59:00+00:00",
+    "deadline_basis": "market_end_date_requires_rule_review",
+    "evidence": [
+      {
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "title": "2026 Iran war",
+        "revision_id": 1383598660,
+        "revision_at": "2026-11-03T16:29:30+00:00"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations",
+        "title": "2025–2026 Iran–United States negotiations",
+        "revision_id": 1383567455,
+        "revision_at": "2026-11-03T11:10:47+00:00"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/2026_United_States_F-15E_rescue_operation_in_Iran",
+        "title": "2026 United States F-15E rescue operation in Iran",
+        "revision_id": 1382097839,
+        "revision_at": "2026-10-26T16:10:48+00:00"
+      }
+    ]
+  },
+  "market_reference": {
+    "probability": 0.11,
+    "label": "Later market snapshot",
+    "observed_on": "2026-11-04",
+    "url": "https://polymarket.com/event/us-iran-final-nuclear-deal-by-20260621201254412?marketSlug=us-iran-final-nuclear-deal-by-december-31-2026-191"
+  },
+  "rescore_usage": {
+    "calls": 3,
+    "tokens": 17207
+  }
+}

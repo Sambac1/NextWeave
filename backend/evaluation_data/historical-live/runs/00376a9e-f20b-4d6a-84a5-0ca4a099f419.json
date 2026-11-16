@@ -1,0 +1,1916 @@
+{
+  "run_id": "00376a9e-f20b-4d6a-84a5-0ca4a099f419",
+  "case_id": "market_3cf9c242eed9365d0748da44",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3294,
+      "input_tokens": 3284,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3294,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3284,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:35:50.507495+00:00",
+      "contract_id": "0x2d858f0a25a61dfde6485f3d8e75aed397bed616c3e458b66e10e642fb2f9759",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b41e48e6cf93903cf8fc45ef10dc2c34769d6b6c8cf56fb9194fafc44b294ce8",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.992
+    },
+    {
+      "calls": 2,
+      "tokens": 6588,
+      "input_tokens": 6568,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6588,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3284,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3284,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:35:51.912375+00:00",
+      "contract_id": "0x2d858f0a25a61dfde6485f3d8e75aed397bed616c3e458b66e10e642fb2f9759",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b41e48e6cf93903cf8fc45ef10dc2c34769d6b6c8cf56fb9194fafc44b294ce8",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.402
+    },
+    {
+      "calls": 8,
+      "tokens": 87448,
+      "input_tokens": 84150,
+      "output_tokens": 3298,
+      "accounted_tokens_upper": 87448,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 22,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                  "action": "Continue serving as Secretary of Defense; issue no resignation or departure statement this round.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Continue serving as Secretary of Defense; issue no resignation or departure statement this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reaffirm commitment to remain as Secretary of Defense and continue the warrior-ethos and culture-war agenda through the current term, rejecting calls for resignation.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_21204fd214435063:initial:1",
+                  "action": "Take no public action on Hegseth's tenure this round; keep him in place as Secretary of Defense and make no statement about removal or resignation.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no public action on Hegseth's tenure this round; keep him in place as Secretary of Defense and make no statement about removal or resignation.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reaffirm confidence in Hegseth as Secretary of Defense, stating he retains the President's full support and will continue in the role through November 30 and beyond.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled event shows Hegseth leaving office; the frozen record still lists him as current secretary, and the latest dated item is his September 30, 2026 address. Impeachment polling and criticism are not removal, and the House/Senate steps remain unbound and unobserved.",
+                "evidence_quote": "The current secretary of defense is Pete Hegseth, who was nominated by President Donald Trump and was confirmed by the Senate on 25 January 2025.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_5",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.6400000000000001
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "7b5b9ca6-3c5a-422b-8b0d-59572307be11",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:36:46.229194+00:00",
+      "contract_id": "0x2d858f0a25a61dfde6485f3d8e75aed397bed616c3e458b66e10e642fb2f9759",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b41e48e6cf93903cf8fc45ef10dc2c34769d6b6c8cf56fb9194fafc44b294ce8",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 54.315
+    },
+    {
+      "calls": 13,
+      "tokens": 160050,
+      "input_tokens": 153973,
+      "output_tokens": 6077,
+      "accounted_tokens_upper": 160050,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 22,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                  "action": "Take no public step toward resignation or removal; continue serving as Secretary of Defense through the horizon.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no public step toward resignation or removal; continue serving as Secretary of Defense through the horizon.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Issue a public statement reaffirming commitment to remain as Secretary of Defense and continue the warrior-ethos and culture-war agenda.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_21204fd214435063:initial:1",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reaffirm confidence in Hegseth as Secretary of Defense, stating he retains the President's full support through the current period.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled event shows Hegseth leaving or any resignation/removal announcement; the frozen cabinet table still lists him as Secretary of Defense. Public opinion favoring impeachment and criticism of his conduct are not independent approval or execution of removal, so the outcome remains unverified.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.68
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 22,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                  "action": null,
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publicly reaffirm, in a brief statement to the force, that I am staying on as Secretary of Defense and will continue implementing the warrior-ethos and culture-war agenda through the current period.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_21204fd214435063:initial:1",
+                  "action": null,
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Issue a public statement reaffirming confidence in Secretary Hegseth and stating he will continue in the role through the current period.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled event shows Hegseth leaving or any resignation/removal announcement; the frozen cabinet table still lists him as Secretary of Defense. Public opinion favoring impeachment and criticism of his conduct are not independent approval or execution of removal, so the outcome remains unverified.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.6375
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "0856829e-7b94-4086-a65a-9a77c8c04d1b",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:37:03.665969+00:00",
+      "contract_id": "0x2d858f0a25a61dfde6485f3d8e75aed397bed616c3e458b66e10e642fb2f9759",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b41e48e6cf93903cf8fc45ef10dc2c34769d6b6c8cf56fb9194fafc44b294ce8",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 17.435
+    },
+    {
+      "calls": 20,
+      "tokens": 217904,
+      "input_tokens": 209717,
+      "output_tokens": 8187,
+      "accounted_tokens_upper": 217904,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_21204fd214435063:initial:1",
+                  "action": "Take no public action on Hegseth's tenure this round; keep him in place as Secretary of Defense.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no public action on Hegseth's tenure this round; keep him in place as Secretary of Defense.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly affirm confidence in Hegseth as Secretary of Defense, ending speculation about his tenure.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows Hegseth has resigned, been removed, or that an announcement is imminent; the frozen excerpts still list him as the current secretary. Impeachment sentiment and criticism are documented, but no House impeachment or Senate action is evidenced, so the in-window outcome remains unlikely.",
+                "evidence_quote": "The current secretary of defense is Pete Hegseth, who was nominated by President Donald Trump and was confirmed by the Senate on 25 January 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_5",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-14",
+                "interval_end": "2026-11-20",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 11,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows Hegseth has resigned, been removed, or that an announcement is imminent; the frozen excerpts still list him as the current secretary. Impeachment sentiment and criticism are documented, but no House impeachment or Senate action is evidenced, so the in-window outcome remains unlikely.",
+                "evidence_quote": "The current secretary of defense is Pete Hegseth, who was nominated by President Donald Trump and was confirmed by the Senate on 25 January 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_5",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-20",
+                "interval_end": "2026-11-25",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-20T00:00:00+00:00",
+                "interval_end_utc": "2026-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows Hegseth has resigned, been removed, or that an announcement is imminent; the frozen excerpts still list him as the current secretary. Impeachment sentiment and criticism are documented, but no House impeachment or Senate action is evidenced, so the in-window outcome remains unlikely.",
+                "evidence_quote": "The current secretary of defense is Pete Hegseth, who was nominated by President Donald Trump and was confirmed by the Senate on 25 January 2025.",
+                "change_driver": null,
+                "evidence_ref": "history_5",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-25",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-25T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                  "action": null,
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Issue a public statement affirming I am staying on as Secretary of Defense and continuing the warrior-ethos and standards agenda through the current term.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_21204fd214435063:initial:1",
+                  "action": "Take no public action on Hegseth's tenure this round; keep him in place as Secretary of Defense.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Take no public action on Hegseth's tenure this round; keep him in place as Secretary of Defense.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Publicly reaffirm confidence in Hegseth as Secretary of Defense, stating he retains the President's full support and will continue in the role.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled event shows Hegseth leaving or any resignation/removal announcement through the forecast cutoff; the frozen cabinet table still lists him as Secretary of Defense. Impeachment polling and criticism are sentiment, not execution, so the main unknown is whether an unobserved removal occurred before the deadline.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.5780000000000001
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 4,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "de7385c4-81ed-49e4-96d9-75278b57dadb",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:37:56.192550+00:00",
+      "contract_id": "0x2d858f0a25a61dfde6485f3d8e75aed397bed616c3e458b66e10e642fb2f9759",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b41e48e6cf93903cf8fc45ef10dc2c34769d6b6c8cf56fb9194fafc44b294ce8",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 52.524
+    },
+    {
+      "calls": 38,
+      "tokens": 425603,
+      "input_tokens": 408514,
+      "output_tokens": 17089,
+      "accounted_tokens_upper": 425603,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_21204fd214435063:initial:1",
+                  "action": "Take no outward action on Hegseth's tenure this round: no removal, no request for resignation, no acceptance of resignation, and no public statement changing his status.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no outward action on Hegseth's tenure this round: no removal, no request for resignation, no acceptance of resignation, and no public statement changing his status.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reaffirm confidence in Hegseth as Secretary of Defense, stating he retains the President's full support and will continue leading the Department of Defense.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows Hegseth resigning, being removed, or an impeachment conviction; the frozen cabinet table still lists him as Secretary of Defense. Impeachment polling reflects sentiment, not an executed removal, and the window extends to late 2026.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-14",
+                "interval_end": "2026-11-20",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 11,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows Hegseth resigning, being removed, or an impeachment conviction; the frozen cabinet table still lists him as Secretary of Defense. Impeachment polling reflects sentiment, not an executed removal, and the window extends to late 2026.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-20",
+                "interval_end": "2026-11-25",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-20T00:00:00+00:00",
+                "interval_end_utc": "2026-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows Hegseth resigning, being removed, or an impeachment conviction; the frozen cabinet table still lists him as Secretary of Defense. Impeachment polling reflects sentiment, not an executed removal, and the window extends to late 2026.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-25",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-25T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                  "action": null,
+                  "p_selected": 0.9,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:2",
+                      "weight": 10.0,
+                      "probability": 0.1,
+                      "action": "Publicly reaffirm intent to remain as Secretary of Defense and continue the warrior-ethos and culture-war agenda, rejecting calls for resignation or impeachment as politically motivated.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_21204fd214435063:initial:1",
+                  "action": "Take no outward action on Hegseth's tenure: no removal, no resignation request, no acceptance of resignation, and no public statement changing his status before the deadline.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no outward action on Hegseth's tenure: no removal, no resignation request, no acceptance of resignation, and no public statement changing his status before the deadline.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reaffirm confidence in Hegseth as Secretary of Defense, stating he retains the President's full support and will continue in the role.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled event shows Hegseth leaving or any resignation/removal announcement; the frozen cabinet table still lists him as Secretary of Defense. Public criticism and impeachment polling are sentiment, not an executed removal, so the outcome remains unverified and mostly dependent on unobserved future action.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.5760000000000001
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-14",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 5,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-14T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                  "action": "Continue serving as Secretary of Defense and exercising the office's priorities; make no resignation announcement or removal signal this round.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Continue serving as Secretary of Defense and exercising the office's priorities; make no resignation announcement or removal signal this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Issue a public statement reaffirming continued service as Secretary of Defense and denying any intention to resign before November 30.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_21204fd214435063:initial:1",
+                  "action": null,
+                  "p_selected": 1.0,
+                  "public_options": [],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows Hegseth resigning, being removed, or an impeachment conviction; the frozen cabinet table still lists him as Secretary of Defense. Impeachment polling reflects sentiment, not an executed removal, and the window extends to late 2026.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-14",
+                "interval_end": "2026-11-20",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 11,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-14T00:00:00+00:00",
+                "interval_end_utc": "2026-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows Hegseth resigning, being removed, or an impeachment conviction; the frozen cabinet table still lists him as Secretary of Defense. Impeachment polling reflects sentiment, not an executed removal, and the window extends to late 2026.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-20",
+                "interval_end": "2026-11-25",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 16,
+                "interval_days": 5,
+                "interval_start_utc": "2026-11-20T00:00:00+00:00",
+                "interval_end_utc": "2026-11-25T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.08,
+                "basis": "No public evidence shows Hegseth resigning, being removed, or an impeachment conviction; the frozen cabinet table still lists him as Secretary of Defense. Impeachment polling reflects sentiment, not an executed removal, and the window extends to late 2026.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-11-25",
+                "interval_end": "2026-12-01",
+                "horizon_end": "2026-12-01",
+                "elapsed_days": 22,
+                "interval_days": 6,
+                "interval_start_utc": "2026-11-25T00:00:00+00:00",
+                "interval_end_utc": "2026-12-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Pete Hegseth out as Secretary of Defense by November 30?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_5a187fb601115b3a",
+                  "actor_name": "Pete Hegseth",
+                  "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                  "action": "Continue serving as Secretary of Defense and exercising the office's priorities; make no resignation announcement or removal signal this round.",
+                  "p_selected": 0.85,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:1",
+                      "weight": 85.0,
+                      "probability": 0.85,
+                      "action": "Continue serving as Secretary of Defense and exercising the office's priorities; make no resignation announcement or removal signal this round.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_5a187fb601115b3a:initial:2",
+                      "weight": 15.0,
+                      "probability": 0.15,
+                      "action": "Issue a public statement reaffirming intent to remain as Secretary of Defense and continue the warrior-ethos and culture-reform agenda, rejecting calls for resignation.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_21204fd214435063",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_21204fd214435063:initial:1",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_21204fd214435063:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reaffirm confidence in Hegseth as Secretary of Defense, stating he retains full support and no change is planned.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No settled event shows Hegseth leaving or any resignation/removal announcement; the frozen cabinet table still lists him as Secretary of Defense. Public criticism and impeachment polling are sentiment, not an executed removal, so the outcome remains unverified and mostly dependent on unobserved future action.",
+                "evidence_quote": "| Secretary of Defense\n| Pete Hegseth",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.578
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 8,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "87782c28-fd94-49ef-9fc7-53f0cdbba47b",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:38:51.559238+00:00",
+      "contract_id": "0x2d858f0a25a61dfde6485f3d8e75aed397bed616c3e458b66e10e642fb2f9759",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b41e48e6cf93903cf8fc45ef10dc2c34769d6b6c8cf56fb9194fafc44b294ce8",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 55.363
+    },
+    {
+      "calls": 58,
+      "tokens": 632553,
+      "input_tokens": 605007,
+      "output_tokens": 27546,
+      "accounted_tokens_upper": 632553,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.12271999999999993,
+      "coverage": 0.8000000000000002,
+      "unexplored_mass": 0.19999999999999984,
+      "unknown_bounds": [
+        0.022720000000000004,
+        0.22271999999999986
+      ],
+      "search_iterations": 7,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 7,
+          "search_value": 0.17511314285714286,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.6400000000000001,
+          "visits": 3,
+          "search_value": 0.22119999999999998,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.6400000000000001,
+          "visits": 2,
+          "search_value": 0.2016,
+          "conditional_p_yes": 0.07,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.6400000000000001,
+          "visits": 1,
+          "search_value": 0.1088,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.5120000000000001,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.015360000000000004
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.12800000000000003,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0025600000000000006
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.16000000000000003,
+          "visits": 3,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.04,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.16000000000000003,
+          "visits": 2,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.16000000000000003,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.16000000000000003,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0048000000000000004
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.19999999999999984,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "ca3b9218-3c49-4404-913e-b559521b8b24",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:41:24.090601+00:00",
+      "contract_id": "0x2d858f0a25a61dfde6485f3d8e75aed397bed616c3e458b66e10e642fb2f9759",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "b41e48e6cf93903cf8fc45ef10dc2c34769d6b6c8cf56fb9194fafc44b294ce8",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 152.488
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x2d858f0a25a61dfde6485f3d8e75aed397bed616c3e458b66e10e642fb2f9759",
+  "group_id": "pete-hegseth-out-as-secretary-of-defense-by-november-30-20261001003401433",
+  "stage": "finished",
+  "outcome_deadline": "2026-12-01T04:59:00+00:00",
+  "deadline_basis": "market_end_date_requires_rule_review",
+  "nominal_market_end": null,
+  "evidence_sha256": "b41e48e6cf93903cf8fc45ef10dc2c34769d6b6c8cf56fb9194fafc44b294ce8",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 744,
+    "input_tokens": 600,
+    "output_tokens": 144,
+    "accounted_tokens_upper": 744,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-14",
+        "2026-11-20",
+        "2026-11-25",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-14",
+        "2026-11-20",
+        "2026-11-25",
+        "2026-12-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-14",
+        "2026-11-20",
+        "2026-11-25",
+        "2026-12-01"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 1,
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_a0f42affdb345400",
+          "name": "Pete Hegseth",
+          "role": "Incumbent U.S. Secretary of Defense whose resignation or removal would satisfy the market",
+          "decision_ids": [
+            "hegseth_resign"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_f8f937cf4b9f38ec",
+          "name": "Donald Trump",
+          "role": "President who nominated Hegseth and could remove or accept resignation of the Secretary of Defense",
+          "decision_ids": [
+            "trump_remove"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Senate convicts on impeachment or otherwise formally ends Hegseth's tenure",
+        "House impeaches Hegseth, a prerequisite for Senate conviction"
+      ],
+      "gaps": [
+        "No source establishes that any removal, resignation, or impeachment process is underway as of the cutoff; counterpart intentions are unknown.",
+        "The resolution source is official information/credible reporting, not a decision seat.",
+        "No frozen source identifies U.S. House of Representatives; its decision remains unresolved.",
+        "No frozen source identifies United States Senate; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "hegseth_resign",
+          "choice": "Pete Hegseth resigns or otherwise ceases to serve as Secretary of Defense before the deadline",
+          "owner": "Pete Hegseth",
+          "support": "represented"
+        },
+        {
+          "id": "trump_remove",
+          "choice": "President Trump removes Hegseth or accepts/announces his resignation",
+          "owner": "Donald Trump",
+          "support": "represented"
+        },
+        {
+          "id": "senate_remove",
+          "choice": "Senate convicts on impeachment or otherwise formally ends Hegseth's tenure",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "house_impeach",
+          "choice": "House impeaches Hegseth, a prerequisite for Senate conviction",
+          "owner": null,
+          "support": "unbound"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 26,
+    "tokens": 60549,
+    "input_tokens": 52563,
+    "output_tokens": 7986,
+    "accounted_tokens_upper": 60549,
+    "unknown_usage_requests": 0
+  }
+}

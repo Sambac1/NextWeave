@@ -1,0 +1,2245 @@
+{
+  "run_id": "95005f21-895b-4768-b190-a10e08dbebce",
+  "case_id": "market_b800bd58c7857e6bb869045d",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 2442,
+      "input_tokens": 2432,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 2442,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.03,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2432,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:27:10.141736+00:00",
+      "contract_id": "0x1adb1d295dee6d76b63e21fad78f2d3d4b227f959b3b1d3df07cb52548cb9c78",
+      "forecast_cutoff": "2025-10-23T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ea692e23c44adddc1e5d76b180566ab6c6fc174aa63abccaebb8d027b80caecc",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.938
+    },
+    {
+      "calls": 2,
+      "tokens": 4884,
+      "input_tokens": 4864,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 4884,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.03,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2432,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 2432,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:27:12.003102+00:00",
+      "contract_id": "0x1adb1d295dee6d76b63e21fad78f2d3d4b227f959b3b1d3df07cb52548cb9c78",
+      "forecast_cutoff": "2025-10-23T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ea692e23c44adddc1e5d76b180566ab6c6fc174aa63abccaebb8d027b80caecc",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.86
+    },
+    {
+      "calls": 9,
+      "tokens": 97343,
+      "input_tokens": 92613,
+      "output_tokens": 4730,
+      "accounted_tokens_upper": 97343,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-10-23",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 70,
+                "interval_days": 70,
+                "interval_start_utc": "2025-10-23T23:59:59+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly expressed continued interest in diplomacy with North Korea and openness to a meeting with Kim Jong Un, without committing to travel or setting a date."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unmet",
+                  "summary": "without committing to travel or setting a date",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Donald Trump publicly expressed continued interest in diplomacy with North Korea and openness to a meeting with Kim Jong Un, without committing to travel or setting a date.",
+                  "date": "2026-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_964672eb5b8c5e59:initial:2",
+                  "action": "Publicly express continued interest in diplomacy with North Korea and openness to a meeting with Kim Jong Un, without committing to travel or setting a date.",
+                  "p_selected": 0.2,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no new public step toward a North Korea visit this round; monitor DPRK signals and any scheduling developments through the remaining window before deciding on travel.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly express continued interest in diplomacy with North Korea and openness to a meeting with Kim Jong Un, without committing to travel or setting a date.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "candidate_id": "agent_ec1ce4d4062359c9:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ec1ce4d4062359c9:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement reiterating that the DPRK will engage Washington only on the basis of being accepted as a nuclear-armed state, and that denuclearisation talks are a 'mockery'. Frame any high-level contact, including a possible presidential visit, as contingent on that acceptance.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No settled event shows Trump entering North Korean territory within the Aug 4–Dec 31, 2025 window. The only current simulated item says he expressed interest in diplomacy without committing to travel or a date, and the frozen trip list shows no North Korea stop.",
+                "evidence_quote": "Donald Trump publicly expressed continued interest in diplomacy with North Korea and openness to a meeting with Kim Jong Un, without committing to travel or setting a date.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_001_001",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.06
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.04,
+      "covered_p_yes": 0.04,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.04,
+        0.040000000000000036
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "15eb5171-02b9-42c5-8ed9-8c63304bf9c8",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "Donald Trump",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Public observation of visit",
+          "ready": true
+        }
+      ],
+      "simulation_route": "actor",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:27:51.858353+00:00",
+      "contract_id": "0x1adb1d295dee6d76b63e21fad78f2d3d4b227f959b3b1d3df07cb52548cb9c78",
+      "forecast_cutoff": "2025-10-23T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ea692e23c44adddc1e5d76b180566ab6c6fc174aa63abccaebb8d027b80caecc",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 39.853
+    },
+    {
+      "calls": 72,
+      "tokens": 756799,
+      "input_tokens": 721867,
+      "output_tokens": 34932,
+      "accounted_tokens_upper": 756799,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-10-23",
+                "interval_end": "2025-11-06",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 14,
+                "interval_days": 14,
+                "interval_start_utc": "2025-10-23T23:59:59+00:00",
+                "interval_end_utc": "2025-11-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_964672eb5b8c5e59:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that the U.S. is open to talks with the DPRK building on the 2018 Singapore summit, and that a Trump–Kim meeting could be considered if Pyongyang engages constructively. Frame it as openness to diplomacy, not a confirmed trip or a date; no commitment to enter North Korean territory is made this round.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "candidate_id": "agent_ec1ce4d4062359c9:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ec1ce4d4062359c9:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement reiterating that the DPRK will engage Washington only if it is accepted as a nuclear-armed state, and that denuclearisation talks are a 'mockery'. Frame any leader-level contact as contingent on that acceptance; do not extend or accept an invitation to host a presidential visit.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a planned or executed Trump visit to North Korea within the window; the trip list excerpt shows scheduled 2025 trips but none to the DPRK. July 2025 signals of openness to talks are conditional and do not establish travel, and the historical travel ban context further weighs against a near-term visit.",
+                "evidence_quote": "The following international trips are scheduled to be made by Donald Trump during 2025:",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-11-06",
+                "interval_end": "2025-11-20",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 28,
+                "interval_days": 14,
+                "interval_start_utc": "2025-11-06T00:00:00+00:00",
+                "interval_end_utc": "2025-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a planned or executed Trump visit to North Korea within the window; the trip list excerpt shows scheduled 2025 trips but none to the DPRK. July 2025 signals of openness to talks are conditional and do not establish travel, and the historical travel ban context further weighs against a near-term visit.",
+                "evidence_quote": "The following international trips are scheduled to be made by Donald Trump during 2025:",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-11-20",
+                "interval_end": "2025-12-04",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 42,
+                "interval_days": 14,
+                "interval_start_utc": "2025-11-20T00:00:00+00:00",
+                "interval_end_utc": "2025-12-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a planned or executed Trump visit to North Korea within the window; the trip list excerpt shows scheduled 2025 trips but none to the DPRK. July 2025 signals of openness to talks are conditional and do not establish travel, and the historical travel ban context further weighs against a near-term visit.",
+                "evidence_quote": "The following international trips are scheduled to be made by Donald Trump during 2025:",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-12-04",
+                "interval_end": "2025-12-18",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 56,
+                "interval_days": 14,
+                "interval_start_utc": "2025-12-04T00:00:00+00:00",
+                "interval_end_utc": "2025-12-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "status": "executed",
+                  "summary": "Kim Yo Jong publicly restated that the DPRK will engage Washington only on the basis of being accepted as a nuclear-armed state, calling denuclearisation talks a mockery, and framed this as the standing precondition for any high-level contact."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "Kim Yo Jong publicly restated that the DPRK will engage Washington only on the basis of being accepted as a nuclear-armed state",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Kim Yo Jong publicly restated that the DPRK will engage Washington only on the basis of being accepted as a nuclear-armed state, calling denuclearisation talks a mockery, and framed this as the standing precondition for any high-level contact.",
+                  "date": "2025-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                  "action": null,
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Publicly reiterate, via the White House, willingness to build on 2018 Singapore summit progress and openness to talks with Pyongyang, without committing to travel or accepting the DPRK's nuclear-armed precondition.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "candidate_id": "agent_ec1ce4d4062359c9:initial:2",
+                  "action": "Publicly restate that the DPRK will engage Washington only on the basis of being accepted as a nuclear-armed state, and that denuclearisation talks are a mockery; frame this as the standing precondition for any high-level contact.\n承诺：Re-engagement conditioned on acceptance of the DPRK as a nuclear-armed state; no denuclearisation agenda.\n触发或复核条件：Only if a public restatement is judged useful to keep the precondition salient.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ec1ce4d4062359c9:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly restate that the DPRK will engage Washington only on the basis of being accepted as a nuclear-armed state, and that denuclearisation talks are a mockery; frame this as the standing precondition for any high-level contact.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No public evidence shows a planned or executed Trump visit to North Korea within the window; the trip list excerpt shows scheduled 2025 trips but none to the DPRK. July 2025 signals of openness to talks are conditional and do not establish travel, and the historical travel ban context further weighs against a near-term visit.",
+                "evidence_quote": "The following international trips are scheduled to be made by Donald Trump during 2025:",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-12-18",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 70,
+                "interval_days": 14,
+                "interval_start_utc": "2025-12-18T00:00:00+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence shows Trump entering North Korean territory during the Aug 4–Dec 31, 2025 window. The only in-window diplomatic signal is Kim Yo Jong's December restatement of a nuclear-armed-state precondition, which constrains rather than enables a visit; the frozen trip list shows no scheduled North Korea stop.",
+                "evidence_quote": "Kim Yo Jong publicly restated that the DPRK will engage Washington only on the basis of being accepted as a nuclear-armed state, calling denuclearisation talks a mockery, and framed this as the standing precondition for any high-level contact.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_001",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.0288
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-10-23",
+                "interval_end": "2025-11-06",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 14,
+                "interval_days": 14,
+                "interval_start_utc": "2025-10-23T23:59:59+00:00",
+                "interval_end_utc": "2025-11-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly stated, through his verified accounts and White House channels, that he is open to meeting Kim Jong Un in North Korea before the end of the year, framing it as building on the 2018 Singapore summit, while setting no date and not accepting the DPRK's nuclear-armed precondition."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "open to meeting Kim Jong Un in North Korea before the end of the year",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Donald Trump publicly stated, through his verified accounts and White House channels, that he is open to meeting Kim Jong Un in North Korea before the end of the year, framing it as building on the 2018 Singapore summit, while setting no date and not accepting the DPRK's nuclear-armed precondition.",
+                  "date": "2025-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                  "action": "Publicly state, via Trump's verified accounts or White House channels, that he is open to meeting Kim Jong Un in North Korea before year's end, framing it as building on the 2018 Singapore summit, without committing to a date or accepting the DPRK's nuclear-armed precondition.\n承诺：Expresses willingness only; no travel date, no acceptance of DPRK nuclear status.\n触发或复核条件：DPRK extends an invitation and arrangements are agreed.",
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state, via Trump's verified accounts or White House channels, that he is open to meeting Kim Jong Un in North Korea before year's end, framing it as building on the 2018 Singapore summit, without committing to a date or accepting the DPRK's nuclear-armed precondition.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "candidate_id": "agent_ec1ce4d4062359c9:initial:2",
+                  "action": null,
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ec1ce4d4062359c9:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly restate the July 2025 position: the DPRK is open to talks with Washington only if the U.S. accepts it as a nuclear-armed state, and denuclearisation talks remain a 'mockery.' No offer to host or authorize a presidential visit is made.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No scheduled or reported Trump trip to North Korea appears in the evidence; the only current signal is a simulated statement of openness to meeting Kim, with no date and no DPRK precondition accepted. A physical in-window visit would require both a decision and a host-side opening, neither of which is evidenced.",
+                "evidence_quote": "Donald Trump publicly stated, through his verified accounts and White House channels, that he is open to meeting Kim Jong Un in North Korea before the end of the year, framing it as building on the 2018 Singapore summit, while setting no date and not accepting the DPRK's nuclear-armed precondition.",
+                "change_driver": null,
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-11-06",
+                "interval_end": "2025-11-20",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 28,
+                "interval_days": 14,
+                "interval_start_utc": "2025-11-06T00:00:00+00:00",
+                "interval_end_utc": "2025-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly reaffirmed, through verified accounts and White House channels, that he is open to meeting Kim Jong Un in North Korea before the end of the year and called on Pyongyang to respond to the offer, again setting no date and not accepting the DPRK's nuclear-armed precondition."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_2_agent_964672eb5b8c5e59",
+                    "action_1_agent_964672eb5b8c5e59"
+                  ],
+                  "outcome": "pending",
+                  "effect": "called on Pyongyang to respond to the offer, again setting no date and not accepting the DPRK's nuclear-armed precondition"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "open to meeting Kim Jong Un in North Korea before the end of the year and called on Pyongyang to respond to the offer",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "Donald Trump publicly reaffirmed, through verified accounts and White House channels, that he is open to meeting Kim Jong Un in North Korea before the end of the year and called on Pyongyang to respond to the offer, again setting no date and not accepting the DPRK's nuclear-armed precondition.",
+                  "date": "2025-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_964672eb5b8c5e59:initial:2",
+                  "action": "Publicly reaffirm, via verified accounts or White House channels, openness to meeting Kim Jong Un in North Korea before year's end and call on Pyongyang to respond to the offer, again setting no date and not accepting the DPRK's nuclear-armed precondition.\n承诺：Expresses willingness and invites a DPRK response; no travel date, no acceptance of DPRK nuclear status.\n触发或复核条件：DPRK extends an invitation and arrangements are agreed.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly reaffirm, via verified accounts or White House channels, openness to meeting Kim Jong Un in North Korea before year's end and call on Pyongyang to respond to the offer, again setting no date and not accepting the DPRK's nuclear-armed precondition.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "Trump's simulated November openness to meeting Kim in North Korea sets no date and does not accept Pyongyang's nuclear-armed precondition, while Kim Yo Jong's July condition remains unmet. No scheduled trip or physical entry appears in the evidence, so a visit within the window is unlikely.",
+                "evidence_quote": "Donald Trump publicly reaffirmed, through verified accounts and White House channels, that he is open to meeting Kim Jong Un in North Korea before the end of the year and called on Pyongyang to respond to the offer, again setting no date and not accepting the DPRK's nuclear-armed precondition.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_002_001",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-11-20",
+                "interval_end": "2025-12-04",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 42,
+                "interval_days": 14,
+                "interval_start_utc": "2025-11-20T00:00:00+00:00",
+                "interval_end_utc": "2025-12-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly stated, through his verified accounts and White House channels, that he is ready to meet Kim Jong Un in North Korea before the end of the year and that he would accept the DPRK as a nuclear-armed state as the basis for talks, directing staff to arrange logistics; no travel date was set and the offer remained conditional on a DPRK invitation and agreed entry arrangements."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_3_agent_964672eb5b8c5e59",
+                    "action_2_agent_964672eb5b8c5e59"
+                  ],
+                  "outcome": "realized",
+                  "effect": "that he would accept the DPRK as a nuclear-armed state as the basis for talks"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "remained conditional on a DPRK invitation and agreed entry arrangements",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "Donald Trump publicly stated, through his verified accounts and White House channels, that he is ready to meet Kim Jong Un in North Korea before the end of the year and that he would accept the DPRK as a nuclear-armed state as the basis for talks, directing staff to arrange logistics; no travel date was set and the offer remained conditional on a DPRK invitation and agreed entry arrangements.",
+                  "date": "2025-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                  "action": "Publicly state via verified accounts/White House channels that he is ready to meet Kim Jong Un in North Korea before year's end and will accept DPRK as a nuclear-armed state as the basis for talks, directing staff to arrange logistics.\n承诺：Accepts DPRK nuclear-armed status as basis for talks; no fixed travel date yet.\n触发或复核条件：DPRK extends an invitation and entry arrangements are agreed.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly state via verified accounts/White House channels that he is ready to meet Kim Jong Un in North Korea before year's end and will accept DPRK as a nuclear-armed state as the basis for talks, directing staff to arrange logistics.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:3",
+                      "weight": 40.0,
+                      "probability": 0.4,
+                      "action": "Hold current public posture of openness and wait for Pyongyang to respond to the November offer before committing to travel.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "pending_trigger_rejected": true,
+              "outlook_issue": "missing_change_driver",
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-12-04",
+                "interval_end": "2025-12-18",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 56,
+                "interval_days": 14,
+                "interval_start_utc": "2025-12-04T00:00:00+00:00",
+                "interval_end_utc": "2025-12-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "candidate_id": "agent_ec1ce4d4062359c9:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ec1ce4d4062359c9:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement welcoming Washington's acceptance of the DPRK as a nuclear-armed state as the basis for talks, while making clear that any visit by Trump would require prior agreed entry arrangements and DPRK invitation, and that Kim Yo Jong does not herself authorize or host such a visit.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "outlook_issue": "missing_change_driver",
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-12-18",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 70,
+                "interval_days": 14,
+                "interval_start_utc": "2025-12-18T00:00:00+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.07,
+                "basis": "Trump repeatedly voiced openness to meeting Kim in North Korea, but each statement set no date and remained conditional on a DPRK invitation and entry arrangements; the final round still shows no travel date. No settled event shows physical entry into North Korean territory within the window, so the outcome is unverified and rests on unfulfilled willingness rather than execution.",
+                "evidence_quote": "target_event: pending. remained conditional on a DPRK invitation and agreed entry arrangements",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.07,
+          "error": null,
+          "action_path_probability": 0.004640625000000001
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 6,
+        "draw_rounds": 6,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 9,
+        "public_event_count": 4,
+        "substantive_public_event_count": 4,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 4,
+            "draw_rounds": 4,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 5,
+            "active_actor_count": 2,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.05,
+      "covered_p_yes": 0.05,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.05,
+        0.050000000000000044
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "d07ec540-9435-4419-9a71-c3305f0bfca1",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "Donald Trump",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Public observation of visit",
+          "ready": true
+        }
+      ],
+      "simulation_route": "actor",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:29:43.325283+00:00",
+      "contract_id": "0x1adb1d295dee6d76b63e21fad78f2d3d4b227f959b3b1d3df07cb52548cb9c78",
+      "forecast_cutoff": "2025-10-23T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ea692e23c44adddc1e5d76b180566ab6c6fc174aa63abccaebb8d027b80caecc",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 111.463
+    },
+    {
+      "calls": 28,
+      "tokens": 292677,
+      "input_tokens": 280908,
+      "output_tokens": 11769,
+      "accounted_tokens_upper": 292677,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-10-23",
+                "interval_end": "2025-11-06",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 14,
+                "interval_days": 14,
+                "interval_start_utc": "2025-10-23T23:59:59+00:00",
+                "interval_end_utc": "2025-11-06T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_964672eb5b8c5e59:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly state that I remain open to meeting Kim Jong Un and building on the 2018 Singapore summit, while making clear any such meeting would require the DPRK to engage seriously and would be arranged through normal diplomatic channels.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "candidate_id": "agent_ec1ce4d4062359c9:initial:2",
+                  "action": null,
+                  "p_selected": 0.4,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ec1ce4d4062359c9:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Reiterate publicly that the DPRK will engage Washington only if it is accepted as a nuclear-armed state, and that denuclearisation talks are a 'mockery' — restating the July 2025 condition without authorizing, approving, or hosting any presidential visit.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence shows a planned or executed Trump visit to North Korea within the Aug 4–Dec 31, 2025 window. The frozen trip list shows only scheduled 2025 trips without North Korea, and July 2025 DPRK signals condition re-engagement on nuclear-status acceptance, making a near-term visit unlikely.",
+                "evidence_quote": "The following international trips are scheduled to be made by Donald Trump during 2025:",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-11-06",
+                "interval_end": "2025-11-20",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 28,
+                "interval_days": 14,
+                "interval_start_utc": "2025-11-06T00:00:00+00:00",
+                "interval_end_utc": "2025-11-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence shows a planned or executed Trump visit to North Korea within the Aug 4–Dec 31, 2025 window. The frozen trip list shows only scheduled 2025 trips without North Korea, and July 2025 DPRK signals condition re-engagement on nuclear-status acceptance, making a near-term visit unlikely.",
+                "evidence_quote": "The following international trips are scheduled to be made by Donald Trump during 2025:",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-11-20",
+                "interval_end": "2025-12-04",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 42,
+                "interval_days": 14,
+                "interval_start_utc": "2025-11-20T00:00:00+00:00",
+                "interval_end_utc": "2025-12-04T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence shows a planned or executed Trump visit to North Korea within the Aug 4–Dec 31, 2025 window. The frozen trip list shows only scheduled 2025 trips without North Korea, and July 2025 DPRK signals condition re-engagement on nuclear-status acceptance, making a near-term visit unlikely.",
+                "evidence_quote": "The following international trips are scheduled to be made by Donald Trump during 2025:",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-12-04",
+                "interval_end": "2025-12-18",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 56,
+                "interval_days": 14,
+                "interval_start_utc": "2025-12-04T00:00:00+00:00",
+                "interval_end_utc": "2025-12-18T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly restate interest in building on the 2018 Singapore summit and say I would be open to meeting Kim Jong Un in North Korea if Pyongyang extends an invitation and arrangements can be made before year-end; no travel is committed.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "candidate_id": "agent_ec1ce4d4062359c9:initial:1",
+                  "action": "Keep the July 2025 conditional signal as the standing position; issue no new public statement or response this round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ec1ce4d4062359c9:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Keep the July 2025 conditional signal as the standing position; issue no new public statement or response this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence shows a planned or executed Trump visit to North Korea within the Aug 4–Dec 31, 2025 window. The frozen trip list shows only scheduled 2025 trips without North Korea, and July 2025 DPRK signals condition re-engagement on nuclear-status acceptance, making a near-term visit unlikely.",
+                "evidence_quote": "The following international trips are scheduled to be made by Donald Trump during 2025:",
+                "change_driver": null,
+                "evidence_ref": "history_2",
+                "estimate_kind": null
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2025-12-18",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 70,
+                "interval_days": 14,
+                "interval_start_utc": "2025-12-18T00:00:00+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No settled event shows Trump entering North Korean territory during the Aug 4–Dec 31, 2025 window. The only in-window signals are diplomatic: Kim Yo Jong's July 2025 conditional openness to talks and prior U.S. criticism, which fall short of a visit or announced travel.",
+                "evidence_quote": "In July 2025, Kim Yo Jong signalled openness to re-engage via talks with Washington on the condition that that the DPRK is accepted as a nuclear-armed state, stating that denuclearisation talks would be deemed a \"mockery.\"",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "hist_9cdf03e98d425d33.source",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.11200000000000002
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 4,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "cc6287d6-5a62-48c0-84ba-c52431297970",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "Donald Trump",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Public observation of visit",
+          "ready": true
+        }
+      ],
+      "simulation_route": "actor",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T00:59:48.140086+00:00",
+      "contract_id": "0x1adb1d295dee6d76b63e21fad78f2d3d4b227f959b3b1d3df07cb52548cb9c78",
+      "forecast_cutoff": "2025-10-23T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ea692e23c44adddc1e5d76b180566ab6c6fc174aa63abccaebb8d027b80caecc",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 71.267
+    },
+    {
+      "calls": 18,
+      "tokens": 195493,
+      "input_tokens": 185635,
+      "output_tokens": 9858,
+      "accounted_tokens_upper": 195493,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-10-23",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 70,
+                "interval_days": 70,
+                "interval_start_utc": "2025-10-23T23:59:59+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_964672eb5b8c5e59:initial:2",
+                  "action": null,
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "Publicly state that I remain open to meeting Kim Jong Un and building on the 2018 Singapore summit, but that any such meeting depends on North Korea engaging seriously; make no commitment to travel to North Korea within 2025.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "candidate_id": "agent_ec1ce4d4062359c9:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ec1ce4d4062359c9:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Publicly restate that the DPRK will engage Washington only if it is accepted as a nuclear-armed state, and that denuclearisation talks are a 'mockery.' Frame any high-level U.S. contact, including a presidential visit, as possible only on that basis; make no offer to host or authorize a visit.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "No evidence shows Trump entering North Korean territory during the Aug 4–Dec 31, 2025 window. The frozen trip list shows only scheduled/planned travel, and July 2025 DPRK signals condition re-engagement on nuclear-armed status, making a visit unlikely before the deadline.",
+                "evidence_quote": "The following international trips are scheduled to be made by Donald Trump during 2025:",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_2",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.135
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2025-10-23",
+                "interval_end": "2026-01-01",
+                "horizon_end": "2026-01-01",
+                "elapsed_days": 70,
+                "interval_days": 70,
+                "interval_start_utc": "2025-10-23T23:59:59+00:00",
+                "interval_end_utc": "2026-01-01T04:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "status": "executed",
+                  "summary": "Donald Trump publicly restated interest in building on the 2018 Singapore summit and directed the White House to explore a diplomatic opening with Pyongyang, without committing to travel to North Korea or accepting the DPRK's nuclear-armed precondition."
+                },
+                {
+                  "action_id": "action_1_agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "status": "executed",
+                  "summary": "Kim Yo Jong publicly signalled that, if Washington accepts the DPRK as a nuclear-armed state, the DPRK would be open to discussing senior-level exchanges, including the possibility of a presidential visit, with details to be settled through working-level channels."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "conflicts",
+                  "action_ids": [
+                    "action_1_agent_964672eb5b8c5e59",
+                    "action_1_agent_ec1ce4d4062359c9"
+                  ],
+                  "outcome": "unresolved",
+                  "effect": "if Washington accepts the DPRK as a nuclear-armed state, the DPRK would be open to discussing senior-level exchanges"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Donald Trump visit North Korea in 2025?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "without committing to travel to North Korea or accepting the DPRK's nuclear-armed precondition",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Donald Trump publicly restated interest in building on the 2018 Singapore summit and directed the White House to explore a diplomatic opening with Pyongyang, without committing to travel to North Korea or accepting the DPRK's nuclear-armed precondition.",
+                  "date": "2026-01"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Kim Yo Jong publicly signalled that, if Washington accepts the DPRK as a nuclear-armed state, the DPRK would be open to discussing senior-level exchanges, including the possibility of a presidential visit, with details to be settled through working-level channels.",
+                  "date": "2026-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_964672eb5b8c5e59",
+                  "actor_name": "Donald Trump",
+                  "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                  "action": "Publicly restate interest in building on the 2018 Singapore summit and direct the White House to explore a diplomatic opening with Pyongyang, without committing to travel or accepting the DPRK's nuclear-armed precondition.\n承诺：No commitment to visit North Korea in 2025; only exploratory engagement.\n触发或复核条件：Only if Pyongyang signals willingness to discuss without preconditions on nuclear status.",
+                  "p_selected": 0.45,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_964672eb5b8c5e59:initial:1",
+                      "weight": 45.0,
+                      "probability": 0.45,
+                      "action": "Publicly restate interest in building on the 2018 Singapore summit and direct the White House to explore a diplomatic opening with Pyongyang, without committing to travel or accepting the DPRK's nuclear-armed precondition.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_ec1ce4d4062359c9",
+                  "actor_name": "Kim Yo Jong",
+                  "candidate_id": "agent_ec1ce4d4062359c9:initial:2",
+                  "action": "Signal that, if Washington accepts the DPRK as a nuclear-armed state, the DPRK would be open to discussing senior-level exchanges, including the possibility of a presidential visit, with details to be settled through working-level channels.\n承诺：Openness to discussing a possible presidential visit only after Washington accepts the DPRK as a nuclear-armed state.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_ec1ce4d4062359c9:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Reaffirm publicly that the DPRK will engage Washington only if it is accepted as a nuclear-armed state, and that denuclearisation talks are a 'mockery'; state that any high-level contact, including a presidential visit, would require that precondition be met first.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_ec1ce4d4062359c9:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Signal that, if Washington accepts the DPRK as a nuclear-armed state, the DPRK would be open to discussing senior-level exchanges, including the possibility of a presidential visit, with details to be settled through working-level channels.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.04,
+                "basis": "No settled event shows Trump entering North Korean territory during the Aug 4–Dec 31, 2025 window. The only in-window signals are conditional diplomatic feelers and a restated interest in talks, with no travel commitment; the outcome remains unverified.",
+                "evidence_quote": "Donald Trump publicly restated interest in building on the 2018 Singapore summit and directed the White House to explore a diplomatic opening with Pyongyang, without committing to travel to North Korea or accepting the DPRK's nuclear-armed precondition.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_001",
+                "estimate_kind": "terminal_estimate"
+              },
+              "contract_observation": {
+                "kind": "structured_stage"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.04,
+          "error": null,
+          "action_path_probability": 0.135
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 2,
+        "substantive_public_event_count": 2,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 2,
+            "substantive_public_event_count": 2,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.035,
+      "covered_p_yes": 0.035,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.035,
+        0.03499999999999992
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "86cbd66a-ecca-403b-998c-8b0ccbb0cd35",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "Donald Trump",
+          "ready": true
+        },
+        {
+          "kind": "observation",
+          "label": "Public observation of visit",
+          "ready": true
+        }
+      ],
+      "simulation_route": "actor",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:00:19.122824+00:00",
+      "contract_id": "0x1adb1d295dee6d76b63e21fad78f2d3d4b227f959b3b1d3df07cb52548cb9c78",
+      "forecast_cutoff": "2025-10-23T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ea692e23c44adddc1e5d76b180566ab6c6fc174aa63abccaebb8d027b80caecc",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 30.981
+    },
+    {
+      "calls": 88,
+      "tokens": 971757,
+      "input_tokens": 913604,
+      "output_tokens": 58153,
+      "accounted_tokens_upper": 971757,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.251549,
+      "coverage": 0.5189333333333332,
+      "unexplored_mass": 0.4810666666666667,
+      "unknown_bounds": [
+        0.011015666666666667,
+        0.49208233333333334
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.08116193333333332,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.42,
+          "visits": 5,
+          "search_value": 0.0782972,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.42,
+          "visits": 4,
+          "search_value": 0.0687715,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.42,
+          "visits": 3,
+          "search_value": 0.065562,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.1617,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.1617,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0032340000000000003
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.10289999999999998,
+          "visits": 1,
+          "search_value": 0.0784,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.10289999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0020579999999999995
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.15539999999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.27999999999999997,
+          "visits": 4,
+          "search_value": 0.08732333333333334,
+          "conditional_p_yes": 0.02,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.154,
+          "visits": 2,
+          "search_value": 0.09076666666666666,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.077,
+          "visits": 1,
+          "search_value": 0.0972,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.057749999999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.001155
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.01925,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.04,
+          "frontier": true,
+          "contribution": 0.00077
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.05133333333333333,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.0010266666666666666
+        },
+        {
+          "path": [
+            2,
+            1,
+            3
+          ],
+          "depth": 3,
+          "mass": 0.025666666666666678,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.126,
+          "visits": 1,
+          "search_value": 0.08592,
+          "conditional_p_yes": 0.01,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            2,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.1134,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.02,
+          "frontier": true,
+          "contribution": 0.002268
+        },
+        {
+          "path": [
+            2,
+            2,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.0126,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.04,
+          "frontier": true,
+          "contribution": 0.000504
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.30000000000000004,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "68357904-fffb-4f93-b3c3-5af321917541",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:05:40.531980+00:00",
+      "contract_id": "0x1adb1d295dee6d76b63e21fad78f2d3d4b227f959b3b1d3df07cb52548cb9c78",
+      "forecast_cutoff": "2025-10-23T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "ea692e23c44adddc1e5d76b180566ab6c6fc174aa63abccaebb8d027b80caecc",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 321.633
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2025-10-23T23:59:59+00:00",
+  "forecast_key": "0x1adb1d295dee6d76b63e21fad78f2d3d4b227f959b3b1d3df07cb52548cb9c78",
+  "group_id": "will-donald-trump-visit-north-korea-in-2025",
+  "evidence_sha256": "ea692e23c44adddc1e5d76b180566ab6c6fc174aa63abccaebb8d027b80caecc",
+  "contract_compiler_usage": {
+    "calls": 0,
+    "tokens": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "accounted_tokens_upper": 0,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-10-23",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2025-10-23",
+        "2025-11-06",
+        "2025-11-20",
+        "2025-12-04",
+        "2025-12-18",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2025-10-23",
+        "2025-11-06",
+        "2025-11-20",
+        "2025-12-04",
+        "2025-12-18",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2025-10-23",
+        "2026-01-01"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2025-10-23",
+        "2025-11-06",
+        "2025-11-20",
+        "2025-12-04",
+        "2025-12-18",
+        "2026-01-01"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-01-01T04:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2025-12-31T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_15865e23480a4b0b",
+          "name": "Donald Trump",
+          "role": "U.S. President; sole actor whose physical entry into North Korean territory would satisfy the market's visit definition",
+          "decision_ids": [
+            "trump_decides_visit"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_d1ce0d3e26d432e2",
+          "name": "Kim Yo Jong",
+          "role": "North Korean official signalling conditions for re-engagement with Washington; counterpart whose stance affects whether a visit opportunity exists",
+          "decision_ids": [
+            "dprk_conditions_reengagement"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [],
+      "decision_dependencies": [
+        {
+          "id": "trump_decides_visit",
+          "choice": "Trump decides to travel to and physically enter North Korean territory during the market window",
+          "owner": "Donald Trump",
+          "support": "represented"
+        },
+        {
+          "id": "dprk_conditions_reengagement",
+          "choice": "North Korean counterpart sets or withholds conditions for re-engagement that would enable a visit opportunity",
+          "owner": "Kim Yo Jong",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 8,
+    "tokens": 33530,
+    "input_tokens": 28847,
+    "output_tokens": 4683,
+    "accounted_tokens_upper": 33530,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

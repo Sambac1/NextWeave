@@ -1,0 +1,1788 @@
+{
+  "run_id": "3ca03c13-e56c-4585-a921-838c31da3264",
+  "case_id": "market_523028b80b9ccf72ec841050",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 5425,
+      "input_tokens": 5415,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 5425,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 5415,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:28:48.667286+00:00",
+      "contract_id": "0xc0986d59c913ffbf40a94966e77829ecffe3e0e5bb287713bce5715841409031",
+      "forecast_cutoff": "2026-08-30T00:12:30+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0284427ca8fff50715745495e4855357c2976ba2ade9e0a637c937d9e259d452",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.71
+    },
+    {
+      "calls": 2,
+      "tokens": 10850,
+      "input_tokens": 10830,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 10850,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 5415,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.18,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 5415,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:28:49.994778+00:00",
+      "contract_id": "0xc0986d59c913ffbf40a94966e77829ecffe3e0e5bb287713bce5715841409031",
+      "forecast_cutoff": "2026-08-30T00:12:30+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0284427ca8fff50715745495e4855357c2976ba2ade9e0a637c937d9e259d452",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.326
+    },
+    {
+      "calls": 7,
+      "tokens": 89334,
+      "input_tokens": 86734,
+      "output_tokens": 2600,
+      "accounted_tokens_upper": 89334,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-08-30",
+                "interval_end": "2026-09-20",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 21,
+                "interval_days": 21,
+                "interval_start_utc": "2026-08-30T00:12:30+00:00",
+                "interval_end_utc": "2026-09-20T00:00:00+00:00",
+                "contract_milestone_phase": "count_window_opens",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The configured count window opened.",
+                  "date": "2026-09-14T00:00:00+00:00"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "candidate_id": "agent_31f1424258d15663:initial:1",
+                  "action": "Swedish voters cast ballots on 13 September 2026; no collective pre-election act is available to this group beyond voting itself, which occurs at the scheduled milestone rather than in this round.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31f1424258d15663:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Swedish voters cast ballots on 13 September 2026; no collective pre-election act is available to this group beyond voting itself, which occurs at the scheduled milestone rather than in this round.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The only seat-relevant evidence is the 2022 result: V took 6.8% of votes, behind S, SD, M and roughly level with C, so fourth place is plausible but not established. No 2026 seat count or poll is present; the count window opening is not a result, so the outcome remains unverified.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 1,
+        "public_event_count": 1,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "c1bae716-ac78-48a2-ad0c-81919d11b7e4",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "the Left Party (V)",
+          "ready": false
+        },
+        {
+          "kind": "observation",
+          "label": "Supported vote and seat count mechanism",
+          "ready": false
+        }
+      ],
+      "simulation_route": "hybrid",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:29:33.599234+00:00",
+      "contract_id": "0xc0986d59c913ffbf40a94966e77829ecffe3e0e5bb287713bce5715841409031",
+      "forecast_cutoff": "2026-08-30T00:12:30+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0284427ca8fff50715745495e4855357c2976ba2ade9e0a637c937d9e259d452",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 43.603
+    },
+    {
+      "calls": 35,
+      "tokens": 459424,
+      "input_tokens": 444423,
+      "output_tokens": 15001,
+      "accounted_tokens_upper": 459424,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-08-30",
+                "interval_end": "2026-09-06",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2026-08-30T00:12:30+00:00",
+                "interval_end_utc": "2026-09-06T00:00:00+00:00",
+                "contract_milestone_phase": "pre_count",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "candidate_id": "agent_31f1424258d15663:initial:1",
+                  "action": "Swedish voters take no collective pre-election action this round; the aggregate ballot outcome that determines each party's seat total occurs only at the scheduled 13 September 2026 election.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31f1424258d15663:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Swedish voters take no collective pre-election action this round; the aggregate ballot outcome that determines each party's seat total occurs only at the scheduled 13 September 2026 election.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 2026 table shows V at 6.8% of the 2022 vote, behind S, SD, M and roughly level with C, so fourth place is plausible but not favored. No current polling or seat projection is provided, and the election has not yet occurred.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-09-06",
+                "interval_end": "2026-09-13",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 14,
+                "interval_days": 7,
+                "interval_start_utc": "2026-09-06T00:00:00+00:00",
+                "interval_end_utc": "2026-09-13T00:00:00+00:00",
+                "contract_milestone_phase": "pre_count",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 2026 table shows V at 6.8% of the 2022 vote, behind S, SD, M and roughly level with C, so fourth place is plausible but not favored. No current polling or seat projection is provided, and the election has not yet occurred.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-09-13",
+                "interval_end": "2026-09-14",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 15,
+                "interval_days": 1,
+                "interval_start_utc": "2026-09-13T00:00:00+00:00",
+                "interval_end_utc": "2026-09-14T00:00:00+00:00",
+                "contract_milestone_phase": "count_window_opens",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "The configured count window opened.",
+                  "date": "2026-09-14T00:00:00+00:00"
+                }
+              ],
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No new settled event or verified state change since the prior estimate; the count window opened but no results exist. The 2022 baseline shows V at 6.8% of votes, well behind S, SD, and M, so V finishing fourth in seats remains unlikely but not negligible given the fragmented field.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-09-14",
+                "interval_end": "2026-09-20",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 21,
+                "interval_days": 6,
+                "interval_start_utc": "2026-09-14T00:00:00+00:00",
+                "interval_end_utc": "2026-09-20T00:00:00+00:00",
+                "contract_milestone_phase": "count_window_open",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "candidate_id": "agent_31f1424258d15663:initial:1",
+                  "action": "Swedish voters take no new collective action this round; ballots were cast at the scheduled 13 September 2026 election, and the aggregate seat totals emerge only through the ongoing count.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31f1424258d15663:initial:1",
+                      "weight": 95.0,
+                      "probability": 1.0,
+                      "action": "Swedish voters take no new collective action this round; ballots were cast at the scheduled 13 September 2026 election, and the aggregate seat totals emerge only through the ongoing count.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No election results are in evidence; the only current data are 2022 vote shares, where V (6.8%) trailed S, SD, and M and was roughly level with C (6.7%). V finishing fourth requires it to outpoll several larger parties, which the frozen evidence does not support.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-08-30",
+                "interval_end": "2026-09-06",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2026-08-30T00:12:30+00:00",
+                "interval_end_utc": "2026-09-06T00:00:00+00:00",
+                "contract_milestone_phase": "pre_count",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "candidate_id": "agent_31f1424258d15663:initial:1",
+                  "action": "Take no collective action this round; Swedish voters' only modeled move is casting ballots on 13 September 2026, which falls outside this interval. Monitor for polling, seat projections or campaign developments bearing on V's fourth-place seat ranking.\n触发或复核条件：Review when new polling, seat projections, or the 13 September election/count results appear.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31f1424258d15663:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round; Swedish voters' only modeled move is casting ballots on 13 September 2026, which falls outside this interval. Monitor for polling, seat projections or campaign developments bearing on V's fourth-place seat ranking.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 2026 table shows V at 6.8% of the 2022 vote, behind S, SD, M and roughly level with C, so fourth place is plausible but not favored. No current polling or seat projection is provided, and the election has not yet occurred.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-09-06",
+                "interval_end": "2026-09-13",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 14,
+                "interval_days": 7,
+                "interval_start_utc": "2026-09-06T00:00:00+00:00",
+                "interval_end_utc": "2026-09-13T00:00:00+00:00",
+                "contract_milestone_phase": "pre_count",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 2026 table shows V at 6.8% of the 2022 vote, behind S, SD, M and roughly level with C, so fourth place is plausible but not favored. No current polling or seat projection is provided, and the election has not yet occurred.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-09-13",
+                "interval_end": "2026-09-14",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 15,
+                "interval_days": 1,
+                "interval_start_utc": "2026-09-13T00:00:00+00:00",
+                "interval_end_utc": "2026-09-14T00:00:00+00:00",
+                "contract_milestone_phase": "count_window_opens",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_003_001",
+                  "text": "The configured count window opened.",
+                  "date": "2026-09-14T00:00:00+00:00"
+                }
+              ],
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No new settled event or verified state change since the prior estimate; the count window opened but no results exist. The 2022 baseline shows V at 6.8% of votes, well behind S, SD, and M, so V finishing fourth in seats remains unlikely but not negligible given the fragmented field.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-09-14",
+                "interval_end": "2026-09-20",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 21,
+                "interval_days": 6,
+                "interval_start_utc": "2026-09-14T00:00:00+00:00",
+                "interval_end_utc": "2026-09-20T00:00:00+00:00",
+                "contract_milestone_phase": "count_window_open",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "candidate_id": "agent_31f1424258d15663:initial:1",
+                  "action": "Take no collective action this round. Swedish voters' only modeled move is casting ballots, which already occurred on 13 September 2026; the current interval is the count window. Wait for official Valmyndigheten results or credible seat projections bearing on V's fourth-place seat ranking.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31f1424258d15663:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Take no collective action this round. Swedish voters' only modeled move is casting ballots, which already occurred on 13 September 2026; the current interval is the count window. Wait for official Valmyndigheten results or credible seat projections bearing on V's fourth-place seat ranking.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No election results are in evidence; the only current data are 2022 vote shares, where V (6.8%) trailed S, SD, and M and was roughly level with C (6.7%). V finishing fourth requires it to outpoll several larger parties, which the frozen evidence does not support.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 8,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 4,
+        "sampled_decisions": 4,
+        "public_event_count": 2,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "727ad6d3-91cc-4e78-847d-cda54f1475b2",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "the Left Party (V)",
+          "ready": false
+        },
+        {
+          "kind": "observation",
+          "label": "Supported vote and seat count mechanism",
+          "ready": false
+        }
+      ],
+      "simulation_route": "hybrid",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:30:30.541112+00:00",
+      "contract_id": "0xc0986d59c913ffbf40a94966e77829ecffe3e0e5bb287713bce5715841409031",
+      "forecast_cutoff": "2026-08-30T00:12:30+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0284427ca8fff50715745495e4855357c2976ba2ade9e0a637c937d9e259d452",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 56.939
+    },
+    {
+      "calls": 19,
+      "tokens": 240118,
+      "input_tokens": 233276,
+      "output_tokens": 6842,
+      "accounted_tokens_upper": 240118,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-08-30",
+                "interval_end": "2026-09-06",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 7,
+                "interval_days": 7,
+                "interval_start_utc": "2026-08-30T00:12:30+00:00",
+                "interval_end_utc": "2026-09-06T00:00:00+00:00",
+                "contract_milestone_phase": "pre_count",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "candidate_id": "agent_31f1424258d15663:initial:1",
+                  "action": "Swedish voters take no collective action this round; the aggregate vote outcome is produced only by the September 13, 2026 Riksdag ballot. No polling, seat projection, or district-allocation data is available to act on before then.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31f1424258d15663:initial:1",
+                      "weight": 90.0,
+                      "probability": 1.0,
+                      "action": "Swedish voters take no collective action this round; the aggregate vote outcome is produced only by the September 13, 2026 Riksdag ballot. No polling, seat projection, or district-allocation data is available to act on before then.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 2026 table shows V at 6.8% of the 2022 vote, behind S, SD, M and roughly level with C, so fourth place is plausible but not favored. No current polling or seat projection is provided, and the election has not occurred, so this is a pre-count estimate.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-09-06",
+                "interval_end": "2026-09-13",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 14,
+                "interval_days": 7,
+                "interval_start_utc": "2026-09-06T00:00:00+00:00",
+                "interval_end_utc": "2026-09-13T00:00:00+00:00",
+                "contract_milestone_phase": "pre_count",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The 2026 table shows V at 6.8% of the 2022 vote, behind S, SD, M and roughly level with C, so fourth place is plausible but not favored. No current polling or seat projection is provided, and the election has not occurred, so this is a pre-count estimate.",
+                "evidence_quote": "| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": null,
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-09-13",
+                "interval_end": "2026-09-14",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 15,
+                "interval_days": 1,
+                "interval_start_utc": "2026-09-13T00:00:00+00:00",
+                "interval_end_utc": "2026-09-14T00:00:00+00:00",
+                "contract_milestone_phase": "count_window_opens",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "The configured count window opened.",
+                  "date": "2026-09-14T00:00:00+00:00"
+                }
+              ],
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No new settled event or verified state change since the prior estimate; the count window opened but no results are in. The 2022 baseline shows V at 6.8% of votes, well behind S, SD, and M, so V winning the fourth-most seats remains unlikely.",
+                "evidence_quote": "| style=\"text-align:center;\"|V\n| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 4,
+                "interval_start": "2026-09-14",
+                "interval_end": "2026-09-20",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 21,
+                "interval_days": 6,
+                "interval_start_utc": "2026-09-14T00:00:00+00:00",
+                "interval_end_utc": "2026-09-20T00:00:00+00:00",
+                "contract_milestone_phase": "count_window_open",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "candidate_id": "agent_31f1424258d15663:initial:1",
+                  "action": "Swedish voters take no collective action this round; the aggregate seat outcome is produced only by the September 13, 2026 ballot and the subsequent Valmyndigheten count. No new vote, seat, or allocation data exists to act on within the count window.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31f1424258d15663:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Swedish voters take no collective action this round; the aggregate seat outcome is produced only by the September 13, 2026 ballot and the subsequent Valmyndigheten count. No new vote, seat, or allocation data exists to act on within the count window.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The only in-window evidence is the scheduled count window opening; no seat results or polls for 2026 are provided. The 2022 baseline shows V at 6.8% of votes, behind S, SD, M and roughly level with C, so V finishing fourth is plausible but not favored.",
+                "evidence_quote": "| style=\"background:\" |\n| style=\"text-align:center;\"|V\n| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%\n| \n|",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 4,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 4,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          }
+        ]
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "5e470200-0fa2-4b93-b1c6-8d7e994ea656",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "the Left Party (V)",
+          "ready": false
+        },
+        {
+          "kind": "observation",
+          "label": "Supported vote and seat count mechanism",
+          "ready": false
+        }
+      ],
+      "simulation_route": "hybrid",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:06:16.387476+00:00",
+      "contract_id": "0xc0986d59c913ffbf40a94966e77829ecffe3e0e5bb287713bce5715841409031",
+      "forecast_cutoff": "2026-08-30T00:12:30+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0284427ca8fff50715745495e4855357c2976ba2ade9e0a637c937d9e259d452",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 57.514
+    },
+    {
+      "calls": 14,
+      "tokens": 179573,
+      "input_tokens": 173707,
+      "output_tokens": 5866,
+      "accounted_tokens_upper": 179573,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-08-30",
+                "interval_end": "2026-09-20",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 21,
+                "interval_days": 21,
+                "interval_start_utc": "2026-08-30T00:12:30+00:00",
+                "interval_end_utc": "2026-09-20T00:00:00+00:00",
+                "contract_milestone_phase": "count_window_opens",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "The configured count window opened.",
+                  "date": "2026-09-14T00:00:00+00:00"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "candidate_id": "agent_31f1424258d15663:initial:1",
+                  "action": "Cast no collective organizational move; Swedish voters' aggregate ballot choice on 13 September 2026 is the decisive event, and no further public act by this collective is available before then.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31f1424258d15663:initial:1",
+                      "weight": 80.0,
+                      "probability": 1.0,
+                      "action": "Cast no collective organizational move; Swedish voters' aggregate ballot choice on 13 September 2026 is the decisive event, and no further public act by this collective is available before then.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No election results are in evidence; the count window only opened. The frozen 2026 table lists 2022 vote shares (V 6.8%, C 6.7%, KD 5.3%, MP 5.1%, L 4.6%) with seat columns empty, so V is a plausible but unproven fourth-place contender behind S, SD and M.",
+                "evidence_quote": "| style=\"text-align:center;\"|V\n| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 1.0
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-08-30",
+                "interval_end": "2026-09-20",
+                "horizon_end": "2026-09-20",
+                "elapsed_days": 21,
+                "interval_days": 21,
+                "interval_start_utc": "2026-08-30T00:12:30+00:00",
+                "interval_end_utc": "2026-09-20T00:00:00+00:00",
+                "contract_milestone_phase": "count_window_opens",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "participation",
+                  "label": "Participation of the Left Party (V)",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                },
+                {
+                  "condition_id": "outcome_measure",
+                  "label": "Available evidence about the requested count, rank, or threshold",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "The configured count window opened.",
+                  "date": "2026-09-14T00:00:00+00:00"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_31f1424258d15663",
+                  "actor_name": "Swedish voters",
+                  "candidate_id": "agent_31f1424258d15663:initial:1",
+                  "action": "Eligible Swedish voters wait for the scheduled September 13, 2026 Riksdag election; no collective vote or seat outcome exists before balloting, and the aggregate ballot will determine each party's seat total and the fourth-place ranking.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_31f1424258d15663:initial:1",
+                      "weight": 100.0,
+                      "probability": 1.0,
+                      "action": "Eligible Swedish voters wait for the scheduled September 13, 2026 Riksdag election; no collective vote or seat outcome exists before balloting, and the aggregate ballot will determine each party's seat total and the fourth-place ranking.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "No election results are in evidence; the count window only opened. The frozen 2026 table lists 2022 vote shares (V 6.8%, C 6.7%, KD 5.3%, MP 5.1%, L 4.6%) with seat columns empty, so V is a plausible but unproven fourth-place contender behind S, SD and M.",
+                "evidence_quote": "| style=\"text-align:center;\"|V\n| Left Party\n| Socialism\n| Left-wing\n| Nooshi Dadgostar\n| style=\"text-align:center;\" | 6.8%",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1.table_0.row_3",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 1.0
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 2,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 1,
+        "available_actor_count": 1,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 1,
+            "active_actor_count": 1,
+            "public_event_count": 1,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "3e31f596-d0d2-4cc7-a91a-d4f82abb9182",
+      "decision_coverage": [
+        {
+          "kind": "decision_subject",
+          "label": "the Left Party (V)",
+          "ready": false
+        },
+        {
+          "kind": "observation",
+          "label": "Supported vote and seat count mechanism",
+          "ready": false
+        }
+      ],
+      "simulation_route": "hybrid",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:06:43.214360+00:00",
+      "contract_id": "0xc0986d59c913ffbf40a94966e77829ecffe3e0e5bb287713bce5715841409031",
+      "forecast_cutoff": "2026-08-30T00:12:30+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0284427ca8fff50715745495e4855357c2976ba2ade9e0a637c937d9e259d452",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 26.826
+    },
+    {
+      "calls": 20,
+      "tokens": 232668,
+      "input_tokens": 223839,
+      "output_tokens": 8829,
+      "accounted_tokens_upper": 232668,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.18,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.18,
+        0.18
+      ],
+      "search_iterations": 4,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 4,
+          "search_value": 0.5188,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 1.0,
+          "visits": 3,
+          "search_value": 0.5509333333333334,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 1.0,
+          "visits": 2,
+          "search_value": 0.6152000000000001,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 1.0,
+          "visits": 1,
+          "search_value": 0.5904,
+          "conditional_p_yes": 0.2,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 1.0,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.18,
+          "frontier": true,
+          "contribution": 0.18
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "703fd0d7-b8f2-45f3-a585-b874f26a73d7",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:07:50.194070+00:00",
+      "contract_id": "0xc0986d59c913ffbf40a94966e77829ecffe3e0e5bb287713bce5715841409031",
+      "forecast_cutoff": "2026-08-30T00:12:30+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "0284427ca8fff50715745495e4855357c2976ba2ade9e0a637c937d9e259d452",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 66.979
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-08-30T00:12:30+00:00",
+  "forecast_key": "0xc0986d59c913ffbf40a94966e77829ecffe3e0e5bb287713bce5715841409031",
+  "group_id": "sweden-parliamentary-election-4th-place-20260812164320100",
+  "evidence_sha256": "0284427ca8fff50715745495e4855357c2976ba2ade9e0a637c937d9e259d452",
+  "contract_compiler_usage": {
+    "calls": 0,
+    "tokens": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "accounted_tokens_upper": 0,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-08-30",
+        "2026-09-20"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-08-30",
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-20"
+      ],
+      "milestones": [
+        "2026-09-13",
+        "2026-09-14"
+      ]
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-08-30",
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-20"
+      ],
+      "milestones": [
+        "2026-09-13",
+        "2026-09-14"
+      ]
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-08-30",
+        "2026-09-20"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 4,
+      "boundaries": [
+        "2026-08-30",
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-20"
+      ],
+      "milestones": [
+        "2026-09-13",
+        "2026-09-14"
+      ]
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-09-20T00:00:00+00:00",
+  "deadline_basis": "scheduled_election_count_window_assumption",
+  "nominal_market_end": "2026-09-13T00:00:00+00:00",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "restricted": 1
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_bb19dc5add114fb5",
+          "name": "Swedish voters",
+          "role": "Eligible voters casting ballots that determine each party's seat total in the Riksdag election",
+          "decision_ids": [
+            "vote_outcome"
+          ],
+          "required": true,
+          "readiness": "restricted"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [],
+      "decision_dependencies": [
+        {
+          "id": "vote_outcome",
+          "choice": "Voters cast ballots in the September 13, 2026 Riksdag election, producing seat totals for each party",
+          "owner": "Swedish voters",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 23,
+    "tokens": 55925,
+    "input_tokens": 47895,
+    "output_tokens": 8030,
+    "accounted_tokens_upper": 55925,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}

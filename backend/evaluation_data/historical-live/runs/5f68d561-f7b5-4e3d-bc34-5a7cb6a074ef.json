@@ -1,0 +1,2661 @@
+{
+  "run_id": "5f68d561-f7b5-4e3d-bc34-5a7cb6a074ef",
+  "case_id": "market_a2e00579d5b1393636884e9a",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3058,
+      "input_tokens": 3048,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3058,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3048,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-09T02:27:00.336800+00:00",
+      "contract_id": "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2bf641ca0b521f7a8784de22014c7931e3874ba2625a074be97d63cb27188d4b",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 0.62
+    },
+    {
+      "calls": 2,
+      "tokens": 6116,
+      "input_tokens": 6096,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6116,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3048,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3048,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-09T02:27:02.414232+00:00",
+      "contract_id": "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2bf641ca0b521f7a8784de22014c7931e3874ba2625a074be97d63cb27188d4b",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 2.076
+    },
+    {
+      "calls": 10,
+      "tokens": 130070,
+      "input_tokens": 123676,
+      "output_tokens": 6394,
+      "accounted_tokens_upper": 130070,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "status": "executed",
+                  "summary": "Nicolás Maduro, from US custody, issued a public statement reiterating that he remains the de jure president of Venezuela and calling on the Venezuelan government and acting president Delcy Rodríguez to keep designating him as head of state through 31 December 2026."
+                },
+                {
+                  "action_id": "action_1_agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state, described her own role as temporary and subordinate to his legal status, and called for his return."
+                },
+                {
+                  "action_id": "action_1_agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "status": "executed",
+                  "summary": "The Venezuelan government issued a public official communiqué reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that the acting presidency does not alter his legal status, restating this position through Dec 31, 2026, unless the Supreme Tribunal rescinds or supersedes the acting-presidency order."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_fca2ce4bc95a504f",
+                    "action_1_agent_fb2807fc399255af",
+                    "action_1_agent_de17f17255f55d93"
+                  ],
+                  "outcome": "realized",
+                  "effect": "The Venezuelan government issued a public official communiqué reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela"
+                },
+                {
+                  "kind": "depends_on",
+                  "action_ids": [
+                    "action_1_agent_fb2807fc399255af",
+                    "action_1_agent_de17f17255f55d93"
+                  ],
+                  "outcome": "pending",
+                  "effect": "unless the Supreme Tribunal rescinds or supersedes the acting-presidency order"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Nicolás Maduro, from US custody, issued a public statement reiterating that he remains the de jure president of Venezuela and calling on the Venezuelan government and acting president Delcy Rodríguez to keep designating him as head of state through 31 December 2026.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state, described her own role as temporary and subordinate to his legal status, and called for his return.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "The Venezuelan government issued a public official communiqué reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that the acting presidency does not alter his legal status, restating this position through Dec 31, 2026, unless the Supreme Tribunal rescinds or supersedes the acting-presidency order.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                  "action": "From US custody, issue a public statement reiterating that I remain the de jure president of Venezuela and calling on the Venezuelan government and acting president Delcy Rodríguez to keep designating me as head of state through 31 December 2026.\n承诺：I will maintain and publicly reaffirm my de jure presidential claim through the end of 2026.\n触发或复核条件：If I have any channel to communicate publicly from custody.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "From US custody, issue a public statement reiterating that I remain the de jure president of Venezuela and calling on the Venezuelan government and acting president Delcy Rodríguez to keep designating me as head of state through 31 December 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_de17f17255f55d93:initial:1",
+                  "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state and that her own role is temporary and subordinate to his legal status, calling for his return.\n承诺：Maintain the position that Maduro is the legal officeholder through the end of 2026.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state and that her own role is temporary and subordinate to his legal status, calling for his return.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "candidate_id": "agent_fb2807fc399255af:initial:1",
+                  "action": "Issue a public official communiqué reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that the acting presidency does not alter his legal status, restating this position through Dec 31, 2026.\n承诺：Maintain the de jure designation of Maduro as head of state through the contract observation date.\n触发或复核条件：Unless the Supreme Tribunal rescinds or supersedes the acting-presidency order.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public official communiqué reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that the acting presidency does not alter his legal status, restating this position through Dec 31, 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Coordinate with interim president Delcy Rodríguez to issue a joint statement that Maduro remains the legal officeholder and that her acting role is provisional, not a change of head of state.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "The frozen excerpt says Maduro was captured and taken to the US, with Delcy Rodríguez appointed acting president by the Supreme Tribunal; both still assert he is the legal officeholder. Simulated December statements reaffirm that position through Dec 31, 2026, but they are claims by interested parties, not independent confirmation that he officially holds the office at the deadline.",
+                "evidence_quote": "Following the 2026 United States strikes in Venezuela, in which president Nicolás Maduro was captured by and taken to the United States, Rodríguez was appointed acting president by order of the Supreme Tribunal of Justice, having already served in a de facto capacity in the immediate aftermath of Maduro's capture. Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.18,
+          "error": null,
+          "action_path_probability": 0.3429999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 3,
+        "public_event_count": 3,
+        "substantive_public_event_count": 3,
+        "state_change_count": 0,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.18,
+      "covered_p_yes": 0.18,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.18,
+        0.17999999999999994
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "b124c00d-f1f6-476b-8614-4ee6774fc8a5",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-09T02:28:05.833641+00:00",
+      "contract_id": "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2bf641ca0b521f7a8784de22014c7931e3874ba2625a074be97d63cb27188d4b",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 63.417
+    },
+    {
+      "calls": 21,
+      "tokens": 285494,
+      "input_tokens": 272025,
+      "output_tokens": 13469,
+      "accounted_tokens_upper": 285494,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "status": "partial",
+                  "summary": "Nicolás Maduro issued a public statement, reportedly from US custody, reiterating that he remains the de jure president of Venezuela under the constitution, describing Delcy Rodríguez's acting role as provisional, and calling on the Venezuelan government and the Supreme Tribunal to reaffirm his legal status as head of state before 31 December 2026."
+                },
+                {
+                  "action_id": "action_1_agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state, described her acting role as provisional pending his return, and directed that official government communications continue to designate him as president through 31 December 2026."
+                },
+                {
+                  "action_id": "action_1_agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "status": "executed",
+                  "summary": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, consistent with its existing position, and reiterated this designation as operative through the 31 December 2026 contract observation time."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_de17f17255f55d93",
+                    "action_1_agent_fb2807fc399255af"
+                  ],
+                  "outcome": "realized",
+                  "effect": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela"
+                },
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_fca2ce4bc95a504f",
+                    "action_1_agent_de17f17255f55d93"
+                  ],
+                  "outcome": "realized",
+                  "effect": "publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "reiterated this designation as operative through the 31 December 2026 contract observation time",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Nicolás Maduro issued a public statement, reportedly from US custody, reiterating that he remains the de jure president of Venezuela under the constitution, describing Delcy Rodríguez's acting role as provisional, and calling on the Venezuelan government and the Supreme Tribunal to reaffirm his legal status as head of state before 31 December 2026.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state, described her acting role as provisional pending his return, and directed that official government communications continue to designate him as president through 31 December 2026.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, consistent with its existing position, and reiterated this designation as operative through the 31 December 2026 contract observation time.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                  "action": "Issue a public statement from US custody reiterating that I remain the de jure president of Venezuela under the constitution, that Delcy Rodríguez's acting role is provisional, and calling on the Venezuelan government and the Supreme Tribunal to reaffirm my legal status as head of state before 31 December 2026.\n承诺：I will maintain and publicly repeat the de jure claim through year-end; no resignation or transfer of the legal title.\n触发或复核条件：Only if I retain any channel to communicate publicly from custody.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement from US custody reiterating that I remain the de jure president of Venezuela under the constitution, that Delcy Rodríguez's acting role is provisional, and calling on the Venezuelan government and the Supreme Tribunal to reaffirm my legal status as head of state before 31 December 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_de17f17255f55d93:initial:1",
+                  "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state and that my acting role is provisional pending his return, and direct that official government communications continue to designate him as president through Dec 31, 2026.\n承诺：Maintain the official designation of Maduro as de jure president through the contract observation date, absent an STJ order superseding my acting role.\n触发或复核条件：If the STJ rescinds or supersedes my appointment, review the designation.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state and that my acting role is provisional pending his return, and direct that official government communications continue to designate him as president through Dec 31, 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Take no new outward step this round; continue serving as acting president under the STJ order without altering the de jure/de facto arrangement.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "candidate_id": "agent_fb2807fc399255af:initial:1",
+                  "action": "Issue a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, consistent with the government's existing position, and reiterate this designation as operative through the Dec 31, 2026 contract observation time.\n承诺：Reaffirm Maduro's de jure status as the government's official designation.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, consistent with the government's existing position, and reiterate this designation as operative through the Dec 31, 2026 contract observation time.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.3,
+                "basis": "The frozen excerpt says Maduro was captured and de facto removed, with Delcy Rodríguez appointed acting president by the Supreme Tribunal, while both Rodríguez and Maduro assert he remains de jure president. The December 2026 simulated statements reaffirm that designation through the observation time, but they are assertions rather than independent confirmation of formal head-of-state status.",
+                "evidence_quote": "Following the 2026 United States strikes in Venezuela, in which president Nicolás Maduro was captured by and taken to the United States, Rodríguez was appointed acting president by order of the Supreme Tribunal of Justice, having already served in a de facto capacity in the immediate aftermath of Maduro's capture. Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_4",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.3,
+          "error": null,
+          "action_path_probability": 0.294
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 52,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "status": "executed",
+                  "summary": "Nicolás Maduro issued a public statement from US custody reaffirming that he remains the de jure president of Venezuela and calling on the Venezuelan government and interim president Delcy Rodríguez to keep officially designating him as head of state through 31 December 2026."
+                },
+                {
+                  "action_id": "action_1_agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains the de jure head of state of Venezuela and that her acting role is temporary pending his return, directing the government to restate this designation in official communications through Dec 31, 2026."
+                },
+                {
+                  "action_id": "action_1_agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "status": "executed",
+                  "summary": "The Venezuelan government issued a public official designation reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and transmitted it to the UN for protocol listing, with a review condition if the Supreme Tribunal order or interim presidency is rescinded or superseded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_fca2ce4bc95a504f",
+                    "action_1_agent_de17f17255f55d93",
+                    "action_1_agent_fb2807fc399255af"
+                  ],
+                  "outcome": "realized",
+                  "effect": "The Venezuelan government issued a public official designation reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "The Venezuelan government issued a public official designation reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Nicolás Maduro issued a public statement from US custody reaffirming that he remains the de jure president of Venezuela and calling on the Venezuelan government and interim president Delcy Rodríguez to keep officially designating him as head of state through 31 December 2026.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains the de jure head of state of Venezuela and that her acting role is temporary pending his return, directing the government to restate this designation in official communications through Dec 31, 2026.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0002_001_003",
+                  "text": "The Venezuelan government issued a public official designation reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and transmitted it to the UN for protocol listing, with a review condition if the Supreme Tribunal order or interim presidency is rescinded or superseded.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                  "action": "Issue a public statement from US custody reaffirming that I remain the de jure president of Venezuela, calling on the Venezuelan government and interim president Delcy Rodríguez to keep officially designating me as head of state through 31 December 2026.\n承诺：I will continue asserting my de jure claim and request the government's continued official designation.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement from US custody reaffirming that I remain the de jure president of Venezuela, calling on the Venezuelan government and interim president Delcy Rodríguez to keep officially designating me as head of state through 31 December 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_de17f17255f55d93:initial:1",
+                  "action": "As acting president, publicly reaffirm that Nicolás Maduro remains the de jure head of state of Venezuela and that her acting role is temporary, pending his return; direct the government to restate this designation in official communications through Dec 31, 2026.\n承诺：Maintain and publicly restate the designation of Maduro as de jure president through the end of 2026.\n触发或复核条件：No rescission or supersession of the STJ appointment order.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As acting president, publicly reaffirm that Nicolás Maduro remains the de jure head of state of Venezuela and that her acting role is temporary, pending his return; direct the government to restate this designation in official communications through Dec 31, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "candidate_id": "agent_fb2807fc399255af:initial:1",
+                  "action": "Issue a public official designation reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela, consistent with the government's and interim president Delcy Rodríguez's stated position, and transmit it to the UN for protocol listing.\n承诺：Maintain the de jure designation of Maduro as head of state through Dec 31, 2026.\n触发或复核条件：If the Supreme Tribunal order or interim presidency is rescinded or superseded, review the designation.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public official designation reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela, consistent with the government's and interim president Delcy Rodríguez's stated position, and transmit it to the UN for protocol listing.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a public statement clarifying that Delcy Rodríguez serves as acting president by STJ order while Maduro remains the legal officeholder, specifying which name the government designates as primary head of state for year-end.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "The Venezuelan government's public designation reaffirms Maduro as de jure head of state and was transmitted to the UN for protocol listing, while acting president Rodríguez calls her role temporary. However, Maduro is in US custody and de facto removed, so the UN listing and any rescission of the interim arrangement remain unverified.",
+                "evidence_quote": "The Venezuelan government issued a public official designation reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and transmitted it to the UN for protocol listing, with a review condition if the Supreme Tribunal order or interim presidency is rescinded or superseded.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_001_003",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.55,
+          "error": null,
+          "action_path_probability": 0.3429999999999999
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 6,
+        "public_event_count": 6,
+        "substantive_public_event_count": 6,
+        "state_change_count": 0,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 3,
+            "active_actor_count": 3,
+            "public_event_count": 3,
+            "substantive_public_event_count": 3,
+            "state_change_count": 0,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.42500000000000004,
+      "covered_p_yes": 0.42500000000000004,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.42500000000000004,
+        0.42500000000000004
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "a34dc93c-e6a3-45ec-855c-528370cc4f64",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T02:28:40.992101+00:00",
+      "contract_id": "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2bf641ca0b521f7a8784de22014c7931e3874ba2625a074be97d63cb27188d4b",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 35.157
+    },
+    {
+      "calls": 42,
+      "tokens": 575417,
+      "input_tokens": 549603,
+      "output_tokens": 25814,
+      "accounted_tokens_upper": 575417,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "status": "executed",
+                  "summary": "Nicolás Maduro issued a public statement from US custody reaffirming that he remains the de jure president of Venezuela, characterizing the acting presidency as a temporary arrangement pending his return, and calling on the PSUV base and the Venezuelan government to maintain the official designation naming him as head of state through 31 December 2026."
+                },
+                {
+                  "action_id": "action_1_agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains the de jure president of Venezuela and that her own role is temporary, pending his return or a lawful designation."
+                },
+                {
+                  "action_id": "action_1_agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "status": "executed",
+                  "summary": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, while acknowledging Delcy Rodríguez's acting presidency as a temporary de facto arrangement pending resolution of his status."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_fca2ce4bc95a504f",
+                    "action_1_agent_de17f17255f55d93",
+                    "action_1_agent_fb2807fc399255af"
+                  ],
+                  "outcome": "realized",
+                  "effect": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Nicolás Maduro issued a public statement from US custody reaffirming that he remains the de jure president of Venezuela, characterizing the acting presidency as a temporary arrangement pending his return, and calling on the PSUV base and the Venezuelan government to maintain the official designation naming him as head of state through 31 December 2026.",
+                  "date": "2026-11"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains the de jure president of Venezuela and that her own role is temporary, pending his return or a lawful designation.",
+                  "date": "2026-11"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, while acknowledging Delcy Rodríguez's acting presidency as a temporary de facto arrangement pending resolution of his status.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                  "action": "Issue a public statement from US custody reaffirming that I remain the de jure president of Venezuela and that the acting presidency is a temporary arrangement pending my return; call on the PSUV base and the Venezuelan government to maintain the official designation naming me as head of state through 31 December 2026.\n承诺：I will continue to assert the de jure presidential claim and press for the government's official designation to name me as head of state through the resolution date.\n触发或复核条件：Requires communication access from custody and willingness of the Venezuelan government to keep carrying the designation.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Issue a public statement from US custody reaffirming that I remain the de jure president of Venezuela and that the acting presidency is a temporary arrangement pending my return; call on the PSUV base and the Venezuelan government to maintain the official designation naming me as head of state through 31 December 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_de17f17255f55d93:initial:1",
+                  "action": "As acting president, publicly reaffirm that Nicolás Maduro remains the de jure president of Venezuela and that her own role is temporary, pending his return or a lawful designation.\n承诺：Maintain the de jure claim publicly through the contract observation date unless the Supreme Tribunal order is rescinded or superseded.\n触发或复核条件：If the STJ order is rescinded or superseded, reassess.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "As acting president, publicly reaffirm that Nicolás Maduro remains the de jure president of Venezuela and that her own role is temporary, pending his return or a lawful designation.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "candidate_id": "agent_fb2807fc399255af:initial:1",
+                  "action": "Issue a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, while acknowledging Delcy Rodríguez's acting presidency as a temporary de facto arrangement pending resolution of his status.\n承诺：Maintain the de jure designation of Maduro as legal officeholder through Dec 31, 2026 unless superseded by a formal official act.\n触发或复核条件：No change unless the STJ order or Maduro's legal status is formally altered.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, while acknowledging Delcy Rodríguez's acting presidency as a temporary de facto arrangement pending resolution of his status.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publish an official clarification distinguishing the de jure presidency (Maduro) from the acting presidency (Rodríguez), stating which office the government regards as the head of state position for official purposes.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Maduro was captured and de facto removed in 2026; the Supreme Tribunal appointed Delcy Rodríguez acting president, and the frozen lead says Venezuela is effectively controlled by the US. Maduro's and Rodríguez's de jure claims are assertions, not confirmed official designation for Dec 31, 2026.",
+                "evidence_quote": "Following the 2026 United States strikes in Venezuela, in which president Nicolás Maduro was captured by and taken to the United States, Rodríguez was appointed acting president by order of the Supreme Tribunal of Justice, having already served in a de facto capacity in the immediate aftermath of Maduro's capture. Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-29",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 20,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-29T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Maduro was captured and de facto removed in 2026; the Supreme Tribunal appointed Delcy Rodríguez acting president, and the frozen lead says Venezuela is effectively controlled by the US. Maduro's and Rodríguez's de jure claims are assertions, not confirmed official designation for Dec 31, 2026.",
+                "evidence_quote": "Following the 2026 United States strikes in Venezuela, in which president Nicolás Maduro was captured by and taken to the United States, Rodríguez was appointed acting president by order of the Supreme Tribunal of Justice, having already served in a de facto capacity in the immediate aftermath of Maduro's capture. Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-29",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 31,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-29T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Maduro was captured and de facto removed in 2026; the Supreme Tribunal appointed Delcy Rodríguez acting president, and the frozen lead says Venezuela is effectively controlled by the US. Maduro's and Rodríguez's de jure claims are assertions, not confirmed official designation for Dec 31, 2026.",
+                "evidence_quote": "Following the 2026 United States strikes in Venezuela, in which president Nicolás Maduro was captured by and taken to the United States, Rodríguez was appointed acting president by order of the Supreme Tribunal of Justice, having already served in a de facto capacity in the immediate aftermath of Maduro's capture. Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-20",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 41,
+                "interval_days": 10,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains the de jure president of Venezuela and that her acting role is temporary, pending his return or a lawful designation, and urged that the official designation continue to name Maduro through 31 December 2026."
+                },
+                {
+                  "action_id": "action_4_agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "status": "executed",
+                  "summary": "The Venezuelan government issued a renewed public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary de facto arrangement, and transmitted this designation to the UN protocol listing as the official head of state position."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_de17f17255f55d93",
+                    "action_4_agent_fb2807fc399255af"
+                  ],
+                  "outcome": "realized",
+                  "effect": "The Venezuelan government issued a renewed public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "The Venezuelan government issued a renewed public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains the de jure president of Venezuela and that her acting role is temporary, pending his return or a lawful designation, and urged that the official designation continue to name Maduro through 31 December 2026.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "The Venezuelan government issued a renewed public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary de facto arrangement, and transmitted this designation to the UN protocol listing as the official head of state position.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "candidate_id": "agent_fca2ce4bc95a504f:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement from US custody reiterating that I remain the de jure president of Venezuela, that Delcy Rodríguez's acting presidency is strictly temporary, and urging the Venezuelan government and PSUV base to preserve the official designation naming me head of state through 31 December 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_de17f17255f55d93:initial:1",
+                  "action": "As acting president, publicly reaffirm that Nicolás Maduro remains the de jure president of Venezuela and that her acting role is temporary, pending his return or a lawful designation, and urge that the official designation continue to name Maduro through 31 December 2026.\n承诺：Maintain the de jure claim publicly through the contract observation date unless the Supreme Tribunal order is rescinded or superseded.\n触发或复核条件：Reassess if the STJ order is rescinded or superseded.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As acting president, publicly reaffirm that Nicolás Maduro remains the de jure president of Venezuela and that her acting role is temporary, pending his return or a lawful designation, and urge that the official designation continue to name Maduro through 31 December 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "candidate_id": "agent_fb2807fc399255af:initial:1",
+                  "action": "Issue a renewed public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary de facto arrangement, and transmit this designation to the UN protocol listing as the official head of state position.\n承诺：Maintain the de jure designation of Maduro as legal officeholder through Dec 31, 2026 unless superseded by a formal official act.\n触发或复核条件：No change unless the STJ order or Maduro's legal status is formally altered.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a renewed public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary de facto arrangement, and transmit this designation to the UN protocol listing as the official head of state position.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Take no new outward act this round; keep the existing public reaffirmation in force.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "Maduro was captured in 2026 and Delcy Rodríguez exercises the acting presidency, but the government and Rodríguez still assert he is de jure president. A renewed December official statement reportedly reaffirms that designation and transmits it to the UN protocol listing, though execution by Dec 31 remains uncertain.",
+                "evidence_quote": "The Venezuelan government issued a renewed public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary de facto arrangement, and transmitted this designation to the UN protocol listing as the official head of state position.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_002",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-20",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-20T00:00:00+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "The Venezuelan government and acting president Delcy Rodríguez repeatedly reaffirmed Maduro as de jure head of state and transmitted that designation to the UN protocol listing in December 2026. However, Maduro was captured and de facto removed, with Rodríguez exercising the office, so the formal designation may not match effective control at the deadline.",
+                "evidence_quote": "The Venezuelan government issued a renewed public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary de facto arrangement, and transmitted this designation to the UN protocol listing as the official head of state position.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.35,
+          "error": null,
+          "action_path_probability": 0.037043999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 5,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 3,
+        "sampled_decisions": 6,
+        "public_event_count": 5,
+        "substantive_public_event_count": 5,
+        "state_change_count": 2,
+        "condition_change_count": 1,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 5,
+            "substantive_public_event_count": 5,
+            "state_change_count": 2,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.35,
+      "covered_p_yes": 0.35,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.35,
+        0.3500000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "3fc4a82a-e99d-49cc-b281-407623fdc94c",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T02:30:42.818470+00:00",
+      "contract_id": "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2bf641ca0b521f7a8784de22014c7931e3874ba2625a074be97d63cb27188d4b",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 121.822
+    },
+    {
+      "calls": 83,
+      "tokens": 1126468,
+      "input_tokens": 1078390,
+      "output_tokens": 48078,
+      "accounted_tokens_upper": 1126468,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "status": "partial",
+                  "summary": "Nicolás Maduro issued a public statement from US custody reiterating that he remains the de jure president of Venezuela under the 2025 inauguration, thanking Delcy Rodríguez and the Venezuelan government for upholding that position, and calling on supporters and institutions to keep the constitutional claim alive through 31 December 2026."
+                },
+                {
+                  "action_id": "action_1_agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state and that her acting role is provisional pending his return, repeating the government's existing position without announcing any new succession or election step."
+                },
+                {
+                  "action_id": "action_1_agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "status": "executed",
+                  "summary": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela, and that the acting presidency of Delcy Rodríguez is a temporary administrative arrangement pending his return, so the government's official listing names Maduro as the head of state."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_fca2ce4bc95a504f",
+                    "action_1_agent_de17f17255f55d93",
+                    "action_1_agent_fb2807fc399255af"
+                  ],
+                  "outcome": "realized",
+                  "effect": "the acting presidency of Delcy Rodríguez is a temporary administrative arrangement pending his return"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "the government's official listing names Maduro as the head of state",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "Nicolás Maduro issued a public statement from US custody reiterating that he remains the de jure president of Venezuela under the 2025 inauguration, thanking Delcy Rodríguez and the Venezuelan government for upholding that position, and calling on supporters and institutions to keep the constitutional claim alive through 31 December 2026.",
+                  "date": "2026-11"
+                },
+                {
+                  "id": "sim_0001_001_002",
+                  "text": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state and that her acting role is provisional pending his return, repeating the government's existing position without announcing any new succession or election step.",
+                  "date": "2026-11"
+                },
+                {
+                  "id": "sim_0001_001_003",
+                  "text": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela, and that the acting presidency of Delcy Rodríguez is a temporary administrative arrangement pending his return, so the government's official listing names Maduro as the head of state.",
+                  "date": "2026-11"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                  "action": "Issue a public statement from US custody reiterating that he remains the de jure president of Venezuela under the 2025 inauguration, thanking Delcy Rodríguez and the Venezuelan government for upholding that position, and calling on supporters and institutions to keep the constitutional claim alive through 31 December 2026.\n承诺：Maintain the de jure presidential claim through end of 2026 without asserting operational control.\n触发或复核条件：Only if a communication channel from custody is available.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement from US custody reiterating that he remains the de jure president of Venezuela under the 2025 inauguration, thanking Delcy Rodríguez and the Venezuelan government for upholding that position, and calling on supporters and institutions to keep the constitutional claim alive through 31 December 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_de17f17255f55d93:initial:1",
+                  "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state and that her acting role is provisional pending his return, repeating the government's existing position without announcing any new succession or election step.\n承诺：No change to the de jure/de facto arrangement; acting role remains provisional.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state and that her acting role is provisional pending his return, repeating the government's existing position without announcing any new succession or election step.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "candidate_id": "agent_fb2807fc399255af:initial:1",
+                  "action": "Issue a public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela, and that the acting presidency of Delcy Rodríguez is a temporary administrative arrangement pending his return, so the government's official listing names Maduro as the head of state.\n承诺：Reaffirm Maduro as the sole de jure head of state in the government's official designation through Dec 31, 2026.\n触发或复核条件：Only if the government retains capacity to publish an official designation; otherwise defer.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela, and that the acting presidency of Delcy Rodríguez is a temporary administrative arrangement pending his return, so the government's official listing names Maduro as the head of state.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Coordinate with acting president Delcy Rodríguez to issue a joint public declaration that Maduro remains the legal officeholder and that her role is provisional, clarifying the ordering of the two claims in the government's official listing.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Maduro was captured in 2026 and Delcy Rodríguez became acting president, yet the government still calls Maduro de jure head of state. The simulated November 2026 statements reaffirm that listing, but they are assertions, not proof of the official designation on Dec 31, 2026.",
+                "evidence_quote": "Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-29",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 20,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-29T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Maduro was captured in 2026 and Delcy Rodríguez became acting president, yet the government still calls Maduro de jure head of state. The simulated November 2026 statements reaffirm that listing, but they are assertions, not proof of the official designation on Dec 31, 2026.",
+                "evidence_quote": "Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-29",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 31,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-29T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Maduro was captured in 2026 and Delcy Rodríguez became acting president, yet the government still calls Maduro de jure head of state. The simulated November 2026 statements reaffirm that listing, but they are assertions, not proof of the official designation on Dec 31, 2026.",
+                "evidence_quote": "Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-20",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 41,
+                "interval_days": 10,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state under his 10 January 2025 inauguration, that her acting presidency is a temporary administrative arrangement pending his return, and that no new succession or election step is announced."
+                },
+                {
+                  "action_id": "action_4_agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "status": "executed",
+                  "summary": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary administrative arrangement pending his return, keeping the government's official listing naming Maduro as head of state through Dec 31, 2026."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_de17f17255f55d93",
+                    "action_4_agent_fb2807fc399255af"
+                  ],
+                  "outcome": "realized",
+                  "effect": "keeping the government's official listing naming Maduro as head of state through Dec 31, 2026"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "keeping the government's official listing naming Maduro as head of state through Dec 31, 2026",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_004_001",
+                  "text": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state under his 10 January 2025 inauguration, that her acting presidency is a temporary administrative arrangement pending his return, and that no new succession or election step is announced.",
+                  "date": "2026-12"
+                },
+                {
+                  "id": "sim_0001_004_002",
+                  "text": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary administrative arrangement pending his return, keeping the government's official listing naming Maduro as head of state through Dec 31, 2026.",
+                  "date": "2026-12"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "candidate_id": "agent_fca2ce4bc95a504f:initial:2",
+                  "action": null,
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public statement from US custody reiterating that he remains the de jure president of Venezuela under the 2025 inauguration, thanking Delcy Rodríguez and the Venezuelan government for upholding that position, and urging them to keep the government's official listing naming him head of state unchanged through 31 December 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_de17f17255f55d93:initial:1",
+                  "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state under his 10 January 2025 inauguration, and that my acting presidency is a temporary administrative arrangement pending his return; no new succession or election step is announced.\n承诺：No change to the de jure/de facto arrangement; acting role stays provisional through 31 December 2026.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state under his 10 January 2025 inauguration, and that my acting presidency is a temporary administrative arrangement pending his return; no new succession or election step is announced.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Take no new public step this round; keep the existing de jure assertion and provisional acting status unchanged.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "candidate_id": "agent_fb2807fc399255af:initial:1",
+                  "action": "Issue a public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary administrative arrangement pending his return, keeping the government's official listing naming Maduro as head of state through Dec 31, 2026.\n承诺：Maintain Maduro as the sole de jure head of state in the government's official designation through Dec 31, 2026.\n触发或复核条件：Only if the government retains capacity to publish an official designation.",
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:1",
+                      "weight": 75.0,
+                      "probability": 0.75,
+                      "action": "Issue a public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary administrative arrangement pending his return, keeping the government's official listing naming Maduro as head of state through Dec 31, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "outlook_issue": "missing_change_driver"
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-20",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-20T00:00:00+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.62,
+                "basis": "The Venezuelan government's official statements in November and December 2026 reaffirm Maduro as de jure head of state, with Rodríguez's acting presidency described as temporary. That official listing is the resolution-relevant fact, though Maduro's physical custody and de facto US control leave the formal designation contestable.",
+                "evidence_quote": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure head of state of Venezuela and that Delcy Rodríguez's acting presidency is a temporary administrative arrangement pending his return, keeping the government's official listing naming Maduro as head of state through Dec 31, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_004_002",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.62,
+          "error": null,
+          "action_path_probability": 0.052919999999999995
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-09",
+                "interval_end": "2026-11-19",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-09T02:02:45+00:00",
+                "interval_end_utc": "2026-11-19T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "status": "executed",
+                  "summary": "Nicolás Maduro, from US custody, issued a public statement reaffirming that he remains the de jure president of Venezuela, that any acting arrangement is temporary, and calling on the Venezuelan government and Delcy Rodríguez to keep the official designation in his name through 31 Dec 2026."
+                },
+                {
+                  "action_id": "action_1_agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state and that her own role is temporary and acting only, pending his return, with no change to the Supreme Tribunal's appointment terms."
+                },
+                {
+                  "action_id": "action_1_agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "status": "executed",
+                  "summary": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, that Delcy Rodríguez's role is an acting arrangement under the Supreme Tribunal's order, and that the government's designation of head of state is unchanged."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_fca2ce4bc95a504f",
+                    "action_1_agent_de17f17255f55d93",
+                    "action_1_agent_fb2807fc399255af"
+                  ],
+                  "outcome": "realized",
+                  "effect": "the government's designation of head of state is unchanged"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_001_001",
+                  "text": "Nicolás Maduro, from US custody, issued a public statement reaffirming that he remains the de jure president of Venezuela, that any acting arrangement is temporary, and calling on the Venezuelan government and Delcy Rodríguez to keep the official designation in his name through 31 Dec 2026.",
+                  "date": "2026-11-10"
+                },
+                {
+                  "id": "sim_0002_001_002",
+                  "text": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state and that her own role is temporary and acting only, pending his return, with no change to the Supreme Tribunal's appointment terms.",
+                  "date": "2026-11-12"
+                },
+                {
+                  "id": "sim_0002_001_003",
+                  "text": "The Venezuelan government issued a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, that Delcy Rodríguez's role is an acting arrangement under the Supreme Tribunal's order, and that the government's designation of head of state is unchanged.",
+                  "date": "2026-11-15"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                  "action": "From US custody, issue a public statement reaffirming that I remain the de jure president of Venezuela and that any acting arrangement is temporary, calling on the Venezuelan government and Delcy Rodríguez to keep the official designation in my name through 31 Dec 2026.\n承诺：I will continue to assert the de jure presidential claim through year-end.\n触发或复核条件：If the Venezuelan government formally designates another individual as head of state, I will reassess.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "From US custody, issue a public statement reaffirming that I remain the de jure president of Venezuela and that any acting arrangement is temporary, calling on the Venezuelan government and Delcy Rodríguez to keep the official designation in my name through 31 Dec 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_de17f17255f55d93:initial:1",
+                  "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state and that her own role is temporary/acting only, pending his return; no change to the STJ appointment terms.\n承诺：Maintain the de jure designation of Maduro through the contract observation date, framing her office as acting.\n触发或复核条件：Unless the Supreme Tribunal rescinds or supersedes its appointment order.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state and that her own role is temporary/acting only, pending his return; no change to the STJ appointment terms.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "candidate_id": "agent_fb2807fc399255af:initial:1",
+                  "action": "Issue a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, that Delcy Rodríguez's role is an acting arrangement under the Supreme Tribunal's order, and that the government's designation of head of state is unchanged.\n承诺：Maintain the de jure designation of Maduro through the Dec 31, 2026 observation point absent a formal change by the government.\n触发或复核条件：No formal government decision supersedes the existing designation.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Issue a public official statement reaffirming that Nicolás Maduro remains the de jure president of Venezuela, that Delcy Rodríguez's role is an acting arrangement under the Supreme Tribunal's order, and that the government's designation of head of state is unchanged.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Coordinate with interim president Delcy Rodríguez to release a joint statement affirming that Maduro remains the legal officeholder while she continues as acting president, framing the acting role as temporary and subordinate to the de jure presidency.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Maduro was captured in 2026 and Delcy Rodríguez was appointed acting president by the Supreme Tribunal, so he does not currently hold the office in fact. Simulated statements reaffirming his de jure status are claims by interested parties, not independent confirmation that the government will list him as head of state on Dec 31, 2026.",
+                "evidence_quote": "Following the 2026 United States strikes in Venezuela, in which president Nicolás Maduro was captured by and taken to the United States, Rodríguez was appointed acting president by order of the Supreme Tribunal of Justice, having already served in a de facto capacity in the immediate aftermath of Maduro's capture. Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-19",
+                "interval_end": "2026-11-29",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 20,
+                "interval_days": 10,
+                "interval_start_utc": "2026-11-19T00:00:00+00:00",
+                "interval_end_utc": "2026-11-29T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Maduro was captured in 2026 and Delcy Rodríguez was appointed acting president by the Supreme Tribunal, so he does not currently hold the office in fact. Simulated statements reaffirming his de jure status are claims by interested parties, not independent confirmation that the government will list him as head of state on Dec 31, 2026.",
+                "evidence_quote": "Following the 2026 United States strikes in Venezuela, in which president Nicolás Maduro was captured by and taken to the United States, Rodríguez was appointed acting president by order of the Supreme Tribunal of Justice, having already served in a de facto capacity in the immediate aftermath of Maduro's capture. Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-11-29",
+                "interval_end": "2026-12-10",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 31,
+                "interval_days": 11,
+                "interval_start_utc": "2026-11-29T00:00:00+00:00",
+                "interval_end_utc": "2026-12-10T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.18,
+                "basis": "Maduro was captured in 2026 and Delcy Rodríguez was appointed acting president by the Supreme Tribunal, so he does not currently hold the office in fact. Simulated statements reaffirming his de jure status are claims by interested parties, not independent confirmation that the government will list him as head of state on Dec 31, 2026.",
+                "evidence_quote": "Following the 2026 United States strikes in Venezuela, in which president Nicolás Maduro was captured by and taken to the United States, Rodríguez was appointed acting president by order of the Supreme Tribunal of Justice, having already served in a de facto capacity in the immediate aftermath of Maduro's capture. Both Rodríguez and Maduro have asserted that the latter remains the legal officeholder.",
+                "change_driver": null,
+                "evidence_ref": "history_4",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 4,
+              "interval": {
+                "step": 4,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-10",
+                "interval_end": "2026-12-20",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 41,
+                "interval_days": 10,
+                "interval_start_utc": "2026-12-10T00:00:00+00:00",
+                "interval_end_utc": "2026-12-20T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_4_agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "status": "executed",
+                  "summary": "Nicolás Maduro, from US custody, issued a public statement thanking the Venezuelan government and acting president Delcy Rodríguez for reaffirming his de jure presidency, reiterating that Rodríguez's role is temporary and acting only, and urging that the official head-of-state designation remain in his name through 31 Dec 2026."
+                },
+                {
+                  "action_id": "action_4_agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "status": "executed",
+                  "summary": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state and that her office is temporary and acting under the STJ order, with the government's designation unchanged through 31 Dec 2026."
+                },
+                {
+                  "action_id": "action_4_agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "status": "executed",
+                  "summary": "The Venezuelan government issued a further public official statement reaffirming that Nicolás Maduro remains the de jure president, that Delcy Rodríguez's role is acting under the Supreme Tribunal's order, and that the government's designation of head of state is unchanged through Dec 31, 2026."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_4_agent_fca2ce4bc95a504f",
+                    "action_4_agent_de17f17255f55d93",
+                    "action_4_agent_fb2807fc399255af"
+                  ],
+                  "outcome": "realized",
+                  "effect": "The Venezuelan government issued a further public official statement reaffirming that Nicolás Maduro remains the de jure president"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "The Venezuelan government issued a further public official statement reaffirming that Nicolás Maduro remains the de jure president",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_004_001",
+                  "text": "Nicolás Maduro, from US custody, issued a public statement thanking the Venezuelan government and acting president Delcy Rodríguez for reaffirming his de jure presidency, reiterating that Rodríguez's role is temporary and acting only, and urging that the official head-of-state designation remain in his name through 31 Dec 2026.",
+                  "date": "2026-12-12"
+                },
+                {
+                  "id": "sim_0002_004_002",
+                  "text": "Delcy Rodríguez, as acting president, publicly reaffirmed that Nicolás Maduro remains Venezuela's de jure head of state and that her office is temporary and acting under the STJ order, with the government's designation unchanged through 31 Dec 2026.",
+                  "date": "2026-12-14"
+                },
+                {
+                  "id": "sim_0002_004_003",
+                  "text": "The Venezuelan government issued a further public official statement reaffirming that Nicolás Maduro remains the de jure president, that Delcy Rodríguez's role is acting under the Supreme Tribunal's order, and that the government's designation of head of state is unchanged through Dec 31, 2026.",
+                  "date": "2026-12-16"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_fca2ce4bc95a504f",
+                  "actor_name": "Nicolás Maduro",
+                  "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                  "action": "From US custody, issue a public statement thanking the Venezuelan government and acting president Delcy Rodríguez for reaffirming my de jure presidency, reiterating that Rodríguez's role is temporary and acting only, and urging that the official head-of-state designation remain in my name through 31 Dec 2026.\n承诺：I will continue to assert the de jure presidential claim through 31 Dec 2026 and call for the official designation to remain unchanged.\n触发或复核条件：If the Venezuelan government formally designates another individual as head of state, I will reassess.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fca2ce4bc95a504f:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "From US custody, issue a public statement thanking the Venezuelan government and acting president Delcy Rodríguez for reaffirming my de jure presidency, reiterating that Rodríguez's role is temporary and acting only, and urging that the official head-of-state designation remain in my name through 31 Dec 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_de17f17255f55d93",
+                  "actor_name": "Delcy Rodríguez",
+                  "candidate_id": "agent_de17f17255f55d93:initial:1",
+                  "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state and that her office is temporary/acting under the STJ order, with the government's designation unchanged through 31 Dec 2026.\n承诺：Maintain the de jure designation of Maduro through the contract observation date, framing her office as acting only.\n触发或复核条件：Unless the Supreme Tribunal rescinds or supersedes its appointment order.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_de17f17255f55d93:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "As acting president, publicly reaffirm that Nicolás Maduro remains Venezuela's de jure head of state and that her office is temporary/acting under the STJ order, with the government's designation unchanged through 31 Dec 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_fb2807fc399255af",
+                  "actor_name": "Venezuelan government",
+                  "candidate_id": "agent_fb2807fc399255af:initial:2",
+                  "action": "Issue a further public official statement reaffirming that Nicolás Maduro remains the de jure president, that Delcy Rodríguez's role is acting under the Supreme Tribunal's order, and that the government's designation of head of state is unchanged through Dec 31, 2026.\n承诺：Maintain the de jure designation of Maduro through Dec 31, 2026 absent a formal government change.\n触发或复核条件：No formal government decision supersedes the existing designation.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Take no new outward step this round; the government's official designation already stands publicly (sim_0002_001_003) and no formal decision supersedes it.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_fb2807fc399255af:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Issue a further public official statement reaffirming that Nicolás Maduro remains the de jure president, that Delcy Rodríguez's role is acting under the Supreme Tribunal's order, and that the government's designation of head of state is unchanged through Dec 31, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 3,
+              "contract_outlook": {
+                "p_yes": 0.22,
+                "basis": "The Venezuelan government and acting president Delcy Rodríguez repeatedly reaffirm that Maduro remains de jure head of state with the designation unchanged through 31 Dec 2026, which supports the outcome. However, Maduro is in US custody and de facto removed, so the resolution hinges on whether official designation or UN listing controls; competing explanations keep this uncertain.",
+                "evidence_quote": "The Venezuelan government issued a further public official statement reaffirming that Nicolás Maduro remains the de jure president, that Delcy Rodríguez's role is acting under the Supreme Tribunal's order, and that the government's designation of head of state is unchanged through Dec 31, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_003",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 5,
+              "interval": {
+                "step": 5,
+                "unit": "day",
+                "horizon_steps": 5,
+                "interval_start": "2026-12-20",
+                "interval_end": "2026-12-31",
+                "horizon_end": "2026-12-31",
+                "elapsed_days": 52,
+                "interval_days": 11,
+                "interval_start_utc": "2026-12-20T00:00:00+00:00",
+                "interval_end_utc": "2026-12-31T17:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.62,
+                "basis": "Repeated official statements through 16 Dec 2026 reaffirm Maduro as de jure president with Rodríguez acting only, and the designation unchanged through 31 Dec 2026. However, Maduro is in US custody and de facto removed, so UN/credible-reporting resolution could instead treat Rodríguez as head of state.",
+                "evidence_quote": "The Venezuelan government issued a further public official statement reaffirming that Nicolás Maduro remains the de jure president, that Delcy Rodríguez's role is acting under the Supreme Tribunal's order, and that the government's designation of head of state is unchanged through Dec 31, 2026.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_004_003",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.62,
+          "error": null,
+          "action_path_probability": 0.037043999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 10,
+        "active_rounds": 4,
+        "draw_rounds": 4,
+        "audited_silent_rounds": 6,
+        "sampled_decisions": 12,
+        "public_event_count": 11,
+        "substantive_public_event_count": 11,
+        "state_change_count": 2,
+        "condition_change_count": 2,
+        "active_actor_count": 3,
+        "available_actor_count": 3,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 5,
+            "substantive_public_event_count": 5,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 5,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 3,
+            "sampled_decisions": 6,
+            "active_actor_count": 3,
+            "public_event_count": 6,
+            "substantive_public_event_count": 6,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.62,
+      "covered_p_yes": 0.62,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.62,
+        0.6200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "1308663c-44dd-4ede-af61-b224509f6878",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-09T02:32:47.903037+00:00",
+      "contract_id": "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2bf641ca0b521f7a8784de22014c7931e3874ba2625a074be97d63cb27188d4b",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 125.079
+    },
+    {
+      "calls": 102,
+      "tokens": 1386959,
+      "input_tokens": 1315585,
+      "output_tokens": 71374,
+      "accounted_tokens_upper": 1386959,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.534631632,
+      "coverage": 0.331828,
+      "unexplored_mass": 0.668172,
+      "unknown_bounds": [
+        0.20054563199999997,
+        0.868717632
+      ],
+      "search_iterations": 10,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 10,
+          "search_value": 0.77960208,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.294,
+          "visits": 5,
+          "search_value": 0.8618729600000001,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.294,
+          "visits": 4,
+          "search_value": 0.8673411999999999,
+          "conditional_p_yes": 0.3,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.294,
+          "visits": 3,
+          "search_value": 0.8316549333333333,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.11524799999999998,
+          "visits": 1,
+          "search_value": 0.99,
+          "conditional_p_yes": 0.42,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.11524799999999998,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.0633864
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.04939199999999999,
+          "visits": 1,
+          "search_value": 0.95668,
+          "conditional_p_yes": 0.45,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.03457439999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.62,
+          "frontier": true,
+          "contribution": 0.021436127999999995
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "depth": 5,
+          "mass": 0.014817599999999997,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.55,
+          "frontier": true,
+          "contribution": 0.00814968
+        },
+        {
+          "path": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.12936,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.19599999999999998,
+          "visits": 4,
+          "search_value": 0.81992,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.1372,
+          "visits": 3,
+          "search_value": 0.7773333333333333,
+          "conditional_p_yes": 0.62,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.09603999999999999,
+          "visits": 2,
+          "search_value": 0.6921599999999999,
+          "conditional_p_yes": 0.62,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "depth": 4,
+          "mass": 0.047059599999999986,
+          "visits": 1,
+          "search_value": 0.8064,
+          "conditional_p_yes": 0.72,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "depth": 5,
+          "mass": 0.047059599999999986,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.72,
+          "frontier": true,
+          "contribution": 0.03388291199999999
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "depth": 4,
+          "mass": 0.020168399999999996,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.68,
+          "frontier": true,
+          "contribution": 0.013714511999999998
+        },
+        {
+          "path": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "depth": 4,
+          "mass": 0.028812,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            2
+          ],
+          "depth": 3,
+          "mass": 0.041159999999999995,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.6,
+          "frontier": true,
+          "contribution": 0.024695999999999996
+        },
+        {
+          "path": [
+            2,
+            2
+          ],
+          "depth": 2,
+          "mass": 0.05879999999999999,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.6,
+          "frontier": true,
+          "contribution": 0.03527999999999999
+        },
+        {
+          "path": [
+            3
+          ],
+          "depth": 1,
+          "mass": 0.51,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": null,
+          "frontier": true,
+          "contribution": null
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "f4196adc-3987-4425-b998-32eac40da72a",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T02:38:23.098482+00:00",
+      "contract_id": "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f",
+      "forecast_cutoff": "2026-11-09T02:02:45+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "2bf641ca0b521f7a8784de22014c7931e3874ba2625a074be97d63cb27188d4b",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 335.184
+    }
+  ],
+  "model": "deepseek-flash",
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "one_step_ensemble",
+    "single_multistep",
+    "trajectory_sampling",
+    "mcts_simulation"
+  ],
+  "as_of": "2026-11-09T02:02:45+00:00",
+  "forecast_key": "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f",
+  "group_id": "venezuela-leader-end-of-2026",
+  "stage": "finished",
+  "outcome_deadline": "2026-12-31T17:00:00+00:00",
+  "deadline_basis": "explicit_contract_observation_time",
+  "nominal_market_end": "2027-01-01T04:59:00+00:00",
+  "evidence_sha256": "2bf641ca0b521f7a8784de22014c7931e3874ba2625a074be97d63cb27188d4b",
+  "simulation_route": "review",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 986,
+    "input_tokens": 890,
+    "output_tokens": 96,
+    "accounted_tokens_upper": 986,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-11-09",
+        "2026-12-31"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-29",
+        "2026-12-10",
+        "2026-12-20",
+        "2026-12-31"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-29",
+        "2026-12-10",
+        "2026-12-20",
+        "2026-12-31"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 5,
+      "boundaries": [
+        "2026-11-09",
+        "2026-11-19",
+        "2026-11-29",
+        "2026-12-10",
+        "2026-12-20",
+        "2026-12-31"
+      ],
+      "milestones": []
+    }
+  },
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 3
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "limited",
+      "seats": [
+        {
+          "seat_id": "seat_6e104ba2875f4192",
+          "name": "Delcy Rodríguez",
+          "role": "Acting president appointed by the Supreme Tribunal; asserts Maduro remains de jure president.",
+          "decision_ids": [
+            "rodriguez_acting_status"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_7add4e0faf19339e",
+          "name": "Nicolás Maduro",
+          "role": "Captured former president; Venezuelan government and interim president assert he remains de jure president.",
+          "decision_ids": [
+            "maduro_dejure_claim"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_2830f6c362c4e9a0",
+          "name": "Venezuelan government",
+          "role": "Official source that must clearly state who is head of state; per sources, asserts Maduro remains de jure president.",
+          "decision_ids": [
+            "gov_official_designation"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [
+        "Supreme Tribunal order appointing Delcy Rodríguez as acting president after Maduro's capture."
+      ],
+      "gaps": [
+        "No source identifies a current named incumbent of the Venezuelan presidency other than acting president Delcy Rodríguez and the captured Maduro; the ultimate official designation as of Dec 31, 2026 is unresolved.",
+        "UN head-of-state listing for Venezuela as of Dec 31, 2026 is not provided in sources.",
+        "No frozen source identifies Supreme Tribunal of Justice of Venezuela; its decision remains unresolved."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "stj_appoint_acting",
+          "choice": "Supreme Tribunal order appointing Delcy Rodríguez as acting president after Maduro's capture.",
+          "owner": null,
+          "support": "unbound"
+        },
+        {
+          "id": "rodriguez_acting_status",
+          "choice": "Delcy Rodríguez's status/role as acting president and her assertion that Maduro remains de jure president.",
+          "owner": "Delcy Rodríguez",
+          "support": "represented"
+        },
+        {
+          "id": "maduro_dejure_claim",
+          "choice": "Whether Maduro remains the de jure president per the Venezuelan government's position.",
+          "owner": "Nicolás Maduro",
+          "support": "represented"
+        },
+        {
+          "id": "gov_official_designation",
+          "choice": "Venezuelan government's official designation of who holds the head of state position as of Dec 31, 2026.",
+          "owner": "Venezuelan government",
+          "support": "represented"
+        }
+      ],
+      "gap_repair": {
+        "status": "no_supported_participants",
+        "added": 0
+      }
+    },
+    "actor_plan_retryable": false,
+    "calls": 29,
+    "tokens": 82442,
+    "input_tokens": 70021,
+    "output_tokens": 12421,
+    "accounted_tokens_upper": 82442,
+    "unknown_usage_requests": 0
+  }
+}

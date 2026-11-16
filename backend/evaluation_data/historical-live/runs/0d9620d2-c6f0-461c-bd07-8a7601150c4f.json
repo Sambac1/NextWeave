@@ -1,0 +1,1764 @@
+{
+  "run_id": "0d9620d2-c6f0-461c-bd07-8a7601150c4f",
+  "case_id": "market_39a1f3279bb97de5ae69967c",
+  "status": "completed",
+  "results": [
+    {
+      "calls": 1,
+      "tokens": 3314,
+      "input_tokens": 3304,
+      "output_tokens": 10,
+      "accounted_tokens_upper": 3314,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.08,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3304,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "direct_qa",
+      "forecast_created_at": "2026-11-08T17:33:14.220097+00:00",
+      "contract_id": "0xa2c68eb1353353fd779edde5a44efa8a9ed66cc0e1a284ea7a00c2afe2e908e2",
+      "forecast_cutoff": "2026-03-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "68cfa64b5bf9a3582a6636a7028fc8b5f3ca6bc1d6931485b0716c451d0bda83",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.121
+    },
+    {
+      "calls": 2,
+      "tokens": 6628,
+      "input_tokens": 6608,
+      "output_tokens": 20,
+      "accounted_tokens_upper": 6628,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.055,
+      "coverage": 1.0,
+      "status": "completed",
+      "error": null,
+      "members": [
+        {
+          "index": 1,
+          "p_yes": 0.03,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3304,
+          "completion_tokens": 10
+        },
+        {
+          "index": 2,
+          "p_yes": 0.08,
+          "status": "completed",
+          "actual_http_requests": 1,
+          "prompt_tokens": 3304,
+          "completion_tokens": 10
+        }
+      ],
+      "method": "qa_ensemble",
+      "forecast_created_at": "2026-11-08T17:33:15.267205+00:00",
+      "contract_id": "0xa2c68eb1353353fd779edde5a44efa8a9ed66cc0e1a284ea7a00c2afe2e908e2",
+      "forecast_cutoff": "2026-03-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "68cfa64b5bf9a3582a6636a7028fc8b5f3ca6bc1d6931485b0716c451d0bda83",
+      "method_version": "direct_probability_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 1.046
+    },
+    {
+      "calls": 8,
+      "tokens": 91123,
+      "input_tokens": 87325,
+      "output_tokens": 3798,
+      "accounted_tokens_upper": 91123,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-03-25",
+                "interval_end": "2026-04-04",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-03-25T23:59:59+00:00",
+                "interval_end_utc": "2026-04-04T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "status": "executed",
+                  "summary": "SpaceX publicly reiterates that its IPO is expected in mid-2026 and that no Form S-1/F-1 filing or confidential submission has yet been made, without committing to a filing before April 3, 2026."
+                },
+                {
+                  "action_id": "action_1_agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_1_agent_91bf8b7d317e553a",
+                    "action_1_agent_705edef7152b5c91"
+                  ],
+                  "outcome": "realized",
+                  "effect": "no Form S-1/F-1 filing or confidential submission has yet been made"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "unknown",
+                  "after": "unmet",
+                  "summary": "no Form S-1/F-1 filing or confidential submission has yet been made",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "SpaceX publicly reiterates that its IPO is expected in mid-2026 and that no Form S-1/F-1 filing or confidential submission has yet been made, without committing to a filing before April 3, 2026.",
+                  "date": "2026-04"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                  "action": "SpaceX publicly reiterates that its IPO is expected in mid-2026 and that no Form S-1/F-1 filing or confidential submission has yet been made, without committing to a filing before April 3, 2026.\n承诺：No filing commitment before April 3, 2026.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "SpaceX confidentially submits a draft Form S-1 registration statement to the SEC for its planned mid-2026 IPO, with the four selected lead banks, and publicly confirms the confidential submission was completed.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "SpaceX publicly reiterates that its IPO is expected in mid-2026 and that no Form S-1/F-1 filing or confidential submission has yet been made, without committing to a filing before April 3, 2026.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "candidate_id": "agent_705edef7152b5c91:initial:1",
+                  "action": "Do not announce or confirm any SpaceX IPO filing or confidential submission this round; the public record shows only a mid-2026 IPO expectation with lead banks selected, and no qualifying filing is evidenced by 2026-03-25.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_705edef7152b5c91:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Do not announce or confirm any SpaceX IPO filing or confidential submission this round; the public record shows only a mid-2026 IPO expectation with lead banks selected, and no qualifying filing is evidenced by 2026-03-25.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_705edef7152b5c91:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly reaffirm that SpaceX's IPO is on track for mid-2026, without claiming any S-1/F-1 filing or confidential submission has been completed, keeping the timeline consistent with the December 2025 confirmation.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.03,
+                "basis": "The only current-round evidence says the target event is unmet: no Form S-1/F-1 filing or confidential submission has been made, and SpaceX reiterated a mid-2026 IPO expectation without committing to a pre-April 3 filing. A mid-2026 plan is consistent with a later filing, so the deadline likely passes without a qualifying filing.",
+                "evidence_quote": "target_event: unmet. no Form S-1/F-1 filing or confidential submission has yet been made",
+                "change_driver": "settled_event",
+                "evidence_ref": "condition:target_event",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.03,
+          "error": null,
+          "action_path_probability": 0.21
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 1,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 2,
+        "public_event_count": 1,
+        "substantive_public_event_count": 1,
+        "state_change_count": 1,
+        "condition_change_count": 1,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.03,
+      "covered_p_yes": 0.03,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.03,
+        0.030000000000000027
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "b07ba68e-4f54-415f-b5e8-f070d66f3943",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step",
+      "forecast_created_at": "2026-11-08T17:33:51.385393+00:00",
+      "contract_id": "0xa2c68eb1353353fd779edde5a44efa8a9ed66cc0e1a284ea7a00c2afe2e908e2",
+      "forecast_cutoff": "2026-03-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "68cfa64b5bf9a3582a6636a7028fc8b5f3ca6bc1d6931485b0716c451d0bda83",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 36.116
+    },
+    {
+      "calls": 50,
+      "tokens": 574505,
+      "input_tokens": 550428,
+      "output_tokens": 24077,
+      "accounted_tokens_upper": 574505,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-03-25",
+                "interval_end": "2026-03-28",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2026-03-25T23:59:59+00:00",
+                "interval_end_utc": "2026-03-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "status": "executed",
+                  "summary": "SpaceX publicly announced its intent to pursue an IPO and confirmed it will file a registration statement with the SEC in the near term, without asserting that any filing has already been completed."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "unknown",
+                  "after": "pending",
+                  "summary": "SpaceX publicly announced its intent to pursue an IPO and confirmed it will file a registration statement with the SEC in the near term, without asserting that any filing has already been completed.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_001_001",
+                  "text": "SpaceX publicly announced its intent to pursue an IPO and confirmed it will file a registration statement with the SEC in the near term, without asserting that any filing has already been completed.",
+                  "date": "2026-03-26"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                  "action": "SpaceX publicly announces its intent to pursue an IPO and confirms it will file a registration statement with the SEC in the near term, without asserting a filing already completed. This is an announcement of intent, not a filing, and does not by itself satisfy the contract unless a qualifying filing is also made and confirmed within the timeframe.\n承诺：Announce IPO intent and near-term SEC filing; no claim of completed filing.\n触发或复核条件：Only if no qualifying filing has yet occurred; announcement alone does not resolve Yes.",
+                  "p_selected": 0.25,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "SpaceX publicly announces its intent to pursue an IPO and confirms it will file a registration statement with the SEC in the near term, without asserting a filing already completed. This is an announcement of intent, not a filing, and does not by itself satisfy the contract unless a qualifying filing is also made and confirmed within the timeframe.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "candidate_id": "agent_705edef7152b5c91:initial:1",
+                  "action": null,
+                  "p_selected": 0.75,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_705edef7152b5c91:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "Publicly reaffirm that SpaceX's IPO remains on track for mid-2026, without announcing any SEC filing or confidential submission.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "SpaceX has publicly confirmed an IPO intent and selected lead banks, but no S-1/F-1 filing or confidential submission is reported as completed. The near-term filing intent raises the chance, yet announcement of intent is not execution and the deadline is close.",
+                "evidence_quote": "In December 2025, Elon Musk confirmed the initial public offering (IPO) of SpaceX, which is expected to take place in mid-2026, after previously rejecting the idea of taking SpaceX public. In January 2026, four banks were selected to lead the IPO.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-03-28",
+                "interval_end": "2026-03-31",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 6,
+                "interval_days": 3,
+                "interval_start_utc": "2026-03-28T00:00:00+00:00",
+                "interval_end_utc": "2026-03-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "status": "executed",
+                  "summary": "SpaceX publicly committed to file its Form S-1 with the SEC on a specific near-term date before April 3, 2026, stating the filing will be completed within the market timeframe; no filing had yet been made."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "delayed_effect",
+                  "action_ids": [
+                    "action_1_agent_91bf8b7d317e553a",
+                    "action_2_agent_91bf8b7d317e553a"
+                  ],
+                  "outcome": "realized",
+                  "effect": "SpaceX publicly committed to file its Form S-1 with the SEC on a specific near-term date before April 3, 2026"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "pending",
+                  "after": "pending",
+                  "summary": "SpaceX publicly committed to file its Form S-1 with the SEC on a specific near-term date before April 3, 2026",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_002_001",
+                  "text": "SpaceX publicly committed to file its Form S-1 with the SEC on a specific near-term date before April 3, 2026, stating the filing will be completed within the market timeframe; no filing had yet been made.",
+                  "date": "2026-03-29"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                  "action": "SpaceX publicly commits to file its Form S-1 with the SEC on a specific near-term date before April 3, 2026, naming the date and confirming the filing will be completed within the market timeframe.\n承诺：Form S-1 to be filed with the SEC on the stated date before April 3, 2026.\n触发或复核条件：Only if internal approvals are in place to support a dated filing commitment.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:1",
+                      "weight": 55.0,
+                      "probability": 0.55,
+                      "action": "SpaceX confidentially submits a draft Form S-1 registration statement to the SEC and publicly confirms the confidential submission was completed, satisfying the contract's qualifying-filing criterion within the window.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "SpaceX publicly commits to file its Form S-1 with the SEC on a specific near-term date before April 3, 2026, naming the date and confirming the filing will be completed within the market timeframe.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.55,
+                "basis": "A simulated report dated 2026-03-29 says SpaceX publicly committed to file its Form S-1 before April 3, 2026, with no filing yet made. That near-term commitment raises the chance, but it is a stated plan rather than a completed SEC filing, so execution risk remains.",
+                "evidence_quote": "SpaceX publicly committed to file its Form S-1 with the SEC on a specific near-term date before April 3, 2026, stating the filing will be completed within the market timeframe; no filing had yet been made.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-03-31",
+                "interval_end": "2026-04-04",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 10,
+                "interval_days": 4,
+                "interval_start_utc": "2026-03-31T00:00:00+00:00",
+                "interval_end_utc": "2026-04-04T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_3_agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "status": "executed",
+                  "summary": "SpaceX filed its Form S-1 registration statement with the SEC via EDGAR before April 3, 2026, making the registration statement publicly available and completing the filing it had committed to on 2026-03-29."
+                },
+                {
+                  "action_id": "action_3_agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "status": "executed",
+                  "summary": "Elon Musk publicly reaffirmed that SpaceX's Form S-1 filing with the SEC would be completed before April 3, 2026, stating the filing was on track within the market timeframe."
+                }
+              ],
+              "interactions": [
+                {
+                  "kind": "supports",
+                  "action_ids": [
+                    "action_3_agent_91bf8b7d317e553a",
+                    "action_3_agent_705edef7152b5c91"
+                  ],
+                  "outcome": "realized",
+                  "effect": "SpaceX filed its Form S-1 registration statement with the SEC via EDGAR before April 3, 2026"
+                }
+              ],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "pending",
+                  "after": "met",
+                  "summary": "SpaceX filed its Form S-1 registration statement with the SEC via EDGAR before April 3, 2026",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0001_003_001",
+                  "text": "SpaceX filed its Form S-1 registration statement with the SEC via EDGAR before April 3, 2026, making the registration statement publicly available and completing the filing it had committed to on 2026-03-29.",
+                  "date": "2026-04-01"
+                },
+                {
+                  "id": "sim_0001_003_002",
+                  "text": "Elon Musk publicly reaffirmed that SpaceX's Form S-1 filing with the SEC would be completed before April 3, 2026, stating the filing was on track within the market timeframe.",
+                  "date": "2026-04-01"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "candidate_id": "agent_91bf8b7d317e553a:initial:1",
+                  "action": "SpaceX files its Form S-1 registration statement with the SEC via EDGAR before April 3, 2026, completing the filing publicly committed to on 2026-03-29. This is the actual qualifying filing, not a further announcement.\n承诺：Complete a publicly available Form S-1 filing on EDGAR before April 3, 2026.\n触发或复核条件：Internal approvals and underwriter readiness are in place to support the dated commitment.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "SpaceX files its Form S-1 registration statement with the SEC via EDGAR before April 3, 2026, completing the filing publicly committed to on 2026-03-29. This is the actual qualifying filing, not a further announcement.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "If public filing slips, SpaceX confidentially submits a draft Form S-1 to the SEC and explicitly confirms the confidential submission publicly before April 3, 2026, so it qualifies under rule (b).",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "candidate_id": "agent_705edef7152b5c91:initial:1",
+                  "action": "Publicly reaffirm that SpaceX will file its Form S-1 with the SEC before April 3, 2026, consistent with the round-2 commitment, and state the filing is on track to be completed within the market timeframe.\n承诺：Reaffirm the Form S-1 filing before April 3, 2026 will be completed within the timeframe.",
+                  "p_selected": 0.6,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_705edef7152b5c91:initial:1",
+                      "weight": 60.0,
+                      "probability": 0.6,
+                      "action": "Publicly reaffirm that SpaceX will file its Form S-1 with the SEC before April 3, 2026, consistent with the round-2 commitment, and state the filing is on track to be completed within the market timeframe.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.97,
+                "basis": "A simulated round-3 event reports SpaceX filed its Form S-1 via EDGAR before April 3, 2026, and the condition record marks the target event as met. This is consistent with the earlier public commitment and Musk reaffirmation; only the absence of an independent EDGAR confirmation leaves residual uncertainty.",
+                "evidence_quote": "SpaceX filed its Form S-1 registration statement with the SEC via EDGAR before April 3, 2026, making the registration statement publicly available and completing the filing it had committed to on 2026-03-29.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0001_003_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.97,
+          "error": null,
+          "action_path_probability": 0.023624999999999997
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-03-25",
+                "interval_end": "2026-03-28",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2026-03-25T23:59:59+00:00",
+                "interval_end_utc": "2026-03-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "candidate_id": "agent_91bf8b7d317e553a:initial:1",
+                  "action": null,
+                  "p_selected": 0.55,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                      "weight": 25.0,
+                      "probability": 0.25,
+                      "action": "SpaceX publicly announces it has filed or confidentially submitted a Form S-1/F-1 registration statement with the SEC for its IPO, citing the January 2026 lead-bank selection and Musk's mid-2026 IPO plan.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": []
+                },
+                {
+                  "actor_id": "agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "candidate_id": "agent_705edef7152b5c91:initial:1",
+                  "action": "Musk makes no new IPO filing announcement this round; SpaceX's stated plan remains a mid-2026 IPO with four lead banks selected, and no qualifying S-1/F-1 filing or confidential submission is evidenced by 2026-03-25.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_705edef7152b5c91:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Musk makes no new IPO filing announcement this round; SpaceX's stated plan remains a mid-2026 IPO with four lead banks selected, and no qualifying S-1/F-1 filing or confidential submission is evidenced by 2026-03-25.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_705edef7152b5c91:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Musk publicly reaffirms SpaceX's plan to pursue an IPO in mid-2026, without claiming any S-1/F-1 filing or confidential submission has been completed.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Musk confirmed in December 2025 an IPO expected mid-2026, and four banks were selected in January 2026, but no S-1/F-1 filing or confidential submission is evidenced by the cutoff. A mid-2026 target makes a filing by late March 2026 possible but not established.",
+                "evidence_quote": "In December 2025, Elon Musk confirmed the initial public offering (IPO) of SpaceX, which is expected to take place in mid-2026, after previously rejecting the idea of taking SpaceX public. In January 2026, four banks were selected to lead the IPO.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-03-28",
+                "interval_end": "2026-03-31",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 6,
+                "interval_days": 3,
+                "interval_start_utc": "2026-03-28T00:00:00+00:00",
+                "interval_end_utc": "2026-03-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_2_agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "status": "executed",
+                  "summary": "SpaceX, through CEO Elon Musk, publicly confirms that SpaceX has completed a confidential submission of a draft Form S-1 with the SEC, consistent with the December 2025 IPO confirmation."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "unknown",
+                  "after": "met",
+                  "summary": "SpaceX, through CEO Elon Musk, publicly confirms that SpaceX has completed a confidential submission of a draft Form S-1 with the SEC",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [
+                {
+                  "id": "sim_0002_002_001",
+                  "text": "SpaceX, through CEO Elon Musk, publicly confirms that SpaceX has completed a confidential submission of a draft Form S-1 with the SEC, consistent with the December 2025 IPO confirmation.",
+                  "date": "2026-03-30"
+                }
+              ],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                  "action": "Elon Musk, as SpaceX CEO, publicly confirms that SpaceX has completed a confidential submission of a draft Form S-1 with the SEC, consistent with his December 2025 IPO confirmation.\n承诺：Musk explicitly confirms the completed confidential submission before the deadline.\n触发或复核条件：Only if the confidential submission has actually occurred.",
+                  "p_selected": 0.3,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "SpaceX publicly confirms that it has confidentially submitted a draft Form S-1 registration statement to the SEC, stating the submission was completed and that it preserves the option of a public IPO filing.",
+                      "selected": false
+                    },
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Elon Musk, as SpaceX CEO, publicly confirms that SpaceX has completed a confidential submission of a draft Form S-1 with the SEC, consistent with his December 2025 IPO confirmation.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": []
+                }
+              ],
+              "deliberation_count": 1,
+              "contract_outlook": {
+                "p_yes": 0.93,
+                "basis": "A simulated current event reports SpaceX publicly confirmed a completed confidential Form S-1 submission on 2026-03-30, within the window and matching the rule's confidential-submission clause. This supersedes the earlier IPO-plan evidence, which only showed intent for mid-2026.",
+                "evidence_quote": "SpaceX, through CEO Elon Musk, publicly confirms that SpaceX has completed a confidential submission of a draft Form S-1 with the SEC, consistent with the December 2025 IPO confirmation.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_002_001",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-03-31",
+                "interval_end": "2026-04-04",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 10,
+                "interval_days": 4,
+                "interval_start_utc": "2026-03-31T00:00:00+00:00",
+                "interval_end_utc": "2026-04-04T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "met",
+                  "after": "met",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.9,
+                "basis": "A simulated round-2 event reports SpaceX publicly confirmed completing a confidential draft Form S-1 submission with the SEC on 2026-03-30, within the window. The December 2025 IPO confirmation and January 2026 bank selection corroborate intent, though no EDGAR filing is shown.",
+                "evidence_quote": "SpaceX, through CEO Elon Musk, publicly confirms that SpaceX has completed a confidential submission of a draft Form S-1 with the SEC, consistent with the December 2025 IPO confirmation.",
+                "change_driver": "settled_event",
+                "evidence_ref": "sim_0002_002_001",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.9,
+          "error": null,
+          "action_path_probability": 0.132
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 6,
+        "active_rounds": 5,
+        "draw_rounds": 5,
+        "audited_silent_rounds": 1,
+        "sampled_decisions": 8,
+        "public_event_count": 5,
+        "substantive_public_event_count": 5,
+        "state_change_count": 3,
+        "condition_change_count": 3,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 2,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 3,
+            "draw_rounds": 3,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 5,
+            "active_actor_count": 2,
+            "public_event_count": 4,
+            "substantive_public_event_count": 4,
+            "state_change_count": 2,
+            "condition_change_count": 2,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 3,
+            "active_rounds": 2,
+            "draw_rounds": 2,
+            "audited_silent_rounds": 1,
+            "sampled_decisions": 3,
+            "active_actor_count": 2,
+            "public_event_count": 1,
+            "substantive_public_event_count": 1,
+            "state_change_count": 1,
+            "condition_change_count": 1,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": []
+      },
+      "p_yes": 0.935,
+      "covered_p_yes": 0.935,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.935,
+        0.935
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "d3362626-92e8-4d2a-8d61-ebd08a10bfbd",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "trajectory_sampling",
+      "forecast_created_at": "2026-11-08T17:34:58.582414+00:00",
+      "contract_id": "0xa2c68eb1353353fd779edde5a44efa8a9ed66cc0e1a284ea7a00c2afe2e908e2",
+      "forecast_cutoff": "2026-03-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "68cfa64b5bf9a3582a6636a7028fc8b5f3ca6bc1d6931485b0716c451d0bda83",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 67.194
+    },
+    {
+      "calls": 17,
+      "tokens": 187235,
+      "input_tokens": 180140,
+      "output_tokens": 7095,
+      "accounted_tokens_upper": 187235,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-03-25",
+                "interval_end": "2026-03-28",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 3,
+                "interval_days": 3,
+                "interval_start_utc": "2026-03-25T23:59:59+00:00",
+                "interval_end_utc": "2026-03-28T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "candidate_id": "agent_91bf8b7d317e553a:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly confirm that SpaceX has completed a confidential submission of a draft registration statement with the SEC, if and only if such a submission has actually occurred within the market timeframe.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "candidate_id": "agent_705edef7152b5c91:initial:1",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_705edef7152b5c91:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly restate that SpaceX intends an IPO expected in mid-2026, with four lead banks engaged, and that no SEC registration statement has been filed to date; make no commitment to file before April 3, 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Musk confirmed in December 2025 that SpaceX would IPO in mid-2026, and four banks were selected in January 2026 to lead it. That supports intent and preparation, but no evidence shows an S-1/F-1 filing or confidential submission completed by the deadline; mid-2026 timing points past the window.",
+                "evidence_quote": "In December 2025, Elon Musk confirmed the initial public offering (IPO) of SpaceX, which is expected to take place in mid-2026, after previously rejecting the idea of taking SpaceX public. In January 2026, four banks were selected to lead the IPO.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 2,
+              "interval": {
+                "step": 2,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-03-28",
+                "interval_end": "2026-03-31",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 6,
+                "interval_days": 3,
+                "interval_start_utc": "2026-03-28T00:00:00+00:00",
+                "interval_end_utc": "2026-03-31T00:00:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "contract_outlook": {
+                "p_yes": 0.35,
+                "basis": "Musk confirmed in December 2025 that SpaceX would IPO in mid-2026, and four banks were selected in January 2026 to lead it. That supports intent and preparation, but no evidence shows an S-1/F-1 filing or confidential submission completed by the deadline; mid-2026 timing points past the window.",
+                "evidence_quote": "In December 2025, Elon Musk confirmed the initial public offering (IPO) of SpaceX, which is expected to take place in mid-2026, after previously rejecting the idea of taking SpaceX public. In January 2026, four banks were selected to lead the IPO.",
+                "change_driver": null,
+                "evidence_ref": "history_1",
+                "estimate_kind": null
+              }
+            },
+            {
+              "step": 3,
+              "interval": {
+                "step": 3,
+                "unit": "day",
+                "horizon_steps": 3,
+                "interval_start": "2026-03-31",
+                "interval_end": "2026-04-04",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 10,
+                "interval_days": 4,
+                "interval_start_utc": "2026-03-31T00:00:00+00:00",
+                "interval_end_utc": "2026-04-04T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "deliberation_count": 0,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The only IPO-relevant evidence is a December 2025 confirmation of an IPO expected in mid-2026, with banks selected in January 2026. That indicates intent and preparation but no S-1/F-1 filing or confidential submission by the April 3, 2026 deadline; the mid-2026 expectation points past the window.",
+                "evidence_quote": "In December 2025, Elon Musk confirmed the initial public offering (IPO) of SpaceX, which is expected to take place in mid-2026, after previously rejecting the idea of taking SpaceX public. In January 2026, four banks were selected to lead the IPO.",
+                "change_driver": "settled_event",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.48999999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 3,
+        "active_rounds": 1,
+        "draw_rounds": 1,
+        "audited_silent_rounds": 2,
+        "sampled_decisions": 2,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 1,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 1,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 1,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 3,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 2,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "sparse_deliberation",
+            "message": "Most recorded rounds contained no sampled actor choice. Audited silence may be appropriate."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 1,
+      "simulation_run_id": "133a4595-4fbb-402a-b87d-406c70ecbddd",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "single_multistep",
+      "forecast_created_at": "2026-11-09T01:14:19.903626+00:00",
+      "contract_id": "0xa2c68eb1353353fd779edde5a44efa8a9ed66cc0e1a284ea7a00c2afe2e908e2",
+      "forecast_cutoff": "2026-03-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "68cfa64b5bf9a3582a6636a7028fc8b5f3ca6bc1d6931485b0716c451d0bda83",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 47.16
+    },
+    {
+      "calls": 15,
+      "tokens": 177876,
+      "input_tokens": 171695,
+      "output_tokens": 6181,
+      "accounted_tokens_upper": 177876,
+      "unknown_usage_requests": 0,
+      "probability_method": "sequential_sampled_outlook_v2",
+      "trajectories": [
+        {
+          "sample_id": 1,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-03-25",
+                "interval_end": "2026-04-04",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-03-25T23:59:59+00:00",
+                "interval_end_utc": "2026-04-04T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                },
+                {
+                  "action_id": "action_1_agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "candidate_id": "agent_91bf8b7d317e553a:initial:1",
+                  "action": "Take no new outward step this round; keep internal IPO preparation on the announced mid-2026 track and monitor whether a Form S-1/F-1 or confidential submission is completed and confirmed before April 3, 2026.",
+                  "p_selected": 0.8,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:1",
+                      "weight": 80.0,
+                      "probability": 0.8,
+                      "action": "Take no new outward step this round; keep internal IPO preparation on the announced mid-2026 track and monitor whether a Form S-1/F-1 or confidential submission is completed and confirmed before April 3, 2026.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                      "weight": 20.0,
+                      "probability": 0.2,
+                      "action": "Confidentially submit a draft Form S-1 registration statement to the SEC and have SpaceX explicitly confirm the completed confidential submission, so it qualifies within the April 3, 2026 window.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "candidate_id": "agent_705edef7152b5c91:initial:1",
+                  "action": "Take no new outward step this round on a SpaceX IPO filing; the confirmed plan targets a mid-2026 IPO, later than the April 3, 2026 deadline, and no filing is evidenced.",
+                  "p_selected": 1.0,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_705edef7152b5c91:initial:1",
+                      "weight": 70.0,
+                      "probability": 1.0,
+                      "action": "Take no new outward step this round on a SpaceX IPO filing; the confirmed plan targets a mid-2026 IPO, later than the April 3, 2026 deadline, and no filing is evidenced.",
+                      "selected": true
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "pending_trigger_rejected": true,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The only IPO-relevant evidence is a December 2025 confirmation of an IPO expected in mid-2026, with banks selected in January 2026. That indicates intent and preparation but no S-1/F-1 filing or confidential submission confirmed by the April 3, 2026 deadline; the remaining evidence concerns unrelated SpaceX operations.",
+                "evidence_quote": "In December 2025, Elon Musk confirmed the initial public offering (IPO) of SpaceX, which is expected to take place in mid-2026, after previously rejecting the idea of taking SpaceX public. In January 2026, four banks were selected to lead the IPO.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.8
+        },
+        {
+          "sample_id": 2,
+          "rounds": [
+            {
+              "step": 1,
+              "interval": {
+                "step": 1,
+                "unit": "day",
+                "horizon_steps": 1,
+                "interval_start": "2026-03-25",
+                "interval_end": "2026-04-04",
+                "horizon_end": "2026-04-04",
+                "elapsed_days": 10,
+                "interval_days": 10,
+                "interval_start_utc": "2026-03-25T23:59:59+00:00",
+                "interval_end_utc": "2026-04-04T03:59:00+00:00",
+                "sequential_harness": "sequential-harness-1",
+                "interaction_protocol": "joint-settlement-1"
+              },
+              "action_results": [
+                {
+                  "action_id": "action_1_agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "status": "waiting",
+                  "summary": "No public consequence was recorded."
+                }
+              ],
+              "interactions": [],
+              "question_updates": [
+                {
+                  "condition_id": "target_event",
+                  "label": "Will SpaceX file for an IPO by April 3, 2026?",
+                  "before": "unknown",
+                  "after": "unknown",
+                  "summary": "No new public evidence.",
+                  "pending_actor_ids": []
+                }
+              ],
+              "events": [],
+              "sampled_choices": [
+                {
+                  "actor_id": "agent_91bf8b7d317e553a",
+                  "actor_name": "SpaceX",
+                  "candidate_id": "agent_91bf8b7d317e553a:initial:2",
+                  "action": null,
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:3",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "SpaceX publicly restates that its IPO is expected in mid-2026, without confirming any SEC filing or confidential submission, and declines to commit to a filing before April 3, 2026.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [
+                    {
+                      "candidate_id": "agent_91bf8b7d317e553a:initial:1",
+                      "action": "SpaceX confidentially submits a draft Form S-1 registration statement to the SEC for review, using the four banks selected in January 2026 to lead the offering, and publicly confirms the confidential submission before April 3, 2026.",
+                      "code": "model_rejected"
+                    }
+                  ],
+                  "waited": true
+                },
+                {
+                  "actor_id": "agent_705edef7152b5c91",
+                  "actor_name": "Elon Musk",
+                  "candidate_id": "agent_705edef7152b5c91:initial:1",
+                  "action": "Do not announce or confirm any SpaceX IPO filing or confidential submission in this round; the only public timing signal is a mid-2026 IPO expectation, and no qualifying filing is evidenced by 2026-03-25.",
+                  "p_selected": 0.7,
+                  "public_options": [
+                    {
+                      "candidate_id": "agent_705edef7152b5c91:initial:1",
+                      "weight": 70.0,
+                      "probability": 0.7,
+                      "action": "Do not announce or confirm any SpaceX IPO filing or confidential submission in this round; the only public timing signal is a mid-2026 IPO expectation, and no qualifying filing is evidenced by 2026-03-25.",
+                      "selected": true
+                    },
+                    {
+                      "candidate_id": "agent_705edef7152b5c91:initial:2",
+                      "weight": 30.0,
+                      "probability": 0.3,
+                      "action": "Publicly restate that SpaceX's IPO is expected in mid-2026, with four lead banks selected, and that no registration statement has been filed as of now.",
+                      "selected": false
+                    }
+                  ],
+                  "public_rejections": [],
+                  "waited": true
+                }
+              ],
+              "deliberation_count": 2,
+              "contract_outlook": {
+                "p_yes": 0.12,
+                "basis": "The only IPO-relevant evidence is a December 2025 confirmation of an IPO expected in mid-2026, with banks selected in January 2026. That indicates intent and preparation but no S-1/F-1 filing or confidential submission confirmed by the April 3, 2026 deadline; the remaining evidence concerns unrelated SpaceX operations.",
+                "evidence_quote": "In December 2025, Elon Musk confirmed the initial public offering (IPO) of SpaceX, which is expected to take place in mid-2026, after previously rejecting the idea of taking SpaceX public. In January 2026, four banks were selected to lead the IPO.",
+                "change_driver": "time_elapsed",
+                "evidence_ref": "history_1",
+                "estimate_kind": "terminal_estimate"
+              }
+            }
+          ],
+          "branches": [],
+          "status": "completed",
+          "p_yes": 0.12,
+          "error": null,
+          "action_path_probability": 0.48999999999999994
+        }
+      ],
+      "simulation_diagnostics": {
+        "version": "sequential-diagnostics-1",
+        "recorded_rounds": 2,
+        "active_rounds": 2,
+        "draw_rounds": 2,
+        "audited_silent_rounds": 0,
+        "sampled_decisions": 4,
+        "public_event_count": 0,
+        "substantive_public_event_count": 0,
+        "state_change_count": 0,
+        "condition_change_count": 0,
+        "active_actor_count": 2,
+        "available_actor_count": 2,
+        "valid_estimate_samples": 2,
+        "valid_estimate_coverage": 1.0,
+        "outcome_observed_samples": 0,
+        "outcome_observation_coverage": 0.0,
+        "conditional_only_samples": 2,
+        "observation_basis": "Recorded public contract evidence inside the simulation; not observed real-world outcomes.",
+        "unique_public_trajectory_count": 1,
+        "public_trajectory_samples": 2,
+        "public_trajectory_comparison": "Exact normalized public event text and timing, grouped by round.",
+        "samples": [
+          {
+            "sample_id": 1,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          },
+          {
+            "sample_id": 2,
+            "recorded_rounds": 1,
+            "active_rounds": 1,
+            "draw_rounds": 1,
+            "audited_silent_rounds": 0,
+            "sampled_decisions": 2,
+            "active_actor_count": 2,
+            "public_event_count": 0,
+            "substantive_public_event_count": 0,
+            "state_change_count": 0,
+            "condition_change_count": 0,
+            "valid_estimate": true,
+            "outcome_observed": false,
+            "conditional_only": true
+          }
+        ],
+        "warnings": [
+          {
+            "code": "no_future_state_change",
+            "message": "No explicit world-state or tracked-condition changes were recorded. Public activity alone does not establish the outcome."
+          },
+          {
+            "code": "identical_terminal_estimates",
+            "message": "All available terminal estimates are equal. This alone does not establish an error or independent corroboration."
+          }
+        ]
+      },
+      "p_yes": 0.12,
+      "covered_p_yes": 0.12,
+      "coverage": 1.0,
+      "unknown_bounds": [
+        0.12,
+        0.1200000000000001
+      ],
+      "unknown_samples": 0,
+      "invalid_trace_samples": 0,
+      "failed_samples": 0,
+      "interrupted_samples": 0,
+      "unfinished_samples": 0,
+      "resume_available": false,
+      "status": "completed",
+      "error": null,
+      "planned_samples": 2,
+      "simulation_run_id": "2e4b92f4-d605-42df-a801-08cfcc7ce76b",
+      "decision_coverage": [
+        {
+          "kind": "observation",
+          "label": "Machine-verifiable outcome condition",
+          "ready": false
+        }
+      ],
+      "simulation_route": "semantic_replay",
+      "method": "one_step_ensemble",
+      "forecast_created_at": "2026-11-09T01:14:37.549211+00:00",
+      "contract_id": "0xa2c68eb1353353fd779edde5a44efa8a9ed66cc0e1a284ea7a00c2afe2e908e2",
+      "forecast_cutoff": "2026-03-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "68cfa64b5bf9a3582a6636a7028fc8b5f3ca6bc1d6931485b0716c451d0bda83",
+      "method_version": "settled-trajectory-readout-4",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 17.645
+    },
+    {
+      "calls": 36,
+      "tokens": 393831,
+      "input_tokens": 375000,
+      "output_tokens": 18831,
+      "accounted_tokens_upper": 393831,
+      "unknown_usage_requests": 0,
+      "p_yes": 0.04,
+      "coverage": 1.0,
+      "unexplored_mass": 0.0,
+      "unknown_bounds": [
+        0.04,
+        0.04
+      ],
+      "search_iterations": 5,
+      "tree": [
+        {
+          "path": [],
+          "depth": 0,
+          "mass": 1.0,
+          "visits": 5,
+          "search_value": 0.27677999999999997,
+          "conditional_p_yes": null,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1
+          ],
+          "depth": 1,
+          "mass": 0.75,
+          "visits": 2,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.08,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.75,
+          "visits": 1,
+          "search_value": 0.11639999999999999,
+          "conditional_p_yes": 0.03,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            1,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.75,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.03,
+          "frontier": true,
+          "contribution": 0.0225
+        },
+        {
+          "path": [
+            2
+          ],
+          "depth": 1,
+          "mass": 0.25,
+          "visits": 2,
+          "search_value": 0.34140000000000004,
+          "conditional_p_yes": 0.55,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1
+          ],
+          "depth": 2,
+          "mass": 0.25,
+          "visits": 1,
+          "search_value": 0.2604,
+          "conditional_p_yes": 0.12,
+          "frontier": false,
+          "contribution": null
+        },
+        {
+          "path": [
+            2,
+            1,
+            1
+          ],
+          "depth": 3,
+          "mass": 0.25,
+          "visits": 0,
+          "search_value": null,
+          "conditional_p_yes": 0.07,
+          "frontier": true,
+          "contribution": 0.0175
+        }
+      ],
+      "error": null,
+      "probability_method": "mcts_puct_frontier_v1",
+      "simulation_run_id": "01e60560-fd99-4815-9f4d-fd6e0ec033a3",
+      "status": "completed",
+      "simulation_route": "semantic_tree_search",
+      "method": "mcts_simulation",
+      "forecast_created_at": "2026-11-09T01:16:19.001569+00:00",
+      "contract_id": "0xa2c68eb1353353fd779edde5a44efa8a9ed66cc0e1a284ea7a00c2afe2e908e2",
+      "forecast_cutoff": "2026-03-25T23:59:59+00:00",
+      "model": "deepseek-flash",
+      "evidence_snapshot_id": "68cfa64b5bf9a3582a6636a7028fc8b5f3ca6bc1d6931485b0716c451d0bda83",
+      "method_version": "mcts_puct_frontier_v1",
+      "fallback_p_yes": 0.5,
+      "elapsed_seconds": 101.453
+    }
+  ],
+  "model": "deepseek-flash",
+  "as_of": "2026-03-25T23:59:59+00:00",
+  "forecast_key": "0xa2c68eb1353353fd779edde5a44efa8a9ed66cc0e1a284ea7a00c2afe2e908e2",
+  "group_id": "spacex-files-ipo-by",
+  "evidence_sha256": "68cfa64b5bf9a3582a6636a7028fc8b5f3ca6bc1d6931485b0716c451d0bda83",
+  "contract_compiler_usage": {
+    "calls": 1,
+    "tokens": 748,
+    "input_tokens": 647,
+    "output_tokens": 101,
+    "accounted_tokens_upper": 748,
+    "unknown_usage_requests": 0
+  },
+  "round_plans": {
+    "one_step": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-03-25",
+        "2026-04-04"
+      ],
+      "milestones": []
+    },
+    "trajectory_sampling": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-03-25",
+        "2026-03-28",
+        "2026-03-31",
+        "2026-04-04"
+      ],
+      "milestones": []
+    },
+    "single_multistep": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-03-25",
+        "2026-03-28",
+        "2026-03-31",
+        "2026-04-04"
+      ],
+      "milestones": []
+    },
+    "one_step_ensemble": {
+      "mode": "single_step",
+      "steps": 1,
+      "boundaries": [
+        "2026-03-25",
+        "2026-04-04"
+      ],
+      "milestones": []
+    },
+    "mcts_simulation": {
+      "mode": "adaptive",
+      "steps": 3,
+      "boundaries": [
+        "2026-03-25",
+        "2026-03-28",
+        "2026-03-31",
+        "2026-04-04"
+      ],
+      "milestones": []
+    }
+  },
+  "stage": "finished",
+  "outcome_deadline": "2026-04-04T03:59:00+00:00",
+  "deadline_basis": "confirmed_for_run",
+  "nominal_market_end": "2026-04-03T00:00:00Z",
+  "preparation": {
+    "status": "completed",
+    "readiness_counts": {
+      "ready": 2
+    },
+    "actor_coverage": {
+      "version": "question-decision-seats-6",
+      "status": "ready",
+      "seats": [
+        {
+          "seat_id": "seat_6e8da2f6b575d9e7",
+          "name": "SpaceX",
+          "role": "Issuer that must decide to file or confidentially submit a Form S-1/F-1 registration statement with the SEC",
+          "decision_ids": [
+            "D1"
+          ],
+          "required": true,
+          "readiness": "ready"
+        },
+        {
+          "seat_id": "seat_c90ad2dde6b910ae",
+          "name": "Elon Musk",
+          "role": "SpaceX CEO who confirmed the IPO plan and may authorize or announce the filing decision",
+          "decision_ids": [
+            "D2"
+          ],
+          "required": true,
+          "readiness": "ready"
+        }
+      ],
+      "missing_required": [],
+      "unresolved_requirements": [],
+      "gaps": [
+        "No source identifies the specific SpaceX board, CFO, or legal officer who formally executes the SEC filing; SpaceX is treated as the issuer decision seat.",
+        "The market rules define the SEC EDGAR filing as the primary resolution source, but no source confirms whether a filing has actually occurred as of 2026-03-25."
+      ],
+      "decision_dependencies": [
+        {
+          "id": "D1",
+          "choice": "SpaceX must decide to file or confidentially submit a Form S-1/F-1 registration statement with the SEC by the deadline.",
+          "owner": "SpaceX",
+          "support": "represented"
+        },
+        {
+          "id": "D2",
+          "choice": "Elon Musk, as SpaceX CEO, must authorize or announce the IPO filing decision consistent with his confirmed IPO plan.",
+          "owner": "Elon Musk",
+          "support": "represented"
+        }
+      ]
+    },
+    "actor_plan_retryable": false,
+    "calls": 13,
+    "tokens": 49685,
+    "input_tokens": 42659,
+    "output_tokens": 7026,
+    "accounted_tokens_upper": 49685,
+    "unknown_usage_requests": 0
+  },
+  "methods": [
+    "direct_qa",
+    "qa_ensemble",
+    "one_step",
+    "trajectory_sampling",
+    "single_multistep",
+    "one_step_ensemble",
+    "mcts_simulation"
+  ]
+}
